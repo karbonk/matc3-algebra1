@@ -1,0 +1,109 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[->]
+    \draw (-2.5,0) -- (2,0) node [below right] () {$x$};
+    \draw (0,-2.5) -- (0,2.5) node[above left] {$y$};
+  \end{scope}
+
+  \foreach \x/\xtext in {-2/-2,-1/-1, 1/1}{
+    \node[below] at (\x,0) {$\xtext$};
+    \draw (\x,1.5pt) -- (\x,-1.5pt);}
+  \foreach \y/\ytext in {-2/-2,-1/-1, 1/1, 2/2}{
+    \node[left] at (0,\y) {$\ytext$};
+    \draw (1.5pt,\y) -- (-1.5pt,\y);}
+  \node[below right] at (0,0) {$0$};
+
+  \node[below left] at (-2,1) {$A$};
+  \node[above right] at (1,2) {$B$};
+  \node[below right] at (1,1) {$C$};
+
+  \node[above] at (-.5,1.5) {$\vec{u}$};
+  
+  \node[above] at (-.5,1) {$\vec{v}$};
+  \node[below] at (-.5,1) {$a$};
+  \node[left] at (1,1.5) {$\vec{w}$};
+  \node[right] at (1,1.5) {$b$};
+
+\node at (0,-3) {a};
+  \begin{scope}[dotted, orange]
+    \draw (-2.5,-2.5) grid (2,2.5);
+  \end{scope}
+
+  \begin{scope}[thick, OliveGreen, shorten >=1.5pt, ->]
+    \draw (-2,1) -- (1,1);
+    \draw[Maroon] (-2,1) -- (1,2);
+    \draw (1,1) -- (1,2);
+  \end{scope}
+  
+  \begin{scope}[fill=CornflowerBlue, draw=black]
+    \filldraw (-2,1) circle (1.5pt);
+    \filldraw (1,2) circle (1.5pt);
+    \filldraw (1,1) circle (1.5pt);
+  \end{scope}
+
+  \begin{scope}[xshift=40mm]
+    \begin{scope}[->]
+    \draw (-1.5,0) -- (6.5,0) node [below right] () {$x$};
+    \draw (0,-2.5) -- (0,2.5) node[above left] {$y$};
+    \end{scope}
+
+    \foreach \x/\xtext in {-1/-1, 1/1,2/2,3/3,4/4,5/5,6/6}{
+      \node[below right] at (\x,0) {$\xtext$};
+      \draw (\x,1.5pt) -- (\x,-1.5pt);}
+    \foreach \y/\ytext in {-2/-2,-1/-1, 1/1, 2/2}{
+      \node[below left] at (0,\y) {$\ytext$};
+      \draw (1.5pt,\y) -- (-1.5pt,\y);}
+    \node[below left] at (0,0) {$0$};
+
+    \node[above left] at (2,2) {$A$};
+    \node[below right] at (6,-1) {$B$};
+    \node[above right] at (6,2) {$C$};
+
+    \node[above] at (4,2) {$a$};
+    \node[right] at (6,.5) {$b$};
+    \node[above] at (4,.5) {$\vec{u}$};
+
+    \node[above right] at (0,-2) {$c$};
+    \node[left] at (1,-.5) {$d$};
+    \node[left] at (-.3,-.8) {$\vec{z}$};
+
+    \node[above right] at (1,1) {$D$};
+    \node[below right] at (1,-2) {$F$};
+    \node[below left] at (-1,-2) {$E$};
+
+    \node at (2.5,-3) {b};
+    \begin{scope}[dotted, orange]
+      \draw (-1.5,-2.5) grid (6.5,2.5);
+    \end{scope}
+
+    \begin{scope}[thick, shorten >=1.5pt, ->]
+      \begin{scope}[Maroon]
+	\draw(2,2) -- (6,-1);
+	\draw (1,1) -- (-1,-2);
+      \end{scope}
+      
+      \begin{scope}[OliveGreen]
+	\draw(2,2) -- (6,2);
+	\draw (6,2) -- (6,-1);
+
+	\draw (1,1) -- (1,-2);
+	\draw (1,-2) -- (-1,-2);
+	\end{scope}
+    \end{scope}
+
+    \begin{scope}[fill=CornflowerBlue, draw=black]
+      \filldraw (6,2) circle (1.5pt);
+      \filldraw (2,2) circle (1.5pt);
+      \filldraw (6,-1) circle (1.5pt);
+
+      \filldraw (1,1) circle (1.5pt);
+      \filldraw (1,-2) circle (1.5pt);
+      \filldraw (-1,-2) circle (1.5pt);
+    \end{scope}
+
+    \node[right] () at (1.5,-1.6) {Componenti di $\vec{u}(a=+4;b=-3)$};
+    \node[right] () at (1.5,-2) {Componenti di $\vec{z}(c=-2;d=-3)$};
+  \end{scope}
+\end{tikzpicture}

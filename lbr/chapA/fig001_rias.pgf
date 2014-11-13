@@ -1,0 +1,44 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,
+  punto/.style={%
+    draw=RedOrange, 
+    rectangle, 
+    fill=white,
+    very thick, 
+    rounded corners,
+    text centered,
+    text width=35mm,
+    minimum height=1.5em},
+  subpunto/.style={%
+    draw=RedOrange, 
+    rectangle, 
+    fill=white,
+    very thick, 
+    rounded corners,
+    text centered,
+    text width=44mm,
+    minimum height=4em},
+  subpunto1/.style={%
+    draw=RedOrange, 
+    rectangle, 
+    fill=white,
+    very thick, 
+    rounded corners,
+    text centered,
+    text width=15mm,
+    minimum height=1.5em},
+  level distance=15mm,
+  level 3/.style={sibling distance=50mm},
+  level 4/.style={sibling distance=25mm}, 
+  edge from parent/.style={draw,->,OliveGreen, thick, shorten >=2pt}]
+  
+\node [punto] {Popolazione Universo}
+  child {node [punto] {Unit\`a statistiche}
+    child {node [punto]{Caratteri \\delle unit\`a statistiche}
+      child{node [subpunto]{Caratteri di tipo qualitativo \\Modalit\`a non numeriche \\Aggettivi, nomi, professioni}
+	child {node [subpunto1]{ordinabili}}
+	child {node [subpunto1]{sconnessi}}}
+      child {node [subpunto]{Caratteri di tipo quantitativo \\Modalit\`a numeriche \\Intensit\`a o classi d'intensit\`a}
+	child {node[subpunto1] {continuo}}
+	child {node[subpunto1] {discreto}}}}};
+\end{tikzpicture}

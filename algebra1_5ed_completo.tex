@@ -1,0 +1,234 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% algebra1_5ed_completo.tex
+%% Copyright 2014 Dimitrios Vrettos
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2005/12/01 or later.
+%
+% This work has the LPPL maintenance status `maintained'.
+% 
+% The Current Maintainer of this work is 
+% Dimitrios Vrettos - d.vrettos@gmail.com
+%
+% This work consists of the files:
+%  -  algebra1_5ed_completo.tex (this file)
+%  -  Makefile
+%  -  README
+%  -  the part of code of the files under chap/ and lbr/ directories
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper,openright]{matc3mem}
+%========================
+%  Lingua & codifica
+%========================
+\usepackage[T1]{fontenc} 
+\usepackage{textcomp} 	
+\usepackage[utf8x]{inputenc}
+\usepackage[italian]{babel}
+%========================
+% Font
+%========================
+\renewcommand{\rmdefault}{ppl}
+\usepackage{mathpazo}
+\usepackage[scaled=.95]{helvet}
+\usepackage{eulervm}
+%========================
+% Tipografia
+%========================
+\usepackage[bindingoffset=6mm]{geometry}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{emptypage}
+\usepackage{nonumonpart}
+\usepackage{enumitem}
+\usepackage{tabto}
+\usepackage{microtype}
+%========================
+% Matematica I
+%========================
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cancel}
+\usepackage[np,noaddmissingzero]{numprint}
+\usepackage[]{units} %questo manca nella versione originale
+%========================
+% Grafica
+%========================
+\usepackage[pdftex]{graphicx}
+\usepackage{rotating}
+\usepackage{shadow}
+\usepackage{fancybox}
+\usepackage{empheq}
+\usepackage{framed}
+\usepackage{wrapfig}
+%========================
+% pgf & TikZ
+%========================
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{patchplots}
+\pgfplotsset{compat=1.8}
+\usepackage{tkz-euclide}
+\usepackage{tkz-fct}
+\usepackage{circuitikz}
+\usetkzobj{all}
+%========================
+% Librerie TikZ
+%========================
+\usetikzlibrary{arrows,%
+		automata,%
+		backgrounds,%
+		calc,%
+		decorations.markings,%
+		decorations.shapes,%
+		decorations.text,% 
+		decorations.pathreplacing,%
+		fit,%
+		matrix,%
+		mindmap,%
+		patterns,%
+		positioning,%
+		shapes,%
+		shapes.geometric}
+%========================
+% Simboli
+%========================
+\usepackage{marvosym}
+\usepackage{eurosym}
+\usepackage{pifont}
+\usepackage{hiero}
+%========================
+% Matematica II
+%========================
+\usepackage{matc3}
+%========================
+% Collegamenti
+%========================
+\usepackage[colorlinks, hypertexnames=false]{hyperref}
+\usepackage{bookmark}
+%========================
+% Personalizzazioni
+%========================
+\input{lbr/variabili}
+\graphicspath{{img/}}
+\setsecnumdepth{subsection} 
+\maxtocdepth{subsection}
+\setlength{\cftpartnumwidth}{2.25em}
+\setlength{\shadeboxsep}{5pt} 
+\setlength{\shadeboxrule}{.4pt} 
+\setlength{\shadedtextwidth}{\textwidth}
+\addtolength{\shadedtextwidth}{-2\shadeboxsep}
+\addtolength{\shadedtextwidth}{-2\shadeboxrule}
+\setlength{\shadeleftshift}{0pt}
+\setlength{\shaderightshift}{0pt}
+\linespread{1.05}
+\captionnamefont{\small\scshape}
+\captiontitlefont{\small}
+\newcommand{\mail}[1]{\href{mailto:#1}{\texttt{#1}}}
+\definecolor{grigio80}{gray}{0.8}
+\definecolor{grigio70}{gray}{0.7}
+\definecolor{ev_rosso}{rgb}{1,0.85,0.85}
+\definecolor{ev_verde}{rgb}{0.85,1,0.85}
+\definecolor{ev_blu}{rgb}{0.85,0.85,1}
+\newcommand{\mmevid}[2]{\text{\colorbox{#1}{$\displaystyle #2$}}}
+\newcommand{\mevid}[2]{\colorbox{#1}{$\displaystyle #2$}}
+\newcommand{\evid}[2]{\colorbox{#1}{#2}}
+\hypersetup{%
+  pdffitwindow=true,%
+  linkcolor=RoyalBlue,%	
+  linktocpage=true,%
+  filecolor=black,%
+  urlcolor=RoyalBlue,%
+  plainpages=false,%
+  pdftitle={\pdftitolo, \edizione \tipo},%
+  pdfauthor=Dimitrios Vrettos,%
+  pdfdisplaydoctitle=true%
+}
+\bookmarksetup{startatroot}
+\renewcommand\CancelColor{\color{RoyalBlue}}
+%========================
+% Documento
+%========================
+\begin{document}
+\frontmatter
+\include{chap/frontespizio}
+\include{chap/colophon}
+\include{chap/indice}
+\include{chap/prefazione}
+\mainmatter
+%%%
+%%% Prima Parte
+%%%
+\include{chap/part_01} 
+\include{chap/01_numeri} 
+\include{chap/02_interi}
+\include{chap/03_frazioni}
+\include{chap/04_numerazione}
+%%%
+%%% Seconda Parte
+%%%
+\include{chap/part_02} 
+\include{chap/05_generalita}
+\include{chap/06_rappresentazione}
+\include{chap/07_operazioni}
+%%%
+%%% Terza Parte
+%%%
+\include{chap/part_03} 
+\include{chap/08_espressioni}
+\include{chap/09_monomi}
+\include{chap/10_polinomi}
+\include{chap/11_prodnotevoli}
+\include{chap/12_divisionepol}
+%%%
+%%% Quarta Parte
+%%%
+\include{chap/part_04}
+\include{chap/13_identita}
+\include{chap/14_problemi}
+%%%
+%%% Quinta Parte
+%%%
+\include{chap/part_05}
+\include{chap/15_scomposizione}
+\include{chap/16_riconoscimenti}
+\include{chap/17_tecniche}
+\include{chap/18_MCDmcm_polinomi}
+\include{chap/19_frazioni}
+%%%
+%%% Sesta Parte
+%%%
+\include{chap/part_06}
+\include{chap/20_equazioni}
+\include{chap/21_disequazioni}
+\include{chap/22_sistemi}
+%%
+%% Azzeramento numerazione capitoli
+%%
+\renewcommand{\thechapter}{\Alph{chapter}}
+\setcounter{chapter}{0}
+%%%
+%%% Settima Parte
+%%%
+\include{chap/part_07}
+\include{chap/A_statistica}
+%%%
+%%% Ottava Parte
+%%%
+\include{chap/part_08} 
+\include{chap/B_relazioni}
+\include{chap/C_corrispondenze}
+\include{chap/D_funzioni}
+\include{chap/E_approfondimenti}
+%%%
+%%% Nona Parte
+%%%
+\include{chap/part_09}
+\include{chap/F_vettori}
+\include{chap/G_trigonometria}
+\end{document}

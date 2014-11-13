@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small]
+
+\begin{axis}[ymin=0,
+ybar,
+ylabel=Frequenza,
+xlabel=Età,
+bar width=20pt,
+enlarge x limits=0.15,]
+
+\addplot[fill=CornflowerBlue,draw=black]
+      coordinates{
+	(9, 6)
+	(10,6)
+	(12,8) };
+\end{axis}
+\end{tikzpicture}

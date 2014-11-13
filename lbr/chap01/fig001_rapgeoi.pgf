@@ -1,0 +1,14 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}
+\begin{scope}[thick,font=\scriptsize]
+	\draw[->] (0,0)  - -  (280pt,0) node[above]{$\insN$};
+% 	\draw(1,-3pt) -- (1,3pt) node[below]{$1$};	
+		\foreach \n in {0,1,2,...,9}{%
+        	\draw (\n,-3pt) -- (\n,3pt)   node [below=5pt] {$\n$};}
+
+		\draw[|-|]node [below=22pt]{$A$}(0,-20pt)--(29pt,-20pt) node[below=2pt]{$B$};
+
+\end{scope}
+\node [right,font=\scriptsize] at (+35pt,-20pt) {unit\`a};
+\end{tikzpicture}

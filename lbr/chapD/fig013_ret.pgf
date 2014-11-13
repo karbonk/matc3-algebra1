@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+\draw[->](-4.5,0) -- (4.55,0);
+\foreach \x in {-2.5,0}
+\draw (\x,1.5pt) -- (\x,-1.5pt);
+
+\draw [|-|](-2.5,-.7) -- (0,-.7) node [below, midway] () {unità};
+\draw [orange,thick](-2.5,0) -- (0,0);
+\foreach \x/\xtext in {-2.5/0,0/1}
+\node[below] at (\x,0) {$\xtext$};
+\node[above] at(-2.5,0) {$O$};
+\node[above] at(0,0) {$A$};
+\end{tikzpicture}

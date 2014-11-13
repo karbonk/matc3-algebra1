@@ -1,0 +1,14 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small\ttfamily]
+
+
+\matrix(b) [matrix of nodes,nodes={ text centered },cells={anchor=north}, row 1/.style={red}]
+{
+Riporti&-1&-1&-1&&\\
+&1&0&1&0&1&1&$-$ \\
+&&1&1&1&1&1&{}\\
+&0&0&1&1&0&0\\
+};
+\draw (b-4-2.north west)--(b-4-7.north east);
+
+\end{tikzpicture}

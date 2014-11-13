@@ -1,0 +1,14 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=9mm,y=9mm, font=\small]
+\tkzDefPoint(0,0){A}
+\tkzDefShiftPoint[A](36:2){B}
+\tkzDefShiftPoint[A](0:2){C}
+\tkzDefShiftPoint[A](0:1.62){H}
+\tkzDrawLine[add=0 and 0, thin](A,B)
+\tkzDrawLine[add=0 and 0, thin, dashed](H,B)
+\tkzDrawLine[thin, end=$r$](A,C)
+\tkzLabelPoints[below](A,H)
+\tkzLabelPoints[above](B)
+\tkzDrawPoints[	color=CornflowerBlue](A,B, H)
+\end{tikzpicture}

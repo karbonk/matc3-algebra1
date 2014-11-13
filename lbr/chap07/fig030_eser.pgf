@@ -1,0 +1,31 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+
+\begin{scope}[xshift=35mm]
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+\end{scope}
+
+\begin{scope}[xshift=70mm]
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+\end{scope}
+
+\begin{scope}[xshift=105mm]
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+\end{scope}
+
+\foreach \x/\xtext in {4.5/=,11.5/\cup,18.5/=}
+\node  at (\x,-1) {$\xtext$};
+
+\foreach \xi/\xitext in {1/$X\cap(Y\cup Z)$,8/$X\cap Y$,15/$X\cap Z$,22/$(X\cap Y)\cup(X\cap Z)$}
+\node  at (\xi,-5) {\xitext};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[ x=7.5mm, y=7.5mm, font=\small]
+\begin{scope}[->]
+\draw (0,0) -- (0,4.5) node[left] {$y$};
+\draw (0,0) -- (4.5,0) node[below] {$x$};
+\end{scope}
+
+\begin{scope}[Maroon, dotted, step=7.5mm]
+\draw (0,0) grid (4.5,4.5);
+\end{scope}
+
+\foreach \x/\xtext in {1/1,2/2,3/3,4/4}{
+\node[below] at (\x,0) {\xtext};
+\node[left] at (0,\x) {\xtext};
+}
+\foreach \x in {1,2,3,4}{
+\draw (\x,1.5pt) -- (\x,-1.5pt);
+\draw (1.5pt,\x) -- (-1.5pt,\x);}
+\node[below left] at (0,0) {0};
+\begin{scope}[very thick, draw=CornflowerBlue, decoration={crosses, shape size=1.5mm}]
+\draw decorate {(1,2) -- (1,2.1)};
+\draw decorate {(1,4) -- (1,4.1)};
+\draw decorate {(3,4) -- (3,4.1)};
+\draw decorate {(4,2) -- (4,2.1)};
+\end{scope}
+\end{tikzpicture}

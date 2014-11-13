@@ -1,0 +1,9 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\ttfamily]
+
+\matrix(a) [matrix of nodes,nodes={draw, text centered}]
+{
+0&1&0&1&0&0&0&0 \\
+};
+
+\end{tikzpicture}

@@ -1,0 +1,41 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[node distance=-25ex]
+	\begin{scope}[font=\ttfamily]
+ 	\matrix (divisione) [matrix of nodes]
+ 	{%
+ 		&	3 & 2	&	7	&	2	&	3 &[.8cm] & 1 & 3 & 2 & 9 & 1 & 0 & 7 &[.8cm]   & 1 & 2	& 5	& 9 & 4 & 3 & 1 & 7 & 1\\
+ 	 |[gray]| -	& 2 & 3 &  	& |[blue]|1 & |[blue]|4 &  			|[gray]| -& 1 & 0 & 7 &  	  & |[blue]|1 & |[blue]|2	  &  	  & |[gray]|- & 1 & 1 	& 9 & 7 &  	&  	& |[blue]|7 & |[blue]|3 & |[blue]|6\\
+ 	   	&   	& 9 & 7 &  	&  	& 			  &	  & 2 & 5 & 9 &  	  &		  &  	 &  &     &  & 6 & 2 & 4 &  &  &  & \\
+       &|[gray]|-  & 9 & 2 &  &  &  &|[gray]|  - & 2 & 1 & 4 &  &  &  &  &     &|[gray]| - & 5 & 1 & 3 &  &  &  & \\
+      &  &  & |[red]|5 &  &  &  &   &  & |[red]|4 & |[red]|5 &  &  &  &  &     &  & 1 & 1 & 1 & 3 &  &  & \\
+	 &  &  &  &  &  &  &   &  &  &  &  &  &  &  &     & |[gray]|- & 1 & 0 & 2 & 6 &  &  & \\
+	&  &  &  &  &  &  &   &  &  &  &  &  &  &  &     &  &  &  & |[red]|8 & |[red]|	7 &  &  & \\
+ 	};
+	\end{scope}
+	% Prima divisione
+	\draw(divisione-1-5.north west)--(divisione-1-5.south west);
+	\draw(divisione-1-5.south west)--(divisione-1-6.south east);
+	\draw(divisione-2-2.south west)--(divisione-2-3.south east);
+	\draw(divisione-4-3.south west)--(divisione-4-4.south east);
+	% Seconda divisione
+	\draw (divisione-1-12.north west) -- (divisione-1-12.south west);
+	\draw (divisione-1-12.south west) -- (divisione-1-14.south east);
+	\draw(divisione-2-8.south west)--(divisione-2-10.south east);
+	\draw (divisione-4-9.south west) -- (divisione-4-11.south east);
+	% Terza divisione
+	\draw (divisione-1-22.north west) -- (divisione-1-22.south west);
+	\draw (divisione-1-22.south west) -- (divisione-1-24.south east);
+	\draw (divisione-2-16.south west) -- (divisione-2-19.south east);
+	\draw (divisione-4-18.south west) -- (divisione-4-20.south east);
+	\draw (divisione-6-18.south west) -- (divisione-6-21.south east);
+	% Frecce
+	\draw[densely dotted,->] (divisione-1-4) -- (divisione-3-4);
+	\draw[densely dotted,->] (divisione-1-11) -- (divisione-3-11);
+	\draw[densely dotted,->] (divisione-1-20) -- (divisione-3-20);
+	\draw[densely dotted,->] (divisione-1-21) -- (divisione-5-21);
+	% Didascalie
+	\node (a) [above=of divisione-1-5.north west] {(a)};
+	\node (b) [above=of divisione-1-12.north west] {(b)};
+	\node (c) [above=of divisione-1-22.north west] {(c)};
+\end{tikzpicture}

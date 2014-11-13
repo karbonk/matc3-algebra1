@@ -1,0 +1,27 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[thick,shorten >=1.5pt, ->]
+    \begin{scope}[OliveGreen]
+      \draw (0,0) -- (2,1);
+      \draw (2,1) -- (5,0);
+    \end{scope}  
+    
+    \begin{scope}[Maroon]
+      \draw (0,0) -- (5,0);
+    \end{scope}
+  \end{scope}
+
+
+  \begin{scope}[fill=CornflowerBlue, draw=black]
+    \filldraw (5,0) circle (1.5pt) node[right] {$C$};
+    \filldraw (0,0) circle (1.5pt) node[left] {$A$};
+    \filldraw (2,1) circle (1.5pt) node[above] {$B$};
+  \end{scope}
+
+  \node[above] at (1,0.5) {$\vec{u}$};
+  \node[above] at (4,0.5) {$\vec{v}' \equiv \vec{v}$};
+  \node[above] at (2.5,0) {$\vec{w}$};
+
+\end{tikzpicture}

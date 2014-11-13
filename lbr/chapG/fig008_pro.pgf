@@ -1,0 +1,59 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \coordinate (A) at (0,0);
+  \coordinate (H) at ($(A)+(0:3)$);
+  \coordinate (B) at ($(H)+(90:2)$);
+
+  \draw (B)node[above right]{$B$} -- (A) node[below]{$A$}-- (H) node[below]{$H$};
+  \draw[dashed] (B)--(H);
+
+  \draw (-.5,0) -- (3.5,0)node[below] {$r$};
+  \tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](H,A,B)
+
+  \begin{scope}[font=\scriptsize]
+    \tkzLabelAngle[pos=.6](H,A,B){$\alpha$}
+  \end{scope}
+
+  \begin{scope}[fill=CornflowerBlue, draw=black]
+    \filldraw (0,0) circle (1pt);
+    \filldraw (3,0) circle (1pt);
+    \filldraw (3,2) circle (1pt);
+  \end{scope}
+
+  \begin{scope}[xshift=45mm]
+    \tkzDefPoints{0/1/A, 2/0/B,1.25/1.59/H}
+    \tkzDrawLine[add=0 and 0, dashed, thin](B,H)
+    \tkzDrawLine[add=0 and 0,thin](A,B)
+    \tkzMarkAngle[fill=LimeGreen ,draw, size=.4](B,A,H) 
+    \tkzDrawLine[add = .4 and .4, end=$r$, thin](A,H)
+
+    \tkzLabelPoint[above](H){$H$}
+    \tkzLabelPoint[above](A){$A$}
+    \tkzLabelPoint[below](B){$B$}
+    
+    \begin{scope}[font=\scriptsize]
+      \tkzLabelAngle[pos=.6](H,A,B){$\alpha$}
+    \end{scope}
+    
+    \tkzDrawPoints[fill=CornflowerBlue](A,B, H)
+  \end{scope}
+
+  \begin{scope}[xshift=80mm, rotate=-10]
+    \tkzDefPoints{0/0/A, 0/2/H, 2/2/B}
+    \tkzDrawLine[add=0 and 0, dashed, thin](B,H)
+    \tkzDrawLine[add=0 and 0,thin](A,B)
+    \tkzDrawLine[add = 0 and .2, end=$r$, thin](A,H)
+
+    \tkzLabelPoint[left](H){$H$}
+    \tkzLabelPoint[below](A){$A$}
+    \tkzLabelPoint[right](B){$B$}
+    \tkzMarkAngle[fill=LimeGreen ,draw, size=.4](B,A,H) 
+
+  \begin{scope}[font=\scriptsize]
+    \tkzLabelAngle[pos=.6](H,A,B){$\alpha$}
+  \end{scope}
+    \tkzDrawPoints[fill=CornflowerBlue](A,B, H)
+  \end{scope}
+\end{tikzpicture}

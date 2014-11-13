@@ -1,0 +1,73 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \begin{scope}[font=\scriptsize]
+    %%%%%%%%%%%%%%%%%%%%%%%%
+    %  POSIZIONE E DISEGNO %
+    %%%%%%%%%%%%%%%%%%%%%%%%    
+    \begin{scope}[shape=ellipse,thick, minimum height=30mm, minimum width=40mm]
+      \node [name=a, draw=orange] at (0,0) {};
+      \node [name=b, draw=blue] at (45mm,0) {};
+      \node [name=c, draw=red] at (90mm,0) {};
+    \end{scope}
+    %%%%%%%%%%%%%%%%%%%%
+    %  PARTE SUPERIORE %
+    %%%%%%%%%%%%%%%%%%%%
+    \begin{scope}[every node/.style={below=1mm}]
+      % Primo insieme
+      \node  at (a.north west) {$\displaystyle\frac{4}{6}$};
+      \node at (a.north) {$\displaystyle\frac{8}{12}$};
+      \node  at (a.north east){$\displaystyle\frac{16}{24}$};
+      % Secondo insieme
+      \node  at (b.north west) {$\displaystyle\frac{7}{6}$};
+      \node at (b.north) {$\displaystyle\frac{21}{18}$};
+      \node  at (b.north east){$\displaystyle\frac{35}{30}$};
+      % Terzo insieme
+      \node  at (c.north west) {$\displaystyle\frac{4}{2}$};
+      \node at (c.north) {$\displaystyle\frac{8}{4}$};
+      \node  at (c.north east){$\displaystyle\frac{30}{15}$};
+    \end{scope}
+    %%%%%%%%%%%%%%%%%%%
+    %  PARTE CENTRALE %
+    %%%%%%%%%%%%%%%%%%%
+    % Primo e Secondo insieme
+    \foreach \x in {a.center,b.center}
+      \node at (\x) {\ldots};
+    % Terzo insieme
+    \node[right=5mm] at (c.center) {\ldots};
+    \node[left=5mm] at (c.center) {$2$};
+    %%%%%%%%%%%%%%%%%%%%
+    %  PARTE INFERIORE %
+    %%%%%%%%%%%%%%%%%%%%
+    \begin{scope}[every node/.style={above=1mm}]
+      % Primo insieme
+      \node[above right] at(a.south)  {$\displaystyle\frac{18}{27}$ };
+      \node[above left] at(a.south)  {$\displaystyle\frac{6}{9}$};
+      \node at(a.south west) {$\displaystyle\frac{2}{3}$};
+      \node at(a.south east) {$\displaystyle\frac{10}{15}$};
+      % Secondo insieme
+      \node at(b.south)  {$\displaystyle\frac{28}{24}$};
+      \node at(b.south west) {$\displaystyle\frac{14}{12}$};
+      \node at(b.south east) {$\displaystyle\frac{70}{60}$};
+      % Terzo insieme
+      \node at(c.south)  {$\displaystyle\frac{20}{10}$};
+      \node at(c.south west) {$\displaystyle\frac{6}{3}$};
+      \node at(c.south east) {$\displaystyle\frac{60}{30}$};
+    \end{scope}
+  \end{scope}
+  %%%%%%%%%%%%%%%%%%%%
+  %  TITOLI          %
+  %%%%%%%%%%%%%%%%%%%%
+  \begin{scope}[font=\small, every node/.style={above=8mm}]
+    \node (af) at (a.30) {$\displaystyle\frac{2}{3}$};
+    \node (bf) at (b.30) {$\displaystyle\frac{7}{6}$};
+    \node (cf) at (c.30) {2};
+  \end{scope}
+  %%%%%%%%%%%%%%%%%%%%
+  % COLLEGAMENTI     %
+  %%%%%%%%%%%%%%%%%%%%
+  \begin{scope}[thick, ->]
+    \draw[orange] (a.north) .. controls +(up:5mm) and +(left:5mm) .. (af) ;
+    \draw[blue] (b.north) .. controls +(up:5mm) and +(left:5mm) .. (bf) ;
+    \draw[red] (c.north) .. controls +(up:5mm) and +(left:5mm) .. (cf) ;
+  \end{scope}
+\end{tikzpicture}

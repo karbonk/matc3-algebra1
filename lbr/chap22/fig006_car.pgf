@@ -1,0 +1,23 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[scale=.7, x=10mm, y=10mm]
+    \draw[dotted,color=orange] (-4,-4) grid (5,4);
+    \draw[->] (-4,0) -- (5,0) node[below left] {$x$};
+    \draw[->] (0,-4) -- (0,4) node[below left] {$y$};
+    
+\foreach \x/\xtext in {-3/-3,-2/-2,-1/-1,1/1,2/2,3/3,4/4,}
+\node[below]  at (\x,0) {$\xtext$};
+\foreach \y/\ytext in {-3/-3,-2/-2,-1/-1,1/1,2/2,3/3}
+\node[left] at (0,\y) {$\ytext$};
+
+\foreach \xi in {-3,-2,...,4}
+\draw (\xi,3pt) -- (\xi,-3pt);
+\foreach \yi in {-3,-2,...,3}
+\draw (3pt,\yi) -- (-3pt,\yi);
+
+\node [below left] at (0,0) {0};
+\draw[color=red,domain=-1.5:4.2] plot[id=x] function{(2*x-7)/3} 
+        node[right] {$a$};
+    
+\draw[color=blue,domain=-3.5:4.2] plot[id=x] function{(2*x-3)/3} 
+        node[right] {$b$};
+\end{tikzpicture}

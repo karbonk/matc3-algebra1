@@ -1,0 +1,26 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=7mm, y=7mm, smooth]
+\begin{scope}[dotted,orange]
+\draw[step=7mm] (-1.5,-1) grid (5.5,7);
+\end{scope}
+\begin{scope}[->]
+\draw (-.5,0) -- (5,0) node [below]  {lato};
+\draw (0,-.5) -- (0,6.5) node [above]   {diagonale};
+\end{scope}
+\foreach \x/\xtext in {1/1,2/2,4/4}
+\draw (\x,1.5pt) -- (\x,-1.5pt) node[below] {\xtext};
+\foreach \y/\ytext in {1.414/\sqrt{2},2.828/2\sqrt{2},5.687/4\sqrt{2}}
+\draw (1.5pt,\y) -- (-1.5pt,\y) node[left] {$\ytext$};
+
+\begin{scope}[dashed]
+\draw (1,0) -- (1,1.414) --(0,1.414);
+\draw (2,0) -- (2,2.828) --(0,2.828);
+\draw (4,0) -- (4,5.687) --(0,5.687);
+\end{scope}
+\draw[Maroon, thick] (0,0)--(4,5.687);
+
+
+\node[below left] at (0,0) {0};
+\filldraw[fill=white, draw=black] (0,0) circle (2pt);
+
+\end{tikzpicture}

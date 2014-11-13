@@ -1,0 +1,15 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=7mm, y=7mm]
+
+\draw[help lines,orange, dotted] (-3,-3) grid [step=1](5,5);
+
+\begin{scope}[thick,->]
+\draw (0,-3) -- (0,5) node[below left] {$y$};
+\draw (-3,0) -- (5,0) node[below left] {$x$};
+\end{scope}
+
+\draw[blue] (-3,4) -- (5,-1.33);
+
+\draw[fill=red] (0,2) circle (1.5pt) node[below left] {$P(0;2)$};
+\draw[fill=red] (3,0) circle (1.5pt) node[below left] {$A(3;0)$};
+\end{tikzpicture}

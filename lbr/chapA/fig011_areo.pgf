@@ -1,0 +1,58 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+
+\begin{tikzpicture}[x=7mm,y=7mm, x radius=7mm, y radius=7mm, font=\small]
+  \draw (0,0) circle (3);
+  \draw[fill=orange] (0,0) -- (0:3) arc (0:54:3);
+  \draw[fill=brown] (0,0)-- (54:3) arc (54:90:3);
+  \draw[fill=green] (0,0)-- (90:3) arc (90:108:3);
+  \draw[fill=red] (0,0)-- (108.6:3) arc (108:126:3);
+  \draw[fill=blue] (0,0)-- (126:3) arc (126:144:3);
+  \draw[fill=olive] (0,0)-- (144:3) arc (144:216:3);
+  \draw[fill=lightgray] (0,0)-- (216:3) arc (216:234:3);
+  \draw[fill=violet] (0,0)-- (234:3) arc (234:252:3);
+  \draw[fill=lime] (0,0)-- (252:3) arc (252:288:3);
+  \draw[fill=purple] (0,0)-- (288:3) arc (288:342:3);
+  \draw[fill=pink] (0,0)-- (342:3) arc (342:360:3);
+\node  at (0,4) {Areogramma};
+\begin{scope}[xshift=28mm, yshift=-3mm,
+every node/.style={anchor=center}]
+\matrix[matrix of nodes] at (0,0){
+\node[fill=orange]{};&159\\
+\node[fill=brown]{};&160\\
+\node[fill=green]{};&165\\
+\node[fill=red]{};&170\\
+\node[fill=blue]{};&173\\
+\node[fill=olive]{};&175\\
+\node[fill=lightgray]{};&176\\
+\node[fill=violet]{};&180\\
+\node[fill=lime]{};&182\\
+\node[fill=purple]{};&185\\
+\node[fill=pink]{};&190\\
+};
+\node at (0,	3.9) {Altezza (cm)};
+\end{scope}
+
+\begin{scope}[xshift=52mm, yshift=-21mm]
+\pgfplotsset{width=7cm}
+\begin{axis}[ymin=0, xlabel=Altezza (cm), ylabel=N$\grado$ di ragazzi]
+    \addplot[color=blue, mark=*]
+      coordinates{
+	(159,3)
+(160,2)
+(165,1)
+(170,1)
+(173,1)
+(175,4)
+(176,1)
+(180,1)
+(182,2)
+(185,3)
+(190,1)
+      };
+\end{axis}
+
+\node  at (3.5,7) {Diagramma cartesiano};
+\end{scope}
+\end{tikzpicture}
+

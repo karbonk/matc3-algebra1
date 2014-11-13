@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Esercizio 3.4
+
+\begin{tikzpicture}
+
+\draw  (0,0) circle(.8cm);
+\draw (1.8cm,-.8cm) rectangle (4.1cm,.8cm);
+\node [star, star point height=.5cm, minimum size=1.8cm, rotate=45, draw] at (5.9cm,0) {};
+
+\node (cercio) at (0,1.5cm) {$\displaystyle\frac{3}{5}$};
+\node (rettangolo) at (2.95cm,1.5cm) {$\displaystyle\frac{2}{3}$};
+\node (cercio) at (5.9cm,1.5cm) {$\displaystyle\frac{1}{2}$};
+\end{tikzpicture}

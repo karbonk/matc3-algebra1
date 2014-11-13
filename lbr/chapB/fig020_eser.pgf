@@ -1,0 +1,16 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small, every state/.style={draw=CornflowerBlue, minimum size=0pt}]
+
+\node[state] (X) at (-1,0) {$X$};
+\node[state] (H) at (.5,.5) {$H$};
+\node[state] (K) at (1,-1) {$K$};
+\node[state] (Z) at (-.5,-1) {$Z$};
+
+\begin{scope}[->, Maroon]
+\draw (X)--(H);
+\draw (X)--(Z);
+\draw (H)--(K);
+\end{scope}
+
+\end{tikzpicture}

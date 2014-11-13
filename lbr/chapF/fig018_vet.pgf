@@ -1,0 +1,47 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[->]
+    \draw (-.5,0) -- (4.5,0) node [below right] {$x$};
+    \draw (0,-2.5) -- (0,2) node[above left] {$y$};
+  \end{scope}
+
+  \foreach \x/\xtext in {1/1,2/2,3/3,4/4}{
+    \node[below] at (\x,0) {$\xtext$};
+    \draw (\x,1.5pt) -- (\x,-1.5pt);}
+  \foreach \y/\ytext in {-2/-2,-1/-1, 1/1}{
+    \node[left] at (0,\y) {$\ytext$};
+    \draw (1.5pt,\y) -- (-1.5pt,\y);}
+  \node[below left] at (0,0) {$0$};
+
+  \begin{scope}[dotted, orange]
+    \draw (-.5,-2.5) grid (4.5,2);
+  \end{scope}
+
+  \begin{scope}[thick, ->,shorten >=1.5pt]
+	\draw[Maroon] (0,0) -- (3,1);     % OD
+	\draw[OliveGreen](0,0) -- (1,1);  % OA
+	\draw[OliveGreen](0,0) -- (4,-2); % OC
+      \end{scope}
+ 
+\begin{scope}[lightgray]
+\draw (1,1) -- (2,2);
+\draw[xshift=20mm] (-2,-2) -- (1.5,1.5);
+\draw[yshift=25mm](0,0)--(4,-2);
+\end{scope}
+
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (0,0) circle (1.5pt)node [above left]{$O$};
+\filldraw (3,1) circle (1.5pt)node [below]{$D$};
+\filldraw (1,1) circle (1.5pt)node [above left]{$A$};
+\filldraw (1.34,-.66) circle (1.5pt)node [below]{$F$};
+\filldraw (1.67,1.67) circle (1.5pt) node [above]{$E$};
+\filldraw (4,-2) circle (1.5pt) node [below right]{$C$};
+\end{scope}
+
+\node[above] at (0.5,0.5) {$\vec{u}$};
+\node[above] at (2,-1) {$\vec{v}$};
+\node[above] at (1.5,0.5) {$\vec{w}$};
+
+\end{tikzpicture}

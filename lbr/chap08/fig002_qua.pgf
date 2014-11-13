@@ -1,0 +1,10 @@
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+\definecolor{area}{gray}{0.9}
+\draw [fill=area] (0,0) rectangle (5,5); 
+\foreach \x in {0,4}{
+\draw[fill=white] (\x,0) rectangle (\x+1,1);
+\draw[fill=white] (\x,4) rectangle (\x+1,5);}
+\node[right] at (5,0) {$A$};
+\node [right] at (5,5) {$B$};
+\node [right] at (5,1) {$C$};
+\end{tikzpicture}

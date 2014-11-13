@@ -1,0 +1,33 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm,y=10mm, font=\footnotesize]
+\foreach \x in {0,1.5,...,4.5}
+\draw (\x,0) rectangle (\x+1.5,2);
+
+\foreach \y/\ytext in {.75/$5^3$,2.25/$5^2$,3.75/$5^1$,5.25/$5^0$}
+\node[above] (pot) at (\y,2) {\ytext};
+
+\foreach \z in {1.8,1.6,...,1}
+\foreach \a in {5.4,5.5,...,5.9}
+\filldraw (\a,\z)circle (.8pt);
+ 
+
+\foreach \zi in {0.31}
+\foreach \a in {5.5,5.6,5.7,5.8}
+\filldraw[red] (\a,\zi)circle (1pt) ;
+
+\foreach \zii in {1.8,1.6,...,1}
+\filldraw (3.75,\zii) circle (1.4pt);
+\draw[dashed] (3.75,1.8)--(3.75,1);
+
+\foreach \yi in {1.8,1.6,...,1}{
+\node (unita) at (6,\yi) {};
+\node (dec) at (3.8,\yi) {};
+\draw[<-,dotted] (dec)--(unita);
+\filldraw[fill=red,draw=red] (2.25,1) circle (1.8pt) node [right] (cen) {};
+\draw[<-,dotted](cen)--(3.5,1);
+}
+
+\foreach \xi/\xitext in {3/1,4.5/0,6/4}
+\node[left] (num) at (\xi,.15) {\xitext};
+
+\end{tikzpicture}

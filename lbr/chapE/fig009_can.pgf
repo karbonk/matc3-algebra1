@@ -1,0 +1,33 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm,y=10mm]
+
+\matrix (a)[matrix of nodes, row sep=2mm, column sep=5mm, text depth=.5em] at (0,0){
+$1/1$ & $2/1$ & $3/1$ & $4/1$ & \ldots\\
+$1/2$ & $2/2$ & $3/2$ & $4/2$ & \ldots\\
+$1/3$ & $2/3$ & $3/3$ & $4/3$ & \ldots\\
+$1/4$ & $2/4$ & $3/4$ & $4/4$ & \ldots\\
+\ldots &\ldots & \ldots&\ldots & \ldots\\
+};
+  \begin{scope}[->,smooth,thick]
+\foreach \x/\xtext in {1/2,3/4}
+    \draw[Maroon] (a-1-\x.north) .. controls +(90:.5cm) and +(90:.5cm) .. (a-1-\xtext.north);
+\foreach \x/\xtext in {2/3,4/5}
+    \draw[Maroon] (a-\x-1.west) .. controls +(180:.5cm) and +(180:.5cm) .. (a-\xtext-1.west);
+
+\foreach \x/\xtext in {1/2,3/4}{
+    \draw[purple] (a-\x-2.west) -- (a-\xtext-1.east);
+    \draw[purple] (a-\x-4.west) -- (a-\xtext-3.east);}
+
+\foreach \x/\xtext in {2/3,4/5}{
+    \draw[purple] (a-\x-3.west) -- (a-\xtext-2.east);
+    \draw[purple] (a-\x-5.west) -- (a-\xtext-4.east);}
+
+\foreach \x/\xtext in {3/2,5/4}{
+    \draw[orange] (a-\x-1.east) -- (a-\xtext-2.west);
+    \draw[orange] (a-\x-3.east) -- (a-\xtext-4.west);}
+
+\foreach \x/\xtext in {2/1,4/3}{
+    \draw[orange] (a-\x-2.east) -- (a-\xtext-3.west);
+    \draw[orange] (a-\x-4.east) -- (a-\xtext-5.west);}
+  \end{scope}
+\end{tikzpicture}

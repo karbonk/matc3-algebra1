@@ -1,0 +1,27 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[scale=.75]
+  \tikzset{
+    every pin/.style={pin distance=0,font=\small},
+  }
+
+\begin{axis}[xlabel=$n\grado$ ore, ylabel=$n\grado$ ragazzi,xmin=0]
+  \addplot[color=blue, mark=*]
+    coordinates{
+      (0,4) 
+      (1,6)
+      (2,12)
+      (3,16)
+      (4,8)
+      (5,4)
+      (6,2)
+      };
+
+  \node[pin=0:{$A(0;4)$}] at (axis cs:0,4) {};
+  \node[pin=0:{$B(1;6)$}] at (axis cs:1,6) {};
+  \node[pin=180:{$C(2;12)$}] at (axis cs:2,12) {};
+  \node[pin=0:{$D(3;16)$}] at (axis cs:3,16) {};
+  \node[pin=0:{$E(4;8)$}] at (axis cs:4,8) {};
+  \node[pin=0:{$F(5;4)$}] at (axis cs:5,4) {};
+   \node[pin=180:{$G(6;2)$}] at (axis cs:6,2) {};
+\end {axis}
+\end{tikzpicture}

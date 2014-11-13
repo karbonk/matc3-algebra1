@@ -1,0 +1,20 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+[auto,block/.style
+={rectangle, draw=Maroon, thick,
+text width=5em,align=center, rounded corners,
+minimum height=3.1em},
+line/.style
+={draw, thick, ->,shorten >=2pt}]
+\matrix [column sep=7mm]{
+& \node [block] (prn) {prendi $x\in \insR$}; 
+& \node [block] (molt) {moltiplica per 2}; 
+& \node [block] (agg) {aggiungi 1}; 
+& \node [block] (scr) {scrivi $y$}; & \\
+};
+\begin{scope}[every path/.style=line]
+\path (prn)-- (molt);
+\path (molt) -- (agg);
+\path (agg)--(scr);
+\end{scope}
+\end{tikzpicture}

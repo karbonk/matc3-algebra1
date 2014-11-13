@@ -1,0 +1,9 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture} 
+  \node (esp) at (0,0) {$5^3=\underbrace{5\cdot 5\cdot 5}_{3 \text{ volte}} = 125$};
+\begin{scope}[font=\scriptsize]
+  \draw[<-]  (-1,.5)--(-0.8,.7) node[right] {esponente};
+  \draw[->]  (-1.6,-.1)--(-1.4,.1) node[below left=.2] {base};
+  \draw[<-]  (1.4,.1)--(1.6,-.1) node[below right] {potenza };
+\end{scope}
+\end{tikzpicture}

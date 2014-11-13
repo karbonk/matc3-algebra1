@@ -1,0 +1,26 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small\ttfamily,anchor=south]
+
+\matrix(a) [matrix of nodes,nodes={ text centered}]
+{
+&&1  & 0  & 1 & $\cdot$\\
+&&1 & 0 & 1 \\
+&&1  & 0  & 1 &\\
+ & 0 & 0 & 0&$-$ \\
+ 1 & 0  & 1&$-$\\
+1 & 1& 0 &0&1\\
+};
+
+\draw (a-3-3.north west) -- (a-3-5.north east);
+\draw (a-6-1.north west) -- (a-6-5.north east);
+
+\begin{scope}[xshift=25mm]
+\matrix(b) [matrix of nodes,nodes={ text centered}]
+{
+1  &1&0& 0  & 1 & $+$\\
+&&1 & 0 & 0 \\
+1&1&1  & 0  & 1 &\\
+};
+\end{scope}
+\draw (b-3-1.north west) -- (b-3-5.north east);
+\end{tikzpicture}

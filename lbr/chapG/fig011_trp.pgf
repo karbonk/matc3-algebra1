@@ -1,0 +1,33 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+\coordinate (A) at (0,0);
+\coordinate (D) at ($(A)+(0:6.702)$);
+\coordinate (B) at ($(A)+(56:4.25)$);
+\coordinate (C) at ($(D)+(118:2.76)$);
+\coordinate (F) at ($(A)+(0:2.38)$);
+\coordinate (G) at ($(F)+(90:2.43)$);
+\coordinate (E) at ($(A)+(0:5.4)$);
+
+\draw (B) node[above]{$B$}--(A) node[below left]{$A$}--(D) node[below right]{$D$}--(C)node [right]{$C$} --(B);
+
+\tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](D,A,B)
+\tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](C,D,A)
+
+\begin{scope}[dashed]
+\draw(B)--(F) node[below]{$F$};
+\draw(C)--(G)node[left]{$G$};
+\draw(C)--(E)node[below]{$E$};
+\end{scope}
+
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (0,0) circle (1pt);
+\filldraw (6.702,0) circle (1pt);
+\filldraw (5.4,2.43) circle (1pt);
+\filldraw (2.38,3.52) circle (1pt);
+\filldraw (2.38,0) circle (1pt);
+\filldraw (2.38,2.43) circle (1pt);
+\filldraw (5.4,0) circle (1pt);
+\end{scope}
+\end{tikzpicture}

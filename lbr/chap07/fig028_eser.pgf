@@ -1,0 +1,30 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\draw (0,0) ellipse (1 and 2) (0,2.5)node {$M$};
+\draw (2.5,0) ellipse (1 and 2)(2.5,2.5) node {$P$};
+\node  at (1.25,-3) {A};
+
+\begin{scope}[xshift=30mm]
+\draw (0,0) ellipse (1 and 2) (0,2.5)node {$M$};
+\draw (1.5,0) ellipse (1 and 2)(1.5,2.5) node {$P$};
+\node  at (.75,-3) {B};
+\end{scope}
+
+\begin{scope}[xshift=55mm]
+\draw (0,0) ellipse (1 and 2) (0,2.5)node {$M$};
+\draw (0,-.5) ellipse (.7 and 1) node {$P$};
+\node  at (0,-3) {C};
+\end{scope}
+
+\begin{scope}[xshift=75mm]
+\draw (0,0) ellipse (1 and 2) (0,2.5)node {$P$};
+\draw (0,.5) ellipse (.7 and 1) node {$M$};
+\node  at (0,-3) {D};
+\end{scope}
+
+\begin{scope}[xshift=95mm]
+\draw (0,0) ellipse (1 and 2) (0,2.5)node {$M=P$};
+\node  at (0,-3) {E};
+\end{scope}
+\end{tikzpicture}

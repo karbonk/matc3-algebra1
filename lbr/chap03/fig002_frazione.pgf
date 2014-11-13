@@ -1,0 +1,20 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \begin{scope}[font=\large]
+    \matrix (frazione)  at (0,0){%
+      \node (num) {$a$};\\
+      \node (den) {$n$};\\
+    };
+  \end{scope}
+
+  \draw (num.south west)--(num.south east);
+
+  \begin{scope}[font=\small]
+    \node (testo1) at (25mm,7mm) {numeratore};
+    \node (testo2) at (25mm,-7mm) {denominatore};
+    \node (testo3) at (25mm,-12mm) {$n\neq0$};
+  \end{scope}
+
+  \draw[->,blue] (testo1) .. controls +(down:10mm) and +(up:10mm) .. (num) ;
+  \draw[->,red] (testo2) .. controls +(up:10mm) and +(down:10mm) .. (den) ;
+\end{tikzpicture}

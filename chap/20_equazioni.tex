@@ -1,0 +1,496 @@
+% (c) 2012-2013 Claudio Carboncini - claudio.carboncini@gmail.com
+% (c) 2012-2014 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\chapter{Equazioni}
+
+\section{Equazioni di grado superiore al primo riducibili al primo grado}
+
+Nel capitolo \ref{cap:equazioni_I_grado} abbiamo affrontato le equazioni di primo grado. Adesso consideriamo le equazioni di grado superiore al primo che possono essere ricondotte ad equazioni di primo grado,
+utilizzando la legge di annullamento del prodotto (legge \ref{legge:annullamento_del_prodotto} a pagina \pageref{legge:annullamento_del_prodotto}).
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere~$x^{2}-4=0$.
+
+Il polinomio al primo membro può essere scomposto in fattori:~$(x-2)(x+2)=0$.
+Per la legge di annullamento, il prodotto dei due binomi si annulla se~$x-2=0$ oppure se~$x+2=0$.
+Di conseguenza si avranno le soluzioni:~$x=2$ e $x=-2$.
+ \end{esempio}
+\end{exrig}
+
+In generale, se si ha un’equazione di grado~$n$ scritta in forma normale~$P(x)=0$ e se il polinomio~$P(x)$ è
+fattorizzabile nel prodotto di~$n$ fattori di primo grado:
+\begin{equation*}
+(x-a_{1})(x-a_{2})(x-a_{3})\ldots (x-a_{n-1})(x-a_{n})=0
+\end{equation*}
+applicando la legge di annullamento del prodotto, le soluzioni dell’equazione si ottengono determinando le soluzioni delle singole~$n$
+equazioni di primo grado, cioè risolvendo:
+\begin{equation*}
+x-a_{1}=0\text{,~~~}x-a_{2}=0\text{,~~~}x-a_{3}=0\text{,~~~}\ldots\text{,~~~}x-a_{n-1}=0\text{,~~~}x-a_{n}=0.
+\end{equation*}
+Pertanto l’insieme delle soluzioni dell’equazione data sarà:~$\IS=\{a_{1}\text{,~}a_{2}\text{,~}a_{3}\text{,~}\ldots\text{,~}a_{n-1}\text{,~}a_{n}\}$.
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere~$x^{2}-x-2=0$.
+
+Scomponendo in fattori il polinomio al primo membro, ricercando quei due numeri la cui somma è pari a~$-1$ e il cui prodotto è pari a~$-2$, 
+si ha:~$(x+1)(x-2)=0$.
+Utilizzando la legge di annullamento del prodotto, si ottiene il seguente insieme di soluzioni:~$\IS=\{-1\text{,~}2\}$.
+ \end{esempio}
+
+ \begin{esempio}
+Risolvere~$x^{4}-5x^{2}+4=0$.
+
+Scomponendo in fattori il polinomio al primo membro, utilizzando la regola della scomposizione del particolare trinomio di secondo grado,
+si ottiene:~$(x^{2}-1)(x^{2}-4)=0$. Scomponendo ulteriormente in fattori si ha:
+\begin{equation*}
+(x-1)(x+1)(x-2)(x+2)=0.
+\end{equation*}
+Per la legge di annullamento del prodotto è necessario risolvere le equazioni:
+\begin{equation*}
+x-1=0\: \Rightarrow\: x=1\text{,}\quad x+1=0\: \Rightarrow\: x=-1\text{,}\quad x-2=0\: \Rightarrow\: x=2\text{,}\quad x+2=0\: \Rightarrow\: x=-2.
+\end{equation*}
+L’insieme delle soluzioni:~$\IS=\{+1\text{,~}-1\text{,~}+2\text{,~}-2\}$.
+ \end{esempio}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:20.1}, \ref{ese:20.2}, \ref{ese:20.3}, \ref{ese:20.4}, \ref{ese:20.5}, \ref{ese:20.6}, \ref{ese:20.7}, \ref{ese:20.8},
+\ref{ese:20.9}, \ref{ese:20.10}}
+
+\vspazio\ovalbox{\ref{ese:20.11}, \ref{ese:20.12}, \ref{ese:20.13}}
+
+\section{Equazioni numeriche frazionarie}
+
+Affrontiamo ora le equazioni in cui l'incognita compare anche al denominatore.
+
+\begin{definizione} Un’equazione in cui l’incognita compare al denominatore si chiama \emph{frazionaria} o \emph{fratta}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere~$\dfrac{3x-2}{1+x}=\dfrac{3x}{x-2}$.
+ \end{esempio}
+Questa equazione si differenzia da quelle affrontate in precedenza per il fatto che l'incognita compare anche al denominatore.
+Riflettendo sulla richiesta del problema, possiamo senz’altro affermare che, se esiste il valore che rende
+la frazione al primo membro uguale alla frazione al secondo membro, esso non deve annullare nessuno dei due denominatori,
+poiché in questo caso renderebbe priva di significato la scrittura, in quanto frazioni con denominatore~$0$ sono prive di significato.
+
+Per risolvere un'equazione frazionaria, prima di tutto dobbiamo renderla nella forma
+\begin{equation*}
+\frac{F(x)}{G(x)}=0.
+\end{equation*}
+
+\begin{enumeratea}
+ \item Determiniamo il~$\mcm$ dei denominatori, $\mcm=(1+x)\cdot (x-2)$.
+    Osserviamo che per~$x = -1$ oppure per~$x = 2$ le frazioni perdono di significato, in quanto si annulla il denominatore;
+ \item imponiamo le condizioni di esistenza:~$1+x\neq~0$ e~$x-2\neq~0$ cioè~$\CE x\neq -1\wedge x\neq~2$. La ricerca dei valori
+    che risolvono l'equazione viene ristretta all'insieme~$\Dom=\insR-\{-1\text{,~}2\}$, detto \emph{dominio} dell’equazione o
+    \emph{insieme di definizione};
+ \item applichiamo il primo principio d’equivalenza trasportando al primo membro la frazione che si trova al secondo membro
+    e riduciamo allo stesso denominatore ($\mcm$)
+    \begin{equation*}
+      \frac{(3x-2)\cdot (x-2)-3x\cdot (1+x)}{(1+x)\cdot (x-2)}=0;
+    \end{equation*}
+ \item applichiamo il secondo principio di equivalenza moltiplicando ambo i membri per il~$\mcm$,
+    certamente diverso da zero per le condizioni poste precedentemente. L’equazione diventa:~$(3x-2)\cdot (x-2)-3x\cdot (1+x)=0$;
+ \item eseguiamo le moltiplicazioni e sommiamo i monomi simili per portare l’equazione alla forma canonica:
+    $3x^{2}-6x-2x+4-3x-3x^{2}=0\: \Rightarrow\: -11x=-4$;
+ \item dividiamo ambo i membri per~$-11$, per il secondo principio di equivalenza si ha:~$x=\frac{4}{11}$;
+ \item confrontiamo il valore trovato con le~$\CE$: in questo caso la soluzione appartiene al dominio~$\Dom$, quindi possiamo concludere
+    che è accettabile. L’insieme soluzione è:~$\IS=\left\{\frac{4}{11}\right\}$.
+\end{enumeratea}
+
+%\newpage
+ \begin{esempio}
+Risolvere~$\dfrac{x^{2}+x-3}{x^{2}-x}=1-\dfrac{5}{2x}$.
+\end{esempio}
+
+\begin{enumeratea}
+ \item Determiniamo il~$\mcm$ dei denominatori. Per fare questo dobbiamo prima scomporli in fattori.
+    Riscriviamo:~$\dfrac{x^{2}+x-3}{x\cdot (x-1)}=1-\dfrac{5}{2x}$ con~$\mcm=2x\cdot (x-1)$;
+ \item condizioni di esistenza: \[x-1\neq~0\wedge~2x\neq~0\text{,}\] cioè~$x\neq~1\wedge x\neq~0$. Il dominio è~$\Dom=\insR-\{1\text{,~}0\}$;
+ \item trasportiamo al primo membro ed uguagliamo a zero \[\frac{x^{2}+x-3}{x\cdot (x-1)}-1+\frac{5}{2x}=0\]
+    e riduciamo allo stesso denominatore ($\mcm$) ambo i membri \[\frac{2x^{2}+2x-6-2x^{2}+2x+5x-5}{2x\cdot (x-1)}=0;\]
+ \item applichiamo il secondo principio di equivalenza moltiplicando ambo i membri per il~$\mcm$,
+    certamente diverso da zero per le condizioni poste in precedenza. L’equazione diventa:~$2x^{2}+2x-6-2x^{2}+2x+5x-5=0$;
+ \item riduciamo i monomi simili per portare l’equazione alla forma canonica:~$9x=11$;
+ \item dividiamo ambo i membri per~$9$, otteniamo:~$x=\frac{11}{9}$;
+ \item confrontando con le~$\CE$, la soluzione appartiene all’insieme~$\Dom$, dunque è accettabile e l’insieme soluzione è:
+    $\IS=\left\{\frac{11}{9}\right\}$.
+\end{enumeratea}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:20.15}, \ref{ese:20.16}, \ref{ese:20.17}, \ref{ese:20.18}, \ref{ese:20.19}, \ref{ese:20.20}, \ref{ese:20.21},
+\ref{ese:20.22}, \ref{ese:20.23}, \ref{ese:20.24}, \ref{ese:20.25}}
+
+\vspazio\ovalbox{\ref{ese:20.26}, \ref{ese:20.27}}
+
+\section{Equazioni letterali}
+Quando si risolvono problemi, ci si ritrova a dover tradurre nel linguaggio simbolico delle proposizioni del tipo:
+<<Un lato di un triangolo scaleno ha lunghezza pari a~$k$ volte la lunghezza dell’altro e la loro somma è pari a~$2k$>>.
+Poiché la lunghezza del lato del triangolo non è nota, ad essa si attribuisce il valore incognito~$x$ e quindi la proposizione
+viene tradotta dalla seguente equazione:~$x+kx=2k$.
+
+È possibile notare che i coefficienti dell’equazione non sono solamente numerici, ma contengono una lettera dell’alfabeto diversa
+dall’incognita. Qual è il ruolo della lettera~$k$?
+Essa prende il nome di \emph{parametro} ed è una costante che rappresenta dei numeri fissi, quindi, può assumere dei valori prefissati.
+Ogni volta che viene fissato un valore di~$k$, l’equazione precedente assume una diversa forma. Infatti si ha:
+\begin{center}
+\begin{tabular}{cl}
+\toprule
+Valore di~$k$ & Equazione corrispondente\\
+\midrule
+$0$ & $x=0$\\
+$2$ & $x+2x=4$\\
+$-\frac{1}{2}$ & $x-\frac{1}{2}x=-1$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Si può quindi dedurre che il parametro diventa una costante, all’interno dell’equazione nell’incognita~$x$, ogni volta che se ne sceglie il valore.
+
+Si supponga che il parametro~$k$ assuma valori all’interno dell’insieme dei numeri reali. Lo scopo è quello di risolvere l’equazione,
+facendo attenzione a rispettare le condizioni che permettono l’uso dei principi d’equivalenza e che permettono di ridurla in forma normale.
+
+Riprendiamo l'equazione  $x+kx=2k$, raccogliamo a fattore comune la~$x$ si ha:
+\begin{equation*}
+ (k+1)x=2k.
+\end{equation*}
+Per determinare la soluzione di questa equazione di primo grado, è necessario utilizzare il secondo principio d’equivalenza e
+dividere ambo i membri per il coefficiente~$k+1$.
+Si ricordi però che il secondo principio ci permette di moltiplicare o dividere i due membri dell'equazione per una stessa espressione,
+purché questa sia diversa da zero.
+Per questa ragione, nella risoluzione dell’equazione~$(k+1)x=2k$ è necessario distinguere i due casi:
+\begin{itemize*}
+\item se~$k+1\neq~0$, cioè se~$k\neq -1$, è possibile dividere per~$k+1$ e si ha~$x=\dfrac{2k}{k+1}$;
+\item se~$k+1=0$, cioè se~$k=-1$, sostituendo tale valore all'equazione si ottiene l’equazione~$(-1+1)x=2\cdot (-1)$,
+   cioè~$0\cdot x=-2$ che risulta impossibile.
+\end{itemize*}
+Riassumendo si ha:
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\multicolumn{3}{c} {$x+kx=2k$~~con~$k \in \insR$}\vspace{1.05ex}\\
+Condizioni sul parametro & Soluzione & Equazione\\
+\midrule
+$k=-1$ & nessuna & impossibile \\
+$k\neq-1$ & $x=\dfrac{2k}{k+1}$ & determinata \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Ritorniamo ora al problema sul triangolo, spesso nell’enunciato del problema sono presenti delle limitazioni implicite
+che bisogna trovare. Infatti, dovendo essere~$x$ un lato del triangolo esso sarà un numero reale positivo.
+Di conseguenza, dovendo essere l’altro lato uguale a~$k$ volte~$x$, il valore di~$k$ deve necessariamente essere anch'esso positivo, ovvero~$k>0$.
+Di conseguenza il parametro~$k$ non può mai assumere il valore~$-1$ e quindi il problema geometrico ammette sempre una soluzione.
+
+Questa analisi effettuata sui valori che può assumere il parametro~$k$, prende il nome di \emph{discussione dell’equazione}.
+\begin{procedura}
+Stabilire quando una equazione è determinata, indeterminata, impossibile.
+
+In generale, data l'equazione~$ax+b=0$ si ha~$ax=-b$ e quindi:
+\begin{enumeratea}
+\item se~$a\neq~0$, l’equazione è determinata e ammette l’unica soluzione~$x=-\dfrac{b}{a}$;
+\item se~$a=0$ e~$b\neq~0$, l’equazione è impossibile;
+\item se~$a=0$ e~$b=0$, l’equazione è soddisfatta da tutti i valori reali di~$x$, ovvero è indeterminata.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere e discutere~$1+x+m=(x+1)^{2}-x(x+m)$.
+
+Dopo aver fatto i calcoli si ottiene l’equazione~$(m-1)\cdot x=-m$ e quindi si ha:
+\begin{itemize*}
+ \item Se~$m-1\neq~0$, cioè se~$m\neq~1$, è possibile dividere ambo i membri per~$m-1$ e si ottiene l’unica soluzione~$x=-{\dfrac{m}{m-1}}$;
+ \item se~$m-1=0$, cioè se~$m=1$, sostituendo nell'equazione il valore~$1$ si ottiene~$0\cdot x=-1$, che risulta impossibile.
+\end{itemize*}
+ \end{esempio}
+
+ \begin{esempio}
+Risolvere e discutere~$(k+3)x=k+4x(k+1)$.
+
+Effettuando i prodotti si ottiene l’equazione:~$(3k+1)x=-k$ e quindi si ha:
+\begin{itemize*}
+ \item Se~$3k+1\neq~0$, cioè se~$k\neq -{\frac{1}{3}}$, è possibile dividere ambo i membri per~$3k+1$ e si ottiene l’unica soluzione~$x=\dfrac{-k}{3k+1}$;
+ \item se~$k=-{\frac{1}{3}}$, sostituendo questo valore di~$k$ nell'equazione si ottiene~$0\cdot x=\frac{1}{3}$, che risulta un'equazione impossibile.
+\end{itemize*}
+ \end{esempio}
+
+ \begin{esempio}
+Risolvere e discutere~$a^{2}\cdot x=a+1+x$.
+
+Portiamo al primo membro tutti i monomi che contengono l'incognita~$a^{2}\cdot x-x=a+1$.
+Raccogliamo a fattore comune l'incognita~$x\cdot \left(a^{2}-1\right)=a+1$.
+Scomponendo in fattori si ha l'equazione~$x\cdot \left(a-1\right)\left(a+1\right)=a+1$.
+
+I valori di~$a$ che annullano il coefficiente dell'incognita sono~$a=1$ e~$a=-1$.
+\begin{itemize*}
+ \item Se nell'equazione sostituisco~$a=1$, ottengo l'equazione~$0x=2$ che è impossibile;
+ \item se sostituisco~$a=-1$, ottengo l'equazione~$0x=0$ che è indeterminata;
+ \item escludendo i casi~$a=1$ e~$a=-1$, che annullano il coefficiente della~$x$, posso applicare il secondo principio
+    di equivalenza delle equazioni e dividere primo e secondo membro per~$(a+1)(a-1)$, ottenendo~$x=\dfrac{a+1}{\left(a+1\right)\cdot \left(a-1\right)}=\dfrac{1}{a-1}$.
+\end{itemize*}
+ \end{esempio}
+Ricapitolando:
+se~$a=1$, allora~$\IS=\emptyset$; se~$a=-1$, allora~$\IS=\insR$; se~$a\neq +1\wedge a\neq -1$, allora~$\IS=\left\{\dfrac{1}{a-1}\right\}$.
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:20.34}, \ref{ese:20.35}, \ref{ese:20.36}, \ref{ese:20.37}, \ref{ese:20.38}, \ref{ese:20.39}, \ref{ese:20.40}}
+
+\subsection{Equazioni con due parametri}
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere e discutere~$(b+a)x-(b+2)(x+1)=-1$.
+
+Mettiamo l'equazione in forma canonica:~$bx+ax-bx-b-2x-2=-1$.
+Raccogliamo a fattore comune l'incognita~$(a-2)x=b+1$.
+\begin{itemize*}
+ \item Se~$a-2=0$ l'equazione è impossibile o indeterminata. In questo caso:
+  \begin{itemize*}
+   \item se~$b+1=0$ è indeterminata;
+   \item se~$b+1\neq~0$ è impossibile;
+  \end{itemize*}
+ \item se~$a-2\neq~0$ l'equazione è determinata e la sua soluzione è~$x=\dfrac{b+1}{a-2}$.
+\end{itemize*}
+ \end{esempio}
+Riassumendo:
+se~$a=2\wedge b=-1$ allora~$\IS=\insR$; se~$a=2\wedge b\neq -1$ allora~$\IS=\emptyset$; se~$a\neq~2\wedge b\neq -1$ allora~$\IS=\left\{\dfrac{b+1}{a-2}\right\}$.
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:20.41}, \ref{ese:20.42}, \ref{ese:20.43}}
+
+\subsection{Equazioni letterali, caso in cui il denominatore contiene il parametro}
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere e discutere~$\dfrac{x+a}{2a-1}-\dfrac{1}{a-2a^{2}}=\dfrac{x}{a}$ con~$a\in \insR$.
+
+Questa equazione è intera, pur presentando termini frazionari.
+Sappiamo che ogni volta che viene fissato un valore per il parametro, l’equazione assume una forma diversa;
+la presenza del parametro al denominatore ci obbliga ad escludere dall’insieme dei numeri reali quei valori che annullano il denominatore.
+
+Per~$a=0\vee a=\frac{1}{2}$ si annullano i denominatori, quindi l’equazione è priva di significato.
+Per risolvere l’equazione abbiamo bisogno delle condizioni di esistenza~$\CE a\neq~0$ e $a\neq \frac{1}{2}$.
+
+Procediamo nella risoluzione, riduciamo allo stesso denominatore ambo i membri dell’equazione:
+$\dfrac{a\cdot (x+a)+1}{a\cdot (2a-1)}=\dfrac{x\cdot (2a-1)}{a\cdot (2a-1)}$.
+Applichiamo il secondo principio moltiplicando ambo i membri per il~$\mcm$, otteniamo:~$ax+a^{2}+1=2ax-x$
+che in forma canonica è
+\begin{equation*}
+ x\cdot (a-1)=a^{2}+1.
+\end{equation*}
+
+Il coefficiente dell’incognita dipende dal valore assegnato al parametro $a$; procediamo quindi alla discussione:
+\begin{itemize*}
+ \item se~$a-1\neq~0$ cioè~$a\neq~1$ possiamo applicare il secondo principio e dividere ambo i membri per il coefficiente
+    $a-1$ ottenendo~$x=\dfrac{a^{2}+1}{a-1}$. L’equazione è determinata:
+    \[\IS=\left\{\frac{a^{2}+1}{a-1}\right\};\]
+ \item se~$a-1=0$ cioè~$a=1$ l’equazione diventa~$0\cdot x=2$. L’equazione è impossibile:~$\IS=\emptyset$.
+\end{itemize*}
+
+Riassumendo si ha:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\multicolumn{3}{c} {$\frac{x+a}{2a-1}-\frac{1}{a-2a^{2}}=\frac{x}{a}$~~con~$a\in \insR$}\vspace{1.05ex}\\
+Condizioni sul parametro & Insieme Soluzione & Equazione\\
+\midrule
+$a=0\vee a=\frac{1}{2}$ & & priva di significato\\
+$a=1$ & $\IS=\emptyset$ & impossibile \\
+$a\neq~0\wedge a\neq \frac{1}{2}\wedge a\neq~1$ & $\IS=\left\{\frac{a^{2}+1}{a-1}\right\}$ & determinata \\
+\bottomrule
+\end{tabular}
+\end{center}
+ \end{esempio}
+
+ \begin{esempio}
+Risolvere e discutere~$\dfrac{a-x}{a-2}+\dfrac{2ax}{a^{2}-4}-\dfrac{2-x}{a+2}=0$ con~$a\in \insR$.
+
+Scomponendo i denominatori troviamo il~$\mcm=a^2-4$.
+Pertanto se~$a=2$ o~$a=-2$ il denominatore si annulla e quindi l’equazione è priva di significato.
+Per poter procedere nella risoluzione poni le~$\CE a\neq -2\wedge a\neq~2$.
+
+Riducendo allo stesso denominatore:~$\dfrac{(a-x)(a+2)+2ax-(2-x)(a-2)}{(a+2)(a-2)}=0$.
+
+Applica il secondo principio per eliminare il denominatore e svolgi i calcoli. Arrivi alla forma canonica che è
+ $2\cdot (a-2)\cdot x=a^{2}+4$.
+
+Per le~$\CE$ sul parametro, il coefficiente dell’incognita è sempre diverso da zero, pertanto puoi dividere per~$2(a-2)$ e ottieni
+$x=\dfrac{a^{2}+4}{2(a-2)}$.
+
+Riassumendo si ha:
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+\multicolumn{3}{c} {$\frac{a-x}{a-2}+\frac{2ax}{a^{2}-4}-\frac{2-x}{a+2}=0$ con~$a\in \insR$}\vspace{1.05ex}\\
+Condizioni sul parametro & Insieme Soluzione & Equazione\\
+\midrule
+$a=-2\vee a=+2$ & & priva di significato\\
+$a\neq -2\wedge a\neq +2$ & $\IS=\left\{\frac{a^{2}+4}{2(a-2)}\right\}$ & determinata \\
+\bottomrule
+\end{tabular}
+\end{center}
+ \end{esempio}
+\end{exrig}
+
+\subsection{Equazioni letterali frazionarie}
+
+\subsubsection{Caso in cui il denominatore contiene solo l’incognita}
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere e discutere~$\dfrac{x+4a}{3x}=a-\dfrac{2x+2a}{6x}$ con~$a\in \insR$.
+
+Questa equazione è frazionaria o fratta perché nel denominatore compare l’incognita.
+Sappiamo che risolvere un’equazione significa determinare i valori che, sostituiti all’incognita, rendono vera
+l’uguaglianza tra il primo e il secondo membro. Non sappiamo determinare tale valore solamente analizzando l’equazione,
+ma certamente possiamo dire che non dovrà essere~$x = 0$ perché tale valore, annullando i denominatori, rende privi di
+significato entrambi i membri dell’equazione.
+
+Poniamo allora una condizione sull’incognita: la soluzione è accettabile se~$x\neq~0$.
+Non abbiamo invece nessuna condizione sul parametro.
+
+Procediamo quindi con la riduzione allo stesso denominatore di ambo i membri dell’equazione
+$\dfrac{2x+8a}{6x}=\dfrac{6ax-2x-2a}{6x}$; eliminiamo il denominatore che per la condizione posta è diverso da zero.
+Eseguiamo i calcoli al numeratore e otteniamo~$4x-6ax=-10a$ da cui la forma canonica:
+\begin{equation*}
+ x\cdot (3a-2)=5a.
+\end{equation*}
+
+Il coefficiente dell’incognita contiene il parametro, quindi procediamo alla discussione:
+\begin{enumeratea}
+ \item se~$3a-2\neq~0$ cioè~$a\neq \frac{2}{3}$ possiamo applicare il secondo principio e dividere ambo i membri per il coefficiente
+      $3a-2$ ottenendo~$x=\frac{5a}{3a-2}$. L’equazione è determinata:~$\IS=\left\{\frac{5a}{3a-2}\right\}$.
+      A questo punto dobbiamo ricordare la condizione sull'incognita, cioè~$x\neq~0$,
+      quindi la soluzione è accettabile se~$x=\frac{5a}{3a-2}\neq~0 \Rightarrow a\neq~0$;
+ \item se~$3a-2=0$ cioè~$a=\frac{2}{3}$ l’equazione diventa~$0\cdot x=\frac{10}{3}$, cioè l’equazione è impossibile:~$\IS=\emptyset$.
+\end{enumeratea}
+Riassumendo si ha la tabella:
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\multicolumn{4}{c} {$\dfrac{x+4a}{3x}=a-\dfrac{2x+2a}{6x}$ con~$a\in \insR$}\vspace{1.05ex}\\
+\multicolumn{2}{c}{Condizioni} & &\\
+parametro & incognita & Insieme Soluzione & Equazione\\
+\midrule
+ &$x\neq0$ & & \\
+$a=\frac{2}{3}$ & & $\IS=\emptyset$ & impossibile \\
+$a\neq\frac{2}{3}$ & & $\IS=\left\{\frac{5a}{3a-2}\right\}$ & determinata \\
+$a\neq \frac{2}{3}\wedge a\neq0$ & accettabile &$x=\frac{5a}{3a-2}$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+ \end{esempio}
+\end{exrig}
+
+\subsubsection{Caso in cui il denominatore contiene sia il parametro che l’incognita}
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere e discutere~$\dfrac{2x+b}{x}+\dfrac{2x+1}{b-1}=\dfrac{2x^{2}+b^{2}+1}{bx-x}$ con~$b\in \insR$.
+\end{esempio}
+L’equazione è fratta; il suo denominatore contiene sia l’incognita $x$ che il parametro $b$.
+Scomponiamo in fattori i denominatori
+\[\frac{2x+b}{x}+\frac{2x+1}{b-1}=\frac{2x^{2}+b^{2}+1}{x\cdot (b-1)}.\]
+
+Determiniamo le condizioni di esistenza che coinvolgono il parametro~$\CE b\neq~1$ e
+le condizioni sull’incognita: soluzione accettabile se~$x\neq~0$.
+
+Riduciamo allo stesso denominatore ed eliminiamolo in quanto per le condizioni poste è diverso da zero.
+L'equazione canonica è~$x\cdot (2b-1)=b+1.$
+
+Il coefficiente dell’incognita contiene il parametro quindi occorre fare la discussione:
+
+\begin{enumeratea}
+ \item se~$2b-1\neq~0$ cioè~$b\neq \frac{1}{2}$ possiamo dividere ambo i membri per~$2b-1$, otteniamo:
+    $x=\frac{b+1}{2b-1}$. L’equazione è determinata, l'insieme delle soluzioni è~$\IS=\left\{\frac{b+1}{2b-1}\right\}$;
+    la soluzione è accettabile se verifica la condizione di esistenza~$x\neq~0$ da cui si ha
+    \[x=\frac{b+1}{2b-1}\neq~0\quad \Rightarrow\quad b\neq -1\text{,}\]
+    cioè se~$b=-1$ l'equazione ha una soluzione che non è accettabile, pertanto è impossibile;
+ \item se~$2b-1=0$ cioè~$b=\frac{1}{2}$ l’equazione diventa~$0\cdot x=\frac{3}{2}$. L’equazione è impossibile, l'insieme delle soluzioni è vuoto:
+    $\IS=\emptyset$.
+\end{enumeratea}
+
+La tabella che segue riassume tutti i casi:
+\begin{center}
+\begin{tabular}{llll}
+\toprule
+\multicolumn{4}{c} {$\dfrac{2x+b}{x}+\dfrac{2x+1}{b-1}=\dfrac{2x^{2}+b^{2}+1}{bx-x}$ con~$b\in \insR$}\vspace{1.05ex}\\
+\multicolumn{2}{c}{Condizioni} & &\\
+parametro & incognita & Insieme Soluzione & Equazione\\
+\midrule
+$b=1$ & & & priva di significato\\
+$b\neq1$ &$x\neq0$ & & \\
+$b=\frac{1}{2}\vee b=-1$ & & $\IS=\emptyset$ & impossibile \\
+$b\neq~1\wedge b\neq \frac{1}{2}$ & & $\IS=\left\{\frac{b+1}{2b-1}\right\}$ & determinata \\
+$b\neq~1\wedge b\neq \frac{1}{2}\wedge b\neq -1$ & accettabile &$x=\frac{b+1}{2b-1}$ & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:20.44}, \ref{ese:20.45}, \ref{ese:20.46}, \ref{ese:20.47}, \ref{ese:20.48}, \ref{ese:20.49}, \ref{ese:20.50}, \ref{ese:20.51}}
+
+\section{Equazioni letterali e formule inverse}
+
+Le formule di geometria, di matematica finanziaria e di fisica possono essere viste come equazioni letterali.
+I due principi di equivalenza delle equazioni permettono di ricavare le cosiddette formule inverse, ossia di risolvere
+un'equazione letterale rispetto a una delle qualsiasi lettere incognite che vi compaiono.
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+Area del triangolo~$A=\dfrac{b\cdot h}{2}$.
+
+Questa equazione è stata risolta rispetto all'incognita~$A$, ossia se sono note le misure della base~$b$ e dell'altezza~$h$
+è possibile ottenere il valore dell'area~$A$.
+
+È possibile risolvere l'equazione rispetto a un'altra lettera pensata come incognita.
+Note le misure di~$A$ e di~$b$ ricaviamo~$h$. Per il primo principio di equivalenza moltiplichiamo per~$2$
+entrambi i membri dell'equazione
+\[A=\frac{b\cdot h}{2}\quad\Rightarrow\quad~2A=b\cdot h\]
+dividiamo entrambi i membri per~$b$ ottenendo~$\frac{2A}{b}=h$.
+Ora basta invertire primo e secondo membro: \[h=\frac{2A}{b}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Formula del montante~$M=C(1+it)$.
+
+Depositando un capitale~$C$ per un periodo di tempo~$t$ (in anni), a un tasso di interesse annuo~$i$,
+si ha diritto al montante~$M$.
+
+Risolviamo l'equazione rispetto al tasso di interesse~$i$, ossia supponiamo di conoscere il capitale depositato~$C$, il montante~$M$
+ricevuto alla fine del periodo~$t$ e ricaviamo il tasso di interesse che ci è stato applicato.
+Partendo da~$M=C(1+it)$, dividiamo primo e secondo membro per~$C$, otteniamo \[\frac{M}{C}=1+it;\]
+sottraiamo~$1$ al primo e al secondo membro, otteniamo
+\[\frac{M}{C}-1=it;\] dividiamo primo e secondo membro per~$t$,
+otteniamo
+\[i=\frac{\left(\frac{M}{C}-1\right)}{t}\quad\Rightarrow\quad%
+i=\frac{1}{t}\cdot \left(\frac{M}{C}-1\right)\quad\Rightarrow\quad i=\frac{M-C}{t\cdot C}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Formula del moto rettilineo uniforme~$s=s_{0}+v\cdot t$.
+
+Un corpo in una posizione~$s_0$, viaggiando alla velocità costante~$v$, raggiunge dopo un intervallo di tempo~$t$ la posizione~$s$.
+
+Calcoliamo~$v$ supponendo note le altre misure.
+Partendo dalla formula~$s=s_{0}+v\cdot t$ sottraiamo ad ambo i membri~$s_0$, otteniamo~$s-s_{0}=v\cdot t$;
+dividiamo primo e secondo membro per~$t$, otteniamo \[\frac{s-s_{0}}{t}=v.\]
+ \end{esempio}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:20.53}, \ref{ese:20.54}, \ref{ese:20.55}, \ref{ese:20.56}, \ref{ese:20.57}, \ref{ese:20.58}, \ref{ese:20.59}, \ref{ese:20.60}, \ref{ese:20.61}}
+
+\vspazio\ovalbox{\ref{ese:20.62}, \ref{ese:20.63}, \ref{ese:20.64}, \ref{ese:20.65}}
+
+\newpage
+\input{./chap/20_esercizi}
+
+\cleardoublepage

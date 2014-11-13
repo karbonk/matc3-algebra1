@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\draw[rounded corners] (-4,-5.5) rectangle (5,3) node[above] {$U$};
+\draw (-1,0) circle (2.5) (-3.5,2)node {$A$};
+\draw (2,0) circle (2.5) (4.5,2)node {$B$};
+\draw (0.5,-2.5) circle (2.5) (3,-4.5)node {$C$};
+
+\foreach \x/\xtext in {-2/b,-1/d,0.2/e,2/f}
+\draw[fill] (\x,1)circle(1pt) node[above right]{\xtext};
+
+\foreach \x/\xtext in {-2.4/c,-1.1/g,0.4/h,1.7/i, 3.1/j}
+\draw[fill] (\x,-1.5)circle(1pt) node[above right]{\xtext};
+
+\foreach \x/\xtext in {-3/a,-1.1/o,1/p,3/n, 4/m}
+\draw[fill] (\x,-3.5)circle(1pt) node[above right]{\xtext};
+\end{tikzpicture}

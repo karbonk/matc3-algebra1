@@ -1,0 +1,10 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \begin{scope}[thick,font=\scriptsize]
+  \draw[->] (0,0) -- (20mm,0);
+  \foreach \n in {5mm,15mm}{%
+    \draw (\n,-3pt) -- (\n,3pt);}
+  \node (p) at (5mm,-4mm) {$0,\!\overline{9}$};
+  \node (i) at (15mm,-4mm) {$1$};
+  \end{scope}
+\end{tikzpicture}

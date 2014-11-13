@@ -1,0 +1,36 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture} [auto,block/.style={rectangle, draw=Maroon, thick, text width=5.3em,align=center, rounded corners, minimum height=4em},%
+block1/.style={rectangle, draw=Maroon, thick, text width=8em,align=center, rounded corners, minimum height=4em},%
+cloud/.style={draw=CornflowerBlue, thick, ellipse, minimum height=2.2em},%
+line/.style ={draw, thick, ->,shorten >=2pt}]
+
+  \matrix [column sep=7mm, row sep=7mm]{
+\node[cloud](fun) {$f$};\\
+    \node [block] (prn) {prendi un numero reale~$x$}; 
+    & \node [block] (molt) {raddopia il valore scelto}; 
+    & \node [block] (sot) {sottrai 1 al valore trovato}; 
+    & \node [block] (scr) {scrivi~$y$ (il~risultato)}; \\
+  };
+  
+  \begin{scope}[every path/.style=line]
+	\path (fun)--(prn);
+    \path (prn)-- (molt);
+    \path (molt) -- (sot);
+    \path (sot) -- (scr);
+  \end{scope}
+
+  \begin{scope}[yshift=-37mm]
+    \matrix [column sep=14mm, row sep=7mm]{
+      \node [block1] (ind) {Variabile indipendente: $x$}; 
+      & \node [block1] (dip) {Variabile dipendente: $y$}; \\
+      \node[cloud] (ing) {Valore in ingresso};
+      &\node[cloud] (usc) {Valore in uscita};\\
+    };
+
+    \begin{scope}[every path/.style=line]
+      \path (ind)--  node [midway]{$f$} (dip);
+      \path (ing) --(ind);
+      \path(dip)--(usc);
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

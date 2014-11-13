@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=12mm,y=8mm]
+  \tikzset{
+    box/.style={
+      minimum height=5mm,
+      inner sep=.7mm,
+      outer sep=0mm,
+      text width=10mm,
+      text centered,
+      font=\small\ttfamily,
+      line width=.25mm,
+    },
+    link/.style={->,blue,line width=.3mm},
+    plus/.style={text=red,font=\small\ttfamily}
+  }
+ 
+  \node[box=odd] (p-0-0) at (0,0) {1};
+  \foreach \linea in {1,...,4} {
+    \node[box=odd] (p-\linea-0) at (-\linea/2,-\linea) {1};
+    \pgfmathsetmacro{\valore}{1};
+    \foreach \col in {1,...,\linea} {
+      \pgfmathtruncatemacro{\valore}{\valore*((\linea-\col+1)/\col)+0.5};
+      \global\let\valore=\valore
+      \coordinate (pos) at (-\linea/2+\col,-\linea);
+      \pgfmathtruncatemacro{\rest}{mod(\valore,2)}
+      \ifnum \rest=0
+        \node[box=even] (p-\linea-\col) at (pos) {\valore};
+      \else
+        \node[box=odd] (p-\linea-\col) at (pos) {\valore};
+      \fi
+      \ifnum \col<\linea
+        \node[plus,above=0mm of p-\linea-\col]{+};
+        \pgfmathtruncatemacro{\plinea}{\linea-1}
+        \pgfmathtruncatemacro{\pcol}{\col-1}
+        \draw[link] (p-\plinea-\pcol) -- (p-\linea-\col);
+        \draw[link] ( p-\plinea-\col) -- (p-\linea-\col);
+      \fi
+    }
+  }
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Moltiplicazione dei segni
+\begin{tikzpicture}[font=\Huge]
+
+\matrix (segni) [matrix of nodes]{%
+ $\cdot$& $+$ & $-$\\
+ $+$& $+$ &$-$\\
+ $-$& $-$ &$+$\\
+};
+
+  \begin{scope}[thin, blue]
+    \draw (segni-2-1.north west)--(segni-2-3.north east);
+    \draw (segni-1-2.north west)--(segni-3-2.south west);
+  \end{scope}
+\end{tikzpicture}

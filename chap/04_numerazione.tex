@@ -1,0 +1,660 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\chapter{I sistemi di numerazione}
+\section{La scrittura in base~10}
+Il nostro sistema di numerazione è il sistema \emph{decimale}. Ciò ha
+probabilmente origine dal fatto che abbiamo~10 dita. Forse se fossimo
+nati ragni avremmo contato fino ad otto ed useremo un sistema di
+numerazione \emph{ottale}, se fossimo nati gatti avremmo contato fino a~4 e
+useremo un sistema \emph{quattrale}, millepiedi fino a mille.
+
+Come conta un
+computer? Un computer ragiona sulla base di soli due stati: passa corrente (acceso) o non
+passa corrente (spento): è come se avesse due dita. Tutti i sistemi che oggi
+usiamo nell'informatica utilizzano una logica a due stati: i circuiti elettrici possono trovarsi nello stato di acceso o di spento, i dischi magnetici
+dell'hard disk sono composti da microscopici magneti ognuno dei quali può essere magnetizzato in un verso o nel verso opposto, i dischi
+ottici come i CD-ROM
+e i DVD memorizzano le informazioni al loro interno come se contenessero tanti microscopici specchi ognuno dei quali riflette la luce oppure no.
+
+Nell'antichità si usava uno strumento chiamato abaco. Gli abachi erano tavolette suddivise in colonne su cui si spalmavano
+cera o sabbia e si incidevano segni o si mettevano sassolini.
+
+Per contare un certo numero di oggetti e ricordarci quanti sono, utilizziamo un abaco:
+\begin{center}
+\input{./lbr/chap04/fig001_abaci.pgf}
+\end{center}
+
+Cominciamo a contare con le mani: per ogni raggruppamento di~10 segniamo un'unità di ordine superiore, fino a contare tutti
+gli elementi del nostro insieme. Le unità che rimangono, perché non riescono a formare un raggruppamento di~10, vengono
+segnate con la cifra che le rappresenta: nel nostro caso~3.
+
+Passiamo all'unità di ordine superiore: le decine. Anche con queste formiamo raggruppamenti di~10, se ci riusciamo. Ogni
+raggruppamento forma un'unità di ordine superiore. Se rimangono unità di questo ordine esse rappresentano le decine. Se non
+rimane alcuna unità scriviamo~0. Nel nostro caso ne rimangono~2.
+
+Il procedimento continua finché non abbiamo finito di contare tutti gli elementi. Nel nostro esempio finiamo dopo aver formato
+un'unità di ordine superiore, le centinaia. Il nostro numero è~$123$.
+Naturalmente i numeri~123 e~312 sono due numeri diversi anche se composti dalle stesse cifre: sono diversi
+perché la posizione delle cifre che li compongono è differente. Ad esempio, la cifra~1, che in 123 è nella posizione più a sinistra,
+si trova al centro del numero~312.
+
+Dunque, in generale, il valore attribuito alle varie cifre non dipende soltanto dalla specifica cifra considerata ma
+anche dalla posizione che essa occupa all'interno del numero. Il sistema di numerazione
+che solitamente usiamo è dunque un \emph{sistema posizionale}. \`E chiamato \emph{decimale} o \emph{a base
+dieci} perché dieci unità di un determinato ordine sono rappresentate da un'unità di ordine superiore.
+
+\begin{definizione}\label{def:base}
+Si definisce \emph{base} di un sistema di numerazione il numero di
+simboli, \emph{cifre}, usati per rappresentare i valori. La potenza della base indica il \emph{peso} (la posizione)
+che i simboli hanno all'interno della scrittura del numero.
+\end{definizione}
+
+Riassumendo, abbiamo una serie di dieci simboli: 0, 1, 2, 3, 4, 5, 6, 7,
+8 e 9 che rappresentano il numero delle unità di un determinato ordine.
+Il significato dei simboli dipende anche dalla posizione che assumono
+nella ``parola'' che rappresenta un numero.
+
+Ad esempio:~$1\,846=1\cdot(1\,000)+8\cdot(100)+4\cdot(10)+6\cdot(1)$, che scritto con le potenze di~10 diventa:
+$1\,846=1\cdot(10)^{3}+8\cdot (10)^{2}+4\cdot (10)^{1}+6\cdot (10)^{0}$.
+
+L'esponente del peso attribuito ad ogni cifra che compone la scrittura di un numero
+rappresenta la posizione della cifra a partire da quella più a destra (0) cioè la meno significativa,
+quindi ne denota l'ordine di importanza.
+
+\begin{definizione}
+La scrittura di un numero come somma delle cifre moltiplicate per le potenze della
+base si chiama \emph{notazione polinomiale}.
+\end{definizione}
+
+Una volta compreso il meccanismo fondamentale su cui si basa il sistema
+di numerazione decimale, cioè a base 10, il procedimento si può estendere ad una base
+qualunque.
+
+Se~$B$ è la base di un sistema di numerazione, $B$ unità di un certo
+ordine vengono rappresentate da un'unità dell'ordine immediatamente superiore.
+In questo modo si può costruire un sistema di numerazione con
+qualsiasi base maggiore di~1.
+
+\section{Scrittura di un numero in una base qualsiasi}
+Il procedimento usato per scrivere un numero in base~10 può essere
+usato per scrivere un numero in una base qualsiasi.
+
+\begin{exrig}
+\begin{esempio}
+Contare~29 oggetti in base~5.
+\begin{multicols}{2}
+
+Utilizziamo un abaco, ma 
+anziché contare per dieci contiamo per cinque. Invece di
+raggruppare per unità, decine, decine di decine (centinaia) e così via,
+conteremo raggruppando per unità, per cinquine, per cinquine di
+cinquine (venticinquine) e così via.
+\begin{center}
+\input{./lbr/chap04/fig002_abacii.pgf}
+\end{center}
+\end{multicols}
+Il numero rappresentato nell'abaco si scrive~$(104)_{5}$ e si legge
+``uno-zero-quattro in base cinque'' per distinguerlo da centoquattro scritto in
+base~10, che sarebbe 104 ovvero $(104)_{10}$.
+
+Per ottenere il numero decimale che corrisponde al numero scritto in
+base~5 occorre sviluppare il numero in base~5 nella sua scrittura
+polinomiale:~$(104)_{5}=1\cdot 5^{2}+0\cdot 5^{1}+4\cdot5^{0}=25+0+4=(29)_{10}$.
+\end{esempio}
+\pagebreak
+\begin{esempio}
+Contare~29 oggetti in base~3.
+\begin{multicols}{2}
+Questa volta contiamo per tre.
+Il numero ottenuto si scrive~$(1002)_{3}$ e si legge
+``uno-zero-zero-due in base tre'' per distinguerlo da milledue scritto in base~10.
+
+Per ottenere il numero decimale corrispondente, occorre sviluppare il numero in base~3 nella sua scrittura
+polinomiale.
+ \begin{center}
+ \input{./lbr/chap04/fig003_abaciii.pgf}
+ \end{center}
+\end{multicols}
+\[(1002)_{3}=1\cdot 3^{3}+0\cdot 3^{2}+0\cdot 3^{1}+2\cdot5^{0}=27+0+0+2=(29)_{10}.\]
+
+\end{esempio}
+\end{exrig}
+
+In accordo con la definizione \ref{def:base}, negli esempi abbiamo visto che i simboli
+che occorrono per scrivere un numero in base~10 sono
+dieci~$\{$0, 1, 2, 3, 4, 5, 6, 7, 8, 9$\}$, quelli necessari per scrivere un numero
+in base~5 sono cinque~$\{$0, 1, 2, 3, 4$\}$, quelli necessari per
+scrivere un numero in base~3 sono tre~$\{$0, 1, 2$\}$. Analogamente, i
+simboli che serviranno per scrivere un numero in base~2 sono
+due~$\{$0, 1$\}$.
+
+Possiamo scrivere i numeri anche in una base superiore a~10. Una base
+molto usata in informatica, insieme alla base~2, è
+la base \emph{esadecimale}, cioè la base~16.
+In questo caso, per contare devo fare raggruppamenti di~16; sono
+perciò necessari~16 simboli per indicare questi raggruppamenti, che rappresentano i valori da 0 a 15.
+Pertanto occorrono dei simboli in più rispetto a quelli utilizzati dal sistema di numerazione decimale, che servono per rappresentare i valori~10, 11, 12, 13, 14, 15. Convenzionalmente si usano i simboli seguenti:
+ \begin{align*}
+ &(A)_{16}=(10)_{10}\quad (B)_{16}=(11)_{10}\quad (C)_{16}=(12)_{10}\\%
+ &(D)_{16}=(13)_{10}\quad (E)_{16}=(14)_{10}\quad (F)_{16}=(15)_{10}.
+ \end{align*}
+Quindi i numeri esadecimali, in ordine crescente, sono: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, $A$, $B$, $C$, $D$, $E$, $F$, 10, 11, 12, 13, 14 ,15, \ldots
+
+
+\subsection{Convertire un numero da una base diversa da~10 a base~10}
+
+Per scrivere un numero da una base diversa da~10 a base~10 bisogna
+svilupparlo nella sua forma polinomiale.
+
+Se~$(x)_{B}$ è un numero qualsiasi scritto nella base~$B$ e
+se~$a_{n} a_{n-1} \ldots a_{2} a_{1} a_{0}$ sono le cifre che compongono la sua rappresentazione,
+da quella più significativa (con peso $B^n$) a quella meno significativa (con peso $B^0=1$), avremo:
+\[(x)_{10}=a_{n}\cdot B^{n}+ a_{n-1}\cdot B^{n-1}+ \ldots%
++ a_{2}\cdot B^{2}+ a_{1}\cdot B^{1}+ a_{0}\cdot B^{0}.\]
+
+\ovalbox{\risolvii \ref{ese:4.1}, \ref{ese:4.2}, \ref{ese:4.3}, \ref{ese:4.4}, \ref{ese:4.5}}
+
+\subsection{Convertire un numero da base~10 a una base diversa da~10}
+
+Abbiamo visto che per contare e scrivere un numero in una base diversa da dieci, per esempio~$(29)_{10}$ in base~3,
+dobbiamo raggruppare per~3. Raggruppare per~3 ha lo stesso significato che dividere per~3. Nella
+prima divisione per tre il quoziente indica quante terzine otteniamo, mentre il resto indica
+quante unità (di ordine~0) verranno considerate.
+
+\begin{multicols}{2}
+Nel nostro esempio si ottengono $29/3=9$ terzine,
+mentre rimangono~2 unità (di ordine~0). Il~2 sarà il primo numero a destra che verrà considerato. Con 9
+terzine si ottengono $9/3=3$ terzine di terzine (novine) con resto~0. Questo~0 diventa la cifra che scriviamo
+a sinistra del~2. Con 3 terzine di terzine otteniamo una terzina di terzina di terzina (ventisettina),
+mentre rimangono~0 terzine di terzine. Questo~0 diventa il numero che scriviamo a sinistra dello~0 precedente. Ora,
+$1:3$ dà come quoziente~0 (terzine di quarto ordine) con resto~1. Qui ci fermiamo e scriviamo~1 a sinistra dello~0
+trovato precedentemente.
+\begin{center}
+\input{./lbr/chap04/fig004_convi.pgf}
+\end{center}
+\end{multicols}
+
+Il numero si compone da sinistra verso destra con le cifre dei vari resti nell'ordine opposto a quello nel quale sono stati ottenuti. Si ha così~$(29)_{10}=(1002)_{3}$.
+
+Controlliamo con la notazione
+polinomiale:~$1\cdot 3^{3}+0\cdot3^{2}+0\cdot 3^{1}+2\cdot 3^{0}=27+2=29$.
+
+\begin{exrig}
+\begin{esempio}
+Convertire nel sistema binario (in base~2) il numero~59.
+\begin{multicols}{2}
+Dividiamo successivamente~59 per~2 fino a che non otteniamo zero come
+quoziente e prendiamo come risultato della conversione la successione
+dei resti partendo dall'ultimo ottenuto.
+Il numero~59 scritto in base~2 sarà pertanto~$(111011)_{2}$.
+
+Verifichiamo con la scrittura
+polinomiale:~$1\cdot 2^{5}+1\cdot2^{4}+1\cdot 2^{3}+0\cdot 2^{2}+1\cdot 2^{1}+1\cdot2^{0}=32+16+8+2+1=59$.
+\begin{center}
+\input{./lbr/chap04/fig005_convii.pgf}
+\end{center}
+\end{multicols}
+\end{esempio}
+
+\begin{esempio}
+Trasforma $315$ da base~10 a base~3, 4 e 5.
+
+\input{./lbr/chap04/fig006_conviii.pgf}
+\end{esempio}
+\end{exrig}
+
+\subsubsection{Un altro metodo per trasformare un numero decimale in un numero binario}
+
+Per trasformare i numeri da base~10 a base~2 basta scrivere il numero
+come somma delle potenze del~2:
+\begin{enumeratea}
+\item si parte dalla potenza del~2 più vicina, per difetto, al numero da convertire;
+\item si vede se la potenza precedente di ordine inferiore può fare parte della sequenza, cioè se la somma tra
+le potenze non diventa più grande del numero. Se può farne parte allora si scrive~1, altrimenti~0;
+\item si prosegue in questo modo fino ad arrivare a~$2^{0}$;
+\item la sequenza di~1 e~0 nell'ordine ottenute sono le cifre che, da sinistra verso destra, rappresentano il numero binario corrispondente.
+\end{enumeratea}
+
+\begin{exrig}
+\begin{esempio}
+Consideriamo ancora il numero~59:
+\begin{itemize*}
+\item qual è la potenza del~2 più vicina, per difetto, al numero~59? \`E~32, cioè~$2^{5}$. Quindi~$2^{5}$
+fa parte del numero binario. Scrivo~1 come primo numero della sequenza;
+\item vediamo ora~$2^{4}=16$. Anche~16 può far parte del numero binario perché~$32 + 16 = 48$ che è minore di~59.
+Segno~1 come secondo numero della sequenza;
+\item per lo stesso ragionamento anche~$2^{3}=8$ fa parte del numero binario.
+Infatti~$32 + 16 + 8 = 56$ è minore di~59. Segno ancora~1 come terzo numero della sequenza;
+\item invece~$2^{2}=4$ non può farne parte perché $32 + 16 + 8 + 4 = 60$ è maggiore di~59. Segno~0 come quarto numero
+della sequenza;
+\item $2^{1}=2$ e~$2^{0}=1$ vanno bene e si arriva al totale voluto~59. Segno~1 come quinto e~1 come sesto numero
+della sequenza.
+\end{itemize*}
+Riassumendo:~$59=1\cdot 2^{5}+1\cdot 2^{4}+1\cdot2^{3}+0\cdot 2^{2}+1\cdot 2^{1}+1\cdot2^{0}=(111011)_{2}$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii{\ref{ese:4.6}, \ref{ese:4.7}, \ref{ese:4.8}, \ref{ese:4.9}, \ref{ese:4.10}, \ref{ese:4.11}, \ref{ese:4.12},
+\ref{ese:4.13}, \ref{ese:4.14}}}
+
+\section[Conversione da una base diversa da~10 a un'altra base diversa da~10]{Conversione di un numero da una base diversa da~10 a un'altra base diversa da~10}
+\begin{exrig}
+\begin{esempio}
+Scrivere il numero~$(1023)_{4}$ in base~7.
+
+Per scrivere un numero da una base~$B$ a una base~$K$ entrambe diverse da~10 occorre:
+
+\begin{enumeratea}
+\item trasformare il numero in base~$B$ in un numero decimale attraverso
+la sua scrittura polinomiale;
+\item trasformare il numero decimale nella base~$K$ attraverso i resti
+delle divisioni successive per~$K$.
+\end{enumeratea}
+
+Applichiamo la procedura indicata:
+
+\begin{enumeratea}
+\item
+$(1023)_{4}\;=\;1\cdot 4^{3}\;+\;0\cdot 4^{2}\;+\;2\cdot 4^{1}\;+\;3\cdot
+4^{0}\;=\;64\;+\;0\;+\;8\;+\;3\;=\;(75)_{10}$;
+\item Il numero scritto da sinistra verso destra con i resti delle successive
+divisioni per~7 presi nell'ordine opposto a quello nel quale sono stati ottenuti è
+$(135)_{7}$.
+\end{enumeratea}
+
+\begin{center}
+ \input{./lbr/chap04/fig007_conviv.pgf}
+\end{center}
+
+Le trasformazioni eseguite
+sono quindi:~$(1023)_{4}\rightarrow (75)_{10}\rightarrow (135)_{7}$.
+
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:4.15}, \ref{ese:4.16}, \ref{ese:4.17}}
+
+\subsection{Conversione tra base~4, base~8, base~16 e base~2}
+
+Consideriamo il numero scritto in base~2 $(11010011100101)_{2}$.
+Vogliamo scriverlo in base~4, in base~8, in base~16 senza passare dalla
+sua scrittura in base~10. Notiamo che gruppi di due cifre in base~2
+rappresentano tutte le cifre della base~4, gruppi di~3 cifre in base~2
+rappresentano tutte le cifre della base~8 e gruppi di~4 cifre nella
+base~2 rappresentano tutte le cifre della base~16, come indicato nella
+seguente tabella.
+
+\begin{center}
+ \begin{tabular*}{.7\textwidth}{@{\extracolsep{\fill}}*{5}{c}}
+\toprule
+Base~10 & Base~2 & Base~4 & Base~8 & Base~16\\
+\midrule
+ 0 & 0 & $00 = 0$ & $000 = 0$ & $0000 = 0$\\
+ 1 & 1 & $01 = 1$ & $001 = 1$ & $0001 = 1$\\
+ 2 &   & $10 = 2$ & $010 = 2$ & $0010 = 2$\\
+ 3 &   & $11 = 3$ & $011 = 3$ & $0011 = 3$\\
+ 4 &   &          & $100 = 4$ & $0100 = 4$\\
+ 5 &   &          & $101 = 5$ & $0101 = 5$\\
+ 6 &   &          & $110 = 6$ & $0110 = 6$\\
+ 7 &   &          & $111 = 7$ & $0111 = 7$\\
+ 8 &   &          &           & $1000 = 8$\\
+ 9 &   &          &           & $1001 = 9$\\
+10 &   &          &           & $1010 = A$\\
+11 &   &          &           & $1011 = B$\\
+12 &   &          &           & $1100 = C$\\
+13 &   &          &           & $1101 = D$\\
+14 &   &          &           & $1110 = E$\\
+15 &   &          &           & $1111 = F$\\
+\bottomrule
+ \end{tabular*}
+\end{center}
+
+\subsubsection{Da base~2 a base~4}
+Dobbiamo raggruppare il numero scritto in base~2 in gruppi di due cifre, partendo da destra, e tradurre il valore di ogni singolo gruppo con la
+corrispondente cifra in base~4.
+
+\begin{tabular*}{.9\textwidth}{@{\extracolsep{\fill}}*{8}{c}}
+\toprule
+Numero scritto in base~2 & 1 1 & 0 1 & 0 0 & 1 1 & 1 0 & 0 1 & 0 1\\
+Numero scritto in base~4 &  3  &  1  &  0  &  3  &  2  &  1  &  1\\
+\bottomrule
+\end{tabular*}
+\[(11010011100101)_{2}=(3103211)_{4}.\]
+
+\subsubsection{Da base~2 a base~8}
+Dobbiamo raggruppare il numero scritto in base~2 in gruppi di tre cifre, partendo da destra,
+e tradurre il valore di ogni singolo gruppo con la corrispondente cifra in base~8.
+
+\begin{tabular*}{.9\textwidth}{@{\extracolsep{\fill}}*{6}{c}}
+\toprule
+ Numero scritto in base~2 & 1 1 & 0 1 0 & 0 1 1 & 1 0 0 & 1 0 1\\
+ Numero scritto in base~8 &  3  &   2   &   3   &   4   &   5\\
+ \bottomrule
+\end{tabular*}
+\[(11010011100101)_{2}=(32345)_{8}.\]
+
+\subsubsection{Da base~2 a base~16}
+Dobbiamo raggruppare il numero scritto in base~2 in gruppi di quattro cifre, partendo da destra,
+e tradurre il valore di ogni singolo gruppo con la corrispondente cifra in base~16.
+
+\begin{tabular*}{.9\textwidth}{@{\extracolsep{\fill}}*{5}{c}}
+\toprule
+ Numero scritto in base~2  & 1 1 & 0 1 0 0 & 1 1 1 0 & 0 1 0 1\\
+ Numero scritto in base~16 &  3  &    4    &   $E$   &    5\\
+ \bottomrule
+\end{tabular*}
+\[(11010011100101)_{2}=(34E5)_{16}.\]
+
+\ovalbox{\risolvii \ref{ese:4.18}, \ref{ese:4.19}}
+
+\subsubsection{Perché è importante la base~2?}
+
+Tutti gli strumenti elettronici che utilizziamo hanno bisogno di
+tradurre le informazioni che inseriamo in stati fisici della
+macchina ed il metodo più semplice e più efficiente per tradurre in ``linguaggio macchina''
+le nostre informazioni è utilizzare la base~2: composta solo dai
+simboli~0 e~1. La base due è quindi l'alfabeto a
+disposizione delle macchine per comprendere e rispondere alle nostre
+richieste. Se si utilizzasse la base~10 dovremo far riconoscere
+dall'apparato dieci differenti simboli che dovrebbero
+essere tradotti in altrettanti stati differenti.
+
+A partire da questa informazione elementare detta \textit{bit}
+(compressione dall'inglese di \textit{bi}nary
+digi\textit{t}) è possibile costruire informazioni più complesse
+sotto forma di sequenze finite di zero e di uno. Attraverso la codifica
+binaria si è in grado di rappresentare caratteri, numeri, istruzioni
+di programmi ma anche immagini, suoni e video. Tutte le informazioni
+gestite da un computer sono quindi numeri in forma binaria.
+
+Il primo multiplo del bit è il \textit{byte} che è formato da una
+sequenza di~8 bit:
+ \begin{center}
+\input{./lbr/chap04/fig008_seq.pgf}
+ \end{center}
+
+Con una sequenza di~8 bit possiamo codificare, per mezzo del codice ASCII\footnote{Acronimo di \textit{American Standard Code for Information Interchange}. Si tratta di un codice standard utilizzato dalla maggior parte dei sistemi elettronici per associare ogni lettera alfanumerica a un valore numerico.}, fino a~256 caratteri. Quando digitiamo un carattere sulla
+tastiera del calcolatore inviamo in realtà una sequenza di~8 bit.
+Vediamo alcuni esempi della codifica binaria dei caratteri (codice ASCII).
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+Carattere & In base~2 & Numero decimale\\
+\midrule
+A & 0 1 0 0 0 0 0 1 & 65\\
+a & 0 1 1 0 0 0 0 1 & 97\\
+M & 0 1 0 0 1 1 0 1 & 77\\
+m & 0 1 1 0 1 1 0 1 & 109\\
+0 & 0 0 1 1 0 0 0 0 & 48\\
+1 & 0 0 1 1 0 0 0 1 & 49\\
+à & 1 0 1 0 0 0 0 0 & 160\\
+ò & 1 0 1 0 0 0 1 0 & 162\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Anche il byte ha i suoi multipli. Eccone alcuni indicati nelle seguenti tabelle.
+
+\begin{table}[!h]
+\begin{center}
+{\small
+\begin{tabular}{llcr}
+\toprule
+\multicolumn{4}{c}{Sistema internazionale}\\
+Nome & Simbolo & Potenza di~10 & Valore decimale rispetto al byte\\
+\midrule
+byte      & $\unit{B}$  & $10^{0}$  & 1\\
+kilobyte  & $\unit{kB}$ & $10^{3}$  & \np{1000}\\
+megabyte  & $\unit{MB}$ & $10^{6}$  & \np{1000000}\\
+gigabyte  & $\unit{GB}$ & $10^{9}$  & \np{1000000000}\\
+terabyte  & $\unit{TB}$ & $10^{12}$ & \np{1000000000000}\\
+petabyte  & $\unit{PB}$ & $10^{15}$ & \np{1000000000000000}\\
+exabyte   & $\unit{EB}$ & $10^{18}$ & \np{1000000000000000000}\\
+zettabyte & $\unit{ZB}$ & $10^{21}$ & \np{1000000000000000000000}\\
+yottabyte & $\unit{YB}$ & $10^{24}$ & \np{1000000000000000000000000}\\
+\bottomrule
+\end{tabular}}
+\end{center}
+\end{table}
+
+\begin{table}[!h]
+\begin{center}
+{\small
+\begin{tabular}{llcr}
+\toprule
+\multicolumn{4}{c}{Utilizzo in informatica}\\
+Nome & Simbolo & Potenza di~2 & Valore decimale rispetto al byte\\
+\midrule
+byte     & $\unit{B}$   & $2^{0}$  & 1\\
+kibibyte & $\unit{KiB}$ & $2^{10}$ & \np{1024}\\
+mebibyte & $\unit{MiB}$ & $2^{20}$ & \np{1048576}\\
+gibibyte & $\unit{GiB}$ & $2^{30}$ & \np{1073741824}\\
+tebibyte & $\unit{TiB}$ & $2^{40}$ & \np{1099511627776}\\
+pebibyte & $\unit{PiB}$ & $2^{50}$ & \np{1125899906842624}\\
+exbibyte & $\unit{EiB}$ & $2^{60}$ & \np{1152921504606846976}\\
+zebibyte & $\unit{ZiB}$ & $2^{70}$ & \np{1180591620717411303424}\\
+yobibyte & $\unit{YiB}$ & $2^{80}$ & \np{1208925819614629174706176}\\
+\bottomrule
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+\osservazione È noto che i prefissi \textit{kilo-}, \textit{mega-} e \textit{giga-}
+corrispondono a~$\np{1000}$, $\np{1000000}$ (un milione) e~$\np{1000000000}$ (un
+miliardo), mentre nell'informatica vengono
+impropriamente usati per indicare particolari potenze di~2 (\textit{kibi-}, \textit{mebi-} e \textit{gibi-}).
+Tutto questo genera confusione e i produttori giocano su questa
+differenza, facendo i conti con i multipli decimali, ``imbrogliando''. Un PC che
+viene dichiarato, ad esempio, con un hard disk da~$160\unit{GB}$ ha a disposizione~$160\cdot 10^{9}$ byte che risultano essere $160\cdot(10^9 / 2^{30}) = 160 \cdot \np{0,931322575} \simeq 149\unit{GiB}$\@. Ma il PC gestisce i multipli binari, ovvero i $\unit{GiB}$, e quindi mostra all'utente un disco da $149\unit{GiB}$\@. Ecco che ci siamo ``persi'' circa~$160-149=11\unit{GiB}$.
+
+\vspazio\ovalbox{\risolvi \ref{ese:4.20}}
+
+\section{Operazioni in base diversa da dieci}
+
+Le quattro operazioni con i numeri in base diversa da dieci possono
+effettuarsi con gli stessi algoritmi utilizzati per i numeri naturali.
+
+\subsection{Addizione}
+
+\begin{exrig}
+\begin{esempio}
+Eseguire l'addizione in base~2 tra~$101011_{2}$ e~$10011_{2}$.
+\end{esempio}
+
+Dobbiamo tradurre in base due quello che facciamo in base dieci. Abbiamo
+perciò bisogno di costruire la tavola di addizione in base due che
+riportiamo a lato. La tavola, o tabellina, è piuttosto semplice,
+bisogna solo fare attenzione che in base due si ha~$1+1=10$, perché in base due il~2 si scrive appunto~10.
+
+\begin{wrapfloat}{figure}{r}{0pt}
+\input{./lbr/chap04/fig009_add.pgf}
+\end{wrapfloat}
+
+Mettiamo i numeri in colonna (vedi a fianco) e cominciamo ad addizionare
+a partire dalle unità:~$1+1=0$, scrivo~$0$ e riporto~$1$.
+Nella colonna di ordine superiore trovo~$(1+1)+1=10+1=11$, scrivo~$1$ e
+riporto~$1$.
+Nella colonna di ordine superiore trovo~$1+0+0=1$, scrivo~$1$ senza
+riportare alcunché. Continuo in questo modo fino ad esaurire tutte le cifre da addizionare.
+
+Facciamo la verifica nell'usuale sistema decimale:
+\[(101011_{2}=43)+(10011_{2}=19)=(111110_{2}=62).\]
+
+\begin{esempio}
+Eseguire la somma in base~5 tra~$34231_{5}$ e~$4341_{5}$.
+
+Costruiamo la tavola di addizione in base cinque: ricordiamo che~$4+1=10$, $4+2=11$, ecc.
+
+Mettiamo i numeri in colonna e cominciamo ad addizionare a partire dalle
+unità:~$1+1=2$, scrivo~$2$ senza riporto. Nella colonna di ordine superiore
+trovo~$3+4=12$. Scrivo~$2$ e riporto~$1$. Nella colonna di ordine superiore trovo~$(1+2)+3=3+3=11$ scrivo~$1$ e
+riporto~$1$. Procedendo verso sinistra ora trovo~$(1+4)+4=10+4=14$ scrivo~$4$ e
+riporto~$1$. Infine~$1+3=4$. L'addizione è terminata.
+%\newpage
+\begin{center}
+ \input{./lbr/chap04/fig010_addii.pgf}
+\end{center}
+Verifica nel sistema decimale:
+\[(34231_{5}=2\,441)\;+\;(4341_{5}=596)=(44122_{5}=3\,037).\]
+\end{esempio}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:4.21}, \ref{ese:4.22}, \ref{ese:4.23}}
+
+\subsection{Sottrazione}
+
+Per la sottrazione ci possiamo servire delle stesse tabelle
+dell'addizione.
+
+\begin{exrig}
+\begin{esempio}
+$101011_{2}-11111_{2}.$
+\end{esempio}
+
+Mettiamo i numeri in colonna e cominciamo a sottrarre partendo dalle
+unità:~$1-1=0$ scrivo~$0$.
+Nella colonna di ordine superiore trovo di nuovo~$1-1=0$ scrivo~$0$.
+Procedendo verso sinistra trovo~$0-1$ devo quindi prendere in prestito
+un unità di ordine superiore che messa davanti a~0 diviene~$10-1=1$.
+Scrivo~$1$ e riporto~$-1$. Mi sposto ancora a sinistra e
+\begin{wrapfloat}{figure}{r}{0pt}
+ \input{./lbr/chap04/fig014_sot.pgf}
+\end{wrapfloat}
+trovo~$(-1+1)-1=0-1$. Occorre prendere in
+prestito un'unità di ordine superiore~$10-1=1$.
+Scrivo~$1$ e riporto~$-1$.
+Nella colonna a sinistra ho~$0$ del minuendo, $-1$ del riporto e~$-1$
+del sottraendo. Occorre prendere a prestito un'unità
+di ordine superiore quindi~$10-1=1$ a cui devo togliere~$1$ del
+sottraendo:~$1-1=0$.
+Infine nella unità di ordine superiore devo addizionare il riporto
+$-1$ a~$1$ e scrivo ancora~$0$. Il risultato della sottrazione è:~$1100_2$
+
+Verifica nel sistema decimale:~$(101011_{2}=43)-(11111_{2}=31)=(1100_{2}=12).$
+
+
+\begin{esempio}
+$34231_{5}-4341_{5}.$
+
+Ci serviamo della tavola di addizione in base cinque.
+\begin{center}
+ \input{./lbr/chap04/fig015_sot.pgf}
+\end{center}
+Verifica:~$(34231_{5}=2\,441)-(4341_{5}=596)=(24340_{5}=1\,845).$
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:4.24}, \ref{ese:4.25}, \ref{ese:4.26}}
+
+\subsection{Moltiplicazione}
+
+Adoperiamo lo stesso algoritmo usato per moltiplicare due numeri
+decimali utilizzando la tabella della moltiplicazione.
+
+\begin{exrig}
+
+\begin{esempio}
+$101011_{2}\cdot~101_{2}.$
+
+Dobbiamo tradurre in base due quello che facciamo in base dieci. Abbiamo
+perciò bisogno di costruire la tavola della moltiplicazione in base
+due.
+\begin{center}
+\input{./lbr/chap04/fig019_molti.pgf}
+\end{center}
+Verifica nel sistema decimale:~$(101011_{2}=43)\cdot(101_{2}=5)=(11010111_{2}=215)$.
+ \end{esempio}
+\pagebreak
+ \begin{esempio}
+ $231_{5}\times~24_{5}$.
+\begin{center}
+ \input{./lbr/chap04/fig020_moltii.pgf}
+\end{center}
+ Verifica nel sistema decimale:~$(231_{5}=66)\cdot(24_{5}=14)=(12144_{5}=924)$.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:4.27}, \ref{ese:4.28}, \ref{ese:4.29}}
+
+\subsection{Divisione}
+
+Anche per la divisione il procedimento è del tutto analogo a quello
+usato nel sistema decimale, la tavola da utilizzare è quella della
+moltiplicazione.
+
+\begin{exrig}
+
+\begin{esempio}
+$11101_{2}:101_{2}.$
+\end{esempio}
+Dobbiamo tradurre in base due quello che facciamo in base dieci.
+
+\begin{wrapfloat}{figure}{r}{0pt}
+\input{./lbr/chap04/fig021_divi.pgf}
+\end{wrapfloat}
+
+La cifra di ordine più alto si ottiene dalla divisione di~$111$ con~$101$.
+Il quoziente è~$1$, il resto si ottiene dalla differenza tra
+il dividendo e il prodotto del quoziente per il divisore. In questo
+caso il resto è~$10$.
+
+Si abbassa lo~$0$ e otteniamo~$100$. Si ha~$100:101=0$. La seconda
+cifra del divisore è~$0$.
+
+La moltiplicazione di~$0$ per il divisore dà~$0$. Il nuovo resto è~$100$.
+
+Si abbassa l'1 e otteniamo~$1001$ che viene diviso per~$101$. Il quoziente è~$1$
+ed il resto è uguale a~$100$.
+
+Dai calcoli risulta quindi: $11101_{2}:101_{2} = (101)_2$ con resto $(100)_2$.
+
+Verifichiamolo nel sistema decimale:
+\[(11101_{2}=29):(101_{2}=5)=(\mathit{Quoziente}:101_{2}=5;\:\:\mathit{Resto}:110_{2}=4).\]
+
+%\begin{multicols}{2}
+\begin{wrapfloat}{figure}{r}{0pt}
+\input{./lbr/chap04/fig022_divii.pgf}
+\end{wrapfloat}
+Eseguiamo la riprova della divisione direttamente in base~2:
+\[\mathit{dividendo}=\mathit{quoziente}\cdot\mathit{divisore}+\mathit{resto}.\]
+Il quoziente $101_2$ moltiplicato il divisore $101_2$ è uguale a~$11001_2$.
+Se a questo risultato aggiungiamo il resto~$100_2$ otteniamo il dividendo~$11101_2$. Quindi i calcoli effettuati sono corretti.
+
+%\end{multicols}
+\pagebreak
+\begin{esempio}
+$3402_{5}:42_{5}$.
+\end{esempio}
+
+\begin{wrapfloat}{figure}{r}{0pt}
+ \input{./lbr/chap04/fig023_diviii.pgf}
+\end{wrapfloat}
+Dobbiamo tradurre in base cinque quello che facciamo in base dieci.
+
+Il~$42_5$ nel~$34_5$ non ci sta. Prendiamo allora tre cifre~$340_5$. Il~$4_5$
+nel~$34_5$ ci sta~$4_5$ volte, quindi $4_5$ è la cifra di ordine più alto
+del quoziente. Dobbiamo trovare il resto. Il resto si ottiene
+sottraendo il risultato della moltiplicazione tra~$4_5$ e~$42_5$ che è~$323_5$.
+Il resto è uguale~$12_5$.
+Si abbassa il~$2_5$ e otteniamo~$122_5$. Il~$4_5$ nel~$12_5$ ci
+sta una sola volta, infatti~$4_5\cdot~2_5=13_5$. La seconda cifra del
+divisore è~$1_5$.
+La moltiplicazione di~$1_5$ per il divisore dà~$42_5$. Sottraendo~$42_5$
+da~$122_5$ si ottiene~$30_5$. Dato che~$30_5$ è minore di~$42_5$ la
+divisione intera è terminata.
+
+Dunque $3402_{5}:42_{5} = 41_{5}$ con resto $30_{5}$.
+
+Verifica:~$(3402_{5}=477):(42_{5}=22)=(\mathit{Quoziente}:41_{5}=21;\:\:\mathit{Resto}:30_{5}=15)$.
+\vspace*{1.5ex}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:4.30}, \ref{ese:4.31}}
+\newpage
+\input{./chap/04_esercizi}
+\cleardoublepage

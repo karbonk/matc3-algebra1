@@ -1,0 +1,21 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% quadrati e parti di quadrati espresse in frazioni
+\begin{tikzpicture}
+  \begin{scope}[scale=1,every node/.style={minimum size=5mm}]
+    \draw[step=5mm, black] (0,0) grid (1cm,1cm);
+    \fill[gray, opacity=.4] (0,.5cm) rectangle (1cm,1cm);
+    \draw[black,thick] (0,0) rectangle (1cm,1cm);
+
+    \draw[step=5mm, draw=black, fill=gray] (3cm,0) grid (4cm,1cm);
+    \fill[gray, opacity=.4] (3cm,0) rectangle (3.5cm,1cm) ;
+    \fill[gray, opacity=.4] (3.5cm,0.5cm)rectangle (4cm,1cm);
+    \draw[black,thick] (3cm,0) rectangle (3cm,1cm);
+
+    \draw[step=5mm, draw=black, fill=gray] (6cm,0) grid (7cm,1cm);
+    \fill[gray, opacity=.4] (6cm,0) rectangle (7cm,1cm) ;   
+    \draw[black,thick] (6cm,0) rectangle (7cm,1cm);
+  \end{scope} 
+  \node (a) at (1.5cm,.5cm) {$\frac{2}{4}Q$};
+  \node (b) at (4.5cm,.5cm) {$\frac{3}{4}Q$};
+  \node (c) at (7.5cm,.5cm) {$\frac{4}{4}Q$};
+\end{tikzpicture}

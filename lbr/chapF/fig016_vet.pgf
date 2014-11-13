@@ -1,0 +1,29 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[->]
+    \draw (-4.5,0) -- (2.5,0) node [below right] () {$x$};
+    \draw (0,-2.5) -- (0,1.5) node[above left] {$y$};
+  \end{scope}
+
+  \foreach \x/\xtext in {-4/-8, -3/-6,-2/-4,-1/-2,1/2,2/4}{
+    \node[below] at (\x,0) {$\xtext$};
+    \draw (\x,1.5pt) -- (\x,-1.5pt);}
+  \foreach \y/\ytext in {-2/-2,-1/-1, 1/1}{
+    \node[left] at (0,\y) {$\ytext$};
+    \draw (1.5pt,\y) -- (-1.5pt,\y);}
+  \node[below left] at (0,0) {$0$};
+
+  \begin{scope}[dotted, orange]
+    \draw (-4.5,-2.5) grid (2.5,1.5);
+  \end{scope}
+
+  \begin{scope}[thick, ->]
+	\draw[Maroon] (0,0) -- (2,1);  
+	\draw[OliveGreen](0,0) -- (-4,-2);
+      \end{scope}
+ 
+\node[above] at (1,.5) {$\vec{u}$};
+\node[above] at (-2,-1) {$\vec{p}$};
+\end{tikzpicture}

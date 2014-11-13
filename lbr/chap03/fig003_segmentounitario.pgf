@@ -1,0 +1,15 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% 
+\begin{tikzpicture}[decoration={markings,mark=between positions 0.7 and .9 step 90pt with {\arrow{stealth}}}]
+\begin{scope}[thick]
+\draw[->] (0,0) -- (240pt,0);
+  \foreach \x/\xtext in {0/0,.5/\frac{1}{16},1/\frac{1}{8},1.5/,2/\frac{1}{4},2.5/,3/,3.5/,4/\frac{1}{2},4.5/,5/,5.5/,6/,6.5/,7/,7.5/,8/1}
+    \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
+\end{scope}
+\begin{scope}[dotted, color=gray!50!black]
+     \draw[postaction={decorate}](0,5pt) arc (180:0:0.25);
+     \draw[postaction={decorate}](0,5pt) arc (180:0:0.5);
+     \draw[postaction={decorate}](0,5pt) arc (180:0:1);
+     \draw[postaction={decorate}](0,5pt) arc (180:0:2);
+\end{scope}
+\end{tikzpicture}

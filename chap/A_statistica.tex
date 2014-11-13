@@ -1,0 +1,853 @@
+% (c) 2012 Tiziana Manca - tmanca@libero.it
+% (c) 2012 -2014 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\chapter{Statistica descrittiva}
+
+\section{Indagine statistica}
+Il termine statistica significa \emph{scienza dello stato}. Questo termine venne usato per la prima volta nel~$XVI$ secolo
+per indicare lo studio dei dati utili al governo degli stati prevalentemente relativi a fenomeni di carattere demografico (nascite, morti, ecc.).
+Negli anni, la statistica si è estesa ai campi più disparati: fisica, psicologia, ricerca di mercato, indici di gradimento, sondaggi, meteorologia, \ldots
+È nata essenzialmente con lo scopo di descrivere i fenomeni (statistica descrittiva), successivamente è divenuta uno strumento utile
+anche per fare previsioni (statistica inferenziale). A grandi linee si può definire come la scienza che si occupa della raccolta e dell'analisi dei dati relativi
+ad un certo gruppo di persone, animali o oggetti al fine di descrivere in maniera sintetica un fenomeno che li riguarda e fare eventualmente previsioni sul suo andamento futuro.
+
+Ad esempio, la statistica cerca di rispondere a domande del tipo:
+\begin{itemize*}
+\item quanta acqua sarà necessaria in Italia fra~3 anni?
+\item quanta corrente elettrica sarà necessaria per il fabbisogno nazionale fra~5 anni?
+\item quale sarà il tasso di disoccupazione nazionale fra~1 anno?
+\end{itemize*}
+
+\begin{definizione}
+L'insieme di elementi oggetto dell'indagine statistica è detta \emph{popolazione} o universo, mentre ciascun elemento della popolazione è detto \emph{unità statistica}.
+\end{definizione}
+
+Sono esempi di popolazione statistica gli abitanti di una città in un certo anno, i prezzi di un determinato bene, le temperature massime registrate
+in una giornata in un particolare luogo, i ciclomotori circolanti in Italia, gli alunni di una scuola.
+
+\begin{definizione}
+Per ogni unità statistica si possono studiare una o più caratteristiche ed ognuna di tali caratteristiche costituisce un \emph{carattere} della popolazione oggetto
+di indagine. I caratteri possono essere di tipo \emph{qualitativo} o \emph{quantitativo}.
+Si definisce \emph{modalità} del carattere indagato ciascuno dei diversi modi in cui esso può presentarsi.
+\end{definizione}
+
+Sono esempi di carattere qualitativo il colore degli occhi, il colore dei capelli, il tipo di scuola frequentato, il gradimento di un certo programma televisivo.
+Le modalità di un carattere qualitativo sono espresse mediante nomi o aggettivi.
+I caratteri qualitativi sono a loro volta suddivisi in \emph{ordinabili}, cioè può essere definita una relazione di ordine tra essi (per ogni coppia di elementi si può stabilire quale dei due è il primo e quale il secondo -- es.~il tipo di scuola frequentato è ordinabile a partire dalla scuola dell'infanzia fino alla laurea,
+il gradimento di un programma televisivo è ordinabile a partire dalla completa mancanza di gradimento fino al gradimento massimo) e \emph{non ordinabili} o \emph{sconnessi}
+(es.~colore degli occhi, colore dei capelli).
+
+Sono invece caratteri quantitativi l'età, l'altezza, il numero di auto prodotte da una fabbrica, \ldots, ovvero le modalità di un carattere quantitativo sono espresse mediante numeri.
+I caratteri quantitativi possono essere di tipo \emph{discreto}, quando assumono solo valori puntuali, oppure di tipo \emph{continuo}, quando possono assumere
+tutti gli infiniti valori compresi in un determinato intervallo. Sono esempi di caratteri quantitativi discreti il numero di figli in una famiglia,
+i pezzi prodotti in una catena di montaggio; sono esempi di caratteri quantitativi continui l'altezza di una persona, il peso di una persona, la lunghezza di un fiume.
+
+L'indagine statistica può riguardare l'intera popolazione (in tal caso si parla di \emph{censimento}) oppure solo una sua parte (in tal caso si parla di \emph{indagine a campione}).
+Supponiamo di voler effettuare un'indagine relativa alle persone che fumano in Italia. Il fenomeno collettivo in esame è il fumo, la popolazione di riferimento
+è costituita dalla popolazione italiana in età adulta, l'unità statistica è rappresentata da ogni cittadino oggetto dell'indagine, i caratteri oggetto
+dell'indagine possono essere ``fumatore/{}non fumatore'', ``numero di sigarette fumate'', che cosa si fuma (es.~ pipa, sigaro, sigaretta). Data l'elevata numerosità
+della popolazione di riferimento la tipologia di indagine preferibile è quella a campione.
+
+A sua volta, l'indagine a campione può essere effettuata su un \emph{campione casuale}, quando si scelgono a caso i campioni all'interno della popolazione o
+su un \emph{campione stratificato}, quando si suddivide la popolazione in \emph{classi} o \emph{strati} senza specifici criteri e per ogni strato si prende a caso un campione.
+
+\ovalbox{\risolvi \ref{ese:A.1}}
+
+\section{Fasi di un'indagine statistica}
+\begin{definizione}
+Dato un carattere oggetto di rilevazione, si definisce \emph{frequenza} il numero delle unità statistiche su cui una sua modalità si presenta.
+\end{definizione}
+
+Affinché un'indagine statistica sia rigorosa (e quindi garantisca un'elevata affidabilità) è necessario che sia strutturata secondo le seguenti fasi:
+
+\begin{enumeratea}
+\item \textbf{Studio del problema e impostazione dell'indagine statistica.}
+Si individua in maniera precisa lo scopo della ricerca, il fenomeno sul quale indagare, la popolazione statistica di riferimento,
+le singole unità statistiche ed il carattere, o caratteri, oggetto di indagine.
+\item \textbf{Rilevazione dei dati statistici.}
+La rilevazione non è altro che la raccolta dei dati statistici riguardanti ogni elemento della popolazione e relativi al fenomeno che si vuole analizzare.
+La rilevazione può avvenire secondo diverse modalità:
+\begin{description}
+\item [rilevazione diretta o globale:] viene eseguita direttamente su tutte le unità statistiche che formano la popolazione;
+\item [rilevazione indiretta o parziale:] eseguita solo su una parte della popolazione. Si deve scegliere in tal caso un sottoinsieme della popolazione,
+detto \emph{campione}, che deve essere rappresentativo della popolazione di riferimento, ovvero deve essere il più possibile eterogeneo rispetto alle caratteristiche della popolazione e contenere al suo interno un numero non troppo ristretto di unità.
+\end{description}
+\item \textbf{Spoglio delle schede e tabulazione.}
+Contemporaneamente o successivamente al rilevamento, i dati raccolti vengono ordinati, suddivisi in classi omogenee e riassunti tramite tabelle dette \emph{tabelle statistiche}.
+\item \textbf{Rappresentazione dei dati statistici.}
+La rappresentazione può avvenire attraverso diversi tipi di grafico:
+\begin{description}
+\item [diagramma cartesiano:] rappresentazione nel piano cartesiano dei valori della variabile 	sull'asse orizzontale e delle relative frequenze sull'asse verticale;
+\item [ideogramma:] si rappresenta un certo numero di dati con un simbolo;
+\item [diagramma a barre o a colonne:] grafico composto da segmenti o barre (orizzontali o verticali) proporzionali alle frequenze;
+\item [areogramma:] grafico a forma di cerchio composto da settori circolari con aree direttamente proporzionali alle frequenze;
+\item [istogramma:] grafico composto da rettangoli aventi area proporzionale alla frequenza.
+\end{description}
+\item \textbf{Elaborazione dei dati.}
+Con specifici algoritmi di calcolo, vengono elaborati i dati tabulati al fine di costruire opportuni indici di sintesi.
+\item \textbf{Interpretazione dei risultati.}
+Attraverso i grafici e gli indici è possibile descrivere le caratteristiche peculiari del fenomeno analizzato.
+\end{enumeratea}
+
+Analizziamo in dettaglio le singole fasi che seguono la raccolta dei dati.
+
+\subsection{Spoglio delle schede e tabulazione}
+Dopo aver raccolto i dati per ciascuna modalità del carattere o per ciascuna classe individuata si deve determinare:
+
+\begin{itemize*}
+\item la \emph{frequenza assoluta}, cioè il numero di volte con cui si presenta una modalità del carattere indagato;
+\item la \emph{frequenza relativa}, cioè il rapporto tra la frequenza assoluta e il numero totale dei casi presi in esame;
+\item la \emph{frequenza percentuale}, cioè la frequenza relativa moltiplicata per~100.
+\end{itemize*}
+Si compila poi una tabella di frequenza che sintetizza la raccolta dei dati, come nell'esempio seguente.
+
+\begin{exrig}
+ \begin{esempio}
+
+La tabella seguente fornisce la distribuzione di frequenze assolute degli alunni di una classe rispetto al carattere sesso.
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Sesso &Femmine &Maschi &Totale \\
+Numero di alunni & 15 & 12 & 27 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Per costruirla, si è operata la classificazione della popolazione degli alunni della classe rispetto ad un determinato carattere (il sesso),
+sono state individuate le modalità con cui questo si è manifestato (femmina, maschio) ed è stato effettuato il conteggio delle unità
+in corrispondenza di ciascuna modalità (frequenza assoluta).
+Dalle frequenze assolute si ricavano le frequenze relative:~15 alunni su~27 sono femmine: la frazione è di~$15/27$ femmine sul totale degli alunni. Quindi Dall'operazione~15
+diviso~27 otteniamo~$\np{0,56}$ (approssimando a due cifre decimali) che è la frequenza relativa.
+La frazione può essere espressa in forma percentuale:~$\np{0,56}$ equivale a dire~56 su~100 ed è consuetudine scriverlo in forma percentuale~$56\%$. Tale valore è la frequenza percentuale.
+
+Ripetendo lo stesso procedimento per i maschi si ottiene la seguente tabella delle frequenze:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Sesso & Frequenza assoluta & Frequenza relativa & Frequenza percentuale \\
+\midrule
+Femmine & 15 & $\np{0,56}$ & $56\%$ \\
+Maschi & 12 & $\np{0,44}$ & $44\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Si può concludere che la classe è formata per il~$56\%$ da femmine e per il~$44\%$ da maschi.
+ \end{esempio}
+
+ \begin{esempio}
+
+Supponiamo che i voti elencati di seguito siano quelli riportati in matematica a fine trimestre
+dagli alunni della tua classe: 5, 4, 6, 8, 8, 7, 7, 6, 5, 5, 6, 7.
+
+Per poter effettuare una lettura più agevole si costruisce una tabella in cui vengono riportati sulla prima colonna i singoli valori rilevati (le modalità del carattere) in ordine crescente,
+nella seconda la frequenza assoluta, cioè quante volte compare quel determinato voto, nella terza la frequenza relativa e nella quarta quella percentuale (che si ottiene moltiplicando per~100 la frequenza relativa):
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Voto riportato & Frequenza assoluta & Frequenza relativa & Frequenza percentuale \\
+\midrule
+4 & 1 & $1/12=\np{0,083}$ & $\np{8,30}\%$ \\
+5 & 3 & $3/12=\np{0,25}$ & $\np{25,00}\%$ \\
+6 & 3 & $3/12=\np{0,25}$ & $\np{25,00}\%$ \\
+7 & 3 & $3/12=\np{0,25}$ & $\np{25,00}\%$ \\
+8 & 2 & $2/12=\np{0,167}$ & $\np{16,70}\%$ \\
+Totale & 12 & $12/12=1$ & $100\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+ \end{esempio}
+
+ \begin{esempio}
+Misurando l'altezza di un gruppo di cani di razza pastore italiano si sono ottenute le seguenti misure in~$\unit{cm}$:
+\begin{center}
+ \begin{tabular}{ccccccccccccc}
+$\np{57,1}$ & $\np{60,8}$ & $\np{60,7}$ & $\np{56,2}$ & $\np{59,5}$ & $\np{62,4}$ & $\np{56,1}$ & $\np{61,2}$ & $\np{54,5}$ & $\np{64,5}$ & $\np{57,5}$ & $\np{58,3}$ & $\np{55,2}$\\
+$\np{58,7}$ & $\np{57,2}$ & $\np{56,1}$ & $\np{58,9}$ & $\np{57,7}$ & $\np{53,2}$ & $\np{59,2}$ & $\np{58,9}$ & $\np{54,5}$ & $\np{55,3}$ & $\np{62,1}$ & $\np{59,0}$ & $\np{58,3}$\\
+$\np{61,3}$ & $\np{60,1}$ & $\np{56,4}$ & $\np{60,2}$ & $\np{61,7}$ & $\np{57,3}$ & $\np{58,3}$ & $\np{59,5}$ & $\np{62,6}$ & $\np{59,4}$ & $\np{58,3}$ & $\np{59,4}$ & $\np{59,4}$\\
+$\np{59,3}$ & $\np{57,6}$ & $\np{60,0}$ & $\np{60,7}$ & $\np{56,7}$ & $\np{61,1}$	& $\np{59,8}$ & $\np{55,3}$ & $\np{63,9}$ & $\np{58,0}$ & $\np{55,2}$ & $\np{54,9}$ & $\np{53,8}$\\
+ \end{tabular}
+\end{center}
+Il carattere indagato nella popolazione cani pastore italiano è di tipo quantitativo continuo; con questo tipo di dati è praticamente impossibile
+calcolare le frequenze se le altezze non si raggruppano in classi.
+
+Vediamo come procedere: osservando i dati ottenuti si nota che il valore minore è~$\np{53,8}$ mentre il valore maggiore è~$\np{64,7}$. Possiamo allora suddividere
+i dati in gruppi partendo da~$\np[cm]{53,0}$ fino a~$\np[cm]{65,0}$, formando classi di ampiezza~$1 \unit{cm}$ e ottenendo la seguente tabella:
+
+\begin{center}
+\begin{tabularx}{.9\textwidth}{*{2}{lXX}}
+\toprule
+Classe ($\unit{cm}$) & Frequenza assoluta & Frequenza percent. &Classe ($\unit{cm}$) & Frequenza assoluta & Frequenza percent. \\
+\midrule
+$\np{53,0}$ - $\np{53,9}$ & 2 & $\np{3,85}\%$ & $\np{59,0}$ - $\np{59,9}$ & 9 & $\np{17,31}\%$\\
+$\np{54,0}$ - $\np{54,9}$ & 3 & $\np{5,77}\%$ & $\np{60,0}$ - $\np{60,9}$ & 6 & $\np{11,54}\%$\\
+$\np{55,0}$ - $\np{55,9}$ & 4 & $\np{7,69}\%$ & $\np{61,0}$ - $\np{61,9}$ & 4 & $\np{7,69}\%$\\
+$\np{56,0}$ - $\np{56,9}$ & 5 & $\np{9,61}\%$ & $\np{62,0}$ - $\np{62,9}$ & 3 & $\np{5,77}\%$\\
+$\np{57,0}$ - $\np{57,9}$ & 6 & $\np{11,54}\%$ & $\np{63,0}$ - $\np{63,9}$ & 1 & $\np{1,92}\%$\\
+$\np{58,0}$ - $\np{58,9}$ & 8 & $\np{15,38}\%$ & $\np{64,0}$ - $\np{64,9}$ & 1 & $\np{1,92}\%$\\
+\midrule
+Totale & 52 & &&&\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+%Nota: vista la natura continua del carattere, la scrittura formalmente più corretta per indicare le classi sarebbe quella degli intervalli chiusi a sinistra e aperti a destra, ad es.~$[53\text{ - }54)$, $[54\text{ - }55)$, \ldots
+
+\end{esempio}
+\end{exrig}
+
+%\newpage
+Riassumendo
+\begin{center}
+ \input{./lbr/chapA/fig001_rias.pgf}
+\end{center}
+
+\ovalbox{\risolvii \ref{ese:A.2}, \ref{ese:A.3}, \ref{ese:A.5}, \ref{ese:A.6}, \ref{ese:A.7}, \ref{ese:A.8}, \ref{ese:A.9}}
+
+\subsection{Rappresentazione grafica}
+
+La rappresentazione grafica dei dati statistici facilita notevolmente lo studio delle caratteristiche del
+fenomeno che si sta esaminando; infatti dopo aver impostato l'indagine, raccolto, classificato ed elaborato i dati nelle tabelle,
+i dati non sempre si presentano in una forma di facile lettura ed il loro significato e la loro interpretazione rimane poco chiara.
+Attraverso la rappresentazione grafica, i risultati dell'indagine emergono immediatamente, in maniera diretta e sintetica.
+
+La rappresentazione grafica può avvenire utilizzando diversi tipi di grafico a seconda delle caratteristiche da
+analizzare.
+
+\subsubsection{Diagramma cartesiano}
+La rappresentazione grafica attraverso un diagramma cartesiano dà, in modo immediato, informazioni sull'andamento globale del fenomeno e viene
+utilizzata prevalentemente per la rappresentazione di serie storiche (per esempio, per rappresentare il numero di auto prodotte per anno da una fabbrica)
+oppure quando si hanno due caratteri quantitativi e si vuol analizzare il tipo di legame esistente fra di essi.
+
+
+\begin{exrig}
+ \begin{esempio}
+
+Consideriamo la tabella statistica relativa alla domanda ``quante ore al giorno passi al computer?'', posta ad un
+campione di~50 ragazzi dai~16 ai~24 anni.
+
+Rappresentiamo la tabella attraverso un diagramma cartesiano costruito tracciando due rette perpendicolari, gli assi, quello verticale orientato verso
+l'alto e quello orizzontale orientato verso destra. Riportiamo sull'asse orizzontale il numero di ore e sull'asse verticale il numero di ragazzi e determiniamo
+i punti aventi come coordinate (numero ore; numero ragazzi).
+
+Il punto~$A$ avrà come coordinate~$(0;4)$, il punto~$B$ avrà come coordinate~$(1;6)$ e così via. Uniamo poi
+i punti con segmenti e otteniamo il diagramma cartesiano~(grafico~\ref{gr:A.1}).
+Precisamente~$A(0;4)$, $B(1;6)$, $C(2;12)$, $D(3;16)$, $E(4;8)$, $F(5;4)$, $G(6;2)$.
+
+\begin{center}
+\begin{tabular}{lccccccc}
+\toprule
+Numero di ore & 0 & 1 &2 & 3 & 4 & 5 & 6\\
+Numero di ragazzi & 4 & 6 & 12 & 16 & 8 & 4 & 2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Dal grafico~\ref{gr:A.2} si può notare immediatamente che la maggior parte dei ragazzi trascorre dalle~2 alle~3 ore al computer dato che il picco più
+alto si ha proprio nei punti~$C$ e~$D$.
+Si può anche notare che, ad esempio, il punto~$X$ di coordinate~$(\np{3,5};12)$, appartenente al segmento di congiunzione tra i punti~$D$ ed~$E$,
+non ha significato reale, dato che le sue coordinate non sono riportate nella tabella statistica del fenomeno da studiare.
+\begin{grafico}[t]
+\begin{minipage}{0.5\textwidth}
+\input{./lbr/chapA/fig002_graf.pgf}
+\caption{Esempio~24.4}\label{gr:A.1}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+\input{./lbr/chapA/fig003_graf.pgf}
+\caption{Esempio~24.4}\label{gr:A.2}
+\end{minipage}
+\end{grafico}
+\end{esempio}
+\end{exrig}
+
+\subsubsection{Ideogramma}
+Nella rappresentazione grafica attraverso \emph{ideogramma} si rappresenta un certo numero di dati con un simbolo che si assume come \emph{unità grafica};
+il simbolo deve richiamare l'oggetto dell'indagine e dare quindi una visione immediata del fenomeno.
+Ad esempio si può utilizzare un uomo stilizzato per rappresentare un dato riguardante il numero di persone che vivono in un determinato territorio,
+una macchina per la produzione annua di automobili in una fabbrica, e così via.
+Tale tipo di rappresentazione è spesso usata in campo pubblicitario perché caratterizzata da un evidente impatto visivo.
+
+\begin{exrig}
+ \begin{esempio}
+
+Un istituto scolastico ha visto aumentare i suoi iscritti, dall'anno scolastico~2003-2004 all'anno~2008-2009 secondo quanto riportato nella seguente tabella:
+
+\begin{center}
+ \begin{tabular}{lcccccc}
+ \toprule
+ Anno scolastico & 2003-04 & 2004-05 & 2005-06 & 2006-07 & 2007-08 & 2008-09\\
+ Iscritti & 150 & 200 & 200 & 325 & 375 & 450\\
+ \bottomrule
+\end{tabular}
+\end{center}
+
+Possiamo rappresentare mediante ideogramma i dati contenuti nella tabella statistica.
+Consideriamo una faccina stilizzata come unità grafica assegnandole il valore di~50 ragazzi iscritti.
+\begin{center}
+ \input{./lbr/chapA/fig004_emo.pgf}
+\end{center}
+Il numero degli iscritti di ogni anno scolastico sarà rappresentato da tante unità grafiche quanti sono i gruppi di~50 iscritti.
+Per avere il grafico relativo all'anno~2003-2004 si devono usare tre faccine, in quanto~$150:50=3$.
+\begin{center}
+ \input{./lbr/chapA/fig005_emo.pgf}
+\end{center}
+Se la divisione del numero degli iscritti per~50 dà resto, esso si dovrà rappresentare disegnando solo una parte
+dell'unità grafica, corrispondente alla frazione tra resto e~50. Ad esempio nell'~a.s.~2006-2007 ci sono stati~325 iscritti; $325:50 = 6$
+col resto di~25, quindi~325 sarà uguale a~6 unità grafiche e~$\frac{25}{50}=\frac{1}{2}$ unità grafica, cioè mezza faccina, ovvero $325:50 = \np{6,5}$ cioè 6 faccine e mezzo.
+\begin{center}
+ \input{./lbr/chapA/fig006_emo.pgf}
+\end{center}
+
+Il grafico completo sarà:
+\begin{center}
+ \input{./lbr/chapA/fig007_emo.pgf}
+\end{center}
+ \end{esempio}
+\end{exrig}
+
+\subsubsection{Diagramma a barre o a colonne}
+
+Questo tipo di rappresentazione, detta anche diagramma a nastri o a bastoni, viene usata quando si vuole fornire un'idea delle frequenze
+delle diverse modalità di un fenomeno. In genere si usa per caratteri qualitativi o quantitativi discreti.
+Per poter valutare il significato statistico della lunghezza delle barre (o delle colonne) è necessario scegliere opportunamente una scala di riferimento:
+la larghezza della barra (o della colonna) è arbitraria ma uguale per tutte le barre (o colonne) e la sua lunghezza è proporzionale alla caratteristica che si deve rappresentare.
+Le barre (o le colonne) possono inoltre essere suddivise in parti di colori diversi per indicare le singole componenti o i singoli fenomeni
+che si vogliono analizzare.
+
+La differenza fra la rappresentazione a barre e quella a colonne consiste soltanto
+nell'orientamento del grafico: nel diagramma a barre si indicano le modalità del carattere sull'asse verticale e le frequenze sull'asse orizzontale,
+mentre in quello a colonne le modalità del carattere sono riportate sull'asse
+orizzontale e le frequenze su quello verticale.
+
+Di seguito vengono riportate le due tipologie di grafico accompagnate dalla tabella di riferimento:
+\begin{center}
+ \begin{tabularx}{.95\textwidth}{X*{7}{c}Xc}
+\toprule
+Materia& Italiano &Storia & Geografia & Matem. & Scienze & Ed. Fisica & Totale\\
+Maschi & 5 & 4& 4 & 2& 6 & 5& 26\\
+Femmine & 3 & 7 & 2 & 3  & 4 & 5 & 24\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\begin{center}
+\begin{figure}[!ht]
+\input{./lbr/chapA/fig008_dia.pgf}
+\caption{Diagramma a barre}
+\end{figure}
+\end{center}
+
+\begin{center}
+ \begin{figure}[!ht]
+\input{./lbr/chapA/fig009_dia.pgf}
+\caption{Diagramma a colonne}
+\end{figure}
+\end{center}
+
+\subsubsection{Areogramma}
+
+Questo tipo di rappresentazione, detta anche grafico a torta, viene utilizzato quando si vogliono evidenziare le parti che compongono un fenomeno, per esempio per indicare
+come si dividono gli alunni di una classe in maschi e femmine, o per rappresentare in che modo
+le varie voci di spesa incidono sul bilancio familiare.
+Il grafico si ottiene dividendo un cerchio in settori circolari con aree direttamente proporzionali alle frequenze che rappresentano.
+Per disegnare l'areogramma, si disegna una circonferenza di diametro arbitrario e si fa corrispondere l'angolo al centro di~$360\grado$,
+con il~$100\%$ di frequenza percentuale; per ottenere l'angolo corrispondente ad una certa frequenza percentuale $f_x$ si risolve la proporzione~$360\grado:X\grado=100:f_x\:\Rightarrow\:X\grado = \np{3,6} \cdot f_x$.
+Si suddivide così la circonferenza negli angoli ottenuti e si evidenziano in maniera differente tra loro i settori circolari ottenuti.
+
+\begin{exrig}
+ \begin{esempio}
+Consideriamo la seguente tabella statistica che indica gli studenti di un dato istituto scolastico divisi per classe frequentata, in un dato anno.
+
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+Classe & 1\textsuperscript{a} &2\textsuperscript{a} &3\textsuperscript{a} & 4\textsuperscript{a} &5\textsuperscript{a} &Totale\\
+Studenti & 320 & 230 & 212 & 152 & 96 & $\np{1010}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Nella tabella sono indicate le frequenze assolute; calcoliamo ora le frequenze percentuali degli studenti.
+Per la~1\textsuperscript{a} classe si ha:~$\frac{320}{\np{1010}}=\np{0,32}$ arrotondato alla seconda cifra decimale, che equivale al~$32\%$ e così via per le classi successive.
+
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+Classe & 1\textsuperscript{a} & 2\textsuperscript{a} & 3\textsuperscript{a} & 4\textsuperscript{a} & 5\textsuperscript{a} & Totale \\
+ Frequenze percentuali& $32\%$ & $23\%$ & $21\%$ & $15\%$ & $9\%$ & $100\%$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Rappresentiamo graficamente mediante areogramma i dati contenuti nella tabella precedente.
+\begin{center}
+ \input{./lbr/chapA/fig010_areo.pgf}
+\end{center}
+
+Per ottenere l'angolo relativo alla frequenza percentuale della~1\textsuperscript{a} classe si fa:~$\np{3,6} \cdot 32=\np{115,2}\grado$ e
+per la~2\textsuperscript{a} classe:~$\np{3,6} \cdot 23=\np{82,2}\grado$ e così via per le altre classi.
+
+Dal grafico si può notare immediatamente che la classe più frequentata è la prima.
+
+ \end{esempio}
+\end{exrig}
+
+\subsubsection{Istogramma}
+
+Si utilizza la rappresentazione grafica attraverso istogramma quando il carattere analizzato è di tipo quantitativo ed i dati sono raggruppati in classi.
+
+Prima di tutto si distribuiscono i dati in classi o gruppi e si determina il numero di unità appartenenti a ciascuna classe; questo numero è
+detto \emph{frequenza della classe}.
+Riportando tali dati in una tabella si ottiene la distribuzione delle frequenze. Poiché le classi potrebbero avere ampiezze diverse si calcola
+la \emph{densità di frequenza}, definita come il rapporto fra la frequenza della classe e la relativa ampiezza.
+
+Per disegnare un istogramma si tracciano due assi; sull'asse verticale, orientato verso l'alto, si fissa un segmento unitario e vi si riportano
+le densità di frequenza. L'asse orizzontale, orientato verso destra, è invece suddiviso in tanti segmenti la cui ampiezza è pari a quella delle singole classi.
+Il grafico consiste in un insieme di rettangoli aventi per base ogni classe e altezza la densità di frequenza corrispondente.
+In tal modo l'area di ogni rettangolo rappresenta la frequenza corrispondente a ciascuna classe.
+
+\begin{exrig}
+ \begin{esempio}
+
+Costruiamo un istogramma a partire dalla distribuzione di frequenza riportata nella seguente tabella:
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+Diametro crateri lunari ($\unit{km}$) & Numero di crateri\\
+\midrule
+$0-50$ & $\np{1088}$ \\
+$50-100$ & $745$ \\
+$100-150$ & $20$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Innanzi tutto per ogni classe dobbiamo determinare la densità di frequenza, che si ottiene dividendo la frequenza assoluta per l'ampiezza della classe:
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+Diametro crateri lunari ($\unit{km}$) & Densità di freq.\\
+\midrule
+$0-50$ & $\np{1088}/50=\np{21,76}$ \\
+$50-100$ & $745/50=\np{14,9}$ \\
+$100-150$ & $20/50=\np{0,4}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{center}
+\input{./lbr/chapA/fig011_dia.pgf}
+\end{center}
+\end{esempio}
+
+\begin{esempio}
+Consideriamo la seguente tabella statistica che riporta i giorni di pioggia di ogni mese, in un dato anno e in una data città.
+
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+Mesi & Giorni di pioggia &Mesi & Giorni di pioggia\\
+\midrule
+Gennaio & 15&Luglio & 1 \\
+Febbraio & 10 &Agosto & 3\\
+Marzo & 14 &Settembre & 3\\
+Aprile & 8 &Ottobre & 5\\
+Maggio & 5 &Novembre & 9\\
+Giugno & 2 &Dicembre & 11\\
+\bottomrule
+\end{tabular}
+\end{center}
+Dividiamo i mesi dell'anno in classi, raggruppandoli in stagioni. Ad esempio, Luglio, Agosto e Settembre
+appartengono alla classe dell'Estate e la frequenza di questa classe è data dalla somma delle frequenze di ogni mese, cioè~$1 + 3 + 3 = 7$. Si prosegue in questo modo per ogni classe ottenendo così la distribuzione delle frequenze riportata nella tabella.
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+Stagioni & Estate & Autunno & Inverno& Primavera\\
+Giorni di pioggia & 7 & 25 & 39 & 15 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Costruisci ora l'istogramma corrispondente alla tabella precedente riportando sull'asse orizzontale le classi (stagioni) e su quello verticale le densità di frequenze.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:A.10}, \ref{ese:A.11}, \ref{ese:A.12}, \ref{ese:A.13}, \ref{ese:A.14}, \ref{ese:A.15}, \ref{ese:A.16}, \ref{ese:A.17}, \ref{ese:A.18}, \ref{ese:A.19}, \ref{ese:A.20}}
+
+\section{Indici di posizione}
+
+Nel caso in cui il carattere considerato nell'indagine sia di tipo quantitativo, l'andamento dei dati raccolti può essere sinteticamente descritto per mezzo di opportuni indici. Gli \emph{indici di posizione} vengono utilizzati per dare un'indicazione sulla distribuzione delle frequenze per mezzo di un solo numero.
+A seconda del carattere oggetto dell'indagine statistica possono essere utilizzati indici differenti.
+
+\subsection{Moda}
+
+\begin{definizione}
+La \emph{moda} è la modalità del carattere indagato che si presenta più frequentemente.
+\end{definizione}
+
+In una successione di~$n$ modalità~$x_1$, $x_2$, \ldots, $x_n$
+con le relative frequenze~$f_1$, $f_2$, \ldots, $f_n$, la moda è la modalità che ha la frequenza maggiore.
+Questo valore può essere calcolato per qualunque tipo di carattere, sia qualitativo che quantitativo.
+Se il carattere è quantitativo continuo con dati raggruppati in classi non è possibile determinare con esattezza la moda, ci si limita
+ad individuare la \emph{classe modale} definita come la classe cui è associata la massima densità di frequenza.
+
+\begin{exrig}
+ \begin{esempio}
+
+ Nella tabella seguente sono riportati i numeri degli studenti, divisi per classe, della sezione~A di un dato istituto,
+ in un dato anno. Si può osservare che la~1\textsuperscript{a} classe presenta la frequenza massima di~320 studenti, quindi la moda è la classe prima.
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+Classe & 1$\grado$ & 2$\grado$ & 3$\grado$ & 4$\grado$ & 5$\grado$ & Totale \\
+Studenti & 320 & 230 & 212 & 152 & 96 & 1\,010 \\
+\bottomrule
+\end{tabular}
+\end{center}
+ \end{esempio}
+
+\begin{esempio}
+La tabella raccoglie i dati relativi alla domanda ``quante ore alla settimana pratichi sport?'', posta ad un
+campione di~50 ragazzi dai~18 ai~25 anni. Si può osservare che~12 e~18 ore presentano la frequenza massima~14, quindi si hanno due
+mode~12 ore e~18 ore. In questo caso la distribuzione è bimodale.
+
+
+\begin{center}
+\begin{tabular}{lcccccccc}
+\toprule
+Numero di ore & 0 &4 &8 &12 &16 &18 &22 &Totale\\
+ Numero di ragazzi& 4 & 1 & 3 & 14 & 8 & 14 & 6 & 50 \\
+\bottomrule
+\end{tabular}
+\end{center}
+ \end{esempio}
+
+ \begin{esempio}
+La tabella seguente è relativa alla distribuzione delle classi di altezza di un gruppo di studenti.
+
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+Altezza (cm) &160-165 &165-170 &170-175 &175-185 &185-200 &Totale \\
+Numero di studenti & 5 & 8 & 15 & 10 & 2 & 40 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Poiché le classi hanno ampiezza diversa è necessario calcolare la densità di frequenza.
+
+\begin{center}
+\begin{tabular}{lccccc}
+\toprule
+Altezza &160-165 &165-170 &170-175 &175-185 &185-200 \\
+Densità di frequenza & 1 & $\np{1,6}$ & 3 & 1 & $\np{0,13}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+La massima densità di frequenza si ha in corrispondenza della classe~170-175, essa rappresenta quindi la classe modale.
+ \end{esempio}
+\end{exrig}
+
+\subsection{Media aritmetica}
+
+\begin{definizione}
+La \emph{media aritmetica} (semplice) è il valore ottenuto sommando tutti i dati e
+dividendo tale somma per il numero dei dati.
+\end{definizione}
+
+Se abbiamo~$n$ dati~$x_1$, $x_2$, \ldots, $x_n$, la media aritmetica semplice~$M$ è data da:
+
+\begin{equation*}
+M=\frac{x_1+x_2+ \dots +x_n}{n}=\frac{1}{n}\sum_{i=1}^n x_i.
+\end{equation*}
+
+\begin{exrig}
+ \begin{esempio}
+
+Riprendiamo in esame la tabella relativa agli studenti, divisi per classe frequentata di un dato istituto scolastico, in un dato anno e calcoliamone la media aritmetica semplice.
+\begin{center}
+ \begin{tabular}{lcccccc}
+ \toprule
+ Classe & 1\textsuperscript{a} & 2\textsuperscript{a} & 3\textsuperscript{a} & 4\textsuperscript{a} & 5\textsuperscript{a} & Totale\\
+ Studenti & 320 & 230 & 212 & 152 & 96 & $\np{1010}$\\
+ \bottomrule
+\end{tabular}
+\end{center}
+Per calcolare la media aritmetica semplice degli studenti, sommiamo tutti gli studenti delle cinque classi e dividiamo tale somma per il numero delle classi:
+\begin{equation*}
+M=\frac{320+230+212+152+96}{5}= \frac{\np{1010}}{5}= 202.
+\end{equation*}
+Possiamo dire che si hanno mediamente~202 studenti per ogni classe.
+
+\begin{definizione}
+Si definisce \emph{scarto dalla media} (aritmetica) la differenza tra i valori osservati e la media.
+\end{definizione}
+
+Se~$x_1$, $x_2$, \ldots, $x_n$ sono i valori osservati e $M$ la loro media aritmetica, gli scarti sono~$s_1=x_1-M$, $s_2=x_2-M$, \ldots, $s_n=x_n-M$.
+\end{esempio}
+
+\begin{esempio}
+Calcoliamo gli scarti dalla media per la distribuzione ``studenti per tipologia di classe frequentata'', la cui media è~$\np{1010}/5 = 202$.
+\begin{center}
+\begin{tabular}{l*{6}{c}}
+\toprule
+Classe & 1\textsuperscript{a} & 2\textsuperscript{a} & 3\textsuperscript{a} & 4\textsuperscript{a} & 5\textsuperscript{a} & Totale\\
+Studenti & 320& 230& 212& 152& 96& $\np{1010}$ \\
+Scarto & 118 & 28 & 10 & $-50$ & 106 & 0\\
+\bottomrule
+\end{tabular}
+\end{center}
+Si può osservare che vi solo valori superiori alla media e altri inferiori, tanto che lo scarto è rappresentato in
+alcuni casi da un numero positivo, in altri da un numero negativo. Si può verificare che la somma degli scarti dalla media è nulla,
+cioè gli scarti positivi compensano sempre quelli negativi.
+ \end{esempio}
+\end{exrig}
+
+
+\begin{definizione}
+La \emph{media aritmetica ponderata} è il valore ottenuto moltiplicando ciascuna modalità del carattere
+dato con la propria frequenza, sommando tutti i prodotti fra loro e dividendo poi per la somma delle frequenze
+(che equivale al numero totale $n$ delle unità statistiche considerate).
+\end{definizione}
+
+La media aritmetica ponderata si usa nel caso in cui le unità statistiche sono molte ed è già stata fatta la tabella delle frequenze. Avendo quindi le modalità del carattere~$m_1$, $m_2$, \ldots, $m_k$ e le relative frequenze~$f_1$, $f_2$, \ldots, $f_k$, la media aritmetica ponderata~$M$ è data da:
+\begin{equation*}
+M=\frac{m_1\cdot f_1+m_2\cdot f_2+ \dots +m_k\cdot f_k}{f_1+f_2+ \dots +f_k}=\frac{\sum_{i=1}^k m_i\cdot f_i}{\sum_{i=1}^k f_i}=\frac{1}{n}\sum_{i=1}^k m_i\cdot f_i.
+\end{equation*}
+
+\begin{exrig}
+ \begin{esempio}
+
+Riprendiamo la tabella dell'esempio precedente relativa alla domanda ``quante ore al giorno passi al computer?'',
+posta ad un campione di~52 ragazzi dai~16 ai~24 anni. Calcoliamo la media aritmetica ponderata.
+\begin{center}
+ \begin{tabular}{lcccccccc}
+ \toprule
+ Numero di ore & 0 & 1 & 2 & 3 & 4 & 5 & 6 & Totale\\
+ Numero di ragazzi & 4 & 6 & 12 & 16 & 8 & 4 & 2 & 52\\
+ \bottomrule
+\end{tabular}
+\end{center}
+
+Considerando le~7 modalità del carattere ``Numero di ore'' riportate nella tabella, si ha:
+\begin{equation*}
+M=\frac{0\cdot 4+1\cdot 6+2\cdot 12+3\cdot 16+4\cdot 8+5\cdot 4+6\cdot 2}{4+6+12+16+8+4+2}=\frac{142}{52}=\np{2,73}.
+\end{equation*}
+
+Possiamo dire che, in media, ciascun ragazzo passa circa~3 ore al giorno al computer.
+\end{esempio}
+\end{exrig}
+
+Il valore della media aritmetica semplice effettuata sulle singole unità statistiche coincide con quella ponderata effettuata sul raggruppamento dei dati per modalità del carattere considerato (tabella delle frequenze).
+
+\subsection{Mediana}
+\begin{definizione}
+La \emph{mediana} di una successione di dati disposti in ordine crescente è il valore equidistante dagli estremi, cioè è
+\begin{itemize}
+\item il dato che occupa la posizione centrale, se il numero dei dati è dispari;
+\item è la media aritmetica dei dati della coppia centrale, se il numero dei dati è pari.
+\end{itemize}
+\end{definizione}
+
+Poiché per calcolare la mediana i dati devono essere ordinati, è bene sottolineare che tale indice non può essere calcolato se il carattere in esame è di tipo qualitativo non ordinabile.
+
+\begin{exrig}
+\begin{esempio}
+Supponiamo di avere~7 dati disposti in ordine crescente: 5, 8, 10, 14, 18, 20, 25.
+Allora la mediana è il valore centrale, quello che occupa la quarta posizione, cioè il~14.
+\end{esempio}
+
+\begin{esempio}
+Supponiamo di avere~8 dati disposti in ordine crescente: 1, 5, 8, 10, 14, 18, 20, 25.
+La mediana è la media aritmetica dei dati che occupano la~4\textsuperscript{a} e la~5\textsuperscript{a} posizione, cioè~$\frac{10+14}{2}=12$.
+\end{esempio}
+
+\begin{esempio}
+Supponiamo di avere la distribuzione di frequenza riportata nella tabella.
+Il numero di osservazioni è pari, quindi la mediana è il valore della variabile che corrisponde alla media dei due
+valori centrali, rispettivamente quelli che nella serie ordinata occupano il~13$\grado$ e il~14$\grado$ posto.
+
+È necessario in questo caso determinare le \emph{frequenze cumulate}. Esse si ottengono sommando le frequenze che hanno un valore della
+variabile minore o uguale alla modalità considerata.
+La frequenza cumulata relativa al voto~3 rimane~2, quella relativa al voto~4 si ottiene sommando
+la frequenza del~3 e la frequenza del~4, cioè~$2+2=4$, la frequenza cumulata relativa al voto~5 si ottiene dalla somma
+della frequenza del~3, del~4 e del~5 e così via. Il~14$\grado$ posto corrisponde al voto~6, mentre il~15$\grado$ posto è il voto~7.
+La mediana è quindi~$\np{6,5}$.
+\begin{center}
+\begin{tabular}{ccl}
+\toprule
+Voto & Frequenza & Frequenza cumulata\\
+\midrule
+3 & 2 & 2 \\
+4 & 4 & 4+2=6 \\
+5 & 3 & 3+4+2=9 \\
+6 & 5 & 5+3+4+2=14 \\
+7 & 7 & 7+5+3+4+2=21 \\
+8 & 2 & 2+7+5+3+4+2=23 \\
+9 & 2 & 2+2+7+5+3+4+2=25 \\
+10 & 1 & 1+2+2+7+5+3+4+2=26 \\
+\midrule
+Totale & 26 & \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:A.21}, \ref{ese:A.22}, \ref{ese:A.23}, \ref{ese:A.24}, \ref{ese:A.25}, \ref{ese:A.26}, \ref{ese:A.27}, \ref{ese:A.28}, \ref{ese:A.29}, \ref{ese:A.30}, \ref{ese:A.31}}
+
+\vspazio\ovalbox{\ref{ese:A.32}}
+\section{Indici di variabilità}
+
+Gli \emph{indici di variabilità} vengono calcolati per analizzare in che modo i termini di una distribuzione si concentrano intorno ad un valore medio.
+
+\begin{definizione}
+Il \emph{campo di variazione} è la differenza fra il valore massimo ed il valore minimo assunti dalla
+variabile: $\cvar = x_{max} - x_{min}$.
+\end{definizione}
+
+Tale indice dà un'informazione molto grossolana perché tiene conto solo del primo e dell'ultimo termine della
+distribuzione e non tiene conto di tutti i valori intermedi. Si considerino, ad esempio, le seguenti distribuzioni di stature:
+\begin{center}
+ \begin{tabular}{lccccccc}
+ \toprule
+ Gruppo A (statura in~$\unit{cm}$) & 150 & 155 & 155 & 160 & 165 & 180 & 175 \\
+ Gruppo B (statura in~$\unit{cm}$) & 150 & 160 & 175 & 170 & 170 & 170 & 180 \\
+ \bottomrule
+\end{tabular}
+\end{center}
+
+Entrambe le distribuzioni hanno lo stesso valore massimo e lo stesso valore minimo e quindi lo stesso campo di
+variazione, ma mentre nella prima i valori sono concentrati verso il valore minimo nella seconda si concentrano intorno al valore massimo.
+
+L'indice non dà quindi alcuna indicazione su quest'ultima informazione. Né può essere utilizzato come indice di
+variabilità la media degli scarti fra le singole osservazioni e la loro media aritmetica perché tale valore è sempre uguale a zero.
+
+\subsection{Scarto medio assoluto}
+
+\begin{definizione}
+Si definisce \emph{scarto medio assoluto} la media aritmetica dei valori assoluti degli scarti; esso indica quanto i valori rilevati si disperdono
+intorno al valore medio della distribuzione:
+\[s=\frac{\valass{s_1}+\valass{s_2}+ \cdots +\valass{s_n}}{n}=\frac {1}{n}\sum_{i=1}^n \valass{x_i - M}.\]
+\end{definizione}
+
+Facendo riferimento alla distribuzione
+\begin{center}
+\begin{tabular}{lcccccc}
+\toprule
+ Classe & 1\textsuperscript{a} & 2\textsuperscript{a} & 3\textsuperscript{a} & 4\textsuperscript{a} & 5\textsuperscript{a} & Totale\\
+ Studenti & 320 & 230 & 212 & 152 & 96 & $\np{1010}$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+si ha che lo scarto medio assoluto è~$\np{62,4}$. Si può allora affermare che in ogni tipologia di classe si hanno in media~$202\pm\np{62,4}$ iscritti.
+
+\subsection{Varianza e scarto quadratico medio}
+
+L'indice di variabilità più utilizzato è la varianza o lo scarto quadratico medio.
+
+\begin{definizione}
+La \emph{varianza} è la media dei quadrati degli scarti fra le singole osservazioni e la loro media
+aritmetica:
+\[\var{}=\frac{ \left[ (x_1-M)^2+(x_2-M)^2+ \cdots +(x_n-M)^2 \right] }{n}=\frac{1}{n}\sum_{i=1}^n (x_i-M)^2.\]
+
+Lo \emph{scarto quadratico medio} è la radice quadrata della varianza:~$\sigma=\sqrt{\var{}}$.
+\end{definizione}
+
+Se i dati si presentano sotto forma di distribuzione di frequenza, la media deve essere ponderata con le singole
+frequenze, cioè:
+\begin{equation*}
+\begin{split}
+\var{}&=\frac{\left[(m_1-M)^2\cdot f_1+(m_2-M)^2\cdot f_2+ \cdots +(m_k-M)^2\cdot f_k \right]}{f_1+f_2+\ldots+f_k}=\frac {\sum_{i=1}^k(m_i-M)^2\cdot f_i}{\sum_{i=1}^k f_i}=\\
+&=\frac{1}{n}\sum_{i=1}^k(m_i-M)^2\cdot f_i.
+\end{split}
+\end{equation*}
+
+La varianza assume valore zero quando tutti i valori coincidono con la media ed è tanto più grande quanto più i singoli valori
+si discostano dalla media. Poiché tale indice è influenzato sia dal valore della media che dall'unità di misura utilizzato, spesso si utilizza
+un indice detto coefficiente di variazione.
+
+\subsection{Coefficiente di variazione}
+
+\begin{definizione}
+Il \emph{coefficiente di variazione} è il rapporto fra lo scarto quadratico medio (radice quadrata
+della varianza) e la media aritmetica:
+\[\cfvar{} = \frac{\sigma}{M} = \frac{\sqrt{\var{}}}{M}.\]
+\end{definizione}
+
+Tale indice risulta di particolare utilità per confrontare distribuzioni diverse.
+
+\begin{exrig}
+ \begin{esempio}
+
+È dato l'elenco delle stature, in~$\unit{cm}$, dei ragazzi di
+una classe: 165, 182, 159, 173, 160, 175, 185, 190, 175, 180, 159, 185, 176, 170, 175, 160, 175, 182, 159, 185.
+
+\begin{enumeratea}
+\item Ordina i dati in una tabella delle frequenze;
+\item rappresenta i dati graficamente;
+\item calcola la media, la mediana e la moda;
+\item calcola la varianza e il coefficiente di variazione.
+\end{enumeratea}
+
+\subsubsection{Tabella delle frequenze}
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Dati & Frequenze assolute & Frequenze relative & Frequenze percentuali\\
+\midrule
+159 & 3 & $\np{0,15}$ & 15\% \\
+160 & 2 & $\np{0,10}$ & 10\% \\
+165 & 1 & $\np{0,05}$ & 5\% \\
+170 & 1 & $\np{0,05}$ & 5\% \\
+173 & 1 & $\np{0,05}$ & 5\% \\
+175 & 4 & $\np{0,20}$ & 20\% \\
+176 & 1 & $\np{0,05}$ & 5\% \\
+180 & 1 & $\np{0,05}$ & 5\% \\
+182 & 2 & $\np{0,10}$ & 10\% \\
+185 & 3 & $\np{0,15}$ & 15\% \\
+190 & 1 & $\np{0,05}$ & 5\% \\
+\midrule
+Totale & 20 & 1 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{itemize*}
+\item La somma delle frequenze assolute è pari al numero totale degli studenti;
+\item la somma delle frequenze relative è~1 (a meno di approssimazioni nel calcolo delle frequenze relative delle singole modalità del carattere);
+\item la somma delle frequenze percentuali è~100 (a meno di approssimazioni nel calcolo delle frequenze percentuali delle singole modalità del carattere).
+\end{itemize*}
+
+\subsubsection{Grafici}
+\begin{center}
+ \input{./lbr/chapA/fig011_areo.pgf}
+\end{center}
+
+\subsubsection{Calcolo della media, mediana e moda}
+
+Calcoliamo la media aritmetica:
+\begin{equation*}
+\begin{split}
+\media &= \frac{1}{20} \cdot (165+182+159+173+160+175+185+190+175+180+159+185+\\
+ &+176+170+175+160+175+182+159+185)=\np{173,5}.
+\end{split}
+\end{equation*}
+
+Per determinare la mediana si devono ordinare in modo crescente i dati:
+159, 159, 159, 160, 160, 165, 170, 173, 175, 175, 175, 175, 176, 180, 182, 182, 185, 185, 185, 190.
+Essendo i dati in numero pari si calcola la media dei due dati centrali:
+$\mediana = (175+175)/2=175.$
+Se i dati sono molti è possibile individuare qual è o quali sono i dati centrali utilizzando la tabella delle
+frequenze opportunamente costruita, cioè con i dati scritti in ordine crescente.
+
+La moda è la modalità del carattere altezza che è più ricorrente, cioè quello con la frequenza più alta:
+$\moda = 175$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:A.33}, \ref{ese:A.34}, \ref{ese:A.35}, \ref{ese:A.36}, \ref{ese:A.37}, \ref{ese:A.38}}
+\newpage
+\input{./chap/A_esercizi.tex}
+\cleardoublepage
+

@@ -1,0 +1,550 @@
+% (c) 2012 - 2014 Dimitrios Vrettos - d.vrettos@gmail.com
+% (c) 2014 Claudio Carboncini - claudio.carboncini@gmail.com
+\chapter{Identità, equazioni, equivalenza}
+\section{Identità ed equazioni}
+
+Analizziamo le seguenti proposizioni:
+
+\begin{enumeratea}
+\item ``cinque è uguale alla differenza tra sette e due'';
+\item ``la somma di quattro e due è uguale a otto'';
+\item ``il doppio di un numero naturale è uguale alla differenza tra nove e il numero stesso'';
+\item ``la somma di due numeri interi è uguale a dieci''.
+\end{enumeratea}
+
+Notiamo che sono tutte costruite con il predicato
+``essere uguale a''. Riscriviamo in formula ciascuna di esse:
+\begin{multicols}{4}
+ \begin{enumeratea}
+\item $5=7-2$;
+\item $4+2=8$;
+\item $2x=9-x$;
+\item $x+y=10$.
+\end{enumeratea}
+\end{multicols}
+Notiamo che le prime due contengono solamente numeri, le seconde
+contengono anche variabili (lettere).
+
+Le formule del primo tipo si dicono \emph{chiuse} e
+di esse si può subito stabilire se sono vere o false; così in~$\insN$ la
+formula~$5 = 7 - 2$ è vera, mentre~$4 + 2 = 8$ è falsa.
+
+\begin{definizione}
+ Le \emph{formule chiuse} costruite con il predicato
+<<essere uguale>> si chiamano \emph{uguaglianze};
+definito l'ambiente in cui vengono enunciate si può
+immediatamente stabilire il loro valore di verità.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ La formula chiusa~$1 - 6 = -5$ è un'uguaglianza
+vera se la consideriamo nell'insieme~$\insZ$ degli interi
+relativi, è falsa se la vediamo come sottrazione tra numeri naturali.
+ \end{esempio}
+\end{exrig}
+
+Le formule c) e d) che contengono variabili si dicono \emph{aperte}; le variabili che compaiono sono chiamate
+\emph{incognite}. Di tali formule non si può subito stabilire il valore di verità.
+
+Quando alle incognite sostituiamo un numero, queste si trasformano in
+formule chiuse e allora possiamo stabilirne il valore di verità
+relativamente alla sostituzione effettuata.
+
+\begin{exrig}
+ \begin{esempio}
+ Nella formula~$2x = 9 - x$ sostituiamo alla variabile~$x$ il valore $0$; quindi otteniamo:~$2\cdot 0=9-0 \Rightarrow~0=9$, falsa.
+
+ Sostituiamo ora alla
+variabile~$x$ il valore $3$; otteniamo~$2\cdot 3=9-3 \Rightarrow~6=6$, vera.
+ \end{esempio}
+
+ \begin{esempio}
+ Nella formula~$x + y = 10$ sostituiamo
+alle variabili coppie di numeri interi come~$x = 2$ e~$y = 5$; otteniamo~$2+5=10\Rightarrow~7= 10$, falsa. Se
+sostituiamo~$x = 4$ e~$y = 6$ ci rendiamo subito conto che
+l'uguaglianza ottenuta è vera. Esistono
+molte altre coppie di numeri interi che rendono vera
+l'uguaglianza.
+ \end{esempio}
+\end{exrig}
+
+\begin{definizione}
+ Le formule aperte costruite con il predicato essere uguale si chiamano
+\emph{equazioni}; le due espressioni che compaiono a sinistra e a
+destra del segno di uguaglianza si chiamano rispettivamente
+\emph{primo membro} e \emph{secondo membro}.
+
+L'insieme dei valori che sostituiti alle incognite trasformano l'equazione in
+un'uguaglianza vera costituisce
+l'\emph{insieme soluzione} ($\IS$) o più semplicemente la \emph{soluzione} dell'equazione.
+\end{definizione}
+
+Affronteremo per ora equazioni in
+\emph{una sola incognita} che, dopo aver svolto eventuali calcoli nei due membri, comparirà a
+\emph{grado} 1 e i cui \emph{coefficienti} sono \emph{numeri razionali}.
+Cercheremo la sua soluzione
+nell'insieme~$\insQ$ dei numeri razionali, salvo esplicita indicazione differente.
+\begin{exrig}
+ \begin{esempio}
+Cercare le soluzioni nell'insieme indicato.
+ \begin{enumeratea}
+ \item $x^{2}=1 \text{ con }x\in\insN.$
+Risulta vera solo se a~$x$ sostituiamo il valore~1; infatti~1 è
+l'unico numero naturale il cui quadrato è~1.
+L'insieme soluzione è~$\{1\}$.
+ \item $x^{2}=1 \text{ con }x\in\insZ$.
+Risulta vera se a
+$x$ sostituiamo il valore~1 oppure il valore~$-1$; infatti sia~$-1$ che~1
+elevati al quadrato danno~1. L'insieme soluzione è
+$\{-1\text{,~}1\}$.
+ \item $x^{2}+1=0\text{ con }x\in\insR$.
+Essendo la formula a sinistra
+dell'uguale la somma di un quadrato con il numero~1, si ottiene sempre
+un numero~$\geq1$ e non si può ottenere $0$, pertanto è impossibile trovare una soluzione, ovvero l'insieme soluzione è $\emptyset$.
+ \item $2x+3=(3+x)+x \text{ con } x\in\insQ$.
+Eseguendo il semplice calcolo al secondo
+membro, ci rendiamo conto che qualunque valore venga sostituito
+all'incognita l'uguaglianza risulta
+vera. L'insieme soluzione è~$\insQ$.
+\end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+In generale un'equazione in una incognita può essere:
+
+\begin{enumeratea}
+\item \emph{determinata}, quando l'insieme soluzione è un sottoinsieme proprio
+dell'insieme numerico considerato;
+\item \emph{impossibile}, quando l'insieme soluzione è l'insieme vuoto~$\emptyset$;
+\item \emph{indeterminata} o \emph{identità}, quando l'insieme soluzione coincide con
+l'insieme considerato.
+\end{enumeratea}
+
+\begin{exrig}
+ \begin{esempio}
+ Analizziamo le equazioni:
+\begin{multicols}{3}
+ \begin{enumeratea}
+ \item $3\cdot x=0$;
+ \item $0\cdot x=5$;
+ \item $0\cdot x=0$.
+\end{enumeratea}
+\end{multicols}
+
+Tutte e tre hanno la stessa struttura: il primo membro è il prodotto
+di un coefficiente numerico per un valore incognito, il secondo membro
+è un numero.
+
+\paragraph{a)} Per trovare l'insieme soluzione della prima equazione cerchiamo in~$\insQ$ il
+numero che moltiplicato per~3 dà come prodotto~0. L'unico numero che rende vera
+l'uguaglianza è zero. Quindi l'insieme delle soluzioni è~$\{0\}$. L'equazione è
+determinata.
+
+\paragraph{b)} Per trovare l'insieme soluzione della seconda equazione cerchiamo in~$\insQ$ il
+numero che moltiplicato per~0 dà come prodotto~5. Per la proprietà
+della moltiplicazione quando moltiplichiamo per~0 il prodotto è~0,
+non otterremo mai~5. Quindi l'insieme soluzione è
+l'insieme vuoto $\emptyset$. L'equazione è
+impossibile.
+
+\paragraph{c)} Per trovare l'insieme soluzione della terza equazione cerchiamo in~$\insQ$ il
+numero che moltiplicato per zero dà come prodotto zero. Per la
+proprietà della moltiplicazione quando moltiplichiamo per~0 il
+prodotto è~0 qualunque sia l'altro fattore. Quindi
+l'insieme delle soluzioni è~$\insQ$. L'equazione è
+indeterminata.
+ \end{esempio}
+\end{exrig}
+
+\subsection{Ricerca dell'insieme soluzione}
+In alcuni casi la soluzione di un'equazione si può
+trovare applicando semplicemente le proprietà delle operazioni.
+
+\begin{exrig}
+ \begin{esempio}
+Analizziamo lo schema operativo dell'equazione~$3x-1=17 \text{ con } x\in\insN$.
+
+Si opera sul valore incognito~$x$ per ottenere~17:
+
+\[\text{\emph{entra} } x,\text{ si moltiplica per tre}\to~3\cdot x%
+\text{ si sottrae } 1\to~3\cdot x-1 \text{ si ottiene } 17.\]
+
+Qual è il valore in ingresso?
+
+Per determinare il valore in ingresso basterà ripercorrere lo schema
+ effettuando le operazioni inverse:
+\[\text{\emph{da} } 17 \text{ aggiungi } 1\to~18 \text{ dividi per tre }\to~18:3 \to x.\]
+
+La soluzione dell'equazione è~$x = 6$ e~$\IS$ (insieme
+soluzione) è~$\{6\}$.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi \ref{ese:13.1}}\vspace{1.10ex}
+
+Per risolvere un'equazione più complessa come
+$\left(\dfrac{1}{2}x+3\right)\cdot (-5+x)=12x+\dfrac{1}{2}x^{2}$ con
+$x\in~\insQ$, non possiamo applicare il procedimento precedente; potremmo
+procedere per tentativi, sostituendo all'incognita
+alcuni valori scelti a caso e verificando se il valore assunto dal
+primo membro risulta uguale a quello assunto dal secondo membro. È
+evidente però che questo procedimento raramente porterà a trovare
+tutte le soluzioni di un'equazione.
+
+\osservazione
+Per risolvere un'equazione, cioè per determinare tutte
+le eventuali soluzioni, si procede applicando i principi
+d'equivalenza.
+
+\section{Prinicipi di equivalenza}
+
+\begin{definizione}
+ Due equazioni sono \emph{equivalenti} se hanno lo stesso insieme soluzione.
+\end{definizione}
+
+\begin{principio}[Primo principio di equivalenza]
+ Aggiungendo o sottraendo ad ambo i membri di
+un'equazione data uno stesso numero o una stessa
+espressione (definita per ogni valore dell'incognita)
+si ottiene un'equazione equivalente a quella data.
+\end{principio}
+
+\begin{principio}[Secondo principio di equivalenza]
+ Moltiplicando o dividendo ambo i membri di
+un'equazione per uno stesso numero non nullo o per
+un'espressione non nulla (definita per ogni valore
+attribuito all'incognita) si ottiene
+un'equazione equivalente alla data.
+\end{principio}
+
+
+La forma più semplice (forma canonica) di un'equazione di primo grado in
+un'incognita è del tipo:
+\[x = \text{ numero}.\]
+
+L'insieme soluzione di una
+equazione di questo tipo è semplicemente:
+\[\IS=\{\text{numero}\}.\]
+
+Per esempio, l'insieme delle soluzioni dell'equazione
+$x = -3$ è~$\IS =\{-3\}$.
+
+I principi sopra enunciati permettono di trasformare qualunque equazione
+nella forma canonica che ha lo stesso insieme soluzione di quella
+assegnata.
+
+\subsection{Risoluzione di equazioni numeriche intere di primo grado}
+In questo paragrafo vedremo come usare i principi
+d'equivalenza prima enunciati per condurre
+un'equazione alla forma canonica e dunque determinarne
+la soluzione.
+
+\begin{definizione}
+\emph{Risolvere un'equazione} significa
+determinare il suo Insieme Soluzione.
+\end{definizione}
+
+Cominciamo con alcuni esempi.
+
+\begin{exrig}
+ \begin{esempio}
+Applicazione del~1{\textdegree} principio di equivalenza.
+
+\begin{enumeratea}
+\item $x-5=3$:
+aggiungiamo~5 a entrambi i membri:~$x-5+5=3+5\:\Rightarrow\: x=8$, $\IS =\{8\}.$
+\item $3x=2+2x$: sottraiamo~$2x$ a entrambi i membri:~$3x-2x=2+2x-2x\:\Rightarrow\: x=2$,
+$\IS =\{2\}$.
+\end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:13.2}, \ref{ese:13.3}, \ref{ese:13.4}, \ref{ese:13.5}}
+\begin{exrig}
+ \begin{esempio}
+ Applicazione del~2{\textdegree} principio di equivalenza.
+
+ \begin{enumeratea}
+\item $3x=12$ dividiamo entrambi i membri per~3, si ha
+\[\dfrac{3}{3}x=\dfrac{12}{3}\quad\Rightarrow\quad x=4\quad\to\quad\IS =\{4\}.\]
+\item $\dfrac{1}{2}x=2$ moltiplichiamo entrambi i membri per~2, si ha
+\[2\cdot {\dfrac{1}{2}}x=2\cdot 2\quad\Rightarrow\quad x=4\quad\to\quad\IS =\{4\}.\]
+\end{enumeratea}
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:13.6}, \ref{ese:13.7}, \ref{ese:13.8}}
+
+%\newpage
+ \begin{exrig}
+ \begin{esempio}
+ $-2x+1=3x-5$.
+
+\begin{enumeratea}
+ \item Sottraiamo~1 a entrambi i membri~$-2x+1-1=3x-5-1$ quindi~$-2x=3x-6$;
+\item sottraiamo~$3x$ a entrambi i membri~$-2x-3x=3x-3x-6$ quindi~$-5x=-6$;
+\item dividiamo entrambi i membri per~$-5$:~$\dfrac{-5}{-5}x=\dfrac{-6}{-5}\quad\Rightarrow\quad x=\dfrac{6}{5}\quad\rightarrow\quad
+\IS =\left\{\dfrac{6}{5}\right\}.$
+\end{enumeratea}
+ \end{esempio}
+ \end{exrig}
+
+\ovalbox{\risolvii \ref{ese:13.9}, \ref{ese:13.10}, \ref{ese:13.11}}
+\begin{exrig}
+ \begin{esempio}
+Prendiamo l'equazione~$(x+1)+3\cdot (2+x)=12x-1$ nella
+sola incognita~$x$ di primo grado a coefficienti numerici interi.
+Cerchiamo di trasformarla nella forma canonica ``$x =$
+numero'' applicando i principi di equivalenza.
+ \end{esempio}
+\end{exrig}
+
+\paragraph{Passo I:} svolgiamo i calcoli al primo e al secondo
+membro:~$x+1+6+3x=12x-1$.
+
+\paragraph{Passo II:} sommiamo in ciascun membro i termini
+simili (se ce ne sono):~$4x+7=12x-1$.
+
+\paragraph{Passo III:} sottraiamo ad ambo i membri il monomio
+$12x$, applicando il primo principio:~$4x-12x+7=12x-1-12x$, sommiamo i
+monomi simili al primo e al secondo membro e otteniamo~$-8x+7=-1$.
+
+\paragraph{Passo IV:} sottraiamo ad ambo i membri il numero~7,
+applicando il primo principio e sommiamo i termini simili:
+$-8x+7-7=-1-7\quad\Rightarrow\quad -8x=-8$.
+
+\paragraph{Passo V:} dividiamo ambo i membri per~$-8$,
+applicando il secondo principio:
+$\dfrac{-8}{-8}x=\dfrac{-8}{-8}\quad\Rightarrow\quad x=1$.
+
+L'equazione assegnata~$(x+1)+3\cdot (2+x)=12x-1$
+risulta equivalente all'ultima trovata $x=1$, pertanto il
+suo insieme soluzione è~$\IS = \{1\}$.
+
+\vspace{1.10ex}\ovalbox{\risolvii \ref{ese:13.12}, \ref{ese:13.13}}
+
+\osservazione
+La trasformazione di un'equazione nella forma canonica
+prevede che il termine con l'incognita sia collocato da
+una parte del segno uguale mentre dall'altra parte sia
+posto il termine numerico.
+
+Enunciamo alcune \emph{regole pratiche} che ci possono aiutare nella
+procedura risolutiva e che discendono direttamente dal primo principio
+d'equivalenza.
+
+\paragraph{a)} Spostando da un membro all'altro un addendo occorre
+cambiargli il segno; l'equazione ottenuta è
+equivalente a quella data.
+
+$2x-3=2$, per lasciare da sola la~$x$ al primo membro devo aggiungere~$+3$ al primo e
+al secondo membro, ottengo~$2x-3+3=2+3$ da cui~$2x=2+3$.
+
+L'effetto che si ha è che si è spostato il~$-3$ al
+secondo membro cambiandolo di segno ($+3$).
+
+\paragraph{b)} Se in entrambi i membri dell'equazione compare uno
+stesso addendo con lo stesso segno, esso può essere cancellato da
+entrambi i membri: l'equazione che si ottiene è
+equivalente a quella data.
+
+Infatti:
+$2x-3+x=2+x$. La~$x$ che sta al secondo membro va portata al primo, cambiandola di segno
+$2x-3+x-x=2$ da cui~$2x-3=2$.
+
+L'effetto che si ha è che si possono eliminare le due
+$x$ che stanno una al primo membro e una al secondo membro.
+
+
+\paragraph{c)} Se il coefficiente dell'incognita è~$-1$, %ossia
+l'equazione si presenta nella forma~$-x=n$, si
+può cambiare di segno ai termini del primo e del secondo membro, per
+ottenere la forma~$x=-n$ che è equivalente a quella data.
+
+Cambiare di segno equivale a moltiplicare per
+$-1$ i due membri dell'equazione.
+
+Infatti:
+
+$x-3=2x+1$. Dobbiamo portare~$2x$ al primo membro e~$-3$ al secondo membro, otteniamo
+$x-2x=3+1$ da cui~$-x=4$.
+
+Poiché il coefficiente della $x$ è negativo moltiplichiamo per~$-1$
+primo e secondo membro
+$-1\cdot (-x)=-1\cdot (4)$ da cui~$x=-4$.
+
+\begin{problema}
+ Risolvi la seguente equazione applicando queste regole pratiche.
+ \[5x+2\cdot (3-x)+1=-(4x-1)+2\cdot (6-x).\]
+\end{problema}
+
+\begin{soluzione}
+I passi da effettuare sono
+\begin{enumeratea}
+ \item svolgiamo i calcoli:~$5x+6-2x+1=-4x+1+12-2x$;
+ \item eliminiamo i termini uguali che compaiono nei due membri:
+ \[5x+6 \cancel{-2x}\cancel{+1}=-4x \cancel{+1}+12\cancel{-2x}\quad\Rightarrow\quad 5x+6=-4x+12;\]
+ \item spostiamo il monomio~$-4x$ del secondo membro a sinistra del segno uguale e il numero~$+6$
+da sinista a destra, ottenendo:~$5x+4x=-6+12$;
+\item sommando i termini simili nei due membri, otteniamo~$9x=+6$ da cui, divedendo per 9
+ ambo i membri, si ottiene
+ \[x=\dfrac{2}{3}\quad\to\quad \IS =\left\{\dfrac{2}{3}\right\}.\]
+ \end{enumeratea}
+
+\end{soluzione}
+\ovalbox{\risolvii \ref{ese:13.14}, \ref{ese:13.15}, \ref{ese:13.16}, \ref{ese:13.17}, \ref{ese:13.18}}
+
+\section{Equazioni a coefficienti frazionari}
+Vediamo, illustrando qualche esempio, come si procede.
+
+\begin{exrig}
+ \begin{esempio}
+$\dfrac{2}{3}x+4-\dfrac{1}{2}+2x=\dfrac{x+2}{3}-\dfrac{5}{2}x+1$.
+
+Sappiamo che il secondo principio d'equivalenza ci
+permette di moltiplicare ambo i membri per uno stesso numero diverso da
+zero per ottenere un'equazione equivalente alla data.
+
+\paragraph{Passo I} Calcoliamo il~$\mcm$ tra i denominatori: in questo
+caso~$\mcm(2\text{,~}3) = 6$
+
+\paragraph{Passo II} Moltiplichiamo per~6 ambo i membri
+dell'equazione:
+\[6\left(\dfrac{2}{3}x+4-\dfrac{1}{2}+2x\right)=6\left(\dfrac{x+2}{3}-\dfrac{5}{2}x+1\right).\]
+
+\paragraph{Passo III} Eseguiamo i calcoli:~$4x+24-3+12x=2x+4-15x+6$.
+
+I coefficienti dell'equazione sono ora numeri interi,
+puoi procedere da solo come abbiamo visto negli esempi precedenti. Il risultato è $x=-\dfrac{11}{25}$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi \ref{ese:13.19}}
+
+\subsection{Equazioni in cui l'incognita compare con grado maggiore di~1}
+
+\begin{exrig}\vspace{1.10ex}
+ \begin{esempio}
+
+$(2x+1)\cdot (x-2)=2\cdot (x+1)^{2}-5x$.
+
+Prima di iniziare la procedura risolutiva analizziamo i membri
+dell'equazione: al primo membro compare il prodotto
+di due polinomi di primo grado, nel secondo il quadrato di un binomio
+di primo grado, pertanto l'incognita comparirà a grado due. Apparentemente
+l'equazione è di secondo grado. Iniziamo la procedura
+risolutiva:
+
+\paragraph{Passo I} svolgiamo i calcoli e otteniamo:
+$2x^{2}-4x+x-2=2x^{2}+4x+2-5x\Rightarrow~2x^{2}-3x-2=2x^{2}-x+2.$
+
+\paragraph{Passo II} applichiamo le regole pratiche eliminando i monomi
+uguali con l'incognita al secondo grado e otteniamo
+$-3x+x=+2+2$.
+
+Abbiamo ottenuto un'equazione di primo grado; puoi
+procedere da solo e determinare la forma canonica e l'$\IS$.
+
+\paragraph{Passo III} \dotfill
+
+ \end{esempio}
+
+\end{exrig}
+
+
+\subsection{Equazioni in cui l'incognita scompare}
+
+\begin{exrig}\vspace{1.10ex}
+ \begin{esempio}
+ $\dfrac{4}{5}-\dfrac{x}{2}=\dfrac{2-5x}{10}$.
+
+\paragraph{Passo I} Calcoliamo il~$\mcm$ tra i denominatori: in questo
+caso~$\mcm(5\text{,~}2\text{,~}10) = 10$.
+
+\paragraph{Passo II} Moltiplichiamo per~10 ambo i membri
+dell'equazione:
+$10\left(\dfrac{4}{5}-\dfrac{x}{2}\right)=10\left(\dfrac{2-5x}{10}\right)$.
+
+\paragraph{Passo III} Eseguiamo i calcoli:~$8-5x=2-5x$.
+
+\paragraph{Passo IV} Applichiamo la regola pratica:
+$-5x+5x=2-8$ i monomi in~$x$ si annullano!
+
+\paragraph{Passo V} Sommando i monomi simili si ottiene:~$0\cdot x=-6$.
+
+Il coefficiente dell'incognita è zero; non possiamo
+applicare il secondo principio e dividere ambo i membri per zero.
+D'altra parte non esiste nessun numero che moltiplicato
+per zero dia come prodotto~$-6$. Quindi~$\IS =\emptyset $,
+l'equazione risulta impossibile.
+ \end{esempio}
+
+ \begin{esempio}
+$\dfrac{x}{6}-\dfrac{2x}{3}=-{\dfrac{x}{2}}$.
+
+\paragraph{Passo I} Calcoliamo il~$\mcm$ tra i denominatori: in questo
+caso~$\mcm(6\text{,~}3\text{,~}2) = 6$.
+
+\paragraph{Passo II} Moltiplichiamo per~6 ambo i membri
+dell'equazione:
+$6\left(\dfrac{x}{6}-\dfrac{2x}{3}\right)=6\left(-{\dfrac{x}{2}}\right)$.
+
+\paragraph{Passo III} Eseguiamo i calcoli:~$x-4x=-3x$.
+
+\paragraph{Passo IV} Applicando il primo principio si ottiene~$0\cdot x=0$.
+
+Il coefficiente dell'incognita è zero; non possiamo
+applicare il secondo principio e dividere ambo i membri per zero.
+D'altra parte per la proprietà della moltiplicazione
+qualunque numero moltiplicato per zero dà come prodotto zero. Quindi
+$\IS = \insQ$, l'equazione è indeterminata (identità).
+ \end{esempio}
+
+\end{exrig}
+
+\subsection{Riassunto}
+$A\cdot x=B$ con~$A$ e~$B$ numeri
+razionali è la forma canonica dell'equazione di primo grado in una
+incognita a coefficienti numerici.% è $A\cdot x=B$ con~$A$ e~$B$ numeri
+%razionali.
+
+Possono presentarsi i seguenti casi:
+ \begin{itemize*}
+ \item se~$A\neq~0$ possiamo applicare il secondo principio
+d'equivalenza dividendo ambo i membri per~$A$ quindi
+$\IS =\left\{\dfrac{B}{A}\right\}$. L'equazione
+è determinata.
+
+ \item se~$A=0$ non possiamo applicare il secondo principio
+d'equivalenza e dividere ambo i membri per~$A$ e si
+presentano due casi:
+
+\begin{itemize*}
+ \item $B=0$ allora~$\IS =\insQ$. L'equazione
+è indeterminata.
+
+\item $B\neq~0$ allora~$\IS =\emptyset $.
+L'equazione è impossibile.
+\end{itemize*}
+
+
+ \end{itemize*}
+
+Lo schema precedente si può rappresentare anche con un grafo ad
+albero:
+\begin{center}
+ \input{./lbr/chap13/fig001_alb.pgf}
+\end{center}
+
+
+\ovalbox{\risolvii \ref{ese:13.20}, \ref{ese:13.21}, \ref{ese:13.22}, \ref{ese:13.23}, \ref{ese:13.24}, \ref{ese:13.25}, \ref{ese:13.26}, \ref{ese:13.27}, \ref{ese:13.28}, \ref{ese:13.29},
+\ref{ese:13.30}}
+
+\ovalbox{\ref{ese:13.31}, \ref{ese:13.32}, \ref{ese:13.33}, \ref{ese:13.34}, \ref{ese:13.35}, \ref{ese:13.36}, \ref{ese:13.37}, \ref{ese:13.38}, \ref{ese:13.39},
+\ref{ese:13.40}, \ref{ese:13.41}, \ref{ese:13.42}, \ref{ese:13.43}, \ref{ese:13.44}}
+
+\ovalbox{\ref{ese:13.45}, \ref{ese:13.46}, \ref{ese:13.47}, \ref{ese:13.48}, \ref{ese:13.49},\ref{ese:13.50}}
+\newpage
+\input{./chap/13_esercizi}
+\cleardoublepage

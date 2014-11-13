@@ -1,0 +1,23 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Esercizio 2.3
+\begin{tikzpicture}
+
+\begin{scope}[thick,font=\scriptsize]
+  \draw[->] (-220pt,0)  - -  (160pt,0) node[above]{$\insZ$};	
+    \foreach \n in {-7,-6,...,-1}{%
+      \draw (\n,-3pt) -- (\n,3pt)   node [below=5pt] {};		
+    }
+
+    \foreach \m in {2,3,...,5}{%
+      \draw (\m,-3pt) -- (\m,3pt) node [below=5pt]{};
+    }
+
+    \foreach \x in {1}{%
+      \draw (\x,-3pt) -- (\x,3pt) node [below=5pt]{+$\x$};
+    }
+    
+    \foreach \y in {0}{%
+      \draw (\y,-3pt) -- (\y,3pt) node [below=5pt]{$\y$};
+    }
+\end{scope}
+\end{tikzpicture}

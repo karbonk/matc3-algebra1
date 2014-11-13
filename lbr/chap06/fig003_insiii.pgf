@@ -1,0 +1,12 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=1.5cm,font=\small]
+    \draw (0,0)circle (1.5) (0,1) node[ left=1.5] {$C$};
+    \begin{scope}[fill=CornflowerBlue, draw=black]
+\foreach \x/\xtext in {-.6/5,0/10,.6/15}
+\filldraw (\x,.7) circle (2pt) node[above right] {\xtext};
+\foreach \y/\ytext in {-.6/20,0/25,.6/30}
+\filldraw (\y,0) circle (2pt) node[above right] {\ytext};
+\foreach \z/\ztext in {-.6/30,0/35,.6/{}}
+\filldraw(\z,-.7) circle (2pt) node [above right]  {\ztext};
+\end{scope}
+\end{tikzpicture}

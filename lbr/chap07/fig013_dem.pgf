@@ -1,0 +1,62 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm,y=5mm,font=\small, outline/.style={draw=circle edge}]
+\definecolor{circle area}{gray}{0.9}
+\definecolor{circle edge}{rgb}{0,0,0}
+
+\def\firstcircle{(1.7,2) circle (1.5)}
+\def\secondcircle{(3.3,2) circle (1.5)}
+
+\begin{scope}[rounded corners]
+\foreach \i in {0,6,12,18}
+\draw[fill=circle area] (\i,0) rectangle (\i+5,4);
+\end{scope}
+
+\begin{scope}]
+\begin{scope}
+\clip \firstcircle;
+\fill[white] \secondcircle;
+\end{scope}
+\draw[outline] \firstcircle;
+\draw[outline] \secondcircle;
+\end{scope}
+
+\begin{scope}[xshift=30mm]
+\begin{scope}
+\clip \firstcircle;
+\fill[white] \firstcircle;
+\end{scope}
+ \draw[outline]  \firstcircle;
+\draw[outline] \secondcircle;
+\end{scope}
+
+\begin{scope}[xshift=60mm]
+\begin{scope}
+\clip \secondcircle;
+\fill[white] \secondcircle;
+\end{scope}
+ \draw[outline]  \firstcircle;
+\draw[outline] \secondcircle;
+\end{scope}
+
+\begin{scope}[xshift=90mm]
+\begin{scope}
+\clip \firstcircle;
+\fill[white] \secondcircle;
+\end{scope}
+\draw[outline] \firstcircle;
+ \draw[outline] \secondcircle;
+\end{scope}
+
+\foreach \x/\xtext in {5.5/$=$,11.5/$\cup$,17.5/$=$}
+	\node  at (\x,2) {\xtext};
+
+\foreach \y in {1,7,13,19}
+\node  at (\y,2) {$A$};
+
+\foreach \z in {4,10,16,22}
+\node  at (\z,2) {$B$};
+
+\foreach \j/\jtext in {2.5/\overline{A\cap B},8.5/\overline{A},14.5/\overline{B},20.5/\overline{A}\cup\overline{B}
+}
+\node  at (\j,-.5) {$\jtext$};
+\end{tikzpicture}

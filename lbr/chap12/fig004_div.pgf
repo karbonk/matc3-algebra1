@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small]
+\pgfsetmatrixrowsep{2mm}
+
+\matrix  (a) [matrix of  nodes, anchor=south, minimum width=9mm, text depth=1mm]{
+$3x^4$&$-4x^3$&$+0x^2$&$+5x$&$-1$ &$3x^2$&$+0x$&$-1$\\
+$-3x^4$&$-0x^3$&$+x^2$&&&$x^2$\\};
+
+ \draw(a-1-6.north west)--(a-2-6.south west);
+\draw(a-1-6.south west)--(a-1-8.south east);
+
+\begin{scope}[->,red, dashed]
+ \draw (a-1-7.south) -- (a-2-6.east);
+  \draw (a-2-6.west) -- (a-2-3.east);
+ \end{scope}
+
+\end{tikzpicture}

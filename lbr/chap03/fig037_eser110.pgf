@@ -1,0 +1,35 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \begin{scope}[domain=0:3,x=10mm,y=10mm]
+    \draw[->] (0,0) -- coordinate (x axis mid) (4,0) node [below] () {$x$}; %asse x
+    \draw[->] (0,0) -- coordinate (y axis mid) (0,5) node [left] () {$y$}; % asse y
+    \foreach \x in {0,1,...,3}
+      \draw (\x,3pt) -- (\x,-3pt) node[anchor=north] {\x};
+    \foreach \y in {1.5,3,4.5}
+      \draw (3pt,\y) -- (-3pt,\y) node[anchor=east] {$\np{\y}$}; 
+    \draw (3pt,0) -- (-3pt,0); 
+    \draw[color=blue] plot  (\x,{1.5*\x});
+    \begin{scope}[dotted]
+    \foreach \x in {1,2,3}{
+      \draw (\x,0) -- (\x,1.5*\x);
+      \draw (0,1.5*\x) -- (\x,1.5*\x);
+    }
+    \end{scope}
+  \end{scope}
+  \begin{scope}[xshift=55mm,x=5mm,y=5mm,domain=1.9:9.2]
+    \draw[->] (0,0) -- coordinate (x axis mid) (10,0) node [below] () {$x$};
+    \draw[->] (0,0) -- coordinate (y axis mid) (0,10) node [left] () {$y$};
+    \foreach \x in {0,2,3,6,9}
+      \draw (\x,3pt) -- (\x,-3pt) node[anchor=north] {\x};
+    \foreach \y in {2,3,6,9}
+      \draw (3pt,\y) -- (-3pt,\y) node[anchor=east] {\y};
+    \draw (3pt,0) -- (-3pt,0);
+    \draw [color=blue] plot  (\x,{18/\x});
+    \begin{scope}[dotted]
+      \foreach \x in {2,3,6,9}{
+	\draw (\x,0) -- (\x,18/\x);
+	\draw (0,18/\x) -- (\x,18/\x);
+      }
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Parti uguali dell'intero
+\begin{tikzpicture}
+  \draw[step=3cm, black] (0,0) grid (9cm,1cm);
+  \fill[gray, opacity=.4] (0,0cm) rectangle (6cm,1cm);
+  \draw[black,thick] (0,0) rectangle (9cm,1cm);
+
+  \draw[step=1.5cm, black] (0,-.5cm) grid (9cm,-1.5cm);
+  \fill[gray, opacity=.4] (0,-.5cm) rectangle (6cm,-1.5cm);
+  \draw[black,thick] (0,-.5cm) rectangle (9cm,-1.5cm);
+
+  \draw[step=1cm, black] (0,-3cm) grid (9cm,-2cm);
+  \fill[gray, opacity=.4] (0,-3cm) rectangle (6cm,-2cm);
+  \draw[black,thick] (0,-3cm) rectangle (9cm,-2cm);
+  
+  \node (a) at (-.5cm,.5cm) {$\frac{2}{3}$};
+  \node (b) at (-.5cm,-1cm) {$\frac{4}{6}$};
+  \node (c) at (-.5cm,-2.5cm) {$\frac{6}{9}$};
+\end{tikzpicture}

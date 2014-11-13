@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Esercizio 3.3
+\begin{tikzpicture}
+  \begin{scope}[step=5mm, black]
+    \draw (0,0) grid (20mm,10mm);
+    \draw (20mm,5mm) grid (25mm,10mm);
+    \draw (25mm,0) grid (30mm,10mm);
+  \end{scope}
+  \begin{scope}[gray, opacity=.4]
+    \fill (0,0) rectangle (10mm,5mm);
+    \fill (15mm,0) rectangle (20mm,5mm);
+    \fill (25mm,0) rectangle (30mm,5mm);
+    \fill (5mm,5mm) rectangle (15mm,10mm);
+    \fill (20mm,5mm) rectangle (25mm,10mm);   
+  \end{scope}
+  \draw (25mm,0)--(25mm,5mm);
+\end{tikzpicture}

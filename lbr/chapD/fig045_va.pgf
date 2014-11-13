@@ -1,0 +1,27 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=8mm, y=8mm]
+  \tkzInit[xmin=-3,xmax=3,ymin=-2,ymax=3]
+  \clip (-3.5,-2.5) rectangle (4,4);
+  \begin{scope}[font=\small]
+    \tkzAxeY[orig = false, label options={left = 1pt}]
+    \tkzAxeX[orig = true, label options={below = 1pt}]
+  \end{scope}
+  \tkzFct[domain=-3:0,thick,color=purple]{-x}
+  \tkzFct[domain=0:3,thick,dashed,color=purple]{-x}
+  \tkzFct[domain=0:3,thick,color=orange]{x}
+  \tkzFct[domain=-3:0,thick,dashed, color=orange]{x}
+
+\tkzDefPoint(0,0){a1} 
+\tkzDefPoint(-3,3){a2} 
+
+\tkzDefPoint(0,0){b1} 
+\tkzDefPoint(3,3){b2}
+
+\tkzDefMidPoint(a1,a2)\tkzGetPoint{a}
+\tkzDefMidPoint(b1,b2)\tkzGetPoint{b}
+
+
+\tkzLabelPoint[below](a){$a$}
+\tkzLabelPoint(b){$b$}
+
+\end{tikzpicture}

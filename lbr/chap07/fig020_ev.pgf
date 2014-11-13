@@ -1,0 +1,28 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\draw[rounded corners] (0,0) rectangle (8,7) (0,7) node [above left]  {$A$};
+\draw (2.5,4.5) circle (2) (.5,6)node {$T$};
+\draw (5,4.5) circle (2) (7,6)node {$R$};
+\draw (4.5,2.5) circle (2) (6.5,1)node {$S$};
+
+\foreach \x in {2,2.6,3.8,5,6}
+\draw[fill] (\x,5) circle (1pt);
+
+\foreach \xi in {4.5,5.6}
+\draw[fill] (\xi,6) circle (1pt);
+
+\foreach \xii in {3.7,4.9,5.7}
+\draw[fill] (\xii,3.8) circle (1pt);
+
+\foreach \xiii in {2,3}
+\draw[fill] (\xiii,3) circle (1pt);
+
+\foreach \xiv in {4.5,5.5}
+\draw[fill] (\xiv,2) circle (1pt);
+
+\foreach \xv in {1,2,7.5}{
+\draw[fill] (\xv,1) circle (1pt);
+\draw[fill] (\xv,2.3) circle (1pt);
+}
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm,y=5mm,font=\small]
+  \draw (0,0) rectangle (5,2.5);
+  \draw (.5,2.5)node [above left] () {$A$} -- (2.5,0)node [below right] () {$B$};
+\end{tikzpicture}

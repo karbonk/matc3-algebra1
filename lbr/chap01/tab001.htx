@@ -1,0 +1,19 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Numeri egiziani
+\begin{table}[!h]
+  \begin{center}
+    \begin{tabular}{ccccccc}
+      \toprule
+	\begin{hieroglyph} C11\end{hieroglyph} &  %
+	\begin{hieroglyph} I8\end{hieroglyph} &%
+	\begin{hieroglyph} D50\end{hieroglyph} &%
+	\begin{hieroglyph} M12\end{hieroglyph} &%
+	\begin{hieroglyph} V1\end{hieroglyph} &%
+	\begin{hieroglyph} V20\end{hieroglyph}&%
+	\begin{hieroglyph} Z1\end{hieroglyph}\\
+      \midrule
+	1\,000\,000   & 100\,000 & 10\,000 & 1\,000 & 100 & 10 & 1\\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+\end{table}

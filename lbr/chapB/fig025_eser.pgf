@@ -1,0 +1,66 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small, every state/.style={draw=CornflowerBlue, minimum size=0pt}, every loop/.style={draw=Maroon}]
+\draw (0,0) circle (1.5);
+\node at (0,-2) {1};
+\node[state] (1) at (-.6,.7) {$-12$};
+\node[state] (2) at (.5,.5) {$-1$};
+\node[state] (3) at (.5,-.8) {$-15$};
+\node[state] (4) at (-.6,-.7) {$-7$};
+
+\begin{scope}[->, Maroon]
+ \draw (3)--(1);
+ \draw (1)--(2);
+ \draw (3)--(2); 
+ \draw (3)--(4);
+\draw (4)--(2);
+ \draw (1)--(4);
+\end{scope}
+
+ \begin{scope}[xshift=31mm]
+\draw (0,0) circle (1.5);
+\node at (0,-2) {2};
+\node[state] (1) at (-1,0) {$a$};
+\node[state] (2) at (.5,.7) {$b$};
+\node[state] (3) at (.5,-.5) {$c$};
+\node[state] (4) at (-.6,-.7) {$m$};
+
+\begin{scope}[->]
+\path (1) edge[loop above] node{} ()
+	(2) edge[loop above] node{} ()
+(3) edge[loop below] node{} ()
+(4) edge[loop left] node{} ();
+
+\end{scope}
+\begin{scope}[->, Maroon]
+\draw (1)--(3);
+\draw (1)--(2);
+\draw (2)--(3);
+\end{scope}
+ \end{scope}
+
+ \begin{scope}[xshift=62mm]
+\draw (0,0) circle (1.5);
+\node at (0,-2) {3};
+\node[state] (1) at (-1,0) {$M$};
+\node[state] (2) at (0,.8) {$B$};
+\node[state] (3) at (1,0) {$C$};
+\node[state] (4) at (0,-1) {$F$};
+
+
+\begin{scope}[->]
+\path (1) edge[loop above] node{} ()
+	(2) edge[loop above] node{} ()
+(3) edge[loop above] node{} ()
+(4) edge[loop left] node{} ();
+
+\end{scope}
+\begin{scope}[->, Maroon]
+\draw (1)--(2);
+\draw (1)--(3);
+\draw (1)--(4);
+\draw (2)--(4);
+\draw (4)--(3);
+\end{scope}
+ \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small]
+
+\matrix  (a) [matrix of  nodes, anchor=south, minimum width=9mm, ,nodes={text depth=2.5mm}]{
+$7x^4$&$+0x^3$&$-5x^2$&$+x$&$-1$ &$2x^2$&$+0x$&$-1$\\
+{}&{}&$\ldots$&{}&{}&$\displaystyle\frac{7}{2}x$&\ldots\\
+{}&{}&$-\displaystyle\frac{3}{2}x^2$&$+x$&$-1$\\
+{}&{}&{}&\ldots&{}\\
+&&&$x$&$-\displaystyle\frac{7}{4}$\\
+};
+
+\draw(a-1-6.north west)--(a-2-6.south west);
+\draw(a-1-6.south west)--(a-1-8.south east);
+ \draw (a-2-1.south west) -- (a-2-5.south east);
+ \draw (a-4-2.south west) -- (a-4-5.south east);
+\end{tikzpicture}

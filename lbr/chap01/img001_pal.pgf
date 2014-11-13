@@ -1,0 +1,43 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% pallottoliere
+
+\newcommand{\base}{%
+  \filldraw[fill=black!90, draw=gray!80,rounded corners,shading=radial, inner color=white, outer color=gray!90]%
+    (-2.4cm, -0.2cm) rectangle (2.4cm,0.4cm);
+}
+
+\newcommand{\aste}{%
+  \fill[fill=black!90,rounded corners,shading=radial, inner color=white, outer color=gray!90]%
+    (-1.25mm,3mm) rectangle (1.25mm,4.3cm);
+}
+
+\newcommand{\disco}{%
+    \filldraw[fill=gray!20,draw=gray, rounded corners, shade,shading=radial, inner color=white, outer color=blue!50]%
+      (-.6cm, .4cm) rectangle (.6cm,0.8cm);
+}
+\begin{tikzpicture}[scale=.7]
+  \foreach \n/\a in {-15.25mm,0,15.25mm,36.75mm,52mm,67.25mm}{
+    \begin{scope}[xshift=\a]
+      \aste
+    \end{scope}
+  }
+
+  \foreach \n/\x in {1/0cm,2/5.2cm}{%
+    \begin{scope}[xshift=\x]
+	\base
+    \end{scope}
+  }
+  
+  \foreach \n/\y in {0,.4cm,...,3.2cm}{%
+    \begin{scope}[xshift=15.75mm,yshift=\y]
+	\disco
+    \end{scope}
+  }   	
+	
+  \foreach \n/\z in {0}{%
+    \begin{scope}[xshift=52mm,yshift=\z]
+      \disco
+    \end{scope}
+  }
+
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \draw (0,0) rectangle  (10mm,10mm);
+  \draw (40mm,0) rectangle  (50mm,10mm);
+
+  \begin{scope}[font=\Huge]
+    \node at  (5mm,5mm) {$:$};	
+	\node at(15mm,5mm) {$=$};
+	\node at(45mm,5mm) {$\cdot$};
+  \end{scope}
+  \begin{scope}[font=\small]
+    \node (a) at (-15mm,10mm) {$\displaystyle\frac{m}{n}$};
+    \node (b) at (-15mm,0mm) {$\displaystyle\frac{p}{q}$};
+    \node (c) at (65mm,5mm) {$\displaystyle\frac{m\cdot q}{n\cdot p}$};
+    \node (ai) at (25mm,10mm) {$\displaystyle\frac{m}{n}$};
+    \node (bi) at (25mm,0mm) {$\displaystyle\frac{q}{p}$};
+  \end{scope}
+  \node (entrata) at (0,5mm) {};
+  \node (entratai) at (40mm,5mm) {};
+  \node (uscita) at (50mm,5mm) {};
+  \begin{scope}[->,concept connection,blue,thin]
+    \draw (a) -- (entrata);
+    \draw (b) -- (entrata);
+    \draw (ai) -- (entratai);
+    \draw (bi) -- (entratai);
+     \draw (uscita) -- (c);
+  \end{scope}
+\end{tikzpicture}

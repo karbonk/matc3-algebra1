@@ -1,0 +1,19 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=6mm,  y=6mm]
+  \newcounter{num}
+  \setcounter{num}{0}
+  
+  \draw[color=gray, step=6mm] (0,0) grid (8,10);
+  \foreach \y in {9,8,...,0}{
+    \foreach \x in {0,1,...,7}{
+      \stepcounter{num}
+      \ifnum \thenum<28
+	\draw[xshift=3mm,yshift=3mm] (\x , \y ) node {\thenum};
+      \fi
+    }
+  }
+  
+  \foreach \j in {10,9,8,...,0}
+    \foreach \i in {0,1,...,8}
+      \draw[] (\i , \j ) node[fill=white] {};
+\end{tikzpicture}

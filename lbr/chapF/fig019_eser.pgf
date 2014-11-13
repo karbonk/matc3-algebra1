@@ -1,0 +1,28 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[fill=lightgray, draw=black]
+    \foreach \x in {0, 1.5, 3}
+      \filldraw (\x,0) rectangle  (\x+1,1);
+  \end{scope}
+
+  \begin{scope}[every node/.style={fill=white,rectangle, rounded corners, draw=black}]
+    \foreach \x/\xtext in {.5/A,2/B,3.5/C}
+      \node at (\x,.5) {$\xtext$};
+  \end{scope}
+
+  \begin{scope}[thick, ->]
+    \begin{scope}[Maroon]
+      \draw (.6,0) -- (.6,-1);
+      \draw (2,0) -- (2,-1);
+      \draw (4,.5) -- (5,.5);
+    \end{scope}
+
+    \begin{scope}[OliveGreen]
+      \draw (.4,0) -- (.4,-.44);
+      \draw (2,1) -- (2,1.44);
+      \draw (3.5,0) -- (3.5,-.44);
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

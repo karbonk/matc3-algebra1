@@ -1,0 +1,24 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \coordinate (A) at (0,0);
+  \coordinate (B) at ($(A)+(0:4.26)$);
+  \coordinate (C) at ($(B)+(145:3.486)$);
+  \coordinate (D) at ($(A)+(90:2)$);
+
+  \draw (D) node[above left]{$D$}--(A) node[below left]{$A$}--(B) node[below right]{$B$}--(C)node [above right]{$C$} --(D);
+
+  \tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](C,A,D)
+  \tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](A,C,B)
+  \tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](C,B,A)
+
+  \draw[dashed] (C)--(A);
+
+  \begin{scope}[fill=CornflowerBlue, draw=black]
+    \filldraw (0,0) circle (1pt);
+    \filldraw (4.26,0) circle (1pt);
+    \filldraw (1.4,2) circle (1pt);
+    \filldraw (0,2) circle (1pt);
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=10mm, y=10mm]
+
+\draw[->] (0,0) -- (8,0) node [below right] () {$r$};
+
+\draw(4,3pt)--(4,-3pt);
+
+\begin{scope}[dotted]
+\draw (4,0) -- (4,-2);
+\draw (0,-.5) -- (2,-.5);
+\draw (0,-1) -- (4,-1);
+\end{scope}
+
+\node[above]  at (4,0) {$0$};
+\pattern[pattern= north east lines, pattern color=red] (4,-1.5) rectangle (8,-2);
+
+\node[below] () at (6,-2) {$\IS$};
+
+\begin{scope}[blue,thick]
+\draw (0,-.5) -- (8,-.5);
+\draw (4,-1) -- (8,-1);
+
+\draw[fill=white] (4,-1)circle (1.5pt);
+
+\end{scope}
+
+\end{tikzpicture}

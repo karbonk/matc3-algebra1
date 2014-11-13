@@ -1,0 +1,25 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=15mm,y=15mm, font=\small]
+
+\coordinate (A) at (0,0);
+\coordinate (B) at ($(A)+(0:2.5)$);
+\coordinate (C) at ($(A)+(90:2)$);
+\draw (A) node[below left]{$A$} -- (B) node[below right]{$B$}node[midway,below]{$c$} -- (C)node[above left]{$C$}node[midway,above]{$a$} -- (A)node[midway,left]{$b$};
+
+\tkzMarkAngle[ fill=LimeGreen, draw, size=.3](A,C,B)
+\tkzLabelAngle[pos=.5](A,C,B){$\gamma$}
+
+\tkzMarkAngle[ fill=LimeGreen ,draw, size=.3](C,B,A)
+\tkzLabelAngle[pos=.6](A,B,C){$\beta$}
+
+\tkzMarkRightAngle[ fill=LimeGreen,draw, size=.2](C,A,B);
+\tkzLabelAngle[pos=.4](C,A,B){$\alpha$}
+
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (0,0) circle (1pt);
+\filldraw (0,2) circle (1pt);
+\filldraw (2.5,0) circle (1pt);
+\end{scope}
+
+\end{tikzpicture}

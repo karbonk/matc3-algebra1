@@ -1,0 +1,31 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+ \tkzDefPoint(0,0){B_i}
+ \tkzDefShiftPoint[B_i](10:2){A}
+ \tkzDefShiftPoint[A](350:4){C}
+ \tkzDefShiftPoint[A](0:1){A'}
+ \tkzDefShiftPoint[C](0:1){C'}
+ \tkzDefShiftPoint[C](10:4){D}
+ \tkzDefShiftPoint[D](0:1){D'}
+ \tkzDefShiftPoint[D](350:2){B_f}
+
+ \tkzMarkAngle[fill=LimeGreen, draw=black, size=1](B_f,B_i,A)
+ \tkzMarkAngle[fill=LimeGreen, draw=black, size=1](C,A,A')
+ \tkzMarkAngle[fill=LimeGreen, draw=black, size=1](C',C,D)
+ \tkzMarkAngle[fill=LimeGreen, draw=black](B_f,D,D')
+
+ \tkzDrawLine[add=0 and 0, thin](B_i, A)
+ \tkzDrawLine[add=0 and 0, thin](C, A)
+ \tkzDrawLine[add=0 and 0, thin](C,D)
+ \tkzDrawLine[add=0 and 0, thin](B_f,D)
+\tkzDrawLine[add=0 and 0, thin,dotted](B_f,B_i)
+
+ \tkzLabelPoints[below](B_i, B_f)
+
+ \tkzLabelAngle[below](B_f,B_i,A){$10^\circ$} \tkzLabelAngle[above](A',A,C){$10^\circ$}
+\tkzLabelAngle[below](D,C,C'){$10^\circ$}
+\tkzLabelAngle[above](D',D,B_f){$10^\circ$}
+ \tkzDrawPoints[color=CornflowerBlue](B_i,A,C,D,B_f)
+ 
+\end{tikzpicture}

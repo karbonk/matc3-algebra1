@@ -1,0 +1,23 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Sottrazione 
+%
+\begin{tikzpicture}
+% \begin{scope}[font=\scriptsize]
+\matrix [matrix of math nodes,column sep={10mm,between origins}] at (0,0)
+{
+\node{(+2)};& \node[circle, draw=red](-){-}; & \node[draw=blue,circle] (3pos){(+3)} ;%
+& \node{=};& \node{(+2)};& \node[circle, draw=red](+){+};& \node[draw=blue,circle](3neg){(-3)};\\
+};
+
+
+\node (testo1) at (0, -15mm) {Cambio il numero $+3$ con il suo opposto $-3$};
+\node (testo2) at (0,15mm) {Cambio la sottrazione in addizione};
+% \end{scope}
+
+ \draw[->,red ] (testo2) .. controls +(down:5mm) and +(up:10mm) .. (-) ;
+ \draw[->,red ] (testo2) .. controls +(down:5mm) and +(up:10mm) .. (+) ;
+
+ \draw[->,blue ] (testo1) .. controls +(up:10mm) and +(down:10mm) .. (3neg) ;
+ \draw[->,blue ] (testo1) .. controls +(up:10mm) and +(down:10mm) .. (3pos) ;
+
+\end{tikzpicture}

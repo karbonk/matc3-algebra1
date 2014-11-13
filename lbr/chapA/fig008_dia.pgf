@@ -1,0 +1,33 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}
+\begin{axis}[
+legend entries={Maschi, Femmine},
+legend pos=outer north east,
+xbar,
+enlarge y limits=0.15,
+symbolic y coords={Educaz. fisica,Scienze,Matematica, Geografia,Storia,Italiano },
+ytick=data,
+bar width=8pt, 
+xmin=0, 
+width=100mm]
+
+\addplot[fill=CornflowerBlue, draw=black] coordinates {
+(5,Educaz. fisica)
+(6,Scienze)
+(2,Matematica)
+(4,Geografia)
+(4,Storia)
+(5,Italiano)
+};
+
+\addplot[fill=pink, draw=black] coordinates{
+(5,Educaz. fisica)
+(4,Scienze)
+(3,Matematica)
+(2,Geografia)
+(7,Storia)
+(3,Italiano)
+};
+\end{axis}
+\end{tikzpicture}

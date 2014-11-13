@@ -1,0 +1,53 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm, smooth]
+  \begin{scope}[->]
+    \draw (-4,0) -- (6,0) node [below]  {$x$};
+    \draw (0,-6.5) -- (0,8)node [left]  {$y$};;
+  \end{scope}
+
+  \draw[dotted,orange, step=5mm] (-4,-6.5) grid (6.5,8.5);
+
+  \draw[|-|] (-3,4) -- (-2,4) node[below, midway] {unità};
+
+  \node[below left]  at (0,0){$O$};
+  
+  \begin{scope}[every node/.style={purple}, draw=purple, dashed]
+    \draw (0,7) -- (2,7)--(2,0);
+    \draw (0,3) -- (2,3);
+    \begin{scope}[fill=CornflowerBlue, draw=black]
+      \filldraw (2,3)circle (1.5pt) node[right, purple] {$B$};
+      \filldraw (2,7)circle (1.5pt) node[right]{$A$};
+      \filldraw (0,7)circle (1.5pt) node[left]{$y_A$};
+      \filldraw (0,3)circle (1.5pt) node[left]{$y_B$};
+      \filldraw (2,0)circle (1.5pt) node[below]{$H$};
+    \end{scope}
+  \end{scope}
+
+  \begin{scope}[every node/.style={OliveGreen},draw=OliveGreen,dashed]
+    \draw (5,5) -- (5,-3)--(0,-3);
+    \draw (5,5) -- (0,5);
+    \begin{scope}[fill=CornflowerBlue, draw=black]
+      \filldraw (5,5)circle (1.5pt) node[above] {$A$};
+      \filldraw (0,5)circle (1.5pt) node[left]{$y_A$};
+
+      \filldraw (5,-3)circle (1.5pt) node[below]{$B$};
+      \filldraw (0,-3)circle (1.5pt) node[left]{$y_B$};
+
+      \filldraw (5,0)circle (1.5pt) node[above right]{$F$};
+    \end{scope}
+  \end{scope}
+
+  \begin{scope}[every node/.style={Maroon}, draw=Maroon, dashed]
+    \draw (-2,0) -- (-2,-6) --(0,-6);
+    \draw (-2,-1) -- (0,-1);
+    \begin{scope}[fill=CornflowerBlue, draw=black]
+      \filldraw (-2,-1)circle (1.5pt) node[left] {$A$};
+      \filldraw (0,-1)circle (1.5pt) node[right]{$y_A$};
+
+      \filldraw (-2,-6)circle (1.5pt) node[below]{$B$};
+      \filldraw (0,-6)circle (1.5pt) node[right]{$y_B$};
+
+      \filldraw (-2,0)circle (1.5pt) node[above]{$K$};
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

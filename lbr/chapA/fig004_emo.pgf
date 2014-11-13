@@ -1,0 +1,11 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}
+\begin{scope}[RedOrange]
+\draw(0,-.5ex) circle (1.5ex);
+\foreach \x in {-.5ex,.5ex}
+  \draw[fill=white] (\x,0) circle (.2ex);
+   \draw (-.9ex,-1ex)..controls (-0.4ex,-1.5ex)and(0.5ex,-1.5ex)..(.9ex,-1ex);
+\end{scope}
+\node () at (8ex,-.5ex) { $=$ 50 iscritti};
+\end{tikzpicture}

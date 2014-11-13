@@ -1,0 +1,45 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(2,0){A}
+  \tkzDefPoint(2,2){B}
+
+  \tkzDrawPolygon(O,A,B)
+
+  \tkzDrawTriangle[two angles=35.26 and 90](O,B) 
+  \tkzGetPoint{C}
+
+  \tkzDrawTriangle[two angles=30 and 90](O,C) 
+  \tkzGetPoint{D}
+
+  \tkzDrawTriangle[two angles=26.57 and 90](O,D) 
+  \tkzGetPoint{E}
+
+  \tkzDrawTriangle[two angles=24.1 and 90](O,E) 
+  \tkzGetPoint{F}
+
+  \tkzDrawTriangle[two angles=22.21 and 90](O,F) 
+  \tkzGetPoint{G}
+
+  \tkzLabelPoints[below](O)
+  \tkzLabelPoints[right](A,B)
+  \tkzLabelPoints[above](C,D,E)
+  \tkzLabelPoints[left](F,G)
+
+  \tkzMarkRightAngles[draw=Maroon](O,A,B O,B,C O,C,D O,D,E O,E,F O,F,G)
+
+  \tkzLabelSegment[right](A,B){$1$}
+  \tkzLabelSegment[above right](B,C){$1$}
+  \tkzLabelSegment[above](C,D){$1$}
+  \tkzLabelSegment[above](D,E){$1$}
+  \tkzLabelSegment[above left](E,F){$1$}
+  \tkzLabelSegment[left](F,G){$1$}
+
+  \tkzLabelSegment[above](O,A){$\sqrt{1}$}
+  \tkzLabelSegment[above=4pt](O,B){$\sqrt{2}$}
+  \tkzLabelSegment[above left](O,C){$\sqrt{3}$}
+  \tkzLabelSegment[above left=6pt](O,D){$\sqrt{4}$}
+  \tkzLabelSegment[left=6pt](O,E){$\sqrt{5}$}
+  \tkzLabelSegment[below](O,F){$\sqrt{6}$}
+  \tkzLabelSegment[below](O,G){$\sqrt{7}$}
+\end{tikzpicture}

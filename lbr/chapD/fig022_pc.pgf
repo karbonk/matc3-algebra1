@@ -1,0 +1,18 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[scale=.8, x=5mm, y=5mm, smooth]
+\begin{scope}[->]
+\draw (-5.5,0) -- (4.5,0) node [below]  {$x$};
+\draw (0,-2.5) -- (0,5.5)node [left]  {$y$};;
+\end{scope}
+
+\node[below] at (3,0){3};
+\node[below] at (-5,0){$-5$};
+\node[left] at (0,5){$5$};
+\node[left] at (0,-2){$-2$};
+
+\node[below left]  at (0,0){$O$};
+\filldraw[fill=CornflowerBlue, draw=black] (3,0)circle (1.5pt) node[above] {$K$};
+\filldraw[fill=CornflowerBlue, draw=black] (0,5)circle (1.5pt) node[right]{$R$};
+\filldraw[fill=CornflowerBlue, draw=black] (-5,0)circle (1.5pt) node[above] {$H$};
+\filldraw[fill=CornflowerBlue, draw=black] (0,-2)circle (1.5pt) node[right]{$S$};
+\end{tikzpicture}

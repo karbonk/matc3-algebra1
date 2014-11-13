@@ -1,0 +1,40 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \begin{scope}[x=25mm,y=5mm]
+    % Costruzione dei 5 quadrati
+    \foreach \x in {0,1,...,4}
+      \node[draw, minimum size=20mm](quad) at(\x,0) {};
+    %  Nomi
+%     \foreach \c [count=\x from 0] in {$A$,$B$,$C$,$D$,$E$} 
+%       \node[below=13mm] at (\x,0) {\c};
+    %  quadrato B
+    \draw(15mm,2)--(1,-2);
+    \draw(1,-2)--(35mm,2);
+    \draw(1,-2)--(1,2);
+    \begin{scope}[fill=gray, fill opacity=.4]
+      \fill (15mm,2)--(1,2)--(1,-2);
+      \fill (1,-2) rectangle (35mm,2);
+    \end{scope}
+    % quadrato C
+    \draw(40mm,2)--(60mm,-2);
+    \draw (40mm,-2) -- (60mm,2);
+    \begin{scope}[fill=gray, fill opacity=.4]
+      \fill (40mm,2)--(60mm,-2)--(40mm,-2);
+      \fill (60mm,2)--(60mm,-2)--(2,0);
+    \end{scope}
+    % quadrato D
+    \draw (65mm,0) -- (85mm,0);
+    \draw (3,-2) -- (3,2);
+    \begin{scope}[fill=gray, fill opacity=.4]
+      \fill (65mm,-2) rectangle (3,2);
+      \fill (3,-2) rectangle (85mm,0);
+    \end{scope}
+    % quadrato E
+    \foreach \y in {-1,0,1}
+      \draw (90mm,\y) -- (110mm,\y);
+    \begin{scope}[fill=gray, fill opacity=.4]
+      \fill (90mm,2) rectangle (110mm,0);
+      \fill (90mm,-2) rectangle (110mm,-1);
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

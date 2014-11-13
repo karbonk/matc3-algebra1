@@ -1,0 +1,12 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm]
+
+\matrix (a) [matrix of nodes,matrix anchor=east] at (0,0){
+48$\grado$&45'&52''&$+$\\
+62$\grado$&27'&22''&{}\\
+110$\grado$&72'&74''&{}\\
+111$\grado$&13'&14''&{}\\};
+
+\draw (a-2-1.south west) -- (a-2-4.south east);
+\end{tikzpicture}

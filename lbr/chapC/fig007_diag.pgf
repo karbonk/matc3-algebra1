@@ -1,0 +1,45 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+\node[ellipse, minimum height=3cm,draw, minimum width=4cm] (D) at (0,0) {};
+
+\node[above] (D1) at (D.north) {Città};
+
+\draw[dotted] (-.6,1.4) -- (-.6,-1.4);
+\begin{scope}[fill=CornflowerBlue]
+
+\filldraw (.7,1) circle (2pt) node (a) {};
+\node[left] at (.7,1) {Roma};
+\filldraw (1,.2) circle (2pt) node (b) {};
+\node[left] at (1,.2) {Parigi};
+\filldraw (.8,-.5) circle (2pt) node (c) {};
+\node[left] at (.8,-.5) {Londra};
+\filldraw (-1.3,0) circle (2pt) node (d) {};
+\node[above] at (-1.3,0) {Genova};
+
+\node at (.4,-1) {$\ID$};
+\end{scope}
+
+\begin{scope}[xshift=5cm]
+\node[ellipse, minimum height=3cm,draw, minimum width=4cm] (C) at (0,0) {};
+
+\node[above] (C1) at (C.north) {Stati};
+
+\begin{scope}[fill=LimeGreen]
+\filldraw (-.1,1) circle (2pt) node (a1) {};
+\filldraw (-.2,.2) circle (2pt)node (b1) {};
+\filldraw (.2,-.8) circle (2pt) node (c1) {};
+
+\node[right]  at (-.1,1) {Francia};
+\node[right]  at (.2,-.8) {Italia};
+\node[right] at (-.2,.2) {Inghilterra};
+
+\end{scope}
+\end{scope}
+\begin{scope}[->,smooth,thick]
+\draw[blue] (D1.north) .. controls +(80:1cm) and +(80:1cm) .. (C1.north) node [midway, above, black] () {$\Kor$};
+\draw[Maroon] (a) .. controls +(30:1cm) and +(150:1cm) .. (c1);
+ \draw[orange] (b) .. controls +(30:2cm) and +(150:1cm) .. (a1);
+\draw[red] (c) .. controls +(-30:2cm) and +(-180:2cm) .. (b1);
+\end{scope}
+\end{tikzpicture}

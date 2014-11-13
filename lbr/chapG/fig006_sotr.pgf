@@ -1,0 +1,23 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm]
+
+\matrix (a) [matrix of nodes,matrix anchor=north] at (0,0){
+90$\grado$&&&$-$\\
+45$\grado$&33'&12''&{}\\};
+
+\draw (a-2-1.south west) -- (a-2-3.south east);
+
+\begin{scope}[xshift=14mm,yshift=-10mm,->, Maroon, thick]
+\draw (0,0) -- (.5,0);
+\end{scope}
+
+\begin{scope}[xshift=35mm]
+\matrix (a) [matrix of nodes,matrix anchor=north] at (0,0){
+89$\grado$&59'&60''&$-$\\
+45$\grado$&33'&12''&{}\\
+44$\grado$&26'&48''&{}\\};
+
+\draw (a-2-1.south west) -- (a-2-3.south east);
+\end{scope}
+\end{tikzpicture}

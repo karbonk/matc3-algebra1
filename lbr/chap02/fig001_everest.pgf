@@ -1,0 +1,28 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Monte Everest e Fossa delle Marianne
+\begin{tikzpicture}[scale=.9]
+  % Disegna Everest
+  \filldraw[fill=gray!70, draw=black] (0,0)-- (4mm,7mm)-- (10mm,14mm)--(13mm,16mm)-- (15mm,19mm)--(17mm,17mm)--%
+	    (19mm,16.5mm)--(24mm,0);
+  % Disegna Fossa delle Marianne
+  \filldraw[fill=blue!70, draw=black](28mm,0)--(31mm,-6mm)--(35mm,-8mm)--(37mm,-15mm)--(42mm,-20mm)-- (49mm,-21mm)--%
+	    (51mm, -17mm)--(52mm, -5mm)--(55mm,0);
+  % Disegna il livello del mare 
+  \draw[thick] (-5mm,0) -- (60mm,0);
+
+  \begin{scope}[font=\scriptsize]
+    % Posiziona altezze
+    \node[left] (0)at (-5mm,0) {$0\unit{m}$};
+    \node [above](everest) at (15mm,19mm) {$+8\,855\unit{m}$};
+    \node [below](marianne) at (49mm,-21mm) {$-10\,916\unit{m}$};
+    % Posiziona etichette
+    \node (testo1) at (44mm,9.5mm) {Monte Everest};
+    \node (testo2) at (12mm,-5mm) {Livello  del mare};
+    \node (testo3) at (12mm,-12mm) {Fossa delle Marianne};
+  \end{scope}
+  % Disegna frecce
+  \draw[<-,red ] (everest) .. controls +(right:10mm) and +(up:10mm) .. node[]{} (testo1);
+  \draw[<-, blue](0)..controls +(down:5mm) and +(left:19mm)..node[]{} (testo2);
+  \draw[<-, brown](marianne)..controls +(left:10mm) and +(down:13mm)..node[]{} (testo3);
+
+\end{tikzpicture}

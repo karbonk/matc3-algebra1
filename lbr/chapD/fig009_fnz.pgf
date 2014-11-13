@@ -1,0 +1,61 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+\node[circle, minimum height=3cm,draw] (A) at (0,0) {};
+
+\node[above] (A1) at (A.north) {$A$};
+\begin{scope}[fill=CornflowerBlue]
+
+\filldraw (0,1) circle (2pt) node (a) {};
+\node[left] at (0,1) {$a$};
+\filldraw (-.8,0) circle (2pt) node (b) {};
+\node[left] at (-.8,0) {$b$};
+\filldraw (.2,-.5) circle (2pt) node (c) {};
+\node[left] at (.2,-.5) {$c$};
+
+\end{scope}
+
+\begin{scope}[xshift=4cm]
+\node[circle, minimum height=3cm,draw] (B) at (0,0) {};
+
+\node[above] (B1) at (B.north) {$B$};
+
+\begin{scope}[fill=LimeGreen]
+\filldraw (-.1,.7) circle (2pt) node (a1) {};
+\filldraw (-.1,-.7) circle (2pt) node (c1) {};
+\filldraw (.2,-.1) circle (2pt) node (b1) {};
+\node[above]  at (-.1,.7) {$1$};
+\node[above] at (.2,-.1) {$2$};
+\node[above]  at (-.1,-.7) {$3$};
+\end{scope}
+\end{scope}
+\begin{scope}[->,smooth,thick]
+\draw[blue] (A1.north) .. controls +(45:.5cm) and +(135:1cm) .. (B1.north) node [midway, above, black] () {$f$};
+\draw[Maroon] (a) .. controls +(30:.5cm) and +(150:.5cm) .. (a1);
+\draw[orange] (b) .. controls +(30:.5cm) and +(150:.5cm) .. (b1);
+\draw[purple] (c) .. controls +(-30:.5cm) and +(-120:1cm) .. (c1);
+\end{scope}
+
+\begin{scope}[xshift=8cm]
+\node[circle, minimum height=3cm,draw] (C) at (0,0) {};
+
+\node[above] (C1) at (C.north) {$C$};
+
+\begin{scope}[fill=LimeGreen]
+\filldraw (-.1,.8) circle (2pt) node (a2) {};
+\filldraw (-.1,-.7) circle (2pt) node (c2) {};
+\filldraw (-.2,-.1) circle (2pt) node (b2) {};
+\filldraw (.5,.5) circle (2pt) node (d2) {};
+\node[right]  at (-.1,.8) {do};
+\node[right] at (-.2,-.1) {re};
+\node[right]  at (-.1,-.7) {mi};
+\node[right]  at (.5,.5) {fa};
+\end{scope}
+\end{scope}
+\begin{scope}[->,smooth,thick]
+ \draw[blue] (B1.north) .. controls +(45:1cm) and +(135:.5cm) .. (C1.north) node [midway, above, black] () {$g$};
+\draw[Maroon] (a1) .. controls +(30:.5cm) and +(150:.5cm) .. (a2);
+\draw[orange] (b1) .. controls +(-30:.5cm) and +(-180:2cm) .. (b2);
+\draw[purple] (c1) .. controls +(-30:.5cm) and +(-180:2cm) .. (c2);
+\end{scope}
+\end{tikzpicture}

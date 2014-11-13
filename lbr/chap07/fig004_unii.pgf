@@ -1,0 +1,31 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small, fill=CornflowerBlue]
+\draw (0,1.25)circle (1) (-1,2.25) node[above] {$D$};
+\draw(0,-1.25) circle (1) (-1,-.5) node [above]  {$P$};
+\draw (3.5,0) circle (1.5) (3.5,1.5) node [above]  {$N$};
+
+\filldraw (-.5,1.1) circle (2pt) node[above right] {1};
+\filldraw (0,1.6) circle (2pt) node[above right] {3};
+\filldraw (.4,.9) circle (2pt) node[above right] {5};
+
+\filldraw (-.5,-1.5) circle (2pt) node[above right] {6};
+\filldraw (0,-1) circle (2pt) node[above right] {4};
+\filldraw (.4,-1.9) circle (2pt) node[above right] {2};
+
+\filldraw (2.5,.5) circle (2pt) node[above right] {1};
+\filldraw (3.5,1) circle (2pt) node[above right] {3};
+\filldraw (4,-.8) circle (2pt) node[above right] {5};
+
+\filldraw (3,-1) circle (2pt) node[above right] {6};
+\filldraw (2.5,-.7) circle (2pt) node[above right] {4};
+\filldraw (3.4,0) circle (2pt) node[above right] {2};
+
+\node (d) at (1,1.25) {};
+\node (p) at (1,-1.25) {};
+\node (n) at (2,0) {};
+
+\begin{scope}[blue, ->,thick]
+\draw (d)--(n.north);
+\draw (p)--(n.south);
+\end{scope}
+\end{tikzpicture}

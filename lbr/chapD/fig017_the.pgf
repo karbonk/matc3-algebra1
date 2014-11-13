@@ -1,0 +1,29 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm, smooth]
+\begin{scope}[->]
+\draw (-.5,0) -- (4,0) node [below]  {$A$};
+\draw (0,-.5) -- (0,3)node [left]  {$B$};;
+\end{scope}
+
+\foreach \x in {1,2,3}
+\draw (\x,1.5pt) -- (\x,-1.5pt);
+
+\foreach \y in {1,2}
+\draw (1.5pt,\y) -- (-1.5pt,\y);
+
+\foreach \xi/\xtext in {1/1,2/2,3/3}
+\node[below] at (\xi,0) {$\xtext$};
+
+\foreach \yi/\ytext in {1/x,2/y}
+\node[left] at (0,\yi){$\ytext$};
+
+\draw[orange, dotted] (0,0) grid (4,3);
+
+\begin{scope}[fill=CornflowerBlue]
+\foreach \x in {1,2,3}{
+\foreach \y in {1,2}
+\filldraw (\x,\y) circle (2pt);
+};
+
+\end{scope}
+\end{tikzpicture}

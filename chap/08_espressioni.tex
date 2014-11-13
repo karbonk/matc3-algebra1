@@ -1,0 +1,254 @@
+% (c) 2012 Claudio Carboncini - claudio.carboncini@gmail.com
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\chapter{Espressioni letterali e valori numerici}
+\section{Lettere}
+\subsection{Lettere per esprimere formule}
+\begin{exrig}
+ \begin{esempio}
+ In tutte le villette a schiera di recente costruzione del nuovo quartiere Stella, vi è un
+terreno rettangolare di larghezza~$12\unit{m}$ e lunghezza~$25\unit{m}$. Quanto misura la superficie del terreno?
+\begin{center}
+ \input{./lbr/chap08/fig001_ret.pgf}
+\end{center}
+
+Il prodotto delle dimensioni rappresenta la misura richiesta:~$S=(25\cdot 12)\unit{m}^{2}=300\unit{m}^2$.
+ \end{esempio}
+\end{exrig}
+
+Il semplice problema che abbiamo risolto è relativo ad un caso particolare; quel terreno con
+quelle dimensioni. Ma se le dimensioni fossero diverse?
+
+La procedura per determinare la misura della superficie ovviamente è sempre la stessa e la possiamo esprimere con la
+formula~$A=b\cdot h$ nella quale abbiamo indicato con~$b$ la misura di una dimensione (base) e con~$h$ la misura dell'altra
+dimensione (altezza), assegnate rispetto alla stessa unità di misura.
+
+\osservazione La formula ha carattere generale e serve ogniqualvolta si chiede di determinare la superficie di un rettangolo,
+note le misure delle dimensioni (base e altezza) rispetto alla stessa unità di misura.
+
+In geometria si utilizzano tantissime formule che ci permettono di esprimere perimetro e
+area delle figure piane, superficie laterale e totale e volume dei solidi. Nelle formule le lettere sostituiscono le
+misure di determinate grandezze, tipiche di quella figura o di quel solido.
+
+\ovalbox{\risolvi \ref{ese:8.1}}
+
+\subsection{Lettere per descrivere schemi di calcolo}
+\begin{exrig}
+ \begin{esempio}
+ L'insegnante chiede agli alunni di scrivere <<il doppio della somma di due numeri>>.
+
+\begin{itemize*}
+\item Antonella scrive:~$2\cdot (3+78)$;
+\item Maria chiede <<Quali sono i numeri? Se non li conosco non posso soddisfare la richiesta>>;
+\item Giulia scrive:~$2\cdot (a+b)$.
+\end{itemize*}
+Maria si è posta il problema ma non ha saputo generalizzare la richiesta. Antonella si è limitata ad un caso
+particolare. Giulia ha espresso con una formula l'operazione richiesta dall'insegnante.
+ \end{esempio}
+\end{exrig}
+
+\osservazione L'uso di lettere dell'alfabeto per indicare numeri ci permette di generalizzare uno schema di calcolo, cioè ci consente di scrivere un algoritmo.
+
+\begin{definizione}
+ Un'\emph{espressione letterale} o \emph{espressione algebrica} è uno schema di calcolo in cui compaiono numeri e lettere
+legati dai simboli delle operazioni.
+\end{definizione}
+
+Per scrivere un'espressione letterale ci si deve attenere a regole precise, quelle stesse che utilizziamo per scrivere
+espressioni numeriche.
+
+Per esempio, la scrittura~``$3\cdot 4+$'' non è corretta, in quanto il simbolo~``$+$'' dell'addizione deve essere seguito da un
+altro numero per completare l'operazione. Analogamente non è corretta l'espressione letterale~``$a\cdot c+$''.
+
+Come nelle espressioni numeriche, anche nelle espressioni letterali le parentesi indicano la priorità di alcune operazioni rispetto ad altre.
+La formula~$a\cdot (x+y)$ specifica ``il prodotto di un numero per la somma di altri due''. Essa è diversa da  $a\cdot x+y$
+che rappresenta ``il prodotto di due numeri sommato a un terzo numero''.
+
+\vspazio\ovalbox{\risolvii \ref{ese:8.2}, \ref{ese:8.3}, \ref{ese:8.4}}
+
+\subsection{Lettere per esprimere proprietà}
+
+Le proprietà delle operazioni tra numeri si esprimono con lettere per indicare che valgono per numeri
+qualsiasi.
+La scrittura ``$(a+b)+c=a+(b+c)$'', per esempio, esprime la proprietà associativa dell'addizione. In essa le lettere~$a$, $b$ e $c$ indicano
+numeri qualsiasi. I due schemi di calcolo ci dicono che per sommare tre numeri è indifferente aggiungere alla somma
+dei primi due il terzo oppure aggiungere al primo la somma degli altri due.
+
+\vspazio\ovalbox{\risolvii \ref{ese:8.5}, \ref{ese:8.6}, \ref{ese:8.7}, \ref{ese:8.8}, \ref{ese:8.9}, \ref{ese:8.10}, \ref{ese:8.11}, \ref{ese:8.12}}
+
+\section{Il valore numerico di un'espressione letterale}
+
+Ogni espressione letterale rappresenta uno schema di calcolo in cui le lettere che vi compaiono sostituiscono numeri.
+L'espressione letterale
+
+\[2\cdot x^{2}+x\]
+
+\noindent traduce una catena di istruzioni che in linguaggio naturale sono così
+descritte: ``prendi un numero ($x$); fanne il quadrato ($x^2$); raddoppia quanto ottenuto ($2\cdot x^2$); aggiungi al risultato il numero preso inizialmente ($2\cdot x^{2}+x$)''.
+
+Questa catena di istruzioni si può anche rappresentare in modo schematico
+\[x\quad\rightarrow\quad x^{2}\quad\rightarrow\quad~2\cdot x^{2}\quad\rightarrow\quad~2\cdot x^{2}+x\]
+e può essere usata per istruire un esecutore a ``calcolare'' l'espressione letterale
+quando al posto della lettera~$x$ si sostituisce un numero.
+
+Calcoliamo il valore dell'espressione~$2\cdot x^{2}+x$, sostituendo alla lettera $x$ il numero naturale~5.
+Seguiamo la schematizzazione~$x\rightarrow x^{2}\rightarrow~2\cdot x^{2}\rightarrow~2\cdot x^{2}+x$ e otteniamo:
+$5\rightarrow~25\rightarrow~50\rightarrow~55$.
+Il risultato è~$55$.
+Più brevemente scriviamo~$5$ nell'espressione letterale al posto di~$x$: otteniamo l'espressione numerica~$2\cdot 5^{2}+5$
+il cui risultato è~$55$.
+
+E se al posto di~$x$ sostituiamo~$-5$? Otteniamo un risultato diverso? Eseguiamo la sostituzione di $x$ con $-5$ e abbiamo: $2\cdot (-5)^{2}+(-5)=\ldots$ Lasciamo a te il calcolo finale. Ti sarai accorto che il
+risultato è cambiato.
+
+ \begin{definizione}
+In un'espressione letterale le \emph{lettere} rappresentano le \emph{variabili} che assumono specifiche quantità
+quando vengono sostituite da numeri.
+Chiamiamo \emph{valore} di un'espressione letterale il risultato numerico che si ottiene eseguendo le operazioni indicate dallo
+schema di calcolo quando alle lettere sostituiamo un determinato numero. Il valore di un'espressione letterale dipende dal \emph{valore assegnato} alle sue variabili.
+\end{definizione}
+
+D'ora in poi quando scriveremo un'espressione letterale in cui compare
+l'operazione di moltiplicazione, tralasceremo il puntino fin qui usato per evidenziare l'operazione.
+Così l'espressione~$5\cdot a^{2}+\dfrac{3}{8}\cdot a\cdot b-7\cdot b^{2}$ verrà scritta in modo
+più compatto~$5a^{2}+\dfrac{3}{8}ab-7b^{2}$.
+
+\begin{exrig}
+ \begin{esempio}
+Calcolare il valore numerico della seguente espressione:~$3a(a-b)$ per~$a=1$, $b=1$.
+
+\emph{Svolgimento}:~$3\cdot 1\cdot (1-1)=3\cdot 1\cdot 0=0$.
+\end{esempio}
+ \end{exrig}
+
+\ovalbox{\risolvii \ref{ese:8.13}, \ref{ese:8.14}, \ref{ese:8.15}, \ref{ese:8.16}, \ref{ese:8.17}, \ref{ese:8.18}, \ref{ese:8.19}, \ref{ese:8.20}, \ref{ese:8.21}, \ref{ese:8.22}, \ref{ese:8.23},
+\ref{ese:8.24}}
+
+\section{Condizione di esistenza di un'espressione letterale}
+Ti proponiamo adesso alcuni casi particolari per
+l'espressione~$E=\dfrac{x-y}{3x}$.
+
+\paragraph{Caso I}
+
+\begin{center}
+\begin{tabular*}{.2\textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+\toprule
+$x$ & $y$ & $E$\\
+1 & 1 & 0\\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+Il numeratore della frazione è~0, mentre il denominatore vale~3; il
+calcolo finale è dunque~$\frac{0}{3}=0$.
+Vi sono, secondo te, altre coppie di valori $(x;y)$ che fanno
+assumere ad~$E$ quello stesso valore?
+
+\paragraph{Caso II}
+\begin{center}
+\begin{tabular*}{.2\textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+\toprule
+$x$ &$y$ &$E$\\
+0 &25 &?\\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+Invece di mettere un valore ad~$E$, abbiamo messo punto di domanda
+perché in questo caso il numeratore della frazione è~$-25$ mentre
+il denominatore vale~0; il calcolo finale è dunque~$-{\frac{25}{0}}$, impossibile.
+Vi sono, secondo te, altre coppie di valori $(x;y)$ che rendono
+impossibile il calcolo del valore per~$E$?
+
+Non possiamo allora concludere che per ogni coppia di numeri razionali~$(x;y)$ 
+l'espressione~$E$ assume un numero razionale.
+Per poter calcolare il valore di~$E$ non possiamo scegliere coppie aventi~$x$ 
+uguale a zero.
+Scriveremo quindi come premessa alla ricerca dei valori di~$E$ la \emph{Condizione di Esistenza} ($\CE$)~$x\neq~0$.
+
+L'esempio appena svolto ci fa capire che di fronte a
+un'espressione letterale dobbiamo riflettere sullo
+schema di calcolo che essa rappresenta prima di assegnare valori alle
+variabili che vi compaiono.
+
+Se l'espressione letterale presenta una divisione in cui
+il divisore contiene variabili, dobbiamo stabilire la~$\CE$, 
+eliminando quei valori che rendono nullo il divisore.
+Per comprendere la necessità di porre le condizioni
+d'esistenza ricordiamo la definizione di divisione.
+
+Quanto fa~15 diviso~5? In forma matematica:~$15:5=3$ perché $3\cdot 5=15$. Quindi, 
+generalizzando~$a:b=c$ se~$c\cdot b=a$.
+
+Vediamo ora cosa succede quando uno dei numeri è~0:
+
+\begin{itemize*}
+ \item quanto fa~$0:5$? Devo cercare un numero che moltiplicato per~5 mi dia~0: trovo solo~0; infatti~$0\cdot 5=0$.
+ \item quanto fa~$15:0$? Devo cercare un numero che moltiplicato per~0 mi dia~15:
+non lo trovo; infatti nessun numero moltiplicato per~0 fa~15. Quindi,
+$15:0$ è impossibile perché non esiste alcun
+$x$ per il quale~$x\cdot 0=15$.
+ \item quanto fa~$0:0$? Devo cercare un numero che moltiplicato per~0 mi dia~0:
+non ne trovo solo uno. Infatti, qualunque numero moltiplicato per~0
+fa~0. Per esempio, $0:0=33$; infatti
+$33\cdot 0=0$. Ma anche~$0:0=\np{-189,6}$;
+infatti~$\np{-189,6}\cdot 0=0$. E anche $0:0=0$;
+infatti~$0\cdot 0=0$. 
+Ancora~$0:0=10^{99}$, infatti~$10^{99}\cdot 0=0$.
+Quindi~$0:0$ è indeterminato perché
+non è possibile determinare un unico~$x$ tale che~$x\cdot 0=0$,
+ma per qualunque valore di~$x$ si ha~$x\cdot 0=0$.
+\end{itemize*}
+
+Consideriamo l'espressione letterale~$E=\dfrac{a-b}{a+b}$ dove~$a$ e~$b$ 
+rappresentano numeri razionali.
+Premettiamo:
+
+\begin{enumeratea}
+ \item la descrizione a parole dello schema di calcolo:
+``divisione tra la differenza di due numeri e la loro
+somma'';
+ \item la domanda che riguarda il denominatore: ``quand'è che la somma di
+due numeri razionali dà come rislutato~0?'';
+ \item la~$\CE$: ``$a$ e~$b$ non devono essere numeri opposti''.
+\end{enumeratea}
+
+Siamo ora in grado di completare la tabella:
+\begin{center}
+\begin{tabular*}{.8\textwidth}{l@{\extracolsep{\fill}}*{5}{c}}
+\toprule
+$a$ & 3 &0 & $\frac{3}{4}$ &$-{\frac{5}{8}}$ & $-{\frac{19}{2}}$ \\
+$b$ & $-3$ & $-{\frac{1}{2}}$ & 0 &$\frac{5}{8}$ & $-{\frac{19}{2}}$ \\
+\midrule
+$E=\frac{a-b}{a+b}$ & & & & &\\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+Dalla~$\CE$, ci accorgiamo subito che la
+prima coppia e la quarta sono formate da numeri opposti, pertanto non
+possiamo calcolare il valore di~$E$ ad esse relativo. L'ultima
+coppia è formata da numeri uguali pertanto la loro differenza è~0, così
+il numeratore si annulla e quindi il valore di~$E$ è~0. 
+Per la coppia~$\left(0;-\frac{1}{2}\right)$ il valore di~$E$ è~$-1$ mentre è~1 per
+la coppia~$\left(\frac{3}{4};0\right)$.
+La tabella verrà quindi così completata:
+
+\begin{center}
+\begin{tabular*}{.8\textwidth}{l@{\extracolsep{\fill}}*{5}{c}}
+\toprule
+$a$ & 3 &0 & $\frac{3}{4}$ &$-{\frac{5}{8}}$ & $-{\frac{19}{2}}$ \\
+$b$ & $-3$ & $-{\frac{1}{2}}$ & 0 &$\frac{5}{8}$ & $-{\frac{19}{2}}$ \\
+\midrule
+$E=\frac{a-b}{a+b}$ &impossibile & $-1$& 1& impossibile&0\\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+Cosa succede per la coppia~$(0;0)$?
+
+\vspazio\ovalbox{\risolvii \ref{ese:8.25}, \ref{ese:8.26}, \ref{ese:8.27}, \ref{ese:8.28}, \ref{ese:8.29}, \ref{ese:8.30}, \ref{ese:8.31}, \ref{ese:8.32}}
+\newpage
+
+ \input{./chap/08_esercizi}
+
+\cleardoublepage

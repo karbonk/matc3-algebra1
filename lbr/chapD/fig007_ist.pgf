@@ -1,0 +1,18 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+[auto,block/.style
+={rectangle, draw=Maroon, thick,
+text width=5em,align=center, rounded corners,
+minimum height=3.1em},
+line/.style
+={draw, thick, ->,shorten >=2pt}]
+\matrix [column sep=7mm]{
+& \node [block] (prn) { da~$y$ togli 1}; 
+& \node [block] (molt) {dividi per 2}; 
+& \node [block] (agg) {scrivi~$x$}; \\
+};
+\begin{scope}[every path/.style=line]
+\path (prn)-- (molt);
+\path (molt) -- (agg);
+\end{scope}
+\end{tikzpicture}

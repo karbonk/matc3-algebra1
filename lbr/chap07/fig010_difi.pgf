@@ -1,0 +1,35 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small]
+\draw (0,1.25)circle (1) (-1,2.25) node[above] {$A$};
+\draw(0,-1.25) circle (1) (-1,-.5) node [above]  {$B$};
+\draw (3.5,0) circle (1.5) (3.5,1.5) node [above]  {$A$};
+\draw (5,0) circle (1.5) (5,1.5) node [above]  {$B$};
+
+\fill (-.5,1.1) circle (1pt) node[above right] {8};
+\fill (0,1.6) circle (1pt) node[above right] {9};
+\fill (.4,1.1) circle (1pt) node[above right] {12};
+\fill (-.4,.7) circle (1pt) node[above right] {13};
+\fill (.1,.4) circle (1pt) node[above right] {10};
+
+\fill (-.5,-1.5) circle (1pt) node[above right] {10};
+\fill (0,-1) circle (1pt) node[above right] {9};
+\fill (.3,-1.9) circle (1pt) node[above right] {11};
+\fill (-.3,-1.9) circle (1pt) node[above right] {13};
+
+\fill (4,.5) circle (1pt) node[above right] {13};
+\fill (3,0) circle (1pt) node[above right] {8};
+\fill (2.8,-.8) circle (1pt) node[above right] {12};
+
+\fill (4,-.75) circle (1pt) node[above right] {10};
+\fill (4.25,0) circle (1pt) node[above right] {9};
+\fill (5.5,0) circle (1pt) node[above right] {11};
+
+\node (a) at (1,1.25) {};
+\node (b) at (1,-1.25) {};
+\node (n) at (2,0) {};
+
+\begin{scope}[blue, ->,thick]
+\draw (a)--(n.north);
+\draw (b)--(n.south);
+\end{scope}
+\end{tikzpicture}

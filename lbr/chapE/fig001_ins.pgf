@@ -1,0 +1,48 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  \node[ellipse, minimum height=4cm,, minimum width=6cm, draw] (A) at (0,0) {};
+
+  \begin{scope}[fill=CornflowerBlue]
+    \filldraw (-2,.3) circle (2pt) node (a) {};
+    \node[left] at (-2,.3) {$(7;8)$};
+    
+    \filldraw (.5,.5) circle (2pt) node (b) {};
+    \node[below] at (.5,.5) {$(2;3)$};
+    
+    \filldraw (-.4,1.4) circle (2pt) node (c) {};
+    \node[above] at (-.4,1.4)  {$(0;1)$};
+
+    \filldraw (-1,-.3) circle (2pt) node (d) {};
+    \node[above] at (-1,-.3)  {$(4;4)$};
+
+    \filldraw (1,-.6) circle (2pt) node (e) {};
+    \node[below] at (1,-.6)  {$(0;0)$};
+
+    \filldraw (2.1,-.3) circle (2pt) node (f) {};
+    \node[above] at (2.1,-.3)  {$(5;5)$};
+
+    \filldraw (-2,-.5) circle (2pt) node (g) {};
+    \node[below] at (-2,-.5)  {$(5;4)$};
+
+    \filldraw (-.1,-.8) circle (2pt) node (h) {};
+    \node[below] at (-.1,-.8)  {$(1;0)$};
+
+    \filldraw (1.4,.7) circle (2pt) node (i) {};
+    \node[right] at (1.4,.7)  {$(12;13)$};
+
+    \filldraw (-1.2,1.4) circle (2pt) node (j) {};
+    \node[below] at (-1.2,1.4)  {$(4;5)$};
+
+    \filldraw (-.4,-1.5) circle (2pt) node (k) {};
+    \node[left] at (-.4,-1.5)  {$(10;9)$};
+  \end{scope}
+
+  \begin{scope}[-,smooth,thick]
+    \draw[Maroon] (a) .. controls +(30:1cm) and +(150:.5cm) .. (b);
+    \draw[purple] (b) .. controls +(30:.5cm) and +(0:0.5cm) .. (c);
+    \draw[orange] (d) .. controls +(0:1cm) and +(180:1cm) .. (e);
+    \draw[OliveGreen] (e) .. controls +(0:1cm) and +(-90:.5cm) .. (f);
+    \draw[RedOrange] (g) .. controls +(0:1cm) and +(180:.5cm) .. (h);
+  \end{scope}
+\end{tikzpicture}

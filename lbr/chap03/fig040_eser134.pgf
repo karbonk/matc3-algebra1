@@ -1,0 +1,8 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm,y=5mm]
+\foreach \x in {0,1,2}
+\draw (\x,0) rectangle (\x+1,1);
+\foreach \y in {1,2}
+\draw (2,\y) rectangle (3,\y+1);
+\draw(3,1) rectangle (4,2);
+\end{tikzpicture}

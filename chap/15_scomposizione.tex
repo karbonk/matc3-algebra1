@@ -1,0 +1,240 @@
+% (c) 2012 Claudio Carboncini - claudio.carboncini@gmail.com
+% (c) 2012-2013 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\chapter{Scomposizione in fattori}
+
+\section{Cosa vuol dire scomporre in fattori}
+Scomporre un polinomio in fattori significa scrivere il polinomio come il prodotto di polinomi e monomi che
+moltiplicati tra loro danno come risultato il polinomio stesso. Si può paragonare la scomposizione in fattori
+di un polinomio alla scomposizione in fattori dei numeri naturali.
+
+\begin{wrapfloat}{figure}{r}{0pt}
+ \input{./lbr/chap15/fig001_sco.pgf}
+\end{wrapfloat}
+
+Per esempio, scomporre il numero~$36$ significa scriverlo come~$2^{2}\cdot 3^{2}$ dove~$2$ e~$3$ sono i suoi fattori primi.
+Anche~$36 = 9 \cdot 4$ è una scomposizione, ma non è in fattori primi. Allo stesso modo un polinomio va scomposto in fattori non ulteriormente
+scomponibili che si chiamano irriducibili. %(questa dovrebbe andare a sinistra della tabella)
+
+Il polinomio~$3a^{3}b^{2}-3ab^{4}$ si può scomporre in fattori in questo modo \[3ab^{2}(a-b)(a+b)\text{,}\] infatti eseguendo i prodotti si
+ottiene \[3ab^{2}(a-b)(a+b)=3ab^{2}(a^{2}+ab-ba-b^{2})=3ab^{2}\left(a^{2}-b^{2}\right)=3a^{3}b^{2}-3ab^{4}.\]
+La scomposizione termina quando non è possibile scomporre ulteriormente i fattori individuati.
+Come per i numeri la scomposizione in fattori dei polinomi identifica il polinomio in maniera univoca (a meno di multipli).
+
+\begin{definizione}
+Un polinomio si dice \emph{riducibile} (scomponibile) se può essere scritto come prodotto di due o più polinomi (detti fattori) di grado maggiore di zero.
+In caso contrario esso si dirà \emph{irriducibile}.
+\end{definizione}
+
+La caratteristica di un polinomio di essere irriducibile dipende dall'insieme numerico al quale appartengono i coefficienti del polinomio;
+uno stesso polinomio può essere irriducibile nell'insieme dei numeri razionali, ma riducibile in quello dei numeri reali o
+ancora in quello dei complessi.
+Dalla definizione consegue che un polinomio di primo grado è irriducibile.
+
+\begin{definizione}
+La \emph{scomposizione in fattori di un polinomio} è la sua scrittura come prodotto di fattori irriducibili.
+\end{definizione}
+\ovalbox{\risolvi \ref{ese:15.1}}
+
+\section{Raccoglimento totale a fattore comune}
+Questo è il primo metodo che si deve cercare di utilizzare per scomporre un polinomio.
+
+Il metodo si basa sulla proprietà distributiva della moltiplicazione rispetto all'addizione.
+
+Prendiamo in considerazione il seguente prodotto:~$a(x+y+z)=ax+ay+az$.
+Il nostro obiettivo è ora quello di procedere
+da destra verso sinistra, cioè avendo il polinomio~$ax+ay+az$ come possiamo fare per individuare il prodotto che lo ha generato?
+In questo caso semplice possiamo osservare che i tre monomi contengono tutti la lettera~$a$, che quindi si può mettere in comune,
+o come anche si dice ``in evidenza''.
+Perciò scriviamo \[ax+ay+az=a(x+y+z).\]
+
+\begin{exrig}
+ \begin{esempio}
+Analizziamo la scomposizione in fattori~$3a^{2}b\left(2a^{3}-5b^{2}-7c\right)$.
+ \begin{equation*}
+   \begin{split}
+    3a^{2}b\left(2a^{3}-5b^{2}-7c\right) &=3a^{2}b(2a^{3})+3a^{2}b(-5b^{2})+3a^{2}b(-7c)\\
+    &=6a^{5}b-15a^{2}b^{3}-21a^{2}bc.
+   \end{split}
+ \end{equation*}
+L'ultima uguaglianza, letta da destra verso sinistra, è il raccoglimento totale a fattore comune.
+Partendo da~$6a^{5}b-15a^{2}b^{3}-21a^{2}bc$ possiamo notare che i coefficienti numerici~$6$, $15$ e~$21$ hanno il~$3$ come fattore in comune.
+Notiamo anche che la lettera~$a$ è in comune, come la lettera~$b$. Raccogliendo tutti i fattori comuni si avrà il prodotto
+$3a^{2}b\left(2a^{3}-5b^{2}-7c\right)$ di partenza.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Mettere in evidenza il fattore comune:
+\begin{enumeratea}
+\item trovare il~$\mcd$ di tutti i termini che formano il polinomio: tutti i fattori in comune con l'esponente minimo con cui compaiono;
+\item scrivere il polinomio come prodotto del~$\mcd$ per il polinomio ottenuto dividendo ciascun monomio del polinomio di partenza per il~$\mcd$;
+\item verificare la scomposizione eseguendo la moltiplicazione per vedere se il prodotto dà come risultato il polinomio da scomporre.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$5a^{2}x^{2}-10ax^{5}$.
+  \begin{enumeratea}
+  \item Tra i coefficienti numerici il fattore comune è~$5$;
+  \item tra la parte letterale sono in comune le lettere~$a$ e~$x$, la~$a$ con esponente~$1$, la~$x$ con esponente~$2$;
+  \item pertanto il~$\mcd$ è~$5ax^{2}$;
+  \item passiamo quindi a scrivere~$5a^{2}x^{2}-10ax^{5}=5ax^{2}(\ldots \ldots \ldots)$;
+  \item nella parentesi vanno i monomi che si ottengono dalle divisioni~$5a^{2}x^{2}:5ax^{2}=a$ e~$-10ax^{5}:5ax^{2}=-2x^{3}$.
+  \end{enumeratea}
+  In definitiva~$5a^{2}x^{2}-10ax^{5}=5ax^{2}(a-2x^{3})$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$10x^{5}y^{3}z-15x^{3}y^{5}z-20x^{2}y^{3}z^{2}$.
+ \begin{enumeratea}
+ \item Trovo tutti i fattori comuni con l'esponente minore per formare il~$\mcd$.\, $\mcd=5x^{2}y^{3}z$;
+ \item divido ciascun termine del polinomio per~$5x^{2}y^{3}z$:
+   \begin{itemize*}
+   \item $10x^{5}y^{3}z:5x^{2}y^{3}z=2x^{3}$;
+   \item $-15x^{3}y^{5}z:5x^{2}y^{3}z=-3xy^{2}$;
+   \item $-20x^{2}y^{3}z^{2}:5x^{2}y^{3}z=-4z$;
+   \end{itemize*}
+ \item il polinomio si può allora scrivere come~$5x^{2}y^{3}z (2x^{3}-3xy^{2}-4z)$;
+ \item Il fattore da raccogliere a fattore comune può essere scelto con il segno~$+$ (positivo) o con il segno~$−$ (negativo).
+    Nell'esempio precedente è valida anche la seguente 
+    scomposizione:~$10x^{5}y^{3}z-15x^{3}y^{5}z-20x^{2}y^{3}z^{2}=-5x^{2}y^{3}z (-2x^{3}+3xy^{2}+4z)$.
+ \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$-8x^{2}y^{3}+10x^{3}y^{2}$.
+ \begin{enumeratea}
+  \item Poiché il primo termine è negativo possiamo mettere a fattore comune un 
+  numero negativo. Tra~8 e~10 il~$\mcd$ è~2. Tra~$x^{2}y^{3}$ e~$x^{3}y^{2}$ mettiamo 
+  a fattore comune le lettere~$x$ e~$y$, entrambe con esponente~$2$, perché è
+     il minimo esponente con cui compaiono. In definitiva il monomio da mettere a fattore comune è~$-2x^{2}y^{2}$;
+  \item pertanto possiamo cominciare a scrivere~$-2x^{2}y^{2}(\ldots \ldots \ldots)$;
+  \item eseguiamo le divisioni~$-8x^{2}y^{3}:(-2x^{2}y^{2})=+4y$ e  $10x^{3}y^{2}:(-2x^{2}y^{2})=-5x$. 
+  I quozienti trovati~$+4y$ e~$-5x$ vanno nelle parentesi.
+ \end{enumeratea}
+ In definitiva~$-8x^{2}y^{3}+10x^{3}y^{2}=-2x^{2}y^{2}(4y-5x)$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$6a(x-1)+7b(x-1)$.
+  \begin{enumeratea}
+  \item Il fattore comune è~$(x-1)$, quindi il polinomio si può scrivere come~$(x-1)\cdot [\ldots \ldots \ldots]$;
+  \item nella parentesi quadra scriviamo i termini che si ottengono dalle divisioni:
+   \begin{itemize*}
+    \item $6a(x-1):(x-1)=6a$;
+    \item $7b(x-1):(x-1)=7b$.
+   \end{itemize*}
+  \end{enumeratea}
+  In definitiva~$6a(x-1)+7b(x-1)=(x-1)(6a+7b)$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$10(x+1)^{2}-5a(x+1)$.
+  \begin{enumeratea}
+  \item Il fattore comune è~$5(x+1)$, quindi possiamo cominciare a scrivere~$5(x+1)\cdot [\ldots \ldots \ldots]$;
+  \item nella parentesi quadra scriviamo i termini che si ottengono dalle divisioni:
+   \begin{itemize*}
+    \item $10(x+1)^{2}:5(x+1)=2(x+1)$;
+    \item $-5a(x+1):5(x+1)=a$.
+   \end{itemize*}
+  \end{enumeratea}
+  In definitiva~$10(x+1)^{2}-5a(x+1)=5(x+1)\bigl[2(x+1)-a \bigr]$.
+ \end{esempio}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:15.2}, \ref{ese:15.3}, \ref{ese:15.4}, \ref{ese:15.5}, \ref{ese:15.6}, \ref{ese:15.7}, \ref{ese:15.8}, \ref{ese:15.9}, \ref{ese:15.10},\ref{ese:15.11}, \ref{ese:15.12}, \ref{ese:15.13}}
+
+\vspazio\ovalbox{\ref{ese:15.14}}
+
+\section{Raccoglimento parziale a fattore comune}
+
+Quando un polinomio non ha alcun fattore comune a tutti i suoi termini, possiamo provare a mettere in evidenza tra gruppi di monomi
+e successivamente individuare il polinomio in comune.
+
+Osserviamo il prodotto~$(a+b)(x+y+z)=ax+ay+az+bx+by+bz$. Supponiamo ora di avere il polinomio
+$ax+ay+az+bx+by+bz$ come possiamo fare a tornare indietro per scriverlo come prodotto di polinomi?
+
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+Scomponiamo in fattori~$ax+ay+az+bx+by+bz$. Non c'è nessun fattore comune a tutto il polinomio.
+
+Proviamo a mettere in evidenza per gruppi di termini. Evidenziamo~$a$ tra i primi tre termini e~$b$ tra gli ultimi tre, 
+avremo:~$a(x+y+z)+b(x+y+z)$. Ora risulta semplice vedere che il trinomio~$(x+y+z)$ è in comune e quindi lo possiamo mettere 
+in evidenza~$ax+ay+az+bx+by+bz=a(x+y+z)+b(x+y+z)=(x+y+z)(a+b)$.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Eseguire il raccoglimento parziale.
+\begin{enumeratea}
+\item Dopo aver verificato che non è possibile effettuare un raccoglimento a fattore comune totale raggruppo i monomi
+   in modo che in ogni gruppo sia possibile mettere in comune qualche fattore;
+\item verifico se la nuova scrittura del polinomio ha un polinomio (binomio, trinomio, \ldots) comune a tutti i termini;
+\item se è presente il fattore comune a tutti i termini lo metto in evidenza;
+\item se il fattore comune non è presente la scomposizione è fallita, allora posso provare a raggruppare
+   diversamente i monomi o abbandonare questo metodo.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$ax+ay+bx+ab$.
+  \begin{enumeratea}
+  \item Provo a mettere in evidenza la~$a$ nel primo e secondo termine e la~$b$ nel terzo e quarto termine:~$ax+ay+bx+ab=a(x+y)+b(x+a)$;
+  \item in questo caso non c'è nessun fattore comune: il metodo è fallito. In effetti il polinomio non si può scomporre in fattori.
+  \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$bx-2ab+2ax-4a^{2}$.
+ \begin{enumeratea}
+ \item Non vi sono fattori da mettere a fattore comune totale, proviamo con il raccoglimento parziale:~$b$ nei primi due monomi e~$2a$ negli altri due;
+ \item $\mmevid{ev_rosso}{bx}-\mmevid{ev_rosso}{2ab}+\mmevid{ev_verde}{2ax}-\mmevid{ev_verde}{4a^{2}}=b(\mmevid{ev_blu}{x-2a})+2a(\mmevid{ev_blu}{x-2a})=(x-2a)(b+2a)$.
+%\underline{bx} -\underline{2ab}+\underline{\underline{2ax}}-\underline{\underline{4a^{2}}}=b(\underline{x-2a})+2a(\underline{x-2a})=(x-2a)(b+2a)$.
+ \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$bx^{3}+2x^{2}-bx-2+abx+2a$.
+ \begin{enumeratea}
+
+ \item Raggruppiamo nel seguente modo:~$\mmevid{ev_rosso}{bx^{3}}+\mmevid{ev_verde}{2x^{2}}-\mmevid{ev_rosso}{bx}-\mmevid{ev_verde}{2}+\mmevid{ev_rosso}{abx}+\mmevid{ev_verde}{2a}$ tra quelli evidenziati in \evid{ev_rosso}{\phantom{I}} mettiamo a fattore comune~$bx$ e tra quelli evidenziati in \evid{ev_verde}{\phantom{I}} mettiamo a fattore comune~$2$;
+
+% \item Raggruppiamo nel seguente modo:~$\underline{bx^{3}}+\underline{\underline {2x^{2}}}-\underline{bx}-\underline{\underline~2}
+%     +\underline{abx}+\underline{\underline{2a}}$ tra quelli con sottolineatura semplice metto a fattore comune~$bx$, tra quelli
+%     con doppia sottolineatura metto a fattore comune~$2$;
+
+ \item $\mmevid{ev_rosso}{bx^{3}}+\mmevid{ev_verde}{2x^{2}}-\mmevid{ev_rosso}{bx}-\mmevid{ev_verde}{2}+\mmevid{ev_rosso}{abx}+\mmevid{ev_verde}{2a}=bx\bigl(\mmevid{ev_blu}{x^{2}-1+a}\bigr)+2\bigl(\mmevid{ev_blu}{x^{2}-1+a}\bigr)=\bigl(x^{2}-1+a\bigr)\bigl(bx+2\bigr)$.
+
+%  \item $\underline{bx^{3}}+\underline{\underline {2x^{2}}}-\underline{bx}-\underline{\underline~2}+\underline{abx}+\underline{\underline{2a}}
+%     =bx\bigl(\underline{x^{2}-1+a}\bigr)+2\bigl(\underline{x^{2}-1+a}\bigr)=\bigl(x^{2}-1+a\bigr)\bigl(bx+2\bigr)$.
+ \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$5ab^{2}-10abc-25abx+50acx$.
+ \begin{enumeratea}
+  \item Il fattore comune è~$5a$, quindi:
+    \begin{itemize*}
+    \item $5ab^{2}-10abc-25abx+50acx=5a\bigl(b^{2}-2bc-5bx+10cx\bigr)$;
+    \end{itemize*}
+  \item vediamo se è possibile scomporre il polinomio in parentesi con un raccoglimento parziale~$5a(\mmevid{ev_rosso}{b^{2}}-\mmevid{ev_rosso}{2bc}-\mmevid{ev_verde}{5bx}+\mmevid{ev_verde}{10cx})=5a\bigl[b(\mmevid{ev_blu}{b-2c})-5x(\mmevid{ev_blu}{b-2c})\bigr]=5a(b-2c)(b-5x)$.
+
+%  \item vediamo se è possibile scomporre il polinomio in parentesi con un raccoglimento parziale~$5a(\underline{b^{2}}-\underline{2bc}
+%     -\underline{\underline{5bx}}+\underline{\underline{10cx}})=5a\bigl[b(\underline{b-2c})-5x(\underline{b-2c})\bigr]=5a(b-2c)(b-5x)$.
+ \end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:15.16}, \ref{ese:15.17}, \ref{ese:15.18}, \ref{ese:15.19}, \ref{ese:15.20}, \ref{ese:15.21}, \ref{ese:15.22}, \ref{ese:15.23}, \ref{ese:15.24},\ref{ese:15.25}, \ref{ese:15.26}}
+
+\ovalbox{\ref{ese:15.27}, \ref{ese:15.28}}
+
+\newpage
+\input{./chap/15_esercizi}
+
+\cleardoublepage

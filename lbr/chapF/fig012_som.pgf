@@ -1,0 +1,33 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[thick,shorten >=1.5pt, ->]
+    \begin{scope}[OliveGreen]
+\draw (-2,2) -- (0,3);
+\draw (0,3) -- (2,2);
+\draw (2,2) -- (2,1);
+\draw (2,1) -- (0,0);
+    \end{scope}  
+    
+    \begin{scope}[Maroon]
+      \draw (-2,2) -- (0,0);
+    \end{scope}
+  \end{scope}
+
+
+  \begin{scope}[fill=CornflowerBlue, draw=black]
+    \filldraw (-2,2) circle (1.5pt) node[left] {$E$};
+    \filldraw (0,3) circle (1.5pt) node[above] {$F$};
+    \filldraw (2,2) circle (1.5pt) node[right] {$G$};
+    \filldraw (2,1) circle (1.5pt) node[right] {$H$};
+    \filldraw (0,0) circle (1.5pt) node[below] {$K$};
+  \end{scope}
+
+  \node[above] at (-1,2.5) {$\vec{z}$};
+  \node[above] at (1,2.5) {$\vec{a}$};
+  \node[right] at (2,1.5) {$\vec{b}$};
+  \node[above] at (1,.5) {$\vec{c}$};
+  \node[above] at (-1,1) {$\vec{s}$};
+
+\end{tikzpicture}

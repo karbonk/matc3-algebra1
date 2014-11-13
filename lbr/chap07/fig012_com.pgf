@@ -1,0 +1,7 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=7mm,y=7mm,font=\small]
+\definecolor{circle area}{gray}{0.9}
+\draw[rounded corners, fill=circle area] (0,0) rectangle (4,3) (0,4);
+\draw[fill=white](2,1.5) circle (1) (2,1.5) node {$A$};
+\node [above, left] at (0,3) {$U$};
+\end{tikzpicture}

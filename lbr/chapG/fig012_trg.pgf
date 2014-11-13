@@ -1,0 +1,30 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+\coordinate (A) at (0,0);
+\coordinate (B) at ($(A)+(40:4)$);
+\coordinate (C) at ($(A)+(0:2.5)$);
+
+\draw (A) node[below left]{$A$}--(B) node[above]{$B$}--(C)node [below right]{$C$} --(A);
+
+\tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](C,A,B)
+\tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](A,B,C)
+\tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](B,C,A)
+
+\tkzLabelSegment[midway, below](A,C){$b$}
+\tkzLabelSegment[midway, above](A,B){$c$}
+\tkzLabelSegment[midway, right](B,C){$a$}
+
+\begin{scope}[font=\scriptsize]
+\tkzLabelAngle[pos=.6](C,A,B){$\alpha$}
+\tkzLabelAngle[pos=.6](A,B,C){$\beta$}
+\tkzLabelAngle[pos=.6](B,C,A){$\gamma$}
+\end{scope}
+
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (0,0) circle (1pt);
+\filldraw (2.5,0) circle (1pt);
+\filldraw (3.05,2.55) circle (1pt);
+\end{scope}
+\end{tikzpicture}

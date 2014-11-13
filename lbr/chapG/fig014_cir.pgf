@@ -1,0 +1,49 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=19mm,y=19mm, font=\small]
+\begin{scope}[->]
+\draw (-1.2,0) -- (6,0) node [below right] {$x$};
+\draw (1.5,-1.2) -- (1.5,1.2) node [above left] {$y$};
+\end{scope}
+
+\node[below left] at (1.5,0) {0};
+\foreach \x/\xtext in {1.83/30\grado,2.16/60\grado,2.5/90\grado,3.5/180\grado,4.5/270\grado,5.5/360\grado}
+\node[below] at(\x,0) {$\xtext$};
+
+\foreach \xi in {2.5,3.5,4.5,5.5}
+\draw (\xi,1.5pt) -- (\xi,-1.5pt);
+
+\foreach \yi in {-1,1}
+\draw (1.45,\yi) -- (1.55,\yi);
+
+\foreach \y/\xtext in {-1/-1,1/1}
+\node[right] at(1.5,\y) {$\xtext$};
+
+\begin{scope}[Maroon, thick, ->]
+\foreach \z in {0,30,60,90,120,150,180,210,240,270,300,330}
+\draw[rotate=\z] (0,0)--(1,0);
+\end{scope}
+
+\draw[dotted] (0,0) circle (1);
+\node [above left] at (0,1) {$B_3$};
+\node [above right] at (1,0) {$B_0$};
+
+\begin{scope}[dashed]
+\draw(.87,.5)--(1.83,.5);
+\draw (1.83,0) -- (1.83,.5);
+\draw (0.5,0.87) -- (2.16,0.87);
+\draw (2.16,0) -- (2.16,0.87);
+\end{scope}
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (1,0) circle (1.5pt);
+\filldraw[rotate=30] (1,0) circle (1.5pt) node (B1)[above right] {$B_1$};
+\filldraw[rotate=60] (1,0) circle (1.5pt) node (B2)[above right] {$B_2$};
+\filldraw (0,1) circle (1.5pt);
+\end{scope}
+
+\begin{scope}[fill=OliveGreen, draw=black]
+\filldraw (1.5,0) circle (1.5pt)node [above right] {$P_0(0\grado;0)$};
+\filldraw (1.83,.5) circle (1.5pt)node [right] {$P_1(30\grado;\frac{1}{2})$};
+\filldraw (2.16,.87) circle (1.5pt)node [right] {$P_2(60\grado;\frac{\sqrt{3}}{2})$};
+\end{scope}
+\end{tikzpicture}

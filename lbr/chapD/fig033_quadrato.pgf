@@ -1,0 +1,22 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+\clip (-.5,-.5) rectangle (4,4);
+
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(3,0){B}
+\tkzDefPoint(3,3){C}
+\tkzDefPoint(0,3){D}
+
+\tkzDrawSegment(A,B)
+\tkzDrawSegment(C,B)
+\tkzDrawSegment(C,D)
+\tkzDrawSegment(A,D)
+
+ \tkzLabelPoints[below left](A)
+ \tkzLabelPoints[below right](B)
+ \tkzLabelPoints[above right](C)
+ \tkzLabelPoints[above left](D)
+
+\draw[CornflowerBlue, thick] (0,0)--(3,3);
+\end{tikzpicture}

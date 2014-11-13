@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\begin{scope}[RedOrange]
+\foreach \xi in {0,3.5ex,7ex}{
+\draw(\xi,-.5ex) circle (1.5ex);
+   \draw (\xi-.9ex,-1ex)..controls (\xi-0.4ex,-1.5ex)and(\xi+0.5ex,-1.5ex)..(\xi+.9ex,-1ex);}
+\foreach \xii in {-.5ex,.5ex,3ex,4ex,6.5ex,7.5ex}
+  \draw[fill=white] (\xii,0) circle (.2ex);
+\end{scope}
+\node[left] at (-1.5ex,-.5ex) { a.s. 2003-2004 $=$};
+\end{tikzpicture}

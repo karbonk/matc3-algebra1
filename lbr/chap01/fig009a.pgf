@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[node distance=20ex]
+\begin{scope}[font=\ttfamily]
+  \matrix(doppio)[matrix of nodes]{
+    3&1&5&3&[3mm]4&3&5&3&\\
+    1&0&5&3&1&4&5&5&\\
+    &3&5&5&&2&9&2&9\\
+    &&7&7&&&1&&\\
+    &&1&&&&&&\\
+  };
+\end{scope}
+  \draw (doppio-1-3.north east) -- (doppio-5-3.south east);
+  \draw (doppio-1-7.north east) -- (doppio-4-7.south east);
+
+\node (a)[below=of doppio-1-5.south east] {$315=3^2\cdot5\cdot7$};
+\node (a)[below=of doppio-2-5.south east] {$435=3\cdot5\cdot29$};
+\end{tikzpicture}

@@ -1,0 +1,103 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small\ttfamily, matrix anchor=north]
+
+\matrix(a) [matrix of nodes]
+{
+3&1&5&3\\
+3&1&5&1&0&5&3\\
+&&|[red]|0&1&0&5&3&5&3\\
+&&&&&|[red]|0&3&3&1&1&3\\
+&&&&&&&|[red]|2&&9&3&3\\
+&&&&&&&&&|[red]|2&3&|[red]|1\\
+&&&&&&&&&&|[red]|0&\\
+};
+
+\draw(a-1-4.north west)--(a-1-4.south west);
+
+\draw(a-2-4.north west)--(a-2-6.north east);
+\draw(a-2-7.north west)--(a-2-7.south west);
+\draw(a-2-1.south west)--(a-2-3.south east);
+
+\draw(a-3-7.north west)--(a-3-8.north east);
+\draw(a-3-4.south west)--(a-3-6.south east);
+\draw(a-3-9.north west)--(a-3-9.south west);
+
+\draw(a-4-9.north west)--(a-4-10.north east);
+\draw(a-4-7.south west)--(a-4-8.south east);
+\draw(a-4-11.north west)--(a-4-11.south west);
+
+\draw(a-5-11.north west)--(a-5-11.north east);
+\draw(a-5-8.south east)--(a-5-10.south east);
+\draw(a-5-12.north west)--(a-5-12.south west);
+
+\draw(a-6-12.north west)--(a-6-12.north east);
+\draw(a-6-11.south west)--(a-6-11.south east);
+
+\draw[->,blue](a-7-11.south west)--(a-3-3.south west);
+
+\node[above] (am) at (a-1-4.north) {$315_{10}=102200_3$};
+\node[above] at (am.north){base 3};
+
+\begin{scope}[xshift=45mm]
+\matrix(b) [matrix of nodes]
+{
+3&1&5&4\\
+3&1&2&7&8&4\\
+&&|[red]|3&7&6&1&9&4\\
+&&&&|[red]|2&1&6&4&4\\
+&&&&&&|[red]|3&4&|[red]|1\\
+&&&&&&&|[red]|0\\
+};
+
+ \draw(b-1-4.north west)--(b-1-4.south west);
+ 
+ \draw(b-2-4.north west)--(b-2-5.north east);
+ \draw(b-2-6.north west)--(b-2-6.south west);
+ \draw(b-2-1.south west)--(b-2-3.south east);
+ 
+\draw(b-3-6.north west)--(b-3-7.north east);
+\draw(b-3-4.south west)--(b-3-5.south east);
+ \draw(b-3-8.north west)--(b-3-8.south west);
+
+\draw(b-4-8.north west)--(b-4-8.north east);
+ \draw(b-4-6.south west)--(b-4-7.south east);
+\draw(b-4-9.north west)--(b-4-9.south west);
+
+ \draw(b-5-9.north west)--(b-5-9.north east);
+ \draw(b-5-8.south west)--(b-5-8.south east);
+
+ \draw[->,blue](b-6-8.south west)--(b-3-3.south west);
+
+ \node[above] (bm) at (b-1-4.north) {$315_{10}=10323_4$};
+ \node[above] at (bm.north){base 4};
+\end{scope}
+
+\begin{scope}[xshift=85mm]
+\matrix(c)[matrix of nodes]
+{
+3&1&5&5\\
+3&1&5&6&3&5\\
+&&|[red]|0&6&0&1&2&5\\
+&&&&|[red]|3&1&0&|[red]|2\\
+&&&&&&|[red]|2\\
+};
+
+  \draw(c-1-4.north west)--(c-1-4.south west);
+  
+\draw(c-2-4.north west)--(c-2-5.north east);
+\draw(c-2-6.north west)--(c-2-6.south west);
+\draw(c-2-1.south west)--(c-2-3.south east);
+
+\draw(c-3-6.north west)--(c-3-7.north east);
+\draw(c-3-4.south west)--(c-3-5.south east);
+ \draw(c-3-8.north west)--(c-3-8.south west);
+ 
+ \draw(c-4-8.north west)--(c-4-8.north east);
+ \draw(c-4-6.south west)--(c-4-7.south east);
+
+ \draw[->,blue](c-5-7.south west)--(c-3-3.south west);
+
+ \node[above] (cm) at (c-1-4.north) {$315_{10}=2230_5$};
+ \node[above] at (cm.north){base 5};
+\end{scope}
+\end{tikzpicture}

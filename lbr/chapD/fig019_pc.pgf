@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=8mm, y=8mm, smooth]
+\begin{scope}[->]
+\draw (0,0) -- (6,0) node [below]  {$x$};
+\draw (3,-2) -- (3,2)node [left]  {$y$};;
+\end{scope}
+
+\node[below left] at (3,0) {$O$};
+\node () at (4.5,1) {$I$ quadrante};
+\node () at (1.5,1) {$II$ quadrante};
+\node () at (1.5,-1) {$III$ quadrante};
+\node () at (4.5,-1) {$IV$ quadrante};
+\end{tikzpicture}

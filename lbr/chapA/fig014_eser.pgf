@@ -1,0 +1,38 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+
+\begin{tikzpicture}[x=10mm,y=10mm, x radius=10mm, y radius=10mm]
+  \draw (0,0) circle (3);
+  \draw[fill=orange] (0,0) -- (0:3) arc (0:14.4:3);
+ \draw[fill=brown] (0,0)-- (14.4:3) arc (14.4:57.6:3);
+ \draw[fill=green] (0,0)-- (57.6:3) arc (57.6:158.4:3);
+\draw[fill=red] (0,0)-- (158.4:3) arc (158.4:273.6:3);
+ \draw[fill=blue] (0,0)-- (273.6:3) arc (273.6:316.8:3);
+ \draw[fill=olive] (0,0)-- (316.8:3) arc (316.8:345.6:3);
+ \draw[fill=lightgray] (0,0)-- (345.6:3) arc (345.6:360:3);
+
+\node[above]  at (0,3) {Voti di Matematica della classe terza $C$};
+\begin{scope}[xshift=50mm,
+every node/.style={ anchor=center}]
+\matrix[matrix of nodes] at (0,0){
+\node[fill=orange]{};&Voto 3\\
+\node[fill=brown]{};&Voto 4\\
+\node[fill=green]{};&Voto 5\\
+\node[fill=red]{};&Voto 6\\
+\node[fill=blue]{};&Voto 7\\
+\node[fill=olive]{};&Voto 8\\
+\node[fill=lightgray]{};&Voto 9\\
+};
+\end{scope}
+\begin{scope}[every node/.style={rounded corners, fill=white, draw=black, font=\small}]
+\draw(7.2:2.5) node {$4\%$};
+\draw(36:2.5) node {$12\%$};
+\draw(108:2.5) node {$28\%$};
+\draw(216:2.5) node {$32\%$};
+\draw(295.2:2.5) node {$12\%$};
+\draw(331.2:2.5) node {$8\%$};
+\draw(352.8:2.5) node {$4\%$};
+\draw(7.2:2.5) node {$4\%$};
+\draw(7.2:2.5) node {$4\%$};
+\end{scope}
+\end{tikzpicture}

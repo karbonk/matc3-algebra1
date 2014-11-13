@@ -1,0 +1,28 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+
+\begin{tikzpicture}[x=5mm,y=5mm]
+\begin{scope}[dashed]
+
+\draw (-1,0) -- (12,0);
+\end{scope}
+\begin{scope}[Maroon, very thick,->, shorten >=1.5pt]
+\draw (.5,0) -- (5.5,0);
+\draw  (10.5,0)--(7.5,0);
+\end{scope}
+
+\node [below left] at (.5,0) {$A$};
+\node [below right] at (5.5,0) {$B$};
+\node [above left] at (7.5,0) {$C$};
+\node [above right] at (10.5,0) {$D$};
+
+\begin{scope}[font=\small]
+\node[below] at (9,0) {$\overline{DC}=1.46$};
+\node[above] at (9,0) {$\vec{v}$};
+\node[below] at (3,0) {$\overline{AB}=2.22$};
+\node[above] at (3,0) {$\vec{u}$};
+\end{scope}
+
+\foreach \x in {.5,5.5,7.5,10.5}
+\filldraw[fill=CornflowerBlue, draw=black] (\x,0) circle (1.5pt);
+\end{tikzpicture}

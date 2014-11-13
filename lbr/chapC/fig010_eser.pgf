@@ -1,0 +1,36 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+\begin{scope}[->]
+\draw (-.5,0) -- (12,0);
+\draw (0,-.5) -- (0,7);
+\end{scope}
+
+\foreach \x in {1,2,...,11}
+\draw (\x,1.5pt) -- (\x,-1.5pt);
+
+\foreach \y in {1,2,...,6}
+\draw (1.5pt,\y) -- (-1.5pt,\y);
+
+\foreach \xi/\xtext in {1/A,2/B,3/C,4/D,5/E,6/F,7/G,8/H,9/I,10/L,11/M}
+\node[below] at (\xi,0) {$\xtext$};
+
+\foreach \yi/\ytext in {1/1,2/2,3/3,4/4,5/5,6/6}
+\node[left] at (0,\yi){\ytext};
+
+\draw[orange, dotted] (0,0) grid (11,6);
+
+\begin{scope}[fill=CornflowerBlue]
+\foreach \x in {1,6}
+\filldraw (\x,1) circle (2pt);
+
+\foreach \x in {2,5,8}
+\filldraw (\x,2) circle (2pt);
+
+\foreach \x in {4,10}
+\filldraw (\x,4) circle (2pt);
+
+\filldraw (3,5) circle (2pt);
+\filldraw (11,6) circle (2pt);
+\end{scope}
+\end{tikzpicture}

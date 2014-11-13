@@ -1,0 +1,18 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm, smooth]
+\begin{scope}[dotted,orange]
+\draw[step=10mm] (-2.5,-.5) grid (2.5,3.5);
+\end{scope}
+\begin{scope}[->]
+\draw (-2.5,0) -- (2.5,0) node [below]  {$x$};
+\draw (0,-.5) -- (0,3) node [left]   {$y$};
+\end{scope}
+\foreach \x/\xtext in {-1/-1,-2/-2,1/1,2/2}
+\draw (\x,1.5pt) -- (\x,-1.5pt) node[below] {$\xtext$};
+\draw (1.5pt,2) -- (-1.5pt,2) node[above left] {2};
+
+\draw[Maroon, thick] (-2.5,2)--(2.5,2);
+
+\node[below left] at (0,0) {0};
+
+\end{tikzpicture}

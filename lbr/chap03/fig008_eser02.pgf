@@ -1,0 +1,5 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Esercizio 3.2
+\begin{tikzpicture}
+\draw[step=5mm, black] (0,0) grid (50mm,25mm);
+\end{tikzpicture}

@@ -1,0 +1,38 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+\begin{scope}[font=\small]
+\draw (0,1.25)circle (1) (-1,2.25) node[above] {$X$};
+\draw(0,-1.25) circle (1) (-1,-.5) node [above]  {$Y$};
+\draw (3.5,0) circle (1.5) (3.5,1.5) node [above]  {$X$};
+\draw(3,-.4) circle (.75) (2.4,0) node [above] {$Y$};
+\end{scope}
+\begin{scope}[font=\scriptsize]
+\fill (-.5,1.1) circle (1pt) node[above right] {do};
+\fill (0,1.6) circle (1pt) node[above right] {re};
+\fill (.4,.9) circle (1pt) node[above right] {mi};
+\fill (0,1) circle (1pt) node[above right] {fa};
+\fill (-.6,1.6) circle (1pt) node[above right] {sol};
+\fill (0,.4) circle (1pt) node[above right] {la};
+\fill (-.4,.6) circle (1pt) node[above right] {si};
+
+\fill (-.5,-1.5) circle (1pt) node[above right] {do};
+\fill (0,-1) circle (1pt) node[above right] {mi};
+\fill (.4,-1.9) circle (1pt) node[above right] {re};
+
+\fill (2.5,-.6) circle (1pt) node[above right] {do};
+\fill (2.9,-.7) circle (1pt) node[above right] {re};
+\fill (2.9,-.1) circle (1pt) node[above right] {mi};
+\fill (3,1) circle (1pt) node[above right] {fa};
+\fill (3.2,.5) circle (1pt) node[above right] {sol};
+\fill (3.9,.4) circle (1pt) node[above right] {la};
+\fill (4,-.6) circle (1pt) node[above right] {si};
+\end{scope}
+\node (x) at (1,1.25) {};
+\node (y) at (1,-1.25) {};
+\node (w) at (2,0) {};
+
+\begin{scope}[red, ->,thick]
+\draw (x)--(w.north);
+\draw (y)--(w.south);
+\end{scope}
+\end{tikzpicture}

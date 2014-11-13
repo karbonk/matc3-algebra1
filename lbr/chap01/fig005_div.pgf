@@ -1,0 +1,25 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{center}
+\begin{tikzpicture}
+
+\draw[-](0,.4)--(0,-.9); % verticale
+\draw[-](0,0)--(.4,0) ; %orizzontale
+\draw (-.1,-.5) -- (-.6,-.5); % resto
+
+\node (a) at (.2,.2) {7};
+\node (b) at (.2,-.2) {3};
+\node (c) at (-.3,.2) {25};
+\node (d) at (-.3,-.2) {21};
+\node (e) at (-.2,-.7){4};
+
+\begin{scope}[font=\scriptsize]
+  \draw  [<-] (.4,.2)--(.7,.2) node[right] {divisore};
+  \draw  [<-] (.4,-.2)--(.7,-.2) node[right] {quoziente};
+  \draw  [<-] (-.6,.2)--(-.9,.2) node[left] {dividendo};
+  \draw  [<-] (-.6,-.7)--(-.9,-.7) node[left] {resto};
+\end{scope}
+
+\end{tikzpicture}
+
+\end{center}

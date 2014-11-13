@@ -1,0 +1,39 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=20mm,y=20mm, font=\small]
+\begin{scope}[->]
+\draw (-1.2,0) -- (1.2,0) node [below right] {$x$};
+\draw (0,-1.2) -- (0,1.2) node [above left] {$y$};
+\end{scope}
+
+\foreach \x/\xtext in {-1/-1,1/1}
+\node[below] at(\x,0) {$\xtext$};
+
+\foreach \xi in {-1,1}
+\draw (\xi,1.5pt) -- (\xi,-1.5pt);
+
+\foreach \yi in {-1,1}
+\draw(1.5pt,\yi)--(-1.5pt,\yi);
+
+\foreach \y/\ytext in {-1/-1,1/1}
+\node[right] at(0,\y) {$\ytext$};
+
+\begin{scope}[Maroon, thick, ->]
+\foreach \z in {0,35,65,90,130,180,205,270,310}
+\draw[rotate=\z] (0,0)--(1,0 );
+\end{scope}
+\draw[dotted] (0,0) circle (1);
+
+\node [above left] at (0,1) {$B_1$};
+\node [above left] at (-1,0) {$B_2$};
+\node [below left] at (0,-1) {$B_3$};
+\node [above right] at (1,0) {$B_4$};
+
+\draw[->,semithick, orange] (20:1.2) arc[radius=1.2, start angle=20, end angle=70];
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (1,0) circle (1.5pt);
+\filldraw (0,1) circle (1.5pt);
+\filldraw (-1,0) circle (1.5pt);
+\filldraw (0,-1) circle (1.5pt);
+\end{scope}
+\end{tikzpicture}

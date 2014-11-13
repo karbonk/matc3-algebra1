@@ -1,0 +1,716 @@
+% (c) 2012-2014 Dimitrios Vrettos - d.vrettos@gmail.com
+\chapter{Monomi}
+\section{L'insieme dei monomi}
+
+\begin{definizione}
+Un'espressione letterale in cui numeri e lettere sono legati dalla sola moltiplicazione si chiama \emph{monomio}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+L'espressione nelle due variabili~$a$ e~$b$, $E=5\cdot 2a^{2}\dfrac{3}{8}ab7b^{2}$
+è un monomio perché numeri e lettere sono legate solo dalla moltiplicazione.
+ \end{esempio}
+
+ \begin{esempio}
+L'espressione~$E=2a^{2}-ab^{2}$ non è un monomio poiché compare anche il segno di sottrazione.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi \ref{ese:9.1}}
+
+\osservazione
+Gli elementi di un monomio sono \emph{fattori}, perché sono termini
+di una moltiplicazione ma possono comparire anche \emph{potenze},
+infatti la potenza è una moltiplicazione di fattori uguali. Non
+possono invece comparire esponenti negativi o frazionari. In un monomio
+gli esponenti delle variabili devono essere numeri naturali.
+
+\begin{definizione}
+Un monomio si dice \emph{ridotto in forma normale} quando è scritto come prodotto di un solo fattore
+numerico e di potenze letterali con basi diverse.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Il monomio~$E=5\cdot 2a^{2}\dfrac{3}{8}ab7b^{2}$ non è scritto in
+forma normale: tra i suoi fattori vi sono numeri diversi e le potenze
+letterali hanno basi ripetute, la~$a$ e la~$b$ compaiono due volte ciascuna.
+
+Moltiplichiamo tra loro i fattori numerici e otteniamo~$\dfrac{105}{4}$; eseguiamo il prodotto di potenze con la stessa base otteniamo
+$a^{3}b^{3}$. Il monomio in forma normale è~$E=\dfrac{105}{4}a^{3}b^{3}$.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+ Ridurre in forma normale un monomio:
+ \begin{enumeratea}
+ \item moltiplicare tra loro i fattori numerici;
+ \item moltiplicare le potenze con la stessa base.
+ \end{enumeratea}
+\end{procedura}
+
+\ovalbox{\risolvi \ref{ese:9.2}}
+
+\begin{definizione}
+La parte numerica del monomio ridotto a forma normale si chiama \emph{coefficiente} e
+il complesso delle lettere ne costituisce la \emph{parte letterale}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ Nella tabella seguente sono segnati alcuni monomi con i rispettivi coefficienti e parti letterali.
+\begin{center}
+ \begin{tabular}{lcccc}
+ \toprule
+ monomio & $-{\dfrac{1}{2}}abc$ & $3x^{3}y^{5}$ & $a^{5}b^{7}$ & $-k^{2}$\\
+coefficiente & $-{\dfrac{1}{2}}$ & $3$ & $1$ & $-1$ \\
+parte letterale & $abc$ & $x^{3}y^{5}$ & $a^{5}b^{7}$ & $k^{2}$ \\
+ \bottomrule
+\end{tabular}
+\end{center}
+ \end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Se il coefficiente del monomio è zero il \emph{monomio} si dice \emph{nullo}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+L'espressione letterale~$\frac{3}{5}a^{3}bc^{2}$ è un monomio;
+il numero~$\frac{3}{5}$ e le lettere~$a^{3}$, $b$, $c^{2}$ sono legate
+dall'operazione di moltiplicazione; il suo coefficiente è il numero~$\frac{3}{5}$ e la parte letterale è~$a^{3}bc^{2}$.
+ \end{esempio}
+
+ \begin{esempio}
+ Controesempi:
+
+ \begin{enumeratea}
+ \item l'espressione letterale~$\frac{3}{5}a^{3}+bc^{2}$
+ non è un monomio dal momento che numeri e lettere sono legati, oltre
+che dalla moltiplicazione, anche dall'addizione;
+\item l'espressione letterale~$\frac{3}{5}a^{-3}bc^{2}$
+non è un monomio in quanto la potenza con esponente negativo
+rappresenta una divisione, infatti~$a^{-3}=\frac{1}{a^{3}}$.
+\end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+\begin{definizione}
+ Due o più monomi che hanno parte letterale identica si dicono \emph{simili}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Il monomio~$\frac{3}{5}a^{3}bc^{2}$ è simile
+a~$68a^{3}bc^{2}$ e anche a~$-0,5a^{3}bc^{2}$, ma non è simile
+a~$\frac{3}{5}a^{2}bc^{3}$. L'ultimo monomio ha le
+stesse lettere degli altri ma sono elevate ad esponenti diversi.
+ \end{esempio}
+\end{exrig}
+
+\osservazione Il monomio nullo si considera simile a qualunque altro monomio.
+
+\begin{definizione}
+Due monomi simili che hanno coefficiente opposto si dicono \emph{monomi opposti}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+I monomi~$\frac{3}{5}a^{3}bc^{2}$ e~$-{\frac{3}{5}}a^{3}bc^{2}$ sono opposti, infatti sono simili e hanno
+coefficienti opposti.
+\end{esempio}
+
+\begin{esempio}
+Non sono opposti~$\frac{3}{5}a^{3}bc^{2}$ e~$-7a^{3}bc^{2}$ ma semplicemente simili. I loro coefficienti hanno segno diverso, ma
+non sono numeri opposti.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi \ref{ese:9.3}}
+
+\begin{definizione}
+Quando il monomio è ridotto a forma normale, l'esponente di una sua variabile ci indica il
+\emph{grado} del monomio \emph{rispetto a quella variabile}.
+
+Il \emph{grado complessivo} di un monomio è la somma degli esponenti della parte letterale.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Il monomio~$\frac{3}{5}a^{3}bc^{2}$ ha grado complessivo~6,
+ottenuto sommando gli esponenti della sua parte letterale~$(3+1+2=6)$.
+Rispetto alla variabile~$a$ è di terzo grado, rispetto alla
+variabile~$b$ è di primo grado, rispetto alla variabile
+$c$ è di secondo grado.
+ \end{esempio}
+\end{exrig}
+
+Abbiamo detto che gli esponenti della parte letterale del monomio sono
+numeri naturali, dunque possiamo anche avere una o più variabili
+elevate ad esponente~0. Cosa succede allora nel monomio?
+
+Consideriamo il monomio~$56a^{3}b^{0}c^{2}$, sappiamo che qualunque
+numero diverso da zero elevato a zero è uguale a~1, quindi possiamo
+sostituire la variabile~$b$ che ha esponente~0 con~1 e
+otteniamo~$56a^{3}\cdot 1\cdot c^{2}=56a^{3}c^{2}$. Se in un monomio ogni
+variabile ha esponente~0, il monomio rimane solamente con il suo
+coefficiente numerico: per esempio~$-3a^{0}x^{0}=-3\cdot 1\cdot 1=-3$.
+
+\osservazione Esistono \emph{monomi di grado~0}; essi presentano solo il
+coefficiente e pertanto \emph{sono} equiparabili ai \emph{numeri razionali}.
+
+\section{Valore di un monomio}
+
+Poiché il monomio è un'espressione letterale,
+possiamo calcolarne il valore quando alle sue variabili sostituiamo dei numeri.
+
+\begin{exrig}
+ \begin{esempio}
+ Calcola il valore del monomio~$3x^{4}y^{5}z$ per i valori~$x=-3$, $y=5$ e~$z=0$.
+
+Sostituendo i valori assegnati otteniamo~$3\cdot (-3)^{4}\cdot 5^{5}\cdot 0=0$ essendo uno dei fattori nullo.
+ \end{esempio}
+\end{exrig}
+
+\osservazione Il valore di un monomio è nullo quando almeno una delle sue variabili
+assume il valore~0.
+
+Molte formule di geometria sono scritte sotto forma di monomi: area del
+triangolo~$\frac{1}{2}bh$, area del quadrato~$l^{2}$,
+perimetro del quadrato~$4l$, area del rettangolo~$bh$, volume del cubo~$l^{3}$, ecc.
+Esse acquistano un valore quando alle lettere sostituiamo
+i numeri che rappresentano le misure della figura considerata.
+
+\ovalbox{\risolvii \ref{ese:9.4}, \ref{ese:9.5}, \ref{ese:9.6}, \ref{ese:9.7}, \ref{ese:9.8}, \ref{ese:9.9}, \ref{ese:9.10}, \ref{ese:9.11}, \ref{ese:9.12}}
+
+\section{Moltiplicazione di due monomi}
+
+Ci proponiamo ora di introdurre nell'insieme dei monomi
+le operazioni di addizione, sottrazione, moltiplicazione, potenza e
+divisione.
+
+Ricordiamo che definire un'operazione all'interno di un insieme
+significa stabilire una legge che associa a due elementi
+dell'insieme un altro elemento
+dell'insieme stesso.
+
+La moltiplicazione di due monomi si indica con lo stesso simbolo della
+moltiplicazione tra numeri; i suoi termini si chiamano \emph{fattori} e il
+risultato si chiama \emph{prodotto}, proprio come negli insiemi numerici.
+
+\begin{definizione}
+ Il prodotto di due monomi è il monomio avente
+per coefficiente il prodotto dei coefficienti e per parte letterale il
+prodotto delle parti letterali dei monomi fattori.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Assegnati i monomi~$m_{1}=-4x^{2}yz^{3}$ e~$m_{2}=\dfrac{5}{6}x^{3}z^{6}$,
+il monomio prodotto è
+\[m_{3}=\bigg(-4\cdot {\frac{5}{6}}\bigg)\big(x^{2}\cdot x^{3}\big)\cdot y\cdot \big(z^{3}\cdot z^{6}\big)=-\frac{10}{3}x^{5}yz^{9}.\]
+ \end{esempio}
+\end{exrig}
+
+
+\begin{procedura}[per moltiplicare due monomi]
+La moltiplicazione tra monomi si effettua moltiplicando prima i
+coefficienti numerici e dopo le parti letterali:
+
+\begin{enumeratea}
+ \item nella moltiplicazione tra i coefficienti usiamo le regole note della
+moltiplicazione tra numeri razionali;
+ \item nella moltiplicazione tra le parti letterali applichiamo la regola
+del prodotto di potenze con la stessa base.
+\end{enumeratea}
+\end{procedura}
+
+\subsection{Proprietà della moltiplicazione}
+
+\begin{enumeratea}
+\item commutativa:~$m_{{1}}\cdot m_{2}=m_{2}\cdot m_{{1}}$;
+\item associativa:~$m_{{1}}\cdot m_{2}\cdot m_{3}=(m_{{1}}\cdot m_{2})\cdot m_{3}=m_{{1}}\cdot (m_{2}\cdot m_{3})$;
+\item 1 è l'elemento neutro:~$1\cdot m=m\cdot 1=m$;
+\item se uno dei fattori è uguale a~0 il prodotto è~0, cioè~$0\cdot m=m\cdot 0=0$.
+\end{enumeratea}
+
+\ovalbox{\risolvii \ref{ese:9.13}, \ref{ese:9.14}, \ref{ese:9.15}, \ref{ese:9.16}}
+
+\section{Potenza di un monomio}
+
+Ricordiamo che tra i numeri l'operazione di elevamento a
+potenza ha un solo termine, la base, sulla quale si agisce a seconda
+dell'esponente.
+
+\[\text{Potenza }=\text{ base }^\text{ esponente}= \underbrace{(\text{ base }\cdot \text{ base }\cdot\text{ base }\cdot\ldots\cdot \text{ base })}_{\text{tanti fattori quanti ne indica l'esponente}}.\]
+
+Analogamente viene indicata la potenza di un monomio: la base è un
+monomio e l'esponente è un numero naturale.
+
+\begin{definizione}
+La \emph{potenza di un monomio} è un monomio
+avente per coefficiente la potenza del coefficiente e per parte
+letterale la potenza della parte letterale.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Calcoliamo il quadrato e il cubo del monomio~$m_{1}=-{\dfrac{1}{2}}a^{2}b$.
+\[\text{elevo al quadrato}\quad\Rightarrow\quad\bigg(-{\frac{1}{2}}a^{2}b\bigg)^{2}
+=\bigg(-{\frac{1}{2}}\bigg)^{2}\cdot\big(a^{2}\big)^{2}\cdot (b)^{2}=\frac{1}{4}a^{4}b^{2}.\]
+
+\[\text{elevo al cubo}\quad\Rightarrow\quad\bigg(-{\frac{1}{2}}a^{2}b\bigg)^{3}
+=\bigg(-{\frac{1}{2}}\bigg)^{3}\cdot\big(a^{2}\big)^{3}\cdot (b)^{3}
+=-{\frac{1}{8}}a^{6}b^{3}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Calcoliamo il quadrato e il cubo del monomio~$m_{2}=5a^{3}b^{2}c^{2}$.
+\[\text{elevo al quadrato}\quad\Rightarrow\quad\big(5a^{3}b^{2}c^{2}\big)^{2}
+=\big(5\big)^{2}\cdot \big(a^{3}\big)^{2}\cdot\big(b^{2}\big)^{2}\cdot \big(c^{2}\big)^{2}
+=25a^{6}b^{4}c^{4}.\]
+
+\[\text{elevo al cubo}\quad\Rightarrow\quad\big(5a^{3}b^{2}c^{2}\big)^{3}
+=\big(5\big)^{3}\cdot \big(a^{3}\big)^{3}\cdot\big(b^{2}\big)^{3}\cdot \big(c^{2}\big)^{3}
+=125a^{9}b^{6}c^{6}.\]
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Eseguire l'elevazione a potenza di un monomio:
+
+\begin{enumeratea}
+ \item applichiamo la proprietà relativa alla potenza di un prodotto,
+eseguiamo cioè la potenza di ogni singolo fattore del monomio;
+ \item applichiamo la proprietà relativa alla potenza di potenza,
+moltiplicando l'esponente della variabile per l'esponente delle potenza.
+\end{enumeratea}
+\end{procedura}
+
+\ovalbox{\risolvii \ref{ese:9.17}, \ref{ese:9.18}, \ref{ese:9.19}, \ref{ese:9.20}}
+
+\section{Divisione di due monomi}
+
+Premessa: ricordiamo che assegnati due numeri razionali~$d_{1}$
+e~$d_{2}$ con~$d_{2}\neq~0$, eseguire la
+divisione~$d_{1}:d_{2}$ significa determinare il numero~$q$
+che moltiplicato per~$d_{2}$ dà~$d_{1}$.
+Nell'insieme~$\insQ$ la condizione~$d_{2}\neq~0$ è sufficiente per
+affermare che~$q$ esiste ed è un numero razionale.
+
+\begin{definizione}
+Assegnati due monomi~$m_{1}$ e~$m_{2}$ con~$m_{2}$ diverso dal monomio nullo, se
+è possibile determinare il monomio~$q$ tale che~$m_{1} = q\cdot m_{2}$, si dice che~$m_{1}$ è
+divisibile per~$m_{2}$ e~$q$ è il monomio \emph{quoziente}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+$(36x^{5}y^{2}):(-18x^{3}y)$.
+
+Per quanto detto sopra, vogliamo trovare, se esiste, il monomio~$q$ tale
+che~$(36x^{5}y^{2})=q\cdot (-18x^{3}y)$
+e ripensando alla moltiplicazione di monomi possiamo dire
+che~$q=-2x^{2}y$. Infatti~$(-2x^{2}y)\cdot(-18x^{3}y)=(36x^{5}y^{2})$. Il monomio~$-2x^{2}y$
+è quindi il quoziente della divisione assegnata.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}[Calcolare il quoziente di due monomi]
+Il quoziente di due monomi è così composto:
+
+\begin{enumeratea}
+ \item il coefficiente è il quoziente dei coefficienti dei monomi dati;
+ \item la parte letterale ha gli esponenti ottenuti sottraendo gli esponenti
+delle stesse variabili;
+ \item se la potenza di alcune lettere risulta negativa il risultato della
+divisione non è un monomio.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+$\bigg(\dfrac{7}{2}a^{3}x^{{4}}y^{2}\bigg):\bigg(-{\dfrac{21}{8}}ax^{2}y\bigg)$.
+
+Seguiamo i passi descritti sopra
+\[\bigg(\frac{7}{2}a^{3}x^{{4}}y^{2}\bigg):\bigg(-{\frac{21}{8}}ax^{2}y\bigg)=\frac{7}{2}\cdot%
+\bigg(-{\frac{8}{21}}\bigg)a^{3-1}x^{4-2}y^{2-1}=-{\frac{4}{3}}a^{2}x^{2}y.\]
+
+Nell'eseguire la divisione non abbiamo tenuto conto
+della condizione che il divisore deve essere diverso dal monomio nullo;
+questa condizione ci obbliga a stabilire per la divisione le Condizioni
+di Esistenza,~$\CE:a\neq0\text{ e }x\neq~0\text{ e }y\neq~0$.
+ \end{esempio}
+
+ \begin{esempio}
+$\bigg(\dfrac{9}{20}a^{2}b^{4}\bigg):\bigg(-{\dfrac{1}{8}}a^{5}b^{2}\bigg)$.
+
+La~$\CE a\neq~0\text{ e }b\neq~0$, il quoziente è
+\[\bigg(\frac{9}{20}a^{2}b^{4}\bigg):\bigg(-{\frac{1}{8}}a^{5}b^{2}\bigg)=%
+\bigg(\frac{9}{20}\bigg)\cdot(-8)a^{2-5}b^{4-2}=-{\frac{18}{5}}a^{-3}b^{2}.\]
+
+Osserviamo che il quoziente ottenuto non è un monomio perché
+l'esponente della variabile~$a$ è negativo. Il
+risultato è un'espressione frazionaria o fratta.
+ \end{esempio}
+\end{exrig}
+
+In conclusione, l'operazione di divisione tra due monomi
+ha come risultato un monomio se ogni variabile del dividendo ha
+esponente maggiore o uguale all'esponente con cui
+compare nel divisore.
+
+
+\vspazio\ovalbox{\risolvii \ref{ese:9.21}, \ref{ese:9.22}, \ref{ese:9.23}}
+
+\section{Addizione di due monomi}
+
+L'addizione di due monomi si indica con lo stesso
+simbolo dell'addizione tra numeri; i suoi termini si
+chiamano \emph{addendi} e il risultato si chiama \emph{somma}.
+
+\subsection{Addizione di due monomi simili}
+
+La somma di due monomi simili è un monomio simile agli addendi e
+avente come coefficiente la somma dei coefficienti.
+
+\begin{exrig}
+ \begin{esempio}
+Calcoliamo~$3x^{3}+(-6x^{3})$.
+
+I due addendi sono monomi simili dunque la somma è ancora un monomio
+ed è simile ai singoli addendi. Precisamente
+$3x^{3}+(-6x^{3})=(3+(-6))x^{3}=-3x^{3}$.
+
+Osserva che la somma di monomi simili si riduce alla somma algebrica di numeri.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi \ref{ese:9.24}}
+
+\subsubsection{Proprietà dell'addizione}
+
+\begin{enumeratea}
+ \item commutativa:~$m_{{1}}+m_{2}=m_{2}+m_{{1}}$;
+ \item associativa:~$m_{{1}}+m_{2}+m_{3}=(m_{{1}}+m_{2})+m_{3}=m_{{1}}+(m_{2}+m_{3})$;
+ \item 0 è l'elemento neutro:~$0+m=m+0=m$;
+ \item per ogni monomio m esiste il monomio \emph{opposto}, cioè un
+ monomio~$m\Ast$ tale che
+ \[m + m\Ast = m\Ast +m=0.\]
+\end{enumeratea}
+
+L'ultima proprietà enunciata ci permette di definire
+nell'insieme dei monomi simili anche la sottrazione di
+monomi. Essa si indica con lo stesso segno della sottrazione tra numeri
+e il suo risultato si chiama \emph{differenza}.
+
+\osservazione Per sottrarre due monomi simili si aggiunge al primo
+l'opposto del secondo.
+
+\begin{exrig}
+ \begin{esempio}
+Assegnati~$m_{{1}}=\dfrac{1}{2}a^{2}b$, $m_{2}=-\text{5a}^{2}b$ determina~$m_{1} - m_{2}$.
+
+L'operazione richiesta
+$\dfrac{1}{2}a^{2}b-(-5a^{2}b)$ diventa
+$\dfrac{1}{2}a^{2}b+5a^{2}b=\dfrac{11}{2}a^{2}b$.
+ \end{esempio}
+\end{exrig}
+
+Sulla base di quanto detto, possiamo unificare le due operazioni di
+addizione e sottrazione di monomi simili in un'unica
+operazione che chiamiamo \emph{somma algebrica di monomi}.
+
+\osservazione La somma algebrica di due monomi simili è un monomio simile agli
+addendi avente per coefficiente la somma algebrica dei coefficienti.
+
+\begin{exrig}
+ \begin{esempio}
+Determiniamo la somma~$\dfrac{3}{5}x^{{4}}-\dfrac{1}{3}x^{{4}}+x^{{4}}+\dfrac{4}{5}x^{{4}}-2x^{{4}}-\dfrac{1}{2}x^{{4}}$.
+
+Osserviamo che tutti gli addendi sono tra loro simili dunque:
+\[\frac{3}{5}x^{{4}}-\frac{1}{3}x^{{4}}+x^{{4}}+\frac{4}{5}x^{{4}}-2x^{{4}}-\frac{1}{2}x^{{4}}=\left(\frac{3}{5}-\frac{1}{3}+1+\frac{4}{5}-2-\frac{1}{2}\right)x^{{4}}=-{\frac{13}{30}}x^{{4}}.\]
+\end{esempio}
+\end{exrig}
+%\newpage
+\subsection{Addizione di monomi non simili}
+
+Analizziamo il caso della seguente
+addizione:~$7a^{3}b^{2}-5a^{2}b^{3}+a^{3}b^{2}$. Si vuole determinare
+la somma. I monomi addendi non sono tutti tra loro simili; lo sono
+però il primo e il terzo.
+
+Le proprietà associativa e commutativa ci consentono di riscrivere
+l'addizione precedente
+``avvicinando'' i monomi simili e
+sostituendo ad essi la loro
+somma:
+\[7a^{3}b^{2}-5a^{2}b^{3}+a^{3}b^{2}=(7a^{3}b^{2}+a^{3}b^{2})-5a^{2}b^{3}=8a^{3}b^{2}-5a^{2}b^{3}.\]
+
+L'espressione così ottenuta è la somma richiesta.
+
+\vspazio\ovalbox{\risolvi \ref{ese:9.25}}\vspazio
+
+Il procedimento che abbiamo seguito per determinare il risultato
+dell'addizione assegnata viene chiamato
+\emph{riduzione dei termini simili}.
+
+In conclusione, l'operazione di addizione tra monomi ha
+come risultato un monomio solo se gli addendi sono monomi simili; in
+caso contrario la somma viene effettuata riducendo i monomi simili e
+lasciando indicata l'addizione tra gli altri monomi.
+
+\begin{exrig}
+ \begin{esempio}
+Calcola la seguente somma:~$3a-7a+2a+a$.
+
+Il risultato è un monomio poiché gli addendi sono monomi
+simili, e vale $-a$.
+ \end{esempio}
+
+ \begin{esempio}
+Calcola la seguente somma:
+$\dfrac{1}{2}a^{3}+b-\dfrac{3}{4}a^{3}-\dfrac{6}{5}b$.
+
+Il risultato non è un monomio poiché gli addendi non sono
+monomi simili: $-{\dfrac{1}{4}}a^{3}-\dfrac{1}{5}b$.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:9.26}, \ref{ese:9.27}, \ref{ese:9.28}, \ref{ese:9.29}, \ref{ese:9.30}, \ref{ese:9.31}, \ref{ese:9.32}}
+
+\section{Espressioni con i monomi}
+Consideriamo l'espressione letterale
+$E=\left(-{\frac{1}{2}}a^{2}b\right)^{3}:(a^{5}b)+(-2ab)\cdot\left(\frac{1}{2}b+b\right)+5ab^{2}$.
+
+Vediamo che è in due variabili, le variabili sono infatti~$a$ e~$b$. Inoltre, i termini delle operazioni che vi compaiono sono monomi.
+
+Se volessimo calcolare il valore di~$E$ per~$a = 10$ e $b = -2$ dovremmo
+sostituire nell'espressione tali valori e risolvere
+l'espressione numerica che ne risulta. Inoltre se
+dovessimo calcolare il valore di~$E$ per altre coppie dovremmo ogni volta
+applicare questo procedimento.
+
+Dal momento che abbiamo studiato come eseguire le operazioni razionali
+con i monomi, prima di sostituire i numeri alle lettere, applichiamo le
+regole del calcolo letterale in modo da ridurre~$E$, se possibile,
+in un'espressione più semplice.
+
+Prima di procedere, essendovi una divisione, poniamo innanzi tutto
+la~$\CE a \neq~0$ e~$b \neq~0$ ed eseguiamo rispettando la precedenza
+delle operazioni come facciamo nelle espressioni numeriche.
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+Calcola $\bigg(-{\dfrac{1}{2}}a^{2}b\bigg)^{3}:(a^{5}b)+(-2ab)\cdot\bigg(\dfrac{1}{2}b+b\bigg)+5ab^{2}$ per $a=10$ e $b=-2$.
+ \begin{align*}
+ &\text{sviluppiamo per prima il cubo} && = \bigg(-{\frac{1}{8}}a^{6}b^{3}:a^{5}b\bigg)+(-2ab)\cdot{\frac{3}{2}}b+5ab^{2} \\
+ &\text{eseguiamo divisione e moltiplicazione} && = -{\frac{1}{8}}ab^{2}-3ab^{2}+5ab^{2}\\
+ &\text{sommiamo i monomi simili} && = \frac{15}{8}ab^{2}.
+ \end{align*}
+ Ora è più semplice calcolarne il valore per~$a=10$ e~$b=-2$: si
+ ha~$=\frac{15}{8}\cdot 10\cdot(-2)^{2}=\frac{15}{8}\cdot 10\cdot 4=75$.
+ \end{esempio}
+
+ \begin{esempio}
+Riduci l'espressione $\bigg(\dfrac{2}{3}ab^{2}c\bigg)^{2}:\big(-3ab^{3}\big)-\dfrac{2}{9}abc^{2}$.
+ \begin{align*}
+ &\text{Sviluppiamo le potenze} && = \frac{4}{9}a^{2}b^{4}c^{2}:\big(-3ab^{3}\big)-\frac{2}{9}abc^{2}\\
+ &\text{eseguiamo la divisione e moltiplichiamo le frazioni} && = -{\frac{4}{27}}abc^{2}-\frac{2}{9}abc^{2}\\
+ &\text{sommiamo i monomi simili} && = \frac{-4-6}{27}abc^{2}\\
+ &\text{il risultato è} && = -{\frac{10}{27}}abc^{2}.
+ \end{align*}
+ \end{esempio}
+
+ \begin{esempio}
+Riduci l'espressione $\Bigg[\bigg(-{\dfrac{14}{16}}x^{2}y^{2}\bigg):\bigg(-{\dfrac{14}{4}}xy\bigg)\Bigg]^{3}+\dfrac{1}{2}xy\cdot{\dfrac{1}{4}}x^{2}y^{2}$.
+ \begin{align*}
+ &\text{Eseguiamo per prima la divisione tra le parentesi quadre} && = \bigg[+{\frac{14}{16}}\cdot{\frac{4}{14}}xy\bigg]^{3}+\frac{1}{2}xy\cdot {\frac{1}{4}}x^{2}y^{2}\\
+ &\text{eseguiamo la moltiplicazione tra le frazioni} && = \bigg[\frac{1}{4}xy\bigg]^{3}+\frac{1}{2}xy\cdot{\frac{1}{4}}x^{2}y^{2}\\
+ &\text{sviluppiamo il cubo} && = \frac{1}{64}x^{3}y^{3}+\frac{1}{2}xy\cdot {\frac{1}{4}}x^{2}y^{2}\\
+ &\text{moltiplichiamo i due monomi} && = \frac{1}{64}x^{3}y^{3}+\frac{1}{8}x^{3}y^{3}\\
+ &\text{sommiamo i monomi simili} && = \frac{1+8}{64}x^{3}y^{3}\\
+ &\text{il risultato è} && = \frac{9}{64}x^{3}y^{3}.
+\end{align*}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:9.33}, \ref{ese:9.34}, \ref{ese:9.35}, \ref{ese:9.36}, \ref{ese:9.37}, \ref{ese:9.38}, \ref{ese:9.39}, \ref{ese:9.40}, \ref{ese:9.41}, \ref{ese:9.42}}
+
+\section{Massimo Comune Divisore e minimo comune multiplo tra monomi}
+\subsection{Massimo Comune Divisore}
+
+Il calcolo del minimo comune multiplo e del Massimo Comune Divisore,
+studiato per i numeri, si estende anche ai monomi. Premettiamo intanto
+le seguenti definizioni.
+
+\begin{definizione}
+ Un monomio~$A$ si dice \emph{multiplo} di un monomio~$B$ se esiste un
+monomio~$C$ per il quale si ha~$A=B\cdot C$; in questo caso diremo anche che~$B$
+è \emph{divisore} del monomio~$A$.
+\end{definizione}
+
+\begin{definizione}
+ Il \emph{massimo comune divisore} ($\mcd$) tra due o più monomi è il
+monomio che, tra tutti i divisori comuni dei monomi dati, ha grado
+massimo.
+\end{definizione}
+
+Il coefficiente numerico può essere un qualunque numero reale: se i
+coefficienti sono tutti interi è opportuno scegliere il loro~$\mcd$,
+se non sono interi è opportuno scegliere~1.
+
+\begin{exrig}
+ \begin{esempio}
+Dati i monomi~$12a^{3}b^{2}$ e~$16a^{2}b$ sono divisori
+comuni:
+\[1\text{,~}2\text{,~}4\text{,~}a\text{,~}a^{2}\text{,~}b\text{,~}ab\text{,~}a^{2}b\text{,~}2a\text{,~}2a^{2}\text{,~}2b\text{,~}2ab\text{,~}2a^{2}b\text{,~}4a\text{,~}4a^{2}\text{,~}4b\text{,~}4ab\text{,~}4a^{2}b.\]
+
+Il monomio di grado massimo è~$a^{2}b$, il~$\mcd$ tra i coefficienti
+è~4. Pertanto il~$\mcd$ dei monomi è~$4a^{2}b$.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}[Calcolare il~$\mcd$ tra monomi]
+
+Il~$\mcd$ di un gruppo di monomi è il monomio che ha:
+
+\begin{enumeratea}
+ \item per coefficiente numerico il~$\mcd$ dei valori assoluti dei
+coefficienti dei monomi qualora
+questi siano numeri interi, se non sono interi si prende~1;
+ \item la parte letterale formata da tutte le lettere comuni ai monomi
+dati, ciascuna presa una sola volta e con l'esponente minore con cui compare.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Calcolare il~$\mcd (14a^{3}b^{4}c^{2}\text{,~}4ab^{2}\text{,~}8a^{2}b^{3}c)$.
+
+Per prima cosa calcoliamo il~$\mcd$ tra i coefficienti numerici~14, 4 e
+8 che è~2. Per ottenere la parte letterale si mettono insieme tutte
+le lettere comuni, ciascuna con l'esponente minore con
+cui compare:~$ab^{2}$.
+
+In definitiva, quindi, il~$\mcd (14a^{3}b^{4}c^{2}\text{,~}4ab^{2}\text{,~}8a^{2}b^{3}c)=2ab^{2}$.
+ \end{esempio}
+
+ \begin{esempio}
+Calcolare il massimo comune divisore tra~$5x^{3}y^{2}z^{3}$, $-\frac{1}{8}xy^{2}z^{2}$ e $7x^{3}yz^{2}$.
+
+Si osservi che i coefficienti numerici dei monomi non sono numeri interi
+quindi si prende~1 come coefficiente del~$\mcd$.
+Le lettere in comune sono~$x$, $y$ e $z$. Prese ciascuna con
+l'esponente minore con cui compaiono si ha~$xyz^{2}$.
+
+Quindi, il~$\mcd (5x^{3}y^{2}z^{3}\text{,~}-\frac{1}{8}xy^{2}z^{2}\text{,~}7x^{3}yz^{2})=xyz^{2}$.
+ \end{esempio}
+\end{exrig}
+
+\osservazione La scelta di porre uguale a~1 il coefficiente numerico del~$\mcd$, nel
+caso in cui i monomi abbiano coefficienti razionali, è dovuta al
+fatto che una qualsiasi frazione divide tutte le altre e quindi una
+qualsiasi frazione potrebbe essere il coefficiente del~$\mcd$. Ad essere
+più precisi, occorrerebbe, quando si parla di monomi e polinomi,
+chiarire a quale degli insiemi numerici~$\insN$, $\insZ$, $\insQ$ e~$\insR$ appartengono i loro
+coefficienti. Qui stiamo considerando coefficienti numerici in~$\insR$.
+
+\begin{definizione}
+ Due monomi si dicono \emph{monomi primi tra loro} se il loro~$\mcd$ è~1.
+\end{definizione}
+
+
+\subsection{Minimo comune multiplo}
+
+Estendiamo ora ai monomi la nozione di minimo comune multiplo.
+
+\begin{definizione}
+ Il \emph{minimo comune multiplo} ($\mcm$) di due o più monomi
+è il monomio che, tra tutti i monomi multipli comuni dei monomi dati,
+ha il grado minore.
+\end{definizione}
+
+Il coefficiente numerico può essere un qualunque numero reale: se i
+coefficienti sono tutti interi è opportuno scegliere il loro~$\mcm$,
+se non lo sono è opportuno scegliere~1.
+
+\begin{exrig}
+ \begin{esempio}
+Per calcolare il minimo comune multiplo tra~$5a^{3}b$ e~$10a^{2}b^{2}$ dovremmo costruire i loro multipli finché non
+incontriamo quello comune che ha coefficiente numerico positivo più
+piccolo e grado minore:
+
+\[\text{ alcuni multipli di }5a^{3}b\text{ sono: }10a^{3}b\text{,~}10a^{3}b^{2}\text{,~}10a^{4}b\text{,~}15a^{3}b\text{,~}\ldots\]
+\[\text{ alcuni multipli di }10a^{2}b^{2}\text{ sono: }10a^{2}b^{3}\text{,~}10a^{3}b^{2}\text{,~}10a^{4}b^{2}\text{,~}20a^{2}b^{2}\text{,~}\ldots\]
+
+Il minimo comune multiplo è~$10a^{3}b^{2}$.
+ \end{esempio}
+\end{exrig}
+
+In realtà, applicando la definizione è poco pratico calcolare il~$\mcm$, è utile invece la seguente procedura.
+
+\begin{procedura}[Calcolo del~$\mcm$ tra due o più monomi]
+Il~$\mcm$ di un gruppo di monomi è il monomio che ha:
+
+\begin{enumeratea}
+ \item per coefficiente numerico il~$\mcm$ dei valori assoluti dei
+coefficienti dei monomi qualora
+questi siano numeri interi, se non sono interi si prende~1;
+ \item la parte letterale formata da tutte le lettere comuni e non comuni
+ai monomi dati, ciascuna
+presa una sola volta e con l'esponente maggiore con
+cui compare.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Calcola il minimo comune multiplo tra
+$5a^{3}bc$, $12ab^{2}c$ e~$10a^{3}bc^{2}$.
+
+Il~$\mcm$ tra i coefficienti~5, 12, 10 è~60. Per ottenere la parte
+letterale osservo il grado maggiore delle lettere componenti i
+monomi, riporto tutte le lettere, comuni e non comuni, una sola volta
+con il grado maggiore con cui ciascuna compare:~$a^{3}b^{2}c^{2}$.
+
+In definitiva, il
+$\mcm(5a^{3}bc\text{,~}12ab^{2}c\text{,~}10a^{3}bc^{2})=60a^{3}b^{2}c^{2}$.
+ \end{esempio}
+
+ \begin{esempio}
+Calcola il~$\mcm(6x^{2}y\text{,~}-\frac{1}{2}xy^{2}z\text{,~}\frac{2}{3}x^{3}yz)$.
+
+I coefficienti numerici dei monomi non sono interi, quindi il~$\mcm$
+avrà come coefficiente~1.
+
+La parte letterale si costruisce mettendo insieme tutte le lettere che
+compaiono ($x$, $y$, $z$), ciascuna presa con
+l'esponente massimo, quindi~$x^{3}y^{2}z$.
+
+In definitiva
+$\mcm(6x^{2}y\text{,~}-\frac{1}{2}xy^{2}z\text{,~}\frac{2}{3}x^{3}yz)=x^{3}y^{2}z$.
+ \end{esempio}
+\end{exrig}
+
+Assegnati due monomi, per esempio~$x^{2}y$ e~$xy^{2}z$,
+calcoliamo~$\mcd$ e $\mcm$.
+$\mcd(x^{2}y\text{,~}xy^{2}z)=xy$ e~$\mcm(x^{2}y\text{,~}xy^{2}z)=x^{2}y^{2}z$.
+Moltiplichiamo ora~$\mcd$ e~$\mcm$. Abbiamo:~$xy\cdot x^{2}y^{2}z= x^{3}y^{3}z.$
+Moltiplichiamo ora i monomi assegnati. Abbiamo:~$(x^{2}y)\cdot (xy^{2}z)=x^{3}y^{3}z.$
+Il prodotto dei due monomi è uguale al prodotto tra il~$\mcd$ e
+il~$\mcm$. Si può dimostrare che questa proprietà vale in generale.
+
+\begin{proprieta}
+ Dati due monomi, il prodotto tra il loro massimo comune
+divisore e il loro minimo comune multiplo è uguale al prodotto tra i
+monomi stessi.
+\end{proprieta}
+
+\ovalbox{\risolvii \ref{ese:9.41}, \ref{ese:9.42}, \ref{ese:9.43}, \ref{ese:9.44}, \ref{ese:9.45}, \ref{ese:9.46}, \ref{ese:9.47}}
+
+\newpage
+\input{./chap/09_esercizi}
+\cleardoublepage

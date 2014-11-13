@@ -1,0 +1,8 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \begin{scope}[scale=1,every node/.style={minimum size=1cm},on grid]
+    \draw[step=10mm, black, dashed] (0,0) grid (6,5);
+    \fill[gray, opacity=.4] (5,4) rectangle (6,5);
+    \draw[black,very thick] (0,0) rectangle (6,5);
+  \end{scope} 
+\end{tikzpicture}

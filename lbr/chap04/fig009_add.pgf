@@ -1,0 +1,24 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small\ttfamily,anchor=north]
+
+\matrix(a) [matrix of nodes,nodes={ text centered}]
+{
++&0&1\\
+0&0&1 \\
+1&1&10\\
+};
+\begin{scope}[blue]
+\draw (a-1-2.north west)--(a-3-2.south west);
+\draw (a-2-1.north west) -- (a-2-3.north east);
+\end{scope}
+\begin{scope}[xshift=35mm]
+\matrix(b) [matrix of nodes,nodes={ text centered },cells={anchor=north}, row 1/.style={red}]
+{
+Riporti&&&&1&1\\
+&1&0&1&0&1&1&$+$ \\
+&&1&0&0&1&1&{}\\
+&1&1&1&1&1&0\\
+};
+\draw (b-4-2.north west)--(b-4-7.north east);
+\end{scope}
+\end{tikzpicture}

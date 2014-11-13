@@ -1,0 +1,19 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\footnotesize]
+
+\matrix(a) [matrix of nodes,nodes={text width=19mm, text centered}]
+{
+Successive \emph{divisioni} per 2 &\emph{Quozienti} delle successive divisioni per 2 & \emph{Resti} delle successive divisioni per 2 \\
+$59:2$&29&1\\
+$29:2$&14&1\\
+$14:2$&7&0\\
+$7:2$&3&1\\
+$3:2$&1&1\\
+$1:2$&0&1\\
+};
+\draw[thick] (a-1-1.north west)--(a-1-3.north east);
+\draw[thin] (a-2-1.north west)--(a-2-3.north east);
+\draw[thick] (a-7-1.south west)--(a-7-3.south east);
+
+\draw[->,thick,blue](a-7-3.east)--(a-2-3.east);
+\end{tikzpicture}

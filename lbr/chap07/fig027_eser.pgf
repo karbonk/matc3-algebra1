@@ -1,0 +1,10 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=3mm, y=5mm,font=\small]
+
+\draw[->, thick] (-1,0)--(24,0) node [above left] {$\insN$};
+\draw[pattern =north east lines, pattern color=RedOrange] (1,0) rectangle (15,1) (1,1)node[left] {$A$};
+\draw[pattern =north west lines, pattern color=CornflowerBlue] (2,0) rectangle (20,1.5) node[right]{$B$};
+
+\foreach \x/\xtext in {1/1,2/2,15/15,20/20}
+\draw[fill] (\x,0)circle (1pt) (\x,0)node [below]{\xtext};
+\end{tikzpicture}

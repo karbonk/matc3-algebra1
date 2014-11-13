@@ -1,0 +1,52 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=6mm,y=6mm]
+  % Aritmetica
+  \node (o) at (0,0) {$+$}; % segno
+  \foreach \x in {0,1,...,11} { 
+    \node (a) at (\x+1,0) {\x}; % riga esterna
+    \node (b) at (0,-\x-1) {\x}; % col. esterna
+  }
+  \draw (-3mm,-3mm)--(74mm,-3mm); % linea orizzontale
+  \draw (3mm,3mm)--(3mm,-74mm); % linea verticale
+  
+  \foreach \x[count=\xi] in {0,...,11} 
+    \foreach \y [count=\yi]in {\x,...,11}% 
+      \node () at (\xi,-\yi) {\y};% Compila fino a 11, partendo da 0 e aumentando di 1 ad ogni nuova riga
+
+  \foreach \x[count=\xii] in {0,...,10} 
+    \foreach \y [count=\yii]in {\x,...,0}
+      \node () at (\xii+1,\yii-13) {\y};% Compila fino a 10, partendo da 0 e aumentando di 1 fino alla fine di ogni nuova riga
+
+  %Orologio
+  \begin{scope}[xshift=10.9cm, yshift=-2.2cm] % spostamento
+    \draw [double] (0,0) circle (2cm); % stile e dimensione
+    \foreach \angle/ \label in {0/3, 30/2, 60/1, 90/12, 120/11, 150/10, 180/9,210/8, 240/7, 270/6, 300/5, 330/4}{% posizione ore
+      \draw[line width=1pt] (\angle:1.8cm) -- (\angle:1.99cm); % lineette delle ore
+      \draw (\angle:1.5cm) node{\textsf{\label}};
+    }
+    \begin{scope}[->,line width=1pt] % lancette
+      \draw (0,0) -- (330:1cm); 
+      \draw [dashed](0,0) -- (180:1cm);
+    \end{scope}
+    \path [decorate,decoration={text along path,text={indietro di 7}}](3.8,-2.2) arc  (-30:180:4.4); % testo curvato
+    \path [decorate,decoration={text along path,text={avanti di 7}}](-3.9,0) arc  (180:-30:3.9); % testo curvato
+    \draw[blue,<-<](-4.5,0) arc (180:-30:4.5);
+    \draw[red,>->,dashed](-3.7,0) arc (180:-30:3.7);
+  \end{scope}
+  % Diagramma
+  \begin{scope}[xshift=10.9cm,yshift=-4.7cm,->]
+    \node at (0,0) {Operatore};
+    \node at (-4,0) {Inizio};
+    \node at (4,0) {Fine};
+
+    \node [circle,fill=gray!40](nove) at (-4,-3) {9};
+    \node[ellipse,fill=gray!20](avanti) at (0,-1.5)  {avanti di 7};
+    \node[ellipse,fill=gray!20](indietro) at (0,-4.5)  {indietro di 7};
+    \node [circle,fill=gray!40](quattro) at (4,-3) {4};
+
+    \draw[red] (nove) ..controls +(up:10mm) and  +(left:15mm).. (avanti);
+    \draw[red] (avanti) ..controls +(right:15mm) and  +(up:10mm).. (quattro);
+    \draw[blue] (quattro) ..controls +(down:10mm) and  +(right:20mm).. (indietro);
+    \draw[blue] (indietro) ..controls +(left:20mm) and  +(down:10mm).. (nove);
+  \end{scope}
+\end{tikzpicture}

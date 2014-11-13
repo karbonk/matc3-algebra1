@@ -1,0 +1,40 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm, scale=.7]
+
+  \node[ellipse, minimum height=3cm,draw, minimum width=4cm] (A) at (0,0) {};
+  \node[above right] () at (A.north east) {$A$};
+
+  \begin{scope}[fill=CornflowerBlue, every node/.style={draw=black, fill}]
+
+    \node[circle, minimum height=1cm]  (a) at (-1.5,.5) {};
+    \node[circle,fill=white, minimum height=.5cm]  at (-1.5,.5) {};
+    \filldraw (.5,0) ..controls +(90:.25cm) and +(90:.5cm) .. (0,0) .. controls  +(-90:.25cm) and +(90:0cm) .. (.5,-.7) .. controls +(90:0cm) and +(-90:.25cm) ..(1,0)  ..%
+    controls +(90:.5cm) and  +(90:.25cm) .. (.5,0) node[draw=CornflowerBlue,below] (h) {};
+
+    \node[regular polygon,regular polygon sides=5, inner sep=2mm] (p) at (-1,-1.2){};
+
+    \node [cylinder, rotate=90, minimum height=1cm, minimum width=.5cm] at (1.5,.5) (c) {};
+
+    \node [single arrow,shape border rotate=90, minimum height=1cm, minimum width=1cm] (f) at (-.4,1.2){};
+  \end{scope}
+
+  \begin{scope}[xshift=6cm]
+    \node[ellipse, minimum height=3cm,draw, minimum width=4cm] (B) at (0,0) {};
+
+    \node[above right] () at (B.north east) {$B$};
+
+    \node (a1) at (2,0) {anello};
+    \node (h1) at (0,1.5) {cuore};
+    \node (f1) at (-1.3,.75) {freccia};
+    \node (p1) at (0,-1) {pentagono};
+    \node (c1) at (0,0) {cilindro};
+  \end{scope}
+  
+  \begin{scope}[->,smooth,thick]
+    \draw[Maroon] (a) .. controls +(-80:2cm) and +(-150:1cm) .. (a1);
+    \draw[orange] (f) .. controls +(30:2cm) and +(150:1cm) .. (f1);
+    \draw[red] (c) .. controls +(-30:2cm) and +(-150:1cm) .. (c1);
+    \draw[yellow] (p) .. controls +(-30:2cm) and +(-150:1cm) .. (p1);
+    \draw[CornflowerBlue] (h.east) .. controls +(-30:2cm) and +(150:1cm) .. (h1.west);
+  \end{scope}
+\end{tikzpicture}

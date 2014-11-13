@@ -1,0 +1,14 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Somma -1-3
+ \begin{tikzpicture}[decoration={markings,mark=between positions .3 and .5 step 30pt with {\arrowreversed{stealth}}}]
+  \begin{scope}[thick,font=\scriptsize]
+   \draw[->] (-160pt,0)  - -  (110pt,0) node[above]{$\insZ$};
+    \foreach \c in {-4,-3,-2}{%
+     \draw[dotted, color=CornflowerBlue,postaction={decorate}](\c,5pt)--(\c,5pt) arc (180:0:0.5 and 0.5);}
+    \foreach \n in {-5,-4,...,0}{%	
+     \draw (\n,-3pt) -- (\n,3pt)   node [below=5pt] {$\n$};}
+    \foreach \m in {1,2,3}{%	
+     \draw (\m,-3pt) -- (\m,3pt)   node [below=5pt] {$+\m$};}
+
+  \end{scope}
+ \end{tikzpicture}

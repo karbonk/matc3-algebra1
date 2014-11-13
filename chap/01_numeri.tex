@@ -1,0 +1,977 @@
+% (c) 2012 -2014 Dimitrios Vrettos - d.vrettos@gmail.com
+% (c) 2014 Claudio Carboncini - claudio.carboncini@gmail.com
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+
+\chapter{Numeri naturali}
+
+\section{L'origine dei numeri}
+
+L'origine del sistema dei numeri naturali si perde nella notte dei tempi. Non abbiamo
+documenti sufficienti per capire come l'uomo li abbia costruiti o scoperti; è possibile
+che il nostro sistema di numerazione sia nato contemporaneamente al linguaggio stesso
+della specie umana. Sono stati ritrovati tronchi fossili risalenti a più di trentamila
+anni fa, recanti delle incisioni a distanza regolare. In particolare, è stato ritrovato un
+osso di babbuino, detto ``Osso di Ishango'' (figura \ref{fig:ishango})
+\footnote{\url{http://it.wikipedia.org/wiki/Osso_d'Ishango}} in quanto è stato rinvenuto presso la città di
+Ishango nel Congo tra il Nilo e il lago Edoardo, che riporta delle tacche disposte
+in modo tale da farci pensare che rappresentino dei numeri o dei calcoli. L'osso risale a
+un periodo tra il~$20\,000$~\aC\ e il~$18\,000$~\aC
+
+\begin{wrapfloat}{figure}{r}{0pt}
+\includegraphics[scale=0.35]{/part01/chap01/fig001.png}
+\caption{Osso di Ishango}
+\label{fig:ishango}
+\end{wrapfloat}
+Possiamo immaginare che i pastori per contare i capi del proprio gregge, facessero delle
+tacche su dei bastoni mano a mano che le pecore entravano nel recinto una alla volta: una
+tacca per ogni pecora. Tuttavia, questo metodo di associazione uno ad uno (una tacca per
+una pecora) non è efficace per greggi, o oggetti da contare, di grandi dimensioni. Si
+immagini, per esempio, la difficoltà di tracciare cinquecento tacche su un bastone. È
+possibile allora che per rappresentare numeri grandi si siano cominciati a usare simboli
+specifici che richiamassero alla mente i numeri grandi e che contemporaneamente siano
+state fissate alcune regole per associare questi simboli.
+
+Sappiamo per certo che circa~6\,000 anni fa gli antichi Egizi scrivevano, incidendo sulla
+pietra, i numeri utilizzando geroglifici per le potenze di~10:
+
+\input{lbr/chap01/tab001}
+\vspace{-4ex}
+Ripetendo questi simboli è possibile scrivere, per esempio, il numero~$3\,673$ così:
+
+\vspace{-2ex}\input{lbr/chap01/tab002}\vspace{-2ex}
+
+I Romani usavano invece sette simboli con i quali, seguendo determinate regole,
+rappresentavano qualunque numero. I simboli sono~$I=1$, $V=5$, $X=10$, $L=50$, $C=100$, $D=500$, $M=1\,000$.
+La scrittura~$MM$ rappresenta il valore~$~1\,000+1\,000 =~2\,000$, mentre~$ VI$ rappresenta~$~5+1=6$ ed invece~$ IV$ rappresenta~$5-1=4$.
+
+\section{Il sistema di numerazione decimale posizionale}
+Il modo di scrivere i numeri dei Romani risultava piuttosto complicato sia nella scrittura
+dei numeri sia nell'esecuzione dei calcoli. Il sistema tutt'oggi utilizzato per la scrittura dei numeri fa uso dei soli dieci simboli~0, 1, 2, 3, 4, 5, 6, 7, 8, 9, che vengono detti \emph{cifre}. Un numero è rappresentato da una sequenza ordinata di tali cifre (eventualmente anche ripetute).
+
+Per rappresentare il numero dieci, che segue il~9, non si fa uso di un simbolo diverso ma si scrivono due cifre: il simbolo 1 e il simbolo 0 alla sua destra. Per chiarire questo metodo utilizziamo un pallottoliere (figura~\ref{fig:pallottoliere}) con aste verticali capaci di contenere fino a~9 dischetti: per rappresentare il numero~10 dispongo un dischetto nell'asta a sinistra e svuotando quella immediatamente alla sua destra: il numero dieci viene rappresentato dalla scrittura~10 che indica appunto 1 dischetto nella seconda asta (iniziando il conteggio da quella più a destra) e 0 in quella immediatamente a destra.
+
+\begin{wrapfloat}{figure}{r}{0pt}
+\input{./lbr/chap01/img001_pal.pgf}
+\caption{Il pallottoliere}
+\label{fig:pallottoliere}
+\end{wrapfloat}
+
+I dischetti sull'ultima asta rappresentano il numero~9; un dischetto sulla penultima
+rappresenta il numero~10. Per rappresentare il numero cento si fa uso della scrittura~100.
+Ovvero si sposta il numero~1 ancora a sinistra ponendo uno 0 nel posto lasciato vuoto.
+
+Questo metodo rappresenta i numeri dando ad ogni cifra un peso differente a seconda della posizione che essa occupa all'interno della rappresentazione del numero stesso: ogni posizione occupata da una cifra vale 10 volte di più rispetto a quella che si trova immediatamente alla sua destra.
+La rappresentazione di un numero è quella che si ottiene riportando il numero di dischetti presenti in ogni asta dell'abaco, uno accanto all'altro. Per esempio, se ci sono soltanto 3 dischetti nella terza asta il numero in cifre è~$300$, mentre la scrittura~$219$ indica 2 dischetti nella terza asta, 1 nella seconda e 9 nella prima.
+Il sistema di numerazione che utilizziamo, detto \emph{sistema decimale}, si basa sulle potenze di~10 (sezione~\ref{sect:potenza}), che è la base dei pesi assegnati alle posizioni occupate dalle cifre.
+
+Nel pallottoliere ciascuna asta indica una potenza di dieci. Il valore di un numero si ottiene moltiplicando ciascuna cifra per il suo peso e sommando i valori ottenuti.
+
+Per esempio, tre dischetti nella terza asta rappresentano il numero~$~3\cdot 10^2=300$.
+Il numero~$219$ si rappresenta tenendo conto di questa scrittura~$~2\cdot 10^2+1\cdot 10+9$.
+
+Per quanto detto, il sistema di numerazione che usiamo è decimale o a base dieci, perché
+utilizza dieci simboli (cifre) per rappresentare i numeri, e posizionale perché una stessa cifra
+assume un peso (valore) diverso a seconda della posizione che essa occupa.
+
+\section{I numeri naturali}
+
+I primi numeri che abbiamo usato sin da bambini per contare gli oggetti o le persone si
+chiamano \emph{numeri naturali}
+\[ 0\text{,~}1\text{,~}2\text{,~}3\text{,~}4\text{,~}5\text{,~}6\text{,~}7\text{,~}8\text{,~}9\text{,~}10\text{,~}11\text{,~}12\text{,~}13\text{,~}\dots \]
+L'insieme di tutti questi numeri si indica con la lettera~$\insN$.
+
+Cosa hanno in comune le dita di una mano, con~5 mele, 5~penne, 5~sedie? Evidentemente
+il numero~5. Una caratteristica cioè che è comune a tutti gli insiemi formati da~5
+oggetti. Questa caratteristica può essere vista come un oggetto a sé stante, un oggetto
+astratto di tipo matematico.
+
+Ma i numeri naturali non servono solo per indicare quanti oggetti ci sono (aspetto
+\emph{cardinale} del numero), vengono usati anche per rappresentare l'ordine con cui si
+presentano gli oggetti, (aspetto \emph{ordinale}), l'ordine per esempio con cui i corridori
+arrivano al traguardo: primo, secondo, terzo, \ldots
+
+Nonostante i numeri naturali e le operazioni su di essi ci vengano insegnati fin da
+piccoli, e nonostante l'umanità li usi da tempi antichissimi una loro piena comprensione
+non è semplice, come dimostra il fatto che ancora oggi i matematici ne discutono. Il
+dibattito su cosa siano i numeri e su cosa si fondano è stato particolarmente animato nei
+primi decenni del $XX$~secolo, quando ne hanno discusso matematici e filosofi come Frege,
+Peano, Russell, Hilbert e tanti altri. Oggi ci sono diversi punti di vista.
+
+\subsection{Rappresentazione geometrica}
+I numeri naturali possono essere rappresentati su una semiretta: si identifica il numero~0
+con l'origine della semiretta, come verso di percorrenza si prende quello da sinistra
+verso destra e come unità di misura un segmento~$AB$. Si riporta questa unità di misura
+più volte partendo dall'origine e a ogni passo si va al numero successivo.
+\begin{center}
+ \input{./lbr/chap01/fig001_rapgeoi.pgf}
+\end{center}
+
+
+Ogni numero naturale si costruisce a partire dal numero~0 e passando di volta in volta al
+numero successivo: 1 è il successore di~0, 2~è il successore di~1, 3~è il successore di~2,
+ecc. Ogni numero naturale ha il successore e ogni numero, a eccezione di~0, ha il
+precedente. L'insieme~$\insN$ ha~0 come elemento minimo e non ha un elemento massimo.
+
+I numeri rappresentati sulla retta sono sempre più grandi man mano che si procede da
+sinistra verso destra. Ogni numero è maggiore di tutti i suoi precedenti, quelli che
+stanno alla sua sinistra, e minore di tutti i suoi successivi, quelli che stanno alla sua
+destra. Tra i numeri naturali esiste quindi una relazione d'ordine, che si rappresenta con i simboli di
+\emph{disuguaglianza}~$\le$ (si legge ``minore o uguale a'') e~$\ge$ (si legge ``maggiore o uguale a'') o \emph{disuguaglianza stretta}~$<$ (si legge ``minore di'') e~$>$ (si legge ``maggiore di'').
+Grazie a questo ordinamento, è sempre possibile confrontare due numeri naturali qualsiasi.
+
+\begin{legge}[di tricotomia]
+Dati due numeri naturali~$n$ e~$m$ vale sempre una delle seguenti tre relazioni: \quad $n<m$,\quad $n=m$,\quad $n>m$.
+\end{legge}
+
+\section{Operazioni con i numeri naturali}
+\subsection{Addizione e moltiplicazione di numeri naturali}
+
+Tra i numeri naturali è definita l'operazione di addizione come segue:
+
+\begin{definizione}
+Dati due numeri naturali~$n$ e~$m$, detti \emph{addendi}, l'operazione di \emph{addizione} associa ai
+due addendi un terzo numero~$s$, detto \emph{somma}, che si ottiene partendo da~$n$ e procedendo
+verso i successivi di~$n$ tante volte quante indica il secondo addendo~$m$. Si scrive~$n+m=s$.
+\end{definizione}
+Ad esempio se vogliamo eseguire la somma~$3+5$, dobbiamo partire da~3 e contare~5 numeri successivi:
+
+\input{./lbr/chap01/fig002_addmol.pgf}
+
+\begin{definizione}
+Dati due numeri naturali~$n$,~$m$, detti \emph{fattori}, l'operazione di
+\emph{moltiplicazione} associa ai due fattori un terzo numero~$p$, detto \emph{prodotto},
+che si ottiene sommando~$n$ addendi tutti uguali a~$m$.
+\end{definizione}
+
+L'operazione di moltiplicazione può essere indicata con diversi simboli:
+\[n\times m=p\text{,}\qquad n\cdot m=p\text{,~}\qquad n\ast m=p.\]
+Per eseguire la moltiplicazione~$4\cdot 2$ dobbiamo addizionare~$2+2+2+2$ e otteniamo~8.
+
+Le operazioni di addizione e moltiplicazione si dicono \emph{operazioni interne} all'insieme dei
+numeri naturali, poiché, utilizzando numeri naturali, esse danno sempre come risultato un numero naturale.
+
+ \vspazio\ovalbox{\risolvi \ref{ese:1.1}}
+
+\subsection{Sottrazione e divisione di numeri naturali}
+
+Diamo la seguente definizione:
+
+\begin{definizione}
+Dati due numeri naturali~$n$ e~$m$, il primo detto \emph{minuendo} e il secondo \emph{sottraendo}, si
+dice \emph{differenza} il numero naturale~$d$, se esiste, che aggiunto ad~$m$ dà come somma~$n$.
+Si scrive~$n-m=d$.
+\end{definizione}
+
+Per esempio, $7-5=2$ perché~$5+2=7$.
+
+Non esiste invece la differenza tra~5 e~7, in quanto nessun numero naturale aggiunto a~7
+può dare~5.
+
+Ritornando alla rappresentazione dei numeri naturali sulla semiretta orientata, la
+differenza tra i numeri~7 e~5 si può trovare partendo da~7 e procedendo a ritroso di~5
+posizioni.
+
+\input{./lbr/chap01/fig003_sotdivi.pgf}
+
+Diventa allora evidente perché non è possibile trovare la differenza tra~5 e~7, infatti
+partendo dal~5 non è possibile andare indietro di~7 posizioni, poiché non è possibile
+andare oltre il numero~0 che è il più piccolo dei numeri naturali.
+
+\input{./lbr/chap01/fig004_sotdivii.pgf}
+
+Si può osservare allora che in~$\insN$ la sottrazione~$a - b$ è possibile solo se~$b\leq a$.
+
+\begin{definizione}
+Dati due numeri naturali~$n$ e~$m$, con~$m\neq0$, il primo detto \emph{dividendo} e il secondo
+\emph{divisore}, si dice \emph{quoziente esatto} (o \emph{quoto}) un numero naturale~$q$, se esiste, che moltiplicato
+per~$m$ dà come prodotto~$n$.
+\end{definizione}
+
+L'operazione di divisione può essere indicata con diversi simboli:
+\[n \div m=q\text{,}\qquad n : m=q\text{,}\qquad n/m=q.\]
+
+Se il quoziente esiste, il numero~$m$ si dice \emph{divisore} di~$n$, oppure si dice che~$n$ è \emph{divisibile} per~$m$.
+
+\begin{definizione}
+Un numero naturale~$m$ si dice \emph{multiplo} di un numero naturale~$n$ se esiste un numero~$p$
+che moltiplicato per~$n$ dà~$m$, cioè~$m=n\cdot p$.
+\end{definizione}
+\begin{exrig}
+
+ \begin{esempio}
+$12:3=4$ perché~$3\cdot 4=12$. Quindi,~12 è divisibile per~3;~3 è un divisore di~12;~12 è un multiplo di~3.
+ \end{esempio}
+
+ \begin{esempio}
+20 è divisibile per~4 perché~$20:4=5$.
+ \end{esempio}
+
+ \begin{esempio}
+7 è divisore di~35 perché~$35:7=5$.
+ \end{esempio}
+
+ \begin{esempio}
+6 è multiplo di~3 perché~$6=2\cdot 3$.
+ \end{esempio}
+
+ \begin{esempio}
+5 non è multiplo di~3 poiché non esiste alcun numero naturale che moltiplicato per~3 dà~5.
+ \end{esempio}
+\end{exrig}
+
+\osservazione In~$\insN$ la divisione tra due numeri~$m$ e~$n$, è possibile solo se~$m$ è multiplo di~$n$.
+
+\vspazio\ovalbox{\risolvi\ref{ese:1.2}}\vspazio
+
+Come hai potuto notare dagli esercizi precedenti la divisione tra due numeri naturali non è sempre possibile.
+Con i numeri naturali però è sempre possibile eseguire la divisione con il resto.
+
+\begin{definizione}
+ Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, si dice \emph{quoziente} tra~$n$ e~$m$, il più grande
+numero naturale~$q$ che moltiplicato per~$m$ dà un numero minore o uguale a~$n$. Si dice \emph{resto} della divisione
+tra~$n$ e~$m$ la differenza~$r$ tra il dividendo~$n$ e il prodotto tra il divisore~$m$ e il quoziente~$q$.
+In simboli~$n=m\cdot q + r$ o anche~$r=n-m\cdot q$.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ Nella divisione con resto tra~25 e~7 si ha quoziente~3 (infatti~$7\cdot 3=21$,
+ mentre~$7\cdot 4=28$ supera il dividendo) e resto~4 (infatti~$25-21=4$).
+ Pertanto si può scrivere~$25=7\cdot 3+4$.
+
+ \input{./lbr/chap01/fig005_div.pgf}
+ \end{esempio}
+
+ \begin{esempio}
+ $0:2 =~0$.
+ \end{esempio}
+
+ \begin{esempio}
+$1:2 =~0$ con resto~1.
+ \end{esempio}
+
+ \begin{esempio}
+$5:2 =~2$ con resto~1.
+ \end{esempio}
+\end{exrig}
+
+\osservazione Nella definizione di quoziente abbiamo sempre richiesto che il divisore sia diverso da zero. In effetti, se il divisore è~0 non c'è nessun numero che moltiplicato per~0 ci possa dare un dividendo diverso da zero.
+Per esempio, nella divisione~$5:0$ dobbiamo ottenere un numero che moltiplicato per~0 dia~5; ciò non è
+possibile in quanto qualsiasi numero moltiplicato per~0 dà~0.
+Invece nella divisione~$0:0$ un qualsiasi numero è adatto come quoziente, infatti qualsiasi numero
+moltiplicato per~0 dà~0 come prodotto.
+
+Nel linguaggio matematico diciamo che una divisione del tipo~$n:0$, con~$n\neq~0$, è \emph{impossibile}; mentre la
+divisione~$0:0$ è \emph{indeterminata}.
+
+\begin{definizione}
+ Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, la \emph{divisione intera}~$n\divint m$ è l'operazione
+che associa il più grande numero naturale~$q$ (il quoziente) per il quale si ha~$q\cdot m\le n$.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+$0 \divint 5=0$.
+ \end{esempio}
+
+ \begin{esempio}
+$9 \divint 2=4$.
+ \end{esempio}
+
+ \begin{esempio}
+$3\divint 5=0$.
+ \end{esempio}
+
+ \begin{esempio}
+$3\divint 0 = $ non si può fare: la divisione intera per~0 non è possibile. 
+ \end{esempio}
+\end{exrig}
+
+\begin{definizione}
+ Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, l'operazione che restituisce il resto della
+divisione intera tra~$n$ e~$m$ si chiama \emph{modulo} di~$n$ rispetto a~$m$ e viene indicata con~$n\bmod{m}$.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+$0\bmod 5=0$.
+ \end{esempio}
+
+ \begin{esempio}
+$9\bmod 5 =1$.
+ \end{esempio}
+
+ \begin{esempio}
+$10\bmod 5=0$.
+ \end{esempio}
+
+ \begin{esempio}
+$3\bmod 5=3$.
+ \end{esempio}
+
+ \begin{esempio}
+$11\bmod 5=1$.
+ \end{esempio}
+
+ \begin{esempio}
+$3\bmod 0=$ non si può fare.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:1.2}, \ref{ese:1.3}, \ref{ese:1.4}, \ref{ese:1.5}, \ref{ese:1.6}}\vspazio
+
+Ripassiamo l'algoritmo della divisione intera per numeri a più cifre; questa procedura risulterà particolarmente
+utile nel seguito.
+
+\begin{center}
+ \input{./lbr/chap01/fig006_divint.pgf}
+\end{center}
+
+\begin{enumeratea}
+ \item $327:23=$ quoziente~14 e resto~5;
+ \item $1\,329:107=$ quoziente~12 e resto~45;
+ \item $125\,943:171=$ quoziente~736 e resto~87.
+\end{enumeratea}
+
+\ovalbox{\risolvi \ref{ese:1.7}}
+
+\section{Proprietà delle operazioni}
+\subsection{Proprietà commutativa}
+Un'operazione gode della proprietà \emph{commutativa} se, cambiando l'ordine dei numeri sui quali essa va
+eseguita, il risultato non cambia.
+
+La proprietà commutativa \emph{vale} per le seguenti operazioni:
+\begin{description*}
+ \item[addizione]~$a+b=b+a$. \quad Es.~$3+5=5+3=8$;
+ \item[moltiplicazione]~$a\cdot b=b\cdot a$. \quad Es.~$3\cdot 5=5\cdot 3=15$.
+\end{description*}
+
+La proprietà commutativa \emph{non vale} per le seguenti operazioni:
+\begin{description*}
+ \item[sottrazione]~$a-b\neq b-a$. \quad Es.~$8-3=5\neq 3-8\:\text{ non si può fare in }\insN$;
+ \item[divisione]~$a:b\neq b:a$. \quad Es.~$8:4=2\neq 4:8\:\text{ non si può fare in }\insN$;
+ \item[divisione intera]~$a\divint b\neq b\divint a$. \quad Es.~$17\divint~5=3\neq~5\divint~17=0$;
+ \item[modulo]~$a\bmod b\neq b\bmod a$. \quad Es.~$9\bmod~2=1\neq~2\bmod~9=2$;
+ \item[potenza]~$a^b\neq b^a$. \quad Es.~$3^2=9\neq~2^3=8$.
+\end{description*}
+
+\subsection{Proprietà associativa}
+Un'operazione gode della proprietà \emph{associativa} se, presi arbitrariamente tre numeri legati da due operazioni,
+è indifferente da quale operazione si inizia, in quanto il risultato che si ottiene è sempre lo stesso.
+
+La proprietà associativa \emph{vale} per le seguenti operazioni:
+\begin{description*}
+ \item[addizione]~$(a+b)+c=a+(b+c)$. \quad Es.~$(3+5)+2=3+(5+2)=10$;
+ \item[moltiplicazione]~$(a\cdot b)\cdot c=a\cdot (b\cdot c)$. \quad Es.~$(3\cdot 5)\cdot 2=~3\cdot(5\cdot 2)=30$.
+\end{description*}
+
+La proprietà commutativa \emph{non vale} per le seguenti operazioni:
+\begin{description*}
+ \item[sottrazione]~$(a-b)-c\neq a-(b-c)$. \quad Es.~$(10-5)-2=3\neq~10-(5-2)=7$;
+ \item[divisione]~$(a:b):c\neq a:(b:c)$. \quad Es.~$(16:4):2=2\neq~16:(4:2)=8$;
+ \item[divisione intera]~$(a\divint b)\divint c\neq a\divint(b\divint c)$. \\\quad Es.~$(17\divint~5)\divint~2=1\neq~17	\divint%
+			 (5\divint2)=8$;
+ \item[modulo]~$(a\bmod b)\bmod c\neq a\bmod(b\bmod c)$. \\\qquad Es.~$(17\bmod~7)\bmod~1=1$~$\neq~17\bmod(7\bmod2)=0$.
+\end{description*}
+
+\subsection{Elemento neutro}
+Un'operazione ha un elemento \emph{neutro} se composto con qualsiasi altro numero lo lascia invariato, sia quando
+il numero è a destra, sia quando è a sinistra dell'operatore.
+
+L'elemento neutro dell'addizione è~0, sia che si trovi a destra che a sinistra:
+\[a+0=~0+a =a.\]
+L'elemento neutro della moltiplicazione è~1, sia che si trovi a destra sia che si trovi a sinistra:
+\[a\cdot 1 =~1\cdot a = a.\]
+La divisione ha l'elemento neutro a destra, che è~1, ma non ha elemento neutro a sinistra:
+\[a:1 = a \quad~(1:a\neq a\text{, \:se }a\neq~1).\]
+In maniera analoga, anche la sottrazione ha l'elemento neutro~0 solo a destra:
+\[a-0 = a \quad~(0-a\neq a\text{, \:se }a\neq~0).\]
+
+\subsection{Proprietà distributiva}
+La proprietà \emph{distributiva} coinvolge due operazioni differenti.
+\subsubsection{Proprietà distributiva della moltiplicazione}
+\paragraph{Rispetto all'addizione}
+Moltiplicare il risultato dell'addizione di più numeri per un altro numero dà lo stesso risultato che
+moltiplicare ogni addendo per il fattore considerato e addizionare i prodotti ottenuti. Questa proprietà vale sia se la somma è a destra sia se è a sinistra.
+\begin{flalign*}
+ a\cdot(b+c) = a\cdot b +a\cdot c &\text{\quad Es.~}3\cdot(2+4) = 3\cdot 2+3\cdot 4=18\\
+ (a+b)\cdot c = a\cdot c + b\cdot c &\text{\quad Es.~}(2+4)\cdot 3 = 2\cdot 3 + 4\cdot 3=18.
+\end{flalign*}
+
+\paragraph{Rispetto alla sottrazione}
+In maniera analoga:
+\begin{flalign*}
+ a\cdot(b-c) = a\cdot b -a\cdot c &\text{\quad Es.~}6\cdot(10-4) = 6\cdot 10-6\cdot 4=36\\
+ (a-b)\cdot c = a\cdot c - b\cdot c &\text{\quad Es.~}(10-4)\cdot 6 = 10\cdot 6- 4\cdot 6=36.
+\end{flalign*}
+
+\subsubsection{Proprietà distributiva della divisione}
+\paragraph{Rispetto all'addizione}
+Solo se le somme sono a sinistra:
+\begin{flalign*}
+ (a+b+c):d=a:d+b:d+c:d &\text{\quad Es.~}(20+10+5):5=20:5+10:5+5:5=7.
+\end{flalign*}
+
+Verifichiamo con un esempio che non vale la proprietà distributiva se le somme si trovano a destra:~$120:(3+5)$
+Eseguendo prima l'operazione tra parentesi si ottiene correttamente~$120:8=15$. Se si prova ad applicare
+la proprietà distributiva si ottiene~$120:3+120:5=40+24=64$. Il risultato corretto è il \emph{primo}.
+
+\paragraph{Rispetto alla sottrazione}
+Solo se la sottrazione è a sinistra:
+\begin{flalign*}
+ (a-b):c=a:c-b:c &\text{\quad Es.~}(20-10):5=20:5-10:5=4-2=2.
+\end{flalign*}
+
+Se, però, la sottrazione è a destra:
+\[120:(5-3)=120:2=60\neq~120:5-120:3=24-40=\:\text{ non si può fare in }\insN.\]
+
+\begin{legge}[Annullamento del Prodotto]\label{legge:annullamento_del_prodotto}
+ Il prodotto di due o più numeri naturali si annulla se almeno uno dei fattori è nullo.
+\[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
+\end{legge}
+
+\ovalbox{\risolvii \ref{ese:1.8}, \ref{ese:1.9}}
+
+\section{Potenza}\label{sect:potenza}
+La \emph{potenza} di un numero naturale è una moltiplicazione che ha tutti i fattori uguali.
+
+\begin{definizione}
+Dati due numeri naturali~$a$ e~$b$, con~$b>1$, il primo detto \emph{base} ed il secondo \emph{esponente}, la
+potenza di~$a$ con esponente~$b$ è il numero~$p$ che si ottiene moltiplicando fra loro~$b$ fattori tutti uguali ad~$a$.
+Si scrive~$a^b=p$ e si legge ``\emph{$a$ elevato a~$b$ uguale a~$p$}''.
+\end{definizione}
+
+Per esempio~$5^3=5\cdot~5\cdot~5=125$.
+\begin{center}
+ \input{./lbr/chap01/fig007_ptn.pgf}
+\end{center}
+
+
+Per completezza, alla definizione precedente vanno aggiunti i seguenti casi particolari:
+\begin{align*}
+ a^1&=a\text{,}\\
+ a^0&=1\quad \text{se }a\neq~0\text{,}\\
+ 0^0&=\text{non ha significato.}
+\end{align*}
+
+Queste definizioni trovano giustificazione nelle proprietà delle potenze.
+
+\subsection{Proprietà delle potenze}
+
+ \paragraph{I} Il prodotto di due potenze con la stessa base è uguale a una potenza che ha
+ per base la stessa base e per esponente la somma degli esponenti.
+ \begin{empheq}[box=\fbox]{equation*}
+ a^n\cdot a^m=a^{n+m}
+ \end{empheq}
+ \[ 2^5\cdot 2^6=2^{5+6}=2^{11}.\]
+
+La proprietà segue da questa osservazione:
+\[ a^n\cdot a^m = \underbrace{(a\cdot a\cdot\ldots\cdot a)}_{n\text{ volte}}\cdot%
+ \underbrace{(a\cdot a\cdot a\cdot\ldots\cdot a)}_{m\text{ volte}}
+ =\underbrace{(a\cdot a\cdot a\cdot a\cdot a\cdot\ldots\cdot a\cdot a)}_{n+m\text{ volte}}%
+ =a^{n+m}.\]
+
+\paragraph{II} Il quoziente di due potenze con la stessa base, la prima con esponente
+maggiore o uguale all'esponente della seconda, è uguale a una potenza che
+ha per base la stessa base e per esponente la differenza degli esponenti.
+
+ \begin{empheq}[box=\fbox]{equation*}
+ a^n:a^m=a^{n-m}
+ \end{empheq}
+\[4^5:4^3=4^{5-3}=4^2.\]
+
+La proprietà segue da questa osservazione:
+\begin{align}
+ a^n: a^m &= \underbrace{(a\cdot a\cdot\ldots\cdot a)}_{n\text{ volte}}:%
+ \underbrace{(a\cdot a\cdot a\cdot\ldots\cdot a)}_{m\text{ volte}}\label{eq:pot_quoz1}\\
+ &=\underbrace{(a:a)\cdot(a:a)\cdot\ldots\cdot(a:a)}_{n\text{ volte}}\cdot%
+ \underbrace{(a\cdot a\cdot a\cdot\ldots\cdot a)}_{n-m\text{ volte}}\label{eq:pot_quoz2}\\%
+ &=a^{n-m}.
+\end{align}
+Il passaggio dalla \ref{eq:pot_quoz1} alla \ref{eq:pot_quoz2} avviene per via della proprietà invariantiva della divisione.
+\paragraph{III} La potenza di una potenza è uguale a una potenza che ha la base della prima
+potenza e per esponente il prodotto degli esponenti.
+
+ \begin{empheq}[box=\fbox]{equation*}
+ (a^n)^m=a^{n\cdot m}
+ \end{empheq}
+\[(6^2)^5=6^{2\cdot 5}=6^{10}. \]
+
+La proprietà segue da questa osservazione:
+
+\[ (a^n)^m =\overbrace{a^n\cdot a^n\cdot\ldots\cdot a^n}^{m\text{ volte}}%
+ =\overbrace{\underbrace{(a\cdot a\cdot\ldots\cdot a)}_{n\text{ volte}}\cdot%
+	 \underbrace{(a\cdot a\cdot\ldots\cdot a)}_{n\text{ volte}}\cdot\ldots\cdot%
+	 \underbrace{(a\cdot a\cdot\ldots\cdot a)}_{n\text{ volte}}}^{m\text{ volte}}%
+	 =a^{n\cdot m}.\]
+
+\paragraph{IV} Il prodotto di potenze con lo stesso esponente è
+uguale al prodotto delle potenze dei singoli fattori.
+
+ \begin{empheq}[box=\fbox]{equation*}
+ (a\cdot b)^n=a^n\cdot b^n
+ \end{empheq}
+\[(2\cdot 5)^8=2^8\cdot 5^8. \]
+
+La proprietà segue da questa osservazione:
+\[(a\cdot b)^n=\underbrace{(a\cdot b)\cdot(a\cdot b)\cdot\ldots\cdot(a\cdot b)}_{n\text{ volte}}%
+	 =\underbrace{(a\cdot a\cdot\ldots\cdot a)}_{n\text{ volte}}\cdot%
+	 \underbrace{(b\cdot b\cdot\ldots\cdot b)}_{n\text{ volte}}%
+	 =a^n\cdot b^n.\]
+
+\paragraph{V} La potenza di un quoziente è uguale al quoziente delle potenze dei singoli
+fattori.
+
+ \begin{empheq}[box=\fbox]{equation*}
+ (a:b)^n=a^n:b^n
+ \end{empheq}
+\[(4:2)^8=4^8:2^8. \]
+
+Le definizioni dei casi particolari di potenze si giustificano nel seguente modo:
+\begin{align*}
+ &a^0=a^{5-5}=a^5:a^5=1,\\
+ &a^1=a^{5-4}=a^5:a^4=a.
+\end{align*}
+Alla potenza~$0^0$ non si assegna nessun valore perché applicando la definizione di~$a^0$ si dovrebbe avere~1;
+applicando la definizione~$0^a$ si dovrebbe avere~0.
+
+\ovalbox{\risolvii \ref{ese:1.10}, \ref{ese:1.11}, \ref{ese:1.12}, \ref{ese:1.13}, \ref{ese:1.14}, \ref{ese:1.15}}\vspazio
+
+\subsection{Cenni sull'estrazione di radice}
+
+L'operazione inversa dell'elevazione a potenza è l'estrazione di \emph{radice}.
+
+\begin{definizione}
+Dati due numeri naturali~$a$ e~$n$ (con~$n>1$) si definisce \emph{radice}~$n$-esima di~$a$ il numero~$r$ tale che moltiplicando tra loro~$n$ fattori tutti uguali a~$r$ si ottiene come risultato~$a$. Si scrive $\sqrt[n]{a} = r$.
+\end{definizione}
+
+Per esempio~$\sqrt[3]{64} = 4$ poiché $4^3=4\cdot 4\cdot 4 = 64$.
+
+\begin{exrig}
+ \begin{esempio}
+$\sqrt[5]{32} = 2$,~~infatti $2^5 = 2\cdot 2\cdot 2\cdot 2\cdot 2 = 32$.
+ \end{esempio}
+
+ \begin{esempio}
+$\sqrt[3]{125} = 5$,~~infatti $5^3 = 5\cdot 5\cdot 5 = 125$.
+ \end{esempio}
+
+ \begin{esempio}
+$\sqrt[4]{81} = 3$,~~infatti $3^4 = 3\cdot 3\cdot 3\cdot 3 = 81$.
+ \end{esempio}
+
+ \begin{esempio}
+$\sqrt[7]{1} = 1$,~~infatti $1^7 = 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1 = 1$.
+ \end{esempio}
+\end{exrig}
+
+Particolare importanza riveste la radice con $n=2$, detta anche \emph{radice quadrata}. Ad esempio, la radice quadrata di 25 è 5, cioè $\sqrt[2]{25} = 5$, poiché infatti~$5^2 = 5\cdot 5=25$, e anche $\sqrt[2]{49} = 7$ ($7^2=49$). L'uso della radice quadrata è talmente predominante in matematica rispetto a quelle di ordine superiore (quelle con $n>2$) che nel caso in cui l'indice $n$ della radice non sia specificato si sottintende il valore 2: cioè $\sqrt{9} = \sqrt[2]{9} = 3$.
+
+
+\section{Numeri Primi}
+Osserva il seguente schema
+\[\fbox{18}\quad\xrightarrow[\text{è divisibile per}]{\text{è multiplo di}}\quad \fcolorbox{gray}{grigio80}{6}\quad%
+ \xrightarrow[\text{è divisore di}]{\text{è sottomultiplo di}}\quad \fbox{18}
+\]
+In esso sono descritte alcune caratteristiche del numero~18 e i suoi legami con il numero~6.
+
+\begin{definizione}
+ Chiamiamo \emph{divisore proprio} di un numero un suo divisore diverso dal numero stesso e dall'unità.
+\end{definizione}
+
+Osserva ora il seguente schema
+\[\fbox{31}\quad\xrightarrow[\text{è divisibile per}]{\text{è multiplo di}}\quad \fcolorbox{gray}{grigio80}{\vphantom{3}\ldots}\quad%
+ \xrightarrow[\text{è divisore di}]{\text{è sottomultiplo di}}\quad \fbox{31}
+\]
+Nella casella centrale, al posto dei puntini, puoi inserire soltanto i numeri~31 o~1.
+
+\begin{definizione}
+ Un numero~$p>1$ si dice \emph{primo} se è divisibile solo per se stesso e per l'unità. Un numero naturale maggiore di~1 non primo si dice \emph{composto}.
+\end{definizione}
+
+Per come sono stati definiti i numeri primi e quelli composti si ha:
+
+\begin{multicols}{3}
+\noindent~0 non è primo né composto\\
+1 non è primo né composto\\
+2 è primo\\
+3 è primo\\
+4 è composto\\
+5 è primo\\
+6 è composto\\
+7 è primo\\
+8 è composto\\
+9 è composto\\
+10 è composto\\
+11 è primo\\
+12 è composto\\
+13 è primo\\
+\ldots
+\end{multicols}
+
+\ovalbox{\risolvi \ref{ese:1.16}}\vspazio
+
+Ma quanti sono i numeri primi? La risposta a questa domanda venne data da Euclide\footnote{matematico e scienziato della Grecia antica (367 \aC{} ca. - 283 \aC).} con il seguente teorema
+che porta il suo nome:
+\begin{teorema}[di Euclide]
+I numeri primi sono infiniti.
+\end{teorema}
+
+Euclide ci ha fatto vedere come sia possibile costruire numeri primi comunque grandi. Dato un numero primo,
+è sempre possibile costruirne uno più grande.
+
+\vspazio\ovalbox{\risolvi \ref{ese:1.17}}
+
+\begin{exrig}
+ \begin{esempio}
+ Per verificare se~31 è primo, calcolo il valore approssimato~$\sqrt{31}\simeq~5,5$ e verifico se è divisibile
+per i numeri primi~$\le5$, cioè~2,~3 e~5. 31 non è divisibile per~2 in
+quanto è dispari, non è divisibile per~3 poiché la somma delle sue cifre è~4 (che non è divisibile per~3) e
+non è divisibile per~5 in quanto non finisce per~0 o~5 (sezione \ref{sect:criteri_divisibilita}). Quindi 31 è primo.
+ \end{esempio}
+
+ \begin{esempio}
+ Per verificare se~59 è un numero primo calcolo~$\sqrt{59}\simeq~7,6$ e verifico se~59 è divisibile per un
+numero primo~$\le~7$, cioè per~2,~3,~5 e~7. Eseguendo le divisioni si vede che~59 non è divisibile
+per nessuno di questi numeri, quindi è primo.
+ \end{esempio}
+\end{exrig}
+
+\osservazione Un numero è primo quando non è divisibile per nessun numero primo compreso tra~2 e
+la radice quadrata del numero stesso.
+
+\section{Criteri di divisibilità}\label{sect:criteri_divisibilita}
+Per verificare se un numero è divisibile per i primi numeri interi si possono applicare i seguenti criteri di
+divisibilità.
+
+\paragraph{Divisibilità per~2} Un numero è divisibile per~2 se e solo se la sua ultima cifra, quella delle unità,
+è un numero pari, cioè è~0,~2,~4,~6,~8.
+
+\begin{itemize*}
+ \item 1\,236 finisce per~6 quindi è divisibile per~2;
+ \item 109\,230 finisce per~0 quindi è divisibile per~2;
+ \item 10\,923 finisce per~3 quindi non è divisibile per~2.
+\end{itemize*}
+
+\paragraph{Divisibilità per~3} Un numero è divisibile per~3 se e solo se la somma delle cifre che lo
+compongono è divisibile per~3.
+\begin{itemize*}
+ \item 24 è divisibile per~3, infatti la somma delle sue cifre è~$2+4=6$, dato che~6 è divisibile per~3
+anche~24 è divisibile per~3;
+ \item 1\,236 è divisibile per~3, infatti la somma delle sue cifre è~$1+2+3+6=12$;~12~è divisibile per~3
+dato che la somma delle sue cifre è~$1+2=3$, quindi anche~1\,236 è divisibile per~3;
+ \item 31 non è divisibile per~3, infatti la somma delle sue cifre è~$3+1=4$, dato che~4 non è
+divisibile per~3 neanche~31 è divisibile per~3.
+\end{itemize*}
+
+\paragraph{Divisibilità per~5} Un numero è divisibile per~5 se la sua ultima cifra è~0 o~5.
+\begin{itemize*}
+ \item 1\,230 finisce per~0 quindi è divisibile per~5;
+ \item 59\,235 finisce per~5 quindi è divisibile per~5;
+ \item 109\,253 finisce per~3 quindi non è divisibile per~5;
+ \item 5\,556 finisce per~6 quindi non è divisibile per~5.
+\end{itemize*}
+
+\paragraph{Divisibilità per~7} Un numero (maggiore di~10) è divisibile per~7 se la differenza (in valore assoluto\footnote{il \emph{valore assoluto} è trattato a pagina~\pageref{def:valass}.})
+fra il valore ottenuto dal numero stesso togliendo la cifra delle unità e il doppio della cifra delle unità è~7 o un
+multiplo di~7.
+\begin{itemize*}
+ \item 252 è divisibile per~7, infatti~$ \valass{25−2\cdot 2}=21$ è multiplo di~7;
+ \item 49 è divisibile per~7, infatti~$\valass{4−2\cdot 9}=14$ è multiplo di~7;
+ \item 887 non è divisibile per~7, infatti~$\valass{88−2\cdot 7}=74$ non è divisibile per~7.
+\end{itemize*}
+
+\paragraph{Divisibilità per~11} Un numero è divisibile per~11 se e solo se la differenza, in valore assoluto, fra la
+somma delle cifre di posto pari e la somma delle cifre di posto dispari è~0,~11~o un multiplo di~11.
+\begin{itemize*}
+ \item 253 è divisibile per~11, infatti~$\valass{5-(2+3)}=0$;
+ \item 9\,482 è divisibile per~11, infatti~$\valass{(9+8)−(4+2)}=11$;
+ \item 887 non è divisibile per~11, infatti~$\valass{8-(8+7)}=7$.
+\end{itemize*}
+
+\ovalbox{\risolvii \ref{ese:1.18}, \ref{ese:1.19}}
+
+\section{Scomposizione in fattori primi}
+Scomporre in fattori un numero significa scriverlo come prodotto di altri numeri naturali.
+
+\begin{teorema}[fondamentale dell'Aritmetica]
+ Ogni numero naturale~$n>1$ si può scrivere in modo unico come prodotto di numeri primi.
+\end{teorema}
+
+\begin{exrig}
+ \begin{esempio}
+ Scomporre in fattori primi il numero~630.
+ \begin{center}
+ \input{./lbr/chap01/fig008_scmp.pgf}
+ ~$630=2\cdot3^2\cdot5\cdot7.$
+ \end{center}
+ \end{esempio}
+\end{exrig}
+
+In generale, un numero può essere scomposto in fattori in più modi. Per esempio,~$12=3\cdot 4$,
+ma anche~$12=6\cdot2$. Il teorema fondamentale dell'aritmetica ci assicura che, se si scompone un numero in fattori primi,
+questa scomposizione è unica, a meno dell'ordine con cui si scrivono i fattori. Tornando all'esempio
+precedente~$12=~2^2\cdot 3$ è l'unico modo in cui il~12 si può scomporre in fattori primi, a meno che non si
+scambino di posto i fattori~$12=3\cdot 2^2$.
+
+\vspazio\ovalbox{\risolvii \ref{ese:1.20}, \ref{ese:1.21}, \ref{ese:1.22}, \ref{ese:1.23}, \ref{ese:1.24}}
+
+\section{Massimo Comune Divisore e minimo comune multiplo}
+
+\label{def:mcd}
+\begin{definizione}
+Il \emph{massimo comune divisore} di numeri naturali~$a$ e~$b$, indicato con~$\mcd(a\text{,~}b)$, è il
+più grande tra tutti i divisori comuni ad~$a$ e~$b$.
+\end{definizione}
+
+Applicando la definizione, il massimo comune divisore tra~18 e~12 si ottiene prendendo tutti i divisori
+di~18 e~12:
+\begin{align*}
+\text{divisori di }18: &\text{~}18\text{, }9\text{, }6\text{, }3\text{, }2\text{, }1;\\
+\text{divisori di }12: &\text{~}12\text{, }6\text{, }4\text{, }2\text{, }1.
+\end{align*}
+I divisori comuni sono~6,~2 e~1. Il più grande dei divisori comuni è~6, quindi $\mcd(18\text{,~}12)=6$.
+
+\vspazio\ovalbox{\risolvi \ref{ese:1.25}}\vspazio
+
+Per calcolare il massimo comune divisore di due o più numeri si può applicare la seguente procedura:
+\begin{procedura}
+Calcolo del~$\mcd$ di due o più numeri naturali:
+\begin{enumeratea}
+ \item si scompongono i numeri in fattori primi;
+ \item si moltiplicano tra loro i fattori comuni, presi una sola volta e con il minore esponente.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+ Calcolare~$\mcd(60\text{,~}48\text{,~}36)$.
+
+Si scompongono in fattori i singoli numeri~$60=2^2\cdot 3\cdot 5$,~$48=2^4\cdot 3$,~$36 =2^2\cdot 3^2$.
+I~fattori comuni sono~2 e~3; il~2 compare con l'esponente minimo~2 ed il~3 compare con esponente
+minimo~1.
+
+Pertanto~$\mcd(60\text{,~}48\text{,~}36)=2^2\cdot 3=12$.
+
+ \end{esempio}
+
+ \begin{esempio}
+ Calcolare~$\mcd(60\text{,~}120\text{,~}90)$.
+
+Si scompongono in fattori i singoli numeri~$60=2^2\cdot 3\cdot 5$,~$120=2^3\cdot 3\cdot 5$ e~$90=2\cdot 3^2\cdot 5$.
+I~fattori in comune sono~2,~3 e~5. L'esponente minino è~1 per tutti.
+
+Pertanto~$\mcd(60\text{,~}120\text{,~}90)=2\cdot 3\cdot 5=30$.
+ \end{esempio}
+\end{exrig}
+
+
+\begin{definizione}
+ Due numeri~$a$ e~$b$ si dicono \emph{primi tra loro} o \emph{coprimi} se~$\mcd(a\text{,~}b)=1$.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ Numeri primi tra loro:
+ \begin{itemize*}
+ \item 12 e~25 sono primi tra loro. Infatti il~$\mcd(12\text{,~}25)=1$ dato che nelle loro scomposizioni in
+fattori non si hanno fattori comuni:~$12=2^2\cdot 3$ e~$25=5^2$;
+ \item 35 e~16 sono primi tra loro. Infatti~$35=5\cdot 7$ e~$16=2^4$. I due numeri non hanno
+divisori comuni, quindi il loro~$\mcd=1$;
+ \item 11 e~19 sono primi tra loro infatti il~$\mcd(11\text{,~}19)=1$ dato che~11 e~19 sono entrambi numeri primi;
+ \item 12 e~15 non sono primi tra di loro in quanto hanno~3 come divisore comune.
+ \end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+
+\begin{definizione}
+ Il \emph{minimo comune multiplo} di due numeri naturali~$a$ e~$b$ si indica con~$\mcm(a\text{,~}b)$ ed è il più
+piccolo tra tutti i multipli comuni di~$a$ e di~$b$.
+\end{definizione}
+
+Per calcolare il minimo comune multiplo tra~6 e~15 applicando la definizione occorre calcolare i primi
+multipli dei due numeri:
+\begin{align*}
+\text{multipli di }6: & \qquad~6\text{, }12\text{, }18\text{, }24\text{, }30\text{, }36\text{, }42\text{, }48\text{, }54\text{, }60\text{, }\ldots; \\
+\text{multipli di }15: & \qquad~15\text{, }30\text{, }45\text{, }60\text{, }75\text{, }90\text{, }\ldots
+\end{align*}
+Sono multipli comuni~30,~60,~90, \ldots Il più piccolo dei multipli comuni è~30, ovvero $\mcm(6\text{,~}15)=30$.
+
+Per calcolare il minimo comune multiplo tra due o più numeri si può applicare la seguente procedura:
+\begin{procedura}
+Calcolo del~$\mcm$ di due o più numeri naturali:
+\begin{enumeratea}
+ \item si scompongono i numeri in fattori primi;
+ \item si moltiplicano tra loro i fattori comuni e non comuni, presi una sola volta, con il maggiore
+esponente.
+\end{enumeratea}
+\end{procedura}
+\pagebreak
+\begin{exrig}
+ \begin{esempio}
+ Calcolare il~$\mcm(60\text{,~}48\text{,~}36)$.
+
+Scomponendo in fattori i numeri si ha~$60=2^2\cdot 3\cdot 5$;~$48=2^4\cdot 3$;~$36=2^2\cdot 3^2$.
+Tutti i fattori comuni e non comuni presi una sola volta con l'esponente più grande con cui
+compaiono sono:~$2^4,~3^2 e~5$.
+
+Quindi il~$\mcm$ è~$2^4\cdot3^2\cdot5=720$.
+ \end{esempio}
+
+ \begin{esempio}
+ Calcolare il~$\mcm(20\text{,~}24\text{,~}450)$.
+
+Scomponendo in fattori si ha:~$20=2^2\cdot 5$;~$24=2^3\cdot 3$;~$450 =~2\cdot 3^2\cdot 5^2$.
+Moltiplicando i fattori comuni e non comuni con il massimo esponente si ha~$2^3\cdot 3^2\cdot 5^2=1\,800$.
+ \end{esempio}
+
+ \begin{esempio}
+ Si vuole pavimentare una stanza a pianta rettangolare di~$315\unit{cm}$ per~$435\unit{cm}$ con mattonelle quadrate le
+più grandi possibili, senza sprecarne alcuna. Quali sono le dimensioni delle mattonelle? Quante
+mattonelle sono necessarie?
+
+Poiché le mattonelle devono essere quadrate devono avere il lato tale che entri un numero intero di
+volte sia nel~315 sia nel~435, pertanto la dimensione delle mattonelle deve essere un divisore comune
+di~315 e di~435. Poiché è richiesto che le mattonelle siano quanto più grandi possibile, la dimensione
+deve essere il massimo divisore comune.
+\begin{center}
+ \input{./lbr/chap01/fig009a.pgf}
+ \input{./lbr/chap01/fig009b.pgf}
+\end{center}
+La soluzione del problema è data quindi dal~$\mcd(315\text{,~}435)=3\cdot 5=15$. Le mattonelle devono avere il lato di~$15\unit{cm}$.
+Ci vogliono~$435:15=29$ mattonelle per ricoprire il lato di~$435\unit{cm}$ e~$315:15=21$ mattonelle per ricoprire il lato
+da~$315\unit{cm}$. In tutto occorrono~$29\cdot21=609$ mattonelle.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:1.26}, \ref{ese:1.27}, \ref{ese:1.28}, \ref{ese:1.29}, \ref{ese:1.30}, \ref{ese:1.31}, \ref{ese:1.32}}
+
+\section{Espressioni numeriche}
+Nel linguaggio comune alcune frasi possono risultare ambigue. Per esempio
+<<Luca ha detto Mario è stato promosso>> può avere due significati diversi
+a seconda di come si inserisce la punteggiatura:
+scrivendo <<Luca, ha detto Mario, è stato promosso>> significa che è stato promosso Luca;
+scrivendo <<Luca ha detto: Mario è stato promosso>> significa che è stato promosso Mario.
+
+Anche nella matematica, quando abbiamo più operazioni da eseguire, dobbiamo chiarire l'ordine con
+cui esse devono essere eseguire. Per esempio, l'espressione~$2+3\cdot 4$ può valere~14 oppure~20, infatti:
+\begin{itemize*}
+ \item eseguendo per prima la moltiplicazione si ha~$2+3\cdot 4=2+12=14$;
+ \item eseguendo per prima l'addizione si ha~$2+3\cdot 4=5\cdot 4=20$.
+\end{itemize*}
+
+Per eliminare queste ambiguità sono state fissate alcune regole che bisogna rispettare
+nell'esecuzione dei calcoli. Intanto diamo la seguente definizione:
+
+\begin{definizione}
+ Un'\emph{espressione aritmetica} è una successione di operazioni da eseguire su più numeri.
+\end{definizione}
+
+\subsection{Regole per semplificare le espressioni}
+\paragraph {I} Se un'espressione contiene solo addizioni, le operazioni si possono eseguire
+in qualsiasi ordine, grazie alla proprietà associativa dell'addizione.
+\begin{exrig}
+ \begin{esempio}
+ Semplificare l'espressione $3+2+5$.
+\begin{itemize*}
+ \item $3+2+5=5+5=10$. In questo caso si sono eseguite le operazioni nell'ordine in cui compaiono;
+ \item $3+2+5=3+7=10$. In questo caso si è eseguita per prima l'ultima addizione indicata. Il risultato ottenuto è lo stesso;
+ \item $5+6+15=6+20=26$. In questo caso abbiamo applicato anche la proprietà commutativa.
+\end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+
+\paragraph {II} Se un'espressione contiene solo moltiplicazioni, le operazioni si possono eseguire in qualsiasi
+ordine, anche in questo caso grazie alla proprietà associativa della moltiplicazione.
+\begin{exrig}
+ \begin{esempio}
+ Dovendo moltiplicare~$2\cdot 3\cdot 4$ si può procedere in più modi.
+\begin{itemize*}
+ \item $2\cdot 3\cdot 4=6\cdot 4=24$. In questo caso si è seguito l'ordine in cui compaiono;
+ \item $2\cdot 3\cdot 4=2\cdot 12=24$. In questo caso si è seguito l'ordine opposto; il risultato è lo stesso.
+\end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+\paragraph {III} Se un'espressione, senza parentesi, contiene più sottrazioni, si deve procedere eseguendole
+nell'ordine in cui sono scritte, la sottrazione infatti non gode né della proprietà associativa né di quella
+commutativa.
+\begin{exrig}
+ \begin{esempio}
+ Semplificare l'espressione $10-6-1$.
+\begin{itemize*}
+ \item $10-6-1=4-1=2$;
+ \item $10-6-1=10-5=5$, errato!
+\end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+\paragraph {IV} Se un'espressione senza parentesi contiene solo addizioni e sottrazioni, le operazioni si devono
+eseguire nell'ordine con cui sono scritte.
+\begin{exrig}
+ \begin{esempio}
+ Semplificare l'espressione $12+6-5-1+2$.
+ \[12+6-5-1+2=18-5-1+2=13-1+2=12+2=14.\]
+ \end{esempio}
+\end{exrig}
+
+\paragraph {V} Se un'espressione senza parentesi contiene solo divisioni, le operazioni si devono eseguire
+nell'ordine nel quale sono scritte.
+\begin{exrig}
+ \begin{esempio}
+ Semplificare l'espressione $360:~12:~3$.
+ \begin{itemize*}
+ \item $360:12:3=30:3=10$;
+ \item $360:12:3=360:4=90$, errato!
+\end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+\paragraph {VI} Se un'espressione senza parentesi contiene addizioni, sottrazioni, moltiplicazioni, divisioni e
+potenze, si eseguono prima le potenze, poi moltiplicazioni e divisioni, rispettando l'ordine con cui sono
+scritte, e poi addizioni e sottrazioni, rispettando l'ordine.
+\begin{exrig}
+ \begin{esempio}
+Semplificare l'espressione $18:2:9+5^2-2\cdot3^2:3-1$.
+ \begin{align*}
+ 18:2:9+5^2-2\cdot3^2:3-1&=18:2:9+25-2\cdot 9:3-1\\
+			 &=9:9+25-18:3-1\\
+			 &=1+25-6-1\\
+			 &=26-6-1\\
+			 &=20-1\\
+ &=19.
+ \end{align*}
+ \end{esempio}
+\end{exrig}
+
+\paragraph {VII} Se l'espressione contiene una coppia di parentesi si devono eseguire prima le operazioni
+racchiuse nelle parentesi, rispettando le regole precedenti; si eliminano poi le parentesi ottienendo
+un'espressione senza parentesi alla quale devono essere applicate nuovamente le regole precedenti.
+\begin{exrig}
+ \begin{esempio}
+Semplificare l'espressione $5\cdot(4+3^2-1)$.
+ \begin{align*}
+ 5\cdot(4+3^2-1)&=5\cdot(4+9-1)\\
+		 &=5\cdot(13-1)\\
+		 &=5\cdot 12\\
+		 &=60.
+ \end{align*}
+\end{esempio}
+\end{exrig}
+
+
+\paragraph{VIII} Se l'espressione contiene più ordini di parentesi, si eseguono per prima le operazioni racchiuse nelle parentesi più interne, rispettando le regole precedenti, si eliminano le parentesi e si procede considerando la nuova espressione. Se ci sono ancora delle parentesi si eseguono per prima le operazioni contenute nelle parentesi più interne, rispettando le regole precedenti, si eliminano le parentesi e si procede considerando la nuova espressione. E così via.
+
+Per facilitare il riconoscimento dei livelli di parentesi, in genere si usano le parentesi tonde $($\ldots$)$ per il primo livello (quello più interno), le quadre $[$\ldots$]$ per il secondo livello e le graffe $\{$\ldots$\}$ per il terzo livello (quello più esterno).
+L'uso di parentesi di diverso tipo rende visivamente più semplice l'ordine da seguire nelle operazioni, ma in
+un'espressione le parentesi possono anche essere soltanto tonde. Ciò accade, per esempio, quando si usano gli
+strumenti di calcolo elettronico come il computer e la calcolatrice.
+
+\vspazio\ovalbox{\risolvi\ref{ese:1.33}}
+\newpage
+
+\input{./chap/01_esercizi}
+
+\cleardoublepage

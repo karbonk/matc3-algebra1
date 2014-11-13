@@ -1,0 +1,25 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=9mm,y=9mm, font=\small]
+\tkzDefPoint(0,0){A}
+\tkzDefShiftPoint[A](45:2){B}
+\tkzDefShiftPoint[A](0:4){R}
+
+\tkzDefPoint(3.76,0){C}
+\tkzDefShiftPoint[C](120:2.52){D}
+
+\tkzDrawLine[add=0 and 0, thin](A,B)
+\tkzDrawLine[add=0 and 0, thin](C,D)
+\tkzDrawLine[thin, end=$r$](A,R)
+
+\tkzLabelPoints[below](A,C)
+\tkzLabelPoints[above](B,D)
+\tkzDrawPoints[color=CornflowerBlue](A,B,C,D)
+
+\tkzMarkAngle[fill=LimeGreen, draw=black, size=.4](R,A,B)
+\tkzMarkAngle[fill=LimeGreen, draw=black, size=.4](R,C,D)
+\begin{scope}[font=\scriptsize]
+\tkzLabelAngle[pos=1, below](R,A,B){$\alpha=45^{\circ}$}
+\tkzLabelAngle[pos=.9, below](R,C,D){$\beta=120^{\circ}$}
+\end{scope}
+\end{tikzpicture}

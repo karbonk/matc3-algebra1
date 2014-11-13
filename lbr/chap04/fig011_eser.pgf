@@ -1,0 +1,51 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[ anchor=north west]
+
+\begin{scope}[nodes={ text centered },cells={anchor=south}]
+\matrix(a) [matrix of nodes]
+{
+1&1&1&1&0&1&$+$ \\
+{}&1&0&1&1&0\\
+};
+\draw(a-2-1.south west)--(a-2-6.south east);
+
+\begin{scope}[xshift=31.3mm]
+\matrix(b) [matrix of nodes]
+{
+1&0&1&1&0&1&$+$ \\
+{}&1&1&1&1&1\\
+};
+\draw(b-2-1.south west)--(b-2-6.south east);
+\end{scope}
+
+\begin{scope}[xshift=62.6mm]
+\matrix(c) [matrix of nodes]
+{
+1&0&1&1&$+$ \\
+{}&1&1&1&\\
+};
+\draw(c-2-1.south west)--(c-2-4.south east);
+\end{scope}
+
+\begin{scope}[xshift=86mm]
+\matrix(d) [matrix of nodes]
+{
+1&0&1&1&$+$ \\
+1&1&0&1&\\
+1&0&1&1&\\
+};
+\draw(d-3-1.south west)--(d-3-4.south east);
+\end{scope}
+
+\begin{scope}[xshift=109.4mm]
+\matrix(e) [matrix of nodes]
+{
+1&0&1&1&1&$+$ \\
+1&1&0&0&1&\\
+{}&1&1&0&0&\\
+};
+\draw(e-3-1.south west)--(e-3-5.south east);
+\end{scope}
+\end{scope}
+
+\end{tikzpicture}

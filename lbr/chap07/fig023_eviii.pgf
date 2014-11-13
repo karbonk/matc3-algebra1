@@ -1,0 +1,16 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\draw[rounded corners] (-1,-3) rectangle (8,3) (4.5,3)node[above, anchor=south east] {classe 28};
+\draw (2,0) circle (2.5);
+\draw (5,0) circle (2.5);
+
+\begin{scope}[font=\scriptsize]
+\node at (1.5,1.5) {inglese};
+\node at (5.5,1.5) {francese};
+\end{scope}
+
+\node at (3.5,.5) {5};
+\node[fill=white] at (0,1.25) {17};
+\node[fill=white] at (5,2.5) {12};
+\end{tikzpicture}

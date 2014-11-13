@@ -1,0 +1,38 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+\node[circle, minimum height=2cm,draw] (D) at (0,0) {};
+
+\node[above] (D1) at (D.north) {$\insQ$};
+\begin{scope}[fill=CornflowerBlue]
+
+\filldraw (0,.5) circle (2pt) node (a) {};
+\node[left] at (0,.5) {1};
+\filldraw (0.6,.2) circle (2pt) node (b) {};
+\node[left] at (0.6,.2) {$-1$};
+\filldraw (.2,-.5) circle (2pt) node (c) {};
+\node[left] at (.2,-.5) {$-\frac{2}{3}$};
+\filldraw (-.3,0) circle (2pt) node (d) {};
+\node[left] at (-.3,0) {$+\frac{2}{3}$};
+\end{scope}
+
+\begin{scope}[xshift=2.5cm]
+\node[circle, minimum height=2cm,draw] (C) at (0,0) {};
+
+\node[above] (C1) at (C.north) {$\insQ$};
+
+\begin{scope}[fill=LimeGreen]
+\filldraw (-.1,.7) circle (2pt) node (a1) {};
+\filldraw (.2,-.1) circle (2pt) node (d1) {};
+\node[right]  at (-.1,.7) {$1$};
+\node[right] at (.2,-.1) {$+\frac{4}{9}$};
+\end{scope}
+\end{scope}
+\begin{scope}[->,smooth,thick]
+\draw[blue] (D1.north) .. controls +(45:.5cm) and +(135:.5cm) .. (C1.north) node [midway, above, black] () {$\Kor$};
+\draw[Maroon] (a) .. controls +(30:.5cm) and +(150:.5cm) .. (a1);
+ \draw[purple] (b) .. controls +(30:.5cm) and +(150:.5cm) .. (a1);
+\draw[red] (c) .. controls +(-30:.5cm) and +(-90:1cm) .. (d1);
+\draw[orange] (d) .. controls +(-30:.5cm) and +(-180:2cm) .. (d1);
+\end{scope}
+\end{tikzpicture}

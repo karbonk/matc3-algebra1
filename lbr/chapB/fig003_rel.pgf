@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small, every state/.style={draw=CornflowerBlue}, every loop/.style={draw=Maroon}]
+\draw (0,0) circle (1.8);
+
+\node at (1.8,1.5) {$P$};
+
+\node[state] (M) at (-1,.3) {$M$};
+\node[state] (C) at (.8,.8) {$C$};
+\node[state] (A) at (.2,-1) {$A$};
+
+ \begin{scope}[->, Maroon]
+ \draw (M)--(C);
+ \draw (M)--(A);
+ \draw (C)--(A);
+ \end{scope}
+\end{tikzpicture}

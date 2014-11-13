@@ -1,0 +1,32 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small, fill=CornflowerBlue]
+\draw (0,1.25)circle (1) (-1,2.25) node[above] {$D$};
+\draw(0,-1.25) circle (1) (-1,-.5) node [above]  {$P$};
+\draw (3.5,0) circle (1) (3.5,1) node [above]  {$D$};
+\draw (5,0) circle (1) (5,1) node [above]  {$P$};
+
+\filldraw (-.5,1.1) circle (1pt) node[above right] {1};
+\filldraw (0,1.6) circle (1pt) node[above right] {3};
+\filldraw (.4,.9) circle (1pt) node[above right] {5};
+
+\filldraw (-.5,-1.5) circle (1pt) node[above right] {0};
+\filldraw (0,-1) circle (1pt) node[above right] {4};
+\filldraw (.4,-1.9) circle (1pt) node[above right] {2};
+
+\filldraw (3.5,.5) circle (1pt) node[above right] {1};
+\filldraw (3,0) circle (1pt) node[above right] {3};
+\filldraw (3.5,-.5) circle (1pt) node[above right] {5};
+
+\filldraw (5,-.5) circle (1pt) node[above right] {0};
+\filldraw (5,0) circle (1pt) node[above right] {4};
+\filldraw (4.8,.5) circle (1pt) node[above right] {2};
+
+\node (d) at (1,1.25) {};
+\node (p) at (1,-1.25) {};
+\node (n) at (2.5,0) {};
+
+\begin{scope}[blue, ->,thick]
+\draw (d)--(n.north);
+\draw (p)--(n.south);
+\end{scope}
+\end{tikzpicture}

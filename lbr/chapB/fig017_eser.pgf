@@ -1,0 +1,22 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small, every state/.style={draw=CornflowerBlue}, every loop/.style={draw=Maroon}]
+\draw (0,0) circle (2);
+\node at (2,2) {$A$};
+\node[state]  at (-1.5,0) {};
+\node[state] (3) at (-.4,.8) {$+3$};
+\node[state]  at (1.1,.5) {};
+\node[state]  at (-.5,-.2) {};
+\node[state] (10) at (1,-1) {$+10$};
+\node[state] (7) at (-.5,-1.2) {$-7$};
+
+\begin{scope}[->]
+\path (3) edge[loop above] node{} ()
+	(10) edge[loop above] node{} ()
+   (7) edge[loop right] node {} ();
+
+\end{scope}
+\begin{scope}[-, Maroon]
+\draw (10)--(3);
+\end{scope}
+\end{tikzpicture}

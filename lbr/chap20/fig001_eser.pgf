@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=10mm, y=10mm]
+\draw (0,0) -- (8,0);
+\foreach \x in {0,6.06,8}{
+\draw (\x,5pt) -- (\x,-5pt);
+\draw[dotted] (\x,1) -- (\x,0);
+}
+
+\draw[dashed, red, ->] (8,1) -- (0,1);
+\draw[dashed, blue, ->] (6.06,.5) -- (0,.5);
+
+\draw[fill=blue] (6.06,.5) circle (3pt) node [right] () {A};
+\draw[fill=red] (8,1) circle (3pt) node [right] () {B};
+
+\node[below] at (3.03,0) {$100\unit{km}$};
+\node[below] at (7.03,0) {$32\unit{km}$};
+\end{tikzpicture}

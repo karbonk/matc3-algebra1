@@ -1,0 +1,16 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small\ttfamily,anchor=south]
+
+\matrix(a) [matrix of nodes,nodes={ text centered}]
+{
+3&4  & 0  & 2 & 4&2\\
+3 & 2 & 3 &{}&4&1\\
+&1  & 2  & 2 &\\
+& & 4 & 2  \\
+& & 3  & 0\\
+};
+\draw(a-1-5.north west)--(a-2-5.south west);
+\draw(a-2-5.north west)--(a-2-6.north east);
+\draw(a-2-2.south west)--(a-2-4.south east);
+\draw(a-4-3.south west)--(a-4-4.south east);
+\end{tikzpicture}

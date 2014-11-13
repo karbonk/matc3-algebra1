@@ -1,0 +1,254 @@
+% (c) 2012 - 2014 Dimitrios Vrettos - d.vrettos@gmail.com
+% (c) 2012 Silvia Cibola - silvia.cibola@gmail.com
+
+\chapter{Polinomi}
+\section{Definizioni fondamentali}
+
+\begin{definizione}
+Un \emph{polinomio} è un'espressione algebrica letterale che consiste in una somma algebrica di monomi.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio}
+Sono polinomi:~$6a+2b$, $\:5a^2b+3b^2$, $\:6x^2-5y^2x-1$, $\:7ab-2a^2b^3+4$.
+\end{esempio}
+\end{exrig}
+
+Se tra i termini di un polinomio non sono presenti monomi simili, il polinomio si dice in \emph{forma normale} o
+\emph{ridotto}; se al contrario si presentano dei termini simili, possiamo eseguire la riduzione del polinomio
+sommando algebricamente i termini simili. Tutti i polinomi sono quindi riducibili in forma normale.
+
+Un polinomio in forma normale può presentare, tra i suoi termini, un monomio di grado~0 che viene
+comunemente chiamato \emph{termine noto}.
+
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$3ab+b^2−2ba+4−6ab^2+5b^2$ ridotto in forma normale diventa~$ab+6b^2−6ab^2+4$. Il termine noto è~$4$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi\ref{ese:10.1}}\vspazio
+
+Un polinomio può anche essere costituito da un unico termine, pertanto un monomio è anche un polinomio.
+Un polinomio che, ridotto in forma normale, è somma algebrica di due, tre, quattro monomi non nulli si dice
+rispettivamente binomio, trinomio, quadrinomio.
+
+\begin{exrig}
+\begin{esempio}
+Binomi, trinomi, quadrinomi.
+\begin{enumeratea}
+\item $xy−5x^3y^2$ è un binomio;
+\item $3ab^2 +a−4a^3$ è un trinomio;
+\item $a−6ab^2+3ab−5b$ è un quadrinomio.
+\end{enumeratea}
+\end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Due polinomi, ridotti in forma normale, formati da termini uguali si dicono \emph{uguali}, più precisamente vale il \emph{principio di identità dei polinomi}:
+due polinomi~$p(x)$ e~$q(x)$ sono uguali se, e solo se, sono uguali
+i coefficienti dei rispettivi termini simili.
+
+Se due polinomi sono invece formati da tutti termini opposti, allora si dicono polinomi \emph{opposti}.
+
+Definiamo, inoltre, un polinomio \emph{nullo} quando i suoi termini sono a coefficienti nulli. Il polinomio nullo
+coincide con il monomio nullo e quindi con il numero~0.
+\end{definizione}
+\pagebreak
+\begin{exrig}
+\begin{esempio}
+Polinomi uguali, opposti, nulli.
+\begin{enumeratea}
+\item I polinomi\quad $\frac{1}{3}xy+2y^3−x$\quad e \quad$2y^3-x+\frac{1}{3}xy$ \quad sono uguali;
+\item i polinomi\quad $6ab−3a+2b$\quad e \quad$3a−2b−6ab$ \quad sono opposti;
+\item il polinomio \quad $7ab+4a^2−ab+b^3−4a^2−2b^3−6ab+b^3$ \quad è un polinomio nullo, infatti riducendolo in forma normale otteniamo il monomio nullo~$0$.
+\end{enumeratea}
+\end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Il \emph{grado complessivo} (o semplicemente \emph{grado}) di un polinomio è il massimo dei gradi complessivi dei suoi
+termini. Si chiama, invece, \emph{grado di un polinomio rispetto ad una data lettera} l'esponente maggiore con
+cui quella lettera compare nel polinomio, dopo che è stato ridotto a forma normale.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio} Grado di un polinomio.
+\begin{itemize*}
+\item Il polinomio~$2ab+3−4a^2b^2$ ha grado complessivo~$4$ perché il monomio con grado massimo è~$−4a^2b^2 $, che è un monomio di quarto grado;
+\item il grado del polinomio~$a^3+3b^2a−4ba^2$ rispetto alla lettera~$a$ è~$3$ perché l'esponente più grande con cui tale lettera compare è~$3$.
+\end{itemize*}
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi\ref{ese:10.2}}
+
+\begin{definizione}
+Un polinomio si dice \emph{omogeneo} se tutti i termini che lo compongono sono dello stesso grado.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$a^3−b^3+ab^2$ è un polinomio omogeneo di grado~$3$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi\ref{ese:10.3}}
+
+\begin{definizione}
+Un polinomio si dice \emph{ordinato secondo le potenze decrescenti (crescenti) di una lettera}, quando i suoi
+termini sono ordinati in maniera tale che gli esponenti di tale lettera decrescono (crescono), leggendo il
+polinomio da sinistra verso destra.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$\frac{1}{2}x^3+\frac{3}{4}x^2y−2xy^2+\frac{3}{8}y^3$ è ordinato secondo le potenze decrescenti della lettera~$x$, e secondo le potenze crescenti della lettera~$y$.
+\end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Un polinomio di grado~$n$ rispetto ad una data lettera si dice \emph{completo} se contiene tutte le potenze di tale lettera di grado inferiore a~$n$, compreso il termine noto.
+\end{definizione}
+%\newpage
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$x^4-3x^3+5x^2+\frac{1}{2}x-\frac{3}{5}$ è completo di grado~$4$ e inoltre risulta ordinato rispetto alla lettera~$x$. Il termine noto è~$-\frac{3}{5}$.
+\end{esempio}
+\end{exrig}
+
+\osservazione
+Ogni polinomio può essere scritto sotto forma ordinata e completa: l'ordinamento si può effettuare in virtù della proprietà commutativa della somma, mentre
+la completezza si può ottenere mediante l'introduzione dei termini dei gradi mancanti con coefficiente uguale a~$0$.
+
+Per esempio, il polinomio~$x^4−x+1+4x^2$ può essere scritto sotto forma ordinata e completa come~$x^4+0x^3+4x^2−x+1$.
+
+\vspazio\ovalbox{\risolvii \ref{ese:10.4}, \ref{ese:10.5}, \ref{ese:10.6}, \ref{ese:10.7}, \ref{ese:10.8}, \ref{ese:10.9}, \ref{ese:10.10}}
+
+\section{Somma algebrica di polinomi}
+
+I polinomi sono somme algebriche di monomi e quindi le espressioni letterali che si ottengono dalla somma
+o differenza di polinomi sono ancora somme algebriche di monomi.
+
+\begin{definizione}
+La \emph{somma algebrica di due o più polinomi} è un polinomio avente per termini tutti i termini dei polinomi addendi.
+\end{definizione}
+
+La differenza di polinomi si può trasformare in somma del primo polinomio con l'opposto del secondo polinomio.
+
+\begin{exrig}
+\begin{esempio}
+Differenza di polinomi.
+\begin{equation*}
+\begin{split}
+3a^2+2b-\frac{1}{2}ab-\left(2a^2+ab-\frac{1}{2}b\right)&=3a^2+2b-\frac{1}{2}ab-2a^2-ab+\frac{1}{2}b\\
+&=a^2+\frac{-1-2}{2}ab+\frac{4+1}{2}b\\
+&=a^2-\frac{3}{2}ab+\frac{5}{2}b.
+\end{split}
+\end{equation*}
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:10.11}, \ref{ese:10.12}, \ref{ese:10.13}}
+
+\section{Prodotto di un polinomio per un monomio}
+
+Per eseguire il prodotto tra il monomio~$3x^{2}y$ e il polinomio
+$2{xy}+5x^{3}y^{2}$; indichiamo il prodotto con
+$\left(3x^{2}y\right)\cdot \left(2{xy}+5x^{3}y^{2}\right)$.
+Applichiamo la proprietà distributiva della moltiplicazione rispetto
+all'addizione:~$\left(3x^{2}y\right)\cdot
+\left(2{xy}+5x^{3}y^{2}\right)=6x^{3}y^{2}+15x^{5}y^{3}$.
+
+\osservazione Il prodotto di un monomio per un polinomio è
+un polinomio avente come termini i prodotti del monomio per ciascun
+termine del polinomio.
+
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+ Prodotto di un monomio per un polinomio.
+
+ \begin{equation*}
+\begin{split}
+ \left(3x^{3}y\right)\cdot\left(\frac{1}{2}x^{2}y^{2}+\frac{4}{3}{xy}^{3}\right)&=\left(3x^{3}y\right)\cdot\left(\frac{1}{2}x^{2}y^{2}\right)+\left(3x^{3}y\right)\cdot%
+\left(\frac{4}{3}{xy}^{3}\right)\\
+&=\frac{3}{2}x^{5}y^{3}+4x^{4}y^{4}.
+\end{split}
+\end{equation*}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:10.14}, \ref{ese:10.15}}
+
+\section{Quoziente tra un polinomio e un monomio}
+
+Il quoziente tra un polinomio e un monomio si calcola applicando la
+proprietà distributiva della divisione rispetto
+all'addizione.
+
+\begin{definizione}
+ Si dice che un \emph{polinomio è divisibile per un monomio}, non
+nullo, se esiste un polinomio che, moltiplicato per il monomio, dà
+come risultato il polinomio dividendo; il monomio si dice
+\emph{divisore} del polinomio.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ Quoziente tra un polinomio e un monomio.
+ \[\left(6x^{5}y+9x^{3}y^{2}\right):\left(3x^{2}y\right)=2x^{(5-2)}y^{(1-1)}+3x^{(3-2)}y^{(2-1)}=2x^{3}+3{xy}.\]
+ \end{esempio}
+\end{exrig}
+\osservazione
+
+\begin{enumeratea}
+\item Poiché ogni monomio è divisibile per qualsiasi numero diverso
+da zero, allora anche ogni polinomio è divisibile per un qualsiasi
+numero diverso da zero;
+\item un polinomio è divisibile per un monomio, non nullo, se ogni
+fattore letterale del monomio divisore compare, con grado uguale o
+maggiore, in ogni monomio del polinomio dividendo;
+\item la divisione tra un polinomio e un qualsiasi monomio non nullo è
+sempre possibile, tuttavia il risultato è un polinomio solo nel caso
+in cui il monomio sia divisore di tutti i termini del polinomio;
+\item il quoziente tra un polinomio e un monomio suo divisore è un
+polinomio ottenuto dividendo ogni termine del polinomio per il monomio
+divisore.
+\end{enumeratea}
+
+\ovalbox{\risolvii \ref{ese:10.16}, \ref{ese:10.17}, \ref{ese:10.18}}
+
+\section{Prodotto di polinomi}
+
+Il prodotto di due polinomi è il polinomio che si ottiene
+moltiplicando ogni termine del primo polinomio per ciascun termine del
+secondo polinomio.
+
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+ Prodotto di polinomi.
+
+ \begin{enumeratea}
+   \item $\left(a^{2}b+3a-4{ab}\right)\left(\frac{1}{2}a^{2}b^{2}-a+3{ab}^{2}\right).$ Riducendo i termini simili:
+ \begin{multline*}
+  \left(a^{2}b+3a-4{ab}\right)\left(\frac{1}{2}a^{2}b^{2}-a+3{ab}^{2}\right)=%
+   \frac{1}{2}a^{4}b^{3}-a^{3}b+3a^{3}b^{3}+\frac{3}{2}a^{3}b^{2}-3a^{2}+\\
+   +9a^{2}b^{2} -2a^{3}b^{3}+4a^{2}b-12a^{2}b^{3}\\
+  =\frac{1}{2}a^{4}b^{3}-a^{3}b+a^{3}b^{3}+\frac{3}{2}a^{3}b^{2}-3a^{2}+9a^{2}b^{2}+4a^{2}b-12a^{2}b^{3}.
+ \end{multline*}
+ \item  $\left(x-y^{2}-3{xy}\right) \left(-2x^{2}y-3y\right).$
+ Moltiplicando ogni termine del primo polinomio per ogni termine del
+secondo otteniamo.
+\[\left(x-y^{2}-3{xy}\right)\left(-2x^{2}y-3y\right)=-2x^{3}y+3{xy}+2x^{2}y^{3}-3y^{3}+6x^{3}y^{2}+9{xy}^{2};\]
+
+ \item $\left(\frac{1}{2}x^{3}-2x^{2}\right)\left(\frac{3}{4}x+1\right)$.
+ \[\left(\frac{1}{2}x^{3}-2x^{2}\right)\left(\frac{3}{4}x+1\right)=\frac{3}{8}x^{4}+\frac{1}{2}x^{3}-\frac{3}{2}x^{3}-2x^{2}=\frac{3}{8}x^{4}-x^{3}-2x^{2}.\]
+ \end{enumeratea}
+ \end{esempio}
+\end{exrig}
+\ovalbox{\risolvi \ref{ese:10.19}}
+\newpage
+\input{./chap/10_esercizi}
+\cleardoublepage

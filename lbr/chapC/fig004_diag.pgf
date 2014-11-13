@@ -1,0 +1,70 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  \node[ellipse, minimum height=3.5cm,draw, minimum width=5cm] (D) at (0,0) {};
+
+  \node[above] (D1) at (D.north) {$\Dom$};
+
+  \begin{scope}[decoration={random steps,segment length=1mm}]
+    \draw [decorate,fill=lightgray] (1,0)  arc (00:360:1 and 1.5) -- cycle; 
+    \node [above right] at(.8,1) {$\ID$};
+  \end{scope}
+
+  \begin{scope}[fill=CornflowerBlue]
+    \filldraw (0,1) circle (2pt) node (a) {};
+    \filldraw (-.2,.2) circle (2pt) node (b) {};
+    \filldraw (.2,-.4) circle (2pt) node (c) {};
+    \filldraw (0,-1) circle (2pt) node (d) {};
+    \filldraw (-1,-1) circle (2pt) ;
+    \filldraw (-1.5,-.5) circle (2pt) ;
+    \filldraw (-1,-1) circle (2pt) ;
+    \filldraw (-2,0) circle (2pt) ;
+    \filldraw (-2.2,.5) circle (2pt) ;
+    \filldraw (-1,1) circle (2pt) ;
+    \filldraw (-1.3,.5) circle (2pt) ;
+    \filldraw (1,-1) circle (2pt) ;
+    \filldraw (1.5,-.5) circle (2pt) ;
+    \filldraw (1,-1) circle (2pt) ;
+    \filldraw (2,0) circle (2pt) ;
+    \filldraw (2.2,.5) circle (2pt) ;
+    \filldraw (1.3,.5) circle (2pt) ;
+  \end{scope}
+
+  \begin{scope}[xshift=6cm]
+    \node[ellipse, minimum height=3.5cm,draw, minimum width=5cm] (C) at (0,0) {};
+    \node[above] (C1) at (C.north) {$\Cod$};
+
+    \begin{scope}[decoration={random steps,segment length=1mm}]
+      \draw [decorate,fill=lightgray] (1,0)  arc (00:360:1 and 1.5) -- cycle; 
+      \node [above right] at(.8,1) {$\IM$};
+    \end{scope}
+    
+    \begin{scope}[fill=LimeGreen]
+      \filldraw (0,1) circle (2pt) node (a1) {};
+      \filldraw (-.2,.2) circle (2pt) node (b1) {};
+      \filldraw (.2,-.4) circle (2pt) node (c1) {};
+      \filldraw (0,-1) circle (2pt) node (d1) {};
+
+      \filldraw (-1,-1) circle (2pt) ;
+      \filldraw (-1.5,-.5) circle (2pt) ;
+      \filldraw (-1,-1) circle (2pt) ;
+      \filldraw (-2,0) circle (2pt) ;
+      \filldraw (-2.2,.5) circle (2pt) ;
+
+      \filldraw (-1.3,.5) circle (2pt) ;
+      \filldraw (1.5,-.5) circle (2pt) ;
+      \filldraw (1,-1) circle (2pt) ;
+      \filldraw (2,0) circle (2pt) ;
+      \filldraw (2.2,.5) circle (2pt) ;
+    \filldraw (1.3,.5) circle (2pt) ;
+    \end{scope}
+  \end{scope}
+  
+  \begin{scope}[->,smooth,thick]
+    \draw[blue] (D1.north) .. controls +(80:1cm) and +(80:1cm) .. (C1.north) node [midway, above, black] () {$\Kor$};
+    \draw[Maroon] (a) .. controls +(80:1cm) and +(150:1cm) .. (a1);
+    \draw[orange] (b) .. controls +(30:2cm) and +(150:1cm) .. (b1);
+    \draw[red] (c) .. controls +(-30:2cm) and +(-150:1cm) .. (c1);
+    \draw[yellow] (d) .. controls +(-30:2cm) and +(-150:1cm) .. (d1);
+  \end{scope}
+\end{tikzpicture}

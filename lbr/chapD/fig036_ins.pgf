@@ -1,0 +1,36 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+    \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+    \node[above] (A1) at (A.north) {$\Dom$};
+
+    \begin{scope}[fill=CornflowerBlue]
+      \filldraw (0,.5) circle (2pt) node (a) {};
+      \node[left] at (0,.5) {$a$};
+      \filldraw (.8,.2) circle (2pt) node (b) {};
+      \node[left] at (.8,.2) {$b$};
+      \filldraw (-.4,-.5) circle (2pt) node (c) {};
+      \node[left] at (-.4,-.5)  {$c$};
+      \filldraw (.4,-.5) circle (2pt) node (d) {};
+      \node[left] at (.4,-.5)  {$d$};
+    \end{scope}
+    
+    
+    \begin{scope}[xshift=4cm]
+    \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+    \node[above] (B1) at (B.north) {$\IM$};
+
+      \begin{scope}[fill=LimeGreen]
+	\filldraw (0,0) circle (2pt)node (b1) {};
+	\node[right] at (0,0) {$2$};
+      \end{scope}
+    \end{scope}
+
+    \begin{scope}[->,smooth,thick]
+      \draw[Maroon] (a) .. controls +(30:1cm) and +(90:1cm) .. (b1);
+      \draw[purple] (d) .. controls +(-30:.5cm) and +(180:0.5cm) .. (b1);
+      \draw[orange] (c) .. controls +(-90:1cm) and +(-90:1cm) .. (b1);
+    \draw[blue] (b) .. controls +(30:1cm) and +(180:1cm) .. (b1);
+         
+ \end{scope}
+
+\end{tikzpicture}

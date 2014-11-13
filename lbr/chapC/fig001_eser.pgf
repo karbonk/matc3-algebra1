@@ -1,0 +1,12 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\pgfdeclareimage[interpolate=true]{segnali}{./img/part08/chapB/segnali.pdf}
+\begin{tikzpicture}[x=10mm, y=10mm, scale=.4]
+    \pgftext[at=\pgfpoint {0mm}{0mm},left,base]{\pgfuseimage{segnali}};
+    \node[right] (a) at (11,11) {Curva pericolosa a destra};
+    \node[right] (b) at (11,9) {Divieto di transito};
+    \node[right] (c) at (11,7) {Divieto di sosta};
+    \node[right] (d) at (11,5) {Fermarsi e dare precedenza};
+    \node[right] (e) at (11,3) {Attraversamento ciclabile};
+
+\end{tikzpicture}

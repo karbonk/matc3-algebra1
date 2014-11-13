@@ -1,0 +1,21 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[font=\small]
+\begin{axis}[ymin=0,
+ybar,
+xtick=data,
+ylabel=Percentuale,
+x tick label style={rotate=30,anchor=east},
+symbolic x coords={Sottopeso, Normopeso, Sovrappeso, Obeso},
+bar width=20pt,enlarge x limits=0.15,nodes near coords,
+nodes near coords align={vertical},
+]
+    \addplot[fill=CornflowerBlue,draw=black]
+      coordinates{
+	(Sottopeso, .3)
+(Normopeso, 42.2)
+(Sovrappeso, 43.8)
+(Obeso,13.7)
+      };
+\end{axis}
+\end{tikzpicture}

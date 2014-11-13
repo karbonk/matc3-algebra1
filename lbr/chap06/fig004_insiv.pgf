@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=.5cm,y=1cm,font=\small]
+    \draw (0,0)circle (1.5) (0,1) node[ left=1.5] {$A$};
+\fill (0,.8) circle (1pt) node[above right] {1};
+\fill (0,.3) circle (1pt) node[above right] {3};
+\fill (0,-.2) circle (1pt) node[above right] {5};
+\fill (0,-.7) circle (1pt) node[above right] {7};
+\fill (0,-1.2) circle (1pt) node[above right] {9};
+\begin{scope}[xshift=2cm]
+    \draw (0,0)circle (1.5) (0,1) node[ left=1.5] {$B$};
+\fill (0,.7) circle (1pt) node[above right] {2};
+\fill (0,.2) circle (1pt) node[above right] {4};
+\fill (0,-.3) circle (1pt) node[above right] {6};
+\fill (0,-.8) circle (1pt) node[above right] {8};
+\end{scope}
+\end{tikzpicture}

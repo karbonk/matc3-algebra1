@@ -1,0 +1,4 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+\draw[step=5mm, blue, opacity=.3](0,0) grid (140mm,20mm);
+\end{tikzpicture}

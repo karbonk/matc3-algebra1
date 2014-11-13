@@ -1,0 +1,20 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+\begin{scope}[thick,font=\footnotesize]
+\draw[->] (-10pt,0) -- (240pt,0);
+  \foreach \x/\xtext in {%
+      0/-2,.25/,.5/,.75/,
+1/,1.25/,1.5/,1.75/,2/-1,2.25/,2.5/,2.75/,3/,%
+      3.25/,3.5/,3.75/,4/0,4.25/,4.5/,4.75/,%
+      5/,5.25/,5.5/,5.75/,6/1,6.25/,6.5/,6.75/,7/,7.25/,7.5/,7.75/,8/2}
+    \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
+\foreach \y/\ytext in {.5/$A$,2.25/$B$,3.75/$C$,4.25/$D$,5.5/$E$,7.5/$F$}
+	 \draw[shift={(\y,0)}] (0pt,2pt) -- (0pt,-2pt) node[above=2pt] {$\ytext$};
+\draw (.5,0) circle (1pt);
+\draw (2.25,0) circle (1pt);
+\draw (3.75,0) circle (1pt);
+\draw (4.25,0) circle (1pt);
+\draw (5.5,0) circle (1pt);
+\draw (7.5,0) circle (1pt);
+\end{scope}
+\end{tikzpicture}

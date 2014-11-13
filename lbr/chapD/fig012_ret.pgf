@@ -1,0 +1,9 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+\draw[->](-4.5,0) -- (4.5,0);
+\foreach \x in {-4,-1.93,-1.03,4}
+\draw (\x,1.5pt) -- (\x,-1.5pt);
+
+\foreach \x/\xtext in {-4/\frac{3}{8},-1.93/\frac{21}{32},-1.03/\frac{15}{16},4/\frac{3}{2}}
+\node[below] at (\x,0) {$\xtext$};
+\end{tikzpicture}

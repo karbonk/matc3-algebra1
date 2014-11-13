@@ -1,0 +1,7 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+\draw[step=5mm, blue, opacity=.3](0,0) grid (120mm,20mm);
+\draw[very thick](10mm,10mm) node [below] {$A$} --(55mm,10mm) node [below] {$B$};
+\draw[very thick](10mm,9mm) -- (10mm,11mm);
+\draw[very thick](55mm,9mm) -- (55mm,11mm);
+\end{tikzpicture}

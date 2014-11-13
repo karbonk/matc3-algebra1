@@ -1,0 +1,22 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[scale=.85]
+\begin{axis}[
+xlabel=Diametro crateri lunari (km), ylabel=Densità di frequenza,
+legend entries={Frequenza crateri},
+ybar,
+enlarge x limits=0.15,
+symbolic x coords={$0-50$,$50-100$,$100-150$},
+xtick=data,
+bar width=30pt, 
+ymin=0, 
+width=90mm]
+
+\addplot[fill=CornflowerBlue, draw=black] coordinates {
+($0-50$,21.76)
+($50-100$,14.9)
+($100-150$,.4)
+ };
+ 
+\end{axis}
+\end{tikzpicture}

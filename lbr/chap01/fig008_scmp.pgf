@@ -1,0 +1,20 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+\begin{scope}[font=\ttfamily]
+\matrix (scomposizione)[matrix of nodes]{
+	6&3&0 & 2\\
+	3&1&5 & 3\\
+	1&0&5 & 3\\
+	&3&5 &5\\
+	&&7 & 7\\
+	&&1 & \\
+};
+\end{scope}
+ \draw(scomposizione-1-3.north east)--(scomposizione-6-3.south east);
+
+\node (a) [right=of scomposizione-1-4.east] {630 \`e divisibile per 2 perch\'e l'ultima cifra \`e pari;};
+\node (b) [right=of scomposizione-2-4.east] {315 \`e divisibile per 3, la somma delle sue cifre \`e 9 divisibile per 3;};
+\node (c) [right=of scomposizione-3-4.east] {105 \`e divisibile per 3, la somma delle sue cifre \`e 6 divisibile per 3;};
+\node (d) [right=of scomposizione-4-4.east] {35 \`e divisibile per 5 perch\'e l'ultima cifra \`e 5;};
+\node (e) [right=of scomposizione-5-4.east] {7 \`e un numero primo.};
+\end{tikzpicture}

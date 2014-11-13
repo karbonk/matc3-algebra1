@@ -1,0 +1,134 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\chapter{Rappresentazione degli insiemi}
+
+Esistono diversi modi per rappresentare un insieme e quindi per indicare
+con precisione i suoi elementi.
+
+\section{Rappresentazione tabulare}
+
+La rappresentazione tabulare è la descrizione più elementare di un
+insieme; consiste nell'elencare tutti gli elementi dell'insieme separati da virgole e racchiusi tra le
+parentesi graffe.
+
+Per esempio, definiamo un insieme~$X$ con la scrittura:~$X=\{\text{1, 2, 3, 5}\}$.
+Non è importante l'ordine in cui vengono scritti gli elementi, cioè
+\[X=\{\text{1, 2, 3, 5}\}=\{\text{2, 1, 5, 3}\}.\]
+
+È invece necessario che ogni elemento dell'insieme compaia una sola volta. Ad esempio, per rappresentare
+l'insieme~$Y$ delle lettere della parola ``autunno'', scriviamo
+\[Y = \{\text{a, u, t, n, o}\}.\]
+
+Si può utilizzare questa rappresentazione anche per insiemi numerosi e addirittura infiniti. In questi casi si elencano i primi elementi
+dell'insieme e in fondo all'elenco si mettono tre punti di sospensione lasciando intendere come continuare la serie.
+
+Per esempio, l'insieme dei multipli di~3 si può indicare con la seguente rappresentazione tabulare:
+\[X=\{\text{0, 3, 6, 9, 12, 15, 18, 21, }\ldots\}.\]
+
+
+\begin{exrig}
+ \begin{esempio}
+Rappresentazione degli insiemi:
+ \begin{enumeratea}
+\item l'insieme~$G$ dei primi~3 giorni della settimana si indica:~$G=\{\text{lunedì, martedì, mercoledì}\}$;
+\item l'insieme~$A$ delle lettere della parola ``associazione'' si indica:~$A=\{\text{a, s, o, c, i, z, n, e}\}$.
+\end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:6.1}, \ref{ese:6.2}, \ref{ese:6.3}, \ref{ese:6.4}, \ref{ese:6.5}}
+
+\section{Rappresentazione per proprietà caratteristica}
+
+Per quegli insiemi i cui elementi soddisfano una certa proprietà che
+li caratterizza, possiamo usare proprio questa proprietà per
+descrivere più sinteticamente l'insieme che li contiene.
+
+Per esempio, l'insieme~$Y$ dei divisori di~10 può essere definito come: \[Y=\{x\mid x \text{ è un divisore di }10\}\]
+e si legge ``$Y$ è l'insieme degli elementi~$x$ tali che~$x$ è un divisore di~10''.
+
+In questa scrittura si mette in evidenza la caratteristica degli elementi dell'insieme.
+La rappresentazione tabulare dello stesso insieme è~$Y=\{\text{1, 2, 5, 10}\}$. L'espressione ``tale che'', che è stata rappresentata per mezzo del simbolo ``$|$'', può essere indicata anche per mezzo del simbolo ``:''.
+
+La rappresentazione per caratteristica dell'insieme~$X$
+dei naturali minori di~15 è: \[X=\{x\in\insN\mid x<15\}\]
+e si legge ``$X$ è l'insieme dei numeri naturali~$x$ tali che~$x$ è minore di~15''.
+
+L'insieme che viene indicato nella prima parte della rappresentazione (nell'ultimo esempio è
+l'insieme dei numeri naturali~$\insN$) è l'\textit{insieme universo} (sezione \ref{sect:universo}) al quale si fa riferimento.
+Questo metodo è particolarmente utile quando l'insieme da rappresentare contiene molti elementi.
+
+\begin{exrig}
+ \begin{esempio}
+ Esempi di definizioni di insiemi per mezzo della loro proprietà caratteristica:
+ \begin{enumeratea}
+\item l'insieme~$A$ delle rette incidenti a una retta~$t$ assegnata si può rappresentare come:
+\[A=\{r\mid r\text{ è una retta incidente a } t\}\]
+\item l'insieme~$B$ dei numeri naturali maggiori di~100 può essere rappresentato come:
+\[B=\{n\in\insN\mid n>100\}\]
+\item l'insieme~$P$ dei numeri pari può essere rappresentato come:
+\[P=\{n\in\insN\mid n=2\cdot m\text{, con }m\in\insN\}\]
+\item l'insieme~$C$ dei numeri interi relativi compresi tra~$-10$ e~$+100$, estremi inclusi:
+\[C=\{n\in\insZ\mid -10\le n\le 100\}.\]
+\end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:6.6}, \ref{ese:6.7}, \ref{ese:6.8}, \ref{ese:6.9}, \ref{ese:6.10}, \ref{ese:6.11}, \ref{ese:6.12}, \ref{ese:6.13}, \ref{ese:6.14}, \ref{ese:6.15},%
+\ref{ese:6.16}, \ref{ese:6.17}, \ref{ese:6.18}, \ref{ese:6.19}}
+
+\vspazio\ovalbox{\ref{ese:6.20}}
+
+\section{Rappresentazione grafica (Diagramma di Eulero-Venn)}
+
+In questa rappresentazione grafica, detta anche \textit{rappresentazione
+di Eulero-Venn}\footnote{in onore del matematico svizzero Leonhard Euler, noto in Italia come Eulero, (1707 - 1783) e del matematico e statistico inglese John Venn (1834 - 1923).} si disegna una linea chiusa all'interno della quale gli elementi
+dell'insieme si indicano con dei punti. Solitamente si scrive all'esterno il nome dell'insieme
+e vicino ad ogni punto il valore ad esso associato.
+
+\begin{exrig}
+ \begin{esempio}
+ $A$ è l'insieme dei numeri naturali minori di~6, cioè $A=\{\text{0, 1, 2, 3, 4, 5}\}$.
+ La sua rappresentazione con un diagramma di Eulero-Venn è la seguente
+ \begin{center}
+  \input{./lbr/chap06/fig001_insi.pgf}
+ \end{center}
+
+ \end{esempio}
+
+ \begin{esempio}
+ $B$ è l'insieme delle lettere della parola ``TARTARUGA'', $B=\{\text{t, a, r, u, g}\}$.
+ La sua rappresentazione con un diagramma di Eulero-Venn è la seguente
+ \begin{center}
+  \input{./lbr/chap06/fig002_insii.pgf}
+ \end{center}
+
+ \end{esempio}
+
+\end{exrig}
+
+Un insieme può essere rappresentato con una qualsiasi delle
+rappresentazioni indicate. Se un insieme è infinito o è costituito
+da un numero elevato di elementi la rappresentazione più pratica è
+quella per caratteristica.
+
+\begin{exrig}
+ \begin{esempio}
+ Rappresentare l'insieme~$C$ dei multipli di~5.
+
+ Per caratteristica:~$C=\{n\in\insN\mid n\text{ è multiplo di }5\}$ oppure
+$C=\{n\in\insN\mid n=5\cdot m$, $m\in\insN\}$
+
+Tabulare:~$C=\{\text{0, 5, 10, 15, 20, 25, 30, 35, }\dots\}$. I puntini di sospensione indicano che l'elenco continua.
+
+Rappresentazione con diagramma di Eulero-Venn:
+\begin{center}
+ \input{./lbr/chap06/fig003_insiii.pgf}
+\end{center}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:6.21}, \ref{ese:6.22}}
+
+\newpage
+\input{./chap/06_esercizi}
+\cleardoublepage

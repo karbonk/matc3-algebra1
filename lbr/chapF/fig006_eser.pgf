@@ -1,0 +1,33 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[->]
+   \draw (-2,0) -- (3,0) node[below right] {$x$};
+    \draw (0,-3) -- (0,3) node[above left] {$y$};
+  \end{scope}
+
+  \foreach \x/\xtext in {-1/-1, 1/1,2/2}{
+    \node[below] at (\x,0) {$\xtext$};
+    \draw (\x,1.5pt) -- (\x,-1.5pt);}
+  \foreach \y/\ytext in {-2/-2,-1/-1, 1/1, 2/2}{
+    \node[left] at (0,\y) {$\ytext$};
+    \draw (1.5pt,\y) -- (-1.5pt,\y);}
+  \node[below right] at (0,0) {$0$};
+
+  \begin{scope}[dotted, orange]
+    \draw (-2,-3) grid (3,3);
+  \end{scope}
+
+  \begin{scope}[thick, Maroon, shorten >=1.5pt, ->]
+    \draw (-1,-2) -- (2,2);
+      \end{scope}
+  
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (2,2) circle (1.5pt) node[above right] {$B$};
+\filldraw (-1,-2) circle (1.5pt) node[below left] {$A$};
+\end{scope}
+
+\node at (.5,.5) {$\vec{w}$};
+
+\end{tikzpicture}

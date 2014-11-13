@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+
+\draw (0,0) rectangle (10mm,10mm);
+\draw (0,-15mm) rectangle (10mm,-5mm);
+\draw (0,-30mm) -- (0mm,-20mm)--(10mm,-20mm)--(10mm,-25mm)--%
+(15mm,-25mm)--(15mm,-30mm)--(0,-30mm);
+
+% \draw[dashed](10mm,-30mm) --(10mm,-25mm);
+\begin{scope}[step=5mm, black, dashed]
+\draw (0,-15mm) grid (10mm,-5mm);
+\draw (0,-30mm) grid (10mm,-20mm);
+\end{scope}
+\node[right] (a) at (17.5mm,5mm) {I $\displaystyle\frac{5}{4}$ di $Q$ si ottengono dividendo il quadrato $Q$ in 4 parti uguali ...};
+\node[right] (b) at (17.5mm,-10mm){... e dovendone prenderne 5, l'unità ($Q$) non è sufficiente.};
+\node[right] (b) at (17.5mm,-25mm){La grandezza ottenuta \`e formata da  $\displaystyle\frac{4}{4}$ con l'aggiunta di  $\displaystyle\frac{1}{4}$. Cioè};
+\end{tikzpicture}

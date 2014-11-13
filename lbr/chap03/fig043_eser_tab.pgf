@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=8mm, y=8mm, every node/.style={anchor=base,
+    text height=1.5em,text depth=1em,minimum size=10mm}]
+
+\matrix (a) [matrix of nodes]{
+$\cdot$ &$\displaystyle{\frac{1}{3}}$ &$\displaystyle{\frac{2}{5}}$ &$\displaystyle{\frac{3}{8}}$ &$\displaystyle{\frac{11}{4}}$\\
+$\displaystyle\frac{3}{4}$ & & & &\\
+$\displaystyle\frac{5}{2}$ & & & &\\
+$\displaystyle\frac{7}{3}$ & & & &{}\\
+$\displaystyle\frac{8}{5}$ & & & &{}\\
+};
+
+\node[] at (a.north) {Primo fattore};
+\node[rotate=90] at (a.west) {Secondo fattore};
+\draw[thick] (a-1-1.north west)--(a-1-5.north east);
+\draw[thick] (a-5-1.south west)--(a-5-5.south east);
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+  \begin{scope}[thick,shorten >=1.5pt, ->]
+    \begin{scope}[OliveGreen]
+      \draw (0,0) -- (2,1); % vettore u
+      \draw (0,0) -- (2.7,0); % vettore v
+      \draw (0,0) -- (-.7,-3); % vettore w
+    \end{scope}
+    
+    \begin{scope}[Maroon]
+      \draw (0,0) -- (4,-2); % vettore j
+      \draw (0,0) -- (4.7,1); % vettore z    
+    \end{scope}
+  \end{scope}
+
+  \begin{scope}[dashed]
+    \draw[xshift=47mm,yshift=10mm] (0,0) -- (-.7,-3);
+    \draw[xshift=-7mm,yshift=-30mm] (0,0) -- (4.7,1);
+  \end{scope}
+
+  \begin{scope}[dotted]
+    \draw[xshift=20mm,yshift=10mm] (0,0) -- (2.7,0);
+    \draw[xshift=27mm,yshift=0mm] (0,0) -- (2,1);
+  \end{scope}  
+
+  \begin{scope}[fill=CornflowerBlue, draw=black]
+    \filldraw (0,0) circle (1.5pt) node[left] {$A$};
+    \filldraw (2,1) circle (1.5pt) node[above] {$B$};
+    \filldraw (4.7,1) circle (1.5pt) node[right] {$E$};
+    \filldraw (4,-2) circle (1.5pt) node[below] {$F$};
+    \filldraw (-.7,-3) circle (1.5pt) node[below] {$D$};
+    \filldraw (2.7,0) circle (1.5pt) node[right] {$C$};
+  \end{scope}
+
+  \node[above] at (1,.5) {$\vec{u}$};
+  \node[above] at (1.8,0) {$\vec{v}$};
+  \node[above] at (2,-1) {$\vec{j}$};
+  \node[above] at (2.35,.5) {$\vec{z}$};
+  \node at (-.6,-1.5) {$\vec{w}$};
+
+\end{tikzpicture}

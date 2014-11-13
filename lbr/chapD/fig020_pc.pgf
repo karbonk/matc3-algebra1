@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=8mm, y=8mm, smooth]
+\begin{scope}[->]
+\draw (0,0) -- (4,0) node [below]  {$x$};
+\draw (2,-2) -- (2,2)node [left]  {$y$};;
+\end{scope}
+
+\node[below left] at (2,0) {$O$};
+\node[above] at (4,0) {$\insR^{+}$};
+\node[above right] at (0,0) {$\insR^{-}$};
+\node[below right] at (2,2) {$\insR^{+}$};
+\node[above right] at (2,-2) {$\insR^{-}$};
+\end{tikzpicture}

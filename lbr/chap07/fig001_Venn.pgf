@@ -1,0 +1,10 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=2cm,font=\small, fill=CornflowerBlue]
+    \draw (0,0)circle (1.5) (0,1) node[ left=1.5] {$X$};
+\foreach \x in {-.5,0,.5}
+\foreach \y in {-.5,0,.5}
+\filldraw (\x,\y) circle (2pt) node[above right] {};
+\begin{scope}[y=2cm]]
+    \draw (0.25,0)circle (.5) (0,.5) node[left=.1] {$Y$};
+\end{scope}
+\end{tikzpicture}

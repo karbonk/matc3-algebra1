@@ -1,0 +1,20 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Occhio di Horus 
+\pgfdeclareimage[interpolate=true]{eye}{./img/part01/chap03/eye.pdf}
+\begin{tikzpicture}[scale=.7]
+    \pgftext[at=\pgfpoint {0mm}{0mm},left,base]{\pgfuseimage{eye}}
+    \node (a) at (10mm,65mm) {$\frac{1}{2}$};
+    \node (b) at (30mm,65mm) {$\frac{1}{8}$};
+    \node (c) at (50mm,65mm) {$\frac{1}{16}$};
+    \node (d) at (10mm,0mm) {$\frac{1}{64}$};
+    \node (e) at (30mm,0mm) {$\frac{1}{4}$};
+    \node (f) at (50mm,0mm) {$\frac{1}{32}$};
+  \begin{scope}[->,color=gray, thick]
+    \draw (a)--(19mm,34mm);
+    \draw (b)--(29mm,54mm);
+    \draw (c)--(40mm,35mm);
+    \draw (d)--(19mm,14mm);
+    \draw (e)--(29mm,35mm);
+    \draw (f)--(41mm,16mm);
+  \end{scope}
+\end{tikzpicture}

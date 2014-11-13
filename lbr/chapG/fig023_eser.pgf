@@ -1,0 +1,38 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+\tkzDefPoint(0,0){A}
+\tkzDefShiftPoint[A](102:3.328){B}
+\tkzDefShiftPoint[A](0:3){D}
+\tkzDefShiftPoint[D](108:5.97){C}
+
+\tkzMarkAngle[fill=LimeGreen, draw=black, size=.4](D,A,B)
+\tkzMarkAngle[fill=LimeGreen, draw=black, size=.4](C,D,A)
+\tkzMarkAngle[fill=LimeGreen, draw=black, size=.5](B,C,D)
+
+\tkzDefPointBy[projection=onto A--D](C) 
+\tkzGetPoint{E}
+
+\tkzDefPointBy[projection=onto A--D](B) 
+\tkzGetPoint{F}
+
+\tkzDefPointBy[projection=onto C--E](B) 
+\tkzGetPoint{G}
+
+\tkzDrawLine[add=0 and 0, thin](A,B)
+\tkzDrawLine[add=0 and 0, thin](A,D)
+\tkzDrawLine[add=0 and 0, thin](D,C)
+\tkzDrawLine[add=0 and 0, thin](C,B)
+
+\tkzDrawLine[add=0 and 0, thin,dashed](B,F)
+\tkzDrawLine[add=0 and 0, thin,dashed](B,G)
+\tkzDrawLine[add=0 and 0, thin,dashed](A,F)
+\tkzDrawLine[add=0 and 0, thin,dashed](C,E)
+
+\tkzLabelPoints[below](A,F,D,E)
+\tkzLabelPoints[above](C)
+\tkzLabelPoints[left](B)
+\tkzLabelPoints[right](G)
+\tkzDrawPoints[color=CornflowerBlue](A,B,C,D,F,E,G)
+
+\end{tikzpicture}

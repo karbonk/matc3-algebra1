@@ -1,0 +1,23 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+\draw (0,0) circle [x radius=2.5, y radius=2];
+
+\node  at (2.5,2) {$A$};
+ \begin{scope}[fill=CornflowerBlue]
+\fill (0,0) circle (1.5pt) node[above right] {letto};
+\fill (-1,0) circle (1.5pt) node[above right] {luna};
+\fill (-2,0) circle (1.5pt) node[above right] {mani};
+\fill (-2,-.7) circle (1.5pt) node[above right] {barca};
+\fill (1,0) circle (1.5pt) node[above right] {mille};
+\fill (0,.7) circle (1.5pt) node[above right] {ramo};
+\fill (1,.7) circle (1.5pt) node[above right] {barba};
+\fill (-1,.7) circle (1.5pt) node[above right] {molle};
+\fill (0,-.7) circle (1.5pt) node[above right] {cani};
+\fill (1,-.7) circle (1.5pt) node[above right] {lana};
+\fill (-1,-.7) circle (1.5pt) node[above right] {prese}; 
+\fill (0,-1.4) circle (1.5pt) node[above right] {prete};
+\fill (1,-1.4) circle (1.5pt) node[above right] {remo};
+\fill (-1,-1.4) circle (1.5pt) node[above right] {tetto}; 
+ \end{scope}
+\end{tikzpicture}

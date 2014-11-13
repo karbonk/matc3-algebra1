@@ -1,0 +1,31 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=15mm,y=15mm, font=\small,]
+\begin{scope}[->]
+\draw (-.8,0) -- (7,0) node [below right] {$x$};
+\draw (0,-1.2) -- (0,1.2) node [above left] {$y$};
+\end{scope}
+
+\foreach \xi in {1.573,3.145,4.718,6.291}
+\draw (\xi,1.5pt) -- (\xi,-1.5pt);
+
+\foreach \yi in {-1,1}
+\draw (-1.5pt,\yi) -- (1.5pt,\yi);
+
+\begin{scope}[dotted]
+\draw (1.573,0) -- (1.573,1);
+\draw (4.718,0) -- (4.718,-1);
+\draw (-.8,1) -- (6.5,1);
+\draw (-.8,-1) -- (6.5,-1);
+
+\end{scope}
+\draw[color=blue, domain=-.8:6.5,smooth]
+plot[id=sin] function{sin(x)};
+\node[below left] at (0,0) {$0\grado$};
+\foreach \x/\xtext in {1.573/90\grado,3.145/180\grado,4.718/270\grado,6.291/360\grado}
+\node[below] at(\x,0) {$\xtext$};
+
+\node[above right] at(0,1) {$1$};
+\node[below right] at(0,-1) {$-1$};
+
+\end{tikzpicture}

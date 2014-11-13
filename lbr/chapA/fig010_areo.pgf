@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=10mm,y=10mm, x radius=10mm, y radius=10mm]
+  \draw (0,0) circle (3);
+  \draw[pattern=north east lines,pattern color=orange] (0,0) -- (0:3) arc (0:115.2:3);
+  \draw[pattern=horizontal lines,pattern color=brown] (0,0)-- (115.2:3) arc (115.2:198:3);
+  \draw[pattern=dots,pattern color=green] (0,0)-- (198:3) arc (198:273.6:3);
+  \draw[pattern=north west lines,pattern color=red] (0,0)-- (273.6:3) arc (273.6:327.6:3);
+  \draw[pattern=vertical lines,pattern color=blue] (0,0)-- (327.6:3) arc (327.6:360:3);
+
+  \begin{scope}[every node/.style={rounded corners, draw=black, fill=white}]
+    \draw(57.6:2) node {$115,2\grado $};
+    \draw(156.6:2) node {$82,8\grado $};
+    \draw(235.8:2) node {$75,6\grado $};
+    \draw(300.6:2) node {$54\grado $};
+    \draw(343.8:2) node {$32,4\grado $};
+  \end{scope}
+
+  \begin{scope}[thin, <->]
+    \draw (0:1) arc (0:115.2:1);
+    \draw (115.2:.8) arc (115.2:198:.8);
+    \draw (198:1.2) arc (198:273.6:1.2);
+    \draw (273.6:.8) arc (273.6:327.6:.8);
+    \draw (327.6:1.1) arc (327.6:360:1.1);
+  \end{scope}
+
+  \draw(57.6:4) node {1\textsuperscript{a} classe: $32\%$};
+  \draw[left](156.3:3) node {2\textsuperscript{a} classe: $23\%$};
+  \draw(235.8:4) node {3\textsuperscript{a} classe: $21\%$};
+  \draw[below right](300.6:3) node {4\textsuperscript{a} classe: $15\%$};
+  \draw[right](343.8:3) node {5\textsuperscript{a} classe: $9\%$};
+\end{tikzpicture}

@@ -1,0 +1,35 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=5mm,y=5mm]
+  \node (a) at (-3,0) {$A$};
+  \node (b) at (-1,0) {$B$};
+  \node (e) at (0,0) {$=$};
+  \node (c) at (1,0) {$C$};
+  \node (d) at (3,0) {$D$};
+  \foreach \x in {-2,2}
+    \node (f) at (\x,0) {$:$};
+  \begin{scope}[font=\small]
+    \node (est) at (0,3) {estremi};
+    \node (med) at (0,2) {medi};
+    \node (ant) at (-4,-2) {antecedenti};
+    \node (con) at (4,-2) {conseguenti};
+  \end{scope}
+  \begin{scope}[->]
+    \begin{scope}[blue]
+      \draw (est) ..controls +(left:15mm) and +(up:6mm).. (a);
+      \draw (est) ..controls +(right:15mm) and +(up:10mm).. (d);
+    \end{scope}
+    \begin{scope}[red]
+      \draw (med) ..controls +(down:5mm) and +(up:8mm).. (b);
+      \draw (med) ..controls +(down:5mm) and +(up:8mm).. (c);
+    \end{scope}
+    \begin{scope}[orange]
+      \draw (ant)..controls +(up:2mm) and +(left:8mm).. (a);
+      \draw (ant)..controls +(up:5mm) and +(down:10mm).. (c);
+    \end{scope}
+    \begin{scope}[green]
+      \draw (con)..controls +(up:5mm) and +(down:8mm).. (b);
+      \draw (con)..controls +(up:5mm) and +(right:8mm).. (d);
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,34 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm,y=5mm,font=\small]
+
+\def\firstcircle{(0,0) circle (2)}
+\def\secondcircle{(10,0) circle (2)}
+
+\draw \firstcircle node [above left=2]  {$A$};
+\draw \secondcircle node [above right=2]  {$B$};
+
+\fill (0,1) circle (1pt) node[above left] {a};
+\fill (0,-1) circle (1pt) node[above left](b) {b};
+
+\fill (10,1) circle (1pt) node[above right] {1};
+\fill (10,0) circle (1pt) node[above right] {2};
+\fill (10,-1) circle (1pt) node[above right] {3};
+
+\node (a) at (0,1) {};
+\node (b) at (0,-1) {};
+\node (uno) at (10,1) {};
+\node (due) at (10,0) {};
+\node (tre) at (10,-1) {};
+\begin{scope}[->,dashed]
+\begin{scope}[blue]
+\draw (a) -- (uno);
+\draw (a) -- (due);
+\draw (a) -- (tre);
+\end{scope}
+\begin{scope}[red]
+\draw (b) -- (uno);
+\draw (b) -- (due);
+\draw (b) -- (tre);
+\end{scope}
+\end{scope}
+\end{tikzpicture}

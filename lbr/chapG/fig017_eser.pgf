@@ -1,0 +1,79 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at ($(A)+(0:-2)$);
+  \coordinate (C) at ($(A)+(90:3)$);
+
+  \draw (C)--(A)--(B)--(C);
+
+  \tkzMarkAngle[fill=LimeGreen, draw=black, size=.3](B,C,A)
+  \tkzLabelAngle[pos=.6, font=\scriptsize](B,C,A){$\alpha$}
+  \tkzLabelSegment[midway, right](A,C){$c$}
+  \tkzLabelSegment[midway](B,C){?}
+
+  \begin{scope}[xshift=10mm, yshift=-20mm]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at ($(A)+(0:-2)$);
+    \coordinate (C) at ($(A)+(90:3)$);
+
+    \draw (C)--(A)--(B)--(C);
+
+    \tkzMarkAngle[fill=LimeGreen, draw=black, size=.3](A,B,C)
+    \tkzLabelAngle[pos=.6, font=\scriptsize](A,B,C){$\alpha$}
+    \tkzLabelSegment[midway, right](A,C){?}
+    \tkzLabelSegment[midway](B,C){$c$}
+  \end{scope}
+
+  \begin{scope}[xshift=15mm, yshift=12mm]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at ($(A)+(0:4)$);
+    \coordinate (C) at ($(A)+(60:2)$);
+
+    \draw (C)--(A)--(B)--(C);
+
+    \tkzMarkAngle[fill=LimeGreen, draw=black,size=.4](C,B,A)
+    \tkzLabelAngle[pos=.6, font=\scriptsize](C,B,A){$\alpha$}
+    \tkzLabelSegment[midway](B,C){?}
+    \tkzLabelSegment[midway, below](B,A){$b$}
+  \end{scope}
+
+  \begin{scope}[xshift=15mm, yshift=-15mm]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at ($(A)+(0:4)$);
+    \coordinate (C) at ($(A)+(60:2)$);
+
+    \draw (C)--(A)--(B)--(C);
+
+    \tkzMarkAngle[fill=LimeGreen, draw=black,size=.4](B,A,C)
+    \tkzLabelAngle[pos=.6, font=\scriptsize](B,A,C){$\alpha$}
+    \tkzLabelSegment[midway](B,C){?}
+    \tkzLabelSegment[midway](C,A){$c$}
+  \end{scope}
+
+  \begin{scope}[xshift=70mm, yshift=8mm, rotate=40]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at ($(A)+(0:2)$);
+    \coordinate (C) at ($(A)+(90:3)$);
+
+    \draw (C)--(A)--(B)--(C);
+
+    \tkzMarkAngle[fill=LimeGreen, draw=black, size=.4](A,C,B)
+    \tkzLabelAngle[pos=.6, font=\scriptsize](A,C,B){$\alpha$}
+    \tkzLabelSegment[midway, left](A,C){$c$}
+    \tkzLabelSegment[midway,above](B,C){?}
+  \end{scope}
+
+  \begin{scope}[xshift=60mm, yshift=-20mm]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at ($(A)+(0:2)$);
+    \coordinate (C) at ($(A)+(90:3)$);
+
+    \draw (C)--(A)--(B)--(C);
+
+    \tkzMarkAngle[fill=LimeGreen, draw=black, size=.4](C,B,A)
+    \tkzLabelAngle[pos=.6, font=\scriptsize](C,B,A){$\alpha$}
+    \tkzLabelSegment[midway, left](A,C){$c$}
+    \tkzLabelSegment[midway,below](B,A){?}
+  \end{scope}
+\end{tikzpicture}

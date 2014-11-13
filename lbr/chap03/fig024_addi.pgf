@@ -1,0 +1,19 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}
+  \draw (0,0) rectangle  (10mm,10mm);
+  \begin{scope}[font=\Huge]
+    \node at  (5mm,5mm) {$+$};
+  \end{scope}
+  \begin{scope}[font=\small]
+    \node (a) at (-15mm,10mm) {$\displaystyle\frac{5}{3}$};
+    \node (b) at (-15mm,0mm) {$\displaystyle\frac{2}{3}$};
+    \node (c) at (25mm,5mm) {$\displaystyle\frac{7}{3}$};
+  \end{scope}
+  \node (entrata) at (0,5mm) {};
+  \node (uscita) at (10mm,5mm) {};
+  \begin{scope}[->,concept connection,blue,thin]
+    \draw (a) -- (entrata);
+    \draw (b) -- (entrata);
+    \draw (uscita) -- (c);
+  \end{scope}
+\end{tikzpicture}

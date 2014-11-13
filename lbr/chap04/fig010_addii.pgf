@@ -1,0 +1,34 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small\ttfamily, anchor=north, x=6mm, y=6mm]
+
+  \node (o) at (0,0) {$+$}; 
+  \foreach \x in {0,1,...,4} { 
+    \node (a) at (\x+1,0) {\x}; 
+    \node (b) at (0,-\x-1) {\x}; 
+  }
+
+  \foreach \x[count=\xi] in {0,...,4} 
+    \foreach \y [count={\yi+6}]in {\x,...,4}
+      \node () at (\xi,-\yi) {\y};
+
+   \foreach \x[count=\xii] in {10,...,13} 
+     \foreach \y [count=\yii]in {\x,...,10}
+       \node () at (\xii+1,\yii-6) {\y};
+
+\begin{scope}[blue]
+  \draw (-3mm,-6mm)--(33mm,-6mm); 
+  \draw (3mm,0mm)--(3mm,-35mm); 
+\end{scope}
+
+\begin{scope}[xshift=65mm]
+\matrix(b) [matrix of nodes,nodes={ text centered },cells={anchor=north}, row 1/.style={red}]
+{
+Riporti&1&1&1&&\\
+&3&4&2&3&1&$+$ \\
+&&4&3&4&1&\\
+&4&4&1&2&2\\
+};
+\draw (b-4-2.north west)--(b-4-6.north east);
+\end{scope}
+
+\end{tikzpicture}

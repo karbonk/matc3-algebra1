@@ -1,0 +1,32 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  \node[ellipse, minimum height=3cm,minimum width=8cm, draw] (A) at (0,0) {};
+  \node[above] at (0,1.5) {$\insQ$};
+  \node[ellipse, minimum height=1cm, minimum width=1.5cm, draw] (B) at (-2.8,0) {};
+  \node[above] at (-2.8,.4) {$\{0\}$};
+  \node[ellipse, minimum height=1.5cm, minimum width=2.1cm, draw] (C) at (-.8,.4) {};
+  \node[below] at (-.8,-.35) {$\insQ^+$};
+  \node[ellipse, minimum height=1.8cm, minimum width=3cm, draw] (E) at (2,.1) {};
+  \node[below left] at (2,-.7) {$\insQ^-$};
+
+  \begin{scope}[fill=CornflowerBlue]
+    \filldraw (-2.8,0) circle (2pt) node (a) {};
+    \node[above] at (-2.8,0) {$0$};
+
+    \filldraw (-.4,.4) circle (2pt) node (c) {};
+    \node[above] at (-.4,.4)  {$+3$};
+
+    \filldraw (-1.2,.4) circle (2pt) node (j) {};
+    \node[below] at (-1.2,.4)  {$+\frac{3}{5}$};
+
+    \filldraw (1.5,.5) circle (2pt) node (b) {};
+    \node[right] at (1.5,.5)  {$-\frac{8}{3}$};
+
+    \filldraw (1.4,-.3) circle (2pt) node (i) {};
+    \node[right] at (1.4,-.3)  {$-1$};
+
+    \filldraw (2.5,0) circle (2pt) node (i) {};
+    \node[right] at (2.5,0)  {$-\frac{1}{2}$};
+  \end{scope}
+\end{tikzpicture}

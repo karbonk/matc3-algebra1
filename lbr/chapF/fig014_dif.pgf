@@ -1,0 +1,29 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=7mm,y=7mm, font=\small]
+
+ \begin{scope}[thick, shorten >=1.5pt, ->]
+  
+	\draw[OliveGreen] (0,0) -- (-1,2);
+	\draw[OliveGreen] (0,0) -- (1,-2);
+	\draw[OliveGreen] (0,0) -- (3,0);  
+	\draw[Maroon] (0,0) -- (4,-2);
+      \end{scope}
+  
+\begin{scope}[dashed]
+\draw (3,0) -- (4,-2);
+\draw (1,-2) -- (4,-2);
+\end{scope}
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (0,0) circle (1.5pt) node[left] {$A$};
+\filldraw (3,0) circle (1.5pt) node[right] {$B$};
+\filldraw (4,-2) circle (1.5pt) node[below right] {$D$};
+\filldraw (1,-2) circle (1.5pt) node[below right] {$C'$};
+\filldraw (-1,2) circle (1.5pt) node[above left] {$C$};
+\end{scope}
+
+\node[above] at (1.5,0) {$\vec{u}$};
+\node[above] at (2,-1) {$\vec{w}$};
+\node[left] at (.5,-1) {$\vec{z}$};
+\node[left] at (-.5,1) {$\vec{v}$};
+\end{tikzpicture}

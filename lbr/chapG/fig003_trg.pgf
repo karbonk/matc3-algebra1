@@ -1,0 +1,27 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+  \coordinate (H) at (0,0);
+  \coordinate (A) at ($(H)+(90:2.6)$);
+  \coordinate (C) at ($(H)+(0:1.3)$);
+  \coordinate (B) at ($(H)+(0:-1.3)$);
+  \draw (A) node[above]{$A$} -- (B) node[below left]{$B$}node[midway,left]{$l$} -- (H)node[below]{$H$}node[midway,below]{$\frac{l}{2}$}  -- (A)node[midway,left]{$h$}-- (C)node[below right]{$C$}node[midway,right]{$l$} -- (H)node[midway,below]{$\frac{l}{2}$};
+
+  \tkzMarkAngle[ fill=LimeGreen ,draw, size=.4](H,A,C)
+  \tkzMarkAngle[ fill=LimeGreen ,draw, size=.3](A,C,H)
+  \tkzMarkRightAngle[fill=LimeGreen,draw, size=.2](A,H,C)
+  
+  \begin{scope}[font=\scriptsize]
+    \tkzLabelAngle[pos=.9](C,A,H){$30\grado$}
+    \tkzLabelAngle[pos=.5](H,C,A){$60\grado$}
+    \tkzLabelAngle[pos=.5](A,H,C){$90\grado$}
+  \end{scope}
+
+  \begin{scope}[fill=CornflowerBlue, draw=black]
+    \filldraw (0,0) circle (1pt);
+    \filldraw (0,2.6) circle (1pt);
+    \filldraw (-1.3,0) circle (1pt);
+    \filldraw (1.3,0) circle (1pt);
+  \end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=2cm,font=\footnotesize, fill=CornflowerBlue]
+    \draw (0,0)circle (1.5) (0,1) node[ left=1.5] {$A$};
+\filldraw (-.8,.6) circle (1pt) node[above right] {a};
+\filldraw (-1.1,.4) circle (1pt) node[above right] {e};
+\filldraw (-.6,-.15) circle (1pt) node[above right] {i};
+\filldraw (-.8,.2) circle (1pt) node[above right] {o};
+\filldraw (-1.1,0) circle (1pt) node[above right] {u};
+
+\filldraw (-.1,1.1) circle (1pt) node[above right] {b};
+\filldraw (-.1,.7) circle (1pt) node[above right] {c};
+\filldraw (.1,.8) circle (1pt) node[above right] {d};
+\filldraw (.5,0) circle (1pt) node[above right] {f};
+\filldraw (.65,-.8) circle (1pt) node[above right] {g};
+\filldraw (-1.2,-.7) circle (1pt) node[above right] {h};
+\filldraw (1.1,0) circle (1pt) node[above right] {l};
+\filldraw (1,-.5) circle (1pt) node[above right] {m};
+\filldraw (-.3,-.2) circle (1pt) node[above right] {n};
+\filldraw (-.5,-.9) circle (1pt) node[above right] {p};
+\filldraw (.8,.3) circle (1pt) node[above right] {q};
+\filldraw (.6,.7) circle (1pt) node[above right] {r};
+\filldraw (.2,-.4) circle (1pt) node[above right] {s};
+\filldraw (.2,.3) circle (1pt) node[above right] {t};
+\filldraw (-.1,-.8) circle (1pt) node[above right] {v};
+\filldraw (.3,-.9) circle (1pt) node[above right] {z};
+ \begin{scope}[y=2cm]]
+     \draw (-.8,.15)circle (.4) (0,.6) node[left=.4] {$V$};
+ \end{scope}
+\end{tikzpicture}

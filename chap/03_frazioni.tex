@@ -1,0 +1,1685 @@
+% (c) 2012 -2014 Dimitrios Vrettos - d.vrettos@gmail.com
+% (c) 2012 Claudio Carboncini - claudio.carboncini@gmail.com
+\chapter{Frazioni e numeri razionali}
+\section{Premessa storica}
+
+Quando si deve dividere una certa grandezza o totalità in un certo numero di parti uguali non sempre
+sono sufficienti i numeri interi per rappresentare il risultato della divisione. Per esempio, per dividere
+l'unità in due parti uguali i numeri interi non sono sufficienti.
+
+Gli antichi hanno affrontato questo tipo di problema utilizzando varie scritture per rappresentare
+le parti in cui dividere l'unità, ossia le frazioni.
+
+I Babilonesi scrivevano frazioni aventi come denominatore una potenza di~60, la base della
+loro numerazione; tuttavia non usavano una notazione specifica per le frazioni ed
+il valore corretto andava interpretato dal contesto.
+
+Gli Egizi facevano largo uso dei numeri frazionari che rappresentavano come somme di frazioni unitarie,
+ossia frazioni con numeratore uno. La frazione unitaria~$\frac{1}{n}$ (con~$n$ numero naturale diverso da zero)
+veniva rappresentata in forma geroglifica ponendo il denominatore~$n$ scritto con la normale rappresentazione del numero~$n$ sotto ad un ovale. 
+La frazione~$\frac{1}{12}$, per esempio, veniva
+così rappresentata:
+\begin{center}
+ \input{./lbr/chap03/giero}.
+\end{center}
+
+Nel ``papiro di Ahmes'' (detto anche ``papiro di Rhind''\footnote{\url{http://it.wikipedia.org/wiki/Papiro_di_Rhind}}) troviamo una tabella che dà la scomposizione in frazioni
+unitarie delle frazioni del tipo~$\frac{2}{n}$, con~$n$ dispari: la frazione~$\frac{2}{43}$
+è rappresentata come somma di frazioni
+unitarie nel seguente modo:
+
+\[\frac{2}{43}=\frac{1}{42}+\frac{1}{86}+\frac{1}{129}+\frac{1}{301}.\]
+\begin{wrapfigure}{r}{0pt}
+\input{./lbr/chap03/fig001_horus.pgf}
+\end{wrapfigure}
+
+Alcune unità frazionarie più comuni venivano indicate con le parti dell'occhio di Horus (divinità egizia); secondo la
+leggenda, Horus, nella lotta contro lo zio Seth, reo di avergli ucciso il padre,
+perse un occhio le cui parti vennero ritrovate e ricomposte dal dio Toth a meno di una piccola parte.
+
+I Romani fecero poco uso dei numeri frazionari; si limitarono a considerare
+le parti delle misure in uso che venivano divise in~12, 24, 36, 48, \ldots Avevano
+pertanto simboli e nomi particolari per indicare alcune frazioni. \emph{Semis} per
+indicare~$\frac{1}{2}$, il cui simbolo era~$S$ oppure~$Z$; \emph{sextans} per indicare~$\frac{1}{6}$, \emph{dracma} per
+indicare~$\frac{1}{96}$ e \emph{obolus} per indicare la sesta parte della \emph{dracma}.
+
+Furono gli arabi a introdurre l'attuale scrittura delle
+frazioni e i termini \emph{numeratore} e \emph{denominatore}. Tale notazione venne diffusa in Europa
+da Leonardo Pisano (Fibonacci)\footnote{matematico italiano (1170 - 1240).} che con il suo ``Liber Abaci'' (1202) scrive e
+opera con le frazioni come oggi le conosciamo.
+
+\section{Frazioni}
+
+\begin{definizione}
+Una \emph{frazione} è una coppia ordinata di numeri naturali in cui il primo si chiama \emph{numeratore}
+e il secondo \emph{denominatore}. Il denominatore deve essere diverso da zero.
+\end{definizione}
+
+\begin{center}
+ \input{./lbr/chap03/fig002_frazione.pgf}
+\end{center}
+
+Quando si chiede, per esempio un quarto di litro di latte,~$\frac{1}{4}\unit{l}$, si danno le informazioni
+su come operare sulla grandezza unitaria (litro) per ottenere la quantità desiderata.
+Le frazioni possono essere viste come operatori che si applicano a una grandezza fissata, considerata come
+l'intero o il tutto, per ottenere una nuova grandezza ben determinata e omogenea alla prima.
+
+Una frazione con numeratore uguale a~1 è detta \emph{frazione unitaria}; indicata con~$A$ una grandezza (segmento, peso,
+superficie, angolo, \ldots) la scrittura~$\dfrac{1}{n}A$ sta ad indicare l'operazione di divisione della grandezza~$A$,
+intesa come il ``tutto'' (l'intero), in~$n$ parti uguali.
+
+Nella figura seguente, il segmento unitario da~0 a~1 è stato diviso in due parti uguali ottenendo la frazione~$\frac{1}{2}$;
+dividendolo in quattro parti uguali si ottiene la frazione~$\frac{1}{4}$;
+dividendolo in otto parti uguali si ottiene la frazione~$\frac{1}{8}$;
+dividendolo in sedici parti uguali si ottiene la frazione~$\frac{1}{16}$.
+
+\begin{center}
+ \input{./lbr/chap03/fig003_segmentounitario.pgf}
+\end{center}
+
+
+\begin{definizione}
+Il \emph{denominatore} di una frazione è quel numero che indica in quante parti uguali si è diviso l'intero.
+Poiché non ha senso dividere un intero in zero parti, il denominatore deve essere diverso da zero.
+\end{definizione}
+
+\begin{wrapfloat}{figure}{r}{0pt}
+ \input{./lbr/chap03/fig004_quadrato.pgf}
+\end{wrapfloat}
+
+Vediamo un altro esempio. Il quadrato~$Q$ della figura è stato diviso in quattro parti uguali e
+una parte è stata colorata di grigio; questa parte viene indicata con la frazione unitaria~$\dfrac{1}{4}Q$.
+
+L'espressione~$\dfrac{1}{n}A$ significa l'ennesima parte di~$A$, dove~$A$ è il tutto che si deve dividere in~$n$ parti uguali.
+In altre parole,
+$A$ si può ottenere moltiplicando per~$n$ l'espressione~$\dfrac{1}{n}A$.
+
+Partendo da~$\dfrac{1}{n}A$ si possono considerare i suoi multipli interi:
+\[\frac{2}{n}A\text{, }\frac{3}{n}A\text{, }\ldots\text{, }\frac{n}{n}A\] che rappresentano il
+doppio di un $n$-esimo di~$A$, il triplo di un $n$-esimo di~$A$, \ldots, l'intera grandezza~$A$.
+
+Riferendoci all'esempio del quadrato ($n=4$):
+\begin{center}
+ \input{./lbr/chap03/fig005_partiquadrati.pgf}
+\end{center}
+
+La frazione~$\dfrac{m}{n}A$ (si legge \emph{emme ennesimi di}~$A$) indica il multiplo secondo~$m$
+della frazione unitaria~$\dfrac{1}{n}A$, cioè la grandezza che si ottiene dividendo~$A$ in~$n$ parti uguali e prendendone~$m$.
+
+\begin{definizione}
+ Il \emph{numeratore} di una frazione è quel numero che esprime quante parti, dell'intero suddiviso
+in parti uguali secondo il denominatore, devono essere considerate.
+\end{definizione}
+
+Per leggere una frazione si legge prima il numeratore e poi il denominatore.
+Quest'ultimo si legge come numero ordinale (terzo/i, quarto/i, quinto/i, \ldots).
+Nel caso in cui sia 2 si legge ``mezzo/i''.
+
+\begin{exrig}
+\begin{esempio}
+ Lettura di frazioni.
+ \begin{multicols}{3}
+ \begin{enumeratea}
+\item $\dfrac{1}{2}$ è un mezzo;
+\item $\dfrac{1}{10}$ è un decimo;
+\item $\dfrac{2}{3}$ è due terzi;
+\item $\dfrac{3}{11}$ è tre undicesimi;
+\item $\dfrac{5}{7}$ è cinque settimi;
+\item $\dfrac{1}{12}$ è un dodicesimo.
+\end{enumeratea}
+\end{multicols}
+\end{esempio}
+\end{exrig}
+
+Per scrivere le frazioni si utilizza anche la scrittura del tipo~$a/b$; es.~$2/3$, $4/6$, $6/9$, \ldots
+
+\begin{definizione}
+Si chiamano \emph{proprie} le frazioni che hanno il numeratore minore del denominatore.
+Esse rappresentano sempre una grandezza minore dell'intero.
+\end{definizione}
+
+Vi sono frazioni che pur essendo formate da numeratori e denominatori diversi rappresentano
+la stessa parte dell'intero.
+\begin{center}
+ \input{./lbr/chap03/fig006_partintero.pgf}
+\end{center}
+ \ovalbox{\risolvii \ref{ese:3.1}, \ref{ese:3.2}, \ref{ese:3.3}, \ref{ese:3.4}}
+
+\begin{definizione}
+Si dicono \emph{equivalenti} due frazioni che rappresentano la stessa parte dell'intero.
+\end{definizione}
+
+\begin{proprieta}[Invariantiva delle frazioni]
+Se si moltiplica, o si divide, numeratore e denominatore di una stessa frazione per uno stesso numero diverso da zero
+si ottiene una frazione equivalente alla frazione data.
+\end{proprieta}
+
+Per trovare una frazione equivalente a una frazione assegnata è sufficiente moltiplicare per uno stesso
+numero il numeratore e il denominatore della frazione assegnata.
+
+\begin{exrig}
+ \begin{esempio}
+ Trova due frazioni equivalenti a~$\dfrac{4}{7}$.
+
+Moltiplicando numeratore e denominatore per~2 si ha la frazione equivalente:
+\[\frac{4\cdot2}{7\cdot2}=\frac{8}{14}.\]
+Moltiplicando numeratore e denominatore per~3 si ha la frazione equivalente:
+\[\frac{4\cdot3}{7\cdot3}=\frac{12}{21}.\]
+ \end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Una frazione si dice \emph{ridotta ai minimi termini} se il numeratore e il denominatore sono due interi primi tra loro.
+\end{definizione}
+
+Per ridurre ai minimi termini una frazione occorre dividere numeratore e denominatore per il loro Massimo Comune Divisore.
+
+\begin{exrig}
+ \begin{esempio}
+Ridurre ai minimi termini la frazione~$\dfrac{8}{12}$.
+
+Scompongo in fattori~8 e~12, ottengo~$8=2^3$ e~$12=3\cdot2^2$.
+Calcolo il~$\mcd$ prendendo i fattori comuni con l'esponente più piccolo; in questo caso~$2^2$ cioè~4.
+Divido numeratore e denominatore per~4:
+\[\frac{8}{12} = \frac{8:4}{12:4} = \frac{2}{3}.\]
+ \end{esempio}
+\end{exrig}
+
+Tutte le frazioni che hanno il denominatore (numero di parti uguali in cui va divisa l'unità) uguale al numeratore
+(numero delle parti che vanno considerate) rappresentano l'intero:
+
+\[\frac{2}{2}=\frac{3}{3}=\frac{10}{10}=1.\]
+
+\begin{wrapfloat}{figure}{r}{0pt}
+ \input{./lbr/chap03/fig011_interifraz.pgf}
+\end{wrapfloat}
+
+Per esempio, se divido un quadrato in due parti uguali e ne prendo due parti ottengo l'intero;
+se divido un quadrato in tre parti uguali e ne prendo tre parti ottengo l'intero, \ldots
+
+Cosa significa costruire la grandezza~$\frac{6}{2}$ del quadrato~$Q$?
+Tutte le frazioni che hanno il numeratore che è multiplo del denominatore rappresentano un multiplo dell'intero:
+\[\frac{6}{2}=3\text{,}\qquad\frac{15}{3}=5\text{,}\qquad\frac{72}{6}=12.\]
+
+\begin{definizione}
+ Si chiamano \emph{apparenti} le frazioni che hanno il numeratore multiplo del denominatore;
+esse rappresentano una grandezza multipla di quella presa come intero unitario.
+\end{definizione}
+
+Le frazioni che hanno il numeratore maggiore del denominatore rappresentano grandezze più grandi dell'intero.
+Infatti le parti da considerare (indicate dal numeratore) sono di più delle parti in cui è divisa l'unità
+(indicate dal denominatore).
+\begin{center}
+ \input{./lbr/chap03/fig012_frazimpr.pgf}
+\end{center}
+\[\frac{5}{4}=\frac{4}{4}+\frac{1}{4}=1+\frac{1}{4}.\]
+
+\begin{definizione}
+ Si chiamano \emph{improprie} le frazioni che hanno il numeratore maggiore del denominatore;
+esse rappresentano una grandezza maggiore della grandezza assegnata come intero.
+\end{definizione}
+
+\ovalbox{\risolvii \ref{ese:3.5}, \ref{ese:3.6}, \ref{ese:3.7}, \ref{ese:3.8}, \ref{ese:3.9}, \ref{ese:3.10}, \ref{ese:3.11},
+\ref{ese:3.12}, \ref{ese:3.13}, \ref{ese:3.14}, \ref{ese:3.15}, \ref{ese:3.16}}
+
+\section{Dalle frazioni ai numeri razionali}
+
+Abbiamo visto che ci sono delle frazioni che, pur essendo diverse tra di loro, rappresentano la stessa
+parte dell'intero: queste frazioni vengono chiamate \emph{frazioni equivalenti}.
+Possiamo formare dei raggruppamenti di frazioni tra loro equivalenti, come nella figura \ref{fig:frazequiv}.
+
+\begin{definizione}
+Ogni raggruppamento di frazioni equivalenti è definito come un \emph{numero razionale assoluto}
+ed è rappresentato da una qualunque
+frazione del raggruppamento; solitamente si sceglie la frazione ridotta ai minimi termini.
+\end{definizione}
+
+Nel nostro esempio~$\dfrac{2}{3}$ è il numero razionale rappresentante del raggruppamento
+\[\frac{2}{3}=\bigg\lbrace\frac{2}{3}\text{,~}\frac{4}{6}\text{,~}\frac{6}{9}\text{,~}\frac{10}{15}\text{,~}\frac{14}{21}\text{,~}\ldots\bigg\rbrace.\]
+In questo modo abbiamo dato al simbolo~$\dfrac{a}{b}$ un nuovo significato, quello di numero e come tale la
+scrittura~$\dfrac{a}{b}$ rappresenta il quoziente indicato tra i due numeri naturali~$a$ e~$b$. Scriveremo quindi
+
+\[\frac{2}{3} = 2/3 = 2:3.\]
+
+\begin{figure}[t]
+\begin{center}
+\input{./lbr/chap03/fig018_frazequiv.pgf}
+\end{center}
+\label{fig:frazequiv}
+\caption{Esempi di frazioni equivalenti.}
+\end{figure}
+
+\begin{definizione}
+Un numero razionale assoluto preceduto dal segno è detto \emph{numero razionale}.
+L'insieme dei numeri razionali relativi si indica con il simbolo~$\insQ$.
+\end{definizione}
+
+Il segno del numero razionale relativo è quello che si ottiene dalla regola della
+divisione dei segni tra numeratore e denominatore.
+
+\begin{exrig}
+\begin{esempio}
+Segno di numeri razionali.
+\[\frac{-2}{-3}=+\frac{2}{3};\qquad\frac{2}{-3}=-\frac{2}{3};\qquad\frac{-2}{3}=-\frac{2}{3}.\]
+\end{esempio}
+\end{exrig}
+
+Le frazioni proprie, che hanno numeratore minore del denominatore, rappresentano sempre un numero compreso tra~0 e~1.
+
+Le frazioni improprie, che hanno numeratore maggiore del denominatore, si possono scrivere come somma di un numero
+naturale e di una frazione propria:
+\begin{itemize*}
+ \item il numero naturale è il risultato della divisione intera tra numeratore e denominatore;
+ \item il numeratore della frazione propria è il resto della divisione tra numeratore e denominatore;
+ \item il denominatore della frazione propria è il denominatore stesso della frazione.
+\end{itemize*}
+
+Le frazioni apparenti, del tipo
+$\dfrac{2}{2}$, $\dfrac{6}{3}$, $\dfrac{20}{5}$, $\dfrac{12}{4}$, $\dfrac{12}{3}$, \ldots{}
+corrispondono a un numero intero, rispettivamente a~1, 2, 4, 3, 4, \ldots{}
+
+\begin{exrig}
+ \begin{esempio}
+ ~$\dfrac{11}{3}=3+\dfrac{2}{3}$.
+  \begin{itemize*}
+   \item $11:3 =3$ il numero naturale;
+   \item $11\bmod~3 =2$ il numeratore della frazione propria;
+   \item $3$ il denominatore della frazione propria.
+  \end{itemize*}
+%\[\frac{11}{3}=3+\frac{2}{3}.\]
+ \end{esempio}
+
+ \begin{esempio}
+ ~$\dfrac{19}{7}=2+\dfrac{5}{7}$.
+  \begin{itemize*}
+   \item $19:7=2$ il numero naturale;
+   \item $19\bmod~7 =~2$ il numeratore della frazione propria;
+   \item $5$ il denominatore della frazione propria.
+  \end{itemize*}
+%\[\frac{19}{7}=2+\frac{5}{7}.\]
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:3.17}, \ref{ese:3.18}}
+
+\section{La scrittura dei numeri razionali}
+
+I numeri razionali, rappresentati finora come frazioni, possono essere scritti come numeri decimali:
+basta fare la divisione tra numeratore e denominatore, il quoziente ottenuto è la
+rappresentazione della frazione sotto forma decimale.
+
+\begin{center}
+ \input{./lbr/chap03/fig019_raz.pgf}
+\end{center}
+
+I numeri decimali che si ottengono sono di due tipi: numeri decimali \emph{finiti} come~$\np{1,375}$ e
+numeri decimali \emph{periodici} come~$\np{0,3333}$\ldots;
+quest'ultimo si scrive mettendo una barra sulla parte periodica:~$\np{0,}\overline3$ oppure racchiudendo la parte periodica
+tra parentesi tonde~$\np{0,}(3)$.
+
+I numeri decimali finiti si ottengono dalle frazioni il cui denominatore ha come fattori solo il~2,
+solo il~5 o entrambi, eventualmente elevati a una potenza.
+
+I numeri decimali periodici \emph{semplici} si ottengono dalle frazioni il cui denominatore non ha per fattori né~2 né~5.
+
+I numeri decimali periodici \emph{misti} si ottengono dalle frazioni il cui denominatore contiene altri fattori oltre al~2
+e al~5.
+
+\pagebreak
+\begin{exrig}
+ \begin{esempio}
+ Alcuni numeri decimali finiti.
+\begin{enumeratea}
+ \item $\dfrac{11}{8}=\dfrac{11}{2^3}=
+\dfrac{11\cdot 5^3}{2^3\cdot 5^3}=\dfrac{\np{1375}}{\np{1000}}=\np{1375}$;
+ \item $\dfrac{7}{25}=\dfrac{7}{5^2}=
+\dfrac{7\cdot 2^2}{5^2\cdot 2^2}=\dfrac{28}{100}=\np{0,28}~$;
+ \item $\dfrac{13}{40}=\dfrac{13}{2^3\cdot 5}=
+\dfrac{13\cdot 5^2}{2^3\cdot 5^3}=\dfrac{325}{\np{1000}}=\np{0,325}$;
+ \item $\dfrac{50}{7} = \dfrac{\ldots}{10}$~~non è possibile: non è un decimale finito.
+\end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi \ref{ese:3.19}}
+
+\begin{procedura}
+Trasformare una frazione in numero decimale:
+\begin{enumeratea}
+ \item eseguire la divisione tra numeratore e denominatore;
+ \item se la divisione ha un resto mettere la virgola al quoziente e moltiplicare per~$10$ il resto;
+ \item continuare la divisione finché il resto è~$0$ oppure è uguale ad un valore già trovato prima;
+ \item se la divisione si conclude con resto~$0$ si ha un numero decimale finito;
+ \item se la divisione si conclude perché si è ritrovato un resto ottenuto in precedenza si ha un
+numero decimale periodico.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+ Trasformazione di frazioni in numeri decimali.
+  \begin{center}
+  \input{./lbr/chap03/fig020_frazdec.pgf}	
+  \end{center}	
+  \begin{enumeratea}
+  \item $\dfrac{113}{20}=\np{5,65}\:$ numero decimale finito;\vspace{1.03ex}
+  \item $\dfrac{17}{6}=\np{2,8}\overline{3}\:$ numero decimale periodico misto di periodo~3;\vspace{1.03ex}
+  \item $\dfrac{15}{7}=\np{2,}\overline{142\,857}\:$ numero decimale periodico di periodo~$\np{142857}$.
+  \end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+
+\ovalbox{\risolvi \ref{ese:3.20}, \ref{ese:3.21}}\vspazio
+
+Viceversa un numero decimale finito o periodico può essere sempre scritto sotto forma di frazione.
+
+\begin{procedura}
+	Trasformare un numero decimale finito in una frazione:
+\begin{enumeratea}
+ \item contare le cifre significative dopo la virgola;
+ \item moltiplicare numeratore e denominatore per la potenza del~$10$ che ha esponente uguale al
+	 numero delle cifre significative dopo la virgola.
+\end{enumeratea}
+\end{procedura}
+
+Per facilitare questa operazione possiamo considerare i numeri decimali finiti come frazioni
+particolari che hanno il numeratore uguale al numero decimale e il denominatore uguale a~1.
+
+Ad esempio, il numero~$\np{1,360}$ ha due cifre significative dopo la virgola, quindi:
+\[\frac{\np{1,36}}{1}=\frac{\np{1,36}\cdot10^2}{1\cdot10^2}=\frac{136}{100}=\frac{34}{25}\]
+ed il numero~$\np{0,00043000}$ ha cinque cifre significative dopo la virgola, quindi:
+\[\frac{\np{0,00043}}{1}=\frac{\np{0,00043}\cdot10^5}{1\cdot10^5}=\frac{43}{\np{100000}}.\]
+
+Un numero decimale periodico, generalmente, presenta tre elementi:
+\begin{description}
+ \item [la parte intera] composta dalle cifre poste prima della virgola;
+ \item [il periodo] che è composto da una o più cifre che si ripetono all'infinito dopo la virgola;
+ \item [l'antiperiodo] la parte, talvolta assente, composta da una o più cifre poste tra la virgola e il periodo.
+\end{description}
+
+
+Per esempio, nel numero~$\np{253,485795795795795}\ldots$ la parte intera è~$253$, il periodo è~$579$ e l'antiperiodo è~$48$.
+Dato che il numero è infinito non può essere scritto con tutte le sue cifre, si usano due modi per scriverlo in
+forma compatta, mettendo una lineetta sopra le cifre del periodo o racchiudendo le cifre del periodo tra
+parentesi tonde. Quindi può essere rappresentato come~$\np{253,48}\overline{5\,79}$, oppure~$\np{253,48}(5\,79)$.
+
+I numeri decimali periodici si dividono in:
+\begin{description}
+ \item [semplici] se subito dopo la virgola è presente il periodo (non hanno antiperiodo);
+ \item [misti] se dopo la virgola è presente l'antiperiodo.
+\end{description}
+
+Anche i numeri periodici possono essere trasformati in una frazione, che si
+dice \emph{frazione generatrice} del numero.
+
+\begin{procedura}
+ Determinare la frazione generatrice di un numero periodico:
+\begin{enumeratea}
+\item scrivere il numero senza la virgola;
+\item il numeratore della frazione si ottiene sottraendo dal numero senza la virgola il numero
+	 costituito dalle cifre che precedono il periodo;
+\item il denominatore della frazione si ottiene scrivendo tanti~$9$ quante sono le cifre del periodo e
+	 tanti~$0$ quante sono le eventuali cifre dell'antiperiodo.
+\end{enumeratea}
+\end{procedura}
+
+\paragraph*{Passo~$a$}~$\np{2,5}\overline{12}\rightarrow~\np{2512}$.
+\paragraph*{Passo~$b$}~$\np{2512}-25=\np{2487}$.
+\paragraph*{Passo~$c$}~$\np{2,5}\overline{12}=\dfrac{\np{2487}}{990}$.
+
+
+\paragraph*{Ma perché questa regola? Una possibile spiegazione}
+Consideriamo il numero periodico semplice~$\np{2,}\overline{3}$.
+Poiché $\np{2,}\overline{3} \cdot 10 = \np{23,}\overline{3}$ si ha che $\np{2,}\overline{3} \cdot 9 = \np{23,}\overline{3} - \np{2,}\overline{3} = 21$.
+Quindi, consideriamo la frazione~$\frac{\np{2,}\overline{3}}{1}$ e moltiplichiamo numeratore e denominatore per~$9$, così da far sparire
+la parte periodica al numeratore. Si ha quindi
+\[\np{2,}\overline{3}=\frac{\np{2,}\overline{3}\cdot 9}{9}=\frac{21}{9}=\frac{7}{3}.\]
+
+% Considero la frazione~$\frac{2,\overline{3}}{1}$
+%moltiplico numeratore e denominatore per~$10$ e quindi ottengo~$\frac{2,\overline{3}\cdot10}{1\cdot10} = \frac{23,\overline{3}}{10}$.
+%
+%L'obiettivo è quello di eliminare dal numeratore della frazione la parte decimale.
+%Per ottenere questo risultato tolgo~$2,\overline{3}$ da~$23,\overline{3}$, cioè
+%$23,\overline{3}-2,\overline{3}=21$.
+%
+%Come mai~$2,\overline{3}$ e non~$1,\overline{3}$ o~$0,\overline{3}$?
+%Perché in questo modo posso sapere quanto vale il denominatore: se~$23,\overline{3}$ è il risultato
+%della moltiplicazione di~$2,\overline{3}\cdot10$,~$21$~è il risultato della moltiplicazione di
+%$2,\overline{3}\cdot9$ in quanto~$23,\overline{3}-2,\overline{3}=21$. Quindi anche il denominatore
+%deve essere moltiplicato per~$9$ e non per~$10$.
+%In definitiva
+%\[2,\overline{3}=\frac{2,\overline{3}\cdot 9}{9}=\frac{21}{9}=\frac{7}{3}.\]
+
+Possiamo usare lo stesso procedimento per il numero periodico misto~$\np{2,5}\overline{12}$.
+Poiché $\np{2,5}\overline{12} \cdot \np{1000} = \np{2512,}\overline{12}$ si ha che $\np{2,5}\overline{12} \cdot 990 = \np{2512,}\overline{12} - \np{25,}\overline{12} = \np{2487}$.
+Quindi, consideriamo la frazione~$\frac{\np{2,5}\overline{12}}{1}$ e moltiplichiamo numeratore e denominatore per~$990$, così da far sparire
+la parte periodica al numeratore. Si ha quindi
+\[\np{2,5}\overline{12}=\frac{\np{2,5}\overline{12} \cdot 990}{990}=\frac{\np{2487}}{990}.\]
+
+%Considero la frazione~$\frac{2,5\overline{12}}{1}$, moltiplico numeratore e denominatore per~$1\,000$ e ottengo:
+%$\frac{2512,\overline{12}}{1\,000}$.
+%L'obiettivo è quello di eliminare dal numeratore della frazione la parte decimale che contiene il periodo che
+%si ripete all'infinito. Per ottenere questo risultato tolgo da~$2\,512,\overline{12}$ il valore~$25,\overline{12}$, cioè~$2\,512,\overline{12}-25,\overline{12}=2\,487$.
+%Per avere una frazione equivalente occorre che al denominatore abbia~$990$ in quanto dal numeratore ho tolto~$10$ volte
+%$2,5\overline{12}$.
+%\[2,5\overline{12}=\frac{2\,512-25}{990}=\frac{2\,487}{990}.\]
+
+\ovalbox{\risolvii \ref{ese:3.22}, \ref{ese:3.23}}
+
+\subsection{Numeri periodici particolari}
+
+Numeri periodici particolari sono quelli che hanno come periodo il numero~$9$,
+come~$\np{2,}\overline{9}$, $\np{1,1}\overline{9}$, $\np{21,22}\overline{9}$, ecc.
+Se, per esempio, applichiamo la regola per il calcolo della frazione generatrice al numero periodico
+otteniamo un risultato inatteso
+\[\np{2,}\overline{9}=\frac{29-2}{9}=\frac{27}{9}=3.\]
+Quindi~$\np{2,}\overline{9}$ coincide con il numero intero~$3$.
+Per lo stesso motivo~$\np{1,1}\overline{9}=\np{1,2}$ e~$\np{21,22}\overline{9}=\np{21,23}$.
+
+\begin{wrapfloat}{figure}{r}{0pt}
+\input{./lbr/chap03/fig021_perretre.pgf}
+\end{wrapfloat}
+
+Questo fatto si può anche dimostrare in modo grafico, rappresentando, ad esempio, il numero~$\np{0,}\overline{9}$ e
+il numero~$1$ sulla retta reale.\footnote{si veda la sezione~\ref{sect:intro_numeri_reali} a pagina~\pageref{sect:intro_numeri_reali}.}
+Se i due numeri fossero diversi sarebbero rappresentati da due punti distinti
+come in figura. Dato che la retta reale non può avere ``buchi'',
+tra due punti distinti ce ne deve essere almeno un altro corrispondente ad un numero compreso tra i primi due.
+Ma qual è questo numero? Qualunque numero decimale minore di~$1$ è sicuramente superato dal numero~$\np{0,}\overline{9}$,
+ad esempio~$\np{0,9999999998}$ è sicuramente più piccolo di~$\np{0,}\overline{9}$. Quindi non può esistere nessun numero tra
+$\np{0,}\overline{9}$ e~$1$,
+di conseguenza i due numeri coincidono.
+
+\ovalbox{\risolvii \ref{ese:3.24}, \ref{ese:3.25}}
+
+\section{I numeri razionali e la retta}
+
+Anche i numeri razionali si possono rappresentare su una retta orientata. Per fare questo occorre
+scegliere un punto~$O$ sulla retta e associare ad esso il numero~0. Fissiamo poi un segmento unitario e scegliamo
+un verso di percorrenza.
+
+Dato un numero razionale positivo, rappresentato dalla frazione~$\dfrac{a}{n}$, il punto corrispondente al numero
+razionale sulla retta viene determinato nel seguente modo. Dividiamo il segmento unitario~$u$ in tante parti uguali
+quante sono quelle indicate dal denominatore~$n$ della frazione, ottenendo così la frazione unitaria~$\dfrac{1}{n}$.
+A partire dal punto~$O$ procedendo verso destra, si contano~$a$ frazioni unitarie.
+L'ultimo punto rappresenta il numero razionale~$\dfrac{a}{n}$.
+
+Per le frazioni improprie la singola unità~$u$ non è sufficiente, occorre prendere la unità successiva di~$u$ e
+dividere anche questa in~$n$ parti. Il procedimento si ripete fino a che si considerano tutte
+le frazioni unitarie indicate da~$a$. Anche in questo caso, il punto individuato dall'ultima frazione unitaria
+rappresenta il numero razionale~$\dfrac{a}{n}$. In alternativa si può scomporre la frazione impropria
+nella somma di un numero intero e di una frazione propria, quindi si rappresenta la frazione impropria
+a partire dal suo numero intero invece che partire da~0. Per esempio, per rappresentare la frazione~$\dfrac{3}{2}$
+trasformiamo la frazione in~$1+\dfrac{1}{2}$, quindi rappresentiamo partendo dal numero~1 invece che da~0.
+
+Se il numero razionale è negativo, ci comportiamo come prima con l'avvertenza di muoverci nel senso opposto a quello precedente cioè da destra verso sinistra.
+
+\begin{center}
+\input{./lbr/chap03/fig022_rettafraz.pgf}
+\end{center}
+
+\ovalbox{\risolvii \ref{ese:3.26}, \ref{ese:3.27}, \ref{ese:3.28}}
+
+\section{Confronto tra numeri razionali}
+
+Il numero razionale rappresentato dalla frazione~$\frac{a}{n}$ è \emph{minore} del numero razionale
+rappresentato dalla frazione~$\frac{b}{m}$, se nella retta orientata il punto che corrisponde alla
+frazione~$\frac{a}{n}$ precede il punto che corrisponde alla frazione~$\frac{b}{m}$ e si scrive
+\[\frac{a}{n}<\frac{b}{m}.\]
+
+Il numero razionale~$\dfrac{a}{n}$ è \emph{maggiore} di~$\dfrac{b}{m}$
+se nella retta orientata il punto che corrisponde alla frazione~$\dfrac{a}{n}$ segue il punto che corrisponde
+alla frazione~$\dfrac{b}{m}$ e si scrive
+\[\frac{a}{n}>\frac{b}{m}.\]
+
+Il numero razionale~$\dfrac{a}{n}$ è \emph{equivalente} a~$\dfrac{b}{m}$ se nella retta orientata i punti che corrispondono
+alle frazioni~$\dfrac{a}{n}$ e~$\dfrac{b}{m}$ coincidono.
+
+\pagebreak
+\begin{exrig}
+\begin{esempio}
+Confronto tra numeri razionali.
+\begin{center}
+\input{./lbr/chap03/fig022_rettafraz.pgf}
+\end{center}
+\[-\frac{13}{8}<-\frac{1}{2}\text{,}\qquad\frac{3}{8}>-\frac{1}{2}\text{,}\qquad\frac{3}{8}<\frac{3}{2}\text{,}\qquad-1>-\frac{13}{8}.\]
+\end{esempio}
+\end{exrig}
+
+Per alcune frazioni è facile vedere se una frazione è minore o maggiore di un'altra. Ma non sempre è così semplice.
+
+Consideriamo per esempio le frazioni~$\dfrac{7}{9}$ e~$\dfrac{6}{7}$.
+Quale frazione precede e quale segue? Il confronto non è immediato perché con la prima frazione si conta per
+unità frazionarie di tipo~$\dfrac{1}{9}$ e con la seconda per unità frazionarie di tipo~$\dfrac{1}{7}$.
+
+In generale, senza ricorrere alla rappresentazione sulla retta, come si possono confrontare i numeri razionali?
+
+Conviene sostituire le frazioni date con altre equivalenti che hanno le stesse unità frazionarie:
+cioè occorre ridurre le frazioni allo stesso denominatore.
+
+\begin{procedura}
+	Confrontare due frazioni:
+\begin{enumeratea}
+\item si calcola il minimo comune multiplo dei denominatori delle frazioni;
+\item si trasforma ciascuna frazione come segue:
+\subitem il nuovo denominatore è il~$\mcm$ trovato;
+\subitem il nuovo numeratore si ottiene dividendo il~$\mcm$ per il denominatore della
+	  frazione data e moltiplicando il quoziente ottenuto per il numeratore della frazione data.
+\item si confrontano i nuovi numeratori: la frazione più grande è quella che ha il numeratore più
+	grande.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+\begin{esempio}
+Confronta le frazioni~$\dfrac{7}{9}$ e~$\dfrac{6}{7}$.
+
+$\mcm(7\text{,~}9)=63$.
+\[\frac{7}{9}=\frac{7\cdot7}{9\cdot7}=\frac{49}{63}\text{,}\qquad%
+\frac{6}{7}=\frac{6\cdot9}{7\cdot9}=\frac{54}{63}.\]
+\[\frac{54}{63}>\frac{49}{63}\quad\Rightarrow\quad\frac{6}{7}>\frac{7}{9}.\]
+\end{esempio}
+\end{exrig}
+
+Un altro modo per confrontare due frazioni consiste nel \emph{moltiplicare in croce} numeratori e
+denominatori delle frazioni, come nei seguenti esempi.
+
+\begin{exrig}
+\begin{esempio}
+Confronta~$\dfrac{3}{2}$ con~$\dfrac{5}{3}$.
+
+Moltiplichiamo il numeratore della prima frazione per il denominatore della seconda frazione e
+il denominatore della prima per il denominatore della seconda
+
+ \[3\cdot3=9 \qquad 2\cdot5=10.\]
+
+Quindi, poiché $9<10$ si può scrivere
+
+ \[\dfrac{3}{2}<\dfrac{5}{3}.\]
+
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:3.29}, \ref{ese:3.30}, \ref{ese:3.31}, \ref{ese:3.32}, \ref{ese:3.33}, \ref{ese:3.34}, \ref{ese:3.35}, \ref{ese:3.36}, \ref{ese:3.37}, \ref{ese:3.38},%
+\ref{ese:3.39}, \ref{ese:3.40}, \ref{ese:3.41},}
+
+\vspazio\ovalbox{\ref{ese:3.42}, \ref{ese:3.43}}
+
+\section{Le operazioni con i numeri razionali}
+Con i numeri razionali è sempre possibile eseguire le addizioni, le moltiplicazioni, le sottrazioni e le divisioni.
+In altre parole, poiché un numero razionale può essere scritto sotto forma di frazione, se si addizionano,
+si moltiplicano, si sottraggono, si dividono due frazioni il risultato è sempre una frazione.
+
+\subsection{Addizione}
+
+Se due frazioni hanno la stessa unità frazionaria allora è sufficiente sommare i numeratori delle frazioni
+e prendere come denominatore l'unità frazionaria comune.
+\[\frac{5}{3}+\frac{2}{3}=\frac{5+2}{3}=\frac{7}{3}.\]
+%
+%\begin{center}
+%\input{./lbr/chap03/fig024_addi.pgf}
+%\end{center}
+
+\begin{definizione}
+La \emph{somma di due frazioni con lo stesso denominatore} è una frazione che ha per denominatore lo stesso
+denominatore delle frazioni date e per numeratore la somma dei numeratori.
+\end{definizione}
+
+
+Se le unità frazionarie sono diverse dobbiamo considerare frazioni equivalenti a quelle date che abbiano la
+stessa unità frazionaria e poi eseguire l'addizione come indicato nel punto precedente e cioè
+sommando i numeratori e lasciando lo stesso denominatore comune.
+
+\begin{center}
+\input{./lbr/chap03/fig025_addii.pgf}
+\end{center}
+
+In generale, la somma di due frazioni~$\dfrac{m}{n}+\dfrac{p}{q}$ si può scrivere come $\dfrac{m\cdot q +n\cdot p}{n\cdot q}$.
+
+\begin{center}
+\input{./lbr/chap03/fig026_addiii.pgf}
+\end{center}
+
+Quando si sommano due frazioni si può scegliere un qualsiasi denominatore comune, tuttavia per semplificare i calcoli conviene scegliere il più piccolo possibile, cioè il minimo comune multiplo dei denominatori delle frazioni da sommare.
+
+\begin{procedura}
+Sommare due o più frazioni:
+\begin{enumeratea}
+\item ridurre le frazioni ai minimi termini;
+\item calcolare il~$\mcm$ dei denominatori;
+\item mettere il~$\mcm$ come denominatore della frazione somma;
+\item per ogni frazione dividere il~$\mcm$ per il suo denominatore e moltiplicare il risultato per il
+numeratore della frazione mantenendo il segno;
+\item calcolare la somma algebrica di tutti i numeri trovati;
+\item mettere la somma ottenuta come numeratore della frazione somma;
+\item ridurre ai minimi termini la frazione ottenuta.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+\begin{esempio}
+Sommare le frazioni~$\dfrac{8}{12}-\dfrac{5}{6}+\dfrac{8}{5}-1$.
+
+\paragraph*{Passo~$a$} riduco ai minimi termini le frazioni
+$\displaystyle{\frac{2}{3}-\frac{5}{6}+\frac{8}{5}-\frac{1}{1}}$
+\paragraph*{Passo~$b$} calcolo~$\mcm(3\text{,~}6\text{,~}5\text{,~}1)=30$
+\paragraph*{Passo~$c$} la frazione somma avrà come denominatore il~$\mcm$ trovato~$\dfrac{\ldots}{30}$
+\paragraph*{Passo~$d$} per ogni frazione divido il~$\mcm$ per il suo denominatore e moltiplico il risultato
+per il numeratore:
+\begin{align*}
+\frac{2\cdot(30:3)-5\cdot(30:6)+8\cdot(30:5)-1\cdot(30:1)}{30}&=
+\frac{2\cdot10-5\cdot5+8\cdot6-1\cdot30}{30}\\
+&=\frac{20-25+48-30}{30}
+\end{align*}
+
+\paragraph*{Passo~$e$} calcolo la somma algebrica dei numeri ottenuti al numeratore~$+13$
+\paragraph*{Passo~$f$} metto la somma ottenuta al numeratore della frazione somma~$+\dfrac{13}{30}$
+\paragraph*{Passo~$g$} vedo se posso ridurre la frazione, in questo caso no, il risultato è~$+\dfrac{13}{30}$.
+\end{esempio}
+
+\begin{esempio}
+Sommare i numeri razionali~$-\np{0,2}-\np{1,}\overline{2}+25\%+\dfrac{7}{12}$.
+
+Trasformo i numeri razionali in frazioni: 
+\[-\frac{2}{10}-\frac{12-1}{9}+\frac{25}{100}+\frac{7}{12}=-\frac{1}{5}-\frac{11}{9}+\frac{1}{4}+\frac{7}{12}.\]
+
+Quindi~$\mcm(5\text{,~}9\text{,~}4\text{,~}12)=180$.
+
+\begin{align*}
+\frac{-1\cdot(180:5)-11\cdot(180:9)+1\cdot(180:4)+7\cdot(180:12)}{180}&=
+\frac{-1\cdot36-11\cdot20+1\cdot45+7\cdot15}{180}\\
+&=\frac{-36-220+45+105}{180}\\
+&=-\frac{106}{180} \\
+&=-\frac{53}{90}.
+\end{align*}
+\end{esempio}
+\end{exrig}
+
+\subsection{Sottrazione di frazioni}
+
+La sottrazione di frazioni si può sempre trasformare in una addizione tra la prima frazione e
+l'opposto della seconda frazione. Come per i numeri relativi, quando si parla di
+somma di frazioni si intende sempre somma algebrica di frazioni.
+
+\vspazio\ovalbox{\risolvii \ref{ese:3.44}, \ref{ese:3.45}, \ref{ese:3.46}, \ref{ese:3.47}}
+
+\subsection{Moltiplicazione}
+
+Il risultato della moltiplicazione tra frazioni può essere interpretato come l'area di un rettangolo in cui
+le frazioni fattori sono la base e l'altezza.
+\begin{center}
+ \input{./lbr/chap03/fig027_frazmol.pgf}
+\end{center}
+
+Moltiplicare~$\dfrac{4}{5}\cdot\dfrac{2}{3}$ è come calcolare l'area del rettangolo di base~$\dfrac{4}{5}$ e altezza
+$\dfrac{2}{3}$. 
+Ogni rettangolino di base~$\dfrac{1}{5}$ e altezza~$\dfrac{1}{3}$ ha area~$\dfrac{1}{15}$.
+I rettangolini da prendere in considerazione sono~8. Il risultato è quindi~$\dfrac{8}{15}$. 
+Il denominatore indica in quante parti è stato diviso il quadrato unitario: sono $3 \cdot 5=15$ parti.
+Il numeratore indica quante parti prendiamo, sono le parti $2\cdot 4=8$ in grigio. 
+
+\begin{definizione}
+Il \emph{prodotto di due frazioni} è una frazione che ha per numeratore il prodotto dei numeratori
+e per denominatore il prodotto dei denominatori.
+\end{definizione}
+
+\begin{center}
+ \input{./lbr/chap03/fig028_frazmol.pgf}
+\end{center}
+
+\ovalbox{\risolvii \ref{ese:3.48}, \ref{ese:3.49}, \ref{ese:3.50}, \ref{ese:3.51}}
+
+\begin{definizione}
+Data una frazione $\dfrac{n}{m}$ si definisce il suo \emph{inverso} o \emph{reciproco} quella $\frac{n_i}{m_i}$ tale che il loro prodotto sia l'elemento neutro~1, cioè
+\[\frac{n}{m} \cdot \frac{n_i}{m_i} = 1\]
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio}
+Trova l'inverso della frazione ~$\dfrac{3}{2}$.
+
+Dobbiamo trovare quindi una frazione $\dfrac{n_i}{m_i}$ tale che
+\[\frac{3}{2} \cdot \frac{n_i}{m_i} =1\]
+Consideriamo l'unità a destra del simbolo $=$ come la frazione $\frac{1}{1}$ e moltiplichiamo a destra e a sinistra del simbolo $=$ per~$\frac{2}{3}$, ottenendo
+
+\[\frac{2\cdot 3 \cdot n_i}{3\cdot 2 \cdot m_i} = \frac{2\cdot 1}{3\cdot 1}\]
+
+\noindent ovvero
+
+\[\frac{6 \cdot n_i}{6 \cdot m_i} = \frac{2}{3}\]
+
+\noindent riducendo ai minimi termini la frazione a sinistra del simbolo $=$ si ha
+
+\[\frac{n_i}{m_i} = \frac{2}{3}\]
+
+\noindent che è appunto il risultato cercato.
+\end{esempio}
+\end{exrig}
+
+\osservazione Il reciproco di una frazione $\dfrac{n}{m}$ si può ottenere semplicemente invertendo il numeratore con il denominatore, cioè $\dfrac{m}{n}$.
+
+Se infatti moltiplichiamo una frazione per se stessa con il numeratore ed il denominatore scambiati tra loro, si ottiene
+
+\[\frac{n}{m} \cdot \frac{m}{n} = \frac{n \cdot m}{m \cdot n} = 1\]
+
+\noindent in quanto il numeratore ed il denominatore sono uguali (lo stesso prodotto).
+
+\subsection{Operazione inversa e aritmetica dell'orologio}
+
+La divisione è l'operazione inversa della moltiplicazione. Ma cosa significa operazione inversa?
+Un'operazione può essere interpretata come qualsiasi azione che provoca un cambiamento di stato.
+
+Consideriamo come esempio l'addizione nell'orologio che segna le ore dodici~$(12=0)$.
+Addizionare significa spostare le lancette in avanti di un determinato numero di ore.
+Si riporta la tabella dell'addizione dell'orologio.
+
+Consideriamo l'addizione~$9+7=4$.
+Il primo elemento~9 può essere interpretato come \emph{stato iniziale}, il simbolo~$+$ come \emph{operatore} che indica l'operazione
+<<spostare le lancette avanti di \ldots>> e dall'\emph{argomento}~$7$; il risultato~4 è lo \emph{stato finale}.
+
+Si indica come \emph{operazione inversa} quella che applicata allo stato finale con argomento
+uguale a quello dell'operazione diretta, riporta allo stato iniziale.
+
+Notiamo che anche nella matematica dell'orologio l'addizione gode della proprietà commutativa
+e associativa, ha l'elemento neutro, che è~0, e ogni numero ha l'inverso.
+% \newpage
+\begin{center}
+ \input{./lbr/chap03/fig029_aritoro.pgf}
+\end{center}
+
+\begin{multicols}{2}
+\begin{itemize*}
+\item L'inverso di~0 è~0 perché~$0+0=0$;
+\item l'inverso di~1 è~11 perché~$1+11=0$;
+\item l'inverso di~2 è~10 perché~$2+10=0$;
+\item l'inverso di~3 è~9 perché~$3+9=0$;
+\item l'inverso di~4 è~8 perché~$4+8=0$;
+\item l'inverso di~5 è~7 perché~$5+7=0$.
+\end{itemize*}
+\end{multicols}
+
+L'elemento inverso è molto importante in quanto ci permette di sostituire l'operazione inversa
+con l'operazione diretta, fornendo come argomento l'elemento inverso di quello dell'operazione diretta iniziale.
+%\newpage
+\begin{center}
+ \input{./lbr/chap03/fig030_orol.pgf}
+\end{center}
+
+Così per tornare allo stato iniziale invece di operare portando indietro le lancette di~7,
+otteniamo lo stesso risultato portando avanti le lancette di~5 che è appunto l'inverso di~7.
+
+\subsection{Divisione}
+
+La divisione è l'operazione inversa della moltiplicazione.
+Dato che nell'insieme dei numeri razionali esiste sempre l'inverso di una frazione rispetto
+alla moltiplicazione, esclusa la frazione zero, si può sempre eseguire la divisione di due qualsiasi frazioni.
+
+\begin{center}
+ \input{./lbr/chap03/fig031_divisione.pgf}
+\end{center}
+
+\[\frac{m}{n}:\frac{p}{q}=\frac{m}{n}\cdot\frac{q}{p}=\frac{m\cdot q}{n\cdot p}.\]
+
+\begin{definizione}
+Il \emph{quoziente di due frazioni} è la frazione che si ottiene moltiplicando la prima frazione per l'inverso
+della seconda frazione.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Quoziente di due frazioni.
+\begin{itemize*}
+\item $\displaystyle{\frac{2}{3}:\frac{7}{4}}$.
+\end{itemize*}
+Il reciproco di~$\dfrac{7}{4}$ è~$\dfrac{4}{7}$. Pertanto
+\[\frac{2}{3}:\frac{7}{4}=\frac{2}{3}\cdot\frac{4}{7}=\frac{8}{21}.\]
+
+\begin{itemize*}
+	\item $\displaystyle{-\frac{2}{3}:\bigg(-\frac{3}{4}\bigg)}$.
+\end{itemize*}
+Il reciproco di~$-\dfrac{3}{4}$ è~$-\dfrac{4}{3}$. Pertanto
+\[-\frac{2}{3}:\bigg(-\frac{3}{4}\bigg)=-\frac{2}{3}\cdot\bigg(-\frac{4}{3}\bigg)=+\frac{8}{9}.\]
+
+\begin{itemize*}
+ \item $\displaystyle{\frac{2}{3}:0}$.
+\end{itemize*}
+ Il reciproco di~0 non esiste, quindi la divisione non è eseguibile.
+
+\begin{itemize*}
+ \item $0:\dfrac{2}{3}$.
+\end{itemize*}
+Il reciproco di~$\dfrac{2}{3}$ è~$\dfrac{3}{2}$. Pertanto
+\[0:\frac{2}{3}=0\cdot \frac{3}{2}=0.\]
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:3.52}, \ref{ese:3.53}, \ref{ese:3.54}, \ref{ese:3.55}}
+
+\section{Potenza di una frazione}
+Come per ogni numero, anche per le frazioni, la \emph{potenza di una frazione} non è
+altro che un prodotto di tante frazioni identiche alla frazione data quanto è il valore dell'esponente,
+pertanto si trova elevando il numeratore e il denominatore della frazione all'esponente della potenza.
+\[\bigg(\frac{a}{b}\bigg)^n=\underbrace{\frac{a}{b}\cdot\frac{a}{b}\cdot\frac{a}{b}\cdot\ldots\cdot\frac{a}{b}}_%
+{n\text{ volte}}=\frac{a^n}{b^n}.\]
+%\newpage
+\begin{exrig}
+\begin{esempio}
+Potenza di frazioni.
+\begin{multicols}{3}
+\begin{itemize*}
+\item $\displaystyle{\bigg(-\frac{2}{3}\bigg)^3=-\frac{8}{27}}$;
+\item $\displaystyle{-\frac{2^3}{3}=-\frac{8}{3}}$;
+\item $\displaystyle{\bigg(-\frac{2}{3}\bigg)^2=+\frac{4}{9}}$.
+\end{itemize*}
+\end{multicols}
+\end{esempio}
+\end{exrig}
+
+\subsection{Potenza con esponente uguale a zero}
+La definizione di potenza si estende anche al caso in cui l'esponente è zero.
+
+Consideriamo l'esempio della divisione di due potenze con la stessa base e con lo stesso esponente:
+\begin{itemize*}
+\item $a^n:a^n=1$, la divisione di due numeri uguali è~1;
+\item $a^n:a^n=a^0$, applicando le proprietà delle potenze.
+\end{itemize*}
+
+Possiamo allora concludere che per ogni frazione o numero razionale~$a$ diverso da zero risulta~$a^0=1$.
+Non è invece possibile definire la scrittura~$0^0$.
+
+\subsection{Potenza con esponente intero negativo}\label{sect:potenza_esponente_negativo}
+
+La definizione di potenza si può estendere anche al caso in cui l'esponente sia uguale a un numero intero negativo:
+\[a^{-n}=a^0:a^n=1:a^n=\frac{1}{a^n}=\frac{1^n}{a^n}=\bigg(\frac{1}{a}\bigg)^n.\]
+
+Si può definire allora per ogni numero razionale diverso da zero
+\[a^{-n}=\bigg(\frac{1}{a}\bigg)^n.\]
+
+\begin{definizione}
+La \emph{potenza di un numero razionale} diverso da zero elevato a un \emph{esponente intero negativo} è
+uguale a una potenza che ha per base il reciproco della base rispetto
+alla moltiplicazione e per esponente l'opposto dell'esponente rispetto all'addizione.
+\end{definizione}
+
+Non è definita invece la potenza con esponente negativo di~0. Il numero~0 infatti non ha il reciproco.
+Pertanto,~$0^{-n}$ è una scrittura priva di significato.
+
+\vspazio\ovalbox{\risolvii \ref{ese:3.56}, \ref{ese:3.57}, \ref{ese:3.58}, \ref{ese:3.59}, \ref{ese:3.60}}
+
+\section{Introduzione ai numeri reali}\label{sect:intro_numeri_reali}
+
+Per quanto abbiamo visto nei paragrafi precedenti, l'insieme dei numeri razionali $\insQ$ è quello che contiene gli altri presentati precendentemente, ovvero i naturali $\insN$ e gli interi relativi $\insZ$, cioè $\insQ \supset \insZ \supset \insN$. In realtà questo insieme, per quanto infinito, non è sufficiente a contenere tutti i numeri che utilizziamo, poiché ve ne sono alcuni (infiniti), detti \emph{irrazionali}, il cui insieme viene indicato con $\insJ$, che derivano da operazioni come l'estrazione di radice, il cui risultato non trova sempre una corrispondenza in $\insQ$.
+
+Consideriamo infatti il numero $\sqrt{2}$ e supponiamo, per ipotesi, che sia un numero razionale. Quindi possiamo scrivere $\sqrt{2} = \dfrac{n}{m}$ con $n$ e $m$ numeri interi primi tra loro (una frazione può sempre essere ridotta ai minimi termini). Dunque, elevando al quadrato entrambi i termini si ha:
+\[\sqrt{2}=\frac{n}{m} \quad\Rightarrow\quad 2=\frac{n^2}{m^2}.\]
+Cioè $n^2$ è il doppio di $m^2$, ovvero $n^2$ e $m^2$ non sono primi tra loro e pertanto non lo sono neanche $n$ e $m$, in contraddizione con quanto ipotizzato. Perciò $\sqrt{2} \notin \insQ$.
+
+Come $\sqrt{2}$ esistono altri numeri che non appartengono a $\insQ$, ad esempio $\sqrt{3}\text{,~}\pi\text{,~}\ldots{}$.
+
+L'unione dell'insieme $\insQ$ dei numeri razionali e quello degli irrazionali $\insJ$ costituisce l'insieme dei numeri \emph{reali} $\insR$, ovvero $\insR = \insQ \cup \insJ$, che in genere è quello al quale si fa riferimento in matematica e sarà trattato in dettaglio nel volume Algebra 2.
+
+Mettendo quindi in relazione la retta orientata con l'insieme $\insQ$, esistono punti di quest'ultima che non provengono da elementi di $\insQ$, ovvero esistono dei ``buchi''. Tali buchi scompaiono considerando al posto di $\insQ$ l'insieme $\insR$.
+
+\section{Notazione scientifica e ordine di grandezza}
+
+Le discipline scientifiche quali la fisica, la biologia, l'astronomia, ecc.,
+si trovano spesso a doversi confrontare con misurazioni di grandezze espresse da numeri molto grandi o molto piccoli. Per esempio:
+\begin{itemize*}
+\item il raggio della Terra è circa~$\np[m]{6400000}$;
+\item la velocità della luce nel vuoto è~$\np[m/s]{299790000}$;
+\item un globulo rosso ha il diametro di~$\np[m]{0,000007}$.
+\end{itemize*}
+I primi due numeri sono molto grandi, mentre l'ultimo è molto piccolo e operare con numeri simili,
+non è affatto semplice.
+
+Per renderci conto di ciò, consideriamo un rettangolo di dimensioni
+$b = \np[m]{0,00000006}$ e~$h = \np[m]{0,0000002}$ e calcoliamone l'area:
+\[A=b\cdot h=\np{0,00000006}\cdot\np{0,0000002}=\np[m^2]{0,000000000000012}.\]
+
+\begin{center}
+\input{./lbr/chap03/fig032_rett.pgf}
+\end{center}
+
+Come si può notare, per scrivere il risultato di un'operazione tra due numeri, in questo caso molto piccoli,
+è necessario fare particolare attenzione in quanto, per l'eccessiva quantità di cifre decimali,
+è facile commettere degli errori.
+
+Per risolvere questo problema, si preferisce utilizzare una scrittura compatta che
+permette di scrivere questo tipo di numeri in forma più agevole.
+Una tale scrittura prende il nome di \emph{notazione scientifica}.
+
+\begin{definizione}
+Un numero~$\alpha$ è scritto in \emph{notazione scientifica} se
+si presenta nella forma:
+\[\alpha=k\cdot10^n\] 
+dove~$k$ è un numero decimale maggiore o uguale a~$1$ e minore di~$10$ e~$n$ è un numero intero.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+I numeri~$\np{3,5e7}$ e~$\np{8,9e-5}$ sono scritti in notazione scientifica,
+mentre i numeri~$\np{0,5e3}$ e~$\np{10,3e-8}$ non sono scritti in notazione scientifica
+in quanto il numero davanti alla potenza di~$10$ nel primo caso è~$\np{0,5}$ che è minore di~$1$,
+nel secondo caso è~$\np{10,3}$ che è maggiore di~$10$.
+ \end{esempio}
+\end{exrig}
+
+\subsection{Come trasformare un numero in notazione scientifica}
+Consideriamo la misura del diametro del globulo rosso, ovvero~$\np[m]{0,000007}$.
+Per esprimere questa misura in notazione scientifica basta considerare la sua frazione generatrice, ovvero:
+\[\np[m]{0,000007}=7\cdot\frac{1}{\np{1000000}}\unit{m}=\np[m]{7e-6}.\]
+
+Allo stesso modo il numero~$\np{0,000000026}$ viene scritto in notazione scientifica come segue:
+\[\np{0,000000026}=\np{2,6}\cdot\frac{1}{\np{100000000}}=\np{2,6}\cdot\frac{1}{10^8}=\np{2,6e-8}.\]
+Si osservi che in questo secondo caso abbiamo preso in considerazione il valore~$\np{2,6}$ anziché~$26$, in quanto
+il numero~$k$ deve essere minore di~$10$.
+
+Consideriamo ora la misura del raggio della Terra, ovvero~$\np[m]{6400000}$,
+la sua espressione in notazione scientifica sarà:~$\np{6,4e6}$.
+
+Allo stesso modo il numero~$\np{340000000000}$ viene scritto in notazione scientifica~$\np{3,4e11}$.
+Si osservi che in questo secondo caso abbiamo preso in considerazione il valore~$\np{3,4}$ anziché~$34$, in quanto,
+come si è già detto, il numero~$k$ deve essere minore di~$10$.
+
+\osservazione A numeri ``piccoli'', corrisponde una potenza di dieci con esponente negativo;
+a numeri ``grandi'', corrisponde una potenza di dieci con esponente positivo.
+
+\begin{procedura}
+Scrivere un numero decimale positivo~$a$ in notazione scientifica, se~$a>1$:
+\begin{enumeratea}
+ \item si divide il numero decimale per una potenza di~$10$ in modo da avere un numero decimale compreso maggiore o uguale a~$1$ e minore di~$10$;
+ \item per trovare la potenza di~$10$ per la quale dividere il numero bisogna contare le cifre significative
+del numero prima della eventuale virgola e togliere~$1$;
+ \item per scrivere il numero~$a$ in notazione scientifica occorre moltiplicare il numero trovato al passo
+precedente
+per la potenza di~$10$ utilizzata.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Trasformare $\np{348000000000000}$ in notazione scientifica.
+\paragraph{Passo~$b$} Le cifre significative di~$\np{348000000000000}$ sono~$15$,
+si divide quindi il numero per~$10^{14}$ e si ottiene~$\np{3,48}$.
+\paragraph{Passo~$c$}~$\np{3,48e14}$.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Scrivere un numero decimale positivo~$a$ in notazione scientifica, se~$0<a<1$:
+\begin{enumeratea}
+ \item si moltiplica il numero decimale per una opportuna potenza di~$10$ in modo da ottenere un numero maggiore o uguale a~$1$ e minore di~$10$;
+ \item per trovare la potenza di~$10$ bisogna contare gli zeri che si trovano tra la virgola e la prima cifra
+significativa del numero e aggiungere~$1$;
+ \item per scrivere il numero a in notazione scientifica occorre moltiplicare il numero ottenuto al passo
+precedente per la stessa
+potenza di~$10$ utilizzata presa però con esponente negativo.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Trasformare $\np{0,000034}$ in notazione scientifica.
+\paragraph{Passo~$b$} Nel caso di~$\np{0,000034}$ le cifre~$0$ sono~$4$, si moltiplica allora il numero per~$10^5$ e si
+ottiene~$3,4$.
+\paragraph{Passo~$c$} Quindi, per l'esempio considerato si ha~$\np{3,4e-5}$.
+ \end{esempio}
+
+\begin{esempio}
+Riprendendo il problema della lamina rettangolare, le sue dimensioni in notazione scientifica vengono scritte come:
+$b=\np[m]{6e-8}$, $h=\np[m]{2e-7}$.
+L'area sarà quindi:
+\begin{align*}
+A =b\cdot h &=\np[m]{6e-8} \cdot \np[m]{2e-7}\\
+ &=\np[m^2]{12e-15}\\
+ &=\np{1,2}\cdot 10^1\cdot 10^{-15}\unit{m^2}\\
+ &=\np[m^2]{1,2e-14}.
+\end{align*}
+Com'è possibile vedere, utilizzando le note proprietà delle potenze, si riesce ad eseguire l'operazione
+in maniera molto agevole.
+\end{esempio}
+
+\begin{esempio}
+Trasforma in notazione scientifica e calcola
+$\displaystyle{\frac{\np{3000}:6\text{ milioni}}{\np{5000}\cdot\np{0,000002}}}$.
+
+\begin{align*}
+\frac{\np{3000}:6\text{ milioni}}{\np{5000}\cdot\np{0,000002}}&=\frac{(\np{3e3}):(\np{6e6})}{(\np{5e3})\cdot(\np{2e-6})}\\
+ &=\frac{3:6\cdot10^{-3}}{5\cdot 2\cdot 10^{-3}}\\
+ &=\frac{\np{0,5}}{10}\cdot10^{-3+3}\\
+ &=\np{0,05}\cdot10^0\\
+ &=\np{0,05}\\
+ &=\np{5e-2}.
+\end{align*}
+\end{esempio}
+\end{exrig}
+
+\osservazione Un numero intero composto dalla cifra~1 seguita da un numero $n$ di cifre~0 può essere rappresentato più semplicemente come $10^n$.
+
+\begin{exrig}
+\begin{esempio}
+ Potenze positive di 10.
+\begin{multicols}{3}
+\begin{enumeratea}
+\item $10=10^1$;
+\item $100=10^2$;
+\item $\np{1000}=10^3$;
+\item $\np{10000}=10^4$;
+\item $\np{100000}=10^5$;
+\item $\np{1000000}=10^6$;
+\item $\np{10000000}=10^7$;
+\item $\np{100000000}=10^8$;
+\item $\np{1000000000}=10^9$.
+\end{enumeratea}
+\end{multicols}
+\end{esempio}
+\end{exrig}
+
+\osservazione Un numero decimale con parte intera nulla seguita da $n$ cifre decimali tutte 0 tranne l'ultima che vale~1 può essere rappresentato più semplicemente come $10^{-n}$.
+
+\pagebreak
+\begin{exrig}
+\begin{esempio}
+ Potenze negative di 10.
+\begin{multicols}{3}
+\begin{enumeratea}
+\item $\np{0,1}=10^{-1}$;
+\item $\np{0,01}=10^{-2}$;
+\item $\np{0,001}=10^{-3}$;
+\item $\np{0,0001}=10^{-4}$;
+\item $\np{0,00001}=10^{-5}$;
+\item $\np{0,000001}=10^{-6}$;
+\item $\np{0,0000001}=10^{-7}$;
+\item $\np{0,00000001}=10^{-8}$;
+\item $\np{0,000000001}=10^{-9}$.
+\end{enumeratea}
+\end{multicols}
+
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:3.61}, \ref{ese:3.62}, \ref{ese:3.63}, \ref{ese:3.64}, \ref{ese:3.65},
+\ref{ese:3.66}, \ref{ese:3.67}, \ref{ese:3.68}, \ref{ese:3.69}, \ref{ese:3.70}, \ref{ese:3.71}}
+
+\subsection{Ordine di grandezza}
+
+Spesso, nel trattare i numeri molto grandi o molto piccoli, non è importante conoscere
+la misura con precisione, ma basta conoscere ``quanto il valore è più o meno grande'',
+cioè l'entità della sua grandezza. Per fare ciò si introduce il seguente concetto.
+
+\begin{definizione}
+Dato un numero, si definisce \emph{ordine di grandezza} (abbreviato con la sigla o.d.g.),
+la potenza di~$10$ più vicina al numero.
+\end{definizione}
+
+\begin{procedura}
+Determinare l'ordine di grandezza di un numero:
+\begin{enumeratea}
+\item scrivi il numero dato in notazione scientifica~${k\cdot10^n}$;
+\item se~$k<5$ l'ordine di grandezza è~$10^n$;
+\item se~$k\ge5$ l'ordine di grandezza è~$10^{n+1}$.
+\end{enumeratea}
+\end{procedura}
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+Determinare l'ordine di grandezza dei numeri~$\np{0,000074}$ e~$\np{47000000000}$.
+
+Scriviamo dapprima i numeri in notazione scientifica:
+\[\np{0,000074}=\np{7,4e-5}\quad\text{ e }\quad \np{47000000000}=\np{4,7e10}.\]
+L'o.d.g. del primo numero è~$10^{-4}$ in quanto il numero~$7,4$ è maggiore di~$5$.
+L'o.d.g. del secondo numero è~$10^{10}$ in quanto il numero~$4,7$ è minore di~$5$.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:3.72}, \ref{ese:3.73}, \ref{ese:3.74}}
+
+\section{Problemi con le frazioni}
+
+\subsection{Problemi diretti}
+Nei problemi diretti si conosce il valore di una grandezza e se ne deve calcolare la parte
+che corrisponde a una frazione. In questo caso basta moltiplicare la
+frazione per la grandezza intera.
+
+\begin{exrig}
+ \begin{esempio}
+Una pasticceria produce~$568$ cornetti alla settimana: i~$3/4$ sono alla crema,~$1/8$ sono al cioccolato e
+$1/8$ alla marmellata. Quanti cornetti di ciascun tipo produce?
+
+Per risolvere il problema occorre calcolare la parte che corrisponde a ciascuna frazione:
+\begin{itemize*}
+\item cornetti alla crema:~$\dfrac{3}{4}\cdot 568 =426$;
+\item cornetti al cioccolato:~$\dfrac{1}{8}\cdot 568 =71$;
+\item cornetti alla marmellata (come per quelli al cioccolato):~$71$.
+\end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+\subsection{Problemi inversi}
+
+Nei problemi inversi si conosce il valore numerico di una frazione di una certa grandezza e
+si deve calcolare il valore dell'intera grandezza.
+In questo caso occorre dividere il valore numerico dato per la frazione, si ottiene così l'intero.
+
+\begin{exrig}
+ \begin{esempio}
+Mario ha speso~\officialeuro~$21$ che corrispondono ai~$3/5$ della somma che possedeva. Quanto possedeva?
+
+In questo problema si sa che \officialeuro~$21$ corrispondono ai~$3/5$ della somma da cercare.
+Per trovare la somma posseduta da Mario è sufficiente dividere~$21$ per la frazione spesa, cioè
+\officialeuro~$21$~$\displaystyle:\frac{3}{5}=$ \officialeuro~$21\cdot\dfrac{5}{3}=$ \officialeuro~$35$.
+ \end{esempio}
+
+ \begin{esempio}
+Giuseppe possiede \officialeuro~$150$. Se spende i~$3/5$ della somma posseduta e poi i~$2/3$ della somma rimanente,
+quanto gli rimane?
+
+Per risolvere il problema si può procedere in più modi.
+
+Calcoliamo prima i~$3/5$ di \officialeuro~$150$, cioè \officialeuro~$150\cdot\frac{3}{5}=$ \officialeuro~$90$.
+Quindi la prima volta Giuseppe spende \officialeuro~$90$, perciò gliene rimangono~$60$. La seconda volta spende
+i~$2/3$ di \officialeuro~$60$, cioè \officialeuro~$60\frac{2}{3}=$ \officialeuro~$40$. In tutto ha speso
+\officialeuro~$90+$ \officialeuro~$40=$ \officialeuro~$130$ e quindi gli rimangono \officialeuro~$150-$ \officialeuro~$130=$ \officialeuro~$20$.
+
+Un altro modo per risolvere il problema è tenere conto che,
+se la prima volta ha speso i~$\frac{3}{5}$ della somma che possedeva,
+significa che gli rimane la frazione~$1-\frac{3}{5}=\frac{2}{5}$.
+La seconda volta spende i~$\frac{2}{3}$ dei~$\frac{2}{5}$ rimanenti, cioè~$\frac{2}{3}\cdot\frac{2}{5}=\frac{4}{15}$.
+In tutto ha speso la frazione
+\[\frac{3}{5}+\frac{4}{15}=\frac{3\cdot3+4}{15}=\frac{13}{15}\]
+gli rimane perciò la frazione~$1-\frac{13}{15}=\frac{2}{15}$ ovvero \officialeuro~$150\cdot\frac{2}{15}=$ \officialeuro~$20$.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:3.75}, \ref{ese:3.76}, \ref{ese:3.77}, \ref{ese:3.78}}
+
+\section{Le percentuali}
+
+Avrai sentito parlare spesso che il prezzo di un oggetto è stato scontato del~$10$ per cento,
+oppure che un partito politico ha preso il~$25$ per cento di voti
+e altre espressioni simili che coinvolgono le percentuali.
+
+Le percentuali sono un altro modo per scrivere le frazioni.
+
+\begin{definizione}
+Le \emph{percentuali} sono frazioni che hanno come denominatore~$100$ e come numeratore un numero intero o decimale.
+\end{definizione}
+
+La percentuale si indica con un numero intero o decimale seguita dal simbolo \%.
+\[35\%=\frac{35}{100};\qquad7\%=\frac{7}{100};\qquad~\np{12,5}\%=\frac{\np{12,5}}{100}=\frac{125}{\np{1000}}.\]
+
+Per passare dalla scrittura percentuale alla scrittura decimale basta dividere per~$100$ il
+numero che esprime la percentuale, cioè effettuare l'operazione di divisione tra il numeratore ed il denominatore:
+\[35\%=\frac{35}{100}=\np{0,35};\qquad7\%=\frac{7}{100}=\np{0,07};\qquad\np{12,5}\%=\frac{\np{12,5}}{100}=\np{0,125}.\]
+
+Per passare dalla scrittura decimale alla scrittura in percentuale basta moltiplicare numeratore e denominatore
+per~$100$:
+\[\np{0,02}=\frac{\np{0,02}}{1}=\frac{2}{100}=2\%;\qquad\np{0,23}=\frac{\np{0,23}}{1}=\frac{23}{100}=23\%;
+\qquad\np{1,21}=\frac{\np{1,21}}{1}=\frac{121}{100}=121\%.\]
+
+Per passare da una frazione alla sua scrittura in percentuale conviene prima scrivere la frazione come numero decimale e poi
+da questo passare alla percentuale:
+\[\frac{2}{3}=\np{0,}\overline6=\frac{\np{0,}\overline6}{1}=\frac{\np{66,}\overline6}{100}=\np{66,}\overline6\%.\]
+
+\vspazio\ovalbox{\risolvii \ref{ese:3.79}, \ref{ese:3.80}, \ref{ese:3.81}, \ref{ese:3.82}}
+
+\subsection{Problemi con le percentuali}
+
+Per calcolare la percentuale di una grandezza è sufficiente moltiplicare il valore
+della grandezza per la percentuale espressa in frazione.
+
+\begin{exrig}
+ \begin{esempio}
+In una scuola che ha~$857$ alunni ne sono stati promossi il~$95$\%. Quanti sono stati i promossi?
+
+Per rispondere, si moltiplica il numero totale di alunni per la frazione~$95/100$.
+Precisamente~$\frac{95}{100}\cdot857=\np{814,15}$.
+Poiché il risultato non è un numero intero, la percentuale è stata approssimata. Gli alunni promossi sono stati~$814$.
+ \end{esempio}
+\end{exrig}
+
+A volte è nota una parte della grandezza e si vuole conoscere che percentuale è
+la parte nota rispetto al totale. In questo caso occorre dividere la parte nota per l'intera grandezza,
+moltiplicare il risultato per~$100$ ed esprimere il numero in percentuale.
+
+\begin{exrig}
+\begin{esempio}
+Di una scolaresca di~$652$ alunni ben~$126$ hanno avuto il debito in matematica.
+Qual è la percentuale di alunni che hanno avuto il debito in matematica?
+
+Per rispondere alla domanda eseguiamo i seguenti calcoli:
+\[\frac{126}{652}\cdot100\%\simeq\np{0,19}\cdot100\%=19\%.\]
+\end{esempio}
+\end{exrig}
+
+Si noti che nell'ultimo esempio è stato utilizzato il simbolo $\simeq$ che indica un'\emph{approssimazione} del calcolo, ovvero che la corrispondenza tra le scritture a sinistra e a destra di tale simbolo non è esatta, ma è approssimata all'ultima cifra decimale indicata nella scrittura di destra.
+
+\subsection{Problemi con gli sconti}
+
+\begin{exrig}
+ \begin{esempio}
+Un pantalone costava \officialeuro~$70$ e viene venduto con il~$20\%$ di sconto, a quanto viene venduto?
+
+Si tratta di calcolare prima lo sconto e poi il prezzo scontato.
+Lo sconto è dato da
+
+\begin{center}
+$20\%\cdot$ \officialeuro~$70=\dfrac{20}{100}\cdot$ \officialeuro~$70=$ \officialeuro~$14$.
+\end{center}
+
+Il prezzo scontato è \officialeuro~$70 -$ \officialeuro~$14=$ \officialeuro~$56$.
+
+In alternativa si può tenere conto che, se~$20\%$ esprime lo sconto, la parte rimanente, quella da pagare, è
+$100\%-20\%=80\%$. Quindi per calcolare quanto costano i pantaloni scontati si può calcolare
+
+\begin{center}
+$\displaystyle{80\%\cdot}$ \officialeuro~$70=\dfrac{80}{100}\cdot$ \officialeuro~$70=$ \officialeuro~56.
+ \end{center}
+ \end{esempio}
+
+ \begin{esempio}
+Un paio di scarpe da \officialeuro~$120$ viene venduto scontato a \officialeuro~$75$. Qual è stata la percentuale di
+sconto praticato?
+
+Per rispondere alla domanda, calcolo lo sconto \officialeuro~$120-$ \officialeuro~$75=$ \officialeuro~$45$.
+
+Calcolo la percentuale che \officialeuro~$45$ rappresentano di \officialeuro~$120$,
+\[\frac{45}{120}\cdot100\%=\np{0,375}\cdot100\%=\np{37,5}\%.\]
+ \end{esempio}
+
+\begin{esempio}
+Mario ha trovato in un negozio il computer che stava cercando; per fortuna era scontato del~$15\%$ e così
+ha risparmiato \officialeuro~$120$. Quanto costa il computer di listino?
+
+Poiché \officialeuro~120 corrispondono al~$15\%$ del prezzo di listino, per calcolare il prezzo di listino occorre dividere~120 per la frazione che corrisponde a~$15\%$.
+\begin{center}
+	$120:~15\% =120:\dfrac{15}{100}=120\cdot\dfrac{100}{15}=$ \officialeuro~$800$.
+\end{center}
+\end{esempio}
+\end{exrig}
+
+
+\ovalbox{\risolvii \ref{ese:3.83}, \ref{ese:3.84}, \ref{ese:3.85}, \ref{ese:3.86}, \ref{ese:3.87},
+\ref{ese:3.88}, \ref{ese:3.89}, \ref{ese:3.90}, \ref{ese:3.91}, \ref{ese:3.92}, \ref{ese:3.93},
+\ref{ese:3.94}, \ref{ese:3.95},}
+
+\vspazio\ovalbox{\ref{ese:3.96}, \ref{ese:3.97}, \ref{ese:3.98}, \ref{ese:3.99}, \ref{ese:3.100}, \ref{ese:3.101},
+\ref{ese:3.102}, \ref{ese:3.103}, \ref{ese:3.104}, \ref{ese:3.105}, \ref{ese:3.106}, \ref{ese:3.107}, \ref{ese:3.108},
+\ref{ese:3.109},}
+
+\vspazio\ovalbox{\ref{ese:3.110}, \ref{ese:3.111}, \ref{ese:3.112}, \ref{ese:3.113}, \ref{ese:3.114}}
+
+\section{Proporzioni}
+
+\begin{definizione}
+ Il rapporto tra due numeri, di cui il secondo è diverso da zero, è il quoziente che si ottiene dividendo
+il primo numero per il secondo. Il primo numero si dice \emph{antecedente}, il secondo \emph{conseguente}.
+\end{definizione}
+
+\begin{center}
+  \input{./lbr/chap03/fig033_antecons.pgf}
+\end{center}
+
+\begin{definizione}
+ Una \emph{proporzione} è una uguaglianza tra due rapporti, del tipo
+\[A: B = C: D\]
+che si legge \emph{$A$ sta a~$B$ come~$C$ sta a~$D$}, con~$B$ e~$D$ diversi da zero. $A$ e~$D$ sono detti \emph{estremi}, mentre $B$ e~$C$ si dicono \emph{medi}.
+\end{definizione}
+
+\begin{center}
+  \input{./lbr/chap03/fig034_propor.pgf}
+\end{center}
+
+\begin{exrig}
+ \begin{esempio}
+  $4:2=12:6$.
+
+Formano una proporzione perché i due quozienti valgono entrambi~$2$.
+ \end{esempio}
+
+\begin{esempio}
+$7:14=16:4$.
+
+ \emph{Non} formano una proporzione perché il primo rapporto vale~$0,5$ mentre il secondo rapporto vale~$4$.
+\end{esempio}
+\end{exrig}
+
+\begin{proprieta}[Fondamentale delle proporzioni]
+  In ogni proporzione il prodotto dei medi è uguale al prodotto degli estremi, cioè
+\[A:B=C:D\quad\Rightarrow\quad A\cdot D=B\cdot C.\]
+\end{proprieta}
+
+\begin{exrig}
+ \begin{esempio}
+Verificare se $4:6=6:9$ è una proporzione.
+
+Il prodotto dei medi è~$6\cdot6=36$ e il prodotto degli estremi è~$4\cdot9=36$. Quindi è una proporzione.
+ \end{esempio}
+
+\begin{esempio}
+Verificare se $20:30=30:40$ è una proporzione.
+
+Il prodotto dei medi è~$30\cdot30=900$ mentre il prodotto degli estremi è~$20\cdot40=800$. Quindi non è una proporzione.
+\end{esempio}
+\end{exrig}
+
+\begin{proprieta}[del permutare]
+  Se in una proporzione scambiamo tra loro i medi otteniamo ancora una proporzione;
+in modo analogo otteniamo ancora una proporzione se scambiamo tra loro gli estremi,
+o ancora se scambiamo tra loro sia i medi sia gli estremi, ovvero
+\[A:B=C:D\quad\Rightarrow\quad A:C=B:D\quad\Rightarrow\quad D:B=C:A\quad\Rightarrow\quad D:C=B:A.\]
+\end{proprieta}
+
+\begin{exrig}
+ \begin{esempio}
+Data la proporzione~$12:16=18:24$ e scambiando tra loro:
+\begin{itemize*}
+  \item i medi si ottiene la proporzione~$12:18=16:24$;
+  \item gli estremi si ottiene la proporzione~$24:16=18:12$;
+  \item sia i medi che gli estremi si ottiene la proporzione~$24:18=16:12$.
+\end{itemize*}
+
+ \end{esempio}
+\end{exrig}
+
+
+\begin{proprieta}[dell'invertire]
+  Se in una proporzione scambiamo ogni antecedente con il rispettivo conseguente
+otteniamo ancora una proporzione, cioè
+\[A:B=C:D\quad\Rightarrow\quad B:A=D:C.\]
+\end{proprieta}
+
+\begin{exrig}
+ \begin{esempio}
+Data la proporzione~$15:9=5:3$, applicando la proprietà dell'invertire
+otteniamo la proporzione~$9:15=3:5$.
+ \end{esempio}
+\end{exrig}
+
+\begin{proprieta}[del comporre]
+  In una proporzione la somma dei primi due termini sta al primo termine come la
+somma del terzo e del quarto termine sta al terzo termine. Analogamente,
+la somma dei primi due termini sta al secondo termine come la somma del terzo e del quarto
+termine sta al quarto termine. In termini matematici
+\[A:B=C:D\quad\Rightarrow\quad (A+B):A=(C+D):C\]
+\[A:B=C:D\quad\Rightarrow\quad (A+B):B=(C+D):D.\]
+\end{proprieta}
+
+\begin{exrig}
+ \begin{esempio}
+Data la proporzione~$16:10=40:25$, applicando la proprietà del comporre si ottengono le proporzioni
+\[26:16=65:40\qquad\text{ e }\qquad26:10=65:25.\]
+ \end{esempio}
+\end{exrig}
+
+Analogamente alla proprietà del comporre si ha la seguente:
+
+\begin{proprieta}[dello scomporre]
+  In una proporzione la differenza dei primi due termini sta al primo termine come la differenza del
+ terzo e del quarto termine sta al terzo termine. Analogamente, la differenza dei primi due termini
+sta al secondo termine come la differenza del terzo e del quarto termine sta al quarto termine. Quindi
+\[A:B=C:D\quad\Rightarrow\quad (A-B):A=(C-D):C\]
+\[A:B=C:D\quad\Rightarrow\quad (A-B):B=(C-D):D.\]
+\end{proprieta}
+
+\begin{exrig}
+ \begin{esempio}
+Data la proporzione~$16:10=40:25$, applicando la proprietà dello scomporre si ottengono le proporzioni
+\[6:16=15:40\qquad\text{ e }\qquad6:10=15:25.\]
+ \end{esempio}
+\end{exrig}
+
+\subsection{Calcolo di un medio o un estremo incognito}
+Il medio incognito di una proporzione si calcola moltiplicando gli estremi e dividendo per il medio noto:
+\[a:b=x:d\quad\Rightarrow\quad x=\frac{a\cdot d}{b}.\]
+
+L'estremo incognito di una proporzione si calcola moltiplicando i medi e dividendo per l'estremo noto:
+\[x:b=c:d\quad\Rightarrow\quad x=\frac{b\cdot c}{d}.\]
+
+\begin{exrig}\vspace{-1ex}
+\begin{esempio}
+Calcola il termine incognito di ciascuna proporzione.
+\vspace{-1.3ex}\begin{itemize*}
+  \item $5:7=20:x\quad\Rightarrow\quad x=\frac{7\cdot 20}{5}=28$;
+  \item $2:x=3:16\quad\Rightarrow\quad x=\frac{2\cdot 16}{3}=\frac{32}{3}$;
+  \item $\frac{2}{3}:\frac{1}{2}=x:\frac{5}{6}%
+\quad\Rightarrow\quad x=\frac{2}{3}\cdot\frac{5}{6}:\frac{1}{2}=\frac{2}{3}%
+\cdot\frac{5}{6}\cdot\frac{2}{1}=\frac{10}{9}$.
+\end{itemize*}
+\end{esempio}%\vspace*{-1.7ex}
+\end{exrig}
+
+\begin{definizione}
+  Una proporzione si dice \emph{continua} se ha i medi uguali.
+\end{definizione}
+
+Una proporzione continua è del tipo~$A:B=B:C$, per esempio le seguenti proporzioni sono continue
+\[3:9=9:27\qquad5:10=10:20\qquad4:16=16:64.\]
+
+\subsubsection*{Calcolo del medio in una proporzione continua}
+
+In una proporzione continua il medio proporzionale incognito si ottiene moltiplicando gli estremi
+e calcolando la radice quadrata del prodotto ottenuto, cioè
+\[a:x=x:d\quad\Rightarrow\quad x=\sqrt{a\cdot d}.\]
+
+\begin{exrig}
+\begin{esempio}
+Trova il valore di $x$ nella seguente proporzione continua~$36:x=x:9$.
+
+\emph{Svolgimento}~$x=\sqrt{36\cdot 9}=18$.
+\end{esempio}
+\end{exrig}
+
+\subsubsection*{Calcolo di un termine incognito per mezzo delle proprietà del comporre e dello scomporre}
+
+\begin{exrig}
+  \begin{esempio}
+    Calcolare $x$ nella proporzione $(11-x):x=15:5$.
+
+  Applicando la proprietà del comporre si ottiene la proporzione
+  \begin{align*}
+  (11-x+x):x=(15+5):5 &\:\Rightarrow\: 11:x=20:5\\
+  &\:\Rightarrow\: x=\frac{11\cdot5}{20}=\frac{11}{4}.
+  \end{align*}
+  \end{esempio}
+
+\begin{esempio}
+ Calcolare $x$ nella proporzione $\displaystyle{\bigg(\frac{1}{2}+x\bigg):\frac{5}{8}=x:5}$.
+
+ Permutando i medi si ha~$\displaystyle{\bigg(\frac{1}{2}+x\bigg):x=\frac{5}{8}:5}$.
+
+ Applicando la proprietà dello scomporre si ha:
+\begin{align*}
+  &\bigg(\frac{1}{2}+x-x\bigg):x=\bigg(\frac{5}{8}-5\bigg):5\\
+\Rightarrow\quad &\frac{1}{2}:x=\frac{-35}{8}:5\\
+\Rightarrow\quad &x=\frac{1}{2}\cdot5:\bigg(\frac{-35}{8}\bigg)=\frac{1}{2}\cdot5%
+\cdot\bigg(-\frac{8}{35}\bigg)=-\frac{4}{7}.
+\end{align*}
+\end{esempio}
+\end{exrig}
+
+\subsection{Grandezze direttamente e inversamente proporzionali}
+
+Si consideri il perimetro di un triangolo equilatero;
+sappiamo che esso varia al variare della lunghezza del suo lato.
+Se si indica con~$l$ la lunghezza del lato del triangolo, allora il perimetro ($2p$) è dato dalla relazione:
+\[2p=3\cdot l.\]
+
+È possibile notare che se raddoppia il lato, raddoppia anche il perimetro; se si triplica il lato,
+allora triplica anche il perimetro, ecc.
+\begin{center}
+ \begin{tabular*}{.75\textwidth}{l@{\extracolsep{\fill}}*{6}{c}}
+\toprule
+Lato~$l$                 &$\np{0,5}$&$1$&$\np{1,5}$&$\np{2,4}$&$\np{3,1}$&$\np{4,4} $\\
+Perimetro                &$\np{1,5}$&$3$&$\np{4,5}$&$\np{7,2}$&$\np{9,3}$&$\np{13,2}$\\
+Rapporto~$\dfrac{2p}{l}$ &$    3   $&$3$&$    3   $&$   3    $&$   3    $&$    3    $\\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+\begin{definizione}
+  Due grandezze~$x$ e~$y$ si dicono \emph{direttamente proporzionali} se il loro rapporto è costante, cioè
+\[\frac{y}{x}=k\text{,~~con }k\neq~0.\]
+\end{definizione}
+
+In generale, da quest'ultima scrittura, possiamo dedurre che una proporzionalità diretta è
+espressa da una formula del tipo:
+\[y=kx\text{,~~con }k\neq 0.\]
+
+Graficamente un tale tipo di proporzionalità è rappresentato da una retta che
+passa per l'origine di un sistema di assi cartesiani ortogonali (figura~\ref{fig:3.2}).
+
+\begin{figure}[htb]
+\begin{minipage}[t]{.48\textwidth}
+  \centering\input{./lbr/chap03/fig035_prodir.pgf}
+  \caption{Proporzionalità diretta.}\label{fig:3.2}  
+\end{minipage}\hfil
+ \begin{minipage}[t]{.48\textwidth}  
+ \centering\input{./lbr/chap03/fig036_propinv.pgf}
+ \caption{Proporzionalità inversa.}\label{fig:3.3}
+ \end{minipage}
+\end{figure}
+
+Esaminiamo ora un altro esempio. Se quando vai a fare benzina allo scooter chiedi ogni volta \officialeuro~$10$ di benzina,
+ noterai che se aumenta il prezzo della benzina diminuirà la quantità di carburante che ricevi e viceversa
+se diminuisce il prezzo aumenterà la quantità di carburante che ricevi. Ciò che rimane costante è il prodotto
+tra il prezzo della benzina e la quantità di benzina ricevuta che deve essere sempre \officialeuro~$10$.
+\begin{center}
+ \begin{tabular*}{.8\textwidth}{l@{\extracolsep{\fill}}*{4}{c}}
+\toprule
+Prezzo benzina al litro~$p$ (\officialeuro) &$\np{1,126}$&$\np{1,156}$&$\np{1,212}$&$\np{1,248}$\\
+Benzina ricevuta~$b$ (l)                    &$\np{8,881}$&$\np{8,650}$&$\np{8,251}$&$\np{8,013}$\\
+Costo~$c=p\cdot b$ (\officialeuro)          &$\np{10,00}$&$\np{10,00}$&$\np{10,00}$&$\np{10,00}$\\
+\bottomrule
+\end{tabular*}
+\end{center}
+
+\begin{definizione}
+  Due grandezze~$x$ e~$y$ si dicono \emph{inversamente proporzionali} se il loro prodotto è costante,
+cioè
+\[x\cdot y=k\text{,~~con }k\neq 0.\]
+\end{definizione}
+
+In generale, da quest'ultima scrittura, possiamo dedurre che una proporzionalità inversa è
+espressa da una formula del tipo:
+\[y=\frac{k}{x}\text{,~~con }k\neq~0.\]
+
+Graficamente un tale tipo di proporzionalità è rappresentato da un ramo d'iperbole
+equilatera in un sistema di assi cartesiani ortogonali (figura~\ref{fig:3.3}).
+
+\vspazio\ovalbox{\risolvii \ref{ese:3.115}, \ref{ese:3.116}, \ref{ese:3.117}, \ref{ese:3.118}, \ref{ese:3.119}, \ref{ese:3.120},
+\ref{ese:3.121}, \ref{ese:3.122}, \ref{ese:3.123}, \ref{ese:3.124}, \ref{ese:3.125}}
+
+\vspazio\ovalbox{\ref{ese:3.126}, \ref{ese:3.127}}
+%\clearpage
+\section{Espressioni con le frazioni}
+
+\begin{esempio}
+%\begin{problema}
+  Calcola il valore della seguente espressione.
+\[  \bigg\lbrace\frac{3}{20}\cdot\bigg[\bigg(\frac{4}{9}-\frac{1}{3}\bigg):5+ \bigg(\frac{3}{7}-\frac{2}{5}\bigg):%
+\frac{1}{14}+\frac{1}{5}\cdot\frac{1}{9}\bigg]+\frac{2}{15}\bigg\rbrace:2.\]
+%\end{problema}
+%\begin{soluzione}
+\begin{align*}
+  \bigg\lbrace\frac{3}{20}\cdot\bigg[\bigg(\frac{4}{9}-\frac{1}{3}\bigg):5 + \bigg(\frac{3}{7}-\frac{2}{5}\bigg):&%
+\frac{1}{14}+\frac{1}{5}\cdot\frac{1}{9}\bigg]+\frac{2}{15}\bigg\rbrace:2= \\
+=&
+\bigg\lbrace\frac{3}{20}\cdot\bigg[\bigg(\frac{4-3}{9}\bigg):5+\bigg(\frac{15-14}{35}\bigg):\frac{1}{14}+\frac{1}{45}\bigg]%
++\frac{2}{15}\bigg\rbrace:2\\
+=&
+\bigg\lbrace\frac{3}{20}\cdot\bigg[\frac{1}{9}:5+\frac{1}{35}:\frac{1}{14}+\frac{1}{45}\bigg]+\frac{2}{15}\bigg\rbrace:2\\
+=&
+\bigg\lbrace\frac{3}{20}\cdot\bigg[\frac{1}{9}\cdot\frac{1}{5}+\frac{1}{35}\cdot\frac{14}{1}+\frac{1}{45}\bigg]+\frac{2}{15}\bigg\rbrace:2\\
+=&
+ \bigg\lbrace\frac{3}{20}\cdot\bigg[\frac{1}{45}+\frac{14}{35}+\frac{1}{45}\bigg]+%
+ \frac{2}{15}\bigg\rbrace:2\\
+=&
+\bigg\lbrace\frac{3}{20}\cdot\bigg[\frac{1}{45}+\frac{2}{5}+\frac{1}{45}\bigg]+\frac{2}{15}\bigg\rbrace:2\\
+=&
+\bigg\lbrace\frac{3}{20}\cdot\bigg[\frac{1+18+1}{45}\bigg]+\frac{2}{15}\bigg\rbrace:2\\
+=&
+\bigg\lbrace\frac{3}{20}\cdot\frac{20}{45}+\frac{2}{15}\bigg\rbrace:2\\
+=&
+\bigg\lbrace\frac{3}{45}+\frac{2}{15}\bigg\rbrace:2\\
+=&
+\bigg\lbrace\frac{1}{15}+\frac{2}{15}\bigg\rbrace:2\\
+=&
+\frac{3}{15}:2\\
+=&
+\frac{1}{5}\cdot\frac{1}{2}\\
+=&\frac{1}{10}.
+\end{align*}
+%\end{soluzione}
+\end{esempio}
+
+\begin{esempio}
+  Calcola il valore della seguente espressione.
+\[\bigg[\frac{1}{4}\cdot\frac{5}{2}-\bigg(\frac{3}{5} - \frac{1}{2}\bigg)\cdot\frac{25}{4}\bigg]\cdot\bigg[\bigg(\frac{5}{8}-\frac{4}{5}\bigg)\cdot\frac{8}{3}-\frac{15}{4}:\bigg(\frac{8}{3}-1\bigg)+\frac{10}{3}\bigg].\]
+  \begin{align*}
+\bigg[\frac{1}{4}\cdot\frac{5}{2}-\bigg(\frac{3}{5} - \frac{1}{2}\bigg)\cdot\frac{25}{4}\bigg]\cdot\bigg[\bigg(&\frac{5}{8}-\frac{4}{5}\bigg)\cdot\frac{8}{3}-\frac{15}{4}:\bigg(\frac{8}{3}-1\bigg)+\frac{10}{3}\bigg]=\\
+&=\bigg[\frac{5}{8}-\bigg(\frac{6-5}{10}\bigg)\cdot\frac{25}{4}\bigg]\cdot\bigg[\bigg(\frac{25-32}{40}\bigg)\cdot\frac{8}{3}-\frac{15}{4}:\bigg(\frac{8-3}{3}\bigg)+\frac{10}{3}\bigg]\\
+&=\bigg[\frac{5}{8}-\frac{1}{10}\cdot\frac{25}{4}\bigg]\cdot\bigg[-\frac{7}{40}\cdot\frac{8}{3}-\frac{15}{4}:\frac{5}{3}+\frac{10}{3}\bigg]\\
+&=\bigg[\frac{5}{8}-\frac{5}{8}\bigg]\cdot\bigg[-\frac{7}{15}-\frac{15}{4}\cdot\frac{3}{5}+\frac{10}{3}\bigg]\\
+&=0\cdot\bigg[-\frac{7}{15}-\frac{9}{4}+\frac{10}{3}\bigg]\\
+&=0.
+  \end{align*}
+\end{esempio}
+
+%\newpage
+\begin{esempio}
+%\begin{problema}
+  Calcola il valore della seguente espressione.
+\[\bigg[\frac{13}{5}:\bigg(3+\frac{9}{10}\bigg)+\frac{7}{8}+\bigg(\frac{13}{4}-2\bigg)\cdot\frac{4}{15}-\frac{7}{8}%
+\bigg]\cdot\frac{11}{3}:\bigg(6-\frac{1}{2}\bigg).\]
+%\end{problema}
+%\begin{soluzione}
+  \begin{align*}
+\bigg[\frac{13}{5}:\bigg(3+\frac{9}{10}\bigg)+\frac{7}{8}+\bigg(\frac{13}{4}-&2\bigg)\cdot\frac{4}{15}-\frac{7}{8}%
+\bigg]\cdot\frac{11}{3}:\bigg(6-\frac{1}{2}\bigg)=\\
+&=
+\bigg[\frac{13}{5}:\bigg(\frac{30+9}{10}\bigg)+\frac{7}{8}+\bigg(\frac{13-8}{4}\bigg)\cdot\frac{4}{15}-\frac{7}{8}%
+\bigg]\cdot\frac{11}{3}:\bigg(\frac{12-1}{2}\bigg)\\
+ &=
+\bigg[\frac{13}{5}:\frac{39}{10}+\frac{7}{8}+\frac{5}{4}\cdot\frac{4}{15}-\frac{7}{8}%
+\bigg]\cdot\frac{11}{3}:\frac{11}{2}\\
+ &=
+\bigg[\frac{13}{5}\cdot\frac{10}{39}+\frac{7}{8}+\frac{1}{3}-\frac{7}{8}%
+\bigg]\cdot\frac{11}{3}\cdot\frac{2}{11}\\
+ &=
+\bigg[\frac{2}{3}+\frac{7}{8}+\frac{1}{3}-\frac{7}{8}%
+\bigg]\cdot\frac{2}{3}\\
+ &=
+\bigg[\frac{2}{3}+\frac{1}{3}\bigg]\cdot\frac{2}{3}\\
+&=1\cdot\frac{2}{3}\\
+&=\frac{2}{3}.
+  \end{align*}
+%\end{soluzione}
+\end{esempio}
+%\clearpage
+\begin{esempio}
+%\begin{problema}
+   Calcola il valore della seguente espressione.
+\[\bigg[\bigg(\frac{7}{5}-\frac{1}{2}\bigg)^{2}:\bigg(\frac{9}{10}\bigg)^{2}-\bigg(1+\frac{2}{3}-2\bigg)^{2}\bigg]^{2}:\bigg(\frac{10}{9}\bigg)^{2}-\bigg(1+\frac{8}{5}+\frac{1}{25}\bigg).\]
+% \end{problema}
+
+%\begin{soluzione}
+ \begin{align*}
+\bigg[\bigg(\frac{7}{5}-\frac{1}{2}\bigg)^{2}:\bigg(\frac{9}{10}\bigg)^{2}-&\bigg(1+\frac{2}{3}-2\bigg)^{2}\bigg]^{2}:%
+\bigg(\frac{10}{9}\bigg)^{2}-\bigg(1+\frac{8}{5}+\frac{1}{25}\bigg)=\\
+=&\bigg[\bigg(\frac{14-5}{10}\bigg)^{2}:\bigg(\;\frac{9}{10}\bigg)^{2}-\bigg(\frac{3+2-6}{3}\bigg)^{2}\bigg]^{2}:%
+\bigg(\frac{10}{9}\bigg)^{2}-\bigg(\frac{25+40+1}{25}\bigg)\\
+=&\bigg[\bigg(\;\frac{9}{10}\bigg)^{2}:\bigg(\;\frac{9}{10}\bigg)^{2}-\bigg(-{\frac{1}{3}}\bigg)^{2}\bigg]^{2}:\bigg(\frac{10}{9}\bigg)^{2}-\frac{66}{25}\\
+=&\bigg[1-\frac{1}{9}\bigg]^{2}:\bigg(\frac{10}{9}\bigg)^{2}-\frac{66}{25}\\
+=&\bigg[\frac{8}{9}\bigg]^{2}\cdot\bigg(\frac{9}{10}\bigg)^{2}-\frac{66}{25}\\
+=&\bigg(\frac{4}{5}\bigg)^{2}-\frac{66}{25}\\
+=&\frac{16}{25}-\frac{66}{25}\\
+=&-{\frac{50}{25}}&\\
+=&-2.
+\end{align*}
+%\end{soluzione}
+\end{esempio}
+\newpage
+\input{./chap/03_esercizi.tex}
+\cleardoublepage

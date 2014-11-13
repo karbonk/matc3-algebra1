@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+\coordinate (A) at (0,0);
+\coordinate (B) at ($(A) +(0:3)$);
+ \coordinate (C) at ($(A) +(90:2)$);
+\coordinate (D) at ($(C) +(16:3.12)$);
+
+\draw (A) -- (C) -- (D) --(B)--(A);
+
+\node (a) at (0,0) {};
+\node[ground,anchor=center] (g) {};
+\draw (a.south) -- (g);
+
+\draw (D) to[short, -o] (3,3);
+
+\end{tikzpicture}

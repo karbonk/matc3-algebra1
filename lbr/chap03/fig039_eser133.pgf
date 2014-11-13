@@ -1,0 +1,10 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=6mm,y=5mm]
+\fill[gray, opacity=.4](1,0) rectangle (2,1);
+\foreach \x in {0,1}
+\draw (\x,0) rectangle  (\x+1,1);
+\foreach \x in {0}
+\foreach \y in {1}{
+\draw (\x,\y) -- (\x+.5,\y+1)--(\x+1,\y);
+\draw(\x,\y-1)--(\x+.5,-\y)--(\x+1,\y-1);}
+\end{tikzpicture}

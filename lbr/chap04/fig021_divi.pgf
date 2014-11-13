@@ -1,0 +1,20 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small\ttfamily,anchor=north]
+
+\matrix(a) [matrix of nodes,nodes={ text centered}]
+{
+&1  & 1  & 1  & 0  & 1 & 1 & 0 & 1\\
+$-$&1 & 0 & 1 & & & 1 & 0 & 1\\
+&& 1  & 0  & 0  &\\
+& & 0 & 0 & 0 \\
+& & 1 & 0 & 0 & 1\\
+& &  $-$&1 & 0 & 1 &\\
+& & & 1 & 0 & 0 &\\
+};
+
+ \draw (a-1-7.north west)--(a-2-7.south west);
+\draw (a-2-7.north west) -- (a-2-9.north east);
+\draw (a-2-2.south west) -- (a-2-4.south east);
+\draw (a-4-3.south west) -- (a-4-5.south east);
+\draw (a-6-4.south west) -- (a-6-6.south east);
+\end{tikzpicture}

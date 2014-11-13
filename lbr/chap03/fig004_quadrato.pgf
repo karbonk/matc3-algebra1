@@ -1,0 +1,9 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% Quadrato 1/4
+\begin{tikzpicture}
+  \begin{scope}[scale=1,every node/.style={minimum size=5mm}]
+    \draw[step=5mm, black] (0,0) grid (1,1);
+    \fill[gray, opacity=.4] (0,.5) rectangle (.5,1);
+    \draw[black,thick] (0,0) rectangle (1,1);
+  \end{scope} 
+\end{tikzpicture}

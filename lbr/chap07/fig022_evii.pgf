@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\draw (2,0) circle (2.5) (0,2.5)node {$P$};
+\draw (5,0) circle (2.5) (7.5,2.5)node {$C$};
+
+\foreach \x in {1,2,3,4}
+\foreach \y in {-1,0,1}
+\draw[fill] (\x,\y) circle (1pt);
+
+\foreach \z in {.5,1.5,3.5}
+\draw[fill] (\z,.5) circle (1pt);
+
+\foreach \i in {5,5.8,6.6}
+\foreach \j in {1.5,1,.5,0,-.5,-1,-1.5}
+\draw[fill] (\i,\j) circle (1pt); 
+\end{tikzpicture}

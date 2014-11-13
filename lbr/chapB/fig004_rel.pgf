@@ -1,0 +1,36 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small, every state/.style={draw=CornflowerBlue}, every loop/.style={draw=Maroon}]
+\draw (0,0) circle [x radius=3, y radius=2];
+
+\node[state] (A) at (-2.3,.3) {$-1$};
+\node[state] (B) at (-.8,1.2) {$-2$};
+\node[state] (C) at (-1.5,-1) {$-7$};
+\node[state] (D) at (-.5,-.9) {$+10$};
+\node[state] (E) at (.6,.9) {$+3$};
+\node[state] (F) at (1.8,.5) {$+4$};
+\node[state] (G) at (1.5,-1) {$+5$};
+
+\begin{scope}[->]
+\path(A) edge[loop below] node{} ()
+	(B) edge[loop right] node{} ()
+	(C) edge[loop left] node{} ()	
+(D) edge[loop below] node{} ()
+	(E) edge[loop above] node{} ()
+	(F) edge[loop right] node{} ()
+	(G) edge[loop right] node{} ();
+
+\end{scope}
+% \begin{scope}[<->, Maroon]
+ \begin{scope}[-, Maroon]
+ \draw (A)--(C);
+ \draw (B)--(A);
+ \draw (C)--(B);
+\draw (D)--(E);
+\draw (D)--(F);
+\draw (E)--(F);
+\draw (G)--(F);
+\draw (E)--(G);
+\draw (D)--(G);
+ \end{scope}
+\end{tikzpicture}

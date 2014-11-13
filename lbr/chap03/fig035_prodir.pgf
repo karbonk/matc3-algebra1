@@ -1,0 +1,23 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[domain=0:4.4,x=10mm,y=5mm]
+  \draw[->] (0,0) -- coordinate (x axis mid) (5.2,0) node [right] () {$x$}; % asse x
+  \draw[->] (0,0) -- coordinate (y axis mid) (0,14.5) node [above] () {$y$}; % asse y
+%  \draw[->] (0,0) -- coordinate (x axis mid) (5.2,0)}; % asse x
+%  \draw[->] (0,0) -- coordinate (y axis mid) (0,14.5); % asse y
+  % etichette
+  \foreach \x in {0,1,...,5}
+    \draw (\x,3pt) -- (\x,-3pt) node[anchor=north] {\x};
+  \foreach \y in {1,2,...,14}
+    \draw (3pt,\y) -- (-3pt,\y) node[anchor=east] {\y}; 
+  \draw (3pt,0) -- (-3pt,0); 
+  \node[below=0.5cm] at (x axis mid) {lato $l$};
+  \node[rotate=90,above left=1cm] at (y axis mid) {perimetro $2p$};
+  %grafico
+  \draw[color=blue] plot  (\x,{3*\x});
+  \begin{scope}[dotted]
+    \foreach \x in {1,2,3,4}{
+      \draw (\x,0) -- (\x,3*\x);
+      \draw (0,3*\x) -- (\x,3*\x);
+    }
+  \end{scope}
+\end{tikzpicture}

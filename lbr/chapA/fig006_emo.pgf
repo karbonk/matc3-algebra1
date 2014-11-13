@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}
+\begin{scope}[RedOrange]
+\foreach \xi in {0,3.5ex,7ex,10.5ex,14ex,17.5ex,21ex}{
+\draw(\xi,-.5ex) circle (1.5ex);
+   \draw (\xi-.9ex,-1ex)..controls (\xi-0.4ex,-1.5ex)and(\xi+0.5ex,-1.5ex)..(\xi+.9ex,-1ex);}
+\foreach \xii in {-.5ex,.5ex,3ex,4ex,6.5ex,7.5ex,10ex,11ex,13.5ex,14.5ex,17ex,18ex,20.5ex,21.5ex}
+  \draw[fill=white] (\xii,0) circle (.2ex);
+\end{scope}
+\filldraw[white] (21ex,-2.2ex) rectangle (23ex,1.2ex);
+\node[left] at (-1.5ex,-.5ex) { a.s. 2006-2007 $=$};
+\end{tikzpicture}

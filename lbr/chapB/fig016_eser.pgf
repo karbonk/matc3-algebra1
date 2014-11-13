@@ -1,0 +1,33 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small,table nodes/.style={%
+		rectangle,
+		draw=black,
+ 		align=center,
+   		minimum height=5mm,
+     	text depth=0.5ex,
+     	text height=1.5ex,
+     	inner xsep=-1pt,
+     	outer sep=0pt
+	},
+	table/.style={%
+        matrix of nodes,
+        row sep=-\pgflinewidth,
+        column sep=-\pgflinewidth,
+        nodes={%
+            table nodes
+        } }]
+
+\matrix (first) [table,text width=7mm,name=table,row 2 column 2/.style=blue,row 5 column 4/.style=blue]
+{
+{}  & $-1$ & $+3$ & $-7$ & $+5$ & $-2$ & $+4$ & $+10$\\
+$-1$ &[blue] 1 &{} &{} &{} &{} &{} &{} \\
+$+3$ &{} &{} &{} &{} &{} &{} &{} \\
+$-7$ &{} &{} &{} &{} &{} &{} &{} \\
+$+5$ &{} &{} &{$0$} &{} &{} &{} &{} \\
+$-2$ &{} &{} &{} &{} &{} &{} &{} \\
+$+4$ &{} &{} &{} &{} &{} &{} &{} \\
+$+10$ &{} &{} &{} &{} &{} &{} &{} \\
+};
+
+\end{tikzpicture}

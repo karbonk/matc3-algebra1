@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{center}
+ \begin{tikzpicture}[decoration={markings,mark=between positions 0.7 and .9 step 30pt with {\arrow{stealth}}}]
+  \begin{scope}[thick,font=\scriptsize]
+   \draw[->] (0,0)  - -  (280pt,0) node[above]{$\insN$};
+    \foreach \c in {3,4,...,7}{%
+     \draw[dotted, color=RedOrange,postaction={decorate}](\c,5pt)--(\c,5pt) arc (180:0:0.5 and 0.5);}
+    \foreach \n in {0,1,2,...,9}{%	
+     \draw (\n,-3pt) -- (\n,3pt)   node [below=5pt] {$\n$};}
+  \end{scope}
+ \end{tikzpicture}
+\end{center}

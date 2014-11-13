@@ -1,0 +1,21 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm,y=5mm]
+  \node (a) at (-2,0) {$A$};
+  \node (b) at (2,0) {$B$};
+  \node (c) at (0,0) {$:$};
+    \begin{scope}[font=\small]
+    \node (ter) at (0,2) {termini};
+    \node (ant) at (-4,-2) {antecedente};
+    \node (con) at (4,-2) {conseguente};
+    \end{scope}
+    \begin{scope}[->]
+      \begin{scope}[blue]
+	\draw (ter) ..controls +(left:20mm) and +(left:10mm).. (a);
+	\draw (ter) ..controls +(right:20mm) and +(right:10mm).. (b);
+      \end{scope}
+      \begin{scope}[red]
+	\draw (ant) ..controls +(up:5mm) and +(down:10mm).. (a);
+	\draw (con) ..controls +(up:5mm) and +(down:10mm).. (b);
+      \end{scope}
+    \end{scope}
+\end{tikzpicture}

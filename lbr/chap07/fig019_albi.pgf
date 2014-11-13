@@ -1,0 +1,40 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+\tikzstyle{level 1}=[level distance=2cm, sibling distance=3.5cm]
+\tikzstyle{level 2}=[level distance=2cm, sibling distance=1.5cm]
+\tikzstyle{level 3}=[level distance=3cm, sibling distance=.5cm]
+\tikzstyle{point} = [circle,minimum width=3pt,fill, inner sep=0pt]
+
+\node[point, label=left:{}] (aer) at (0,0) {}[grow'=right]
+  child {node[point, label=above left:{Brindisi}] {} 
+    child {node[point,label=above:{Roma}] {}
+      child {node[point, label=right:{Berlino}] {}}
+      child {node[point, label=right:{Londra}] {}}
+      child {node[point, label=right:{Parigi}] {}}
+    }
+    child {node[point,label=below:{Milano}] {}
+      child {node[point, label=right:{Berlino}] {}}
+      child {node[point, label=right:{Londra}] {}}
+      child {node[point, label=right:{Parigi}] {}}}
+    }
+  child {node[point, label=below:{Bari}] {} 
+    child {node[point,label=above:{Roma}] {}
+      child {node[point, label=right:{Berlino}] {}}
+      child {node[point, label=right:{Londra}] {}}
+      child {node[point, label=right:{Parigi}] {}}}
+    child {node[point,label=below:{Milano}] {}
+      child {node[point, label=right:{Berlino}] {}}
+      child {node[point, label=right:{Londra}] {}}
+      child {node[point, label=right:{Parigi}] {}}}
+    }
+  child {node[point, label=below:{Palermo}] {} 
+    child {node[point,label=above:{Roma}] {}
+      child {node[point, label=right:{Berlino}] {}}
+      child {node[point, label=right:{Londra}] {}}
+      child {node[point, label=right:{Parigi}] {}}}
+    child {node[point,label=below:{Milano}] {}
+      child {node[point, label=right:{Berlino}] {}}
+      child {node[point, label=right:{Londra}] {}}
+      child {node[point, label=right:{Parigi}] {}}}
+};
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=4.5mm, y=4.5mm,font=\small]
+
+\draw[rounded corners] (0,-5.5) rectangle (9,3) (5,-6)node[below] {A};
+\draw(2,0) circle (1.5);
+\draw (6,-.5)ellipse (2 and 3);
+\draw(6.5,-3) circle (2);
+
+\begin{scope}[xshift=50mm]
+\draw[rounded corners] (0,-5.5) rectangle (9,3) (5,-6)node[below] {B};
+\draw(2,0) circle (1.5);
+\draw (6,-.5)ellipse (2 and 3);
+\draw(2.5,-3) circle (1.25);
+\end{scope}
+
+\begin{scope}[xshift=100mm]
+\draw[rounded corners] (0,-5.5) rectangle (9,3) (5,-6)node[below] {C};
+\draw(3.5,0) ellipse (2.5 and 2);
+\draw (6,-.5)ellipse (2 and 3);
+\draw(5.5,-3.5) circle (1.25);
+\end{scope}
+\end{tikzpicture}

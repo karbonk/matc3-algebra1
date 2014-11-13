@@ -1,0 +1,22 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=7mm,y=7mm, font=\small]
+
+ \begin{scope}[thick, shorten >=1.5pt, ->, Maroon]
+	\draw (0,0) -- (2,0); %vettore v
+\node[above, black] at (1,0) {$\vec{v}$};
+	\begin{scope}[xshift=20mm]
+	\draw (0,0) -- (4,0); %vettore a
+\node[above, black] at (2,0) {$\vec{a}$};
+	\end{scope}
+	\begin{scope}[xshift=54mm]
+	\draw (3,0) -- (0,0); %vettore b
+\node[above, black] at (1.5,0) {$\vec{b}$};
+	\end{scope}
+	\begin{scope}[xshift=81mm]
+	\draw (0,0) -- (.67,0); %vettore c
+\node[above, black] at (.33,0) {$\vec{c}$};
+	\end{scope}
+\end{scope}
+
+\end{tikzpicture}

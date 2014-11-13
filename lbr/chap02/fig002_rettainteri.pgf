@@ -1,0 +1,19 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% La retta degli interi
+\begin{tikzpicture}
+\begin{scope}[thick,font=\scriptsize]
+  \draw[->] (-160pt,0)  - -  (160pt,0) node[above]{$\insZ$};	
+    \foreach \n in {-5,-4,...,0}{%
+      \draw (\n,-3pt) -- (\n,3pt)   node [below=5pt] {$\n$};		
+    }
+
+    \foreach \m in {1,2,...,5}{%
+      \draw (\m,-3pt) -- (\m,3pt) node [below=5pt]{+$\m$};
+    }
+  
+    \draw[|-|]node [below=22pt]{$A$}(0,-20pt)--(29pt,-20pt) node[below=2pt]{$B$};
+
+    \node [right] at (+35pt,-20pt) {unit\`a};
+\end{scope}
+
+\end{tikzpicture}

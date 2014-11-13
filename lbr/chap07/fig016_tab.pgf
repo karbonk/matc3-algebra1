@@ -1,0 +1,15 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small]
+
+\matrix(m) [matrix of nodes, nodes={minimum size=7mm}]{
+{}& 1 & 2 & 3\\
+a & $(\text{a};1)$& $(\text{a};2)$& $(\text{a};3)$\\
+b & $(\text{b};1)$& $(\text{b};2)$& $(\text{b};3)$\\
+};
+\draw (m-2-1.north west)--(m-2-4.north east);
+\draw (m-1-1.north east)--(m-3-1.south east);
+
+\draw[decoration=brace,decorate] (m-1-2.north)--(m-1-4.north) node[above, midway] {$B$};
+\draw[decoration={brace,mirror}, decorate] (m-2-1.west)--(m-3-1.west) node[left, midway] {$A$};
+
+\end{tikzpicture}

@@ -1,0 +1,4 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm,y=5mm]
+\draw (0,0) rectangle (3,3);
+\end{tikzpicture}
