@@ -429,6 +429,16 @@ Se, però, la sottrazione è a destra:
  Il prodotto di due o più numeri naturali si annulla se almeno uno dei fattori è nullo.
 \[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
 \end{legge}
+%questo è presente anche nella prima pagina del capitolo 14
+Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numenri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Moltiplicando 100 $100 \times 101$ e dividendo il risultato per~$2$ Gaus aveva ottenuto rapidamente la risposta: $\dfrac{100 \times 101}{2}=\np{5050}$.
+\begin{center}
+ \begin{tabular*}{.75\textwidth}{l@{\extracolsep{\fill}}*{10}{c}}
+$1$&$2$&$3$&$4$&$5$&$\ldots$&$97$&$98$&$99$&$100$\\
+$100$&$99$&$98$&$97$&$96$&$\ldots$&$4$&$3$&$2$&$1$\\
+\midrule
+$101$&$101$&$101$&$101$&$101$&$\ldots$&$101$&$101$&$101$&$101$\\
+\end{tabular*}
+\end{center}
 
 \ovalbox{\risolvii \ref{ese:1.8}, \ref{ese:1.9}}
 
@@ -535,7 +545,7 @@ Le definizioni dei casi particolari di potenze si giustificano nel seguente modo
 Alla potenza~$0^0$ non si assegna nessun valore perché applicando la definizione di~$a^0$ si dovrebbe avere~1;
 applicando la definizione~$0^a$ si dovrebbe avere~0.
 
-\ovalbox{\risolvii \ref{ese:1.10}, \ref{ese:1.11}, \ref{ese:1.12}, \ref{ese:1.13}, \ref{ese:1.14}, \ref{ese:1.15}}\vspazio
+\ovalbox{\risolvii \ref{ese:1.10}, \ref{ese:1.11}, \ref{ese:1.12}, \ref{ese:1.13}, \ref{ese:1.14}}\vspazio
 
 \subsection{Cenni sull'estrazione di radice}
 
@@ -609,7 +619,7 @@ Per come sono stati definiti i numeri primi e quelli composti si ha:
 \ldots
 \end{multicols}
 
-\ovalbox{\risolvi \ref{ese:1.16}}\vspazio
+\ovalbox{\risolvii \ref{ese:1.15},\ref{ese:1.16}}\vspazio
 
 Ma quanti sono i numeri primi? La risposta a questa domanda venne data da Euclide\footnote{matematico e scienziato della Grecia antica (367 \aC{} ca. - 283 \aC).} con il seguente teorema
 che porta il suo nome:
@@ -639,6 +649,17 @@ per nessuno di questi numeri, quindi è primo.
 
 \osservazione Un numero è primo quando non è divisibile per nessun numero primo compreso tra~2 e
 la radice quadrata del numero stesso.
+
+\subsection{Numeri primi e crittografia}
+
+I numeri primi hanno una particolare rilevanza nella crittografia, cioè nel nascondere i messaggi. Consideriamo un semplice esempio che può chiarire come funziona il meccanismo di base per inviare messaggi segreti.
+
+Alice deve inviare la sua password, la parola ``BACI'' a suo fratello Bruno. Alice trasforma la parola in numeri secondo la semplice regola A=1, B=2, C=3, I=9. La password diventa~$ \np{2139} $. Alice moltiplica questo numero per un numero primo segreto $ \np{2139} $ e ottiene $\np{2139} \cdot \np{26417}=\np{56505963}$ e invia quest'ultimo numero a Bruno. Chiunque intercetti questo numero non è in grado di individuare la parola segreta.
+
+Quando Bruno riceve il numero $ \np{56505963} $ lo moltiplica per un suo numero primo segreto $ \np{43969} $ ottenendo $\np{5650593} \cdot \np{43969}=\np{2484510687147}$ e lo invia ad Alice.
+
+Quando Alice riceve il numero lo divide per il suo numero primo $\np{2484510687147} : \np{26417} = \np{94049691}$ e lo rispedisce a Bruno,
+A questo punto Bruno divide il numero ricevuto per il suo numero primo ottenendo $\np{94049691} : \np{43969} = \np{2139}$. Può così ricostruire la password 2=B, 1=A, 3=C, 9=I.
 
 \section{Criteri di divisibilità}\label{sect:criteri_divisibilita}
 Per verificare se un numero è divisibile per i primi numeri interi si possono applicare i seguenti criteri di
@@ -689,7 +710,7 @@ somma delle cifre di posto pari e la somma delle cifre di posto dispari è~0,~11
  \item 887 non è divisibile per~11, infatti~$\valass{8-(8+7)}=7$.
 \end{itemize*}
 
-\ovalbox{\risolvii \ref{ese:1.18}, \ref{ese:1.19}}
+\ovalbox{\risolvii \ref{ese:1.17}, \ref{ese:1.18}}
 
 \section{Scomposizione in fattori primi}
 Scomporre in fattori un numero significa scriverlo come prodotto di altri numeri naturali.
@@ -714,7 +735,7 @@ questa scomposizione è unica, a meno dell'ordine con cui si scrivono i fattori.
 precedente~$12=~2^2\cdot 3$ è l'unico modo in cui il~12 si può scomporre in fattori primi, a meno che non si
 scambino di posto i fattori~$12=3\cdot 2^2$.
 
-\vspazio\ovalbox{\risolvii \ref{ese:1.20}, \ref{ese:1.21}, \ref{ese:1.22}, \ref{ese:1.23}, \ref{ese:1.24}}
+\vspazio\ovalbox{\risolvii \ref{ese:1.19}, \ref{ese:1.20}}
 
 \section{Massimo Comune Divisore e minimo comune multiplo}
 
@@ -731,8 +752,6 @@ di~18 e~12:
 \text{divisori di }12: &\text{~}12\text{, }6\text{, }4\text{, }2\text{, }1.
 \end{align*}
 I divisori comuni sono~6,~2 e~1. Il più grande dei divisori comuni è~6, quindi $\mcd(18\text{,~}12)=6$.
-
-\vspazio\ovalbox{\risolvi \ref{ese:1.25}}\vspazio
 
 Per calcolare il massimo comune divisore di due o più numeri si può applicare la seguente procedura:
 \begin{procedura}
@@ -807,7 +826,8 @@ Calcolo del~$\mcm$ di due o più numeri naturali:
 esponente.
 \end{enumeratea}
 \end{procedura}
-\pagebreak
+%\pagebreak
+
 \begin{exrig}
  \begin{esempio}
  Calcolare il~$\mcm(60\text{,~}48\text{,~}36)$.
@@ -845,7 +865,7 @@ da~$315\unit{cm}$. In tutto occorrono~$29\cdot21=609$ mattonelle.
 \end{esempio}
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:1.26}, \ref{ese:1.27}, \ref{ese:1.28}, \ref{ese:1.29}, \ref{ese:1.30}, \ref{ese:1.31}, \ref{ese:1.32}}
+\ovalbox{\risolvii \ref{ese:1.21}, \ref{ese:1.22}, \ref{ese:1.23}, \ref{ese:1.24}, \ref{ese:1.25}, \ref{ese:1.26}}
 
 \section{Espressioni numeriche}
 Nel linguaggio comune alcune frasi possono risultare ambigue. Per esempio
@@ -969,7 +989,7 @@ L'uso di parentesi di diverso tipo rende visivamente più semplice l'ordine da s
 un'espressione le parentesi possono anche essere soltanto tonde. Ciò accade, per esempio, quando si usano gli
 strumenti di calcolo elettronico come il computer e la calcolatrice.
 
-\vspazio\ovalbox{\risolvi\ref{ese:1.33}}
+\vspazio\ovalbox{\risolvi\ref{ese:1.27}}
 \newpage
 
 \input{./chap/01_esercizi}
