@@ -430,9 +430,9 @@ Se, però, la sottrazione è a destra:
 \[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
 \end{legge}
 %questo è presente anche nella prima pagina del capitolo 14
-Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numenri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Moltiplicando 100 $100 \times 101$ e dividendo il risultato per~$2$ Gaus aveva ottenuto rapidamente la risposta: $\dfrac{100 \times 101}{2}=\np{5050}$.
+Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numenri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100 \times 101$ e dividendo il risultato per~$2$ Gauss aveva ottenuto rapidamente la risposta: $\dfrac{100 \times 101}{2}=\np{5050}$.
 \begin{center}
- \begin{tabular*}{.75\textwidth}{l@{\extracolsep{\fill}}*{10}{c}}
+ \begin{tabular*}{.75\textwidth}{@{\extracolsep{\fill}}*{10}{r}}
 $1$&$2$&$3$&$4$&$5$&$\ldots$&$97$&$98$&$99$&$100$\\
 $100$&$99$&$98$&$97$&$96$&$\ldots$&$4$&$3$&$2$&$1$\\
 \midrule
@@ -456,6 +456,8 @@ Per esempio~$5^3=5\cdot~5\cdot~5=125$.
  \input{./lbr/chap01/fig007_ptn.pgf}
 \end{center}
 
+Quindi, in generale
+\[a^b = \underbrace{a\cdot a\cdot \ldots{} \cdot a}_{b \text{termini}} \]
 
 Per completezza, alla definizione precedente vanno aggiunti i seguenti casi particolari:
 \begin{align*}
@@ -634,14 +636,14 @@ Euclide ci ha fatto vedere come sia possibile costruire numeri primi comunque gr
 
 \begin{exrig}
  \begin{esempio}
- Per verificare se~31 è primo, calcolo il valore approssimato~$\sqrt{31}\simeq~5,5$ e verifico se è divisibile
+ Per verificare se~31 è primo, calcolo il valore approssimato~$\sqrt{31}\simeq~\np{5,5}$ e verifico se è divisibile
 per i numeri primi~$\le5$, cioè~2,~3 e~5. 31 non è divisibile per~2 in
 quanto è dispari, non è divisibile per~3 poiché la somma delle sue cifre è~4 (che non è divisibile per~3) e
 non è divisibile per~5 in quanto non finisce per~0 o~5 (sezione \ref{sect:criteri_divisibilita}). Quindi 31 è primo.
  \end{esempio}
 
  \begin{esempio}
- Per verificare se~59 è un numero primo calcolo~$\sqrt{59}\simeq~7,6$ e verifico se~59 è divisibile per un
+ Per verificare se~59 è un numero primo calcolo~$\sqrt{59}\simeq~\np{7,6}$ e verifico se~59 è divisibile per un
 numero primo~$\le~7$, cioè per~2,~3,~5 e~7. Eseguendo le divisioni si vede che~59 non è divisibile
 per nessuno di questi numeri, quindi è primo.
  \end{esempio}
@@ -652,14 +654,14 @@ la radice quadrata del numero stesso.
 
 \subsection{Numeri primi e crittografia}
 
-I numeri primi hanno una particolare rilevanza nella crittografia, cioè nel nascondere i messaggi. Consideriamo un semplice esempio che può chiarire come funziona il meccanismo di base per inviare messaggi segreti.
+Alice deve inviare la sua password, la parola ``BACI'', a suo fratello Bruno. Alice trasforma la parola in numeri secondo la semplice regola A=1, B=2, C=3, I=9 (assegnando ad ogni lettera il numero cardinale corrispondente alla sua posizione nell'alfabeto). Il messaggio diventa così~$ \np{2139} $. Alice moltiplica questo numero per un numero primo ``segreto'' (che conosce solo lei) $\np{26417}$ e ottiene $\np{2139} \cdot \np{26417}=\np{56505963}$ e invia quest'ultimo numero a Bruno. Chiunque intercetti questo numero non è in grado di individuare la parola segreta.
 
-Alice deve inviare la sua password, la parola ``BACI'' a suo fratello Bruno. Alice trasforma la parola in numeri secondo la semplice regola A=1, B=2, C=3, I=9. La password diventa~$ \np{2139} $. Alice moltiplica questo numero per un numero primo segreto $ \np{2139} $ e ottiene $\np{2139} \cdot \np{26417}=\np{56505963}$ e invia quest'ultimo numero a Bruno. Chiunque intercetti questo numero non è in grado di individuare la parola segreta.
+Quando Bruno riceve il numero $ \np{56505963} $ lo moltiplica per un suo numero primo ``segreto'' (che conosce solo lui) $\np{43969}$ ottenendo $\np{5650593} \cdot \np{43969}=\np{2484510687147}$ e lo invia nuovamente ad Alice.
 
-Quando Bruno riceve il numero $ \np{56505963} $ lo moltiplica per un suo numero primo segreto $ \np{43969} $ ottenendo $\np{5650593} \cdot \np{43969}=\np{2484510687147}$ e lo invia ad Alice.
+Quando Alice riceve il numero lo divide per il suo numero primo $\np{2484510687147} : \np{26417} = \np{94049691}$ e quindi lo rispedisce a Bruno,
+A questo punto Bruno divide il numero ricevuto per il suo numero primo segreto ottenendo $\np{94049691} : \np{43969} = \np{2139}$. Conoscendo il meccanismo di codifica (relazione tra i numeri e le lettere dell'alfabeto  2=B, 1=A, 3=C, 9=I) Bruno può dunque ricostruire la password ``BACI''.
 
-Quando Alice riceve il numero lo divide per il suo numero primo $\np{2484510687147} : \np{26417} = \np{94049691}$ e lo rispedisce a Bruno,
-A questo punto Bruno divide il numero ricevuto per il suo numero primo ottenendo $\np{94049691} : \np{43969} = \np{2139}$. Può così ricostruire la password 2=B, 1=A, 3=C, 9=I.
+In realtà, i sistemi per lo scambio di messaggi cifrati oggi utilizzati per mezzo dei computer si basano su meccanismi leggermente differenti che evitano il doppio invio di messaggi tra Alice e Bruno. I meccanismi sono essenzialmente due: il primo è detto \emph{a chiave simmetrica}, in cui sia Alice che Bruno condividono il numero segreto con il quale viene cifrato il messaggio e quindi entrambi possono codificarlo e decodificarlo autonomamente; il secondo, un po' più complesso ma che dà le stesse garanzie del doppio invio di messaggi (nessuna condivisione del numero segreto tra gli interlocutori), viene chiamato \emph{a chiave asimmetrica} e si basa sull'utilizzo di un numero segreto ed un numero pubblico da condividere con l'interlocutore.
 
 \section{Criteri di divisibilità}\label{sect:criteri_divisibilita}
 Per verificare se un numero è divisibile per i primi numeri interi si possono applicare i seguenti criteri di
