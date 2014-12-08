@@ -430,9 +430,9 @@ Se, però, la sottrazione è a destra:
 \[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
 \end{legge}
 %questo è presente anche nella prima pagina del capitolo 14
-Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numenri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100 \times 101$ e dividendo il risultato per~$2$ Gauss aveva ottenuto rapidamente la risposta: $\dfrac{100 \times 101}{2}=\np{5050}$.
+Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numeri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100 \times 101$ e dividendo il risultato per~$2$ Gauss aveva ottenuto rapidamente la risposta: $\dfrac{100 \cdot 101}{2}=\np{5050}$.
 \begin{center}
- \begin{tabular*}{.75\textwidth}{@{\extracolsep{\fill}}*{10}{r}}
+\begin{tabular*}{.75\textwidth}{@{\extracolsep{\fill}}*{10}{r}}
 $1$&$2$&$3$&$4$&$5$&$\ldots$&$97$&$98$&$99$&$100$\\
 $100$&$99$&$98$&$97$&$96$&$\ldots$&$4$&$3$&$2$&$1$\\
 \midrule
@@ -457,14 +457,16 @@ Per esempio~$5^3=5\cdot~5\cdot~5=125$.
 \end{center}
 
 Quindi, in generale
-\[a^b = \underbrace{a\cdot a\cdot \ldots{} \cdot a}_{b \text{termini}} \]
+\begin{empheq}[box=\fbox]{equation*}
+a^b = \underbrace{a\cdot a\cdot \ldots{} \cdot a}_{b \text{termini}}
+\end{empheq}
 
 Per completezza, alla definizione precedente vanno aggiunti i seguenti casi particolari:
-\begin{align*}
+\begin{empheq}[box=\fbox]{align*}
  a^1&=a\text{,}\\
  a^0&=1\quad \text{se }a\neq~0\text{,}\\
  0^0&=\text{non ha significato.}
-\end{align*}
+\end{empheq}
 
 Queste definizioni trovano giustificazione nelle proprietà delle potenze.
 
@@ -580,6 +582,33 @@ $\sqrt[7]{1} = 1$,~~infatti $1^7 = 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1 =
 Particolare importanza riveste la radice con $n=2$, detta anche \emph{radice quadrata}. Ad esempio, la radice quadrata di 25 è 5, cioè $\sqrt[2]{25} = 5$, poiché infatti~$5^2 = 5\cdot 5=25$, e anche $\sqrt[2]{49} = 7$ ($7^2=49$). L'uso della radice quadrata è talmente predominante in matematica rispetto a quelle di ordine superiore (quelle con $n>2$) che nel caso in cui l'indice $n$ della radice non sia specificato si sottintende il valore 2: cioè $\sqrt{9} = \sqrt[2]{9} = 3$.
 
 
+\section{La deduzione logica e i teoremi}
+
+La teoria delle discipline scientifiche si basa su un percorso logico che, partendo dalle definizioni dai risultati precedenti, ne individua le implicazioni e ne deduce le conseguenze. Di fondamentale importanza nella matematica sono i teoremi, che da qui in avanti avremo modo di studiare.
+
+Un \emph{teorema} è una proposizione che riporta le conclusioni alle quali si può arrivare partendo da condizioni iniziali stabilite, per mezzo di passaggi logici successivi.
+
+La \emph{dimostrazione} è il procedimento logico rigoroso che dalle condizioni iniziali indicate dal teorema, dette \emph{ipotesi}, ne deduce le conclusioni, ovvero la sua \emph{tesi}, che quindi risulta essere la conseguenza logica delle ipotesi.
+Ogni dimostrazione può essere realizzata per mezzo di vari schemi logici che possono essere di tre tipi:
+
+\begin{itemize*}
+\item \emph{dimostrazione per assurdo}: viene effettuata ritenendo l'ipotesi non veritiera e verificando che la sua negazione porta ad un assurdo o contraddizione con le ipotesi;
+\item \emph{dimostrazione per induzione}: viene utilizzata per i teoremi relativi alle caratteristiche di elementi di insiemi numerabili. Si dimostra che il teorema vale per un determinato elemento dell'insieme (\emph{base dell'induzione}) e, ipotizzando che la tesi valga per un elemento generico (\emph{ipotesi induttiva}) si può logicamente dedurre che essa vale anche per l'elemento successivo (\emph{passo dell'induzione}). La tesi risulta così dimostrata per qualunque elemento dell'insieme;
+\item \emph{dimostrazione costruttiva}: è la dimostrazione per antonomasia, ovvero quella che partendo dalle ipotesi, tramite una serie di implicazioni logiche, porta alla tesi (la maggior parte delle dimostrazioni appartengono a questa tipologia).
+\end{itemize*}
+
+Si osservi inoltre che non sempre il verificarsi della tesi di un teorema implica il verificarsi delle relative ipotesi. In generale il verificarsi delle ipotesi implica la tesi ma non viceversa. In tal caso si dice che le ipotesi sono una \emph{condizione sufficiente} per il verificarsi della tesi. Se il verificarsi della tesi implica il verificarsi delle ipotesi si dice che le ipotesi sono una \emph{condizione necessaria} per il verificarsi della tesi. Se valgono entrambe le implicazioni cioè le ipotesi e la tesi si implicano a vicenda si dice che il verificarsi delle ipotesi è una \emph{condizione necessaria e sufficiente} al verificarsi della tesi (e viceversa).
+
+Si consideri, ad esempio, la proposizione ``essere fiorentino significa essere toscano''.
+In tal caso l'ipotesi è ``essere fiorentino'' e la tesi è ``essere toscano''. Il verificarsi dell'ipotesi implica il verificarsi della tesi, quindi la condizione ``essere fiorentino'' è sufficiente per ``essere toscano'', ma ``essere toscano'' non implica necessariamente ``essere fiorentino'', ovvero la condizione ``essere fiorentino'' è sufficiente per ``essere toscano'' ma non è necessaria.
+
+Consideriamo, ad esempio, la proposizione ``per essere promossi bisogna avere un voto $geq 6$ in ogni materia''.
+In tal caso l'ipotesi è ``avere un voto $\geq 6$ in ogni materia'' e la tesi è ``essere promosso''. Il verificarsi dell'ipotesi implica il verificarsi della tesi, quindi la condizione ``avere un voto $\geq 6$ in ogni materia'' è sufficiente per ``essere promosso''. Ma ``essere promosso'' significa ``avere un voto $geq 6$ in ogni materia'', ovvero la condizione ``avere un voto $\geq 6$ in ogni materia'' è anche necessaria per ``essere promosso''. Quindi la condizione ``avere un voto $geq 6$ in ogni materia'' è necessaria e sufficiente per ``essere promosso''.
+
+Si consideri, ad esempio, la proposizione ``per conoscere la matematica bisogna conoscere questo capitolo''.
+In tal caso l'ipotesi è ``conoscere questo capitolo'' e la tesi è ``conoscere la matematica''. Il verificarsi dell'ipotesi non implica il verificarsi della tesi, quindi la condizione ``conoscere questo capitolo'' non è sufficiente per ``conoscere la matematica''. Ma ``conoscere la matematica'' significa ``conoscere questo capitolo'', ovvero la condizione ``conoscere questo capitolo'' è necessaria per ``conoscere la matematica'' ma non è sufficiente.
+
+
 \section{Numeri Primi}
 Osserva il seguente schema
 \[\fbox{18}\quad\xrightarrow[\text{è divisibile per}]{\text{è multiplo di}}\quad \fcolorbox{gray}{grigio80}{6}\quad%
@@ -629,6 +658,9 @@ che porta il suo nome:
 I numeri primi sono infiniti.
 \end{teorema}
 
+Il teorema può essere dimostrato per assurdo.
+Supponiamo infatti che i numeri primi siano un numero finito, cioè siano, dal più piccolo al più grande, $p_1$, $p_2$, \ldots{}, $p_n$. Si consideri il numero $a=p_1\cdot p_2\cdot \ldots{}\cdot p_n+1$. Per com'è stato scelto, $a$ non è divisibile per nessuno dei numeri $p_1$, $p_2$, \ldots{}, $p_n$ poiché la divisione per qualunque di essi darà sempre come resto 1. Quindi o $a$ è un numero primo maggiore di $p_n$ oppure è divisibile per un numero primo $p^*$ differente da $p_1$, $p_2$, \ldots{}, $p_n$. In entrambi i casi si ha una contraddizione con l'ipotesi iniziale, cioè che i numeri primi siano un numero finito poiché per come è stato scelto $a$ implica l'esistenza di un numero primo che non è nell'elenco ipotizzato $p_1$, $p_2$, \ldots, $p_n$. Quindi i numeri primi sono infiniti.
+
 Euclide ci ha fatto vedere come sia possibile costruire numeri primi comunque grandi. Dato un numero primo,
 è sempre possibile costruirne uno più grande.
 
@@ -653,6 +685,7 @@ per nessuno di questi numeri, quindi è primo.
 la radice quadrata del numero stesso.
 
 \subsection{Numeri primi e crittografia}
+I numeri primi hanno una particolare rilevanza nella crittografia, cioè nel nascondere i messaggi. Consideriamo un semplice esempio che può chiarire come funziona il meccanismo di base per inviare messaggi segreti.
 
 Alice deve inviare la sua password, la parola ``BACI'', a suo fratello Bruno. Alice trasforma la parola in numeri secondo la semplice regola A=1, B=2, C=3, I=9 (assegnando ad ogni lettera il numero cardinale corrispondente alla sua posizione nell'alfabeto). Il messaggio diventa così~$ \np{2139} $. Alice moltiplica questo numero per un numero primo ``segreto'' (che conosce solo lei) $\np{26417}$ e ottiene $\np{2139} \cdot \np{26417}=\np{56505963}$ e invia quest'ultimo numero a Bruno. Chiunque intercetti questo numero non è in grado di individuare la parola segreta.
 
@@ -721,11 +754,65 @@ Scomporre in fattori un numero significa scriverlo come prodotto di altri numeri
  Ogni numero naturale~$n>1$ si può scrivere in modo unico come prodotto di numeri primi.
 \end{teorema}
 
+La dimostrazione sarà effettuata in più fasi. Dapprima procediamo col dimostrare la possibilità di scrivere un numero sotto forma di prodotto di numeri primi (fattorizzazione). Quindi dimostreremo che tale fattorizzazione è unica.
+
+Procediamo col dimostrare per induzione che ogni numero è divisibile per un numero primo (o è primo esso stesso): Il numero 2 è primo. Supponiamo che ogni numero da 2 a $n$ sia divisibile per un numero primo e dimostriamolo per $n+1$.
+
+Si hanno due possibilità per $n+1$: o è primo oppure è divisibile per un numero $a$ compreso tra 2 e $n$. In quest'ultimo caso, per l'ipotesi che abbiamo fatto o $a$ è primo oppure è divisibile per un numero primo $p$ ed in tal caso lo è anche $n+1$. Quindi $n+1$ è divisibile per un numero primo (o è esso stesso un numero primo).
+
+Dimostriamo per induzione che ogni numero è fattorizzabile con numeri primi. Nel caso del numero 2 è già banalmente fattorizzato. Supponiamo che ogni numero da 2 a $n$ si possa scrivere come prodotto di numeri primi e dimostriamo che questo vale anche per $n+1$.
+
+Si hanno 2 possibilità per $n+1$: o è primo (e quindi è già fattorizzato) oppure è divisibile per un primo $p$ (come dimostrato precedentemente); in quest'ultimo caso il numero $m=(n+1):p$ è minore di $n+1$ e quindi esso può essere scomposto in un prodotto di numeri primi (per ipotesi induttiva) e pertanto anche $n+1=m\cdot p$ è scomponibile in un prodotto di numeri primi.
+
+Dimostriamo adesso, per assurdo, che se un numero ammette una scomposizione in numeri primi questa è unica.
+
+Si supponga che esistano dei numeri scomponibili in fattori primi in più di un modo. Sia $m$ il numero più piccolo tra essi. Siano inoltre (\ref{eq:num_primi_scomp1}) e (\ref{eq:num_primi_scomp2}) due sue diverse fattorizzazioni
+
+\begin{equation}\label{eq:num_primi_scomp1}
+m = p_1 \cdot p_2 \cdot \ldots \cdot p_s
+\end{equation}
+\begin{equation}\label{eq:num_primi_scomp2}
+m = q_1 \cdot q_2 \cdot \ldots \cdot q_t
+\end{equation}
+
+\noindent dove i numeri $p_i$ e $q_j$ sono primi ma differenti tra loro, ovvero $\forall i,j \; p_i \neq q_j$ (se ci fosse un fattore $p_h=q_k$ possiamo comunque ricondurci al caso indicato dividendo $m$ per tale fattore e ottenendo così un numero $m' < m$ che avrebbe anch'esso due fattorizzazioni distinte). All'interno di ogni fattorizzazione ci possono comunque essere fattori ripetuti (ad es.~$100 = 2\cdot 2\cdot 5\cdot 5$).
+
+Dunque $p_1$ è diverso da $q_1$ e senza perdita di generalità possiamo supporre che $p_1 < q_1$. Poniamo allora
+\begin{equation}\label{eq:num_primi_scomp3}
+n = (q_1-p_1)\cdot q_2 \cdot \ldots \cdot q_t
+\end{equation}
+Si ha così che $n < m$ dato che l'uguaglianza precedente si può scrivere come
+\begin{equation}\label{eq:num_primi_scomp4}
+n = q_1\cdot q_2\cdot \ldots \cdot q_t - p_1\cdot q_2\cdot \ldots\cdot q_t = m - p_1\cdot q_2\cdot \ldots \cdot q_t < m.
+\end{equation}
+
+Dimostriamo ora che $n$ ammette almeno due fattorizzazioni distinte.
+
+Il primo fattore di $n$, $q_1-p_1$, può essere primo o meno; nel caso non lo fosse lo fattorizzeremo e la nuova fattorizzazione di $n$ così ottenuta non ammetterebbe $p_1$ tra i suoi fattori. Infatti, per la prima parte della dimostrazione sappiamo che $p_1$ è diverso da $q_1$, $q_2$, \ldots, $q_t$ e non può comparire nella eventuale fattorizzazione di $q_1-p_1$, poiché se ciò accadesse significherebbe che
+\[q_1-p_1= p_1\cdot a \:\Rightarrow\: q_1 = p_1\cdot(1+a)\]
+e quindi $q_1$ sarebbe divisibile per $p_1$, il che non è possibile in quanto $q_1$ è un numero primo.
+
+Prendendo ora l'ultima uguaglianza della (\ref{eq:num_primi_scomp4}) e sostituendo $m$ con la (\ref{eq:num_primi_scomp1}) otteniamo
+
+\begin{equation}\label{eq:num_primi_scomp5}
+n= p_1 \cdot p_2 \cdot \ldots\cdot p_s-p_1\cdot q_2 \cdot \ldots \cdot q_t \:\Rightarrow\: n = p_1\cdot(p_2\cdot \ldots \cdot p_s- q_2\cdot \ldots\cdot q_t)
+\end{equation}
+
+In qualunque modo sia scomponibile il secondo fattore della (\ref{eq:num_primi_scomp5}), avremo ottenuto una fattorizzazione di $n<m$ che contiene $p_1$ e che è quindi diversa da quella della (\ref{eq:num_primi_scomp3}), contrariamente all'ipotesi che $m$ sia il numero più piccolo che ammette più di una fattorizzazione. Dunque la scomposizione di un numero in fattori primi è unica.
+
 \begin{exrig}
  \begin{esempio}
  Scomporre in fattori primi il numero~630.
  \begin{center}
- \input{./lbr/chap01/fig008_scmp.pgf}
+% \input{./lbr/chap01/fig008_scmp.pgf}
+ \begin{tabular}{r|l@{\hspace{15mm}}l}
+ 	630 & 2 & 630 è divisibile per 2 perché l'ultima cifra è pari;\\
+	315 & 3 & 315 è divisibile per 3 (la somma delle sue cifre è 9, divisibile per 3);\\
+	105 & 3 & 105 è divisibile per 3 (la somma delle sue cifre è 6, divisibile per 3);\\
+	35 & 5 & 35 è divisibile per 5 perché l'ultima cifra è 5;\\
+	7 & 7 & 7 è un numero primo.\\
+	1 & \\
+ \end{tabular}
  ~$630=2\cdot3^2\cdot5\cdot7.$
  \end{center}
  \end{esempio}
@@ -857,13 +944,26 @@ Poiché le mattonelle devono essere quadrate devono avere il lato tale che entri
 volte sia nel~315 sia nel~435, pertanto la dimensione delle mattonelle deve essere un divisore comune
 di~315 e di~435. Poiché è richiesto che le mattonelle siano quanto più grandi possibile, la dimensione
 deve essere il massimo divisore comune.
+% \input{./lbr/chap01/fig009a.pgf}
+\begin{multicols}{2}
 \begin{center}
- \input{./lbr/chap01/fig009a.pgf}
- \input{./lbr/chap01/fig009b.pgf}
+% \input{./lbr/chap01/fig009a.pgf}
+\begin{tabular}{r|l@{\hspace{10mm}}r|l}
+ 	315 & 3 & 435 & 3\\
+	105 & 3 & 145 & 5\\
+	35 & 5 & 29 & 29\\
+	7 & 7 & &\\
+	1 & & &\\
+\end{tabular}
+
+$315=3^2\cdot5\cdot7$\\
+$435=3\cdot5\cdot29$
 \end{center}
-La soluzione del problema è data quindi dal~$\mcd(315\text{,~}435)=3\cdot 5=15$. Le mattonelle devono avere il lato di~$15\unit{cm}$.
-Ci vogliono~$435:15=29$ mattonelle per ricoprire il lato di~$435\unit{cm}$ e~$315:15=21$ mattonelle per ricoprire il lato
-da~$315\unit{cm}$. In tutto occorrono~$29\cdot21=609$ mattonelle.
+ \input{./lbr/chap01/fig009b.pgf}
+\end{multicols}
+La soluzione del problema è data quindi dal~$\mcd(315\text{,~}435)=3\cdot 5=15$. Le mattonelle devono avere il lato di~$15\;\unit{cm}$.
+Ci vogliono~$435:15=29$ mattonelle per ricoprire il lato di~$435\;\unit{cm}$ e~$315:15=21$ mattonelle per ricoprire il lato
+da~$315\;\unit{cm}$. In tutto occorrono~$29\cdot21=609$ mattonelle.
 \end{esempio}
 \end{exrig}
 
