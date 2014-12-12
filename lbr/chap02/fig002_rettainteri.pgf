@@ -11,9 +11,7 @@
       \draw (\m,-3pt) -- (\m,3pt) node [below=5pt]{+$\m$};
     }
   
-    \draw[|-|]node [below=22pt]{$A$}(0,-20pt)--(29pt,-20pt) node[below=2pt]{$B$};
-
-    \node [right] at (+35pt,-20pt) {unit\`a};
+    \draw[|-|](0,-25pt) node[below=2pt] {$A$} -- node[above] {unit\`a} (29pt,-25pt) node[below=2pt] {$B$};
 \end{scope}
 
 \end{tikzpicture}
