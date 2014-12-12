@@ -1,6 +1,8 @@
 % (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
 % Moltiplicazione dei segni
-\begin{tikzpicture}[font=\Huge]
+\usetikzlibrary{matrix}
+
+\begin{tikzpicture}[font=\large]
 
 \matrix (segni) [matrix of nodes]{%
  $\cdot$& $+$ & $-$\\
