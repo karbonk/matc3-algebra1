@@ -12,9 +12,9 @@
 
   \begin{scope}[font=\scriptsize]
     % Posiziona altezze
-    \node[left] (0)at (-5mm,0) {$0\unit{m}$};
-    \node [above](everest) at (15mm,19mm) {$+8\,855\unit{m}$};
-    \node [below](marianne) at (49mm,-21mm) {$-10\,916\unit{m}$};
+    \node[left] (0)at (-5mm,0) {$0\;\unit{m}$};
+    \node [above](everest) at (15mm,19mm) {$+8\,855\;\unit{m}$};
+    \node [below](marianne) at (49mm,-21mm) {$-10\,916\;\unit{m}$};
     % Posiziona etichette
     \node (testo1) at (44mm,9.5mm) {Monte Everest};
     \node (testo2) at (12mm,-5mm) {Livello  del mare};
