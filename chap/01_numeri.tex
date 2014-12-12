@@ -36,13 +36,13 @@ pietra, i numeri utilizzando geroglifici per le potenze di~10:
 
 \input{lbr/chap01/tab001}
 \vspace{-4ex}
-Ripetendo questi simboli è possibile scrivere, per esempio, il numero~$3\,673$ così:
+Ripetendo questi simboli è possibile scrivere, per esempio, il numero~$\np{3673}$ così:
 
 \vspace{-2ex}\input{lbr/chap01/tab002}\vspace{-2ex}
 
 I Romani usavano invece sette simboli con i quali, seguendo determinate regole,
-rappresentavano qualunque numero. I simboli sono~$I=1$, $V=5$, $X=10$, $L=50$, $C=100$, $D=500$, $M=1\,000$.
-La scrittura~$MM$ rappresenta il valore~$~1\,000+1\,000 =~2\,000$, mentre~$ VI$ rappresenta~$~5+1=6$ ed invece~$ IV$ rappresenta~$5-1=4$.
+rappresentavano qualunque numero. I simboli sono~$I=1$, $V=5$, $X=10$, $L=50$, $C=100$, $D=500$, $M=\np{1000}$.
+La scrittura~$MM$ rappresenta il valore~$\np{1000}+\np{1000} = \np{2000}$, mentre~$VI$ rappresenta~$5+1=6$ ed invece~$IV$ rappresenta~$5-1=4$.
 
 \section{Il sistema di numerazione decimale posizionale}
 Il modo di scrivere i numeri dei Romani risultava piuttosto complicato sia nella scrittura
@@ -100,12 +100,11 @@ Peano, Russell, Hilbert e tanti altri. Oggi ci sono diversi punti di vista.
 \subsection{Rappresentazione geometrica}
 I numeri naturali possono essere rappresentati su una semiretta: si identifica il numero~0
 con l'origine della semiretta, come verso di percorrenza si prende quello da sinistra
-verso destra e come unità di misura un segmento~$AB$. Si riporta questa unità di misura
+verso destra e come unità di misura un segmento~$\overline{AB}$. Si riporta questa unità di misura
 più volte partendo dall'origine e a ogni passo si va al numero successivo.
 \begin{center}
  \input{./lbr/chap01/fig001_rapgeoi.pgf}
 \end{center}
-
 
 Ogni numero naturale si costruisce a partire dal numero~0 e passando di volta in volta al
 numero successivo: 1 è il successore di~0, 2~è il successore di~1, 3~è il successore di~2,
@@ -115,7 +114,7 @@ precedente. L'insieme~$\insN$ ha~0 come elemento minimo e non ha un elemento mas
 I numeri rappresentati sulla retta sono sempre più grandi man mano che si procede da
 sinistra verso destra. Ogni numero è maggiore di tutti i suoi precedenti, quelli che
 stanno alla sua sinistra, e minore di tutti i suoi successivi, quelli che stanno alla sua
-destra. Tra i numeri naturali esiste quindi una relazione d'ordine, che si rappresenta con i simboli di
+destra. Tra i numeri naturali esiste quindi una \emph{relazione d'ordine}, che si rappresenta con i simboli di
 \emph{disuguaglianza}~$\le$ (si legge ``minore o uguale a'') e~$\ge$ (si legge ``maggiore o uguale a'') o \emph{disuguaglianza stretta}~$<$ (si legge ``minore di'') e~$>$ (si legge ``maggiore di'').
 Grazie a questo ordinamento, è sempre possibile confrontare due numeri naturali qualsiasi.
 
@@ -131,9 +130,14 @@ Tra i numeri naturali è definita l'operazione di addizione come segue:
 \begin{definizione}
 Dati due numeri naturali~$n$ e~$m$, detti \emph{addendi}, l'operazione di \emph{addizione} associa ai
 due addendi un terzo numero~$s$, detto \emph{somma}, che si ottiene partendo da~$n$ e procedendo
-verso i successivi di~$n$ tante volte quante indica il secondo addendo~$m$. Si scrive~$n+m=s$.
+verso i successivi di~$n$ tante volte quante indica il secondo addendo~$m$.
 \end{definizione}
-Ad esempio se vogliamo eseguire la somma~$3+5$, dobbiamo partire da~3 e contare~5 numeri successivi:
+
+L'operazione di addizione è indicata con il simbolo ``$+$'':
+\begin{empheq}[box=\fbox]{equation*}
+ n+m=s.
+\end{empheq}
+Ad esempio, se vogliamo eseguire la somma~$3+5$, dobbiamo partire da~3 e contare~5 numeri successivi:
 
 \input{./lbr/chap01/fig002_addmol.pgf}
 
@@ -144,8 +148,10 @@ che si ottiene sommando~$n$ addendi tutti uguali a~$m$.
 \end{definizione}
 
 L'operazione di moltiplicazione può essere indicata con diversi simboli:
-\[n\times m=p\text{,}\qquad n\cdot m=p\text{,~}\qquad n\ast m=p.\]
-Per eseguire la moltiplicazione~$4\cdot 2$ dobbiamo addizionare~$2+2+2+2$ e otteniamo~8.
+\begin{empheq}[box=\fbox]{equation*}
+n\times m=p\text{,}\qquad n\cdot m=p\text{,~}\qquad n\ast m=p.
+\end{empheq}
+Per eseguire la moltiplicazione~$4\cdot 2$ dobbiamo addizionare 4 volte 2, cioè~$2+2+2+2$, e otteniamo~8.
 
 Le operazioni di addizione e moltiplicazione si dicono \emph{operazioni interne} all'insieme dei
 numeri naturali, poiché, utilizzando numeri naturali, esse danno sempre come risultato un numero naturale.
@@ -159,8 +165,12 @@ Diamo la seguente definizione:
 \begin{definizione}
 Dati due numeri naturali~$n$ e~$m$, il primo detto \emph{minuendo} e il secondo \emph{sottraendo}, si
 dice \emph{differenza} il numero naturale~$d$, se esiste, che aggiunto ad~$m$ dà come somma~$n$.
-Si scrive~$n-m=d$.
 \end{definizione}
+
+L'operazione di sottrazione è indicata con il simbolo ``$-$'':
+\begin{empheq}[box=\fbox]{equation*}
+ n-m=d.
+\end{empheq}
 
 Per esempio, $7-5=2$ perché~$5+2=7$.
 
@@ -179,7 +189,7 @@ andare oltre il numero~0 che è il più piccolo dei numeri naturali.
 
 \input{./lbr/chap01/fig004_sotdivii.pgf}
 
-Si può osservare allora che in~$\insN$ la sottrazione~$a - b$ è possibile solo se~$b\leq a$.
+Si può osservare allora che in~$\insN$ la sottrazione~$a-b$ è possibile solo se~$b\leq a$.
 
 \begin{definizione}
 Dati due numeri naturali~$n$ e~$m$, con~$m\neq0$, il primo detto \emph{dividendo} e il secondo
@@ -188,9 +198,11 @@ per~$m$ dà come prodotto~$n$.
 \end{definizione}
 
 L'operazione di divisione può essere indicata con diversi simboli:
-\[n \div m=q\text{,}\qquad n : m=q\text{,}\qquad n/m=q.\]
+\begin{empheq}[box=\fbox]{equation*}
+n \div m=q\text{,}\qquad n : m=q\text{,}\qquad n/m=q.
+\end{empheq}
 
-Se il quoziente esiste, il numero~$m$ si dice \emph{divisore} di~$n$, oppure si dice che~$n$ è \emph{divisibile} per~$m$.
+Se il quoziente esiste, il numero~$m$ si dice \emph{divisore} di~$n$ e che~$n$ è \emph{divisibile} per~$m$.
 
 \begin{definizione}
 Un numero naturale~$m$ si dice \emph{multiplo} di un numero naturale~$n$ se esiste un numero~$p$
@@ -230,8 +242,12 @@ Con i numeri naturali però è sempre possibile eseguire la divisione con il res
  Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, si dice \emph{quoziente} tra~$n$ e~$m$, il più grande
 numero naturale~$q$ che moltiplicato per~$m$ dà un numero minore o uguale a~$n$. Si dice \emph{resto} della divisione
 tra~$n$ e~$m$ la differenza~$r$ tra il dividendo~$n$ e il prodotto tra il divisore~$m$ e il quoziente~$q$.
-In simboli~$n=m\cdot q + r$ o anche~$r=n-m\cdot q$.
 \end{definizione}
+
+In simboli:
+\begin{empheq}[box=\fbox]{equation*}
+n=m\cdot q + r\text{,}\qquad r=n-m\cdot q.
+\end{empheq}
 
 \begin{exrig}
  \begin{esempio}
@@ -265,9 +281,14 @@ Nel linguaggio matematico diciamo che una divisione del tipo~$n:0$, con~$n\neq~0
 divisione~$0:0$ è \emph{indeterminata}.
 
 \begin{definizione}
- Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, la \emph{divisione intera}~$n\divint m$ è l'operazione
+ Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, la \emph{divisione intera} tra $n$ e $m$ è l'operazione
 che associa il più grande numero naturale~$q$ (il quoziente) per il quale si ha~$q\cdot m\le n$.
 \end{definizione}
+
+La divisione intera si indica con ``$\divint$'':
+\begin{empheq}[box=\fbox]{equation*}
+n \divint m = q\quad\text{(con resto }r\text{)}.
+\end{empheq}
 
 \begin{exrig}
  \begin{esempio}
@@ -289,8 +310,13 @@ $3\divint 0 = $ non si può fare: la divisione intera per~0 non è possibile.
 
 \begin{definizione}
  Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, l'operazione che restituisce il resto della
-divisione intera tra~$n$ e~$m$ si chiama \emph{modulo} di~$n$ rispetto a~$m$ e viene indicata con~$n\bmod{m}$.
+divisione intera tra~$n$ e~$m$ si chiama \emph{modulo} di~$n$ rispetto a~$m$.
 \end{definizione}
+
+L'operazione di modulo viene indicata con ``$\bmod$'':
+\begin{empheq}[box=\fbox]{equation*}
+n\bmod{m} = r\quad\text{(dove }r\text{ è il resto di~~}n\divint m\text{)}.
+\end{empheq}
 
 \begin{exrig}
  \begin{esempio}
@@ -336,9 +362,14 @@ utile nel seguito.
 \ovalbox{\risolvi \ref{ese:1.7}}
 
 \section{Proprietà delle operazioni}
+
 \subsection{Proprietà commutativa}
-Un'operazione gode della proprietà \emph{commutativa} se, cambiando l'ordine dei numeri sui quali essa va
+Un'operazione ($\diamond$) gode della proprietà \emph{commutativa} se, cambiando l'ordine dei numeri sui quali essa va
 eseguita, il risultato non cambia.
+
+\begin{empheq}[box=\fbox]{equation*}
+a\diamond b = b\diamond a.
+\end{empheq}
 
 La proprietà commutativa \emph{vale} per le seguenti operazioni:
 \begin{description*}
@@ -356,8 +387,12 @@ La proprietà commutativa \emph{non vale} per le seguenti operazioni:
 \end{description*}
 
 \subsection{Proprietà associativa}
-Un'operazione gode della proprietà \emph{associativa} se, presi arbitrariamente tre numeri legati da due operazioni,
+Un'operazione ($\diamond$) gode della proprietà \emph{associativa} se, presi arbitrariamente tre numeri legati da due operazioni,
 è indifferente da quale operazione si inizia, in quanto il risultato che si ottiene è sempre lo stesso.
+
+\begin{empheq}[box=\fbox]{equation*}
+(a\diamond b) \diamond c = a\diamond (b \diamond c).
+\end{empheq}
 
 La proprietà associativa \emph{vale} per le seguenti operazioni:
 \begin{description*}
@@ -375,8 +410,12 @@ La proprietà commutativa \emph{non vale} per le seguenti operazioni:
 \end{description*}
 
 \subsection{Elemento neutro}
-Un'operazione ha un elemento \emph{neutro} se composto con qualsiasi altro numero lo lascia invariato, sia quando
+Un'operazione ($\diamond$) ha un \emph{elemento neutro} $n$ se composto con qualsiasi altro numero lo lascia invariato, sia quando
 il numero è a destra, sia quando è a sinistra dell'operatore.
+
+\begin{empheq}[box=\fbox]{equation*}
+a\diamond n = n\diamond a = a.
+\end{empheq}
 
 L'elemento neutro dell'addizione è~0, sia che si trovi a destra che a sinistra:
 \[a+0=~0+a =a.\]
@@ -388,7 +427,13 @@ In maniera analoga, anche la sottrazione ha l'elemento neutro~0 solo a destra:
 \[a-0 = a \quad~(0-a\neq a\text{, \:se }a\neq~0).\]
 
 \subsection{Proprietà distributiva}
-La proprietà \emph{distributiva} coinvolge due operazioni differenti.
+
+La proprietà \emph{distributiva} coinvolge due operazioni differenti ($\diamond$ e $\star$). La proprietà distributiva di $\star$ rispetto a $\diamond$ è espressa in simboli:
+
+\begin{empheq}[box=\fbox]{equation*}
+a\star (b \diamond c) = a\star b \diamond a\star c.
+\end{empheq}
+
 \subsubsection{Proprietà distributiva della moltiplicazione}
 \paragraph{Rispetto all'addizione}
 Moltiplicare il risultato dell'addizione di più numeri per un altro numero dà lo stesso risultato che
@@ -414,7 +459,7 @@ Solo se le somme sono a sinistra:
 
 Verifichiamo con un esempio che non vale la proprietà distributiva se le somme si trovano a destra:~$120:(3+5)$
 Eseguendo prima l'operazione tra parentesi si ottiene correttamente~$120:8=15$. Se si prova ad applicare
-la proprietà distributiva si ottiene~$120:3+120:5=40+24=64$. Il risultato corretto è il \emph{primo}.
+la proprietà distributiva si ottiene~$120:3+120:5=40+24=64$. Il risultato corretto è il primo.
 
 \paragraph{Rispetto alla sottrazione}
 Solo se la sottrazione è a sinistra:
@@ -430,7 +475,7 @@ Se, però, la sottrazione è a destra:
 \[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
 \end{legge}
 %questo è presente anche nella prima pagina del capitolo 14
-Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numeri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100 \times 101$ e dividendo il risultato per~$2$ Gauss aveva ottenuto rapidamente la risposta: $\dfrac{100 \cdot 101}{2}=\np{5050}$.
+Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numeri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100$ per $101$ e dividendo il risultato per~$2$ Gauss aveva ottenuto rapidamente la risposta: $100 \cdot 101 : 2=\np{5050}$.
 \begin{center}
 \begin{tabular*}{.75\textwidth}{@{\extracolsep{\fill}}*{10}{r}}
 $1$&$2$&$3$&$4$&$5$&$\ldots$&$97$&$98$&$99$&$100$\\
@@ -451,14 +496,14 @@ potenza di~$a$ con esponente~$b$ è il numero~$p$ che si ottiene moltiplicando f
 Si scrive~$a^b=p$ e si legge ``\emph{$a$ elevato a~$b$ uguale a~$p$}''.
 \end{definizione}
 
-Per esempio~$5^3=5\cdot~5\cdot~5=125$.
+Per esempio,~$5^3=5\cdot~5\cdot~5=125$.
 \begin{center}
  \input{./lbr/chap01/fig007_ptn.pgf}
 \end{center}
 
-Quindi, in generale
+Quindi, in simboli
 \begin{empheq}[box=\fbox]{equation*}
-a^b = \underbrace{a\cdot a\cdot \ldots{} \cdot a}_{b \text{termini}}
+a^b = \underbrace{a\cdot a\cdot \ldots{} \cdot a}_{b \text{ termini}}
 \end{empheq}
 
 Per completezza, alla definizione precedente vanno aggiunti i seguenti casi particolari:
@@ -556,8 +601,13 @@ applicando la definizione~$0^a$ si dovrebbe avere~0.
 L'operazione inversa dell'elevazione a potenza è l'estrazione di \emph{radice}.
 
 \begin{definizione}
-Dati due numeri naturali~$a$ e~$n$ (con~$n>1$) si definisce \emph{radice}~$n$-esima di~$a$ il numero~$r$ tale che moltiplicando tra loro~$n$ fattori tutti uguali a~$r$ si ottiene come risultato~$a$. Si scrive $\sqrt[n]{a} = r$.
+Dati due numeri naturali~$a$ e~$n$ (con~$n>1$) si definisce \emph{radice}~$n$-esima di~$a$ il numero~$r$ tale che moltiplicando tra loro~$n$ fattori tutti uguali a~$r$ si ottiene come risultato~$a$.
 \end{definizione}
+
+In simboli:
+\begin{empheq}[box=\fbox]{equation*}
+\sqrt[n]{a} = r\quad\text{se}\quad r^n=a.
+\end{empheq}
 
 Per esempio~$\sqrt[3]{64} = 4$ poiché $4^3=4\cdot 4\cdot 4 = 64$.
 
@@ -602,14 +652,15 @@ Si osservi inoltre che non sempre il verificarsi della tesi di un teorema implic
 Si consideri, ad esempio, la proposizione ``essere fiorentino significa essere toscano''.
 In tal caso l'ipotesi è ``essere fiorentino'' e la tesi è ``essere toscano''. Il verificarsi dell'ipotesi implica il verificarsi della tesi, quindi la condizione ``essere fiorentino'' è sufficiente per ``essere toscano'', ma ``essere toscano'' non implica necessariamente ``essere fiorentino'', ovvero la condizione ``essere fiorentino'' è sufficiente per ``essere toscano'' ma non è necessaria.
 
-Consideriamo, ad esempio, la proposizione ``per essere promossi bisogna avere un voto $geq 6$ in ogni materia''.
-In tal caso l'ipotesi è ``avere un voto $\geq 6$ in ogni materia'' e la tesi è ``essere promosso''. Il verificarsi dell'ipotesi implica il verificarsi della tesi, quindi la condizione ``avere un voto $\geq 6$ in ogni materia'' è sufficiente per ``essere promosso''. Ma ``essere promosso'' significa ``avere un voto $geq 6$ in ogni materia'', ovvero la condizione ``avere un voto $\geq 6$ in ogni materia'' è anche necessaria per ``essere promosso''. Quindi la condizione ``avere un voto $geq 6$ in ogni materia'' è necessaria e sufficiente per ``essere promosso''.
+Consideriamo, ad esempio, la proposizione ``per essere promossi bisogna avere un voto $\geq 6$ in ogni materia''.
+In tal caso l'ipotesi è ``avere un voto $\geq 6$ in ogni materia'' e la tesi è ``essere promosso''. Il verificarsi dell'ipotesi implica il verificarsi della tesi, quindi la condizione ``avere un voto $\geq 6$ in ogni materia'' è sufficiente per ``essere promosso''. Ma ``essere promosso'' significa ``avere un voto $\geq 6$ in ogni materia'', ovvero la condizione ``avere un voto $\geq 6$ in ogni materia'' è anche necessaria per ``essere promosso''. Quindi la condizione ``avere un voto $\geq 6$ in ogni materia'' è necessaria e sufficiente per ``essere promosso''.
 
 Si consideri, ad esempio, la proposizione ``per conoscere la matematica bisogna conoscere questo capitolo''.
 In tal caso l'ipotesi è ``conoscere questo capitolo'' e la tesi è ``conoscere la matematica''. Il verificarsi dell'ipotesi non implica il verificarsi della tesi, quindi la condizione ``conoscere questo capitolo'' non è sufficiente per ``conoscere la matematica''. Ma ``conoscere la matematica'' significa ``conoscere questo capitolo'', ovvero la condizione ``conoscere questo capitolo'' è necessaria per ``conoscere la matematica'' ma non è sufficiente.
 
 
 \section{Numeri Primi}
+
 Osserva il seguente schema
 \[\fbox{18}\quad\xrightarrow[\text{è divisibile per}]{\text{è multiplo di}}\quad \fcolorbox{gray}{grigio80}{6}\quad%
  \xrightarrow[\text{è divisore di}]{\text{è sottomultiplo di}}\quad \fbox{18}
@@ -633,49 +684,33 @@ Nella casella centrale, al posto dei puntini, puoi inserire soltanto i numeri~31
 Per come sono stati definiti i numeri primi e quelli composti si ha:
 
 \begin{multicols}{3}
-\noindent~0 non è primo né composto\\
-1 non è primo né composto\\
-2 è primo\\
-3 è primo\\
-4 è composto\\
-5 è primo\\
-6 è composto\\
-7 è primo\\
-8 è composto\\
-9 è composto\\
-10 è composto\\
-11 è primo\\
-12 è composto\\
-13 è primo\\
+\noindent~0 non è primo né composto;\\
+1 non è primo né composto;\\
+2 è primo;\\
+3 è primo;\\
+4 è composto;\\
+5 è primo;\\
+6 è composto;\\
+7 è primo;\\
+8 è composto;\\
+9 è composto;\\
+10 è composto;\\
+11 è primo;\\
+12 è composto;\\
+13 è primo.\\
 \ldots
 \end{multicols}
 
-\ovalbox{\risolvii \ref{ese:1.15},\ref{ese:1.16}}\vspazio
-
-Ma quanti sono i numeri primi? La risposta a questa domanda venne data da Euclide\footnote{matematico e scienziato della Grecia antica (367 \aC{} ca. - 283 \aC).} con il seguente teorema
-che porta il suo nome:
-\begin{teorema}[di Euclide]
-I numeri primi sono infiniti.
-\end{teorema}
-
-Il teorema può essere dimostrato per assurdo.
-Supponiamo infatti che i numeri primi siano un numero finito, cioè siano, dal più piccolo al più grande, $p_1$, $p_2$, \ldots{}, $p_n$. Si consideri il numero $a=p_1\cdot p_2\cdot \ldots{}\cdot p_n+1$. Per com'è stato scelto, $a$ non è divisibile per nessuno dei numeri $p_1$, $p_2$, \ldots{}, $p_n$ poiché la divisione per qualunque di essi darà sempre come resto 1. Quindi o $a$ è un numero primo maggiore di $p_n$ oppure è divisibile per un numero primo $p^*$ differente da $p_1$, $p_2$, \ldots{}, $p_n$. In entrambi i casi si ha una contraddizione con l'ipotesi iniziale, cioè che i numeri primi siano un numero finito poiché per come è stato scelto $a$ implica l'esistenza di un numero primo che non è nell'elenco ipotizzato $p_1$, $p_2$, \ldots, $p_n$. Quindi i numeri primi sono infiniti.
-
-Euclide ci ha fatto vedere come sia possibile costruire numeri primi comunque grandi. Dato un numero primo,
-è sempre possibile costruirne uno più grande.
-
-\vspazio\ovalbox{\risolvi \ref{ese:1.17}}
-
 \begin{exrig}
  \begin{esempio}
- Per verificare se~31 è primo, calcolo il valore approssimato~$\sqrt{31}\simeq~\np{5,5}$ e verifico se è divisibile
+ Per verificare se~31 è primo, calcolo il valore approssimato~$\sqrt{31}\simeq\np{5,5}$ e verifico se è divisibile
 per i numeri primi~$\le5$, cioè~2,~3 e~5. 31 non è divisibile per~2 in
 quanto è dispari, non è divisibile per~3 poiché la somma delle sue cifre è~4 (che non è divisibile per~3) e
 non è divisibile per~5 in quanto non finisce per~0 o~5 (sezione \ref{sect:criteri_divisibilita}). Quindi 31 è primo.
  \end{esempio}
 
  \begin{esempio}
- Per verificare se~59 è un numero primo calcolo~$\sqrt{59}\simeq~\np{7,6}$ e verifico se~59 è divisibile per un
+ Per verificare se~59 è un numero primo calcolo~$\sqrt{59}\simeq\np{7,6}$ e verifico se~59 è divisibile per un
 numero primo~$\le~7$, cioè per~2,~3,~5 e~7. Eseguendo le divisioni si vede che~59 non è divisibile
 per nessuno di questi numeri, quindi è primo.
  \end{esempio}
@@ -684,19 +719,11 @@ per nessuno di questi numeri, quindi è primo.
 \osservazione Un numero è primo quando non è divisibile per nessun numero primo compreso tra~2 e
 la radice quadrata del numero stesso.
 
-\subsection{Numeri primi e crittografia}
-I numeri primi hanno una particolare rilevanza nella crittografia, cioè nel nascondere i messaggi. Consideriamo un semplice esempio che può chiarire come funziona il meccanismo di base per inviare messaggi segreti.
+\vspazio\ovalbox{\risolvii \ref{ese:1.15}, \ref{ese:1.16}}
 
-Alice deve inviare la sua password, la parola ``BACI'', a suo fratello Bruno. Alice trasforma la parola in numeri secondo la semplice regola A=1, B=2, C=3, I=9 (assegnando ad ogni lettera il numero cardinale corrispondente alla sua posizione nell'alfabeto). Il messaggio diventa così~$ \np{2139} $. Alice moltiplica questo numero per un numero primo ``segreto'' (che conosce solo lei) $\np{26417}$ e ottiene $\np{2139} \cdot \np{26417}=\np{56505963}$ e invia quest'ultimo numero a Bruno. Chiunque intercetti questo numero non è in grado di individuare la parola segreta.
-
-Quando Bruno riceve il numero $ \np{56505963} $ lo moltiplica per un suo numero primo ``segreto'' (che conosce solo lui) $\np{43969}$ ottenendo $\np{5650593} \cdot \np{43969}=\np{2484510687147}$ e lo invia nuovamente ad Alice.
-
-Quando Alice riceve il numero lo divide per il suo numero primo $\np{2484510687147} : \np{26417} = \np{94049691}$ e quindi lo rispedisce a Bruno,
-A questo punto Bruno divide il numero ricevuto per il suo numero primo segreto ottenendo $\np{94049691} : \np{43969} = \np{2139}$. Conoscendo il meccanismo di codifica (relazione tra i numeri e le lettere dell'alfabeto  2=B, 1=A, 3=C, 9=I) Bruno può dunque ricostruire la password ``BACI''.
-
-In realtà, i sistemi per lo scambio di messaggi cifrati oggi utilizzati per mezzo dei computer si basano su meccanismi leggermente differenti che evitano il doppio invio di messaggi tra Alice e Bruno. I meccanismi sono essenzialmente due: il primo è detto \emph{a chiave simmetrica}, in cui sia Alice che Bruno condividono il numero segreto con il quale viene cifrato il messaggio e quindi entrambi possono codificarlo e decodificarlo autonomamente; il secondo, un po' più complesso ma che dà le stesse garanzie del doppio invio di messaggi (nessuna condivisione del numero segreto tra gli interlocutori), viene chiamato \emph{a chiave asimmetrica} e si basa sull'utilizzo di un numero segreto ed un numero pubblico da condividere con l'interlocutore.
 
 \section{Criteri di divisibilità}\label{sect:criteri_divisibilita}
+
 Per verificare se un numero è divisibile per i primi numeri interi si possono applicare i seguenti criteri di
 divisibilità.
 
@@ -704,9 +731,9 @@ divisibilità.
 è un numero pari, cioè è~0,~2,~4,~6,~8.
 
 \begin{itemize*}
- \item 1\,236 finisce per~6 quindi è divisibile per~2;
- \item 109\,230 finisce per~0 quindi è divisibile per~2;
- \item 10\,923 finisce per~3 quindi non è divisibile per~2.
+ \item \np{1236} finisce per~6 quindi è divisibile per~2;
+ \item \np{109230} finisce per~0 quindi è divisibile per~2;
+ \item \np{10923} finisce per~3 quindi non è divisibile per~2.
 \end{itemize*}
 
 \paragraph{Divisibilità per~3} Un numero è divisibile per~3 se e solo se la somma delle cifre che lo
@@ -714,18 +741,18 @@ compongono è divisibile per~3.
 \begin{itemize*}
  \item 24 è divisibile per~3, infatti la somma delle sue cifre è~$2+4=6$, dato che~6 è divisibile per~3
 anche~24 è divisibile per~3;
- \item 1\,236 è divisibile per~3, infatti la somma delle sue cifre è~$1+2+3+6=12$;~12~è divisibile per~3
-dato che la somma delle sue cifre è~$1+2=3$, quindi anche~1\,236 è divisibile per~3;
+ \item \np{1236} è divisibile per~3, infatti la somma delle sue cifre è~$1+2+3+6=12$;~12~è divisibile per~3
+dato che la somma delle sue cifre è~$1+2=3$, quindi anche~\np{1236} è divisibile per~3;
  \item 31 non è divisibile per~3, infatti la somma delle sue cifre è~$3+1=4$, dato che~4 non è
 divisibile per~3 neanche~31 è divisibile per~3.
 \end{itemize*}
 
 \paragraph{Divisibilità per~5} Un numero è divisibile per~5 se la sua ultima cifra è~0 o~5.
 \begin{itemize*}
- \item 1\,230 finisce per~0 quindi è divisibile per~5;
- \item 59\,235 finisce per~5 quindi è divisibile per~5;
- \item 109\,253 finisce per~3 quindi non è divisibile per~5;
- \item 5\,556 finisce per~6 quindi non è divisibile per~5.
+ \item \np{1230} finisce per~0 quindi è divisibile per~5;
+ \item \np{59235} finisce per~5 quindi è divisibile per~5;
+ \item \np{109253} finisce per~3 quindi non è divisibile per~5;
+ \item \np{5556} finisce per~6 quindi non è divisibile per~5.
 \end{itemize*}
 
 \paragraph{Divisibilità per~7} Un numero (maggiore di~10) è divisibile per~7 se la differenza (in valore assoluto\footnote{il \emph{valore assoluto} è trattato a pagina~\pageref{def:valass}.})
@@ -741,30 +768,49 @@ multiplo di~7.
 somma delle cifre di posto pari e la somma delle cifre di posto dispari è~0,~11~o un multiplo di~11.
 \begin{itemize*}
  \item 253 è divisibile per~11, infatti~$\valass{5-(2+3)}=0$;
- \item 9\,482 è divisibile per~11, infatti~$\valass{(9+8)−(4+2)}=11$;
+ \item \np{9482} è divisibile per~11, infatti~$\valass{(9+8)−(4+2)}=11$;
  \item 887 non è divisibile per~11, infatti~$\valass{8-(8+7)}=7$.
 \end{itemize*}
 
 \ovalbox{\risolvii \ref{ese:1.17}, \ref{ese:1.18}}
 
-\section{Scomposizione in fattori primi}
-Scomporre in fattori un numero significa scriverlo come prodotto di altri numeri naturali.
 
-\begin{teorema}[fondamentale dell'Aritmetica]
+\section{Scomposizione in fattori primi}
+
+Scomporre in fattori (o fattorizzare) un numero significa scriverlo come prodotto di altri numeri naturali.
+
+\begin{teorema}[fondamentale dell'aritmetica]\label{th:fondamentale_dell_aritmetica}
  Ogni numero naturale~$n>1$ si può scrivere in modo unico come prodotto di numeri primi.
 \end{teorema}
 
-La dimostrazione sarà effettuata in più fasi. Dapprima procediamo col dimostrare la possibilità di scrivere un numero sotto forma di prodotto di numeri primi (fattorizzazione). Quindi dimostreremo che tale fattorizzazione è unica.
+\begin{proof}
+La dimostrazione sarà effettuata in più fasi. Dapprima (punti 1 e 2) procederemo col dimostrare la possibilità di scrivere un numero sotto forma di prodotto di numeri primi (fattorizzazione). Quindi (punto 3) dimostreremo che tale fattorizzazione è unica.
 
-Procediamo col dimostrare per induzione che ogni numero è divisibile per un numero primo (o è primo esso stesso): Il numero 2 è primo. Supponiamo che ogni numero da 2 a $n$ sia divisibile per un numero primo e dimostriamolo per $n+1$.
+\begin{enumerate}
+\item \emph{Dimostriamo per induzione che ogni numero è divisibile per un numero primo o è primo esso stesso.}
 
-Si hanno due possibilità per $n+1$: o è primo oppure è divisibile per un numero $a$ compreso tra 2 e $n$. In quest'ultimo caso, per l'ipotesi che abbiamo fatto o $a$ è primo oppure è divisibile per un numero primo $p$ ed in tal caso lo è anche $n+1$. Quindi $n+1$ è divisibile per un numero primo (o è esso stesso un numero primo).
+Il numero 2 è primo. Supponiamo che ogni numero da 2 a $n$ sia primo o divisibile per un numero primo e dimostriamolo per $n+1$.
 
-Dimostriamo per induzione che ogni numero è fattorizzabile con numeri primi. Nel caso del numero 2 è già banalmente fattorizzato. Supponiamo che ogni numero da 2 a $n$ si possa scrivere come prodotto di numeri primi e dimostriamo che questo vale anche per $n+1$.
+Considerando $n+1$ si hanno due possibilità:
+\begin{itemize*}
+\item $n+1$ è primo.
+\item $n+1$ non è primo, quindi è divisibile per un numero $a$ compreso tra 2 e $n$, e per l'ipotesi induttiva o $a$ è primo oppure è divisibile per un numero primo $p$. Quindi lo sarà anche $n+1$.
+\end{itemize*}
+Pertanto $n+1$ è divisibile per un numero primo o è esso stesso un numero primo.
 
-Si hanno 2 possibilità per $n+1$: o è primo (e quindi è già fattorizzato) oppure è divisibile per un primo $p$ (come dimostrato precedentemente); in quest'ultimo caso il numero $m=(n+1):p$ è minore di $n+1$ e quindi esso può essere scomposto in un prodotto di numeri primi (per ipotesi induttiva) e pertanto anche $n+1=m\cdot p$ è scomponibile in un prodotto di numeri primi.
+\item \emph{Dimostriamo per induzione che ogni numero è scomponibile in fattori primi.}
 
-Dimostriamo adesso, per assurdo, che se un numero ammette una scomposizione in numeri primi questa è unica.
+Il numero 2 è già banalmente fattorizzato. Supponiamo che ogni numero da 2 a $n$ si possa scrivere come prodotto di numeri primi e dimostriamo che questo vale anche per $n+1$.
+
+Considerando $n+1$ si hanno due possibilità:
+\begin{itemize*}
+\item $n+1$ è primo, quindi già fattorizzato.
+\item $n+1$ non è primo, quindi divisibile per un primo $p$ (per quanto dimostrato al punto 1). Si consideri il numero $m=(n+1):p$ che è minore di $n+1$ e quindi, per l'ipotesi induttiva, può essere scomposto in un prodotto di numeri primi e pertanto lo è anche $n+1=m\cdot p$.
+\end{itemize*}
+
+Dunque, ogni numero è scomponibile in fattori primi.
+
+\item \emph{Dimostriamo adesso, per assurdo, che se un numero ammette una scomposizione in fattori primi questa è unica.}
 
 Si supponga che esistano dei numeri scomponibili in fattori primi in più di un modo. Sia $m$ il numero più piccolo tra essi. Siano inoltre (\ref{eq:num_primi_scomp1}) e (\ref{eq:num_primi_scomp2}) due sue diverse fattorizzazioni
 
@@ -775,30 +821,30 @@ m = p_1 \cdot p_2 \cdot \ldots \cdot p_s
 m = q_1 \cdot q_2 \cdot \ldots \cdot q_t
 \end{equation}
 
-\noindent dove i numeri $p_i$ e $q_j$ sono primi ma differenti tra loro, ovvero $\forall i,j \; p_i \neq q_j$ (se ci fosse un fattore $p_h=q_k$ possiamo comunque ricondurci al caso indicato dividendo $m$ per tale fattore e ottenendo così un numero $m' < m$ che avrebbe anch'esso due fattorizzazioni distinte). All'interno di ogni fattorizzazione ci possono comunque essere fattori ripetuti (ad es.~$100 = 2\cdot 2\cdot 5\cdot 5$).
+\noindent dove i numeri $p_1$,\ldots,$p_s$ e $q_1$,\ldots,$q_t$ sono primi ma differenti tra loro, ovvero $\forall i,j \; p_i \neq q_j$ (se ci fosse un fattore primo $p_h=q_k$ potremmo dividere $m$ per tale fattore ottenendo così un numero $m' < m$ che avrebbe anch'esso due fattorizzazioni distinte, riconducendoci così al caso considerato), sebbene all'interno di ogni fattorizzazione possano comunque essere presenti fattori ripetuti.
+Dunque $p_1\neq q_1$ e, senza perdita di generalità, possiamo supporre che $p_1 < q_1$.
 
-Dunque $p_1$ è diverso da $q_1$ e senza perdita di generalità possiamo supporre che $p_1 < q_1$. Poniamo allora
+Sia
 \begin{equation}\label{eq:num_primi_scomp3}
-n = (q_1-p_1)\cdot q_2 \cdot \ldots \cdot q_t
+n = (q_1-p_1)\cdot q_2 \cdot \ldots \cdot q_t.
 \end{equation}
-Si ha così che $n < m$ dato che l'uguaglianza precedente si può scrivere come
+Si ha $n < m$ dato che, per la proprietà distributiva della moltiplicazione rispetto all'addizione, l'uguaglianza precedente si può scrivere come
 \begin{equation}\label{eq:num_primi_scomp4}
 n = q_1\cdot q_2\cdot \ldots \cdot q_t - p_1\cdot q_2\cdot \ldots\cdot q_t = m - p_1\cdot q_2\cdot \ldots \cdot q_t < m.
 \end{equation}
 
-Dimostriamo ora che $n$ ammette almeno due fattorizzazioni distinte.
+Se il primo fattore di $n$, $q_1-p_1$, non fosse primo lo potremo fattorizzare ottenendo così una nuova fattorizzazione di $n$ che non ammetterebbe $p_1$ tra i suoi fattori. Infatti, per quanto ipotizzato precedentemente, $p_1$ è diverso da $q_1$, $q_2$, \ldots, $q_t$, inoltre esso non può comparire nell'eventuale fattorizzazione di $q_1-p_1$, poiché se ciò accadesse significherebbe che $q_1$ è divisibile per $p_1$ (infatti $q_1-p_1= p_1\cdot a \:\Rightarrow\: q_1 = p_1\cdot(1+a)$), il che non è possibile in quanto per ipotesi $q_1$ è un numero primo. Dunque $q_1-p_1$ è primo.
 
-Il primo fattore di $n$, $q_1-p_1$, può essere primo o meno; nel caso non lo fosse lo fattorizzeremo e la nuova fattorizzazione di $n$ così ottenuta non ammetterebbe $p_1$ tra i suoi fattori. Infatti, per la prima parte della dimostrazione sappiamo che $p_1$ è diverso da $q_1$, $q_2$, \ldots, $q_t$ e non può comparire nella eventuale fattorizzazione di $q_1-p_1$, poiché se ciò accadesse significherebbe che
-\[q_1-p_1= p_1\cdot a \:\Rightarrow\: q_1 = p_1\cdot(1+a)\]
-e quindi $q_1$ sarebbe divisibile per $p_1$, il che non è possibile in quanto $q_1$ è un numero primo.
-
-Prendendo ora l'ultima uguaglianza della (\ref{eq:num_primi_scomp4}) e sostituendo $m$ con la (\ref{eq:num_primi_scomp1}) otteniamo
+Considerando l'ultima uguaglianza della (\ref{eq:num_primi_scomp4}) e sostituendo in essa $m$ con la (\ref{eq:num_primi_scomp1}) otteniamo
 
 \begin{equation}\label{eq:num_primi_scomp5}
 n= p_1 \cdot p_2 \cdot \ldots\cdot p_s-p_1\cdot q_2 \cdot \ldots \cdot q_t \:\Rightarrow\: n = p_1\cdot(p_2\cdot \ldots \cdot p_s- q_2\cdot \ldots\cdot q_t)
 \end{equation}
 
-In qualunque modo sia scomponibile il secondo fattore della (\ref{eq:num_primi_scomp5}), avremo ottenuto una fattorizzazione di $n<m$ che contiene $p_1$ e che è quindi diversa da quella della (\ref{eq:num_primi_scomp3}), contrariamente all'ipotesi che $m$ sia il numero più piccolo che ammette più di una fattorizzazione. Dunque la scomposizione di un numero in fattori primi è unica.
+In qualunque modo sia scomponibile il secondo fattore della (\ref{eq:num_primi_scomp5}), si ha una fattorizzazione di $n<m$ che contiene $p_1$ e che è quindi diversa da quella della (\ref{eq:num_primi_scomp3}), contrariamente all'ipotesi che $m$ sia il numero più piccolo che ammette più di una fattorizzazione.
+\end{enumerate}
+Dunque la scomposizione di un numero in fattori primi è unica.
+\end{proof}
 
 \begin{exrig}
  \begin{esempio}
@@ -824,7 +870,39 @@ questa scomposizione è unica, a meno dell'ordine con cui si scrivono i fattori.
 precedente~$12=~2^2\cdot 3$ è l'unico modo in cui il~12 si può scomporre in fattori primi, a meno che non si
 scambino di posto i fattori~$12=3\cdot 2^2$.
 
-\vspazio\ovalbox{\risolvii \ref{ese:1.19}, \ref{ese:1.20}}
+I numeri primi sono quindi i mattoni fondamentali dell'aritmetica, poiché gli altri numeri naturali possono essere ottenuti, in maniera univoca, come prodotto di primi.
+
+Sebbene al crescere dei valori considerati i numeri primi diventino sempre più radi, essi sono comunque infiniti, come affermò Euclide\footnote{matematico e scienziato della Grecia antica (367 \aC{} ca. - 283 \aC).} con il seguente teorema che porta il suo nome:
+\begin{teorema}[di Euclide]
+I numeri primi sono infiniti.
+\end{teorema}
+
+\begin{proof}
+Il teorema può essere dimostrato per assurdo.
+Supponiamo infatti che i numeri primi siano un numero finito, cioè siano, ordinati dal più piccolo al più grande, $p_1$, $p_2$, \ldots{}, $p_n$. Si consideri il numero $a=p_1\cdot p_2\cdot \ldots{}\cdot p_n+1$. Per com'è stato scelto, $a$ non è divisibile per nessuno dei numeri $p_1$, $p_2$, \ldots{}, $p_n$ poiché la divisione per qualunque di essi darà sempre come resto 1. Quindi o $a$ è un numero primo maggiore di $p_n$ oppure, per il teorema fondamentale dell'aritmetica (pagina \pageref{th:fondamentale_dell_aritmetica}), è divisibile per un numero primo $p^*$ differente da $p_1$, $p_2$, \ldots{}, $p_n$. In entrambi i casi si ha una contraddizione con l'ipotesi iniziale, cioè che i numeri primi siano un numero finito, poiché per come è stato scelto, $a$ implica l'esistenza di un numero primo che non è nell'elenco ipotizzato $p_1$, $p_2$, \ldots, $p_n$. Quindi i numeri primi sono infiniti.
+\end{proof}
+
+\ovalbox{\risolvii \ref{ese:1.19}, \ref{ese:1.20}}
+%\vspazio\ovalbox{\risolvi \ref{ese:1.17}}
+
+
+\subsection{Numeri primi e crittografia}
+
+Il problema legato alla scomposizione in fattori primi è di notevole interesse per i matematici, poiché non è ancora stato individuato un meccanismo che permette di stabilire se un numero sia primo o meno\footnote{si tratta della dimostrazione dell'ipotesi di Riemann, uno dei 7 \emph{Millennium problems} elencati il 24 maggio 2000, ovvero questioni matematiche ad oggi (2014) ancora non dimostrate (tranne una). Vista l'enorme difficoltà nel riuscire nell'intento, il Clay Mathematics Institute ha messo in palio un milione di dollari per la dimostrazione di ognuna di esse (v.~\url{http://it.wikipedia.org/wiki/Problemi_per_il_millennio}).}, se non quello di provare a dividerlo per tutti i numeri minori o uguali alla sua radice quadrata, procedura che diventa sempre più lunga man mano che le cifre che compongono il numero da verificare aumentano. Per questo motivo l'utilizzo di valori che siano il prodotto di numeri primi con un numero elevato di cifre è ciò che sta alla base della moderna crittografia, ovvero dei sistemi per la cifratura dei messaggi.
+
+Consideriamo un semplice esempio che può chiarire come funziona il meccanismo di base per inviare messaggi segreti.
+
+Alice deve inviare la sua password, la parola ``BACI'', a suo fratello Bruno. Alice trasforma la parola in numeri secondo la semplice regola A=1, B=2, C=3, I=9 (assegnando ad ogni lettera il numero cardinale corrispondente alla sua posizione nell'alfabeto). Il messaggio diventa così~$ \np{2139} $. Alice moltiplica questo numero per un numero primo ``segreto'' (che conosce solo lei) $\np{26417}$ e ottiene $\np{2139} \cdot \np{26417}=\np{56505963}$ e invia quest'ultimo numero a Bruno. Chiunque intercetti questo numero non è in grado di individuare la password in chiaro.
+
+Quando Bruno riceve il numero $ \np{56505963} $ lo moltiplica per un suo numero primo ``segreto'' (che conosce solo lui) $\np{43969}$ ottenendo $\np{5650593} \cdot \np{43969}=\np{2484510687147}$ e lo invia nuovamente ad Alice.
+
+Quando Alice riceve il numero lo divide per il suo numero primo $\np{2484510687147} : \np{26417} = \np{94049691}$ e quindi lo rispedisce a Bruno,
+A questo punto Bruno divide il numero ricevuto per il suo numero primo segreto ottenendo $\np{94049691} : \np{43969} = \np{2139}$. Conoscendo il meccanismo di codifica (relazione tra i numeri e le lettere dell'alfabeto  2=B, 1=A, 3=C, 9=I) Bruno può dunque ricostruire la password ``BACI''.
+
+In realtà, i sistemi per lo scambio di messaggi cifrati oggi utilizzati per mezzo dei computer si basano su meccanismi leggermente differenti che evitano il doppio invio di messaggi tra Alice e Bruno. I meccanismi sono essenzialmente due: il primo è detto \emph{a chiave simmetrica}, in cui sia Alice che Bruno condividono il numero segreto con il quale viene cifrato il messaggio e quindi entrambi possono codificarlo e decodificarlo autonomamente; il secondo, un po' più complesso ma che dà le stesse garanzie del doppio invio di messaggi (nessuna condivisione del numero segreto tra gli interlocutori), viene chiamato \emph{a chiave asimmetrica} e si basa sull'utilizzo di un numero segreto ed un numero pubblico da condividere con l'interlocutore.
+
+Va comunque sottolineato il fatto che la robustezza del meccanismo di cifratura sta nella difficoltà intrinseca della fattorizzazione di numeri molto grandi. Ciò non significa che i messaggi rimarranno segreti per sempre: prima o poi saranno decifrati visto che la velocità di calcolo dei computer è sempre in aumento. Per cercare di rendere il processo di decifratura più arduo si possono scegliere chiavi di cifratura composte da numeri primi sempre più grandi.
+
 
 \section{Massimo Comune Divisore e minimo comune multiplo}
 
@@ -835,12 +913,19 @@ più grande tra tutti i divisori comuni ad~$a$ e~$b$.
 \end{definizione}
 
 Applicando la definizione, il massimo comune divisore tra~18 e~12 si ottiene prendendo tutti i divisori
-di~18 e~12:
-\begin{align*}
-\text{divisori di }18: &\text{~}18\text{, }9\text{, }6\text{, }3\text{, }2\text{, }1;\\
-\text{divisori di }12: &\text{~}12\text{, }6\text{, }4\text{, }2\text{, }1.
-\end{align*}
+di~18 e di~12:
+\begin{center}
+\begin{tabular}{rl}
+divisori di 18: &18, 9, 6, 3, 2, 1;\\
+divisori di 12: &12, 6, 4, 2, 1.\\
+\end{tabular}
+\end{center}
 I divisori comuni sono~6,~2 e~1. Il più grande dei divisori comuni è~6, quindi $\mcd(18\text{,~}12)=6$.
+
+%\begin{align*}
+%\text{divisori di 18:} &\text{~}18\text{, }9\text{, }6\text{, }3\text{, }2\text{, }1;\\
+%\text{divisori di 12:} &\text{~}12\text{, }6\text{, }4\text{, }2\text{, }1.
+%\end{align*}
 
 Per calcolare il massimo comune divisore di due o più numeri si può applicare la seguente procedura:
 \begin{procedura}
@@ -855,7 +940,7 @@ Calcolo del~$\mcd$ di due o più numeri naturali:
  \begin{esempio}
  Calcolare~$\mcd(60\text{,~}48\text{,~}36)$.
 
-Si scompongono in fattori i singoli numeri~$60=2^2\cdot 3\cdot 5$,~$48=2^4\cdot 3$,~$36 =2^2\cdot 3^2$.
+Si scompongono in fattori i singoli numeri~$60=2^2\cdot 3\cdot 5$,~$48=2^4\cdot 3$ e~$36 =2^2\cdot 3^2$.
 I~fattori comuni sono~2 e~3; il~2 compare con l'esponente minimo~2 ed il~3 compare con esponente
 minimo~1.
 
@@ -900,11 +985,17 @@ piccolo tra tutti i multipli comuni di~$a$ e di~$b$.
 
 Per calcolare il minimo comune multiplo tra~6 e~15 applicando la definizione occorre calcolare i primi
 multipli dei due numeri:
-\begin{align*}
-\text{multipli di }6: & \qquad~6\text{, }12\text{, }18\text{, }24\text{, }30\text{, }36\text{, }42\text{, }48\text{, }54\text{, }60\text{, }\ldots; \\
-\text{multipli di }15: & \qquad~15\text{, }30\text{, }45\text{, }60\text{, }75\text{, }90\text{, }\ldots
-\end{align*}
-Sono multipli comuni~30,~60,~90, \ldots Il più piccolo dei multipli comuni è~30, ovvero $\mcm(6\text{,~}15)=30$.
+\begin{center}
+\begin{tabular}{rl}
+multipli di 6: & 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, \ldots;\\
+multipli di 15: & 15, 30, 45, 60, 75, 90, \ldots\\
+\end{tabular}
+\end{center}
+Sono multipli comuni~30,~60,~90, \ldots Il più piccolo di essi è~30, ovvero $\mcm(6\text{,~}15)=30$.
+%\begin{align*}
+%\text{multipli di }6: & \qquad~6\text{, }12\text{, }18\text{, }24\text{, }30\text{, }36\text{, }42\text{, }48\text{, }54\text{, }60\text{, }\ldots; \\
+%\text{multipli di }15: & \qquad~15\text{, }30\text{, }45\text{, }60\text{, }75\text{, }90\text{, }\ldots
+%\end{align*}
 
 Per calcolare il minimo comune multiplo tra due o più numeri si può applicare la seguente procedura:
 \begin{procedura}
@@ -921,9 +1012,9 @@ esponente.
  \begin{esempio}
  Calcolare il~$\mcm(60\text{,~}48\text{,~}36)$.
 
-Scomponendo in fattori i numeri si ha~$60=2^2\cdot 3\cdot 5$;~$48=2^4\cdot 3$;~$36=2^2\cdot 3^2$.
+Scomponendo in fattori i numeri si ha~$60=2^2\cdot 3\cdot 5$,~$48=2^4\cdot 3$ e~$36=2^2\cdot 3^2$.
 Tutti i fattori comuni e non comuni presi una sola volta con l'esponente più grande con cui
-compaiono sono:~$2^4,~3^2 e~5$.
+compaiono sono:~$2^4$, $3^2$ e~$5$.
 
 Quindi il~$\mcm$ è~$2^4\cdot3^2\cdot5=720$.
  \end{esempio}
@@ -931,12 +1022,12 @@ Quindi il~$\mcm$ è~$2^4\cdot3^2\cdot5=720$.
  \begin{esempio}
  Calcolare il~$\mcm(20\text{,~}24\text{,~}450)$.
 
-Scomponendo in fattori si ha:~$20=2^2\cdot 5$;~$24=2^3\cdot 3$;~$450 =~2\cdot 3^2\cdot 5^2$.
-Moltiplicando i fattori comuni e non comuni con il massimo esponente si ha~$2^3\cdot 3^2\cdot 5^2=1\,800$.
+Scomponendo in fattori si ha:~$20=2^2\cdot 5$,~$24=2^3\cdot 3$ e~$450 =~2\cdot 3^2\cdot 5^2$.
+Moltiplicando i fattori comuni e non comuni con il massimo esponente si ha~$2^3\cdot 3^2\cdot 5^2=\np{1800}$.
  \end{esempio}
 
  \begin{esempio}
- Si vuole pavimentare una stanza a pianta rettangolare di~$315\unit{cm}$ per~$435\unit{cm}$ con mattonelle quadrate le
+ Si vuole pavimentare una stanza a pianta rettangolare di~$315\;\unit{cm}$ per~$435\;\unit{cm}$ con mattonelle quadrate le
 più grandi possibili, senza sprecarne alcuna. Quali sono le dimensioni delle mattonelle? Quante
 mattonelle sono necessarie?
 
@@ -947,7 +1038,6 @@ deve essere il massimo divisore comune.
 % \input{./lbr/chap01/fig009a.pgf}
 \begin{multicols}{2}
 \begin{center}
-% \input{./lbr/chap01/fig009a.pgf}
 \begin{tabular}{r|l@{\hspace{10mm}}r|l}
  	315 & 3 & 435 & 3\\
 	105 & 3 & 145 & 5\\
@@ -970,6 +1060,7 @@ da~$315\;\unit{cm}$. In tutto occorrono~$29\cdot21=609$ mattonelle.
 \ovalbox{\risolvii \ref{ese:1.21}, \ref{ese:1.22}, \ref{ese:1.23}, \ref{ese:1.24}, \ref{ese:1.25}, \ref{ese:1.26}}
 
 \section{Espressioni numeriche}
+
 Nel linguaggio comune alcune frasi possono risultare ambigue. Per esempio
 <<Luca ha detto Mario è stato promosso>> può avere due significati diversi
 a seconda di come si inserisce la punteggiatura:
