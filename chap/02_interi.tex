@@ -7,8 +7,8 @@ Con i numeri naturali non sempre è possibile eseguire l'operazione di sottrazio
 non è possibile sottrarre un numero più grande da un numero più piccolo, per esempio~$5-12$. Tuttavia
 ci sono situazioni in cui una sottrazione di questo tipo deve essere eseguita.
 
-Per esempio, è possibile acquistare un'auto di \officialeuro~$12\,000$ pur avendo soltanto risparmi in banca di soli
-\officialeuro~$5\,000$. In questo caso si tratta di togliere dai \officialeuro~$5\,000$ i \officialeuro~$12\,000$ che servono per acquistare
+Per esempio, è possibile acquistare un'auto di \officialeuro~$\np{12000}$ pur avendo soltanto risparmi in banca di soli
+\officialeuro~$\np{5000}$. In questo caso si tratta di togliere dai \officialeuro~$\np{5000}$ i \officialeuro~$\np{12000}$ che servono per acquistare
 l'auto: materialmente non è possibile e si ricorre a un prestito.
 
 Pensiamo ad una comunicazione dei meteorologi relativa alle previsioni del tempo: <<domani la temperatura,
@@ -24,9 +24,9 @@ altri ancora <<la temperatura sarà di~$-1$ grado>>.
 \end{wrapfloat}
 
 Leggiamo nel testo di geografia: <<Il punto più profondo della Terra si trova nella fossa delle Marianne; esso
-supera di~$2\,061$ metri l'altezza del monte Everest e si trova a~$10\,916$ metri sotto il livello del mare>>.
+supera di~$\np{2061}$ metri l'altezza del monte Everest e si trova a~$\np{10916}$ metri sotto il livello del mare>>.
 Se attribuiamo al livello del mare l'altitudine 0, allora potremmo esprimere la profondità della Fossa con il
-numero~$-10\,916$ e l'altezza del monte Everest con il numero~$+8\,855$ (figura \ref{fig:everest}).
+numero~$-\np{10916}$ e l'altezza del monte Everest con il numero~$+\np{8855}$ (figura \ref{fig:everest}).
 
 Per rappresentare le grandezze che hanno due sensi, come temperature, crediti e i debiti, latitudine nord e sud,
 altezze sopra il livello del mare e profondità marine i numeri naturali non bastano. I matematici in queste
@@ -42,7 +42,7 @@ ad eccezione dello~0, al quale non si attribuisce segno.
 
 I numeri relativi possono essere rappresentati su una retta. Disegniamo una retta, su di essa prendiamo
 un punto di riferimento al quale associamo il numero zero, il verso di percorrenza da sinistra verso destra,
-un segmento~$AB$ come un'unità di misura. Riportiamo questa unità di misura più volte partendo da zero e
+un segmento~$\overline{AB}$ come unità di misura. Riportiamo questa unità di misura più volte partendo da zero e
 procedendo nel verso stabilito aggiungiamo ogni volta uno: ai punti trovati associamo gli interi positivi.
 Ripetiamo l'operazione partendo dallo zero, ma con il verso di percorrenza a sinistra: ai punti trovati associamo
 gli interi negativi.
@@ -54,9 +54,9 @@ gli interi negativi.
 Possiamo interpretare questi numeri come il numero di passi da fare sulla retta, partendo dallo zero verso
 destra se il segno è positivo, verso sinistra se il segno è negativo.
 
-L'insieme dei numeri relativi si indica con il simbolo~$\insZ$. In particolare, l'insieme dei soli numeri interi relativi
-con segno positivo si indica con il simbolo~$\insZ^+$ e
-l'insieme dei soli numeri interi negativi si indica con il simbolo~$\insZ^-$.
+L'insieme dei numeri relativi si indica con il simbolo~$\insZ$. In particolare, l'insieme dei soli numeri interi relativi maggiori o uguali a 0
+si indica con il simbolo~$\insZ^+$, mentre 
+l'insieme dei numeri interi minori o uguali a 0 si indica con il simbolo~$\insZ^-$.\footnote{secondo le norme internazionali $\insZ^*$ indica l'insieme $\insZ$ senza il valore 0. Per indicare altre restrizioni si possono utilizzare notazioni del tipo $\insZ_{\geq 2}$ il cui significato è ovvio.}
 
 \begin{definizione}
  Due numeri relativi si dicono \emph{concordi}, se hanno lo stesso segno; si dicono \emph{discordi} se hanno
@@ -81,7 +81,9 @@ Il \emph{valore assoluto} di un numero relativo è il numero senza il segno; qui
 Il valore assoluto si indica inserendo il numero relativo tra due barre verticali~$\valass{*}$. In linguaggio
 matematico:
 
-\[ \valass{a}=a\text{~~se }a\ge0\text{,}\qquad \valass{a}=-a\text{~~se }a<0.\]
+\begin{empheq}[box=\fbox]{equation*}
+\valass{a}=a\text{~~se }a\ge0\text{,}\qquad \valass{a}=-a\text{~~se }a<0.
+\end{empheq}
 
 \begin{exrig}
  \begin{esempio}
@@ -154,7 +156,7 @@ L'addizione di due numeri relativi si esegue in due modi diversi a seconda che g
 
 La \emph{somma di due numeri relativi concordi} è il numero che ha per valore assoluto la somma dei singoli valori assoluti e
 come segno lo stesso segno degli addendi.
-\pagebreak
+
 \begin{exrig}
  \begin{esempio}
 ~$(+3)+(+5)=\ldots$: i due numeri da sommare sono concordi, il loro segno è~``$+$'', i loro valori assoluti sono~3 e~5,
@@ -328,7 +330,7 @@ tra numeri interi relativi, ossia il risultato di queste operazioni è sempre un
 relativo, il risultato della divisione non sempre è un numero intero relativo. La divisione
 tra numeri relativi è possibile se è possibile la divisione tra i loro valori assoluti, ossia se
 il divisore è diverso da zero ed è un sottomultiplo del dividendo.
-\pagebreak
+
 \begin{exrig}
  \begin{esempio}
 $(+8):(+2)=+4$: il risultato è~4 perché~$8:2=4$, il segno è~``$+$'' perché sono concordi.
@@ -380,7 +382,7 @@ Ricordiamo che un qualsiasi numero, diverso da~0, elevato a~0 dà come risultato
 numero elevato a~1 rimane invariato.
 
 \[a^0=1\:\text{ con }a\neq~0\text{,}\qquad a^1=a.\]
-
+\pagebreak
  \begin{exrig}
  \begin{esempio}
  Potenze di numeri relativi, con esponente~0 o~1.
@@ -432,7 +434,7 @@ Nella moltiplicazione tra numeri relativi \emph{vale} quindi la proprietà assoc
 
 \subsubsection{Elemento neutro}
 
-Un'operazione su uno specifico insieme numerico ha elemento \emph{neutro} se esiste, ed è unico, un numero che composto
+Un'operazione su uno specifico insieme numerico ha \emph{elemento neutro} se esiste, ed è unico, un numero che composto
 con un qualsiasi altro numero lo lascia inalterato.
 
 Nella somma algebrica l'elemento neutro è~0 sia che si trovi a destra sia che si trovi a sinistra dell'operazione:
