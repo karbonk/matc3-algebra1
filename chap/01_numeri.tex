@@ -400,7 +400,7 @@ La proprietà associativa \emph{vale} per le seguenti operazioni:
  \item[moltiplicazione]~$(a\cdot b)\cdot c=a\cdot (b\cdot c)$. \quad Es.~$(3\cdot 5)\cdot 2=~3\cdot(5\cdot 2)=30$.
 \end{description*}
 
-La proprietà commutativa \emph{non vale} per le seguenti operazioni:
+La proprietà associativa \emph{non vale} per le seguenti operazioni:
 \begin{description*}
  \item[sottrazione]~$(a-b)-c\neq a-(b-c)$. \quad Es.~$(10-5)-2=3\neq~10-(5-2)=7$;
  \item[divisione]~$(a:b):c\neq a:(b:c)$. \quad Es.~$(16:4):2=2\neq~16:(4:2)=8$;
@@ -431,7 +431,8 @@ In maniera analoga, anche la sottrazione ha l'elemento neutro~0 solo a destra:
 La proprietà \emph{distributiva} coinvolge due operazioni differenti ($\diamond$ e $\star$). La proprietà distributiva di $\star$ rispetto a $\diamond$ è espressa in simboli:
 
 \begin{empheq}[box=\fbox]{equation*}
-a\star (b \diamond c) = a\star b \diamond a\star c.
+a \star (b \diamond c) = a \star b \diamond a \star c.
+(a \diamond b) \star c = a \star c \diamond b \star c.
 \end{empheq}
 
 \subsubsection{Proprietà distributiva della moltiplicazione}
@@ -471,9 +472,25 @@ Se, però, la sottrazione è a destra:
 \[120:(5-3)=120:2=60\neq~120:5-120:3=24-40=\:\text{ non si può fare in }\insN.\]
 
 \begin{legge}[Annullamento del Prodotto]\label{legge:annullamento_del_prodotto}
- Il prodotto di due o più numeri naturali si annulla se almeno uno dei fattori è nullo.
+ Il prodotto di due o più numeri naturali si annulla se e solo se almeno uno dei fattori è nullo.
 \[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
 \end{legge}
+In simboli:
+\begin{empheq}[box=\fbox]{equation*}
+a\cdot b=0\quad\Leftrightarrow\quad a=0\;\vee\;b=0.
+\end{empheq}
+
+\begin{proof}
+La dimostrazione verrà fatta prima per l'implicazione diretta ($\Rightarrow$) e poi per quella inversa ($\Leftarrow$).
+\begin{enumerate}
+\item $a\cdot b = 0 \:\Rightarrow\: a = 0\;\vee\;b=0$~~si dimostra per assurdo.
+
+Supponiamo che esistano due valori $a$ e $b$ entrambi non nulli, per i quali vale la condizione $a\cdot b = 0$. Poiché $b\neq 0$ possiamo dividere per $b$ le quantità a destra e a sinistra del simbolo di uguaglianza, mantenendo comunque verificata l'uguaglianza stessa. Quindi abbiamo $a\cdot b : b = 0 : b$. Visto che $(a\cdot b):c = a\cdot(b:c)$ e che qualunque numero diviso se stesso da come risultato 1, la parte a sinistra del simbolo disuguaglianza è $a \cdot b : b = a \cdot 1 = a$. Poiché 0 diviso qualunque numero diverso da zero dà come risultato 0, la parte a destra dell'uguaglianza vale $0 : b = 0$. Dunque mettendo insieme i passaggi precedenti otteniamo $a = 0$, che contraddice l'ipotesi iniziale ($a$ e $b$ entrambi non nulli), cioè siamo arrivati ad un assurdo. Pertanto abbiamo dimostrato che $a\cdot b = 0 \:\Rightarrow\: a = 0\;\vee\;b=0$.
+
+\item La dimostrazione dell'implicazione inversa ($a = 0\;\vee\;b=0 \:\Rightarrow\: a\cdot b = 0$) è banale e deriva direttamente dalla definizione dell'operazione di moltiplicazione. Infatti se $a = 0$ qualunque sia $b$ si ha $0\cdot b = 0$. Lo stesso dicasi per $b$.
+\end{enumerate}
+\end{proof}
+
 %questo è presente anche nella prima pagina del capitolo 14
 Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numeri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100$ per $101$ e dividendo il risultato per~$2$ Gauss aveva ottenuto rapidamente la risposta: $100 \cdot 101 : 2=\np{5050}$.
 \begin{center}
@@ -632,33 +649,6 @@ $\sqrt[7]{1} = 1$,~~infatti $1^7 = 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1 =
 Particolare importanza riveste la radice con $n=2$, detta anche \emph{radice quadrata}. Ad esempio, la radice quadrata di 25 è 5, cioè $\sqrt[2]{25} = 5$, poiché infatti~$5^2 = 5\cdot 5=25$, e anche $\sqrt[2]{49} = 7$ ($7^2=49$). L'uso della radice quadrata è talmente predominante in matematica rispetto a quelle di ordine superiore (quelle con $n>2$) che nel caso in cui l'indice $n$ della radice non sia specificato si sottintende il valore 2: cioè $\sqrt{9} = \sqrt[2]{9} = 3$.
 
 
-\section{La deduzione logica e i teoremi}
-
-La teoria delle discipline scientifiche si basa su un percorso logico che, partendo dalle definizioni dai risultati precedenti, ne individua le implicazioni e ne deduce le conseguenze. Di fondamentale importanza nella matematica sono i teoremi, che da qui in avanti avremo modo di studiare.
-
-Un \emph{teorema} è una proposizione che riporta le conclusioni alle quali si può arrivare partendo da condizioni iniziali stabilite, per mezzo di passaggi logici successivi.
-
-La \emph{dimostrazione} è il procedimento logico rigoroso che dalle condizioni iniziali indicate dal teorema, dette \emph{ipotesi}, ne deduce le conclusioni, ovvero la sua \emph{tesi}, che quindi risulta essere la conseguenza logica delle ipotesi.
-Ogni dimostrazione può essere realizzata per mezzo di vari schemi logici che possono essere di tre tipi:
-
-\begin{itemize*}
-\item \emph{dimostrazione per assurdo}: viene effettuata ritenendo l'ipotesi non veritiera e verificando che la sua negazione porta ad un assurdo o contraddizione con le ipotesi;
-\item \emph{dimostrazione per induzione}: viene utilizzata per i teoremi relativi alle caratteristiche di elementi di insiemi numerabili. Si dimostra che il teorema vale per un determinato elemento dell'insieme (\emph{base dell'induzione}) e, ipotizzando che la tesi valga per un elemento generico (\emph{ipotesi induttiva}) si può logicamente dedurre che essa vale anche per l'elemento successivo (\emph{passo dell'induzione}). La tesi risulta così dimostrata per qualunque elemento dell'insieme;
-\item \emph{dimostrazione costruttiva}: è la dimostrazione per antonomasia, ovvero quella che partendo dalle ipotesi, tramite una serie di implicazioni logiche, porta alla tesi (la maggior parte delle dimostrazioni appartengono a questa tipologia).
-\end{itemize*}
-
-Si osservi inoltre che non sempre il verificarsi della tesi di un teorema implica il verificarsi delle relative ipotesi. In generale il verificarsi delle ipotesi implica la tesi ma non viceversa. In tal caso si dice che le ipotesi sono una \emph{condizione sufficiente} per il verificarsi della tesi. Se il verificarsi della tesi implica il verificarsi delle ipotesi si dice che le ipotesi sono una \emph{condizione necessaria} per il verificarsi della tesi. Se valgono entrambe le implicazioni cioè le ipotesi e la tesi si implicano a vicenda si dice che il verificarsi delle ipotesi è una \emph{condizione necessaria e sufficiente} al verificarsi della tesi (e viceversa).
-
-Si consideri, ad esempio, la proposizione ``essere fiorentino significa essere toscano''.
-In tal caso l'ipotesi è ``essere fiorentino'' e la tesi è ``essere toscano''. Il verificarsi dell'ipotesi implica il verificarsi della tesi, quindi la condizione ``essere fiorentino'' è sufficiente per ``essere toscano'', ma ``essere toscano'' non implica necessariamente ``essere fiorentino'', ovvero la condizione ``essere fiorentino'' è sufficiente per ``essere toscano'' ma non è necessaria.
-
-Consideriamo, ad esempio, la proposizione ``per essere promossi bisogna avere un voto $\geq 6$ in ogni materia''.
-In tal caso l'ipotesi è ``avere un voto $\geq 6$ in ogni materia'' e la tesi è ``essere promosso''. Il verificarsi dell'ipotesi implica il verificarsi della tesi, quindi la condizione ``avere un voto $\geq 6$ in ogni materia'' è sufficiente per ``essere promosso''. Ma ``essere promosso'' significa ``avere un voto $\geq 6$ in ogni materia'', ovvero la condizione ``avere un voto $\geq 6$ in ogni materia'' è anche necessaria per ``essere promosso''. Quindi la condizione ``avere un voto $\geq 6$ in ogni materia'' è necessaria e sufficiente per ``essere promosso''.
-
-Si consideri, ad esempio, la proposizione ``per conoscere la matematica bisogna conoscere questo capitolo''.
-In tal caso l'ipotesi è ``conoscere questo capitolo'' e la tesi è ``conoscere la matematica''. Il verificarsi dell'ipotesi non implica il verificarsi della tesi, quindi la condizione ``conoscere questo capitolo'' non è sufficiente per ``conoscere la matematica''. Ma ``conoscere la matematica'' significa ``conoscere questo capitolo'', ovvero la condizione ``conoscere questo capitolo'' è necessaria per ``conoscere la matematica'' ma non è sufficiente.
-
-
 \section{Numeri Primi}
 
 Osserva il seguente schema
@@ -783,68 +773,68 @@ Scomporre in fattori (o fattorizzare) un numero significa scriverlo come prodott
  Ogni numero naturale~$n>1$ si può scrivere in modo unico come prodotto di numeri primi.
 \end{teorema}
 
-\begin{proof}
-La dimostrazione sarà effettuata in più fasi. Dapprima (punti 1 e 2) procederemo col dimostrare la possibilità di scrivere un numero sotto forma di prodotto di numeri primi (fattorizzazione). Quindi (punto 3) dimostreremo che tale fattorizzazione è unica.
-
-\begin{enumerate}
-\item \emph{Dimostriamo per induzione che ogni numero è divisibile per un numero primo o è primo esso stesso.}
-
-Il numero 2 è primo. Supponiamo che ogni numero da 2 a $n$ sia primo o divisibile per un numero primo e dimostriamolo per $n+1$.
-
-Considerando $n+1$ si hanno due possibilità:
-\begin{itemize*}
-\item $n+1$ è primo.
-\item $n+1$ non è primo, quindi è divisibile per un numero $a$ compreso tra 2 e $n$, e per l'ipotesi induttiva o $a$ è primo oppure è divisibile per un numero primo $p$. Quindi lo sarà anche $n+1$.
-\end{itemize*}
-Pertanto $n+1$ è divisibile per un numero primo o è esso stesso un numero primo.
-
-\item \emph{Dimostriamo per induzione che ogni numero è scomponibile in fattori primi.}
-
-Il numero 2 è già banalmente fattorizzato. Supponiamo che ogni numero da 2 a $n$ si possa scrivere come prodotto di numeri primi e dimostriamo che questo vale anche per $n+1$.
-
-Considerando $n+1$ si hanno due possibilità:
-\begin{itemize*}
-\item $n+1$ è primo, quindi già fattorizzato.
-\item $n+1$ non è primo, quindi divisibile per un primo $p$ (per quanto dimostrato al punto 1). Si consideri il numero $m=(n+1):p$ che è minore di $n+1$ e quindi, per l'ipotesi induttiva, può essere scomposto in un prodotto di numeri primi e pertanto lo è anche $n+1=m\cdot p$.
-\end{itemize*}
-
-Dunque, ogni numero è scomponibile in fattori primi.
-
-\item \emph{Dimostriamo adesso, per assurdo, che se un numero ammette una scomposizione in fattori primi questa è unica.}
-
-Si supponga che esistano dei numeri scomponibili in fattori primi in più di un modo. Sia $m$ il numero più piccolo tra essi. Siano inoltre (\ref{eq:num_primi_scomp1}) e (\ref{eq:num_primi_scomp2}) due sue diverse fattorizzazioni
-
-\begin{equation}\label{eq:num_primi_scomp1}
-m = p_1 \cdot p_2 \cdot \ldots \cdot p_s
-\end{equation}
-\begin{equation}\label{eq:num_primi_scomp2}
-m = q_1 \cdot q_2 \cdot \ldots \cdot q_t
-\end{equation}
-
-\noindent dove i numeri $p_1$,\ldots,$p_s$ e $q_1$,\ldots,$q_t$ sono primi ma differenti tra loro, ovvero $\forall i,j \; p_i \neq q_j$ (se ci fosse un fattore primo $p_h=q_k$ potremmo dividere $m$ per tale fattore ottenendo così un numero $m' < m$ che avrebbe anch'esso due fattorizzazioni distinte, riconducendoci così al caso considerato), sebbene all'interno di ogni fattorizzazione possano comunque essere presenti fattori ripetuti.
-Dunque $p_1\neq q_1$ e, senza perdita di generalità, possiamo supporre che $p_1 < q_1$.
-
-Sia
-\begin{equation}\label{eq:num_primi_scomp3}
-n = (q_1-p_1)\cdot q_2 \cdot \ldots \cdot q_t.
-\end{equation}
-Si ha $n < m$ dato che, per la proprietà distributiva della moltiplicazione rispetto all'addizione, l'uguaglianza precedente si può scrivere come
-\begin{equation}\label{eq:num_primi_scomp4}
-n = q_1\cdot q_2\cdot \ldots \cdot q_t - p_1\cdot q_2\cdot \ldots\cdot q_t = m - p_1\cdot q_2\cdot \ldots \cdot q_t < m.
-\end{equation}
-
-Se il primo fattore di $n$, $q_1-p_1$, non fosse primo lo potremo fattorizzare ottenendo così una nuova fattorizzazione di $n$ che non ammetterebbe $p_1$ tra i suoi fattori. Infatti, per quanto ipotizzato precedentemente, $p_1$ è diverso da $q_1$, $q_2$, \ldots, $q_t$, inoltre esso non può comparire nell'eventuale fattorizzazione di $q_1-p_1$, poiché se ciò accadesse significherebbe che $q_1$ è divisibile per $p_1$ (infatti $q_1-p_1= p_1\cdot a \:\Rightarrow\: q_1 = p_1\cdot(1+a)$), il che non è possibile in quanto per ipotesi $q_1$ è un numero primo. Dunque $q_1-p_1$ è primo.
-
-Considerando l'ultima uguaglianza della (\ref{eq:num_primi_scomp4}) e sostituendo in essa $m$ con la (\ref{eq:num_primi_scomp1}) otteniamo
-
-\begin{equation}\label{eq:num_primi_scomp5}
-n= p_1 \cdot p_2 \cdot \ldots\cdot p_s-p_1\cdot q_2 \cdot \ldots \cdot q_t \:\Rightarrow\: n = p_1\cdot(p_2\cdot \ldots \cdot p_s- q_2\cdot \ldots\cdot q_t)
-\end{equation}
-
-In qualunque modo sia scomponibile il secondo fattore della (\ref{eq:num_primi_scomp5}), si ha una fattorizzazione di $n<m$ che contiene $p_1$ e che è quindi diversa da quella della (\ref{eq:num_primi_scomp3}), contrariamente all'ipotesi che $m$ sia il numero più piccolo che ammette più di una fattorizzazione.
-\end{enumerate}
-Dunque la scomposizione di un numero in fattori primi è unica.
-\end{proof}
+%\begin{proof}
+%La dimostrazione sarà effettuata in più fasi. Dapprima (punti 1 e 2) procederemo col dimostrare la possibilità di scrivere un numero sotto forma di prodotto di numeri primi (fattorizzazione). Quindi (punto 3) dimostreremo che tale fattorizzazione è unica.
+%
+%\begin{enumerate}
+%\item \emph{Dimostriamo per induzione che ogni numero è divisibile per un numero primo o è primo esso stesso.}
+%
+%Il numero 2 è primo. Supponiamo che ogni numero da 2 a $n$ sia primo o divisibile per un numero primo e dimostriamolo per $n+1$.
+%
+%Considerando $n+1$ si hanno due possibilità:
+%\begin{itemize*}
+%\item $n+1$ è primo.
+%\item $n+1$ non è primo, quindi è divisibile per un numero $a$ compreso tra 2 e $n$, e per l'ipotesi induttiva o $a$ è primo oppure è divisibile per un numero primo $p$. Quindi lo sarà anche $n+1$.
+%\end{itemize*}
+%Pertanto $n+1$ è divisibile per un numero primo o è esso stesso un numero primo.
+%
+%\item \emph{Dimostriamo per induzione che ogni numero è scomponibile in fattori primi.}
+%
+%Il numero 2 è già banalmente fattorizzato. Supponiamo che ogni numero da 2 a $n$ si possa scrivere come prodotto di numeri primi e dimostriamo che questo vale anche per $n+1$.
+%
+%Considerando $n+1$ si hanno due possibilità:
+%\begin{itemize*}
+%\item $n+1$ è primo, quindi già fattorizzato.
+%\item $n+1$ non è primo, quindi divisibile per un primo $p$ (per quanto dimostrato al punto 1). Si consideri il numero $m=(n+1):p$ che è minore di $n+1$ e quindi, per l'ipotesi induttiva, può essere scomposto in un prodotto di numeri primi e pertanto lo è anche $n+1=m\cdot p$.
+%\end{itemize*}
+%
+%Dunque, ogni numero è scomponibile in fattori primi.
+%
+%\item \emph{Dimostriamo adesso, per assurdo, che se un numero ammette una scomposizione in fattori primi questa è unica.}
+%
+%Si supponga che esistano dei numeri scomponibili in fattori primi in più di un modo. Sia $m$ il numero più piccolo tra essi. Siano inoltre (\ref{eq:num_primi_scomp1}) e (\ref{eq:num_primi_scomp2}) due sue diverse fattorizzazioni
+%
+%\begin{equation}\label{eq:num_primi_scomp1}
+%m = p_1 \cdot p_2 \cdot \ldots \cdot p_s
+%\end{equation}
+%\begin{equation}\label{eq:num_primi_scomp2}
+%m = q_1 \cdot q_2 \cdot \ldots \cdot q_t
+%\end{equation}
+%
+%\noindent dove i numeri $p_1$,\ldots,$p_s$ e $q_1$,\ldots,$q_t$ sono primi ma differenti tra loro, ovvero $\forall i,j \; p_i \neq q_j$ (se ci fosse un fattore primo $p_h=q_k$ potremmo dividere $m$ per tale fattore ottenendo così un numero $m' < m$ che avrebbe anch'esso due fattorizzazioni distinte, riconducendoci così al caso considerato), sebbene all'interno di ogni fattorizzazione possano comunque essere presenti fattori ripetuti.
+%Dunque $p_1\neq q_1$ e, senza perdita di generalità, possiamo supporre che $p_1 < q_1$.
+%
+%Sia
+%\begin{equation}\label{eq:num_primi_scomp3}
+%n = (q_1-p_1)\cdot q_2 \cdot \ldots \cdot q_t.
+%\end{equation}
+%Si ha $n < m$ dato che, per la proprietà distributiva della moltiplicazione rispetto all'addizione, l'uguaglianza precedente si può scrivere come
+%\begin{equation}\label{eq:num_primi_scomp4}
+%n = q_1\cdot q_2\cdot \ldots \cdot q_t - p_1\cdot q_2\cdot \ldots\cdot q_t = m - p_1\cdot q_2\cdot \ldots \cdot q_t < m.
+%\end{equation}
+%
+%Se il primo fattore di $n$, $q_1-p_1$, non fosse primo lo potremo fattorizzare ottenendo così una nuova fattorizzazione di $n$ che non ammetterebbe $p_1$ tra i suoi fattori. Infatti, per quanto ipotizzato precedentemente, $p_1$ è diverso da $q_1$, $q_2$, \ldots, $q_t$, inoltre esso non può comparire nell'eventuale fattorizzazione di $q_1-p_1$, poiché se ciò accadesse significherebbe che $q_1$ è divisibile per $p_1$ (infatti $q_1-p_1= p_1\cdot a \:\Rightarrow\: q_1 = p_1\cdot(1+a)$), il che non è possibile in quanto per ipotesi $q_1$ è un numero primo. Dunque $q_1-p_1$ è primo.
+%
+%Considerando l'ultima uguaglianza della (\ref{eq:num_primi_scomp4}) e sostituendo in essa $m$ con la (\ref{eq:num_primi_scomp1}) otteniamo
+%
+%\begin{equation}\label{eq:num_primi_scomp5}
+%n= p_1 \cdot p_2 \cdot \ldots\cdot p_s-p_1\cdot q_2 \cdot \ldots \cdot q_t \:\Rightarrow\: n = p_1\cdot(p_2\cdot \ldots \cdot p_s- q_2\cdot \ldots\cdot q_t)
+%\end{equation}
+%
+%In qualunque modo sia scomponibile il secondo fattore della (\ref{eq:num_primi_scomp5}), si ha una fattorizzazione di $n<m$ che contiene $p_1$ e che è quindi diversa da quella della (\ref{eq:num_primi_scomp3}), contrariamente all'ipotesi che $m$ sia il numero più piccolo che ammette più di una fattorizzazione.
+%\end{enumerate}
+%Dunque la scomposizione di un numero in fattori primi è unica.
+%\end{proof}
 
 \begin{exrig}
  \begin{esempio}
