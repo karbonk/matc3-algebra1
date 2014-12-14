@@ -1,0 +1,25 @@
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\usetikzlibrary{matrix}
+
+\begin{tikzpicture}
+	\begin{scope}[every node/.style={anchor=base,row sep=2pt, column sep =-1pt, text depth=0pt, text height=6pt}]% ,text width=3pt
+ 	\matrix (tabver) [matrix of nodes]
+ 	{%
+ 		$p$ & $q$ &[-.1cm] \phantom{-} &$p \wedge q$ & [.8cm] & $p$ & $q$ &[-.1cm] \phantom{-} & $p \vee q$ &[.8cm] & $p$ &[-.1cm] \phantom{-} & $\neg p$ &[.8cm]& $p$ & $q$ &[-.1cm] \phantom{-} & $p \Rightarrow q$ &[.8cm]& $p$ & $q$ &[-.1cm] \phantom{-} & $p \Leftrightarrow q$ \\
+ 	 	  F   &   F    &                                 &         F           &              &  F    &  F     &                                  &         F        &           &   F    &                                 &      V&                                  &  F  &   F  &  &      V&     &  F  &   F  &  &      V\\
+ 	      F   &   V	  &                                 &         F           &              &   F   &  V     &                                  &         V        &           &   V   & \phantom{-}             &      F&                                  &  F  &   V  &  &      V&     &  F  &   V  &  &      F\\
+ 	      V   &   F	  &                                 &         F           &              &   V   &  F     &                                  &         V        &           &        &                                  &        &                                  &  V  &   F  &  &      F&     &  V  &   F  &  &      F\\
+ 	      V   &   V	  &\phantom{-}             &         V           &              &   V   &  V     &\phantom{-}              &         V        &           &        &                                  &        &                                  &  V  &   V  &\phantom{-}&      V&     &  V  &   V  &\phantom{-}&      V\\
+ 	};
+	\end{scope}
+	\draw (tabver-1-1.south west)--(tabver-1-4.south east);
+	\draw (tabver-1-3.north)--(tabver-5-3.south);
+	\draw (tabver-1-6.south west) -- (tabver-1-9.south east);
+	\draw (tabver-1-8.north)--(tabver-5-8.south);
+	\draw (tabver-1-11.south west) -- (tabver-1-13.south east);
+	\draw (tabver-1-12.north)--(tabver-3-12.south);
+	\draw (tabver-1-15.south west) -- (tabver-1-18.south east);
+	\draw (tabver-1-17.north)--(tabver-5-17.south);
+	\draw (tabver-1-20.south west) -- (tabver-1-23.south east);
+	\draw (tabver-1-22.north)--(tabver-5-22.south);
+\end{tikzpicture}
