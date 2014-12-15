@@ -1,0 +1,25 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% (c) 2014 Daniele Masini - d.masini.it@gmail.com
+\begin{tikzpicture}[font=\small]
+\begin{scope}[thin,gray,xscale=2.5]
+\foreach \x/\xtext in {%
+-1,-.875,...,2
+}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+\end{scope}
+\begin{scope}[thick,xscale=2.5]
+\draw[->] (-1.2,0) -- (2.2,0) node [above] () {$\insQ$};
+\foreach \x/\xtext in {%
+-1,0,1,2}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
+\draw (0,0.5) -- node[above] {$u$} (1,0.5);
+\draw (0,0.4) -- (0,0.6);
+\draw (1,0.4) -- (1,0.6);
+\end{scope}
+\begin{scope}[scale=2.5]
+\draw[fill] (1.5,0) circle (.5pt) node[below] {$\dfrac{3}{2}$};
+\draw[fill] (-0.75,0) circle (.5pt) node[below] {$-\dfrac{3}{4}$};
+\draw[fill] (0.625,0) circle (.5pt) node[below] {$\dfrac{5}{8}$};
+\end{scope}
+
+\end{tikzpicture}
