@@ -15,26 +15,26 @@
  	};
 	\end{scope}
 	% Prima divisione
-	\draw(divisione-1-5.north west)--(divisione-2-5.south west);
-	\draw(divisione-1-5.south west)--(divisione-1-6.south east);
-	\draw(divisione-2-2.south west)--(divisione-2-3.south east);
-	\draw(divisione-4-3.south west)--(divisione-4-4.south east);
+	\draw (divisione-1-5.north west)--(divisione-2-5.south west);
+	\draw (divisione-1-5.south west)--(divisione-1-6.south east);
+	\draw[gray] (divisione-2-2.south west)--(divisione-2-3.south east);
+	\draw[gray] (divisione-4-3.south west)--(divisione-4-4.south east);
 	% Seconda divisione
 	\draw (divisione-1-12.north west) -- (divisione-2-12.south west);
 	\draw (divisione-1-12.south west) -- (divisione-1-14.south east);
-	\draw(divisione-2-8.south west)--(divisione-2-10.south east);
-	\draw (divisione-4-9.south west) -- (divisione-4-11.south east);
+	\draw[gray] (divisione-2-8.south west)--(divisione-2-10.south east);
+	\draw[gray] (divisione-4-9.south west) -- (divisione-4-11.south east);
 	% Terza divisione
 	\draw (divisione-1-22.north west) -- (divisione-2-22.south west);
 	\draw (divisione-1-22.south west) -- (divisione-1-24.south east);
-	\draw (divisione-2-16.south west) -- (divisione-2-19.south east);
-	\draw (divisione-4-18.south west) -- (divisione-4-20.south east);
-	\draw (divisione-6-18.south west) -- (divisione-6-21.south east);
+	\draw[gray] (divisione-2-16.south west) -- (divisione-2-19.south east);
+	\draw[gray] (divisione-4-18.south west) -- (divisione-4-20.south east);
+	\draw[gray] (divisione-6-18.south west) -- (divisione-6-21.south east);
 	% Frecce
-	\draw[densely dotted,->] (divisione-1-4) -- (divisione-3-4);
-	\draw[densely dotted,->] (divisione-1-11) -- (divisione-3-11);
-	\draw[densely dotted,->] (divisione-1-20) -- (divisione-3-20);
-	\draw[densely dotted,->] (divisione-1-21) -- (divisione-5-21);
+	\draw[gray,densely dotted,->] (divisione-1-4) -- (divisione-3-4);
+	\draw[gray,densely dotted,->] (divisione-1-11) -- (divisione-3-11);
+	\draw[gray,densely dotted,->] (divisione-1-20) -- (divisione-3-20);
+	\draw[gray,densely dotted,->] (divisione-1-21) -- (divisione-5-21);
 	% Didascalie
 	\node (a) [below=of divisione-7-5.north west] {(a)};
 	\node (b) [below=of divisione-7-12.north west] {(b)};
