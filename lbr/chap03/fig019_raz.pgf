@@ -1,33 +1,35 @@
 % (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\usetikzlibrary{matrix}
+
 \begin{tikzpicture}
-  \begin{scope}[font=\ttfamily\small,  ]
+  \begin{scope}[every node/.style={anchor=base,row sep=2pt, column sep =-4pt, text depth=0pt, text height=6pt}]%[font=\ttfamily\small,  ]
     \matrix (a) [matrix of nodes]{
-    1 &{}&{}&{}&{}&3&{}&{}&{}&{}&{}&{}&[20mm]&1&1&{}&{}&{}&8\\
-    1 &0 &{}&{}&{}&|[blue]|0&|[blue]|,&|[blue]|3&|[blue]|3&|[blue]|3&|[blue]|3&|[font=\scriptsize,blue]|\ldots&{}&{}&3&{}&{}&{}&|[blue]|1&|[blue]|,&|[blue]|3&|[blue]|7&|[blue]|5\\
-    {}&1 &0 &{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&3&0\\
-    &&1&0&&&{}&{}&{}&{}&{}&{}&{}&{}&{}&6&0\\
-    &&&1&0&&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&4&0\\
-    &&&&|[font=\scriptsize, red]|\ldots&{}&&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&|[red]|0\\
-    };
+    1 &{}&{}&{}&{}&[1pt]&3&{}&{}&{}&{}&{}&{}&[20mm]&1&1&{}&{}&{}&[1pt]&8& & & &{}\\
+    1 &0 &{}&{}&{}&&|[blue]|0&|[blue]|,&|[blue]|3&|[blue]|3&|[blue]|3&|[blue]|3&|[font=\scriptsize,blue]|\ldots&{}&{}&3&{}&{}&{}&&|[blue]|1&|[blue]|,&|[blue]|3&|[blue]|7&|[blue]|5\\
+    {}&1 &0 &{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&3&0\\
+    &&1&0&&&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&6&0\\
+    &&&1&0&&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&4&0&{}\\
+    &&&&|[font=\scriptsize, red]|\vdots&{}&&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&{}&|[red]|0\\
+  };
   \end{scope}
-  \begin{scope}[densely dotted,->]
+  \begin{scope}[gray,densely dotted,->]
     \draw (a-1-2.center) -- (a-2-2);
     \draw (a-1-3.center) -- (a-3-3);
     \draw (a-1-4.center) -- (a-4-4);
     \draw (a-1-5.center) -- (a-5-5);
 
-    \draw (a-1-16.center) -- (a-3-16);
-    \draw (a-1-17.center) -- (a-4-17);
-    \draw (a-1-18.center) -- (a-5-18);
+    \draw (a-1-17.center) -- (a-3-17);
+    \draw (a-1-18.center) -- (a-4-18);
+    \draw (a-1-19.center) -- (a-5-19);
   \end{scope}
 
-  \draw (a-1-6.north west) -- (a-1-6.south west);
-  \draw (a-2-6.north west) -- (a-2-11.north east);
+  \draw (a-1-7.north west) -- (a-2-7.south west);
+  \draw (a-1-7.south west) -- (a-1-12.south east);
 
-  \draw (a-1-19.north west) -- (a-1-19.south west);
-  \draw (a-2-19.north west) -- (a-2-23.north east);
+  \draw (a-1-21.north west) -- (a-2-21.south west);
+  \draw (a-1-21.south west) -- (a-1-25.south east);
 
-  \begin{scope}[font=\small]
+  \begin{scope}%[font=\small]
     \node[below] at(a-6-6.south) {$\displaystyle\frac{1}{3}=\np{0,3333}\ldots$};
     \node[below=3mm] at(a-6-18.east) {$\displaystyle\frac{11}{8}=\np{1,375}$};
   \end{scope}
