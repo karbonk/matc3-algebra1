@@ -430,9 +430,9 @@ In maniera analoga, anche la sottrazione ha l'elemento neutro~0 solo a destra:
 
 La proprietà \emph{distributiva} coinvolge due operazioni differenti ($\diamond$ e $\star$). La proprietà distributiva di $\star$ rispetto a $\diamond$ è espressa in simboli:
 
-\begin{empheq}[box=\fbox]{equation*}
-a \star (b \diamond c) = a \star b \diamond a \star c.
-(a \diamond b) \star c = a \star c \diamond b \star c.
+\begin{empheq}[box=\fbox]{flalign*}
+a \star (b \diamond c) &= a \star b \diamond a \star c\\
+(a \diamond b) \star c &= a \star c \diamond b \star c.
 \end{empheq}
 
 \subsubsection{Proprietà distributiva della moltiplicazione}
@@ -473,7 +473,7 @@ Se, però, la sottrazione è a destra:
 
 \begin{legge}[Annullamento del Prodotto]\label{legge:annullamento_del_prodotto}
  Il prodotto di due o più numeri naturali si annulla se e solo se almeno uno dei fattori è nullo.
-\[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
+%\[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
 \end{legge}
 In simboli:
 \begin{empheq}[box=\fbox]{equation*}
@@ -487,7 +487,7 @@ La dimostrazione verrà fatta prima per l'implicazione diretta ($\Rightarrow$) e
 
 Supponiamo che esistano due valori $a$ e $b$ entrambi non nulli, per i quali vale la condizione $a\cdot b = 0$. Poiché $b\neq 0$ possiamo dividere per $b$ le quantità a destra e a sinistra del simbolo di uguaglianza, mantenendo comunque verificata l'uguaglianza stessa. Quindi abbiamo $a\cdot b : b = 0 : b$. Visto che $(a\cdot b):c = a\cdot(b:c)$ e che qualunque numero diviso se stesso da come risultato 1, la parte a sinistra del simbolo disuguaglianza è $a \cdot b : b = a \cdot 1 = a$. Poiché 0 diviso qualunque numero diverso da zero dà come risultato 0, la parte a destra dell'uguaglianza vale $0 : b = 0$. Dunque mettendo insieme i passaggi precedenti otteniamo $a = 0$, che contraddice l'ipotesi iniziale ($a$ e $b$ entrambi non nulli), cioè siamo arrivati ad un assurdo. Pertanto abbiamo dimostrato che $a\cdot b = 0 \:\Rightarrow\: a = 0\;\vee\;b=0$.
 
-\item La dimostrazione dell'implicazione inversa ($a = 0\;\vee\;b=0 \:\Rightarrow\: a\cdot b = 0$) è banale e deriva direttamente dalla definizione dell'operazione di moltiplicazione. Infatti se $a = 0$ qualunque sia $b$ si ha $0\cdot b = 0$. Lo stesso dicasi per $b$.
+\item La dimostrazione dell'implicazione inversa ($a = 0\;\vee\;b=0 \:\Rightarrow\: a\cdot b = 0$) è banale e deriva direttamente dalla definizione dell'operazione di moltiplicazione. Infatti se $a = 0$ qualunque sia $b$ si ha $0\cdot b = 0$. Lo stesso ragionamento vale per $b=0$.
 \end{enumerate}
 \end{proof}
 
@@ -952,6 +952,7 @@ Pertanto~$\mcd(60\text{,~}120\text{,~}90)=2\cdot 3\cdot 5=30$.
  Due numeri~$a$ e~$b$ si dicono \emph{primi tra loro} o \emph{coprimi} se~$\mcd(a\text{,~}b)=1$.
 \end{definizione}
 
+\pagebreak
 \begin{exrig}
  \begin{esempio}
  Numeri primi tra loro:
@@ -995,7 +996,6 @@ Calcolo del~$\mcm$ di due o più numeri naturali:
 esponente.
 \end{enumeratea}
 \end{procedura}
-%\pagebreak
 
 \begin{exrig}
  \begin{esempio}
@@ -1134,6 +1134,7 @@ nell'ordine nel quale sono scritte.
 \paragraph {VI} Se un'espressione senza parentesi contiene addizioni, sottrazioni, moltiplicazioni, divisioni e
 potenze, si eseguono prima le potenze, poi moltiplicazioni e divisioni, rispettando l'ordine con cui sono
 scritte, e poi addizioni e sottrazioni, rispettando l'ordine.
+\pagebreak
 \begin{exrig}
  \begin{esempio}
 Semplificare l'espressione $18:2:9+5^2-2\cdot3^2:3-1$.
@@ -1167,9 +1168,7 @@ Semplificare l'espressione $5\cdot(4+3^2-1)$.
 \paragraph{VIII} Se l'espressione contiene più ordini di parentesi, si eseguono per prima le operazioni racchiuse nelle parentesi più interne, rispettando le regole precedenti, si eliminano le parentesi e si procede considerando la nuova espressione. Se ci sono ancora delle parentesi si eseguono per prima le operazioni contenute nelle parentesi più interne, rispettando le regole precedenti, si eliminano le parentesi e si procede considerando la nuova espressione. E così via.
 
 Per facilitare il riconoscimento dei livelli di parentesi, in genere si usano le parentesi tonde $($\ldots$)$ per il primo livello (quello più interno), le quadre $[$\ldots$]$ per il secondo livello e le graffe $\{$\ldots$\}$ per il terzo livello (quello più esterno).
-L'uso di parentesi di diverso tipo rende visivamente più semplice l'ordine da seguire nelle operazioni, ma in
-un'espressione le parentesi possono anche essere soltanto tonde. Ciò accade, per esempio, quando si usano gli
-strumenti di calcolo elettronico come il computer e la calcolatrice.
+L'uso di parentesi di diverso tipo rende visivamente più evidente l'ordine da seguire nelle operazioni, ma in un'espressione le parentesi possono anche essere soltanto tonde. Ciò accade, per esempio, quando si usano gli strumenti di calcolo elettronico come il computer e la calcolatrice.
 
 \vspazio\ovalbox{\risolvi\ref{ese:1.27}}
 \newpage
