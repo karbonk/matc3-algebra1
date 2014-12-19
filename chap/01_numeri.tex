@@ -473,26 +473,27 @@ Se, però, la sottrazione è a destra:
 
 \begin{legge}[Annullamento del Prodotto]\label{legge:annullamento_del_prodotto}
  Il prodotto di due o più numeri naturali si annulla se e solo se almeno uno dei fattori è nullo.
-%\[ a\cdot b=0\quad\Leftrightarrow\quad a=0\,\text{ oppure }\,b=0. \]
 \end{legge}
-In simboli:
-\begin{empheq}[box=\fbox]{equation*}
-a\cdot b=0\quad\Leftrightarrow\quad a=0\;\vee\;b=0.
-\end{empheq}
+%In simboli:
+%\begin{empheq}[box=\fbox]{equation*}
+%a\cdot b=0\quad\Leftrightarrow\quad a=0\;\vee\;b=0.
+%\end{empheq}
 
 \begin{proof}
-La dimostrazione verrà fatta prima per l'implicazione diretta ($\Rightarrow$) e poi per quella inversa ($\Leftarrow$).
 \begin{enumerate}
-\item $a\cdot b = 0 \:\Rightarrow\: a = 0\;\vee\;b=0$~~si dimostra per assurdo.
+%\item $a\cdot b = 0 \:\Rightarrow\: a = 0\;\vee\;b=0$~~si dimostra per assurdo.
+\item Se $a\cdot b = 0$ allora $a = 0$ oppure $b = 0$
 
-Supponiamo che esistano due valori $a$ e $b$ entrambi non nulli, per i quali vale la condizione $a\cdot b = 0$. Poiché $b\neq 0$ possiamo dividere per $b$ le quantità a destra e a sinistra del simbolo di uguaglianza, mantenendo comunque verificata l'uguaglianza stessa. Quindi abbiamo $a\cdot b : b = 0 : b$. Visto che $(a\cdot b):c = a\cdot(b:c)$ e che qualunque numero diviso se stesso dà come risultato 1, la parte a sinistra del simbolo di uguaglianza è $a \cdot b : b = a \cdot 1 = a$. Poiché 0 diviso qualunque numero diverso da zero dà come risultato 0, la parte a destra dell'uguaglianza vale $0 : b = 0$. Dunque mettendo insieme i passaggi precedenti otteniamo $a = 0$, che contraddice l'ipotesi iniziale ($a$ e $b$ entrambi non nulli), cioè siamo arrivati ad un assurdo. Pertanto abbiamo dimostrato che $a\cdot b = 0 \:\Rightarrow\: a = 0\;\vee\;b=0$.
+Dimostriamolo per assurdo.
 
-\item La dimostrazione dell'implicazione inversa ($a = 0\;\vee\;b=0 \:\Rightarrow\: a\cdot b = 0$) deriva direttamente dalla definizione dell'operazione di moltiplicazione. Infatti se $a = 0$, qualunque sia $b$ si ha $0\cdot b = 0$. Un ragionamento equivalente vale nel caso in cui $b=0$.
+Supponiamo che esistano due valori $a$ e $b$ entrambi non nulli, per i quali vale la condizione $a\cdot b = 0$. Poiché $b\neq 0$ possiamo dividere per $b$ le quantità a destra e a sinistra del simbolo di uguaglianza, mantenendo comunque verificata l'uguaglianza stessa. Quindi abbiamo $a\cdot b : b = 0 : b$. La parte a sinistra del simbolo di uguaglianza è $a \cdot b : b = a \cdot 1 = a$. Poiché 0 diviso qualunque numero diverso da zero dà come risultato 0, la parte a destra dell'uguaglianza vale $0 : b = 0$. Dunque mettendo insieme i passaggi precedenti otteniamo $a = 0$, che contraddice l'ipotesi iniziale ($a$ e $b$ entrambi non nulli), cioè siamo arrivati ad un assurdo.
+
+\item La dimostrazione dell'implicazione inversa (se $a = 0$ oppure $b = 0$ allora $a\cdot b = 0$) deriva direttamente dalla definizione dell'operazione di moltiplicazione. Infatti se $a = 0$, qualunque sia $b$ si ha $0\cdot b = 0$. Un ragionamento equivalente vale nel caso in cui $b=0$.
 \end{enumerate}
 \end{proof}
 
 %questo è presente anche nella prima pagina del capitolo 14
-Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numeri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100$ per $101$ e dividendo il risultato per~$2$ Gauss aveva ottenuto rapidamente la risposta: $100 \cdot 101 : 2=\np{5050}$.
+Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numeri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100$ per $101$ e dividendo il risultato per~$2$, Gauss aveva ottenuto rapidamente la risposta: $100 \cdot 101 : 2=\np{5050}$.
 \begin{center}
 \begin{tabular*}{.75\textwidth}{@{\extracolsep{\fill}}*{10}{r}}
 $1$&$2$&$3$&$4$&$5$&$\ldots$&$97$&$98$&$99$&$100$\\
