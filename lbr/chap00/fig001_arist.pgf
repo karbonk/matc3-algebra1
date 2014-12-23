@@ -1,0 +1,56 @@
+\begin{tikzpicture}[font=\small]
+\tkzDefPoint(0,0){Y}
+\tkzDefPoint(.2,0){X}
+% cerchio di centro Y e raggio 1 cm
+\tkzDrawCircle[R,color=blue](Y,.9 cm)
+% cerchio di centro X e raggio 0.5 cm
+\tkzDrawCircle[R,color=red,fill=orange!40,opacity=.5](X,.5 cm)
+\node at(.2,0){X};
+\node at(-.5,.4){Y};
+\node at(0,1.2){A};
+\node at(0,-1.3){Ogni $ x $ è $ y $};
+
+\tkzDefPoint(2.3,0){Y}
+\tkzDefPoint(4,0){X}
+% cerchio di centro Y e raggio .7 cm
+\tkzDrawCircle[R,color=red](Y,.7 cm)
+% cerchio di centro X e raggio 0.7 cm
+\tkzDrawCircle[R,color=blue](X,.7 cm)
+\node at(2.3,0){X};
+\node at(4,0){Y};
+\node at(3.2,1.2){E};
+\node at(3.2,-1.3){Nessun $ x $ è $ y $};
+
+\tkzDefPoint(6,0){Y}
+\tkzDefPoint(6.8,0){X}
+% cerchio di centro Y e raggio .7 cm
+\tkzDrawCircle[R,color=red](Y,.7 cm)
+% cerchio di centro X e raggio 0.7 cm
+\tkzDrawCircle[R,color=blue](X,.7 cm)
+\node at(6.4,0){X};
+\node at(7.1,.3){Y};
+\node at(6.4,1.2){I};
+\node at(6.4,-1.3){Qualche $ x $ è $ y $};
+
+\begin{scope}
+\tkzClipCircle[R](X,.7 cm)
+\tkzDrawCircle[R,color=red,fill=orange!40,opacity=.4](Y,.7 cm)
+\end{scope}
+
+\tkzDefPoint(8.8,0){Y}
+\tkzDefPoint(9.6,0){X}
+% cerchio di centro Y e raggio .7 cm
+\tkzDrawCircle[R,color=red,fill=orange!40,opacity=.4](Y,.7 cm)
+% cerchio di centro X e raggio 0.7 cm
+\tkzDrawCircle[R,color=blue](X,.7 cm)
+\node at(8.5,0){X};
+\node at(9.9,.3){Y};
+\node at(9.2,1.2){O};
+\node at(9.2,-1.3){Qualche $ x $ non è $ y $};
+
+\begin{scope}
+\tkzClipCircle[R](Y,.7 cm)
+\tkzDrawCircle[R,color=red,fill=white](X,.7 cm)
+\end{scope}
+
+\end{tikzpicture}
