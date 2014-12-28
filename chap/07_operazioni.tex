@@ -75,7 +75,7 @@ auto esposta è usata, allora~$U=\emptyset $.
 \end{esempio}
 \end{exrig}
 
-\ovalbox{\risolvi \ref{ese:7.1}}
+\ovalbox{\risolvii \ref{ese:7.1}, \ref{ese:7.2}, \ref{ese:7.3}, \ref{ese:7.4}, \ref{ese:7.5}, \ref{ese:7.6}}
 
 \section{Insieme delle parti}
 
@@ -151,7 +151,7 @@ allora~$\wp (A)=\{S_{1}\text{, }S_{2}\text{, }S_{3}\text{, }S_{4}\text{, }S_{5}\
 
 Generalizzando, se~$A$ ha~$n$ elementi, l'insieme delle parti $\wp (A)$ ne ha~$2^{n}$.
 
-\vspazio\ovalbox{\risolvii \ref{ese:7.2}, \ref{ese:7.3}, \ref{ese:7.4}, \ref{ese:7.5}, \ref{ese:7.6}}
+\vspazio\ovalbox{\risolvii \ref{ese:7.7}, \ref{ese:7.8}, \ref{ese:7.9}, \ref{ese:7.10}, \ref{ese:7.11}}
 
 \section{Insieme unione}
 
@@ -200,7 +200,7 @@ e~$Y=\{$do, re, mi$\}$, allora, poiché $Y\subset X$, $W=X\cup Y=X=\{$do, re, mi
 \end{esempio}
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:7.7}, \ref{ese:7.8}, \ref{ese:7.9}}
+\ovalbox{\risolvii \ref{ese:7.12}, \ref{ese:7.13}, \ref{ese:7.14}, \ref{ese:7.15}}
 
 \section{Insieme intersezione}
 
@@ -252,6 +252,10 @@ ossia $A\cap B=\emptyset $, i due insiemi si dicono \emph{disgiunti}.
 \item $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$: proprietà \emph{distributiva dell'unione rispetto all'intersezione}.
 \end{enumeratea}
 
+\begin{definizione}
+Dati due insiemi si dicono \emph{disgiunti} se non hanno elementi in comune, ossia se la loro intersezione è vuota.
+\end{definizione}
+
 \begin{exrig}
  \begin{esempio}
 Siano~$X=\{\text{do, re, mi. fa, sol, la, si}\}$
@@ -267,7 +271,7 @@ Siano~$D=\{\text{1, 3, 5}\}$ e~$P=\{\text{2, 4, 6}\}$ allora~$N=P\cap D=\emptyse
  \end{esempio}
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:7.10}, \ref{ese:7.11}, \ref{ese:7.12}, \ref{ese:7.13}}
+\ovalbox{\risolvii \ref{ese:7.16}, \ref{ese:7.17}, \ref{ese:7.18}, \ref{ese:7.19}}
 
 \subsection{Insieme differenza}
 
@@ -326,7 +330,7 @@ $Y\subset X$, $W=X-Y=\{$fa, sol, la, si$\}$.
  \end{esempio}
 \end{exrig}
 
-\ovalbox{\risolvi \ref{ese:7.14}}
+\ovalbox{\risolvii \ref{ese:7.20}, \ref{ese:7.21}, \ref{ese:7.22}}
 
 \section{Insieme complementare}
 
@@ -375,7 +379,7 @@ si può determinare~${\overline{B}}_{U}=\{x\in \insN\mid 6\le x\le~10\}$.
  \end{esempio}
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:7.15}, \ref{ese:7.16}, \ref{ese:7.17}}
+\ovalbox{\risolvii \ref{ese:7.23}, \ref{ese:7.24}, \ref{ese:7.25}, \ref{ese:7.26}, \ref{ese:7.27}}
 
 \section{Leggi di De Morgan}
 
@@ -392,7 +396,29 @@ Dimostriamo la prima legge di De Morgan utilizzando i diagrammi di Eulero-Venn.
  \input{./lbr/chap07/fig013_dem.pgf}
 \end{center}
 
-\ovalbox{\risolvi \ref{ese:7.18}}
+\ovalbox{\risolvi \ref{ese:7.27}}
+
+\section{Partizione di un insieme}
+\begin{definizione}
+Dato un insieme~$A$ e alcuni suoi sottoinsiemi $A_1, A_2, A_3, \ldots, A_n$, si dice che costituiscono una \emph{partizione} di~$A$ se:
+\begin{enumeratea}
+ \item sono tutti non vuoti;
+ \item sono a due a due disgiunti;
+ \item la loro unione dà l'insieme~$A$.
+\end{enumeratea}
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ Partizione di un insieme.
+
+Dato l'insieme~$C$ delle carte da gioco napoletane, i sottoinsiemi~$A_1$ delle carte a denari, $A_2$ delle carte a spade, $A_3$ delle carte a coppe, $A_4$ delle carte a bastoni costituiscono una partizione di~$C$.
+
+Infatti nessuno degli insiemi $A_1, A_2, A_3, A_4$ è vuoto, ciascuno è costituito da~10 elementi. Inoltre i sottoinsiemi sono a due a due disgiunti perché non ci sono carte che appartengono a $A_1 \cap A_2$, $A_1 \cap A_3$, $A_1 \cap A_4$, $A_2 \cap A_3$, $A_2 \cap A_4$, $A_3 \cap A_4$, cioè non ci sono carte che possono appartenere contemporaneamente a due semi distinti. Infine l'unione $A_1\cup A_2 \cup A_3 \cup A_4$ dà l'insieme delle carte~$C$.
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:7.28}, \ref{ese:7.29}, \ref{ese:7.30}, \ref{ese:7.31}}
 
 \section{Prodotto cartesiano fra insiemi}
 
@@ -447,7 +473,7 @@ Quindi si può notare che~$A\times B\neq B\times A$.
 Poiché $A\times B\neq B\times A$ nel prodotto cartesiano non vale la
 proprietà commutativa.
 
-\vspazio\ovalbox{\risolvii \ref{ese:7.19}, \ref{ese:7.20}, \ref{ese:7.21}, \ref{ese:7.22}, \ref{ese:7.23}, \ref{ese:7.24} }
+\vspazio\ovalbox{\risolvii \ref{ese:7.32}, \ref{ese:7.33}, \ref{ese:7.34}, \ref{ese:7.35}, \ref{ese:7.36}, \ref{ese:7.37}}
 
 \subsection{Rappresentazione del prodotto cartesiano tra insiemi}
 \paragraph{Tabulazione delle coppie ordinate}
@@ -558,28 +584,30 @@ domanda, contiamo tutti i puntini che compaiono nel disegno. Si ha
 $\card(A)=20$.
 
 Rispondiamo ora alle altre domande.
-\paragraph{a)} Quanti tra loro ballano \emph{nessuno} dei balli indicati?
+\begin{enumeratea}
+\item Quanti tra loro ballano \emph{nessuno} dei balli indicati?
 Chi non balla nessuno dei balli indicati sta nell'insieme~$A$, ma in nessuno degli insiemi
 $R$, $S$, $T$ quindi appartiene al complementare
 di~$R\cup S\cup T$ rispetto all'insieme~$A$,
 dunque~$\card(\overline{({R\cup S\cup T})}_{A})=6$.
 
-\paragraph{b)} Quanti tra loro ballano \emph{almeno uno} dei balli tra tango, samba, rumba? Chi balla almeno uno di quei balli è rappresentato dagli elementi
+\item Quanti tra loro ballano \emph{almeno uno} dei balli tra tango, samba, rumba? Chi balla almeno uno di quei balli è rappresentato dagli elementi
 dell'insieme~$R\cup S\cup T$, quindi~$\card(R\cup S\cup T)=14$.
 
-\paragraph{c)} Quanti tra loro ballano \emph{almeno} il samba?
+\item Quanti tra loro ballano \emph{almeno} il samba?
 Gli amici che ballano almeno il samba sono nell'insieme
 $S$, quindi~$\card(S)=6$.
 
-\paragraph{d)} Quanti tra loro ballano \emph{solo} la rumba? Nell'insieme~$R$ sono rappresentati gli amici che
+\item Quanti tra loro ballano \emph{solo} la rumba? Nell'insieme~$R$ sono rappresentati gli amici che
 ballano almeno il rumba, quindi dobbiamo togliere dall'insieme~$R$ gli elementi che stanno in
 $S$ o in~$T$:~$\card(R-(T\cup S))=4$.
 
-\paragraph{e)} Quanti tra loro ballano la rumba \emph{e} il tango? Quelli che ballano sia la rumba che il tango sono gli elementi
+\item Quanti tra loro ballano la rumba \emph{e} il tango? Quelli che ballano sia la rumba che il tango sono gli elementi
 dell'insieme intersezione~$R\cap T$, quindi~$\card(R\cap T)=2$.
 
-\paragraph{f)} Quanti tra loro ballano \emph{tutti} i balli indicati? Quelli che ballano tutti e tre i balli indicati sono elementi
+\item Quanti tra loro ballano \emph{tutti} i balli indicati? Quelli che ballano tutti e tre i balli indicati sono elementi
 dell'insieme intersezione~$R\cap S\cap T$, quindi~$\card(R\cap S\cap T)=1$.
+\end{enumeratea}
  \end{esempio}
 
  \begin{esempio}
@@ -684,10 +712,10 @@ In conclusione i ragazzi sufficienti allo scritto e all'orale sono~4.
 \end{esempio}
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:7.25}, \ref{ese:7.26}, \ref{ese:7.27}, \ref{ese:7.28}, \ref{ese:7.29}, \ref{ese:7.30}, \ref{ese:7.31}, \ref{ese:7.32}, \ref{ese:7.33}, \ref{ese:7.34},
-\ref{ese:7.35}, \ref{ese:7.36}, \ref{ese:7.37}}
+\ovalbox{\risolvii \ref{ese:7.38}, \ref{ese:7.39}, \ref{ese:7.40}, \ref{ese:7.41}, \ref{ese:7.42}, \ref{ese:7.43}, \ref{ese:7.44}, \ref{ese:7.45}, \ref{ese:7.46}, \ref{ese:7.47},
+\ref{ese:7.48}, \ref{ese:7.49}, \ref{ese:7.50}}
 
-\vspazio\ovalbox{\ref{ese:7.38}}
+\vspazio\ovalbox{\ref{ese:7.51}}
 \newpage
  \input{./chap/07_esercizi}
 \cleardoublepage
