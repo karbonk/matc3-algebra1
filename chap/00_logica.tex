@@ -12,7 +12,7 @@ Assumiamo come primitivo, cioè senza darne una definizione, il concetto di prop
 Per esempio, sono proposizioni logiche affermazioni del tipo:
 \begin{enumerate}
 \item <<Roma è la capitale d'Italia>>;
-\item <<2+3=10>>;
+\item <<$2+3=10$>>;
 \item <<5 è un numero dispari>>;
 \item <<Un triangolo ha quattro angoli>>.
 \end{enumerate}
@@ -37,7 +37,11 @@ La valutazione della verità o falsità di una proposizione composta dipende dal
 
 Vediamo ora il calcolo algebrico con le proposizioni. Si usa indicare le proposizioni con lettere minuscole, tipo $p$, $q$, $r$, \ldots
 
-La \emph{congiunzione} di due proposizioni si ottiene con il connettivo ``e'' (\emph{et}, \emph{and}, $\wedge$): la proposizione $r$ ottenuta dalla congiunzione delle proposizioni $p$ e $q$, in simboli si usa scrivere $r=p\wedge q$, è vera se entrambe le proposizioni $p$ e $q$ sono contestualmente vere, mentre è falsa quando anche una sola delle due proposizioni è falsa.
+La \emph{congiunzione} di due proposizioni si ottiene con il connettivo ``e'' (\emph{et}, \emph{and}, $\wedge$): la proposizione $r$ ottenuta dalla congiunzione delle proposizioni $p$ e $q$, che in simboli si usa scrivere
+\begin{empheq}[box=\fbox]{equation*}
+r=p\wedge q
+\end{empheq}
+è vera se entrambe le proposizioni $p$ e $q$ sono contestualmente vere, mentre è falsa quando anche una sola delle due proposizioni è falsa.
 
 Per esempio, <<Ho avuto 7 in italiano e matematica>> è un'affermazione vera solo quando ho avuto 7 in entrambe le materie. Oppure, <<Per guidare il motorino occorre aver compiuto 14 anni e possedere il patentino>> significa che posso guidare il motorino solo se ho entrambi i requisisti: aver compiuto 14 anni e avere il patentino.
 
@@ -56,7 +60,11 @@ F & F & F \\
  \end{tabular*}
 \end{center}
 
-La \emph{disgiunzione} (inclusiva) di due proposizioni si ottiene con il connettivo ``o'' (\emph{vel}, \emph{or}, $\vee$): la proposizione $s$ ottenuta dalla disgiunzione di due proposizioni $p$ e $q$, in simboli $s=p\vee q$, è vera quando almeno una delle due proposizioni è vera ed è falsa solo se entrambe le proposizioni sono false. Di seguito riportiamo la relativa tavola di verità.
+La \emph{disgiunzione} (inclusiva) di due proposizioni si ottiene con il connettivo ``o'' (\emph{vel}, \emph{or}, $\vee$): la proposizione $s$ ottenuta dalla disgiunzione di due proposizioni $p$ e $q$, che in simboli è scritta come
+\begin{empheq}[box=\fbox]{equation*}
+s=p\vee q
+\end{empheq}
+è vera quando almeno una delle due proposizioni è vera ed è falsa solo se entrambe le proposizioni sono false. Di seguito riportiamo la relativa tavola di verità.
 \begin{center}
  \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
  \toprule
@@ -71,7 +79,11 @@ F & F & F \\
 \end{center}
 Ad esempio, la proposizione <<100 è minore di 1 o maggiore di 10>> è vera perché è vera una delle due affermazioni, precisamente 100 è maggiore di 10. Anche nell'affermazione <<L'autobus si ferma quando qualche persona deve scendere o salire>> la ``o'' è usata in senso inclusivo.
 
-La \emph{disgiunzione esclusiva} di due proposizioni si ottiene con il connettivo (o congiunzione) ``o \ldots{} o'' (\emph{aut}, \emph{xor}, $\veebar$): la proposizione $t$ ottenuta dalla disgiunzione esclusiva di due proposizioni $p$ e $q$, in simboli $t=p \veebar q$, è vera quando soltanto una delle due proposizioni è vera ed è invece falsa quando le due proposizioni sono entrambe vere o entrambe false. La sua tavola di verità è la seguente
+La \emph{disgiunzione esclusiva} di due proposizioni si ottiene con il connettivo (o congiunzione) ``o \ldots{} o'' (\emph{aut}, \emph{xor}, $\veebar$): la proposizione $t$ ottenuta dalla disgiunzione esclusiva di due proposizioni $p$ e $q$, che in simboli è
+\begin{empheq}[box=\fbox]{equation*}
+t=p \veebar q
+\end{empheq}
+è vera quando soltanto una delle due proposizioni è vera ed è invece falsa quando le due proposizioni sono entrambe vere o entrambe false. La sua tavola di verità è la seguente
 \begin{center}
  \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
  \toprule
@@ -86,7 +98,11 @@ F & F & F \\
 \end{center}
 Per esempio, nell'affermazione <<oggi il Milan vince o pareggia>> la congiunzione ``o'' ha valore esclusivo.
 
-La \emph{negazione}, che si ottiene con il connettivo ``non'' (\emph{non}, \emph{not}, $\neg$), è un operatore che, a differenza dei precedenti, non lega più proposizioni ma agisce su un'unica proposizione (per questo si dice che è un operatore unario, in analogia all'operazione insiemistica di complementazione). La negazione di una proposizione $p$ è una proposizione che si indica con il simbolo $\neg p$ che risulta vera se $p$ è falsa, viceversa è falsa se $p$ è vera.
+La \emph{negazione}, che si ottiene con il connettivo ``non'' (\emph{non}, \emph{not}, $\neg$), è un operatore che, a differenza dei precedenti, non lega più proposizioni ma agisce su un'unica proposizione (per questo si dice che è un operatore unario, in analogia all'operazione insiemistica di complementazione). La proposizione n ottenuta dalla negazione di una proposizione $p$ è una proposizione che in simboli si indica con
+\begin{empheq}[box=\fbox]{equation*}
+n = \neg p
+\end{empheq}
+e che risulta vera se $p$ è falsa, viceversa è falsa se $p$ è vera.
 
 La doppia negazione equivale ad un'affermazione, cioè $\neg(\neg p)$ è equivalente a $p$.
 
@@ -118,7 +134,9 @@ Date le seguenti proposizioni $p=\;$<<un triangolo ha tre lati>> (Vera), $q=\;$<
 Ad esempio, la negazione di $p\wedge q$ non è $\neg p\wedge\neg q$ bensì $\neg p \vee \neg q$, mentre la negazione di $p\vee q$ è   $\neg p \wedge\neg q$.
 Per esempio, <<Non è vero che Marco e Luca sono stati bocciati>> può voler dire che entrambi non sono stati bocciati o solo uno di loro non è stato bocciato.
 In formule si hanno le seguenti equivalenze (\emph{leggi di De Morgan}):
-\[\neg(p\wedge q)=\neg p\vee\neg q\qquad\text{e}\qquad\neg(p\vee q)=\neg p\wedge\neg q.\]
+\begin{empheq}[box=\fbox]{equation*}
+\neg(p\wedge q)=\neg p\vee\neg q\qquad\text{e}\qquad\neg(p\vee q)=\neg p\wedge\neg q.
+\end{empheq}
 La verifica si può effettuare mediante la seguente tavola di verità. La quinta colonna è infatti l'opposto (negazione) della sesta e anche la settima è l'opposto (negazione) dell'ottava.
 \begin{center}
  \begin{tabular*}{.7 \textwidth}{@{\extracolsep{\fill}}*{8}{c}}
@@ -186,7 +204,11 @@ Nel linguaggio matematico sono comuni proposizioni del tipo <<Se $p$ allora $q$>
 <<Essere multiplo di 12 implica essere multiplo di 3>>.
 
 In logica frasi del tipo <<Se $p$ allora $q$>> vengono tradotte utilizzando l'operatore $\Rightarrow$ detto \emph{implicazione}.
-La scrittura <<se $p$ allora $q$>> si traduce con la scrittura $p\Rightarrow q$, che si legge ``$p$ implica $q$''.
+La scrittura <<se $p$ allora $q$>> si traduce con la scrittura
+\begin{empheq}[box=\fbox]{equation*}
+p\Rightarrow q
+\end{empheq}
+che si legge ``$p$ implica $q$''.
 La proposizione $p$ è detta \emph{antecedente}, (o \emph{ipotesi}) e la proposizione $q$ è detta \emph{conseguente} (o \emph{tesi}).
 Il significato logico della proposizione $p\Rightarrow q$ è <<tutte le volte che la proposizione $p$ è vera allora risulta vera anche la proposizione $q$>>. Ovvero non si dice niente sula caso in cui $p$ sia falsa.
 Per esempio, l'affermazione <<Se c'è il sole andiamo al mare>> è falsa solo quando c'è il sole e non andiamo al mare; l'affermazione, infatti, non dice nulla se il sole non c'è: quindi se non c'è il sole si è liberi di andare o non andare al mare. Anche l'affermazione <<Se studi sarai promosso>> dice solo che se studi sarai promosso, non dice nulla per il caso in cui tu non studi, in questo caso infatti potrai essere ugualmente promosso.
@@ -237,7 +259,11 @@ In generale, data un'implicazione $p\Rightarrow q$ (\emph{proposizione diretta})
 \item l'implicazione $\neg q\Rightarrow \neg p$ si dice \emph{contronominale} (o \emph{controinversa}) di $p\Rightarrow q$.
 \end{itemize*}
 
-La \emph{doppia implicazione}, o \emph{equivalenza logica}, di due proposizioni $p$ e $q$ dà luogo a una proposizione che in simboli si rappresenta $p\Leftrightarrow q$ (leggasi ``$p$ se e solo se $q$'') che è vera se $p$ e $q$ sono entrambe vere o entrambe false. La tavola di verità è la seguente:
+La \emph{doppia implicazione}, o \emph{equivalenza logica}, di due proposizioni $p$ e $q$ dà luogo a una proposizione che in simboli si rappresenta con
+\begin{empheq}[box=\fbox]{equation*}
+p\Leftrightarrow q
+\end{empheq}
+(leggasi ``$p$ se e solo se $q$'') che è vera se $p$ e $q$ sono entrambe vere o entrambe false. La tavola di verità è la seguente:
 \begin{center}
  \begin{tabular*}{.65 \textwidth}{@{\extracolsep{\fill}}*{6}{c}}
  \toprule
@@ -261,7 +287,7 @@ L'equivalenza logica è un relazione di equivalenza, infatti verifica le seguent
 
 In matematica si usa spesso l'espressione <<$p$ è condizione necessaria e sufficiente per $q$>>. Per esempio <<Condizione necessaria e sufficiente affinché un numero sia divisibile per 3 è che la somma delle sue cifre sia divisibile per 3>>. Il significato della frase è che <<$p$ è sufficiente per $q$>> e inoltre <<$p$ è necessario per $q$>>. In altre parole significa dire che $p\Rightarrow q$ e $q\Rightarrow p$. Nel caso dell'esempio, <<se un numero è divisibile per 3 allora la somma delle sue cifre è divisibile per 3>>, vale quindi anche l'implicazione inversa <<se la somma delle cifre di un numero è divisibile per 3 allora il numero stesso è divisibile per 3>>.
 
-In maniera analoga a quanto avviene per le espressioni numeriche, le espressioni logiche possono contenere varie proposizioni legate tra loro dagli operatori appena descritti ed eventualmente le parentesi che indicano la precedenza di applicazione degli operatori stessi. In linea di principio gli operatori vengono applicati nell'ordine nel quale si trovano nell'espressione da sinistra verso destra, tenendo però a mente che tra essi vige la seguente regola di precedenza: l'operatore $\neg$ ha la precedenza sugli altri, seguito dall'operatore $\wedge$ ed infine da $\vee$. Da ciò ne deriva un sistema di calcolo simbolico noto anche come algebra di Boole\footnote{matematico e logico britannico (1815 - 1864).}.
+In maniera analoga a quanto avviene per le espressioni numeriche, le espressioni logiche possono contenere varie proposizioni legate tra loro dagli operatori appena descritti ed eventualmente le parentesi che indicano la precedenza di applicazione degli operatori stessi. In linea di principio gli operatori vengono applicati nell'ordine nel quale si trovano nell'espressione da sinistra verso destra, tenendo però a mente che tra essi vige la seguente regola di precedenza: l'operatore $\neg$ ha la precedenza sugli altri, seguito dall'operatore $\wedge$ ed infine da $\vee$. Da ciò ne deriva un sistema di calcolo simbolico noto anche come algebra di Boole\footnote{dal nome del matematico e logico britannico George Boole (1815 - 1864).}.
 
 
 \subsection{I teoremi}
