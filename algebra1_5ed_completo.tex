@@ -66,6 +66,7 @@
 \usepackage{empheq}
 \usepackage{framed}
 \usepackage{wrapfig}
+\usepackage{caption} %aggiunto da claudio per eliminare i due punti dalle figure senza didascalia
 %========================
 % pgf & TikZ
 %========================
@@ -161,8 +162,6 @@
 \include{chap/indice}
 \include{chap/prefazione}
 \mainmatter
-%\include{chap/part_00} 
-%\include{chap/00_logica_old} 
 %%%
 %%% Prima Parte
 %%%
@@ -175,10 +174,11 @@
 %%% Seconda Parte
 %%%
 \include{chap/part_02} 
-\include{chap/05_generalita}
-\include{chap/06_rappresentazione}
-\include{chap/07_operazioni}
-\include{chap/00_logica}
+\include{chap/05_insiemi}
+\include{chap/06_logica}
+\include{chap/07_relazioni}
+\include{chap/08_funzioni}
+\begin{comment}
 %%%
 %%% Terza Parte
 %%%
@@ -234,4 +234,5 @@
 \include{chap/part_09}
 \include{chap/F_vettori}
 \include{chap/G_trigonometria}
+\end{comment}
 \end{document}

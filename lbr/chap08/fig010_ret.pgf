@@ -1,0 +1,11 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+\draw[->](-5.5,0) -- (5,0);
+\foreach \x in {-5,-4,...,4}
+\draw (\x,1.5pt) -- (\x,-1.5pt);
+
+\draw[|-|] (0,-.7) -- (1,-.7) node [below, midway] () {unità};
+
+\foreach \x/\xtext in {-5/-5,-4/-4,-3/-3,-2/-2,-1/-1,0/0,1/+1,2/+2,3/+3,4/+4}
+\node[below] at (\x,0) {$\xtext$};
+\end{tikzpicture}

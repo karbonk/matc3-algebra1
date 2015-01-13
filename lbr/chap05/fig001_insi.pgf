@@ -1,0 +1,11 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=2cm,font=\small]
+\draw (0,0)circle (1) (0,1) node[ left=1] {$A$};
+\begin{scope}[fill=CornflowerBlue, draw=black]
+\foreach \x/\xtext in {-.5/0,0/1,.5/2}
+\filldraw (\x,.2) circle (2pt) node[above right] {\xtext};
+\foreach \y/\ytext in {-.5/3,0/4,.5/5}{
+\filldraw (\y,-.7) circle (2pt) node[above right] {\ytext};
+}
+\end{scope}
+\end{tikzpicture}

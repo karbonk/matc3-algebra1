@@ -1,0 +1,54 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+%(c) 2015 Claudio Carboncini - claudio.carboncini@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm, font=\small]
+
+  \node[ellipse, minimum height=3.5cm,draw, minimum width=5cm] (D) at (0,0) {};
+
+  \node[above] (D1) at (D.north) {$\Dom$};
+
+  \begin{scope}
+    \draw [fill=lightgray] (1,0)  arc (00:360:1 and 1.5) -- cycle; 
+    \node [above right] at(.6,1) {$\ID$};
+  \end{scope}
+
+  \begin{scope}[fill=CornflowerBlue]
+    \filldraw (0,1) circle (2pt) node (a) {};
+    \node[below] (a_1) at (0,1) {Parigi};
+    \filldraw (-.2,.2) circle (2pt) node (b) {};
+    \node[below] (b_1) at (-.2,.2) {Roma};
+    \filldraw (-.1,-.7) circle (2pt) node (c) {};
+    \node[below] (c_1) at (-.1,-.7) {Atene};
+    \filldraw (-1.5,-.5) circle (2pt) ;
+    \node[below] (d_1) at (-1.5,-.5) {Firenze};
+    \filldraw (1.8,.2) circle (2pt) ;
+    \node[below] (e_1) at (1.8,.2) {Barcellona};
+  \end{scope}
+
+  \begin{scope}[xshift=6cm]
+    \node[ellipse, minimum height=3.5cm,draw, minimum width=5cm] (C) at (0,0) {};
+    \node[above] (C1) at (C.north) {$\Cod$};
+
+    \begin{scope}
+      \draw [fill=lightgray] (1,0)  arc (00:360:1 and 1.5) -- cycle; 
+      \node [above right] at(.6,1) {$\IM$};
+    \end{scope}
+    
+    \begin{scope}[fill=LimeGreen]
+      \filldraw (0,1) circle (2pt) node (a1) {};
+      \node[below] (f_1) at (0,1) {Francia};
+      \filldraw (-.2,.2) circle (2pt) node (b1) {};
+      \node[below] (g_1) at (-.2,.2) {Italia};
+      \filldraw (.2,-.4) circle (2pt) node (c1) {};
+      \node[below] (h_1) at (.2,-.4) {Grecia};
+      \filldraw (1.7,.3) circle (2pt) ;
+      \node[below] (j_1) at (1.7,.3) {Spagna};
+    \end{scope}
+  \end{scope}
+  
+  \begin{scope}[->,smooth,thick]
+    \draw[Maroon] (D1.north) .. controls +(80:1cm) and +(80:1cm) .. (C1.north) node [midway, above, black] () {$\Rel$};
+    \draw[Maroon] (a) .. controls +(80:1cm) and +(150:1cm) .. (a1);
+    \draw[Maroon] (b) .. controls +(30:2cm) and +(150:1cm) .. (b1);
+    \draw[Maroon] (c) .. controls +(-20:2cm) and +(-180:1cm) .. (c1);
+  \end{scope}
+\end{tikzpicture}

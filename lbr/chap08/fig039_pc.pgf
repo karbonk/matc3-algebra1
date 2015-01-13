@@ -1,0 +1,73 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+\tikzset{xaxe style/.style ={->}}
+\tkzInit[xmin=-2.5,xmax=2.5,ymin=-2,ymax=2.5]
+
+\clip (-3,-3) rectangle (10.5,3.5);
+
+\tkzDefPoint(-2.5,0){x1}
+\tkzDefPoint(2.5,0){x2}
+
+\tkzDefPoint(-2,-.5){r1}
+\tkzDefPoint(2,2.5){r2}
+\tkzInterLL(r1,r2)(x1,x2) \tkzGetPoint{r0}
+
+\tkzMarkAngle[arc=l,size=.5 cm,fill=LimeGreen](x2,r0,r2)
+\tkzLabelAngle[pos=.8](x2,r0,r2){$\alpha$}
+
+\tkzSetUpLine[color=Maroon]
+\tkzDrawLine[add = 0 and 0, end = $r$](r1,r2)
+
+\tkzDefPoint(2,-1){s1}
+
+\tkzDefLine[perpendicular=through s1](r1,r2)
+\tkzSetUpLine[color=white]
+\tkzDrawLine[add = -.1 and 0, end = $s$](tkzPointResult, s1) \tkzGetPoint{s2}
+\tkzInterLL(s2,s1)(x1,x2) \tkzGetPoint{s0}
+\tkzMarkAngle[arc=lll,size=.5 cm,fill=LimeGreen](x2,s0,s2)
+\tkzLabelAngle[pos=.8](x2,s0,s2){$\alpha$}
+\tkzSetUpLine[color=blue]
+\tkzDrawLine[add = -.1 and 0, end = $s$](s2, s1)
+
+\tkzDrawX[noticks,below]
+\tkzDrawY[noticks] 
+
+\begin{scope}[xshift=70mm]
+\tkzDrawX[noticks,below]
+\tkzDrawY[noticks] 
+
+\tkzDefPoint(-2.5,0){x1}
+\tkzDefPoint(2.5,0){x2}
+
+\tkzDefPoint(0,2.5){y1}
+\tkzDefPoint(0,-2){y2}
+
+\tkzDefPoint (0,0){0} 
+
+\tkzDefPoint(-.8,-1.5){b1}
+\tkzDefPoint(2,1.5){b2}
+\tkzInterLL(b1,b2)(x1,x2) \tkzGetPoint{b0}
+
+\tkzSetUpLine[color=Maroon]
+\tkzDrawLine[add = 0 and 0, end = $b$](b1,b2)
+
+\tkzInterLL(b2,b1)(y1,y2) \tkzGetPoint{b0}
+\tkzDrawSegment[LimeGreen, thick](0,b0)
+
+\tkzDefPoint(2,-1){a1}
+
+\tkzDefLine[perpendicular=through a1](b1,b2)
+\tkzSetUpLine[color=white]
+\tkzDrawLine[add = -.1 and 0](tkzPointResult, a1) \tkzGetPoint{a2}
+\tkzInterLL(a2,a1)(x1,x2) \tkzGetPoint{a0}
+
+\tkzSetUpLine[color=blue]
+\tkzDrawLine[add = .1 and 0, end = $a$](a2, a1)
+
+\tkzInterLL(a2,a1)(y1,y2) \tkzGetPoint{a0}
+\tkzDrawSegment[orange, thick](0,a0)
+
+\node at (-.5,.5) {$q>0$};
+\node at (-.5,-.3) {$q<0$};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,50 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm, smooth, scale=.8]
+  \tikzset{xaxe style/.style ={->}}
+
+  \tkzInit[xmin=-.5,xmax=5,ymin=-.5,ymax=4]
+
+  \clip (-1,-.5) rectangle (6,5);
+
+  \tkzDrawX[noticks,below]
+  \tkzDrawY[noticks] 
+
+  \tkzSetUpPoint[shape=circle,size=7pt,color=black, fill=CornflowerBlue]
+
+  \tkzDefPoint(0,0){o}
+  \tkzDefPoint(6,0){x}
+  \tkzDefPoint(0,5){y}
+
+  \tkzDefPoint(0,0){O}
+  \tkzDefPoint(1,4){A}
+  \tkzDefPoint(5,2){B}
+  \tkzDefMidPoint(A,B) 
+  \tkzGetPoint{M}
+
+  \tkzDrawSegment[style={thick, Maroon}](A,B)    
+  \tkzLabelPoints[above](A,B,M)
+
+  \tkzDefPointBy[projection=onto o--x](A) \tkzGetPoint{A'}
+  \tkzDefPointBy[projection=onto o--x](B) \tkzGetPoint{B'}
+  \tkzDefPointBy[projection=onto o--x](M) \tkzGetPoint{M'}
+
+  \tkzDefPointBy[projection=onto o--y](A) \tkzGetPoint{A''}
+  \tkzDefPointBy[projection=onto o--y](B) \tkzGetPoint{B''}
+  \tkzDefPointBy[projection=onto o--y](M) \tkzGetPoint{M''}
+
+  \tkzLabelPoints[below](A',B',M')
+  \tkzLabelPoints[left](A'',B'',M'')
+  \tkzLabelPoints[below left](O)
+
+  \tkzDrawSegment[style=dashed](A,A')
+  \tkzDrawSegment[style=dashed](B,B')
+  \tkzDrawSegment[style=dashed](A,A'')
+  \tkzDrawSegment[style=dashed](B,B'')
+
+  \tkzDrawSegment[style=dotted](M,M')
+  \tkzDrawSegment[style=dotted](M,M'')
+
+  \tkzDrawPoints(A,B,M)
+  \tkzDrawPoints(A',B',M')
+  \tkzDrawPoints(A'',B'',M'')
+\end{tikzpicture}

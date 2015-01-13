@@ -1,0 +1,23 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm, smooth]
+  \begin{scope}[->]
+    \draw (-4,0) -- (6,0) node [below]  {$x$};
+    \draw (0,-2) -- (0,5)node [left]  {$y$};;
+  \end{scope}
+
+  \draw[dotted,orange, step=5mm] (-4,-2) grid (6.5,5.5);
+
+  \draw[|-|] (-3,4) -- (-2,4) node[below, midway] {unità};
+
+  \node[below left]  at (0,0){$O$};
+  	\draw[dashed,thin] (-2,-1) -- (5,-1)--(5,4);
+  \begin{scope}[every node/.style={Maroon}, draw=Maroon, thick]
+    \draw (-2,-1) -- (5,4);
+    \begin{scope}[fill=CornflowerBlue, draw=black]
+      \filldraw (-2,-1)circle (1.5pt) node[left] {$A$};
+      \filldraw (5,4)circle (1.5pt) node[right]{$B$};
+      \filldraw (5,-1)circle (1.5pt) node[right]{$C$};
+
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

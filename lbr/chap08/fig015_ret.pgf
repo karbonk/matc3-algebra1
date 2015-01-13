@@ -1,0 +1,17 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+\draw[->](-3.5,0) -- (3.5,0) node [below left] {$r$};
+\foreach \x in {-2,0,.82,1.46}
+\draw (\x,1.5pt) -- (\x,-1.5pt);
+
+\foreach \x/\xtext in {-2/O,0/A,0.82/K,1.46/H}
+\node[below] at (\x,0) {$\xtext$};
+
+\draw (-2,0) rectangle  (0,2);
+\draw[CornflowerBlue,thick] (-2,0) --  (0,2) node[above, black] {$B$};
+\draw[orange,thick] (-2,0) --  (0.82,2) node[above right, black] {$D$};
+\draw[dashed] (.82,0) -- (.82,2);
+   \draw[dashed,orange] (1.46,0) arc [start angle=0, end angle=35,radius=3.5cm];
+
+\node [above] at (-2,2) {$C$};
+\end{tikzpicture}

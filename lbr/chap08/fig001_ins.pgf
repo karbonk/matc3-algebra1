@@ -1,0 +1,160 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+%========================
+% Prima coppia di insiemi
+%========================
+  \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+  \node[above] (A1) at (A.north) {$A$};
+
+  \begin{scope}[fill=CornflowerBlue]
+    \filldraw (0,.5) circle (2pt) node (a) {};
+    \node[left] at (0,.5) {$a$};
+    \filldraw (.8,.2) circle (2pt) node (b) {};
+    \node[left] at (.8,.2) {$b$};
+    \filldraw (-.4,-.5) circle (2pt) node (c) {};
+    \node[left] at (-.4,-.5)  {$c$};
+  \end{scope}
+  
+  \node[anchor=south]  at (1.2,-1.5) {a};
+  \begin{scope}[xshift=2.3cm]
+  \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+  \node[above] (B1) at (B.north) {$B$};
+
+    \begin{scope}[fill=LimeGreen]
+      \filldraw (-.1,.6) circle (2pt) node (a1) {};
+      \filldraw (-.2,.2) circle (2pt)node (b1) {};
+      \filldraw (.2,-.7) circle (2pt) node (c1) {};
+      \filldraw(.5,-.2) circle (2pt);
+
+      \node[right]  at (-.1,.6) {$1$};
+      \node[right] at (-.2,.2) {$2$};
+      \node[right]  at (.2,-.7) {$3$};
+      \node[right] at (.5,-.2) {$4$};
+    \end{scope}
+  \end{scope}
+
+  \begin{scope}[->,smooth,thick]
+    \draw[Maroon] (a) .. controls +(30:1cm) and +(150:.5cm) .. (b1);
+    \draw[purple] (b) .. controls +(30:.5cm) and +(180:0.5cm) .. (a1);
+    \draw[orange] (c) .. controls +(90:1cm) and +(180:1cm) .. (a1);
+  \end{scope}
+%==========================
+% Seconda coppia di insiemi
+%==========================
+  \begin{scope}[xshift=5cm]
+
+  \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+  \node[above] (A1) at (A.north) {$A$};
+  \node [anchor=south] at (1.2,-1.5) {b};
+
+  \begin{scope}[fill=CornflowerBlue]
+
+      \filldraw (0,.7) circle (2pt) node (a) {};
+      \node[left] at (0,.7) {$a$};
+      \filldraw (.7,0) circle (2pt) node (b) {};
+      \node[left] at (.7,0) {$b$};
+    \end{scope}
+
+    \begin{scope}[xshift=2.3cm]
+      \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+      \node[above] (B1) at (B.north) {$B$};
+
+      \begin{scope}[fill=LimeGreen]
+	\filldraw (-.1,.6) circle (2pt) node (a1) {};
+	\filldraw (-.2,.2) circle (2pt)node (b1) {};
+	\filldraw (.2,-.7) circle (2pt) node (c1) {};
+	\filldraw(.5,-.2) circle (2pt) node (d1){};
+
+	\node[right]  at (-.1,.6) {$1$};
+	\node[right] at (-.2,.2) {$2$};
+	\node[right]  at (.2,-.7) {$3$};
+	\node[right] at (.5,-.2) {$4$};
+      \end{scope}
+    \end{scope}
+
+    \begin{scope}[->,smooth,thick]
+      \draw[Maroon] (a) .. controls +(30:1cm) and +(180:1cm) .. (b1);
+      \draw[purple] (a) .. controls +(-30:1cm) and +(180:1cm) .. (d1);
+      \draw[orange] (b) .. controls +(90:.5cm) and +(180:.5cm) .. (a1);
+    \end{scope}
+  \end{scope}
+%========================
+% Terza coppia di insiemi
+%========================
+  \begin{scope}[yshift=-3cm]
+    \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+    \node[above] (A1) at (A.north) {$A$};
+
+    \begin{scope}[fill=CornflowerBlue]
+      \filldraw (0,.5) circle (2pt) node (a) {};
+      \node[left] at (0,.5) {$a$};
+      \filldraw (.8,.2) circle (2pt) node (b) {};
+      \node[left] at (.8,.2) {$b$};
+      \filldraw (-.4,-.5) circle (2pt) node (c) {};
+      \node[left] at (-.4,-.5)  {$c$};
+    \end{scope}
+    \node[anchor=south]  at (1.2,-1.5) {c};
+    
+    \begin{scope}[xshift=2.3cm]
+      \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+      \node[above] (B1) at (B.north) {$B$};
+      
+      \begin{scope}[fill=LimeGreen]
+      \filldraw (-.1,.6) circle (2pt) node (a1) {};
+      \filldraw (-.2,.2) circle (2pt)node (b1) {};
+      \filldraw (.2,-.7) circle (2pt) node (c1) {};
+      \filldraw(.5,-.2) circle (2pt) node(d1){};
+
+      \node[right]  at (-.1,.6) {$1$};
+      \node[right] at (-.2,.2) {$2$};
+      \node[right]  at (.2,-.7) {$3$};
+      \node[right] at (.5,-.2) {$4$};
+      \end{scope}
+    \end{scope}
+
+    \begin{scope}[->,smooth,thick]
+      \draw[Maroon] (a) .. controls +(30:1cm) and +(150:.5cm) .. (b1);
+      \draw[purple] (b) .. controls +(30:.5cm) and +(180:0.5cm) .. (a1);
+      \draw[orange] (c) .. controls +(0:1cm) and +(180:1cm) .. (d1);
+    \end{scope}
+  \end{scope}
+%=========================  
+% Quarta coppia di insiemi
+%=========================  
+  \begin{scope}[xshift=5cm,yshift=-3cm]
+    \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+    \node[above] (A1) at (A.north) {$A$};
+
+    \begin{scope}[fill=CornflowerBlue]
+      \filldraw (0,.5) circle (2pt) node (a) {};
+      \node[left] at (0,.5) {$a$};
+      \filldraw (.8,.2) circle (2pt) node (b) {};
+      \node[left] at (.8,.2) {$b$};
+      \filldraw (-.4,-.5) circle (2pt) node (c) {};
+      \node[left] at (-.4,-.5)  {$c$};
+      \filldraw (.4,-.5) circle (2pt) node (d) {};
+      \node[left] at (.4,-.5)  {$d$};
+    \end{scope}
+    
+    \node[anchor=south]  at (1.2,-1.5) {d};
+    
+    \begin{scope}[xshift=2.3cm]
+    \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+    \node[above] (B1) at (B.north) {$B$};
+
+      \begin{scope}[fill=LimeGreen]
+	\filldraw (-.1,.6) circle (2pt) node (a1) {};
+	\filldraw (-.2,.2) circle (2pt)node (b1) {};
+
+	\node[right]  at (-.1,.6) {$1$};
+	\node[right] at (-.2,.2) {$2$};
+      \end{scope}
+    \end{scope}
+
+    \begin{scope}[->,smooth,thick]
+      \draw[Maroon] (a) .. controls +(30:1cm) and +(150:.5cm) .. (b1);
+      \draw[purple] (d) .. controls +(30:.5cm) and +(180:0.5cm) .. (a1);
+      \draw[orange] (c) .. controls +(90:1cm) and +(180:1cm) .. (a1);
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=8mm, y=8mm]
+  \tkzInit[xmin=-3,xmax=3,ymin=0,ymax=4.5]
+  \clip (-3.5,-.5) rectangle (4,5.5);
+  \begin{scope}[font=\small]
+    \tkzAxeY[orig = false, label options={left = 1pt}]
+    \tkzAxeX[orig = true, label options={below = 1pt}]
+  \end{scope}
+  \tkzFct[domain=-2:2,thick,color=Maroon]{x*x}
+\end{tikzpicture}

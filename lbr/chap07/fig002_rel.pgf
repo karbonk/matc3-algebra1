@@ -1,0 +1,27 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, every state/.style={draw=CornflowerBlue}, every loop/.style={draw=Maroon}]
+\draw (0,0) circle (2);
+
+\node (5) at (-1.5,0) {$5~ \bullet$};
+\node (30) at (-.4,.8) {$30~\bullet$};
+\node(6) at (1.1,.5) {$\bullet~6$};
+\node (9) at (1,-1) {$\bullet~9$};
+\node (3) at (-.5,-1.2) {$3~\bullet$};
+
+\begin{scope}[->]
+\path(5) edge[loop below] node{} ()
+	(30) edge[loop above] node{} ()
+	(6) edge[loop above] node{} ()
+	(9) edge[loop above] node{} ()
+	(3) edge[loop left] node{} ();
+
+\end{scope}
+\begin{scope}[->, Maroon]
+\draw (30)--(5);
+\draw (30)--(6);
+\draw (30)--(3);
+\draw (6)--(3);
+\draw (9)--(3);
+\end{scope}
+\end{tikzpicture}

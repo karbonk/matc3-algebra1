@@ -1,0 +1,25 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=7mm, y=7mm, scale=.8]
+  \tkzInit[xmin=-3.5,xmax=3.3,ymin=-2.5,ymax=2]
+  \clip (-3.5,-3) rectangle (21,3);
+
+    \tkzDrawY[noticks]
+    \tkzDrawX[noticks]
+
+  \tkzFct[domain=-3*pi/2:3*pi/2,thick,color=Maroon]{sin(-x)*2}
+
+\begin{scope}[xshift=59mm]
+    \tkzDrawY[noticks]
+    \tkzDrawX[noticks]
+
+  \tkzFct[domain=0:3.5,thick,color=Maroon]{5*x/12+.5}
+  \tkzFct[domain=-3.5:0,thick,color=Maroon]{5*x/12-.8}
+\end{scope}
+
+\begin{scope}[xshift=118mm]
+    \tkzDrawY[noticks]
+    \tkzDrawX[noticks]
+
+  \tkzFct[domain=-3.5:3.5,thick,color=Maroon]{x*x-2}
+\end{scope}
+\end{tikzpicture}

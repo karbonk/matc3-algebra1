@@ -1,0 +1,14 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\draw[rounded corners] (0,-5.5) rectangle (9,3) (4.5,3)node[above, anchor=south east] {``Step'' 98};
+
+\draw(3,0) circle (2.5);
+\draw(6,0) circle (2.5);
+\draw(4.5,-2.5) circle (2.5);
+
+\node at (.5,1.5) {$S$};
+\node at (8.5,1.5) {$B$};
+\node at (7.5,-3.5) {$H$};
+
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[x=10mm,y=10mm, font=\small]
+
+\node {Relazione d'ordine}[grow=right,level distance= 30mm, sibling distance=15mm,->,thick, draw=Maroon]
+child {node {parziale}[sibling distance=10mm]
+child {node {in senso largo}}
+child {node {in senso stretto}}}
+child {node {totale}[sibling distance=10mm]
+child {node {in senso largo}}
+child {node {in senso stretto}}};
+
+\end{tikzpicture}

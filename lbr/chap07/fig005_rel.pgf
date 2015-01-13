@@ -1,0 +1,12 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[scale=.7,x=10mm,y=10mm, font=\small, every state/.style={draw=CornflowerBlue}, every loop/.style={draw=Maroon}]
+\draw (0,0) circle [x radius=2, y radius=1.5] node {$A$};
+\draw[CornflowerBlue] (-.5,-.7) circle [x radius=.8, y radius=.5]node {$E$};
+\draw[OliveGreen] (1,.5) circle [x radius=.4, y radius=.2]node {$B$};
+\draw[Maroon] (3,.5) circle [x radius=3, y radius=.5]node {$C$};
+\draw[OliveGreen] (3.5,-.8) circle [x radius=1.5, y radius=.5]node {$D$};
+\draw[RedOrange] (4.2,-.8) circle [x radius=.5, y radius=.25]node {$F$};
+
+\node () at (2.1,2) {$U$};
+\end{tikzpicture}

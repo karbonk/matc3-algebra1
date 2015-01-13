@@ -1,0 +1,15 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm, smooth]
+	\tkzSetUpPoint[shape=circle,size=7pt,color=black, fill=CornflowerBlue]
+
+	\tkzDefPoint(0,2){A}
+	\tkzDefPoint(4,2){B}
+	\tkzDefMidPoint(A,B) 
+	\tkzGetPoint{M}
+	
+	\tkzDrawSegment[style={thick, Maroon}](A,B)    
+	\tkzLabelPoints[above](A,B,M)
+
+	\tkzDrawPoints(A,B,M)
+
+\end{tikzpicture}

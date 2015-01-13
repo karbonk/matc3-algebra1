@@ -1,0 +1,18 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=.5cm,y=1cm,font=\small]
+    \draw (0,0)circle (1.5) (0,1) node[ left=1.5] {$A$};
+    \begin{scope}[fill=CornflowerBlue, draw=black]
+\filldraw (0,.8) circle (2pt) node[above left] {1};
+\filldraw (0,.3) circle (2pt) node[above left] {3};
+\filldraw (0,-.2) circle (2pt) node[above left] {5};
+\filldraw (0,-.7) circle (2pt) node[above left] {7};
+\filldraw (0,-1.2) circle (2pt) node[above left] {9};
+\begin{scope}[xshift=2cm]
+    \draw (0,0)circle (1.5) (0,1) node[ left=1.5] {$B$};
+\filldraw (0,.7) circle (2pt) node[above right] {2};
+\filldraw (0,.2) circle (2pt) node[above right] {4};
+\filldraw (0,-.3) circle (2pt) node[above right] {6};
+\filldraw (0,-.8) circle (2pt) node[above right] {8};
+\end{scope}
+\end{scope}
+\end{tikzpicture}

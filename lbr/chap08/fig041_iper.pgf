@@ -1,0 +1,11 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=7mm, y=7mm,  scale=.9]
+  \tkzInit[xmin=-4,xmax=4,ymin=-4,ymax=4.5]
+  \clip (-4.5,-4.5) rectangle (5.5,5.5);
+  \begin{scope}[font=\small]
+    \tkzAxeX[orig = false, label options={below = 1pt}]
+    \tkzAxeY[orig = true, label options={left = 1pt}]
+  \end{scope}
+  \tkzFct[domain=-4:0,thick,color=Maroon]{-1/x*2}
+  \tkzFct[domain=-0:4,thick,color=Maroon]{-1/x*2}
+\end{tikzpicture}

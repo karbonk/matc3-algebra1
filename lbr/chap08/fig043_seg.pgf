@@ -1,0 +1,30 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=8mm, y=8mm]
+  \tkzInit[xmin=0,xmax=10, xstep=2,ymin=0,ymax=12, ystep=2]
+  \clip (-.5,-.5) rectangle (6,7);
+  \begin{scope}[font=\small]
+    \tkzAxeY[orig = false, label options={left = 1pt}]
+    \tkzAxeX[orig = true, label options={below = 1pt}]
+  \end{scope}
+  \tkzFct[domain=0:4,thick,color=Maroon]{3*x}
+  \tkzFct[domain=4:8,thick,color=Maroon]{x+4}
+  \tkzFct[domain=8:10,thick,color=Maroon]{12}
+
+\tkzSetUpPoint[size=4, fill=CornflowerBlue]
+\tkzDefPoint(0,0){0} \tkzDrawPoint(0)
+\tkzDefPoint(4,6){B} \tkzDrawPoint(B)
+\tkzDefPoint(8,8){C} \tkzDrawPoint(C)
+\tkzDefPoint(10,12){E} \tkzDrawPoint(E)
+
+\tkzSetUpPoint[size=4, fill=white]
+\tkzDefPoint(8,12){D} \tkzDrawPoint(D)
+
+\tkzLabelPoints[above](B, C, D, E){B, C, D ,E}
+
+\tkzDefMidPoint(0,B)\tkzGetPoint{a}
+\tkzDefMidPoint(B,C)\tkzGetPoint{b}
+\tkzDefMidPoint(D,E)\tkzGetPoint{c}
+
+\tkzLabelPoints[below right](a, b){a,b}
+\tkzLabelPoints[below](c){c}
+\end{tikzpicture}

@@ -292,19 +292,13 @@ n \divint m = q\quad\text{(con resto }r\text{)}.
 
 \begin{exrig}
  \begin{esempio}
-$0 \divint 5=0$.
- \end{esempio}
-
- \begin{esempio}
-$9 \divint 2=4$.
- \end{esempio}
-
- \begin{esempio}
-$3\divint 5=0$.
- \end{esempio}
-
- \begin{esempio}
-$3\divint 0 = $ non si può fare: la divisione intera per~0 non è possibile. 
+ L'operazione divisione intera.
+\begin{itemize*}
+\item $0 \divint 5=0$;
+\item $9 \divint 2=4$;
+\item $3\divint 5=0$;
+\item $3\divint 0 = $ non si può fare: la divisione intera per~0 non è possibile. 
+ \end{itemize*}
  \end{esempio}
 \end{exrig}
 
@@ -320,27 +314,17 @@ n\bmod{m} = r\quad\text{(dove }r\text{ è il resto di~~}n\divint m\text{)}.
 
 \begin{exrig}
  \begin{esempio}
-$0\bmod 5=0$.
- \end{esempio}
-
- \begin{esempio}
-$9\bmod 5 =1$.
- \end{esempio}
-
- \begin{esempio}
-$10\bmod 5=0$.
- \end{esempio}
-
- \begin{esempio}
-$3\bmod 5=3$.
- \end{esempio}
-
- \begin{esempio}
-$11\bmod 5=1$.
- \end{esempio}
-
- \begin{esempio}
-$3\bmod 0=$ non si può fare.
+ L'operazione modulo.
+\begin{multicols}{2}
+\begin{itemize*}
+\item $0\bmod 5=0$;
+\item $9\bmod 5 =1$;
+\item $10\bmod 5=0$;
+\item $3\bmod 5=3$;
+\item $11\bmod 5=1$;
+\item $3\bmod 0=$ non si può fare.
+\end{itemize*}
+\end{multicols}
  \end{esempio}
 \end{exrig}
 
@@ -416,7 +400,6 @@ il numero è a destra, sia quando è a sinistra dell'operatore.
 \begin{empheq}[box=\fbox]{equation*}
 a\diamond n = n\diamond a = a.
 \end{empheq}
-
 L'elemento neutro dell'addizione è~0, sia che si trovi a destra che a sinistra:
 \[a+0=~0+a =a.\]
 L'elemento neutro della moltiplicazione è~1, sia che si trovi a destra sia che si trovi a sinistra:
@@ -630,19 +613,13 @@ Per esempio~$\sqrt[3]{64} = 4$ poiché $4^3=4\cdot 4\cdot 4 = 64$.
 
 \begin{exrig}
  \begin{esempio}
-$\sqrt[5]{32} = 2$,~~infatti $2^5 = 2\cdot 2\cdot 2\cdot 2\cdot 2 = 32$.
- \end{esempio}
-
- \begin{esempio}
-$\sqrt[3]{125} = 5$,~~infatti $5^3 = 5\cdot 5\cdot 5 = 125$.
- \end{esempio}
-
- \begin{esempio}
-$\sqrt[4]{81} = 3$,~~infatti $3^4 = 3\cdot 3\cdot 3\cdot 3 = 81$.
- \end{esempio}
-
- \begin{esempio}
-$\sqrt[7]{1} = 1$,~~infatti $1^7 = 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1 = 1$.
+ L'operazione estrazione di radice
+  \begin{itemize*}
+    \item $\sqrt[5]{32} = 2$,~~infatti $2^5 = 2\cdot 2\cdot 2\cdot 2\cdot 2 = 32$.
+    \item $\sqrt[3]{125} = 5$,~~infatti $5^3 = 5\cdot 5\cdot 5 = 125$.
+    \item $\sqrt[4]{81} = 3$,~~infatti $3^4 = 3\cdot 3\cdot 3\cdot 3 = 81$.
+    \item $\sqrt[7]{1} = 1$,~~infatti $1^7 = 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1\cdot 1 = 1$.
+  \end{itemize*}
  \end{esempio}
 \end{exrig}
 
@@ -898,8 +875,8 @@ Va comunque sottolineato il fatto che la robustezza del meccanismo di cifratura 
 
 \label{def:mcd}
 \begin{definizione}
-Il \emph{massimo comune divisore} di numeri naturali~$a$ e~$b$, indicato con~$\mcd(a\text{,~}b)$, è il
-più grande tra tutti i divisori comuni ad~$a$ e~$b$.
+Il \emph{massimo comune divisore} di numeri naturali~$a$ e~$b$ è il
+più grande tra tutti i divisori comuni ad~$a$ e~$b$ e viene indicato con~$\mcd(a\text{,~}b)$.
 \end{definizione}
 
 Applicando la definizione, il massimo comune divisore tra~18 e~12 si ottiene prendendo tutti i divisori
@@ -953,7 +930,7 @@ Pertanto~$\mcd(60\text{,~}120\text{,~}90)=2\cdot 3\cdot 5=30$.
  Due numeri~$a$ e~$b$ si dicono \emph{primi tra loro} o \emph{coprimi} se~$\mcd(a\text{,~}b)=1$.
 \end{definizione}
 
-\pagebreak
+%\pagebreak
 \begin{exrig}
  \begin{esempio}
  Numeri primi tra loro:
@@ -977,7 +954,7 @@ piccolo tra tutti i multipli comuni di~$a$ e di~$b$.
 Per calcolare il minimo comune multiplo tra~6 e~15 applicando la definizione occorre calcolare i primi
 multipli dei due numeri:
 \begin{center}
-\begin{tabular}{rl}
+\begin{tabular}{ll}
 multipli di 6: & 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, \ldots;\\
 multipli di 15: & 15, 30, 45, 60, 75, 90, \ldots\\
 \end{tabular}

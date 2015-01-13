@@ -1,0 +1,20 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\begin{tikzpicture}[scale=.7,x=10mm,y=10mm, font=\small, every state/.style={draw=CornflowerBlue}, every loop/.style={draw=Maroon}]
+\draw (0,0) circle [x radius=3, y radius=2];
+
+\node at (3,1.5) {$S$};
+\node[state] (A) at (-2.3,.3) {$A$};
+\node[state] (B) at (-.8,1.2) {$B$};
+\node[state] (C) at (-1.5,-1) {$C$};
+\node[state] (D) at (-.2,-1.1) {$D$};
+\node[state] (E) at (.6,.9) {$E$};
+\node[state] (F) at (1.8,.5) {$F$};
+\node[state] (U) at (1.5,-1) {$U$};
+
+  \begin{scope}[->, Maroon]
+ \draw (A)--(U);
+  \draw (B)--(C);
+ \draw (F)--(U);
+   \end{scope}
+\end{tikzpicture}

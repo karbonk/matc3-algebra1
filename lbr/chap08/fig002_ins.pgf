@@ -1,0 +1,85 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+  \node[above] (A1) at (A.north) {$A$};
+
+  \begin{scope}[fill=CornflowerBlue]
+    \filldraw (0,.5) circle (2pt) node (a) {};
+    \filldraw (-.4,-.5) circle (2pt) node (c) {};
+    \node[left] at (-.4,-.5)  {};
+  \end{scope}
+  
+  \node[anchor=south]  at (1.2,-1.5) {a};
+  \begin{scope}[xshift=2.3cm]
+    \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+    \node[above] (B1) at (B.north) {$B$};
+    
+    \begin{scope}[fill=LimeGreen]
+      \filldraw (-.1,.6) circle (2pt) node (a1) {};
+      \filldraw (-.2,.2) circle (2pt)node (b1) {};
+      \filldraw (.2,-.7) circle (2pt) node (c1) {};
+      \filldraw(.5,-.2) circle (2pt) node(d1) {};
+    \end{scope}
+  \end{scope}
+
+  \begin{scope}[->,smooth,thick]
+    \draw[Maroon] (a) .. controls +(30:1cm) and +(150:.5cm) .. (b1);
+    \draw[orange] (c) .. controls +(-90:.5cm) and +(180:1cm) .. (d1);
+  \end{scope}
+
+  \begin{scope}[xshift=4.6cm]
+    \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+    \node[above] (A1) at (A.north) {$A$};
+    \node [anchor=south] at (1.2,-1.5) {b};
+    \begin{scope}[fill=CornflowerBlue]
+
+      \filldraw (0,.7) circle (2pt) node (a) {};
+      \filldraw (.7,0) circle (2pt) node (b) {};
+      \filldraw (.2,-.7) circle (2pt) node (c) {};
+    \end{scope}
+
+    \begin{scope}[xshift=2.3cm]
+    \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+
+    \node[above] (B1) at (B.north) {$B$};
+
+      \begin{scope}[fill=LimeGreen]
+	\filldraw (-.1,.6) circle (2pt) node (a1) {};
+	\filldraw(.5,-.2) circle (2pt) node (d1){};
+      \end{scope}
+    \end{scope}
+
+    \begin{scope}[->,smooth,thick]
+      \draw[Maroon] (a) .. controls +(30:1cm) and +(180:1cm) .. (a1);
+      \draw[purple] (b) .. controls +(30:1cm) and +(180:1cm) .. (d1);
+      \draw[orange] (c) .. controls +(90:.5cm) and +(180:.5cm) .. (d1);
+    \end{scope}
+  \end{scope}
+
+  \begin{scope}[xshift=9.2cm]
+    \node[circle, minimum height=2cm,draw] (A) at (0,0) {};
+    \node[above] (A1) at (A.north) {$A$};
+
+    \begin{scope}[fill=CornflowerBlue]
+      \filldraw (0,.5) circle (2pt) node (a) {};
+      \filldraw (-.4,-.5) circle (2pt) node (c) {};
+    \end{scope}
+    \node[anchor=south]  at (1.2,-1.5) {c};
+  
+    \begin{scope}[xshift=2.3cm]
+      \node[circle, minimum height=2cm,draw] (B) at (0,0) {};
+      \node[above] (B1) at (B.north) {$B$};
+
+      \begin{scope}[fill=LimeGreen]
+	\filldraw (-.2,.2) circle (2pt)node (b1) {};
+	\filldraw(.5,-.2) circle (2pt) node(d1){};
+      \end{scope}
+    \end{scope}
+
+    \begin{scope}[->,smooth,thick]
+      \draw[Maroon] (a) .. controls +(30:1cm) and +(150:.5cm) .. (b1);
+      \draw[orange] (c) .. controls +(0:1cm) and +(180:1cm) .. (d1);
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

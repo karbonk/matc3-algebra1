@@ -1,0 +1,42 @@
+% (c) 2015 Claudio Carboncini - claudio.carboncini@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+
+\clip (0,0) ellipse (6 and 4);
+
+\draw (0,0) ellipse (6 and 4);
+
+\draw[fill](-3,2.5) circle (1pt ) node[above right]  {0};
+\draw[fill](-1.8,2.5) circle (1pt ) node[above right]  {5};
+\draw[fill](-.6,2.5) circle (1pt ) node[above right]  {10};
+\draw[fill](.6,2.5) circle (1pt ) node[above right]  {15};
+\draw[fill](1.8,2.5) circle (1pt ) node[above right]  {20};
+
+\draw(-6,2)--(6,2);
+
+\draw[fill](-4,1) circle (1pt ) node[above right]  {1};
+\draw[fill](-2,1) circle (1pt ) node[above right]  {6};
+\draw[fill](0,1) circle (1pt ) node[above right]  {11};
+\draw[fill](2,1) circle (1pt ) node[above right]  {16};
+
+\draw(-6,.5)--(6,.5);
+
+\draw[fill](-3,-.5) circle (1pt ) node[above right]  {2};
+\draw[fill](-1,-.5) circle (1pt ) node[above right]  {7};
+\draw[fill](1,-.5) circle (1pt ) node[above right]  {12};
+\draw[fill](3,-.5) circle (1pt ) node[above right]  {17};
+
+\draw(-6,-1)--(6,-1);
+
+\draw[fill](-4,-2) circle (1pt ) node[above right]  {3};
+\draw[fill](-2,-2) circle (1pt ) node[above right]  {8};
+\draw[fill](0,-2) circle (1pt ) node[above right]  {13};
+\draw[fill](2,-2) circle (1pt ) node[above right]  {18};
+
+\draw(-6,-2.5)--(6,-2.5);
+
+\draw[fill](-2,-3.5) circle (1pt ) node[above right]  {4};
+\draw[fill](-.8,-3.5) circle (1pt ) node[above right]  {9};
+\draw[fill](.4,-3.5) circle (1pt ) node[above right]  {14};
+\draw[fill](1.6,-3.5) circle (1pt ) node[above right]  {19};
+
+\end{tikzpicture}

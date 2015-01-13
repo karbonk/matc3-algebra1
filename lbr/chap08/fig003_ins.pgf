@@ -1,0 +1,30 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=10mm, y=10mm,filled/.style={fill=circle area, thick}]
+\draw (0,0) rectangle (5,4) node[above right] {$C$};
+  \node[ellipse, minimum height=3cm, minimum width=4.5cm,draw=blue,thick] (F) at (2.5,2) {};
+  \node[above, blue] (F1) at (F.north) {$F$};
+
+\def\firstcircle{(1.7,1.9) circle (1cm)}
+\def\secondcircle{(2.9,1.9) circle (1.25cm)}
+\definecolor{circle area}{gray}{0.9}
+    \begin{scope}
+        \clip \firstcircle;
+        \fill[filled] \secondcircle;
+    \end{scope}
+    \draw[OliveGreen, thick]\firstcircle;
+    \draw[Maroon,thick] \secondcircle;
+    \node[OliveGreen] at (1.1,1.9) {$I$};
+	\node[Maroon] at (3.1,1.9) {$S$};
+
+\begin{scope}[xshift=6cm, yshift=2cm]
+\matrix[matrix of nodes, right,column 1/.style={anchor=base west,},
+column 2/.style={anchor=base west}, column sep=.5cm
+]{
+Legenda&\\
+$C$& insieme delle corrispondenze\\
+|[blue]|$F$&insieme delle funzioni\\
+|[Maroon]|$S$&insieme delle funzioni suriettive\\
+|[OliveGreen]|$I$&insieme delle funzioni iniettive\\
+$I \cap S$&insieme delle funzioni biunivoche\\};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=8mm, y=8mm]
+  \tkzInit[xmin=-3,xmax=3,ymin=0,ymax=4]
+  \clip (-3.5,-.5) rectangle (4,5);
+  \begin{scope}[font=\small]
+    \tkzAxeY[orig = false, label options={left = 1pt}]
+    \tkzAxeX[orig = true, label options={below = 1pt}]
+  \end{scope}
+  \tkzFct[domain=-3:0,thick,color=Maroon]{1-x}
+  \tkzFct[domain=0:3,thick,color=Maroon]{1}
+
+\tkzSetUpPoint[size=4, fill=CornflowerBlue]
+\tkzDefPoint(0,1){A} 
+\tkzDrawPoint(A)
+\tkzDefPoint(0,1){a1} 
+\tkzDefPoint(-3,4){a2} 
+
+\tkzDefMidPoint(a1,a2)\tkzGetPoint{a}
+
+\tkzLabelPoints[below left](a){a}
+\tkzLabelPoint[above right](A){$A$}
+\end{tikzpicture}
