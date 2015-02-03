@@ -1,9 +1,0 @@
-% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
-\begin{tikzpicture}[font=\small,x=10mm, y=10mm]
-
-\draw (0,0) -- (2,3)--(6,0)--(0,0);
-
-\node[left] at (0,0) {$A$};
-\node[right] at (6,0) {$B$};
-\node[above] at (2,3) {$C$};
-\end{tikzpicture}
