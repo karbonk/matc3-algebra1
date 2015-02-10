@@ -1,0 +1,8 @@
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+\definecolor{area}{gray}{0.9}
+\draw [fill=area] (0,0) rectangle (5,2.4); 
+
+\node[below] at (2.5,0) {$25\unit{m}$};
+\node [left] at (0,1.2) {$12\unit{m}$};
+
+\end{tikzpicture}

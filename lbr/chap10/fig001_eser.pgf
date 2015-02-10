@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+\definecolor{area}{gray}{0.9}
+\draw [rounded corners, fill=area] (0,0) rectangle (5,4)  (4.5,3.5)node {$M$}; 
+\draw[fill=white] (2.5,2) circle (1.4) node {$L$};
+\node[below] at (2.5,0) {A};
+
+\begin{scope}[xshift=30mm]
+\draw [rounded corners, fill=area] (0,0) rectangle (5,4)  (4.5,3.5)node {$L$}; 
+\draw[fill=white] (2.5,2) circle (1.4) node {$M$};
+\node[below] at (2.5,0) {B};
+\end{scope}
+\end{tikzpicture}

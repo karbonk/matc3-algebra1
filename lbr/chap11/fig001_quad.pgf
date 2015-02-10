@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small]
+\definecolor{area}{gray}{0.9}
+\draw(0,0) rectangle (9,9); 
+\begin{scope}[fill=area, draw=black]
+\filldraw (0,0) rectangle  (3,6);
+\filldraw (3,6) rectangle (9,9);
+\end{scope}
+
+\node[above]  at (1.5,9) {$a$};
+\node[above]  at (6,9) {$b$};
+\node  at (1.5,7.5) {$a^2$};
+\node  at (6,7.5) {$ba$};
+\node  at (1.5,3) {$ab$};
+\node  at (6,3) {$b^2$};	
+
+\end{tikzpicture}

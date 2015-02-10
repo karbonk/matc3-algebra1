@@ -1,0 +1,640 @@
+% (c) 2012 - 2014 Dimitrios Vrettos - d.vrettos@gmail.com
+% (c) 2012 Silvia Cibola - silvia.cibola@gmail.com
+
+\chapter{Polinomi}
+\section{Definizioni fondamentali}
+
+\begin{definizione}
+Un \emph{polinomio} è un'espressione algebrica letterale che consiste in una somma algebrica di monomi.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio}
+Sono polinomi:~$6a+2b$, $\:5a^2b+3b^2$, $\:6x^2-5y^2x-1$, $\:7ab-2a^2b^3+4$.
+\end{esempio}
+\end{exrig}
+
+Se tra i termini di un polinomio non sono presenti monomi simili, il polinomio si dice in \emph{forma normale} o
+\emph{ridotto}; se al contrario si presentano dei termini simili, possiamo eseguire la riduzione del polinomio
+sommando algebricamente i termini simili. Tutti i polinomi sono quindi riducibili in forma normale.
+
+Un polinomio in forma normale può presentare, tra i suoi termini, un monomio di grado~0 che viene
+comunemente chiamato \emph{termine noto}.
+
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$3ab+b^2−2ba+4−6ab^2+5b^2$ ridotto in forma normale diventa~$ab+6b^2−6ab^2+4$. Il termine noto è~$4$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi\ref{ese:11.1}}\vspazio
+
+Un polinomio può anche essere costituito da un unico termine, pertanto un monomio è anche un polinomio.
+Un polinomio che, ridotto in forma normale, è somma algebrica di due, tre, quattro monomi non nulli si dice
+rispettivamente binomio, trinomio, quadrinomio.
+
+\begin{exrig}
+\begin{esempio}
+Binomi, trinomi, quadrinomi.
+\begin{enumeratea}
+\item $xy−5x^3y^2$ è un binomio;
+\item $3ab^2 +a−4a^3$ è un trinomio;
+\item $a−6ab^2+3ab−5b$ è un quadrinomio.
+\end{enumeratea}
+\end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Due polinomi, ridotti in forma normale, formati da termini uguali si dicono \emph{uguali}, più precisamente vale il \emph{principio di identità dei polinomi}:
+due polinomi~$p(x)$ e~$q(x)$ sono uguali se, e solo se, sono uguali
+i coefficienti dei rispettivi termini simili.
+
+Se due polinomi sono invece formati da tutti termini opposti, allora si dicono polinomi \emph{opposti}.
+
+Definiamo, inoltre, un polinomio \emph{nullo} quando i suoi termini sono a coefficienti nulli. Il polinomio nullo
+coincide con il monomio nullo e quindi con il numero~0.
+\end{definizione}
+\pagebreak
+\begin{exrig}
+\begin{esempio}
+Polinomi uguali, opposti, nulli.
+\begin{enumeratea}
+\item I polinomi\quad $\frac{1}{3}xy+2y^3−x$\quad e \quad$2y^3-x+\frac{1}{3}xy$ \quad sono uguali;
+\item i polinomi\quad $6ab−3a+2b$\quad e \quad$3a−2b−6ab$ \quad sono opposti;
+\item il polinomio \quad $7ab+4a^2−ab+b^3−4a^2−2b^3−6ab+b^3$ \quad è un polinomio nullo, infatti riducendolo in forma normale otteniamo il monomio nullo~$0$.
+\end{enumeratea}
+\end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Il \emph{grado complessivo} (o semplicemente \emph{grado}) di un polinomio è il massimo dei gradi complessivi dei suoi
+termini. Si chiama, invece, \emph{grado di un polinomio rispetto ad una data lettera} l'esponente maggiore con
+cui quella lettera compare nel polinomio, dopo che è stato ridotto a forma normale.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio} Grado di un polinomio.
+\begin{itemize*}
+\item Il polinomio~$2ab+3−4a^2b^2$ ha grado complessivo~$4$ perché il monomio con grado massimo è~$−4a^2b^2 $, che è un monomio di quarto grado;
+\item il grado del polinomio~$a^3+3b^2a−4ba^2$ rispetto alla lettera~$a$ è~$3$ perché l'esponente più grande con cui tale lettera compare è~$3$.
+\end{itemize*}
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi\ref{ese:11.2}}
+
+\begin{definizione}
+Un polinomio si dice \emph{omogeneo} se tutti i termini che lo compongono sono dello stesso grado.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$a^3−b^3+ab^2$ è un polinomio omogeneo di grado~$3$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvi\ref{ese:11.3}}
+
+\begin{definizione}
+Un polinomio si dice \emph{ordinato secondo le potenze decrescenti (crescenti) di una lettera}, quando i suoi
+termini sono ordinati in maniera tale che gli esponenti di tale lettera decrescono (crescono), leggendo il
+polinomio da sinistra verso destra.
+\end{definizione}
+
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$\frac{1}{2}x^3+\frac{3}{4}x^2y−2xy^2+\frac{3}{8}y^3$ è ordinato secondo le potenze decrescenti della lettera~$x$, e secondo le potenze crescenti della lettera~$y$.
+\end{esempio}
+\end{exrig}
+
+\begin{definizione}
+Un polinomio di grado~$n$ rispetto ad una data lettera si dice \emph{completo} se contiene tutte le potenze di tale lettera di grado inferiore a~$n$, compreso il termine noto.
+\end{definizione}
+%\newpage
+\begin{exrig}
+\begin{esempio}
+Il polinomio~$x^4-3x^3+5x^2+\frac{1}{2}x-\frac{3}{5}$ è completo di grado~$4$ e inoltre risulta ordinato rispetto alla lettera~$x$. Il termine noto è~$-\frac{3}{5}$.
+\end{esempio}
+\end{exrig}
+
+\osservazione
+Ogni polinomio può essere scritto sotto forma ordinata e completa: l'ordinamento si può effettuare in virtù della proprietà commutativa della somma, mentre
+la completezza si può ottenere mediante l'introduzione dei termini dei gradi mancanti con coefficiente uguale a~$0$.
+
+Per esempio, il polinomio~$x^4−x+1+4x^2$ può essere scritto sotto forma ordinata e completa come~$x^4+0x^3+4x^2−x+1$.
+
+\vspazio\ovalbox{\risolvii \ref{ese:11.4}, \ref{ese:11.5}, \ref{ese:11.6}, \ref{ese:11.7}, \ref{ese:11.8}, \ref{ese:11.9}, \ref{ese:11.10}v \ref{ese:11.11}}
+
+\section{Somma algebrica di polinomi}
+
+I polinomi sono somme algebriche di monomi e quindi le espressioni letterali che si ottengono dalla somma
+o differenza di polinomi sono ancora somme algebriche di monomi.
+
+\begin{definizione}
+La \emph{somma algebrica di due o più polinomi} è un polinomio avente per termini tutti i termini dei polinomi addendi.
+\end{definizione}
+
+La differenza di polinomi si può trasformare in somma del primo polinomio con l'opposto del secondo polinomio.
+
+\begin{exrig}
+\begin{esempio}
+Differenza di polinomi.
+\begin{equation*}
+\begin{split}
+3a^2+2b-\frac{1}{2}ab-\left(2a^2+ab-\frac{1}{2}b\right)&=3a^2+2b-\frac{1}{2}ab-2a^2-ab+\frac{1}{2}b\\
+&=a^2+\frac{-1-2}{2}ab+\frac{4+1}{2}b\\
+&=a^2-\frac{3}{2}ab+\frac{5}{2}b.
+\end{split}
+\end{equation*}
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:11.12}, \ref{ese:11.13}, \ref{ese:11.14},\ref{ese:11.15}, \ref{ese:11.16}, \ref{ese:11.17}}
+
+\section{Prodotto di un polinomio per un monomio}
+
+Per eseguire il prodotto tra il monomio~$3x^{2}y$ e il polinomio
+$2{xy}+5x^{3}y^{2}$; indichiamo il prodotto con
+$\left(3x^{2}y\right)\cdot \left(2{xy}+5x^{3}y^{2}\right)$.
+Applichiamo la proprietà distributiva della moltiplicazione rispetto
+all'addizione:~$\left(3x^{2}y\right)\cdot
+\left(2{xy}+5x^{3}y^{2}\right)=6x^{3}y^{2}+15x^{5}y^{3}$.
+
+\osservazione Il prodotto di un monomio per un polinomio è
+un polinomio avente come termini i prodotti del monomio per ciascun
+termine del polinomio.
+
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+ Prodotto di un monomio per un polinomio.
+
+ \begin{equation*}
+\begin{split}
+ \left(3x^{3}y\right)\cdot\left(\frac{1}{2}x^{2}y^{2}+\frac{4}{3}{xy}^{3}\right)&=\left(3x^{3}y\right)\cdot\left(\frac{1}{2}x^{2}y^{2}\right)+\left(3x^{3}y\right)\cdot%
+\left(\frac{4}{3}{xy}^{3}\right)\\
+&=\frac{3}{2}x^{5}y^{3}+4x^{4}y^{4}.
+\end{split}
+\end{equation*}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:11.18}, \ref{ese:11.19}}
+
+\section{Quoziente tra un polinomio e un monomio}
+
+Il quoziente tra un polinomio e un monomio si calcola applicando la
+proprietà distributiva della divisione rispetto
+all'addizione.
+
+\begin{definizione}
+ Si dice che un \emph{polinomio è divisibile per un monomio}, non
+nullo, se esiste un polinomio che, moltiplicato per il monomio, dà
+come risultato il polinomio dividendo; il monomio si dice
+\emph{divisore} del polinomio.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ Quoziente tra un polinomio e un monomio.
+ \[\left(6x^{5}y+9x^{3}y^{2}\right):\left(3x^{2}y\right)=2x^{(5-2)}y^{(1-1)}+3x^{(3-2)}y^{(2-1)}=2x^{3}+3{xy}.\]
+ \end{esempio}
+\end{exrig}
+\osservazione
+
+\begin{enumeratea}
+\item Poiché ogni monomio è divisibile per qualsiasi numero diverso
+da zero, allora anche ogni polinomio è divisibile per un qualsiasi
+numero diverso da zero;
+\item un polinomio è divisibile per un monomio, non nullo, se ogni
+fattore letterale del monomio divisore compare, con grado uguale o
+maggiore, in ogni monomio del polinomio dividendo;
+\item la divisione tra un polinomio e un qualsiasi monomio non nullo è
+sempre possibile, tuttavia il risultato è un polinomio solo nel caso
+in cui il monomio sia divisore di tutti i termini del polinomio;
+\item il quoziente tra un polinomio e un monomio suo divisore è un
+polinomio ottenuto dividendo ogni termine del polinomio per il monomio
+divisore.
+\end{enumeratea}
+
+\ovalbox{\risolvii \ref{ese:11.20}, \ref{ese:11.21}, \ref{ese:11.22}}
+
+\section{Prodotto di polinomi}
+
+Il prodotto di due polinomi è il polinomio che si ottiene
+moltiplicando ogni termine del primo polinomio per ciascun termine del
+secondo polinomio.
+
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+ Prodotto di polinomi.
+
+ \begin{enumeratea}
+   \item $\left(a^{2}b+3a-4{ab}\right)\left(\frac{1}{2}a^{2}b^{2}-a+3{ab}^{2}\right).$ Riducendo i termini simili:
+ \begin{multline*}
+  \left(a^{2}b+3a-4{ab}\right)\left(\frac{1}{2}a^{2}b^{2}-a+3{ab}^{2}\right)=%
+   \frac{1}{2}a^{4}b^{3}-a^{3}b+3a^{3}b^{3}+\frac{3}{2}a^{3}b^{2}-3a^{2}+\\
+   +9a^{2}b^{2} -2a^{3}b^{3}+4a^{2}b-12a^{2}b^{3}\\
+  =\frac{1}{2}a^{4}b^{3}-a^{3}b+a^{3}b^{3}+\frac{3}{2}a^{3}b^{2}-3a^{2}+9a^{2}b^{2}+4a^{2}b-12a^{2}b^{3}.
+ \end{multline*}
+ \item  $\left(x-y^{2}-3{xy}\right) \left(-2x^{2}y-3y\right).$
+ Moltiplicando ogni termine del primo polinomio per ogni termine del
+secondo otteniamo.
+\[\left(x-y^{2}-3{xy}\right)\left(-2x^{2}y-3y\right)=-2x^{3}y-3{xy}+2x^{2}y^{3}+3y^{3}+6x^{3}y^{2}+9{xy}^{2};\]
+
+ \item $\left(\frac{1}{2}x^{3}-2x^{2}\right)\left(\frac{3}{4}x+1\right)$.
+ \[\left(\frac{1}{2}x^{3}-2x^{2}\right)\left(\frac{3}{4}x+1\right)=\frac{3}{8}x^{4}+\frac{1}{2}x^{3}-\frac{3}{2}x^{3}-2x^{2}=\frac{3}{8}x^{4}-x^{3}-2x^{2}.\]
+ \end{enumeratea}
+ \end{esempio}
+\end{exrig}
+\ovalbox{\risolvi \ref{ese:11.23}}
+
+\section{Divisione tra due polinomi}
+
+\subsection{Polinomi in una sola variabile}
+
+Ricordiamo la divisione tra due numeri, per esempio~$147:4$. Si tratta di trovare un quoziente~$q$ e un resto~$r<4$, in modo 
+che~$147=q\cdot 4+r$. Un algoritmo per trovare questi due numeri è il seguente:
+\begin{center}
+ \input{./lbr/chap11/fig001_div.pgf}
+\end{center}
+Verifichiamo che~$147=36\cdot 4+3$, dunque~$q=36$ e~$r=3$ soddisfano la nostra richiesta.
+
+In questo paragrafo ci proponiamo di estendere questo algoritmo dal calcolo numerico al calcolo letterale, in particolare alla divisione tra polinomi.
+
+Nell'insieme dei polinomi in una sola variabile, ad esempio~$x$, vogliamo definire l'operazione di divisione, cioè, assegnati
+due polinomi, $A(x)$ \emph{dividendo} e~$B(x)$ \emph{divisore}, vogliamo determinare altri due polinomi, $Q(x)$ \emph{quoziente} e~$R(x)$ \emph{resto},
+con grado di~$R(x)$ minore del grado di~$B(x)$, per i quali:~$A(x) = B(x){\cdot}Q(x) + R(x)$.
+
+Per eseguire l'operazione si usa un algoritmo molto simile a quello usato per la divisione tra numeri interi. Illustriamolo con un esempio.
+
+\begin{exrig}
+ \begin{esempio}
+Eseguire la divisione tra i polinomi~$A(x)=3x^{4}+5x-4x^{3}-1$ e~$B(x)=3x^{2}-1$.
+
+Prima di eseguire l'algoritmo dobbiamo sempre controllare che:
+\begin{itemize*}
+ \item il dividendo sia di grado maggiore o uguale a quello del divisore:~$A(x)$ ha grado~$4$ e $B(x)$ ha grado~$2$;
+ \item i polinomi siano ordinati secondo le potenze decrescenti della variabile, in questo caso la~$x$; poiché ciò
+    non è vero, riscriviamo~$A(x)$ ordinato:~$A(x)=3x^{4}-4x^{3}+5x-1$;
+ \item dividendo e divisore siano in forma completa, cioè abbiano i termini con tutti i gradi; nel nostro esempio, i due polinomi non sono in
+    forma completa, quindi inseriamo i termini mancanti ponendo~0 come coefficiente delle potenze mancanti:
+    \[A(x)=3x^{4}-4x^{3}+0x^{2}+5x-1;\quad B(x)=3x^{2}+0x-1.\]
+\end{itemize*}
+\paragraph{Passo I}
+ Disponiamo i polinomi secondo il seguente schema, del tutto simile a quello usato per la divisione tra numeri.
+\begin{center}
+ \input{./lbr/chap11/fig002_div.pgf}
+\end{center}
+\paragraph{Passo II}
+ Dividiamo il primo termine del dividendo per il primo termine del divisore, otteniamo~$x^{2}$ che è il primo termine del quoziente;
+ esso va riportato nello spazio dedicato al quoziente.
+\begin{center}
+ \input{./lbr/chap11/fig003_div.pgf}
+\end{center}
+\paragraph{Passo III}
+ Moltiplichiamo il primo termine ottenuto per tutti i termini del divisore e trascriviamo il risultato del prodotto sotto il dividendo,
+avendo cura, per essere facilitati nel calcolo, di:
+\begin{itemize*}
+\item incolonnare i termini con lo stesso grado, ossia scrivere i risultati del prodotto in ordine da sinistra verso destra;
+\item cambiare tutti i segni ottenuti, in questo modo risulta più pratico eseguire la somma algebrica dei polinomi invece della sottrazione.
+\end{itemize*}
+\begin{center}
+ \input{./lbr/chap11/fig004_div.pgf}
+\end{center}
+\paragraph{Passo IV}
+ Sommiamo il dividendo con il polinomio sottostante e riportiamo il risultato in un'altra riga. Questo polinomio si chiama primo resto parziale.
+ Notiamo che ha grado~$3$, maggiore del grado~$2$ del divisore, pertanto la divisione va continuata.
+
+\begin{center}
+ \input{./lbr/chap11/fig005_div.pgf}
+\end{center}
+\paragraph{Passo V}
+ Ripetiamo il procedimento tra il resto parziale ottenuto, $-4x^{3}+x^{2}+5x-1$ e il divisore~$3x^{2}+0x-1$. Dividiamo il primo termine del resto che
+ è~$-4x^{3}$ per il primo termine del divisore che è~$3x^{2}$. Otteniamo~$-{\frac{4}{3}}x$ che è il secondo termine del quoziente.
+% \newpage
+\begin{center}
+ \input{./lbr/chap11/fig006_div.pgf}
+\end{center}
+\paragraph{Passo VI}
+ Proseguiamo moltiplicando~$-{\frac{4}{3}}x$ per~$B(x)$, riportiamo il risultato del prodotto, con segno opposto, sotto i
+ termini del primo resto parziale e addizioniamo i due polinomi.
+\begin{center}
+ \input{./lbr/chap11/fig007_div.pgf}
+\end{center}
+\paragraph{Passo VII}
+ Possiamo ripetere per l'ultima volta il procedimento precedente tra il resto parziale~$R_{p}(x)=x^{2}+\frac{11}{3}x-1$ e
+ il divisore~$B(x)$ in quanto hanno lo stesso grado. Dividendo il termine di grado maggiore di~$R_{p}(x)$, che è~$x^{2}$,
+ per il termine di grado maggiore di~$B(x)$ che è~$3x^{2}$ si ottiene~$\frac{1}{3}$ che è il terzo termine del polinomio quoziente.
+\begin{center}
+ \input{./lbr/chap11/fig008_div.pgf}
+\end{center}
+
+Non possiamo più ripetere l'algoritmo poiché il resto ottenuto ha grado minore del grado del divisore.
+
+In conclusione~$A(x):B(x)$ ha quoziente~$Q(x)=x^{2}-\dfrac{4}{3}x+\dfrac{1}{3}$ e resto~$R(x)={\dfrac{11}{3}}x-\dfrac{2}{3}$.
+
+\paragraph{Verifica}
+Verifichiamo se abbiamo svolto correttamente i calcoli; dovrebbe risultare, come detto sopra:$\quad A(x)=Q(x)\cdot B(x)+R(x)$.
+\begin{equation*}
+\begin{split}
+\left(3x^{2}-1\right)\left(x^{2}-\frac{4}{3}x+\frac{1}{3}\right)+\frac{11}{3}x &= 3x^{4}-4x^{3}-x^{2}+\frac{4}{3}x-\frac{1}{3}+\frac{11}{3}x-\frac{2}{3}\\
+                                        &= 3x^{4}-4x^{3}+\frac{15}{3}x-\frac{3}{3}\\
+                                        &=x^{4}-4x^{3}+5x-1\\
+                                        &=A(x).
+\end{split}
+\end{equation*}
+I polinomi~$Q(x)$ e~$R(x)$ soddisfano quindi le nostre richieste. Ma sono unici? È sempre possibile trovarli? A queste domande risponde il seguente teorema.
+ \end{esempio}
+\end{exrig}
+
+\begin{teorema}[Divisione euclidea]
+ Siano~$A(x)$ e~$B(x)$ due polinomi in una sola variabile, esistono e sono unici due polinomi~$Q(x)$ e~$R(x)$, con grado di~$R(x)$
+ minore o uguale del grado di~$B(x)$, tali che~$A(x)=Q(x)\cdot B(x)+R(x)$.
+\end{teorema}
+
+\osservazione Nel caso in cui il grado di~$A(x)$ sia minore del grado di~$B(x)$ il teorema resta valido, in questo caso~$Q(x)=0$ e~$R(x)=A(x)$.
+Nel caso di polinomi in più variabili il teorema della divisione euclidea non vale.
+
+\begin{definizione}
+ Si dice che un polinomio~$A$ (dividendo) è \emph{divisibile} per un polinomio~$B$ (divisore)
+ se esiste un polinomio~$Q$ (quoziente) per il quale~$A=Q\cdot B$.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+ Eseguiamo la divisione tra~$A(x)=x^{3}-2x^{2}+x-2$ e~$B(x)=x^{2}+1$.
+I due polinomi sono ordinati secondo potenze decrescenti della variabile, il grado di~$A$ è maggiore del grado di~$B$ e quest'ultimo
+deve essere completo. Inseriamoli nello schema per eseguire l'algoritmo. Risulta:
+$\left(x^{3}-2x^{2}+x-2\right):\left(x^{2}+1\right)=(x-2)$; il resto~$R(x)$ è il polinomio nullo e~$A(x)$ è divisibile per~$B(x)$.
+Infatti~$\left(x^{2}+1\right)\cdot (x-2)=\left(x^{3}-2x^{2}+x-2\right)$.
+\begin{center}
+ \input{./lbr/chap11/fig009_div.pgf}\vspace*{-1.10ex}
+\end{center}
+ \end{esempio}
+\end{exrig}
+
+In conclusione, se~$A(x)$ è un polinomio di grado~$n$ e~$B(x)$ un polinomio di grado~$m$ con~$n\ge m$, quando si esegue
+la divisione tra~$A$ e~$B$ si ottiene un polinomio quoziente~$Q(x)$ di grado~$n-m$ e un polinomio~$R(x)$ di grado~$g<m$.
+Si dimostra che i polinomi~$Q(x)$ e~$R(x)$ sono unici.
+
+Se~$R(x)$ è il polinomio nullo, la divisione è esatta e il polinomio~$A$ è divisibile per il polinomio~$B$.
+Se~$n<m$, allora la divisione non si può eseguire e si ottiene la frazione algebrica~$\frac{A}{B}$.
+
+\vspazio\ovalbox{\risolvii \ref{ese:11.24}, \ref{ese:11.25}, \ref{ese:11.26}, \ref{ese:11.27}, \ref{ese:11.28}}
+
+\subsection{Polinomi in più variabili}
+Per la divisione tra polinomi in più variabili riportiamo soltanto qualche esempio.
+\begin{exrig}
+ \begin{esempio}
+Siano~$A(a\text{,~}b)=3a^{2}b+4ab^{2}+3a^{3}-2b^{3}$ e~$B(a\text{,~}b)=a-3b$ rispettivamente dividendo e divisore di una divisione tra polinomi;
+essi sono due polinomi omogenei nelle due variabili~$a$ e~$b$ rispettivamente di grado~$3$ e grado~$1$.
+
+Per eseguire la divisione procediamo come nel caso di polinomi in una sola variabile.
+Dividiamo il polinomio~$A(a\text{,~}b)=3a^{2}b+4ab^{2}+3a^{3}-2b^{3}$ per il polinomio~$B(a\text{,~}b)=a-3b$ rispetto alla variabile~$a$.
+Controlliamo le condizioni:
+\begin{itemize*}
+\item $A$ e~$B$ sono ordinati rispetto alla variabile $a$? No, $A$ non lo è. Quindi ordiniamo~$A$:
+\[A(a\text{,~}b)=3a^{3}+3a^{2}b+4ab^{2}-2b^{3};\]
+\item il grado di~$A$ è maggiore o uguale al grado di~$B$? Sì;
+\item $A$ e~$B$ sono completi rispetto alla variabile~$a$? Sì.
+\end{itemize*}
+Costruiamo lo schema per eseguire l'algoritmo e procediamo:
+\begin{center}
+ \input{./lbr/chap11/fig011_eser.pgf}
+\end{center}
+Il quoziente è~$Q =\ldots \ldots \ldots$; il resto~$R = 118b^{3}$
+
+Verifica~$\ldots \ldots \ldots \ldots \ldots \ldots$
+
+Se avessimo eseguito la divisione rispetto alla variabile~$b$, avremmo ottenuto stesso quoziente e stesso resto? Proviamo.
+Controlliamo le condizioni:
+\begin{itemize*}
+\item $A$ e~$B$ sono ordinati rispetto alla variabile~$b$? No. Ordinando~$A$, risulta:
+\[A(a\text{,~}b)=-2b^{3}+4ab^{2}+3a^{2}b+3a^{3}+3a^{2}b;\]
+e ordinando~$B$, risulta
+\[B(a\text{,~}b)=-3b+a;\]
+\item il grado di~$A$ è maggiore o uguale al grado di~$B$? Sì;
+\item $A$ e~$B$ sono completi rispetto alla variabile~$b$? Sì.
+\end{itemize*}
+Costruisci lo schema dell'algoritmo e concludi.
+ \end{esempio}
+\end{exrig}
+\ovalbox{\risolvii \ref{ese:11.29}, \ref{ese:11.30}}
+
+\section{Regola di Ruffini}\label{sect:regola_di_Ruffini}
+
+Per eseguire la divisione tra due polinomi in una sola variabile, \emph{nel caso in cui il
+divisore sia di grado~1} si può applicare una regola nota come \emph{regola
+di Ruffini}\footnote{dal nome del matematico e medico italiano Paolo Ruffini (1765 - 1822).} (o \emph{divisione sintetica}) e che si basa sui seguenti teoremi.
+
+\begin{teorema}
+ Il resto della divisione di un polinomio~$A(x)$ per un
+binomio del tipo~$(x-k)$ è uguale al valore che~$A(x)$ assume quando
+al posto della variabile $x$ si sostituisce il valore $k$, $R=A(k)$.
+\end{teorema}
+
+\begin{proof}
+ Dalla divisione di~$A(x)$ per~$x-k$ otteniamo la seguente
+uguaglianza:
+\[A(x)=(x-k)\cdot Q(x)+R\]
+in cui si è scritto~$R$ anziché $R(x)$, poiché è
+una costante.
+
+Essendo tale relazione valida per qualsiasi valore che si attribuisce
+alla variabile~$x$, sostituiamo al suo posto il valore
+$k$ e otteniamo:
+
+\[A(k)=\underbrace{(k-k)}_{0}\cdot Q(k)+R=R.\]
+
+Ciò vuol dire che il valore assunto da~$A(x)$
+quando~$x=k$ è proprio uguale al resto della divisione.
+\end{proof}
+
+\begin{teorema}[di Ruffini]
+ Condizione necessaria e sufficiente affinché un
+polinomio~$A(x)$ sia divisibile per un binomio del tipo~$(x-k)$ è
+che risulti~$A(k)=0$.
+\end{teorema}
+
+\begin{proof}
+\emph{Prima implicazione}:~$A(x)$ divisibile per~$(x-k)\:\Rightarrow\: A(k)=0$.
+
+Poiché $A(x)$ è divisibile per~$(x-k)$, per definizione di divisibilità deve essere~$R=0$. Ma, per il
+teorema del resto, $A(k)=R=0$, quindi, per la proprietà transitiva
+dell'uguaglianza, $A(k)=0$.
+
+\emph{Seconda implicazione}:~$A(k)=0\:\Rightarrow\: A(x)$
+divisibile per~$(x-k)$.
+
+Il resto della divisione del polinomio~$A(x)$ per il binomio~$x-k$,
+per il teorema del resto risulta~$R=A(k)$ e per ipotesi~$A(k)=0$,
+ne segue che~$R=0$. Per definizione di divisibilità, essendo il
+resto della divisione zero, segue che~$A(x)$ è divisibile per~$(x-k)$.
+\end{proof}
+
+
+\begin{procedura}
+ Dividere un polinomio con la regola di Ruffini:
+
+ \begin{enumeratea}
+ \item calcolo del resto;
+\item applicazione del procedimento di divisione;
+\item verifica.
+ \end{enumeratea}
+\end{procedura}
+
+
+\begin{exrig}
+ \begin{esempio}
+$\left(a^{2}-3a+1\right):(a-1).$
+
+Dividiamo con la regola di Ruffini il polinomio~$A(a)=a^{2}-3a+1$ per
+il binomio~$B(a)=a-1$; cerchiamo quoziente~$Q(a)$ e resto~$R(a)$.
+
+\paragraph{Passo I} \emph{Calcolo del polinomio resto.}
+
+Si considera il termine numerico del polinomio divisore cambiato di
+segno (nell'esempio è~1) e si sostituisce alla
+lettera del polinomio dividendo~$A(1)$:~$1^{2}-3\cdot 1 + 1 = 1 - 3 + 1 = -1$.
+
+Il resto della divisione è~$-1$.
+
+\paragraph{Passo II} \emph{Applicazione del procedimento di divisione.}
+
+Disegnare il seguente schema di Ruffini: scrivere i coefficienti
+numerici del polinomio dividendo, secondo le potenze decrescenti della
+variabile. Se manca un termine occorre mettere~0.
+L'ultimo termine numerico è messo esternamente alla
+griglia. Nell'angolo a sinistra dello schema si pone il
+termine numerico del polinomio divisore cambiato di segno,
+nell'esempio è~1.
+
+\begin{center}
+\input{./lbr/chap11/fig012_ruf.pgf}
+\end{center}
+
+\begin{multicols}{2}
+ Il primo termine si riporta inalterato nella parte sottostante:
+\begin{center}
+\input{./lbr/chap11/fig013_ruf.pgf}
+\end{center}
+\end{multicols}
+
+\begin{multicols}{2}
+ Moltiplicare il termine noto del divisore (cambiato di segno) per il
+primo coefficiente appena trascritto e riportare il risultato sotto il
+secondo coefficiente
+\begin{center}
+\input{./lbr/chap11/fig014_ruf.pgf}
+\end{center}
+\end{multicols}
+
+\begin{multicols}{2}
+ Sommare i due termini appena incolonnati~$-3+1=-2$.
+\begin{center}
+\input{./lbr/chap11/fig015_ruf.pgf}
+\end{center}
+\end{multicols}
+
+\begin{multicols}{2}
+ Moltiplicare il termine noto del divisore (cambiato di segno) per la
+somma appena ottenuta~$1\cdot (-2)=-2$.
+\begin{center}
+\input{./lbr/chap11/fig016_ruf.pgf}
+\end{center}
+\end{multicols}
+%\newpage
+\begin{multicols}{2}
+ Addizionare gli ultimi due numeri incolonnati~$1-2=-1$.
+\begin{center}
+\input{./lbr/chap11/fig017_ruf.pgf}
+\end{center}
+\end{multicols}
+
+Infine si ricostruisce il polinomio quoziente, tenendo presente che i
+coefficienti numerici sono quelli trovati da questa divisione, cioè~1
+e~$-2$. Quoziente e resto sono allora~$Q(x)=a-2$ e~$R=-1$.
+
+\paragraph{Passo III}\emph{Verifica}
+
+Come nella divisione con i numeri, si moltiplica il polinomio risultato
+per il polinomio divisore e si somma il polinomio resto. Il risultato
+deve essere il polinomio dividendo.
+\[(a - 2)(a - 1) + (-1) = a^{2} - a - 2a + 2 - 1 =a^{2}-3a + 1.\]
+ \end{esempio}
+
+\begin{esempio}
+$(4x^{3} - 5x + 6): (x + 1).$
+
+Applicazione del procedimento di divisione
+\begin{center}
+\input{./lbr/chap11/fig018_esm.pgf}
+\end{center}
+\[Q(x)=4x^{2}-4x-1 \qquad R=7.\]
+\end{esempio}
+
+\textit{Verifica.}
+
+\[Q(x)\cdot B(x)+R=A(x)\]
+
+\[\left(4x^{2}-4x-1\right)\cdot (x+1)+7=4x^{3}+4x^{2}-4x-x-1+7=4x^{3}-5x+6\]
+
+Vediamo il caso in cui il binomio che fa da divisore ha coefficiente
+numerico della variabile diverso da~1.
+
+
+\begin{esempio}
+ Dividere con la regola di Ruffini~$\left(2x^{4}-x^{3}-4x^{2}+2x+7\right):(2x-1)$.
+
+In questo tipo di esercizi si deve rendere il divisore del tipo~$x+n$,
+quindi nel nostro caso si deve dividere sia il dividendo sia il
+divisore per~2; sappiamo, infatti, dalla proprietà invariantiva della
+divisione che dividendo per uno stesso numero dividendo e divisore il
+quoziente della divisione non cambia. Il resto invece risulterà
+diviso per~2. Quindi applichiamo l'algoritmo precedente
+e \emph{ricordiamoci al termine della divisione di moltiplicare il
+resto per}~2.
+
+La divisione allora diventa
+$\left(x^{4}-\frac{1}{2}x^{3}-2x^{2}+x+\frac{7}{2}\right):\left(x-\frac{1}{2}\right)$.
+\end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:11.31}, \ref{ese:11.32}, \ref{ese:11.33}, \ref{ese:11.34}, \ref{ese:11.35}}
+
+\subsection{Calcolo del resto}
+
+Si considera il termine numerico del polinomio divisore cambiato di
+segno (nell'esempio precedente è~$+{\frac{1}{2}}$) e si
+sostituisce alla lettera che compare nel polinomio dividendo. Il risultato che si
+ottiene è il resto della
+divisione~$\left(\frac{1}{2}\right)^{4}-\frac{1}{2}\left(\frac{1}{2}\right)^{3}-2\left(\frac{1}{2}\right)^{2}+\frac{1}{2}+\frac{7}{2}=-\frac{1}{16}-\frac{1}{2}+\frac{1}{2}+\frac{7}{2}=\frac{7}{2}$.
+
+Applicazione del procedimento di divisione.
+\begin{center}
+ \input{./lbr/chap11/fig020_esm.pgf}
+\end{center}
+
+Adesso si pone la lettera per ogni termine del polinomio risultato
+partendo dal grado del polinomio dividendo diminuito di~1. Il risultato
+è quindi il polinomio~$x^{3}-2x$, il resto è~$\frac{7}{2}\cdot2=7$.
+
+\paragraph{Verifica}
+Per la proprietà della divisione si moltiplica il quoziente per il
+polinomio divisore e si somma il resto ottenuto. Il risultato deve
+essere il polinomio dividendo.
+
+\[\left(x^{3}-2x\right)(2x-1)+7=2x^{4}-x^{3}-4x^{2}+2x+7.\]
+
+In generale, se si vuole dividere il polinomio~$A(x)$ per il binomio~$(nx-\alpha)$, utilizzando la proprietà invariantiva della
+divisione, si divide dividendo e divisore per~$n$, così da ottenere un divisore con coefficiente 1 per il termine di primo grado. Quindi si può effettuare la divisione ottenendo il quoziente $Q(x)$ ed il resto $R$. Per ottenere il resto della divisione di
+partenza occorre moltiplicare $R$ per il coefficiente~$n$.
+Infatti si ha:~$A(x)=(nx-\alpha)Q(x)+R $
+e, dividendo ambo i membri per~$n$, si ha:
+\[\frac{A(x)}{n}=\left(x-\frac{\alpha }{n}\right)Q(x)+\frac{R}{n}.\]
+\ovalbox{\risolvii \ref{ese:11.36}, \ref{ese:11.37}, \ref{ese:11.38}, \ref{ese:11.39}, \ref{ese:11.40}, \ref{ese:11.41}}
+\newpage
+\input{./chap/11_esercizi}
+\cleardoublepage

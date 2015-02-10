@@ -1,0 +1,25 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=8mm, y=8mm, minimum size=10mm]
+
+\node (a0) at (0,0) {};
+\node (a1) at (1,0) {1};
+\node (a2) at (2,0) {$-3$};
+\node (a3) at (3,0) {1};
+
+\node(a4) at (0,-1) {1};
+\node (a5) at (1,-1) {};
+\node (a6) at (2,-1) {1};
+\node (a7) at (3,-1) {};
+
+\node (a8) at (0,-2) {};
+\node (a9) at (1,-2) {1};
+\node (a10) at (2,-2) {};
+\node (a11) at (3,-2) {};
+
+\draw (a0.north east)--(a8.south east);
+ \draw (a4.south west)--(a7.south east);
+\draw (a2.north east)--(a10.south east);
+
+\draw[->,red] (a4.south)--(a9.west);
+\draw[->,red] (a9.east)--(a6.south);
+\end{tikzpicture}
