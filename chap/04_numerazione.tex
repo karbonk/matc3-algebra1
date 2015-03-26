@@ -8,7 +8,7 @@ numerazione \emph{ottale}, se fossimo nati gatti avremmo contato fino a~4 e
 useremo un sistema \emph{quattrale}, millepiedi fino a mille.
 
 Come conta un
-computer? Un computer ragiona sulla base di soli due stati: passa corrente (acceso) o non
+computer? Un computer ragiona sulla base di soli due stati, passa corrente (acceso) o non
 passa corrente (spento): è come se avesse due dita. Tutti i sistemi che oggi
 usiamo nell'informatica utilizzano una logica a due stati: i circuiti elettrici possono trovarsi nello stato di acceso o di spento, i dischi magnetici
 dell'hard disk sono composti da microscopici magneti ognuno dei quali può essere magnetizzato in un verso o nel verso opposto, i dischi
@@ -28,12 +28,12 @@ gli elementi del nostro insieme. Le unità che rimangono, perché non riescono a
 segnate con la cifra che le rappresenta: nel nostro caso~3.
 
 Passiamo all'unità di ordine superiore: le decine. Anche con queste formiamo raggruppamenti di~10, se ci riusciamo. Ogni
-raggruppamento forma un'unità di ordine superiore. Se rimangono unità di questo ordine esse rappresentano le decine. Se non
-rimane alcuna unità scriviamo~0. Nel nostro caso ne rimangono~2.
+raggruppamento forma un'unità di ordine superiore, se rimangono elementi che non si raggruppano essi rappresentano le decine. Se non
+rimane alcuna unità scriviamo~0. Nel nostro caso, ci sono 12~decine, 10 formano un'unità di ordine superiore (centinaia) e 2 restano decine.
 
 Il procedimento continua finché non abbiamo finito di contare tutti gli elementi. Nel nostro esempio finiamo dopo aver formato
 un'unità di ordine superiore, le centinaia. Il nostro numero è~$123$.
-Naturalmente i numeri~123 e~312 sono due numeri diversi anche se composti dalle stesse cifre: sono diversi
+Ovviamente i numeri~123 e~312 sono due numeri diversi anche se composti dalle stesse cifre, sono diversi
 perché la posizione delle cifre che li compongono è differente. Ad esempio, la cifra~1, che in 123 è nella posizione più a sinistra,
 si trova al centro del numero~312.
 
@@ -65,7 +65,7 @@ La scrittura di un numero come somma delle cifre moltiplicate per le potenze del
 base si chiama \emph{notazione polinomiale}.
 \end{definizione}
 
-Una volta compreso il meccanismo fondamentale su cui si basa il sistema
+Una volta compreso il meccanismo su cui si basa il sistema
 di numerazione decimale, cioè a base 10, il procedimento si può estendere ad una base
 qualunque.
 
@@ -246,10 +246,16 @@ Per scrivere un numero da una base~$B$ a una base~$K$ entrambe diverse da~10 occ
 \begin{enumeratea}
 \item trasformare il numero in base~$B$ in un numero decimale attraverso
 la sua scrittura polinomiale;
-\item trasformare il numero decimale nella base~$K$ attraverso i resti
-delle divisioni successive per~$K$.
-\end{enumeratea}
 
+$(1023)_{4}\;=\;1\cdot 4^{3}\;+\;0\cdot 4^{2}\;+\;2\cdot 4^{1}\;+\;3\cdot
+4^{0}\;=\;64\;+\;0\;+\;8\;+\;3\;=\;(75)_{10}$;
+\item trasformare il numero decimale nella base~$K$ attraverso i resti
+delle divisioni successive per~$K$ presi nell'ordine opposto a quello nel quale sono stati ottenuti.
+\begin{center}
+ \input{./lbr/chap04/fig007_conviv.pgf}
+\end{center}
+\end{enumeratea}
+\begin{comment}
 Applichiamo la procedura indicata:
 
 \begin{enumeratea}
@@ -264,6 +270,7 @@ $(135)_{7}$.
 \begin{center}
  \input{./lbr/chap04/fig007_conviv.pgf}
 \end{center}
+\end{comment}
 
 Le trasformazioni eseguite
 sono quindi:~$(1023)_{4}\rightarrow (75)_{10}\rightarrow (135)_{7}$.
@@ -308,7 +315,7 @@ Base~10 & Base~2 & Base~4 & Base~8 & Base~16\\
  \end{tabular*}
 \end{center}
 
-\subsubsection{Da base~2 a base~4}
+\paragraph{Da base~2 a base~4}
 Dobbiamo raggruppare il numero scritto in base~2 in gruppi di due cifre, partendo da destra, e tradurre il valore di ogni singolo gruppo con la
 corrispondente cifra in base~4.
 
@@ -320,7 +327,7 @@ Numero scritto in base~4 &  3  &  1  &  0  &  3  &  2  &  1  &  1\\
 \end{tabular*}
 \[(11010011100101)_{2}=(3103211)_{4}.\]
 
-\subsubsection{Da base~2 a base~8}
+\paragraph{Da base~2 a base~8}
 Dobbiamo raggruppare il numero scritto in base~2 in gruppi di tre cifre, partendo da destra,
 e tradurre il valore di ogni singolo gruppo con la corrispondente cifra in base~8.
 
@@ -332,7 +339,7 @@ e tradurre il valore di ogni singolo gruppo con la corrispondente cifra in base~
 \end{tabular*}
 \[(11010011100101)_{2}=(32345)_{8}.\]
 
-\subsubsection{Da base~2 a base~16}
+\paragraph{Da base~2 a base~16}
 Dobbiamo raggruppare il numero scritto in base~2 in gruppi di quattro cifre, partendo da destra,
 e tradurre il valore di ogni singolo gruppo con la corrispondente cifra in base~16.
 
@@ -350,13 +357,13 @@ e tradurre il valore di ogni singolo gruppo con la corrispondente cifra in base~
 
 Tutti gli strumenti elettronici che utilizziamo hanno bisogno di
 tradurre le informazioni che inseriamo in stati fisici della
-macchina ed il metodo più semplice e più efficiente per tradurre in ``linguaggio macchina''
+macchina. Dal punto di vista tecnico oggi usiamo dispositivi elettrici, magnetici, ottici che sono bistabili, ossia assumono due stati fisici differenti e il metodo più semplice e più efficiente per tradurre in ``linguaggio macchina''
 le nostre informazioni è utilizzare la base~2: composta solo dai
 simboli~0 e~1. La base due è quindi l'alfabeto a
 disposizione delle macchine per comprendere e rispondere alle nostre
 richieste. Se si utilizzasse la base~10 dovremo far riconoscere
 dall'apparato dieci differenti simboli che dovrebbero
-essere tradotti in altrettanti stati differenti.
+essere tradotti in altrettanti stati differenti di dispositivi fisici.
 
 A partire da questa informazione elementare detta \textit{bit}
 (compressione dall'inglese di \textit{bi}nary
@@ -394,7 +401,7 @@ m & 0 1 1 0 1 1 0 1 & 109\\
 \end{tabular}
 \end{center}
 \end{table}
-
+\pagebreak
 Anche il byte ha i suoi multipli. Eccone alcuni indicati nelle seguenti tabelle.
 
 \begin{table}[!h]
@@ -456,7 +463,7 @@ viene dichiarato, ad esempio, con un hard disk da~$160\unit{GB}$ ha a disposizio
 
 Le quattro operazioni con i numeri in base diversa da dieci possono
 effettuarsi con gli stessi algoritmi utilizzati per i numeri naturali.
-
+\pagebreak
 \subsection{Addizione}
 
 \begin{exrig}
@@ -473,38 +480,45 @@ bisogna solo fare attenzione che in base due si ha~$1+1=10$, perché in base due
 \input{./lbr/chap04/fig009_add.pgf}
 \end{wrapfloat}
 
-Mettiamo i numeri in colonna (vedi a fianco) e cominciamo ad addizionare
+Mettiamo i numeri in colonna e cominciamo ad addizionare
 a partire dalle unità:~$1+1=0$, scrivo~$0$ e riporto~$1$.
-Nella colonna di ordine superiore trovo~$(1+1)+1=10+1=11$, scrivo~$1$ e
+Nella colonna di ordine superiore troviamo~$(1+1)+1=10+1=11$, scrivo~$1$ e
 riporto~$1$.
-Nella colonna di ordine superiore trovo~$1+0+0=1$, scrivo~$1$ senza
+Nella colonna di ordine superiore troviamo~$1+0+0=1$, scrivo~$1$ senza
 riportare alcunché. Continuo in questo modo fino ad esaurire tutte le cifre da addizionare.
 
-Facciamo la verifica nell'usuale sistema decimale:
-\[(101011_{2}=43)+(10011_{2}=19)=(111110_{2}=62).\]
-
+Facciamo la verifica nel sistema decimale:
+%\[(101011_{2}=43)+(10011_{2}=19)=(111110_{2}=62).\]
+\begin{align*}
+&\text{in base 2 }&101011_{2}&+10011_{2}&=&~111110_{2}\\
+&\text{in base 10 }&43&+19&=&~62
+\end{align*}
 \begin{esempio}
 Eseguire la somma in base~5 tra~$34231_{5}$ e~$4341_{5}$.
 
-Costruiamo la tavola di addizione in base cinque: ricordiamo che~$4+1=10$, $4+2=11$, ecc.
+Costruiamo la tavola di addizione in base cinque: ricordiamo che~$4+1=10$, $4+2=11$, $4+3=12$ ecc.
 
 Mettiamo i numeri in colonna e cominciamo ad addizionare a partire dalle
 unità:~$1+1=2$, scrivo~$2$ senza riporto. Nella colonna di ordine superiore
-trovo~$3+4=12$. Scrivo~$2$ e riporto~$1$. Nella colonna di ordine superiore trovo~$(1+2)+3=3+3=11$ scrivo~$1$ e
-riporto~$1$. Procedendo verso sinistra ora trovo~$(1+4)+4=10+4=14$ scrivo~$4$ e
+troviamo~$3+4=12$. Scrivo~$2$ e riporto~$1$. Nella colonna di ordine superiore troviamo~$(1+2)+3=3+3=11$ scrivo~$1$ e
+riporto~$1$. Procedendo verso sinistra ora troviamo~$(1+4)+4=10+4=14$ scrivo~$4$ e
 riporto~$1$. Infine~$1+3=4$. L'addizione è terminata.
 %\newpage
 \begin{center}
  \input{./lbr/chap04/fig010_addii.pgf}
 \end{center}
 Verifica nel sistema decimale:
-\[(34231_{5}=2\,441)\;+\;(4341_{5}=596)=(44122_{5}=3\,037).\]
+%\[(34231_{5}=2\,441)\;+\;(4341_{5}=596)=(44122_{5}=3\,037).\]
+\begin{align*}
+&\text{in base 5 }&34231_{5}&+4341_{5}&=&~44122_{5}\\
+&\text{in base 10 }&2\,441&+596&=&~3\,037
+\end{align*}
 \end{esempio}
 
 \end{exrig}
 
 \ovalbox{\risolvii \ref{ese:4.21}, \ref{ese:4.22}, \ref{ese:4.23}}
-
+\pagebreak
 \subsection{Sottrazione}
 
 Per la sottrazione ci possiamo servire delle stesse tabelle
@@ -517,8 +531,8 @@ $101011_{2}-11111_{2}.$
 
 Mettiamo i numeri in colonna e cominciamo a sottrarre partendo dalle
 unità:~$1-1=0$ scrivo~$0$.
-Nella colonna di ordine superiore trovo di nuovo~$1-1=0$ scrivo~$0$.
-Procedendo verso sinistra trovo~$0-1$ devo quindi prendere in prestito
+Nella colonna di ordine superiore troviamo di nuovo~$1-1=0$ scrivo~$0$.
+Procedendo verso sinistra troviamo~$0-1$ devo quindi prendere in prestito
 un unità di ordine superiore che messa davanti a~0 diviene~$10-1=1$.
 Scrivo~$1$ e riporto~$-1$. Mi sposto ancora a sinistra e
 \begin{wrapfloat}{figure}{r}{0pt}
@@ -534,7 +548,11 @@ sottraendo:~$1-1=0$.
 Infine nella unità di ordine superiore devo addizionare il riporto
 $-1$ a~$1$ e scrivo ancora~$0$. Il risultato della sottrazione è:~$1100_2$
 
-Verifica nel sistema decimale:~$(101011_{2}=43)-(11111_{2}=31)=(1100_{2}=12).$
+Verifica nel sistema decimale: %~$(101011_{2}=43)-(11111_{2}=31)=(1100_{2}=12).$
+\begin{align*}
+&\text{in base 2 }&101011_{2}&-11111_{2}&=&~1100_{2}\\
+&\text{in base 10 }&43&-31&=&~12
+\end{align*}
 
 
 \begin{esempio}
@@ -544,12 +562,16 @@ Ci serviamo della tavola di addizione in base cinque.
 \begin{center}
  \input{./lbr/chap04/fig015_sot.pgf}
 \end{center}
-Verifica:~$(34231_{5}=2\,441)-(4341_{5}=596)=(24340_{5}=1\,845).$
+Verifica nel sistema decimale: %~$(34231_{5}=2\,441)-(4341_{5}=596)=(24340_{5}=1\,845).$
+\begin{align*}
+&\text{in base 5 }&34231_{5}&-4341_{5}&=&~24340_{5}\\
+&\text{in base 10 }&2\,441&+596&=&~1\,845
+\end{align*}
 \end{esempio}
 \end{exrig}
 
 \ovalbox{\risolvii \ref{ese:4.24}, \ref{ese:4.25}, \ref{ese:4.26}}
-
+\pagebreak
 \subsection{Moltiplicazione}
 
 Adoperiamo lo stesso algoritmo usato per moltiplicare due numeri
@@ -566,20 +588,32 @@ due.
 \begin{center}
 \input{./lbr/chap04/fig019_molti.pgf}
 \end{center}
-Verifica nel sistema decimale:~$(101011_{2}=43)\cdot(101_{2}=5)=(11010111_{2}=215)$.
+Verifica nel sistema decimale: %~$(101011_{2}=43)\cdot(101_{2}=5)=(11010111_{2}=215)$.
+\begin{align*}
+&\text{in base 2 }&101011_{2}&\cdot 101_{2}&=&~11010111_{2}\\
+&\text{in base 10 }&43&\cdot 5&=&~215
+\end{align*}
  \end{esempio}
-\pagebreak
+%\pagebreak
  \begin{esempio}
  $231_{5}\times~24_{5}$.
+
+In questo caso abbiamo bisogno di costruire la tavola della moltiplicazione in base
+cinque.
+
 \begin{center}
  \input{./lbr/chap04/fig020_moltii.pgf}
 \end{center}
- Verifica nel sistema decimale:~$(231_{5}=66)\cdot(24_{5}=14)=(12144_{5}=924)$.
+ Verifica nel sistema decimale: %~$(231_{5}=66)\cdot(24_{5}=14)=(12144_{5}=924)$.
+\begin{align*}
+&\text{in base 5 }&231_{5}&\cdot 24_{5}&=&~12144_{5}\\
+&\text{in base 10 }&66&\cdot 14&=&~924
+\end{align*}
  \end{esempio}
 \end{exrig}
 
 \ovalbox{\risolvii \ref{ese:4.27}, \ref{ese:4.28}, \ref{ese:4.29}}
-
+\pagebreak
 \subsection{Divisione}
 
 Anche per la divisione il procedimento è del tutto analogo a quello
@@ -612,20 +646,24 @@ ed il resto è uguale a~$100$.
 
 Dai calcoli risulta quindi: $11101_{2}:101_{2} = (101)_2$ con resto $(100)_2$.
 
-Verifichiamolo nel sistema decimale:
-\[(11101_{2}=29):(101_{2}=5)=(\mathit{Quoziente}:101_{2}=5;\:\:\mathit{Resto}:110_{2}=4).\]
+Verifica nel sistema decimale:
+%\[(11101_{2}=29):(101_{2}=5)=(\mathit{Quoziente}:101_{2}=5;\:\:\mathit{Resto}:110_{2}=4).\]
+\begin{align*}
+&\text{in base 2 }&11101_{2}&:101_{2}&=&~101_{2}&\text{con Resto }=&~100_{2}\\
+&\text{in base 10 }&29&:5&=&~5&\text{con Resto }= &~4
+\end{align*}
 
 %\begin{multicols}{2}
 \begin{wrapfloat}{figure}{r}{0pt}
 \input{./lbr/chap04/fig022_divii.pgf}
 \end{wrapfloat}
-Eseguiamo la riprova della divisione direttamente in base~2:
+Eseguiamo la riprova della divisione in base~2:
 \[\mathit{dividendo}=\mathit{quoziente}\cdot\mathit{divisore}+\mathit{resto}.\]
-Il quoziente $101_2$ moltiplicato il divisore $101_2$ è uguale a~$11001_2$.
+Il quoziente $101_2$ moltiplicato per il divisore $101_2$ è uguale a~$11001_2$.
 Se a questo risultato aggiungiamo il resto~$100_2$ otteniamo il dividendo~$11101_2$. Quindi i calcoli effettuati sono corretti.
 
 %\end{multicols}
-\pagebreak
+%\pagebreak
 \begin{esempio}
 $3402_{5}:42_{5}$.
 \end{esempio}
@@ -649,9 +687,12 @@ divisione intera è terminata.
 
 Dunque $3402_{5}:42_{5} = 41_{5}$ con resto $30_{5}$.
 
-Verifica:~$(3402_{5}=477):(42_{5}=22)=(\mathit{Quoziente}:41_{5}=21;\:\:\mathit{Resto}:30_{5}=15)$.
-\vspace*{1.5ex}
-
+Verifica nel sistema decimale: %~$(3402_{5}=477):(42_{5}=22)=(\mathit{Quoziente}:41_{5}=21;\:\:\mathit{Resto}:30_{5}=15)$.
+\begin{align*}
+&\text{in base 5 }&3402_{5}&:42_{5}&=&~41_{5}&\text{con Resto }=&~30_{5}\\
+&\text{in base 10 }&477&:22&=&~21&\text{con Resto }= &~15
+\end{align*}
+%\vspace*{1.5ex}
 \end{exrig}
 
 \ovalbox{\risolvii \ref{ese:4.30}, \ref{ese:4.31}}

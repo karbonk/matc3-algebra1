@@ -34,6 +34,7 @@
 \draw(a-6-11.south west)--(a-6-11.south east);
 
 \draw[->,blue](a-7-11.south west)--(a-3-3.south west);
+\draw[->,blue](a-6-12.south east)--(a-7-11.south east);
 
 \node[above] (am) at (a-1-4.north) {$315_{10}=102200_3$};
 \node[above] at (am.north){base 3};
@@ -67,6 +68,7 @@
  \draw(b-5-8.south west)--(b-5-8.south east);
 
  \draw[->,blue](b-6-8.south west)--(b-3-3.south west);
+ \draw[->,blue](b-5-9.south east)--(b-6-8.south east);
 
  \node[above] (bm) at (b-1-4.north) {$315_{10}=10323_4$};
  \node[above] at (bm.north){base 4};
@@ -96,6 +98,7 @@
  \draw(c-4-6.south west)--(c-4-7.south east);
 
  \draw[->,blue](c-5-7.south west)--(c-3-3.south west);
+ \draw[->,blue](c-4-8.south east)--(c-5-7.south east);
 
  \node[above] (cm) at (c-1-4.north) {$315_{10}=2230_5$};
  \node[above] at (cm.north){base 5};

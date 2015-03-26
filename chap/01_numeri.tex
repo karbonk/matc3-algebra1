@@ -151,7 +151,7 @@ L'operazione di moltiplicazione può essere indicata con diversi simboli:
 \begin{empheq}[box=\fbox]{equation*}
 n\times m=p\text{,}\qquad n\cdot m=p\text{,~}\qquad n\ast m=p.
 \end{empheq}
-Per eseguire la moltiplicazione~$4\cdot 2$ dobbiamo addizionare 4 volte 2, cioè~$2+2+2+2$, e otteniamo~8.
+Per eseguire la moltiplicazione~$4\cdot 2$, che possiamo leggere ``quattro volte due'', dobbiamo addizionare 4 volte 2, cioè~$2+2+2+2$, e otteniamo~8.
 
 Le operazioni di addizione e moltiplicazione si dicono \emph{operazioni interne} all'insieme dei
 numeri naturali, poiché, utilizzando numeri naturali, esse danno sempre come risultato un numero naturale.
@@ -189,7 +189,7 @@ andare oltre il numero~0 che è il più piccolo dei numeri naturali.
 
 \input{./lbr/chap01/fig004_sotdivii.pgf}
 
-Si può osservare allora che in~$\insN$ la sottrazione~$a-b$ è possibile solo se~$b\leq a$.
+Si può osservare allora che in~$\insN$ la sottrazione~$a-b$ è possibile solo se~$b$ è più piccolo o al più uguale ad~$a$.
 
 \begin{definizione}
 Dati due numeri naturali~$n$ e~$m$, con~$m\neq0$, il primo detto \emph{dividendo} e il secondo
@@ -202,7 +202,7 @@ L'operazione di divisione può essere indicata con diversi simboli:
 n \div m=q\text{,}\qquad n : m=q\text{,}\qquad n/m=q.
 \end{empheq}
 
-Se il quoziente esiste, il numero~$m$ si dice \emph{divisore} di~$n$ e che~$n$ è \emph{divisibile} per~$m$.
+Se il quoziente esiste, il numero~$m$ si dice \emph{divisore} di~$n$ oppure si dice che~$n$ è \emph{divisibile} per~$m$.
 
 \begin{definizione}
 Un numero naturale~$m$ si dice \emph{multiplo} di un numero naturale~$n$ se esiste un numero~$p$
@@ -210,24 +210,14 @@ che moltiplicato per~$n$ dà~$m$, cioè~$m=n\cdot p$.
 \end{definizione}
 \begin{exrig}
 
- \begin{esempio}
-$12:3=4$ perché~$3\cdot 4=12$. Quindi,~12 è divisibile per~3;~3 è un divisore di~12;~12 è un multiplo di~3.
- \end{esempio}
-
- \begin{esempio}
-20 è divisibile per~4 perché~$20:4=5$.
- \end{esempio}
-
- \begin{esempio}
-7 è divisore di~35 perché~$35:7=5$.
- \end{esempio}
-
- \begin{esempio}
-6 è multiplo di~3 perché~$6=2\cdot 3$.
- \end{esempio}
-
- \begin{esempio}
-5 non è multiplo di~3 poiché non esiste alcun numero naturale che moltiplicato per~3 dà~5.
+ \begin{esempio} Divisori e multipli.
+  \begin{itemize}
+  \item $12:3=4$ perché~$3\cdot 4=12$. Quindi,~12 è divisibile per~3;~3 è un divisore di~12;~12 è un multiplo di~3; 
+  \item 20 è divisibile per~4 perché~$20:4=5$;
+  \item 7 è divisore di~35 perché~$35:7=5$;
+  \item 6 è multiplo di~3 perché~$6=2\cdot 3$;
+  \item 5 non è multiplo di~3 poiché non esiste alcun numero naturale che moltiplicato per~3 dà~5.
+  \end{itemize}
  \end{esempio}
 \end{exrig}
 
@@ -237,6 +227,16 @@ $12:3=4$ perché~$3\cdot 4=12$. Quindi,~12 è divisibile per~3;~3 è un divisore
 
 Come hai potuto notare dagli esercizi precedenti la divisione tra due numeri naturali non è sempre possibile.
 Con i numeri naturali però è sempre possibile eseguire la divisione con il resto.
+
+\begin{exrig}
+ \begin{esempio}
+ Nella divisione con resto tra~25 e~7 si ha quoziente~3 (infatti~$7\cdot 3=21$,
+ mentre~$7\cdot 4=28$ supera il dividendo) e resto~4 (infatti~$25-21=4$).
+ Pertanto si può scrivere~$25=7\cdot 3+4$.
+
+ \input{./lbr/chap01/fig005_div.pgf}
+ \end{esempio}
+\end{exrig}
 
 \begin{definizione}
  Dati due numeri naturali~$n$ e~$m$, con~$m\neq~0$, si dice \emph{quoziente} tra~$n$ e~$m$, il più grande
@@ -250,25 +250,23 @@ n=m\cdot q + r\text{,}\qquad r=n-m\cdot q.
 \end{empheq}
 
 \begin{exrig}
- \begin{esempio}
- Nella divisione con resto tra~25 e~7 si ha quoziente~3 (infatti~$7\cdot 3=21$,
- mentre~$7\cdot 4=28$ supera il dividendo) e resto~4 (infatti~$25-21=4$).
- Pertanto si può scrivere~$25=7\cdot 3+4$.
-
- \input{./lbr/chap01/fig005_div.pgf}
+ \begin{esempio} Divisione con resto.
+\begin{multicols}{3}
+  \begin{itemize}
+  \item $0:2 =~0$;
+  \item $1:2 =~0$ con resto~1;
+  \item $5:2 =~2$ con resto~1.
+  \end{itemize}
+\end{multicols}
  \end{esempio}
+\end{exrig}
 
+La divisione con il resto ci permette di risolvere situazioni in cui dobbiamo dividere o raggruppare persone o altri oggetti indivisibili.
+\begin{exrig}
  \begin{esempio}
- $0:2 =~0$.
- \end{esempio}
-
- \begin{esempio}
-$1:2 =~0$ con resto~1.
- \end{esempio}
-
- \begin{esempio}
-$5:2 =~2$ con resto~1.
- \end{esempio}
+ Dovendo raggruppare 321~studenti in classi da 30~alunni, dividiamo~$312:20=10$ con resto~12.
+ I rimanenti 12~alunni possono formare un'altra classe oppure possono essere distribuiti nelle altre classi.
+  \end{esempio}
 \end{exrig}
 
 \osservazione Nella definizione di quoziente abbiamo sempre richiesto che il divisore sia diverso da zero. In effetti, se il divisore è~0 non c'è nessun numero che moltiplicato per~0 ci possa dare un dividendo diverso da zero.
@@ -293,12 +291,16 @@ n \divint m = q\quad\text{(con resto }r\text{)}.
 \begin{exrig}
  \begin{esempio}
  L'operazione divisione intera.
+\begin{multicols}{2}
 \begin{itemize*}
 \item $0 \divint 5=0$;
 \item $9 \divint 2=4$;
+\item $10 \divint 3=3$;
+\item $16 \divint 9=1$;
 \item $3\divint 5=0$;
-\item $3\divint 0 = $ non si può fare: la divisione intera per~0 non è possibile. 
- \end{itemize*}
+\item $3\divint 0 = $ non si può fare.
+\end{itemize*}
+\end{multicols}
  \end{esempio}
 \end{exrig}
 
@@ -318,7 +320,7 @@ n\bmod{m} = r\quad\text{(dove }r\text{ è il resto di~~}n\divint m\text{)}.
 \begin{multicols}{2}
 \begin{itemize*}
 \item $0\bmod 5=0$;
-\item $9\bmod 5 =1$;
+\item $9\bmod 5 =4$;
 \item $10\bmod 5=0$;
 \item $3\bmod 5=3$;
 \item $11\bmod 5=1$;
@@ -394,7 +396,7 @@ La proprietà associativa \emph{non vale} per le seguenti operazioni:
 \end{description*}
 
 \subsection{Elemento neutro}
-Un'operazione ($\diamond$) ha un \emph{elemento neutro} $n$ se composto con qualsiasi altro numero lo lascia invariato, sia quando
+Un'operazione ($\diamond$) ha un \emph{elemento neutro} $n$ se componendo~$n$ con qualsiasi altro numero lo lascia invariato, sia quando
 il numero è a destra, sia quando è a sinistra dell'operatore.
 
 \begin{empheq}[box=\fbox]{equation*}
@@ -461,7 +463,8 @@ Se, però, la sottrazione è a destra:
 %\begin{empheq}[box=\fbox]{equation*}
 %a\cdot b=0\quad\Leftrightarrow\quad a=0\;\vee\;b=0.
 %\end{empheq}
-
+% % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{comment}
 \begin{proof}
 \begin{enumerate}
 %\item $a\cdot b = 0 \:\Rightarrow\: a = 0\;\vee\;b=0$~~si dimostra per assurdo.
@@ -474,7 +477,8 @@ Supponiamo che esistano due valori $a$ e $b$ entrambi non nulli, per i quali val
 \item La dimostrazione dell'implicazione inversa (se $a = 0$ oppure $b = 0$ allora $a\cdot b = 0$) deriva direttamente dalla definizione dell'operazione di moltiplicazione. Infatti se $a = 0$, qualunque sia $b$ si ha $0\cdot b = 0$. Un ragionamento equivalente vale nel caso in cui $b=0$.
 \end{enumerate}
 \end{proof}
-
+\end{comment}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %questo è presente anche nella prima pagina del capitolo 14
 Il matematico Carl Friedrich Gauss\footnote{matematico, astronomo e fisico tedesco (1777 - 1855).} fu un bambino prodigio. Si racconta che a nove anni il suo insegnante ordinò di fare la somma dei numeri da~$1$~a~$100$. Poco dopo Gauss diede la risposta esatta sorprendendo il suo insegnante. Probabilmente egli aveva scritto in una riga i numeri da~$1$~a~$100$ e nella riga sottostante i numeri da~$100$~a~$1$, notando che ogni colonna dava per somma $101$. Quindi, anziché sommare uno ad uno i numeri da 1 a 100, moltiplicando $100$ per $101$ e dividendo il risultato per~$2$, Gauss aveva ottenuto rapidamente la risposta: $100 \cdot 101 : 2=\np{5050}$.
 \begin{center}
@@ -719,7 +723,7 @@ divisibile per~3 neanche~31 è divisibile per~3.
  \item \np{1230} finisce per~0 quindi è divisibile per~5;
  \item \np{59235} finisce per~5 quindi è divisibile per~5;
  \item \np{109253} finisce per~3 quindi non è divisibile per~5;
- \item \np{5556} finisce per~6 quindi non è divisibile per~5.
+% \item \np{5556} finisce per~6 quindi non è divisibile per~5.
 \end{itemize*}
 
 \paragraph{Divisibilità per~7} Un numero (maggiore di~10) è divisibile per~7 se la differenza (in valore assoluto\footnote{il \emph{valore assoluto} è trattato a pagina~\pageref{def:valass}.})
@@ -843,12 +847,12 @@ Sebbene al crescere dei valori considerati i numeri primi diventino sempre più 
 \begin{teorema}[di Euclide]
 I numeri primi sono infiniti.
 \end{teorema}
-
+\begin{comment}
 \begin{proof}
 Il teorema può essere dimostrato per assurdo.
 Supponiamo infatti che i numeri primi siano un numero finito, cioè siano, ordinati dal più piccolo al più grande, $p_1$, $p_2$, \ldots{}, $p_n$. Si consideri il numero $a=p_1\cdot p_2\cdot \ldots{}\cdot p_n+1$. Per com'è stato scelto, $a$ non è divisibile per nessuno dei numeri $p_1$, $p_2$, \ldots{}, $p_n$ poiché la divisione per qualunque di essi darà sempre come resto 1. Quindi o $a$ è un numero primo maggiore di $p_n$ oppure, per il teorema fondamentale dell'aritmetica (pagina \pageref{th:fondamentale_dell_aritmetica}), è divisibile per un numero primo $p^*$ differente da $p_1$, $p_2$, \ldots{}, $p_n$. In entrambi i casi si ha una contraddizione con l'ipotesi iniziale, cioè che i numeri primi siano un numero finito, poiché per come è stato scelto, $a$ implica l'esistenza di un numero primo che non è nell'elenco ipotizzato $p_1$, $p_2$, \ldots, $p_n$. Quindi i numeri primi sono infiniti.
 \end{proof}
-
+\end{comment}
 \ovalbox{\risolvii \ref{ese:1.19}, \ref{ese:1.20}}
 %\vspazio\ovalbox{\risolvi \ref{ese:1.17}}
 
@@ -902,7 +906,7 @@ Calcolo del~$\mcd$ di due o più numeri naturali:
  \item si moltiplicano tra loro i fattori comuni, presi una sola volta e con il minore esponente.
 \end{enumeratea}
 \end{procedura}
-
+\pagebreak
 \begin{exrig}
  \begin{esempio}
  Calcolare~$\mcd(60\text{,~}48\text{,~}36)$.
@@ -930,7 +934,6 @@ Pertanto~$\mcd(60\text{,~}120\text{,~}90)=2\cdot 3\cdot 5=30$.
  Due numeri~$a$ e~$b$ si dicono \emph{primi tra loro} o \emph{coprimi} se~$\mcd(a\text{,~}b)=1$.
 \end{definizione}
 
-%\pagebreak
 \begin{exrig}
  \begin{esempio}
  Numeri primi tra loro:
@@ -974,7 +977,7 @@ Calcolo del~$\mcm$ di due o più numeri naturali:
 esponente.
 \end{enumeratea}
 \end{procedura}
-
+\pagebreak
 \begin{exrig}
  \begin{esempio}
  Calcolare il~$\mcm(60\text{,~}48\text{,~}36)$.
@@ -1022,6 +1025,12 @@ La soluzione del problema è data quindi dal~$\mcd(315\text{,~}435)=3\cdot 5=15$
 Ci vogliono~$435:15=29$ mattonelle per ricoprire il lato di~$435\;\unit{cm}$ e~$315:15=21$ mattonelle per ricoprire il lato
 da~$315\;\unit{cm}$. In tutto occorrono~$29\cdot21=609$ mattonelle.
 \end{esempio}
+
+ \begin{esempio}
+ Alla fermata dei pulman l'autobus rosso passa ogni 20~minuti, l'autobus verde passa ogni 30~minuti e il pulman blu  ogni 45~minuti. Se i pulman rosso, verde e blu erano insieme alla fermata delle 8:00, quando si troveranno di nuovo insieme alla stessa fermata?
+
+Gli autobus si incontrano nei minuti che sono i multipli comuni di 20, 30 e 45. quindi alle 11:00, alle 14:00, alle 17:00 ecc. La prima volta che si incontrano sarà data dal minimo comune multiplo di~20, 30 e 45, quindi dopo 180~minuti.
+ \end{esempio}
 \end{exrig}
 
 \ovalbox{\risolvii \ref{ese:1.21}, \ref{ese:1.22}, \ref{ese:1.23}, \ref{ese:1.24}, \ref{ese:1.25}, \ref{ese:1.26}}
@@ -1061,7 +1070,6 @@ in qualsiasi ordine, grazie alla proprietà associativa dell'addizione.
 \end{itemize*}
  \end{esempio}
 \end{exrig}
-
 
 \paragraph {II} Se un'espressione contiene solo moltiplicazioni, le operazioni si possono eseguire in qualsiasi
 ordine, anche in questo caso grazie alla proprietà associativa della moltiplicazione.
@@ -1112,7 +1120,7 @@ nell'ordine nel quale sono scritte.
 \paragraph {VI} Se un'espressione senza parentesi contiene addizioni, sottrazioni, moltiplicazioni, divisioni e
 potenze, si eseguono prima le potenze, poi moltiplicazioni e divisioni, rispettando l'ordine con cui sono
 scritte, e poi addizioni e sottrazioni, rispettando l'ordine.
-\pagebreak
+
 \begin{exrig}
  \begin{esempio}
 Semplificare l'espressione $18:2:9+5^2-2\cdot3^2:3-1$.
@@ -1147,6 +1155,21 @@ Semplificare l'espressione $5\cdot(4+3^2-1)$.
 
 Per facilitare il riconoscimento dei livelli di parentesi, in genere si usano le parentesi tonde $($\ldots$)$ per il primo livello (quello più interno), le quadre $[$\ldots$]$ per il secondo livello e le graffe $\{$\ldots$\}$ per il terzo livello (quello più esterno).
 L'uso di parentesi di diverso tipo rende visivamente più evidente l'ordine da seguire nelle operazioni, ma in un'espressione le parentesi possono anche essere soltanto tonde. Ciò accade, per esempio, quando si usano gli strumenti di calcolo elettronico come il computer e la calcolatrice.
+
+\begin{exrig}
+ \begin{esempio} $\big\lbrace\big[3\cdot5-\big(5\cdot2-4\big)\big]\cdot2\big\rbrace:\big[\big(5\cdot6\big):\big(3\cdot5\big)+5:5\big]-\big\lbrace\big(5^2\cdot4\big):10-3^2\big\rbrace+1$.
+ \begin{align*}
+ \big\lbrace\big[3\cdot5-\big(5\cdot2-4\big)\big]\cdot2\big\rbrace&:\big[\big(5\cdot6\big):\big(3\cdot5\big)+5:5\big]-\big\lbrace\big(5^2\cdot4\big):10-3^2\big\rbrace+1\\
+			 &=\big\lbrace\big[3\cdot5-\big(10-4\big)\big]\cdot2\big\rbrace:\big[30:15+5:5\big]-\big\lbrace\big(25\cdot4\big):10-3^2\big\rbrace+1\\
+			 &=\big\lbrace\big[3\cdot5-6\big]\cdot2\big\rbrace:\big[2+1\big]-\big\lbrace100:10-9\big\rbrace+1\\
+			 &=\big\lbrace\big[15-6\big]\cdot2\big\rbrace:3-\big\lbrace10-9\big\rbrace+1\\
+			 &=\big\lbrace9\cdot2\big\rbrace:3-\big\lbrace1\big\rbrace+1\\
+			 &=\big\lbrace18\big\rbrace:3-\big\lbrace1\big\rbrace+1\\
+			 &=6-1+1\\
+ &=6.
+ \end{align*}
+ \end{esempio}
+\end{exrig}
 
 \vspazio\ovalbox{\risolvi\ref{ese:1.27}}
 \newpage

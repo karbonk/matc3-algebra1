@@ -1,0 +1,68 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[x=5mm, y=5mm,font=\small,filled/.style={fill=circle area, draw=circle edge, thick}]
+\def\firstcircle{(0,0) circle (2)}
+\def\secondcircle{(2,0) circle (2)}
+\def\thirdcircle{(1,-2) circle (2)}
+
+\definecolor{circle edge}{gray}{0.9}
+\definecolor{circle area}{gray}{0.9}
+
+   \begin{scope}
+        \clip \firstcircle;
+        \fill[filled] \secondcircle;
+        \fill[filled] \thirdcircle;
+    \end{scope}
+
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+\node  at (-1.6,1.8) {A};
+\node  at (3.6,1.8) {B};
+\node  at (3.2,-3.3) {C};
+
+\begin{scope}[xshift=35mm]
+   \begin{scope}
+        \clip \firstcircle;
+        \fill[filled] \secondcircle;
+    \end{scope}
+\node  at (-1.6,1.8) {A};
+\node  at (3.6,1.8) {B};
+\node  at (3.2,-3.3) {C};
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+\end{scope}
+
+\begin{scope}[xshift=70mm]
+   \begin{scope}
+        \clip \firstcircle;
+        \fill[filled] \thirdcircle;
+    \end{scope}
+\node  at (-1.6,1.8) {A};
+\node  at (3.6,1.8) {B};
+\node  at (3.2,-3.3) {C};
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+\end{scope}
+
+\begin{scope}[xshift=105mm]
+   \begin{scope}
+        \clip \firstcircle;
+        \fill[filled] \secondcircle;
+        \fill[filled] \thirdcircle;
+    \end{scope}
+\node  at (-1.6,1.8) {A};
+\node  at (3.6,1.8) {B};
+\node  at (3.2,-3.3) {C};
+\draw (0,0) circle (2);
+\draw (2,0) circle (2);
+\draw (1,-2) circle (2);
+\end{scope}
+
+\foreach \x/\xtext in {4.5/=,11.5/\cup,18.5/=}
+\node  at (\x,-1) {$\xtext$};
+
+\foreach \xi/\xitext in {1/$A\cap(B\cup C)$,8/$A\cap B$,15/$A\cap C$,22/$(A\cap B)\cup(A\cap C)$}
+\node  at (\xi,-5) {\xitext};
+\end{tikzpicture}

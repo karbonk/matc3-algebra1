@@ -8,13 +8,13 @@
       3.25/,3.5/,3.75/,4/0,4.25/,4.5/,4.75/,%
       5/,5.25/,5.5/,5.75/,6/1,6.25/,6.5/,6.75/,7/,7.25/,7.5/,7.75/,8/2}
     \draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt) node[below] {$\xtext$};
-\foreach \y/\ytext in {.5/$A$,2.25/$B$,3.75/$C$,4.25/$D$,5.5/$E$,7.5/$F$}
+\foreach \y/\ytext in {.75/$A$,2.25/$B$,3.75/$C$,4.75/$D$,5.5/$E$,7.5/$F$}
 	 \draw[shift={(\y,0)}] (0pt,2pt) -- (0pt,-2pt) node[above=2pt] {$\ytext$};
-\draw (.5,0) circle (1pt);
-\draw (2.25,0) circle (1pt);
-\draw (3.75,0) circle (1pt);
-\draw (4.25,0) circle (1pt);
-\draw (5.5,0) circle (1pt);
-\draw (7.5,0) circle (1pt);
+\draw (0,0) circle (1pt);
+\draw (2,0) circle (1pt);
+\draw (4,0) circle (1pt);
+%\draw (4.25,0) circle (1pt);
+\draw (6,0) circle (1pt);
+\draw (8,0) circle (1pt);
 \end{scope}
 \end{tikzpicture}

@@ -1,7 +1,7 @@
 % (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
-\begin{tikzpicture}[font=\footnotesize]
+\begin{tikzpicture}[font=\small]
 
-\matrix(a) [matrix of nodes,nodes={text width=19mm, text centered}]
+\matrix(a) [matrix of nodes,nodes={text width=25mm, text centered}]
 {
 Successive \emph{divisioni} per 7 &\emph{Quozienti} delle successive divisioni per 7 & \emph{Resti} delle successive divisioni per 7 \\
 $75:7$&10&5\\

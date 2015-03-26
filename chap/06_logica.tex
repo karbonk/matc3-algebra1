@@ -37,7 +37,7 @@ Per esempio, la proposizione <<un triangolo ha tre lati e tre angoli>> è compos
 
 La valutazione della verità o falsità di una proposizione composta dipende dalla verità di ogni singola proposizione che la compone e da come esse sono collegate tra di loro.
 
-\vspazio\ovalbox{\risolvi \ref{ese:\thechapter.1}}
+\vspazio\ovalbox{\risolvi \ref{ese:6.1}}
 
 \section{Algebra delle proposizioni}
 
@@ -47,10 +47,78 @@ La \emph{congiunzione} di due proposizioni si ottiene con il connettivo ``e'' (\
 
 Per esempio, <<Ho avuto 7 in italiano e matematica>> è un'affermazione vera solo quando ho avuto 7 in entrambe le materie. Oppure, <<Per guidare il motorino occorre aver compiuto 14 anni e possedere il patentino>> significa che posso guidare il motorino solo se ho entrambi i requisisti: aver compiuto 14 anni e avere il patentino.
 
-Per esprimere in maniera sintetica tutte le possibilità del valore di verità di una proposizione composta, si usa una tabella a doppia entrata, detta \emph{tavola di verità}, che per la congiunzione logica è la seguente
+Per esprimere in maniera sintetica tutte le possibilità del valore di verità di una proposizione composta, si usa una tabella a doppia entrata, detta \emph{tavola di verità}~(tabella~\ref{tab:cong}). %, che per la congiunzione logica è la seguente
 
-\begin{center}
- \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+%\begin{center}
+% \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+% \toprule
+%$p$ &$q$ &$p\wedge q$\\
+%\midrule
+%V & V & V \\
+%V & F & F \\
+%F & V & F \\
+%F & F & F \\
+%\bottomrule
+% \end{tabular*}
+%\end{center}
+
+La \emph{disgiunzione} (inclusiva) di due proposizioni si ottiene con il connettivo ``o'' (\emph{vel}, \emph{or}, $\vee$): la proposizione $s$ ottenuta dalla disgiunzione di due proposizioni $p$ e $q$, in simboli $s=p\vee q$, è vera quando almeno una delle due proposizioni è vera ed è falsa solo se entrambe le proposizioni sono false. % Di seguito riportiamo la relativa tavola di verità.
+%\begin{center}
+% \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+% \toprule
+%$p$ &$q$ &$p\vee q$\\
+%\midrule
+%V & V & V \\
+%V & F & V \\
+%F & V & V \\
+%F & F & F \\
+%\bottomrule
+% \end{tabular*}
+%\end{center}
+
+Ad esempio, la proposizione <<100 è minore di 1 o maggiore di 10>> è vera perché è vera una delle due affermazioni, precisamente 100 è maggiore di 10. Anche nell'affermazione <<L'autobus si ferma quando qualche persona deve scendere o salire>> la ``o'' è usata in senso inclusivo.
+
+La \emph{disgiunzione esclusiva} di due proposizioni si ottiene con il connettivo (o congiunzione) ``o \ldots{} o'' (\emph{aut}, \emph{xor}, $\veebar$): la proposizione $t$ ottenuta dalla disgiunzione esclusiva di due proposizioni $p$ e $q$, in simboli $t=p \veebar q$, è vera quando soltanto una delle due proposizioni è vera ed è invece falsa quando le due proposizioni sono entrambe vere o entrambe false. % La sua tavola di verità è la seguente
+%\begin{center}
+% \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+% \toprule
+%$p$ &$q$ &$p\veebar q$\\
+%\midrule
+%V & V & F \\
+%V & F & V \\
+%F & V & V \\
+%F & F & F \\
+%\bottomrule
+% \end{tabular*}
+%\end{center}
+
+Per esempio, nell'affermazione <<oggi il Milan vince o pareggia>> la congiunzione ``o'' ha valore esclusivo.
+%\begin{minipage}[b]{0.7\linewidth}
+
+La \emph{negazione}, che si ottiene con il connettivo ``non'' (\emph{non}, \emph{not}, $\neg$), è un operatore che, a differenza dei precedenti, non lega più proposizioni ma agisce su un'unica proposizione (per questo si dice che è un operatore unario, in analogia all'operazione insiemistica di complementazione). La negazione di una proposizione $p$ è una proposizione che si indica con il simbolo $\neg p$ che risulta vera se $p$ è falsa, viceversa è falsa se $p$ è vera.
+
+La doppia negazione equivale ad un'affermazione, cioè $\neg(\neg p)$ è equivalente a $p$.
+%\end{minipage}
+%\begin{minipage}[b]{0.3\linewidth}
+%\begin{center}
+% \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+% \toprule
+%$p$ &$\neg p$ &$\neg(\neg p)$\\
+%\midrule
+%V & F & V \\
+%F & V & F \\
+%\bottomrule
+% \end{tabular*}
+%\end{center}
+%\end{minipage}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\begin{table}[hbtp]
+\caption{Tavole di verità}\label{tab:cong}
+\centering%
+\begin{minipage}[b]{0.22\linewidth}
+\centering%
+ \begin{tabular}{ccc} % {.5 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
  \toprule
 $p$ &$q$ &$p\wedge q$\\
 \midrule
@@ -59,12 +127,12 @@ V & F & F \\
 F & V & F \\
 F & F & F \\
 \bottomrule
- \end{tabular*}
-\end{center}
-
-La \emph{disgiunzione} (inclusiva) di due proposizioni si ottiene con il connettivo ``o'' (\emph{vel}, \emph{or}, $\vee$): la proposizione $s$ ottenuta dalla disgiunzione di due proposizioni $p$ e $q$, in simboli $s=p\vee q$, è vera quando almeno una delle due proposizioni è vera ed è falsa solo se entrambe le proposizioni sono false. Di seguito riportiamo la relativa tavola di verità.
-\begin{center}
- \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+ \end{tabular}
+\caption*{Congiunzione}
+\end{minipage}
+\begin{minipage}[b]{0.22\linewidth}
+\centering%
+ \begin{tabular}{ccc} % {.5 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
  \toprule
 $p$ &$q$ &$p\vee q$\\
 \midrule
@@ -73,13 +141,12 @@ V & F & V \\
 F & V & V \\
 F & F & F \\
 \bottomrule
- \end{tabular*}
-\end{center}
-Ad esempio, la proposizione <<100 è minore di 1 o maggiore di 10>> è vera perché è vera una delle due affermazioni, precisamente 100 è maggiore di 10. Anche nell'affermazione <<L'autobus si ferma quando qualche persona deve scendere o salire>> la ``o'' è usata in senso inclusivo.
-
-La \emph{disgiunzione esclusiva} di due proposizioni si ottiene con il connettivo (o congiunzione) ``o \ldots{} o'' (\emph{aut}, \emph{xor}, $\veebar$): la proposizione $t$ ottenuta dalla disgiunzione esclusiva di due proposizioni $p$ e $q$, in simboli $t=p \veebar q$, è vera quando soltanto una delle due proposizioni è vera ed è invece falsa quando le due proposizioni sono entrambe vere o entrambe false. La sua tavola di verità è la seguente
-\begin{center}
- \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+ \end{tabular}
+\caption*{Disgiunzione}
+\end{minipage}
+\begin{minipage}[b]{0.28\linewidth}
+\centering%
+ \begin{tabular}{ccc} % {.5 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
  \toprule
 $p$ &$q$ &$p\veebar q$\\
 \midrule
@@ -88,27 +155,24 @@ V & F & V \\
 F & V & V \\
 F & F & F \\
 \bottomrule
- \end{tabular*}
-\end{center}
-Per esempio, nell'affermazione <<oggi il Milan vince o pareggia>> la congiunzione ``o'' ha valore esclusivo.
-
-La \emph{negazione}, che si ottiene con il connettivo ``non'' (\emph{non}, \emph{not}, $\neg$), è un operatore che, a differenza dei precedenti, non lega più proposizioni ma agisce su un'unica proposizione (per questo si dice che è un operatore unario, in analogia all'operazione insiemistica di complementazione). La negazione di una proposizione $p$ è una proposizione che si indica con il simbolo $\neg p$ che risulta vera se $p$ è falsa, viceversa è falsa se $p$ è vera.
-
-La doppia negazione equivale ad un'affermazione, cioè $\neg(\neg p)$ è equivalente a $p$.
-
-La tavola di verità della negazione logica è la seguente:
-\begin{center}
- \begin{tabular*}{.2 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
+ \end{tabular}
+\caption*{Disgiunzione esclusiva}
+\end{minipage}
+\begin{minipage}[b]{0.24\linewidth}
+\centering%
+ \begin{tabular}{ccc} % {.5 \textwidth}{@{\extracolsep{\fill}}*{3}{c}}
  \toprule
 $p$ &$\neg p$ &$\neg(\neg p)$\\
 \midrule
 V & F & V \\
 F & V & F \\
 \bottomrule
- \end{tabular*}
-\end{center}
-
-
+ \end{tabular}
+\caption*{Negazione}
+\end{minipage}
+\end{table}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\pagebreak
 \begin{exrig}
 \begin{esempio}
 Date le seguenti proposizioni $p=\;$<<un triangolo ha tre lati>> (Vera), $q=\;$<<un triangolo ha tre vertici>> (Vera), $r=\;$<<un triangolo ha quattro angoli>> (Falsa), $s=\;$<<un triangolo ha tre dimensioni>> (Falsa), allora:
@@ -157,7 +221,7 @@ Una proposizione che è sempre vera, indipendentemente dalla verità degli eleme
 \end{esempio}
 \end{exrig}
 
-\vspazio\ovalbox{\risolvii \ref{ese:\thechapter.2}, \ref{ese:\thechapter.3}, \ref{ese:\thechapter.4}, \ref{ese:\thechapter.5}, \ref{ese:\thechapter.6}, \ref{ese:\thechapter.7}, \ref{ese:\thechapter.8}, \ref{ese:\thechapter.9}, \ref{ese:\thechapter.10}, \ref{ese:\thechapter.10}}
+\vspazio\ovalbox{\risolvii \ref{ese:6.2}, \ref{ese:6.3}, \ref{ese:6.4}, \ref{ese:6.5}, \ref{ese:6.6}, \ref{ese:6.7}, \ref{ese:6.8}, \ref{ese:6.9}}
 
 \section{Predicati e quantificatori}
 
@@ -186,7 +250,7 @@ Bisogna prestare particolare attenzione quando si negano frasi in cui compaiono 
 La negazione della frase <<L'anno scorso siamo stati tutti promossi>> non è <<L'anno scorso siamo stati tutti bocciati>> ma <<L'anno scorso c'è stato almeno uno di noi che non è stato promosso>>.
 La negazione della proposizione $p =\;$<<Tutti i quadrati hanno due diagonali>> è la proposizione $\neg p =\;$<<Non tutti i quadrati hanno due diagonali>>. Il linguaggio comune ci potrebbe portare a considerare come negazione di $p$ la proposizione <<Nessun quadrato ha due diagonali>>, ma in realtà per avere la negazione della proposizione $p$ basta che esista almeno un quadrato che non abbia due diagonali.
 
-\vspazio\ovalbox{\risolvi \ref{ese:\thechapter.11}}
+\vspazio\ovalbox{\risolvii \ref{ese:6.10}, \ref{ese:6.11}}
 
 \section{L'implicazione}
 
@@ -271,7 +335,7 @@ In matematica si usa spesso l'espressione <<$p$ è condizione necessaria e suffi
 
 In maniera analoga a quanto avviene per le espressioni numeriche, le espressioni logiche possono contenere varie proposizioni legate tra loro dagli operatori appena descritti ed eventualmente le parentesi che indicano la precedenza di applicazione degli operatori stessi. In linea di principio gli operatori vengono applicati nell'ordine nel quale si trovano nell'espressione da sinistra verso destra, tenendo però a mente che tra essi vige la seguente regola di precedenza: l'operatore $\neg$ ha la precedenza sugli altri, seguito dall'operatore $\wedge$ ed infine da $\vee$. Da ciò ne deriva un sistema di calcolo simbolico noto anche come algebra di Boole\footnote{matematico e logico britannico (1815 - 1864).}.
 
-\vspazio\ovalbox{\risolvii \ref{ese:\thechapter.12}, \ref{ese:\thechapter.13}, \ref{ese:\thechapter.14}, \ref{ese:\thechapter.15}}
+\vspazio\ovalbox{\risolvii \ref{ese:6.12}, \ref{ese:6.13}, \ref{ese:6.14}, \ref{ese:6.15}}
 
 \subsection{I teoremi}
 
@@ -362,7 +426,7 @@ Ma a cosa serve studiare la dimostrazione di un teorema? Perché non ci limitiam
 
 Quando si studia una dimostrazione non bisogna limitarsi a leggerla e a impararla a memoria, occorre leggerla attivamente, ponendo attenzione su cosa si fa e cercando di anticipare i passaggi. Se un passaggio non è chiaro bisogna prima tornare indietro per capire come ci si è arrivati e quindi cercare di capire il motivo per cui l'autore ha messo quel passaggio. In generale, una dimostrazione va letta più volte smettendo solo quando la si è compresa a fondo.
 
-\vspazio\ovalbox{\risolvii \ref{ese:\thechapter.16}, \ref{ese:\thechapter.17}, \ref{ese:\thechapter.18}, \ref{ese:\thechapter.19}, \ref{ese:\thechapter.20}, \ref{ese:\thechapter.21}, \ref{ese:\thechapter.22}, \ref{ese:\thechapter.23}, \ref{ese:\thechapter.24}, \ref{ese:\thechapter.25}, \ref{ese:\thechapter.26}}
+\vspazio\ovalbox{\risolvii \ref{ese:6.16}, \ref{ese:6.17}, \ref{ese:6.18}, \ref{ese:6.19}, \ref{ese:6.20}, \ref{ese:6.21}, \ref{ese:6.22}, \ref{ese:6.23}, \ref{ese:6.24}, \ref{ese:6.25}, \ref{ese:6.26}}
 
 \newpage
 

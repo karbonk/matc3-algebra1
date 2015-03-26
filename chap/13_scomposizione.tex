@@ -1,0 +1,1221 @@
+% (c) 2012 Claudio Carboncini - claudio.carboncini@gmail.com
+% (c) 2012-2013 Dimitrios Vrettos - d.vrettos@gmail.com
+
+\chapter{Scomposizione in fattori}
+
+%\section{Cosa vuol dire scomporre in fattori}
+Scomporre un polinomio in fattori significa scrivere il polinomio come il prodotto di polinomi e monomi che
+moltiplicati tra loro danno come risultato il polinomio stesso. Si può paragonare la scomposizione in fattori
+di un polinomio alla scomposizione in fattori dei numeri naturali.
+
+\begin{wrapfloat}{figure}{r}{0pt}
+ \input{./lbr/chap13/fig001_sco.pgf}
+\end{wrapfloat}
+
+Per esempio, scomporre il numero~$36$ significa scriverlo come~$2^{2}\cdot 3^{2}$ dove~$2$ e~$3$ sono i suoi fattori primi.
+Anche~$36 = 9 \cdot 4$ è una scomposizione, ma non è in fattori primi. Allo stesso modo un polinomio va scomposto in fattori non ulteriormente
+scomponibili che si chiamano irriducibili. %(questa dovrebbe andare a sinistra della tabella)
+
+Il polinomio~$3a^{3}b^{2}-3ab^{4}$ si può scomporre in fattori in questo modo \[3ab^{2}(a-b)(a+b)\text{,}\] infatti eseguendo i prodotti si
+ottiene \[3ab^{2}(a-b)(a+b)=3ab^{2}(a^{2}+ab-ba-b^{2})=3ab^{2}\left(a^{2}-b^{2}\right)=3a^{3}b^{2}-3ab^{4}.\]
+La scomposizione termina quando non è possibile scomporre ulteriormente i fattori individuati.
+Come per i numeri la scomposizione in fattori dei polinomi identifica il polinomio in maniera univoca (a meno di multipli).
+
+\begin{definizione}
+Un polinomio si dice \emph{riducibile} (scomponibile) se può essere scritto come prodotto di due o più polinomi (detti fattori) di grado maggiore di zero.
+In caso contrario esso si dirà \emph{irriducibile}.
+\end{definizione}
+
+La caratteristica di un polinomio di essere irriducibile dipende dall'insieme numerico al quale appartengono i coefficienti del polinomio;
+uno stesso polinomio può essere irriducibile nell'insieme dei numeri razionali, ma riducibile in quello dei numeri reali o
+ancora in quello dei complessi.
+Dalla definizione consegue che un polinomio di primo grado è irriducibile.
+
+\begin{definizione}
+La \emph{scomposizione in fattori di un polinomio} è la sua scrittura come prodotto di fattori irriducibili.
+\end{definizione}
+\ovalbox{\risolvi \ref{ese:13.1}}
+
+\section{Raccoglimento totale a fattore comune}
+Questo è il primo metodo che si deve cercare di utilizzare per scomporre un polinomio.
+Il metodo si basa sulla proprietà distributiva della moltiplicazione rispetto all'addizione.
+
+Prendiamo in considerazione il seguente prodotto:\[a(x+y+z)=ax+ay+az\]
+Il nostro obiettivo è ora quello di procedere
+da destra verso sinistra, cioè avendo il polinomio~$ax+ay+az$ come possiamo fare per individuare il prodotto che lo ha generato?
+In questo caso semplice possiamo osservare che i tre monomi contengono tutti la lettera~$a$, che quindi si può mettere in comune,
+o come anche si dice ``in evidenza''.
+Perciò scriviamo \[ax+ay+az=a(x+y+z).\]
+
+\begin{exrig}
+ \begin{esempio}
+Analizziamo la scomposizione in fattori~$3a^{2}b\left(2a^{3}-5b^{2}-7c\right)$.
+ \begin{equation*}
+   \begin{split}
+    3a^{2}b\left(2a^{3}-5b^{2}-7c\right) &=3a^{2}b(2a^{3})+3a^{2}b(-5b^{2})+3a^{2}b(-7c)\\
+    &=6a^{5}b-15a^{2}b^{3}-21a^{2}bc.
+   \end{split}
+ \end{equation*}
+L'ultima uguaglianza, letta da destra verso sinistra, è il raccoglimento totale a fattore comune.
+Partendo da~$6a^{5}b-15a^{2}b^{3}-21a^{2}bc$ possiamo notare che i coefficienti numerici~$6$, $15$ e~$21$ hanno il~$3$ come fattore in comune.
+Notiamo anche che la lettera~$a$ è in comune, come la lettera~$b$. Raccogliendo tutti i fattori comuni si avrà il prodotto
+$3a^{2}b\left(2a^{3}-5b^{2}-7c\right)$ di partenza.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Mettere in evidenza il fattore comune:
+\begin{enumeratea}
+\item trovare il~$\mcd$ di tutti i termini che formano il polinomio: tutti i fattori in comune con l'esponente minimo con cui compaiono;
+\item scrivere il polinomio come prodotto del~$\mcd$ per il polinomio ottenuto dividendo ciascun monomio del polinomio di partenza per il~$\mcd$;
+\item verificare la scomposizione eseguendo la moltiplicazione per vedere se il prodotto dà come risultato il polinomio da scomporre.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$5a^{2}x^{2}-10ax^{5}$.
+  \begin{enumeratea}
+  \item Tra i coefficienti numerici il fattore comune è~$5$,\,tra la parte letterale sono in comune le lettere~$a$ e~$x$, la~$a$ con esponente~$1$, la~$x$ con esponente~$2$,\, pertanto il~$\mcd$ è~$5ax^{2}$;
+  \item passiamo quindi a scrivere~$5a^{2}x^{2}-10ax^{5}=5ax^{2}(\ldots \ldots \ldots)$,\, nella parentesi vanno i monomi che si ottengono dalle divisioni~$5a^{2}x^{2}:5ax^{2}=a$ e~$-10ax^{5}:5ax^{2}=-2x^{3}$. Quindi: $5a^{2}x^{2}-10ax^{5}=5ax^{2}(a-2x^{3})$;
+  \item verifica: $5ax^{2}(a-2x^{3})=5a^{2}x^{2}-10ax^{5}$.
+  \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$10x^{5}y^{3}z-15x^{3}y^{5}z-20x^{2}y^{3}z^{2}$.
+ \begin{enumeratea}
+ \item Trovo tutti i fattori comuni con l'esponente minore per formare il~$\mcd$.\, $\mcd=5x^{2}y^{3}z$;
+ \item divido ciascun termine del polinomio per~$5x^{2}y^{3}z$:
+   \begin{description}
+   \item $10x^{5}y^{3}z:5x^{2}y^{3}z=2x^{3}$,\quad$-15x^{3}y^{5}z:5x^{2}y^{3}z=-3xy^{2}$,\quad$-20x^{2}y^{3}z^{2}:5x^{2}y^{3}z=-4z$,
+   \item il polinomio si può allora scrivere come~$5x^{2}y^{3}z (2x^{3}-3xy^{2}-4z)$.
+   \end{description}
+ \end{enumeratea}
+
+Il fattore da raccogliere a fattore comune può essere scelto con il segno~$+$ (positivo) o con il segno~$−$ (negativo).
+Nell'esempio precedente è valida anche la seguente 
+scomposizione:~$10x^{5}y^{3}z-15x^{3}y^{5}z-20x^{2}y^{3}z^{2}=-5x^{2}y^{3}z (-2x^{3}+3xy^{2}+4z)$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$-8x^{2}y^{3}+10x^{3}y^{2}$.
+ \begin{enumeratea}
+  \item Poiché il primo termine è negativo possiamo mettere a fattore comune un 
+  numero negativo. Tra~8 e~10 il~$\mcd$ è~2. Tra~$x^{2}y^{3}$ e~$x^{3}y^{2}$ mettiamo 
+  a fattore comune le lettere~$x$ e~$y$, entrambe con esponente~$2$, perché è
+     il minimo esponente con cui compaiono. In definitiva il monomio da mettere a fattore comune è~$-2x^{2}y^{2}$;
+  \item pertanto possiamo cominciare a scrivere~$-2x^{2}y^{2}(\ldots \ldots \ldots)$;
+  eseguiamo le divisioni $-8x^{2}y^{3}:(-2x^{2}y^{2})=+4y$ e  $10x^{3}y^{2}:(-2x^{2}y^{2})=-5x$.
+I quozienti trovati~$+4y$ e~$-5x$ vanno nelle parentesi.
+ \end{enumeratea}
+In definitiva~$-8x^{2}y^{3}+10x^{3}y^{2}=-2x^{2}y^{2}(4y-5x)$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$6a(x-1)+7b(x-1)$.
+  \begin{enumeratea}
+  \item Il fattore comune è~$(x-1)$, quindi il polinomio si può scrivere come~$(x-1)\cdot [\ldots \ldots \ldots]$;
+  \item nella parentesi quadra scriviamo i termini che si ottengono dalle divisioni:
+   \begin{description}
+    \item $6a(x-1):(x-1)=6a$,\quad $7b(x-1):(x-1)=7b$.
+   \end{description}
+  \end{enumeratea}
+  In definitiva~$6a(x-1)+7b(x-1)=(x-1)(6a+7b)$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$10(x+1)^{2}-5a(x+1)$.
+  \begin{enumeratea}
+  \item Il fattore comune è~$5(x+1)$, quindi possiamo cominciare a scrivere~$5(x+1)\cdot [\ldots \ldots \ldots]$;
+  \item nella parentesi quadra scriviamo i termini che si ottengono dalle divisioni:
+   \begin{description}
+    \item $10(x+1)^{2}:5(x+1)=2(x+1)$,\quad $-5a(x+1):5(x+1)=a$.
+   \end{description}
+  \end{enumeratea}
+  In definitiva~$10(x+1)^{2}-5a(x+1)=5(x+1)\bigl[2(x+1)-a \bigr]$.
+ \end{esempio}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:13.2}, \ref{ese:13.3}, \ref{ese:13.4}, \ref{ese:13.5}, \ref{ese:13.6}, \ref{ese:13.7}, \ref{ese:13.8}, \ref{ese:13.9}, \ref{ese:13.10},\ref{ese:13.11}, \ref{ese:13.12}, \ref{ese:13.13}}
+
+\vspazio\ovalbox{\ref{ese:13.14}}
+
+\section{Raccoglimento parziale a fattore comune}
+
+Quando un polinomio non ha alcun fattore comune a tutti i suoi termini, possiamo provare a mettere in evidenza tra gruppi di monomi
+e successivamente individuare il polinomio in comune.
+
+Osserviamo il prodotto~$(a+b)(x+y+z)=ax+ay+az+bx+by+bz$. Supponiamo ora di avere il polinomio
+$ax+ay+az+bx+by+bz$ come possiamo fare a tornare indietro per scriverlo come prodotto di polinomi?
+
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+Scomponiamo in fattori~$ax+ay+az+bx+by+bz$. Non c'è nessun fattore comune a tutto il polinomio.
+
+Proviamo a mettere in evidenza per gruppi di termini. Evidenziamo~$a$ tra i primi tre termini e~$b$ tra gli ultimi tre, 
+avremo:~$a(x+y+z)+b(x+y+z)$. Ora risulta semplice vedere che il trinomio~$(x+y+z)$ è in comune e quindi lo possiamo mettere 
+in evidenza~$ax+ay+az+bx+by+bz=a(x+y+z)+b(x+y+z)=(x+y+z)(a+b)$.
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Eseguire il raccoglimento parziale.
+\begin{enumeratea}
+\item Dopo aver verificato che non è possibile effettuare un raccoglimento a fattore comune totale raggruppo i monomi
+   in modo che in ogni gruppo sia possibile mettere in comune qualche fattore;
+\item verifico se la nuova scrittura del polinomio ha un polinomio (binomio, trinomio, \ldots) comune a tutti i termini;
+\item se è presente il fattore comune a tutti i termini lo metto in evidenza;
+\item se il fattore comune non è presente la scomposizione è fallita, allora posso provare a raggruppare
+   diversamente i monomi o abbandonare questo metodo.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$ax+ay+bx+ab$.
+  \begin{enumeratea}
+  \item Provo a mettere in evidenza la~$a$ nel primo e secondo termine e la~$b$ nel terzo e quarto termine:~$ax+ay+bx+ab=a(x+y)+b(x+a)$;
+  \item in questo caso non c'è nessun fattore comune: il metodo è fallito. In effetti il polinomio non si può scomporre in fattori.
+  \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$bx-2ab+2ax-4a^{2}$.
+ \begin{enumeratea}
+ \item Non vi sono fattori da mettere a fattore comune totale, proviamo con il raccoglimento parziale:~$b$ nei primi due monomi e~$2a$ negli altri due;
+ \item %$\mmevid{ev_rosso}{bx}-\mmevid{ev_rosso}{2ab}+\mmevid{ev_verde}{2ax}-\mmevid{ev_verde}{4a^{2}}=b(\mmevid{ev_blu}{x-2a})+2a(\mmevid{ev_blu}{x-2a})=(x-2a)(b+2a)$.
+$\underline{bx} -\underline{2ab}+\underline{\underline{2ax}}-\underline{\underline{4a^{2}}}=b(\underline{x-2a})+2a(\underline{x-2a})=(x-2a)(b+2a)$.
+ \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$bx^{3}+2x^{2}-bx-2+abx+2a$.
+ \begin{enumeratea}
+
+% \item Raggruppiamo nel seguente modo:~$\mmevid{ev_rosso}{bx^{3}}+\mmevid{ev_verde}{2x^{2}}-\mmevid{ev_rosso}{bx}-\mmevid{ev_verde}{2}+\mmevid{ev_rosso}{abx}+\mmevid{ev_verde}{2a}$ tra quelli evidenziati in \evid{ev_rosso}{\phantom{I}} mettiamo a fattore comune~$bx$ e tra quelli evidenziati in \evid{ev_verde}{\phantom{I}} mettiamo a fattore comune~$2$;
+
+\item Raggruppiamo nel seguente modo:~$\underline{bx^{3}}+\underline{\underline {2x^{2}}}-\underline{bx}-\underline{\underline~2}
+     +\underline{abx}+\underline{\underline{2a}}$ tra quelli con sottolineatura semplice metto a fattore comune~$bx$, tra quelli
+     con doppia sottolineatura metto a fattore comune~$2$;
+
+% \item $\mmevid{ev_rosso}{bx^{3}}+\mmevid{ev_verde}{2x^{2}}-\mmevid{ev_rosso}{bx}-\mmevid{ev_verde}{2}+\mmevid{ev_rosso}{abx}+\mmevid{ev_verde}{2a}=bx\bigl(\mmevid{ev_blu}{x^{2}-1+a}\bigr)+2\bigl(\mmevid{ev_blu}{x^{2}-1+a}\bigr)=\bigl(x^{2}-1+a\bigr)\bigl(bx+2\bigr)$.
+
+ \item $\underline{bx^{3}}+\underline{\underline {2x^{2}}}-\underline{bx}-\underline{\underline{2}}+\underline{abx}+\underline{\underline{2a}}
+     =bx\bigl(\underline{x^{2}-1+a}\bigr)+2\bigl(\underline{x^{2}-1+a}\bigr)=\bigl(x^{2}-1+a\bigr)\bigl(bx+2\bigr)$.
+ \end{enumeratea}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$5ab^{2}-10abc-25abx+50acx$.
+ \begin{enumeratea}
+  \item Il fattore comune è~$5a$, quindi:
+    \begin{itemize*}
+    \item $5ab^{2}-10abc-25abx+50acx=5a\bigl(b^{2}-2bc-5bx+10cx\bigr)$;
+    \end{itemize*}
+%  \item vediamo se è possibile scomporre il polinomio in parentesi con un raccoglimento parziale~$5a(\mmevid{ev_rosso}{b^{2}}-\mmevid{ev_rosso}{2bc}-\mmevid{ev_verde}{5bx}+\mmevid{ev_verde}{10cx})=5a\bigl[b(\mmevid{ev_blu}{b-2c})-5x(\mmevid{ev_blu}{b-2c})\bigr]=5a(b-2c)(b-5x)$.
+
+ \item vediamo se è possibile scomporre il polinomio in parentesi con un raccoglimento parziale~$5a(\underline{b^{2}}-\underline{2bc}-\underline{\underline{5bx}}+\underline{\underline{10cx}})=5a\bigl[b(\underline{b-2c})-5x(\underline{b-2c})\bigr]=5a(b-2c)(b-5x)$.
+ \end{enumeratea}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:13.16}, \ref{ese:13.17}, \ref{ese:13.18}, \ref{ese:13.19}, \ref{ese:13.20}, \ref{ese:13.21}, \ref{ese:13.22}, \ref{ese:13.23}, \ref{ese:13.24},\ref{ese:13.25}, \ref{ese:13.26}}
+
+\ovalbox{\ref{ese:13.27}, \ref{ese:13.28}, \ref{ese:13.29}, \ref{ese:13.30}, \ref{ese:13.31}, \ref{ese:13.32}, \ref{ese:13.33}, \ref{ese:13.34}}
+\section{Riconoscimento di prodotti notevoli}
+
+\subsection{Quadrato di un binomio}
+
+Uno dei metodi più usati per la scomposizione di polinomi è legato al saper riconoscere i prodotti notevoli.
+Se abbiamo un trinomio costituito da due termini che sono quadrati di due monomi ed il terzo termine è uguale al doppio prodotto
+degli stessi due monomi, allora il trinomio può essere scritto sotto forma di quadrato di un binomio, secondo la regola che segue: %(sezione \ref{sect:quadrato_di_un_binomio} a pagina \pageref{sect:quadrato_di_un_binomio})
+\begin{equation*}
+(A+B)^{2}=A^{2}+2AB+B^{2}\quad \Rightarrow \quad A^{2}+2AB+B^{2}=(A+B)^{2}.
+\end{equation*}
+Analogamente nel caso in cui il monomio che costituisce il doppio prodotto sia negativo:
+\begin{equation*}
+(A-B)^{2}=A^{2}-2AB+B^{2}\quad \Rightarrow \quad A^{2}-2AB+B^{2}=(A-B)^{2}.
+\end{equation*}
+Poiché il quadrato di un numero è sempre positivo, valgono anche le seguenti uguaglianze
+\begin{equation*}
+(A+B)^{2}=(-A-B)^{2}\quad\Rightarrow\quad A^{2}+2AB+B^{2}=(A+B)^{2}=(-A-B)^{2}\phantom{.}
+\end{equation*}
+\begin{equation*}
+(A-B)^{2}=(-A+B)^{2}\quad \Rightarrow \quad A^{2}-2AB+B^{2}=(A-B)^{2}=(-A+B)^{2}.
+\end{equation*}
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$4a^{2}+12ab^{2}+9b^{4}$.
+
+Notiamo che il primo ed il terzo termine sono quadrati, rispettivamente di~$2a$ e di~$3b^{2}$,
+ed il secondo termine è il doppio prodotto degli stessi monomi, pertanto possiamo
+scrivere:
+\[4a^{2}+12{ab}^{2}+9b^{4}=(2a)^{2}+2\cdot (2a)\cdot (3b^{2})+\left(3b^{2}\right)^{2}=\left(2a+3b^{2}\right)^{2}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$x^{2}-6x+9$.
+
+Il primo ed il terzo termine sono quadrati, il secondo termine compare con il segno ``meno''.
+Dunque:~$x^{2}-6x+9=x^{2}-2\cdot 3\cdot x+3^{2}=(x-3)^{2}$, ma anche~$x^{2}-6x+9=(-x+3)^{2}$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$x^{4}+4x^{2}+4$.
+
+Può accadere che tutti e tre i termini siano tutti quadrati. $x^{4}+4x^{2}+4$ è formato da tre quadrati, ma il secondo termine, quello di grado intermedio,
+è anche il doppio prodotto dei due monomi di cui il primo ed il terzo termine sono i rispettivi quadrati.
+Si ha dunque:
+\[x^{4}+4x^{2}+4=\left(x^{2}\right)^{2}+2\cdot (2)\cdot (x^{2})+(2)^{2}=\left(x^{2}+2\right)^{2}.\]
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Individuare il quadrato di un binomio:
+\begin{enumeratea}
+\item individuare le basi dei due quadrati;
+\item verificare se il terzo termine è il doppio prodotto delle due basi;
+\item scrivere tra parentesi le basi dei due quadrati e il quadrato fuori dalla parentesi;
+\item mettere il segno ``più'' o ``meno'' in accordo al segno del termine che non è un quadrato.
+\end{enumeratea}
+\end{procedura}
+
+Può capitare che i quadrati compaiano con il coefficiente negativo, ma si può rimediare mettendo in evidenza il segno ``meno''.
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$-9a^{2}+12{ab}-4b^{2}$.
+
+Mettiamo~$-1$ a fattore comune~$-9a^{2}+12ab-4b^{2}=-(9a^{2}-12{ab}+4b^{2})=-(3a-2b)^{2}$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$-x^{4}-x^{2}-\frac{1}{4}$.
+\[-x^{4}-x^{2}-\frac{1}{4}=-\left(x^{4}+x^{2}+\frac{1}{4}\right)=-\left(x^{2}+\frac{1}{2}\right)^{2}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$-x^{2}+6xy^{2}-9y^{4}$.
+\[x^{2}+6xy^{2}-9y^{4}=-\left(x^{2}-6xy^{2}+9y^{4}\right)=-\left(x-3y^{2}\right)^{2}.\]
+ \end{esempio}
+\end{exrig}
+
+Possiamo avere un trinomio che ``diventa'' quadrato di binomio dopo aver messo qualche fattore comune in evidenza.
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$2a^{3}+20a^{2}+50a$.
+
+Mettiamo a fattore comune~$2a$, allora~$2a^{3}+20a^{2}+50a=2a(a^{2}+10a+25)=2a(a+5)^{2}$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$2a^{2}+4a+2$.
+\[2a^{2}+4a+2=2\left(a^{2}+2a+1\right)=2(a+1)^{2}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$-12a^{3}+12a^{2}-3a$.
+\[-12a^{3}+12a^{2}-3a=-3a\left(4a^{2}-4a+1\right)=-3a(2a-1)^{2}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$\dfrac{3}{8}a^{2}+3ab+6b^{2}$.
+
+\[\frac{3}{8}a^{2}+3ab+6b^{2}=\frac{3}{2}\left(\frac{1}{4}a^{2}+2ab+4b^{2}\right)=\frac{3}{2}\left(\frac{1}{2}a+2b\right)^{2}\text{,}\]
+o anche
+\[\frac{3}{8}a^{2}+3ab+6b^{2}=\frac{3}{8}\left(a^{2}+8ab+16b^{2} \right)=\frac{3}{8}\left(a+4b\right)^{2}.\]
+ \end{esempio}
+\end{exrig}
+\ovalbox{\risolvii \ref{ese:13.35}, \ref{ese:13.36}, \ref{ese:13.37}, \ref{ese:13.38}, \ref{ese:13.39}, \ref{ese:13.40}, \ref{ese:13.41}, \ref{ese:13.42}, \ref{ese:13.43}, \ref{ese:13.44}}
+
+\subsection{Quadrato di un polinomio}
+
+Se siamo in presenza di sei termini, tre dei quali sono quadrati, verifichiamo se il polinomio è il quadrato di un
+trinomio secondo le seguenti regole (sezione \ref{sect:quadrato_di_un_polinomio} a pagina \pageref{sect:quadrato_di_un_polinomio})
+\begin{equation*}
+(A+B+C)^{2}=A^{2}+B^{2}+C^{2}+2AB+2AC+2BC
+\end{equation*}
+\begin{equation*}
+A^{2}+B^{2}+C^{2}+2AB+2AC+2BC=(A+B+C)^{2}=(-A-B-C)^{2}.
+\end{equation*}
+Notiamo che i doppi prodotti possono essere tutti e tre positivi, oppure uno positivo e due negativi:
+indicano se i rispettivi monomi sono concordi o discordi.
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$16a^{4}+b^{2}+1+8a^{2}b+8a^{2}+2b$.
+
+I primi tre termini sono quadrati rispettivamente di~$4a^{2}$, $b$ e~$1$ e si può verificare poi che gli altri tre termini sono
+i doppi prodotti:~$16a^{4}+b^{2}+1+8a^{2}b+8a^{2}+2b=\left(4a^{2}+b+1\right)^{2}$.
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$x^{4}+y^{2}+z^{2}-2x^{2}y-2x^{2}z+2yz$.
+\[x^{4}+y^{2}+z^{2}-2x^{2}y-2x^{2}z+2yz=\left(x^{2}-y-z\right)^{2}=\left(-x^{2}+y+z\right)^{2}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$x^{4}-2x^{3}+3x^{2}-2x+1$.
+
+In alcuni casi anche un polinomio di cinque termini può essere il quadrato di un trinomio.
+Per far venire fuori il quadrato del trinomio si può scindere il termine~$3x^{2}$ come somma:
+\[3x^{2}=x^{2}+2x^{2}.\]
+In questo modo si ha:
+\[x^{4}-2x^{3}+3x^{2}-2x+1=x^{4}-2x^{3}+x^{2}+2x^{2}-2x+1=(x^{2}-x+1)^{2}.\]
+ \end{esempio}
+\end{exrig}
+
+Nel caso di un quadrato di un polinomio la regola è sostanzialmente la stessa:
+\begin{equation*}
+(A+B+C+D)^{2}=A^{2}+B^{2}+C^{2}+D^{2}+2AB+2AC+2AD+2BC+2BD+2CD.
+\end{equation*}
+\ovalbox{\risolvii \ref{ese:13.45},\ref{ese:13.46},\ref{ese:13.47}, \ref{ese:13.48}, \ref{ese:13.49}, \ref{ese:13.50}}
+
+\subsection{Cubo di un binomio}
+I cubi di binomi sono di solito facilmente riconoscibili. Un quadrinomio è lo sviluppo del cubo di un binomio se due suoi termini sono i cubi
+di due monomi e gli altri due termini sono i tripli prodotti tra uno dei due monomi ed il quadrato dell’altro, secondo le seguenti formule: % (sezione \ref{sect:cubo_di_un_binomio} a pagina \pageref{sect:cubo_di_un_binomio})
+\begin{equation*}
+(A+B)^{3}=A^{3}+3A^{2}B+3AB^{2}+B^{3}\quad \Rightarrow \quad A^{3}+3A^{2}B+3AB^{2}+B^{3}=(A+B)^{3}\phantom{.}
+\end{equation*}
+\begin{equation*}
+(A-B)^{3}=A^{3}-3A^{2}B+3AB^{2}-B^{3}\quad \Rightarrow \quad A^{3}-3A^{2}B+3AB^{2}-B^{3}=(A-B)^{3}.
+\end{equation*}
+Per il cubo non si pone il problema, come per il quadrato, del segno della base, perché un numero elevato ad esponente dispari,
+se è positivo rimane positivo e se è negativo rimane negativo.
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$8a^{3}+12a^{2}b+6{ab}^{2}+b^{3}$.
+
+Notiamo che il primo ed il quarto termine sono cubi, rispettivamente di~$2a$ e di~$b$, il secondo termine è il triplo
+prodotto tra il quadrato di~$2a$ e~$b$, mentre il terzo termine è il triplo prodotto tra~$2a$ e il quadrato di~$b$.
+Abbiamo dunque:
+\[8a^{3}+12a^{2}b+6ab^{2}+b^{3}=(2a)^{3}+3\cdot (2a)^{2}\cdot (b)+3\cdot (2a)\cdot (b)^{2}=(2a+b)^{3}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$-27x^{3}+27x^{2}-9x+1$.
+
+Le basi del cubo sono il primo e il quarto termine, rispettivamente cubi di~$-3x$ e di~$1$.
+Dunque:
+\[-27x^{3}+27x^{2}-9x+1=(-3x)^{3}+3\cdot (-3x)^{2}\cdot 1+3\cdot (-3x)\cdot 1^{2}+1=(-3x+1)^{3}.\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$x^{6}-x^{4}+\frac{1}{3}x^{2}-\frac{1}{27}$.
+
+Le basi del cubo sono~$x^{2}$ e~$-\frac{1}{3}$ i termini centrali sono i tripli prodotti,
+quindi~$\left(x^{2}-\frac{1}{3}\right)^{3}$.
+\end{esempio}
+\end{exrig}
+\ovalbox{\risolvii \ref{ese:13.51}, \ref{ese:13.52}, \ref{ese:13.53}, \ref{ese:13.54}, \ref{ese:13.55}, \ref{ese:13.56}, \ref{ese:13.57}, \ref{ese:13.58},\ref{ese:13.59}}
+
+\subsection{Differenza di due quadrati}
+Un binomio che sia la differenza dei quadrati di due monomi può essere scomposto come prodotto tra la somma dei due monomi
+(basi dei quadrati) e la loro differenza. % (sezione \ref{sect:diffrenza_di_quadrati} a pagina \pageref{sect:diffrenza_di_quadrati})
+\begin{equation*}
+(A+B)\cdot (A-B)=A^{2}-B^{2}\quad \Rightarrow \quad A^{2}-B^{2}=(A+B)\cdot (A-B).
+\end{equation*}
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$\frac{4}{9}a^{4}-25b^{2}$.
+\[\frac{4}{9}a^{4}-25b^{2}=\left(\frac{2}{3}a^{2}\right)^{2}-\left(5b\right)^{2}=\left(\frac{2}{3}a^{2}+5b\right)
+\cdot \left(\frac{2}{3}a^{{2}}-5b\right).\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$-x^{6}+16y^{2}$.
+\[-x^{6}+16y^{2}=-\left(x^{3}\right)^{2}+\left(4y\right)^{2}=\left(x^{3}+4y\right)\cdot \left(-x^{3}+4y\right).\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$a^{2}-\left(x+1\right)^{2}$.
+La formula precedente vale anche se~$A$ e~$B$ sono polinomi. Quindi $a^{2}-\left(x+1\right)^{2}=\left[a+(x+1)\right]\cdot \left[a-(x+1)\right]=(a+x+1)(a-x-1)$.
+\end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$\left(2a-b^{2}\right)^{2}-(4x)^{2}$.
+\[\left(2a-b^{2}\right)^{2}-(4x)^{2}=\left(2a-b^{2}+4x\right)\cdot \left(2a-b^{2}-4x\right).\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$(a+3b)^{2}-(2x-5)^{2}$.
+\[(a+3b)^{2}-(2x-5)^{2}=(a+3b+2x-5)\cdot (a+3b-2x+5).\]
+ \end{esempio}
+\end{exrig}
+
+Per questo tipo di scomposizioni, la cosa più difficile è riuscire a riconoscere un quadrinomio o un polinomio
+di sei termini come differenza di quadrati. Riportiamo i casi principali:
+\begin{itemize*}
+ \item $(A+B)^{2}-C^{2}=A^{{2}}+2AB+B^{2}-C^{2}$;
+ \item $A^{2}-(B+C)^{2}=A^{2}-B^{2}-2BC-C^{2}$;
+ \item $(A+B)^{2}-(C+D)^{2}=A^{2}+2AB+B^{2}-C^{2}-2CD-D^{2}$.
+\end{itemize*}
+
+\begin{exrig}
+ \begin{esempio}
+Scomporre in fattori~$4a^{2}-4b^{2}-c^{2}+4bc$.
+
+Gli ultimi tre termini possono essere raggruppati per formare il quadrati di un binomio.
+ \begin{equation*}
+   \begin{split}
+     4a^{2}-4b^{2}-c^{2}+4bc &=4a^{2}-\left(4b^{2}+c^{2}-4bc\right) \\
+                 &= (2a)^{2}-(2b-c)^{2}=(2a+2b-c)\cdot (2a-2b+c).
+   \end{split}
+  \end{equation*}
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$4x^{4}-4x^{2}-y^{2}+1$.
+\[4x^{4}-4x^{2}-y^{2}+1=\left(2x^{2}-1\right)^{2}-(y)^{2}=(2x^{2}-1+y)\cdot (2x^{2}-1-y).\]
+ \end{esempio}
+
+ \begin{esempio}
+Scomporre in fattori~$a^{2}+1+2a+6bc-b^{2}-9c^{2}$.
+ \begin{equation*}
+   \begin{split}
+     a^{2}+1+2a+6bc-b^{2}-9c^{2} &=\left(a^{2}+1+2a\right)-\left(b^{2}+9c^{2}-6{bc}\right) \\
+                 &= (a+1)^{2}-(b-3c)^{2}=(a+1+b-3c)\cdot (a+1-b+3c).
+   \end{split}
+  \end{equation*}
+ \end{esempio}
+\end{exrig}
+\ovalbox{\risolvii  \ref{ese:13.60}, \ref{ese:13.61}, \ref{ese:13.62}, \ref{ese:13.63}, \ref{ese:13.64}, \ref{ese:13.65}, \ref{ese:13.66}, \ref{ese:13.67}, \ref{ese:13.68}, \ref{ese:13.69}}
+
+\section{Altre tecniche di scomposizione}
+
+\subsection{Trinomi particolari}
+
+Consideriamo il seguente prodotto:
+
+\[(x+3)(x+2)=x^{2}+3x+2x+6=x^{2}+5x+6.\]
+
+Poniamoci ora l'obiettivo opposto: se abbiamo il
+polinomio~$x^{2}+5x+6$ come facciamo a trovare ritrovare il prodotto
+che lo ha originato? Possiamo notare che il~5 deriva dalla somma tra
+il~3 e il~2, mentre il~6 deriva dal prodotto tra~3 e~2. Generalizzando:
+
+\[\left(x+a\right)\cdot \left(x+b\right)=x^{{2}}+ax+bx+ab=x^{2}+\left(a+b\right)x+a\cdot b.\]
+Leggendo la formula precedente da destra verso sinistra:
+
+\[x^{{2}}+\left(a+b\right)x+a\cdot b=\left(x+a\right)\cdot\left(x+b\right).\]
+
+Possiamo allora concludere che se abbiamo un trinomio di secondo grado
+in una sola lettera, a coefficienti interi, avente il termine di
+secondo grado con coefficiente~1, se riusciamo a trovare due numeri~$a$ e~$b$
+tali che la loro somma è uguale al
+coefficiente del termine di primo grado ed il loro prodotto è uguale
+al termine noto, allora il polinomio è scomponibile nel prodotto~$(x+a)(x+b)$.
+
+Osserva che il termine noto, poiché è dato dal prodotto dei numeri
+che cerchiamo, ci dice se i due numeri sono concordi o discordi.
+Inoltre, se il numero non è particolarmente grande è sempre
+possibile scrivere facilmente tutte le coppie di numeri che danno come
+prodotto il numero cercato, tra tutte queste coppie dobbiamo poi
+individuare quella che ha per somma il coefficiente del termine di
+primo grado.
+
+\begin{exrig}
+ \begin{esempio}
+ $x^{2}+7x+12.$
+
+ I coefficienti sono positivi e quindi i due numeri da trovare sono
+entrambi positivi.
+Il termine noto~12 può essere scritto sotto forma di prodotto di due
+numeri naturali solo come:
+
+\[12\cdot 1\text{,}\quad~6\cdot 2\text{,}\quad~3\cdot 4.\]
+
+Le loro somme sono rispettivamente~13, 8, 7. La coppia di numeri che
+dà per somma $+7$ e prodotto $+12$ è pertanto~$+3$ e~$+4$. Dunque il
+trinomio si scompone come:
+
+\[x^{2}+7x+12=\left(x+4\right)\cdot \left(x+3\right).\]
+ \end{esempio}
+
+ \begin{esempio}
+ $x^{2}-\overset{S}{8}x+\overset{P}{15}.$
+
+I segni dei coefficienti ci dicono che i due numeri, dovendo avere somma (S)
+negativa e prodotto (P) positivo, sono entrambi negativi. Dobbiamo cercare
+due numeri negativi la cui somma (S) sia~$-8$ e il cui prodotto (P) sia~15. Le
+coppie di numeri negativi che danno~15 come prodotto (P) sono $(-15\text{,~}-1)$ e~$(-5\text{,~}-3)$.
+Allora i due numeri cercati sono~$-5$ e~$-3$. Il trinomio si scompone
+come:
+\[x^{2}-8x+15=\left(x-5\right)\cdot \left(x-3\right).\]
+ \end{esempio}
+
+\begin{esempio}
+ $x^{2}+\overset{S}{4}x-\overset{P}{5}.$
+
+I due numeri sono discordi, il maggiore in valore assoluto è quello
+positivo. C'è una sola coppia di numeri che dà~$-5$
+come prodotto, precisamente~$+5$ e~$-1$. Il polinomio si scompone:
+\[x^{2}+4x-5=\left(x+5\right)\cdot \left(x-1\right).\]
+\end{esempio}
+
+\begin{esempio}
+ $x^{2}-\overset{S}{3}x-\overset{P}{10}.$
+
+I due numeri sono discordi, in valore assoluto il più grande è quello
+negativo. Le coppie di numeri che danno~$-10$ come prodotto sono~$(-10\text{,~}+1)$ e
+$(-5\text{,~}+2)$. Quella che dà~$-3$ come somma è~$(-5\text{,~}+2)$. Quindi
+\[x^{2}-3x-10=\left(x-5\right)\cdot \left(x+2\right).\]
+\end{esempio}
+
+\begin{esempio}
+ In alcuni casi si può applicare questa regola anche quando il trinomio
+non è di secondo grado, è necessario però che il termine di grado
+intermedio sia esattamente di grado pari alla metà di quello di grado
+maggiore.
+
+\begin{itemize*}
+\item $x^{4}+5x^{2}+6=\left(x^{2}+3\right)\cdot \left(x^{2}+2\right)$;
+\item $x^{6}+x^{3}-12=\left(x^{3}+4\right)\cdot \left(x^{3}-3\right)$;
+\item $a^{4}-10a^{2}+9=\underbrace{\left(a^{2}-9\right)\cdot\left(a^{2}-1\right)}_{\text{differenze di quadrati}}=\left(a+3\right)\cdot \left(a-3\right)\cdot \left(a+1\right)\cdot\left(a-1\right)$;
+\item $-x^{4}-x^{2}+20=-\left(x^{4}+x^{2}-20\right)=-\left(x^{2}+5\right)\cdot\left(x^{2}-4\right)=-\left(x^{2}+5\right)\cdot%
+\left(x+2\right)\cdot \left(x-2\right)$;
+\item $2x^{5}-12x^{3}-14x=2x\cdot \left(x^{4}-6x^{2}-7\right)=2x\cdot%
+\left(x^{2}-7\right)\cdot \left(x^{2}+1\right)$;
+\item $-2a^{7}+34a^{5}-32a^{3}=-2a^{3}\left(a^{4}-17a^{2}+16\right)
+    =-2a^{3}\left(a^{2}-1\right)\left(a^{2}-16\right)\\
+    =-2a^{3}\left(a-1\right)\left(a+1\right)\left(a-4\right)\left(a+4\right).$
+\end{itemize*}
+\end{esempio}
+
+\end{exrig}
+
+È possibile applicare questo metodo anche quando il
+polinomio è in due variabili.
+
+\begin{exrig}
+ \begin{esempio}
+ $x^{2}+5xy+6y^{2}$.
+
+ Per capire come applicare la regola precedente, possiamo scrivere il
+trinomio in questo modo:~$x^{2}+\overset{S}{5}xy+\overset{P}{6}y{^{2}}$.
+
+Bisogna cercare due monomi~$A$ e~$B$ tali che~$A+B=5y$
+e~$A\cdot B=6y^{2}$. Partendo dal fatto che i due numeri che danno~5
+come somma e~6 come prodotto sono~$+3$ e~$+2$, i monomi cercati sono~$+3y$ e~$+2y$,
+infatti~$+3y+3y=+5y$ e~$+3y\cdot (+2y)=+6y^{2}$. Pertanto si
+può scomporre come segue:~$x^{2}+5xy+6y^{2}=(x+3y)(x+2y)$.
+ \end{esempio}
+\end{exrig}
+
+La regola, opportunamente modificata, vale anche se il primo
+coefficiente non è~1. Vediamo un esempio.
+%\newpage
+\begin{exrig}
+ \begin{esempio}
+ $2x^{2}-x-1$.
+
+Non possiamo applicare la regola del trinomio caratteristico, con somma
+e prodotto, ma con un accorgimento, possiamo riscrivere il polinomio in un
+altro modo. Cerchiamo due numeri la cui somma sia~$-1$ e il prodotto sia
+pari al prodotto tra il primo e l'ultimo coefficiente,
+o meglio tra il coefficiente del termine di secondo grado e il termine
+noto, in questo caso~$2\cdot (-1)=-2$. I numeri sono~$-2$ e~$+1$.
+Spezziamo il monomio centrale in somma di due monomi in questo modo
+\[2x^{2}-x-1=2x^{2}-2x+x-1.\]
+
+Ora possiamo applicare il raccoglimento a fattore comune parziale
+\[2x^{2}-x-1={2x^{2}}\underbrace{{-2x}+x}_{-x}-1=2x\cdot
+\underline{(x-1)}+1\cdot
+\underline{(x-1)}=\left(x-1\right)\cdot \left(2x+1\right).\]
+ \end{esempio}
+\end{exrig}
+
+\begin{procedura}
+Sia da scomporre un trinomio di secondo grado a coefficienti interi~$ax^{2}+bx+c$
+con~$a\neq 1$, cerchiamo due numeri~$m$ ed~$n$ tali che $m+n=b$ e~$m\cdot n=a\cdot c$;
+se riusciamo a trovarli, li useremo per dissociare
+il coefficiente~$b$ e riscrivere il polinomio nella forma~$ax^{2}+\left(m+n\right)\cdot x+c$
+su cui poi eseguire un raccoglimento parziale.
+\end{procedura}
+
+\ovalbox{\risolvii \ref{ese:13.70}, \ref{ese:13.71}, \ref{ese:13.72}, \ref{ese:13.73}, \ref{ese:13.74}, \ref{ese:13.75}, \ref{ese:13.76}, \ref{ese:13.77}, \ref{ese:13.78}, \ref{ese:13.79}}
+
+\subsection{Scomposizione con la regola Ruffini}
+Anche il teorema di Ruffini permette di scomporre in fattori i polinomi.
+Dato il polinomio~$P(x)$, se riusciamo a trovare un numero~$k$
+per il quale~$P(k)=0$, allora~$P(x)$ è
+divisibile per il binomio~$x-k$, allora possiamo scomporre~$P(x)=(x-k)\cdot Q(x)$, dove~$Q(x)$
+è il quoziente della divisione
+tra~$P(x)$ e~$(x-k)$.
+
+Il problema di scomporre un polinomio~$P(x)$ si riconduce quindi a quello
+della ricerca del numero~$k$ che sostituito alla~$x$ renda nullo il
+polinomio. Un numero di questo tipo si dice anche \emph{radice del polinomio}.
+
+Il numero~$k$ non va cercato del tutto a caso, abbiamo degli elementi per
+restringere il campo di ricerca di questo numero quando il polinomio
+è a coefficienti interi.
+
+\osservazione Le radici intere del polinomio vanno cercate tra i divisori del termine
+noto.
+
+\begin{exrig}
+ \begin{esempio}
+ $P(x)=x^{3}+x^{2}-10x+8$.
+ \end{esempio}
+Le radici intere del polinomio sono da ricercare
+nell'insieme dei divisori di~8, precisamente in~$\{\pm 1$, $\pm 2$, $\pm 4$, $\pm 8\}$.
+Sostituiamo questi numeri nel polinomio,
+finché non troviamo quello che lo annulla.
+
+Per~$x=1$ si ha~$p(1)=(1)^{3}+(1)^{2}-10\cdot (1)+8=1+1-10+8=0$,
+pertanto il polinomio è divisibile per~$x-1$.
+
+Utilizziamo la regola di Ruffini per dividere~$P(x)$ per~$x-1$.
+
+\begin{wrapfloat}{figure}{l}{0pt}
+ \input{./lbr/chap13/fig001_rufi.pgf}
+\end{wrapfloat}
+
+Predisponiamo una griglia come quella a fianco, nella prima riga mettiamo i
+coefficienti di~$P(x)$, nella seconda riga mettiamo come primo numero la
+radice che abbiamo trovato, cioè~1. Poi procediamo come abbiamo già
+indicato per la regola di Ruffini (sezione \ref{sect:regola_di_Ruffini} a pagina \pageref{sect:regola_di_Ruffini}).
+
+I numeri che abbiamo ottenuto nell'ultima riga sono i
+coefficienti del polinomio quoziente:~$q(x)=x^{2}+2x-8$.
+
+Possiamo allora scrivere:
+\[x^{3}+x^{2}-10x+8=(x-1)\cdot (x^{2}+2x-8).\]
+
+Per fattorizzare il polinomio di secondo grado~$x^{2}+2x-8$ possiamo
+ricorrere al metodo del trinomio notevole. Cerchiamo due numeri la sui
+somma sia~$+2$ e il cui prodotto sia~$-8$. Questi numeri vanno cercati tra
+le coppie che danno per prodotto~$-8$ e precisamente tra le seguenti
+coppie~$(+8;-1)$, $(-8;+1)$, $(+4;-2)$, $(-4;+2)$. La coppia che dà per
+somma~$+2$ è~$(+4;-2)$. In definitiva si ha:
+\[x^{3}+x^{2}-10x+8=(x-1)\cdot (x^{2}+2x-8)=(x-1)(x-2)(x+4).\]
+
+
+ \begin{esempio}
+$x^{4}-5x^{3}-7x^{2}+29x+30$.
+\end{esempio}
+
+Le radici intere vanno cercate tra i divisori di~30, precisamente in~$\{\pm 1$, $\pm 2$, $\pm 3$, $\pm 5$, $\pm 6$, $\pm 10$, $\pm 15$, $\pm 30\}$.
+Sostituiamo questi numeri al posto della~$x$, finché non troviamo la
+radice.
+
+Per~$x=1$ si ha~$P(1)=1-5-7+29+30$ senza effettuare il calcolo si
+nota che i numeri positivi superano quelli negativi, quindi~1 non è
+una radice.
+
+Per~$x=-1$ si ha
+\begin{align*}
+P(-1)&=(-1)^{4}-5\cdot (-1)^{3}-7\cdot(-1)^{2}+29\cdot (-1)+30\\
+&=+1+5-7-29+30\\
+&=0.
+\end{align*}
+
+Una radice del polinomio è quindi~$-1$; utilizzando la regola di Ruffini
+abbiamo:
+\begin{center}
+ \input{./lbr/chap13/fig002_rufi.pgf}
+\end{center}
+Con i numeri che abbiamo ottenuto nell'ultima riga
+costruiamo il polinomio quoziente:~$x^{3}-6x^{2}-1x+30$. Possiamo allora
+scrivere:
+\[x^{4}-5x^{3}-7x^{2}+29x+30=(x+1)(x^{3}-6x^{2}-x+30).\]
+
+Con lo stesso metodo scomponiamo il polinomio~$x^{3}-6x^{2}-1x+30$.
+Cerchiamone le radici tra i divisori di~30, precisamente
+nell'insieme~$\{\pm 1$, $\pm 2$, $\pm 3$, $\pm 5$, $\pm 6$, $\pm 10$, $\pm 15$, $\pm 30\}$. Bisogna ripartire dall'ultima
+radice trovata, cioè da~$-1$.
+
+Per~$x=-1$ si ha~$P(-1)=(-1)^{3}-6\cdot (-1)^{2}-1\cdot (-1)+30=-1-6+1+30\neq~0$.
+
+Per~$x=+2$ si ha~$P(+2)=(+2)^{3}-6\cdot (+2)^{2}-1\cdot (+2)+30=+8-24-2+30\neq~0$.
+
+Per~$x=-2$ si ha~$P(-2)=(-2)^{3}-6\cdot (-2)^{2}-1\cdot (-2)+30=-8-24+2+30=0$.
+
+Quindi~$-2$ è una radice del polinomio. Applichiamo la regola di
+Ruffini, ricordando che nella prima riga dobbiamo mettere i coefficienti
+del polinomio da scomporre, cioè~$x^{3}-6x^{2}-1x+30$.
+\begin{center}
+ \input{./lbr/chap13/fig003_rufi.pgf}
+\end{center}
+Il polinomio~$q(x)$ si scompone nel
+prodotto~$x^{3}-6x^{2}-x+30=(x+2)\cdot (x^{2}-8x+15)$.
+
+Infine possiamo scomporre~$x^{2}-8x+15$ come trinomio notevole: i due
+numeri che hanno per somma~$-8$ e prodotto~$+15$ sono~$-3$ e~$-5$. In
+conclusione possiamo scrivere la scomposizione:
+\[x^{4}-5x^{3}-7x^{2}+29x+30=(x+1)\cdot (x+2)\cdot (x-3)\cdot (x-5).\]
+
+Non sempre è possibile scomporre un polinomio utilizzando solo numeri
+interi. In alcuni casi possiamo provare con le frazioni, in particolare
+quando il coefficiente del termine di grado maggiore non è~1. In
+questi casi possiamo cercare la radice del polinomio tra le frazioni
+del tipo~$\frac{p}{q}$, dove~$p$ è un divisore del termine noto e~$q$ è
+un divisore del coefficiente del termine di grado maggiore.
+
+
+\begin{esempio}
+$6x^{2}-x-2.$
+\end{esempio}
+
+Determiniamo prima di tutto l'insieme nel quale
+possiamo cercare le radici del polinomio. Costruiamo tutte le frazioni
+del tipo~$\frac{p}{q}$, con~$p$ divisore di~$-2$ e~$q$ divisore di~$6$. I
+divisori di~2 sono~$\{\pm 1$, $\pm 2\}$ mentre i divisori di~6 sono~$\{\pm 1$, $\pm 2$, $\pm 3$, $\pm 6\}$.
+Le frazioni tra cui cercare sono
+\[\left\{\pm {\frac{1}{1}}\text{, }\pm \frac{1}{2}\text{, }\pm \frac{2}{1}\text{, }\pm
+\frac{2}{3}\text{, }\pm \frac{2}{6}\right\}\]
+cioè \[\left\{\pm 1\text{, }\pm\frac{1}{2}\text{, }\pm 2\text{, }\pm \frac{2}{3}\text{, }\pm \frac{1}{3}\right\}.\]
+
+Si ha~$\quad A(1)=-3;\quad A(-1)=5;\quad A\left(\frac{1}{2}\right)=-1;\quad A\left(-{\frac{1}{2}}\right)=0$.
+
+\begin{wrapfloat}{figure}{l}{0pt}
+ \input{./lbr/chap13/fig004_rufi.pgf}
+\end{wrapfloat}
+Sappiamo dal teorema di Ruffini che il polinomio~$A(x)=6x^{2}-x-2$ è
+divisibile per~$\left(x+\frac{1}{2}\right)$ dobbiamo quindi trovare il
+polinomio~$Q(x)$ per scomporre~$6x^{2}-x-2$ come~$Q(x)\cdot \left(x+\frac{1}{2}\right)$.
+
+Applichiamo la regola di Ruffini per trovare il quoziente. Il quoziente è~$Q(x)=6x-4$.
+Il polinomio sarà scomposto in~$(6x-4)\cdot\left(x+\frac{1}{2}\right)$.
+Mettendo a fattore comune~2 nel primo binomio si ha:
+\[6x^{2}-x-2\ =\ (6x-4)%
+\left(x+\frac{1}{2}\right)\ =\ 2(3x-2)\left(x+\frac{1}{2}\right)\ =(3x-2)(2x+1).\]
+
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:13.80}, \ref{ese:13.81}, \ref{ese:13.82}, \ref{ese:13.83}, \ref{ese:13.84}}
+
+\subsection{Somma e differenza di due cubi}
+
+Per scomporre i polinomi del tipo~$A^{3}+B^{3}$ e~$A^{3}-B^{3}$
+possiamo utilizzare il metodo di Ruffini.
+
+\begin{exrig}
+ \begin{esempio}
+ $x^{3}-8$.
+\end{esempio}
+Il polinomio si annulla per~$x=2$, che è la radice cubica di~8.
+Calcoliamo il quoziente.
+\begin{wrapfloat}{figure}{l}{0pt}
+ \input{./lbr/chap13/fig005_rufi.pgf}
+\end{wrapfloat}
+Il polinomio quoziente è~$Q(x)=x^{2}+2x+4$ e la scomposizione risulta
+\[x^{3}-8\ =\ (x-2)(x^{2}+2x+4).\]
+
+Notiamo che il quoziente somiglia al quadrato di un binomio, ma non lo
+è in quanto il termine intermedio è il prodotto e non il doppio
+prodotto dei due termini, si usa anche dire che è un ``falso quadrato''.
+Un trinomio di questo tipo non è ulteriormente scomponibile.
+
+
+ \begin{esempio}
+ $x^{3}+27$.
+ \end{esempio}
+ \begin{wrapfloat}{figure}{l}{0pt}
+ \input{./lbr/chap13/fig006_rufi.pgf}
+\end{wrapfloat}
+Il polinomio si annulla per~$x=-3$, cioè~$P(-3)=(-3)^{3}+27=-27+27=0$.
+Il polinomio quindi è divisibile per~$x+3$. Calcoliamo il quoziente
+attraverso la regola di Ruffini.
+
+Il polinomio quoziente è~$Q(x)=x^{2}-3x+9$ e la scomposizione risulta
+\[x^{3}+27=(x+3)(x^{2}-3x+9).\]
+
+\end{exrig}
+
+In generale possiamo applicare le seguenti regole per la scomposizione
+di somma e differenza di due cubi:
+
+\[A^{3}+B^{3}=(A+B)(A^{2}-AB+B^{2})\text{,}\]
+\[A^{3}-B^{3}=(A-B)(A^{2}+AB+B^{2}).\]
+
+\ovalbox{\risolvii \ref{ese:13.85}, \ref{ese:13.86}, \ref{ese:13.87}}
+
+\subsection{Scomposizione mediante metodi combinati}
+
+Nei paragrafi precedenti abbiamo analizzato alcuni metodi per ottenere
+la scomposizione in fattori di un polinomio e talvolta abbiamo mostrato
+che la scomposizione si ottiene combinando metodi diversi.
+Sostanzialmente non esiste una regola generale per la scomposizione di
+polinomi, cioè non esistono criteri di divisibilità semplici come
+quelli per scomporre un numero nei suoi fattori primi. In questo
+paragrafo vediamo alcuni casi in cui si applicano vari metodi combinati
+tra di loro.
+
+Un buon metodo per ottenere la scomposizione è procedere tenendo conto
+di questi suggerimenti:
+
+
+\begin{enumerate}
+\item analizzare se si può effettuare \emph{un raccoglimento totale};
+\item \emph{contare il numero di termini} di cui si compone il polinomio:
+ \begin{enumerate}
+  \item \emph{due} termini. Analizzare se il binomio è
+   \begin{enumerate}
+	\item una \emph{differenza di quadrati} $A^{2}-B^{2}=(A-B)(A+B)$;
+	\item una \emph{differenza di cubi} $A^{3}-B^{3}=(A-B)\left(A^{2}+AB+B^{2}\right)$;
+	\item una \emph{somma di cubi} $A^{3}+B^{3}=(A+B)\left(A^{2}-AB+B^{2}\right)$;
+	\item una \emph{somma di quadrati} $A^{2}+B^{2}$, nel qual caso è \emph{irriducibile}.
+   \end{enumerate}
+  \item \emph{tre} termini. Analizzare se è
+   \begin{enumerate}
+	\item un \emph{quadrato di un binomio} $A^{2}\pm~2AB+B^{2}=\left(A\pm B\right)^{2}$;
+	\item un \emph{trinomio particolare} del tipo~$x^{2}+Sx+P=(x+a)(x+b)$ con~$a+b=S$ e~$a\cdot b=P$;
+	\item un \emph{falso quadrato}~$A^{2}\pm AB+B^{2}$, che è irriducibile.
+   \end{enumerate}
+  \item \emph{quattro} termini. Analizzare se è
+   \begin{enumerate}
+	\item un \emph{cubo di un binomio} $A^{3}\pm~3A^{2}B+3AB^{2}\pm B^{3}=\left(A\pm B\right)^{3}$;
+	\item una \emph{particolare differenza di quadrati}
+	 \subitem $A^{2}\pm~2AB+B^{2}-C^{2}=(A\pm B+C)(A\pm B-C)$;
+	\item un \emph{raccoglimento parziale}, tipo $ax+bx+ay+by=(a+b)(x+y)$.
+   \end{enumerate}
+  \item \emph{sei} termini. Analizzare se è
+   \begin{enumerate}
+	\item un \emph{quadrato di un trinomio} $A^{2}+B^{2}+C^{2}+2AB+2{AC}+2{BC}=\left(A+B+C\right)^{2}$;
+	\item un \emph{raccoglimento parziale}, tipo
+	 \subitem $ax+{bx}+{cx}+{ay}+{by}+{cy}=(a+b+c)(x+y)$.
+   \end{enumerate}
+  \end{enumerate}
+ \item se non riuscite ad individuare nessuno dei casi precedenti, provate ad applicare la \emph{regola di Ruffini}.
+\end{enumerate}
+
+
+Ricordiamo infine alcune formule per somma e differenza di potenze
+dispari.
+
+\[A^5+B^5=(A+B)\left(A^4-A^3B+A^2B^2-AB^3+B^4\right)\text{,}\]
+\[A^5-B^5=(A-B)\left(A^4+A^3B+A^2B^2+AB^3+B^4\right)\text{,}\]
+\[A^{7}\pm B^{7}=(A\pm B)\left(A^{6}\mp A^{5}B+A^{4}B^{2}\mp A^{3}B^{3}+A^{2}B^{4}\mp AB^{5}+B^{6}\right)\text{,}\]
+\begin{equation*}
+\begin{split}
+ (A^{11}-B^{11})=(A-B)(A^{10}+A^{9}B+A^{8}B^{2}&+A^{7}B^{3}+A^{6}B^{4}+\\
+ &+A^{5}B^{5}+A^{4}B^{6}+A^{3}B^{7}+A^{2}B^{8}+AB^{9}+B^{10}).\\
+\end{split}
+\end{equation*}
+
+La differenza di due potenze ad esponente pari (uguale o differente tra le basi dei due addendi)
+rientra nel caso della differenza di quadrati:
+
+\[A^{8}-B^{10}=\left(A^{4}-B^{5}\right)\left(A^{4}+B^{5}\right).\]
+
+In alcuni casi si può scomporre anche la somma di potenze pari:
+
+\[A^{6}+B^{6}=\left(A^{2}\right)^{3}+\left(B^{2}\right)^{3}=\left(A^{2}+B^{2}\right)\left(A^{4}-A^{2}B^{2}+B^{4}\right)\text{,}\]
+\[A^{10}+B^{10}=\left(A^{2}\right)^{5}+\left(B^{2}\right)^{5}=\left(A^{2}+B^{2}\right)\left(A^{8}-A^{6}B^{2}+A^{4}B^{4}-A^2B^6+B^8\right).\]
+
+Proponiamo di seguito alcuni esercizi svolti o da completare in modo che
+possiate acquisire una certa abilità nella scomposizione di polinomi.
+\pagebreak
+\begin{exrig}
+ \begin{esempio}
+ $a^{2}x+5abx-36b^{2}x$.
+
+Il polinomio ha~3 termini, è di terzo grado in~2 variabili, è
+omogeneo;
+tra i suoi monomi si ha~$\mcd= x$; effettuiamo il raccoglimento
+totale:~$x\cdot\left(a^{2}+5ab-36b^{2}\right)$.
+Il trinomio ottenuto come secondo fattore è di grado~2 in~2 variabili,
+omogeneo e può essere riscritto
+\[a^{2}+\left(5b\right)\cdot a-36b^{2}.\]
+Proviamo a scomporlo come trinomio particolare:
+cerchiamo due monomi~$m$ ed~$n$ tali che~$m+n=5b$
+e~$m\cdot n=-36b^{2}$; i due monomi sono~$m=9b$
+ed~$n=-4b$;
+
+\[a^{2}x+5abx-36b^{2}x=x\cdot\left(a+9b\right)\cdot \left(a-4b\right).\]
+ \end{esempio}
+
+ \begin{esempio}
+ $x^{2}+y^{2}+2xy-2x-2y$.
+
+Facendo un raccoglimento parziale del coefficiente~2 tra gli ultimi tre
+monomi otterremmo~$x^{2}+y^{2}+2\cdot(xy-x-y)$ su cui non possiamo
+fare alcun ulteriore raccoglimento.
+
+I primi tre termini formano però il quadrato di un binomio e tra gli
+altri due possiamo raccogliere~$-2$, quindi~$(\underline{x+y})^{2}-2\cdot(\underline{x+y})$,
+raccogliendo~$(x + y)$ tra i due termini si ottiene
+
+\begin{equation*}
+x^{2}+y^{2}+2xy-2x-2y=\left(x+y\right)\cdot \left(x+y-2\right).
+\end{equation*}
+ \end{esempio}
+
+ \begin{esempio}
+ $8a+10b+\left(1-4a-5b\right)^{2}-2$.
+
+Tra i monomi sparsi possiamo raccogliere~2 a fattore comune
+\[2\cdot \left(4a+5b-1\right)+\left(1-4a-5b\right)^{2}.\]
+
+Osserviamo che la base del quadrato è l'opposto del polinomio contenuto
+nel primo termine. Ma poiché numeri opposti hanno
+lo stesso quadrato, possiamo cambiare il segno alla base del quadrato riscrivendo:
+\[2\cdot\left(4a+5b-1\right)+\left(-1+4a+5b\right)^{2}.\]
+Quindi si può mettere a fattore comune il termine $(4a+5b-1)$ ottenendo
+\begin{align*}
+8a+10b+(1-4a-5b)^{2}-2&=\left(4a+5b-1\right)\cdot\left(2-1+4a+5b\right)\\
+&=\left(4a+5b-1\right)\cdot\left(1+4a+5b\right).
+\end{align*}
+ \end{esempio}
+
+ \begin{esempio}
+ $t^{{3}}-z^{{3}}+t^{2}-z^{2}$.
+
+Il polinomio ha~4 termini, è di terzo grado in due variabili.
+Poiché due monomi sono nella variabile $t$ e gli altri due nella
+variabile $z$ potremmo subito effettuare un raccoglimento
+parziale:~$t^{{3}}-z^{{3}}+t^{2}-z^{2}=t^{2}\cdot\left(t+1\right)-z^{2}\cdot \left(z+1\right)$,
+che non permette un ulteriore passo. Occorre quindi un'altra
+idea.
+
+Notiamo che i primi due termini costituiscono una differenza di cubi e
+gli altri due una differenza di quadrati; applichiamo le regole:
+
+\begin{equation*}
+t^{{3}}-z^{{3}}+t^{2}-z^{2}=\left(t-z\right)\cdot
+\left(t^{2}+tz+z^{2}\right)+\left(t-z\right)\cdot
+\left(t+z\right).
+\end{equation*}
+Ora effettuiamo il raccoglimento totale del fattore comune~$(t-z)$
+
+\begin{equation*}
+t^{3}-z^{3}+t^{2}-z^{2} = \left(t-z\right)\cdot
+\left(t^{2}+tz+z^{2}+t+z\right).
+\end{equation*}
+ \end{esempio}
+
+ \begin{esempio}
+ $P(x)=x^{{3}}-7x-6$.
+ \end{esempio}
+
+Il polinomio ha~3 termini, è di~3{\textdegree} grado in una variabile.
+Non possiamo utilizzare la regola del trinomio particolare poiché il
+grado è~3. Procediamo con la regola di Ruffini: cerchiamo il numero che annulla 
+il polinomio nell'insieme dei divisori del termine
+noto~$D=\{\pm~1\text{,~}\pm~2\text{,~}\pm~3\text{,~}\pm~6\}$.
+
+Per~$x=+1$ si ha~$P(+1)=(+1)^{3}-7\cdot (+1)-6=1-7-6\neq~0$.
+
+Per~$x=-1$ si ha~$P(-1)=(-1)^{3}-7\cdot (-1)-6=-1+7-6=0$.
+
+Quindi~$P(x)=\left(x+1\right)\cdot Q(x)$ con~$Q(x)$ polinomio di
+secondo grado che determiniamo con la regola di Ruffini:
+
+\begin{wrapfloat}{figure}{r}{0pt}
+ \input{./lbr/chap13/fig007_rufi.pgf}
+\end{wrapfloat}
+Pertanto:~$P(x)=x^{3}-7x-6=\left(x+1\right)\cdot \left(x^{2}-x-6\right)$.
+
+Il polinomio quoziente è un trinomio di secondo grado; proviamo a
+scomporlo come trinomio notevole.
+Cerchiamo due numeri~$a$ e~$b$ tali che~$a+b=-1$ e~$a\cdot b=-6$.
+I due numeri vanno cercati tra le coppie che hanno~$-6$ come prodotto,
+precisamente~$(-6\text{,~}+1)$, $(-3\text{,~}+2)$, $(+6\text{,~}-1)$, $(+3\text{,~}-2)$. La coppia che fa al
+caso nostro è~$(-3\text{,~}+2)$ quindi si
+scompone~$Q(x)=x^{2}-x-6=\left(x-3\right)\cdot \left(x+2\right)$.
+
+In definitiva~$x^{{3}}-7x-6=\left(x+1\right)\cdot (x-3)\cdot (x+2)$.
+
+ \begin{esempio}
+ $\left(m^{2}-4\right)^{2}-m^{2}-4m-4$.
+
+Il polinomio ha~4 termini di cui il primo è un quadrato di un binomio;
+negli altri tre possiamo raccogliere~$-1$;
+
+\begin{equation*}
+\left(m^{2}-4\right)^{2}-m^{2}-4m-4=\left(m^{2}-4\right)^{2}-\left(m^{2}+4m+4\right)
+\end{equation*}
+
+Notiamo che anche il secondo termine è un quadrato di un binomio, quindi:
+\begin{equation}\label{eq:es_diff_quad}
+\left(m^{2}-4\right)^{2}-\left(m+2\right)^{2}
+\end{equation}
+che si presenta come differenza di quadrati, allora diviene:
+\[\left[\left(m^{2}-4\right)+\left(m+2\right)\right]\cdot
+\left[\left(m^{2}-4\right)-\left(m+2\right)\right].\]
+
+Eliminando le parentesi tonde~$\left(m^{2}+m-2\right)\cdot
+\left(m^{2}-m-6\right)$.
+
+I due fattori ottenuti si scompongono con la regola del trinomio. In
+definitiva si ottiene:
+
+\begin{align*}
+(m^{2}+m-2)\cdot (m^{2}-m-6)&=\left(m+2\right)\cdot\left(m-1\right)\cdot \left(m-3\right)\cdot
+\left(m+2\right)\\
+&=\left(m+2\right)^{2}\cdot \left(m-1\right)\cdot
+\left(m-3\right).
+\end{align*}
+
+Allo stesso risultato si poteva arrivare anche considerando che la \ref{eq:es_diff_quad} è sì una differenza di quadrati, ma a sua volta il termine $m^2-4$ è anch'esso una differenza di quadrati. Quindi si ha
+\[\left(m^{2}-4\right)^{2}-\left(m+2\right)^{2} = (m+2)^2\cdot (m-2)^2-(m+2)^{2}\]
+e mettendo in evidenza il fattore $\left(m+2\right)^{2}$ si può scrivere
+
+\[\left(m+2\right)^{2}\cdot \left[ \left( m-2 \right)^2 -1 \right]. \]
+
+Svolgendo le operazioni all'interno delle parentesi quadre si ottiene
+
+\[\left(m+2\right)^{2}\cdot \left[ m^2-4m+4 -1 \right] = \left(m+2\right)^{2}\cdot \left[ m^2-4m+3 \right]. \]
+
+A questo punto, per scomporre il fattore $m^2-4m+3$ si deve cercare una coppia di numeri interi, tali che la loro somma sia $-4$ ed il loro prodotto sia 3. La coppia di valori è $(-3\text{,~}-1)$ e quindi di può scrivere
+
+\begin{align*}
+\left(m^{2}-4\right)^2-m^2-4m-4 &=\left(m+2\right)^2\cdot \left( m^2-4m+3 \right)\\
+&=\left(m+2\right)^{2}\cdot \left(m-1\right)\cdot \left(m-3\right).
+\end{align*}
+
+
+ \end{esempio}
+
+ \begin{esempio}
+ $\left(a-3\right)^{2}+\left(3a-9\right)\cdot\left(a+1\right)-\left(a^{2}-9\right)$.
+
+
+\begin{equation*}
+\left(a-3\right)^{2}+\left(3a-9\right)\cdot\left(a+1\right)-\left(a^{2}-9\right)%
+=\left(a-3\right)^{2}+3\cdot \left(a-3\right)\cdot%
+\left(a+1\right)-\left(a-3\right)\cdot \left(a+3\right).
+\end{equation*}
+Mettiamo a fattore comune~$(a-3)$:
+\begin{equation*}
+(a-3)\cdot \left[\left(a-3\right)+3\cdot
+\left(a+1\right)-\left(a+3\right)\right].
+\end{equation*}
+Svolgiamo i calcoli nel secondo fattore e otteniamo:
+
+\begin{equation*}
+(a-3)(a-3+3a+3-a-3)=(a-3)(3a-3)=3(a-3)(a-1).
+\end{equation*}
+ \end{esempio}
+
+ \begin{esempio}
+ $a^4+a^{2}b^{2}+b^4$.
+
+Osserva che per avere il quadrato del binomio occorre il doppio
+prodotto, aggiungendo e togliendo~$a^{2}b^{2}$ otteniamo il doppio
+prodotto cercato e al passaggio seguente ci troviamo con la differenza
+di quadrati:
+
+\[a^4+2a^2b^2+b^4 -a^2b^2=\left(a^2+b^2\right)^2-\left(ab\right)^2%
+ =\left(a^2+b^2+ab\right)\left(a^2+b^2-ab\right).\]
+
+ \end{esempio}
+
+ \begin{esempio}
+ $a^{5}+2a^{4}b+a^{3}b^{2}+a^{2}b^{3}+2ab^{4}+b^{5}$.
+
+ \begin{align*}
+  a^{5}+2a^{4}b+a^{3}b^{2}+a^{2}b^{3}+2ab^{4}+b^{5}&=a^{3}\left(a^{2}+2ab+b^{2}\right)+b^{3}\left(a^{2}+2ab+b^{2}\right)\\
+  &=\left(a^{3}+b^{3}\right)\left(a^{2}+2ab+b^{2}\right)\\
+  &=\left(a+b\right)\left(a^{2}-ab+b^{2}\right)\left(a+b\right)^{2}\\
+  &=\left(a+b\right)^{3}\left(a^{2}-ab+b^{2}\right).
+ \end{align*}
+ \end{esempio}
+
+ \begin{esempio}
+ $a^{2}x^{2}+2ax^{2}-3x^{2}-4a^{2}-8a+12$.
+
+ \begin{align*}
+  a^{2}x^{2}+2ax^{2}-3x^{2}-4a^{2}-8a+12&=x^{2}\left(a^{2}+2a-3\right)-4\left(a^{2}+2a-3\right)\\
+  &=\left(x^{2}-4\right)\left(a^{2}+2a-3\right)\\
+  &=(x+2)(x-2)(a-1)(a+3).\\
+ \end{align*}
+ \end{esempio}
+\end{exrig}
+
+\section{MCD e mcm tra polinomi}
+
+\subsection{Divisore comune e multiplo comune}
+
+Il calcolo del \emph{minimo comune multiplo}~($\mcm$) e del \emph{massimo comune divisore}~($\mcd$) si estende anche ai polinomi.
+Per determinare~$\mcd$ e~$\mcm$ di due o più polinomi occorre prima di tutto scomporli in fattori irriducibili.
+La cosa non è semplice poiché non si può essere sicuri di aver trovato il massimo comune divisore o il minimo comune multiplo
+per la difficoltà di decidere se un polinomio è irriducibile: prudentemente si dovrebbe parlare di divisore comune e di multiplo comune.
+
+Un polinomio~$A$ si dice \emph{multiplo} di un polinomio~$B$ se esiste un polinomio~$C$ per il quale si ha~$A=B\cdot C$; in questo caso diremo
+anche che~$B$ è \emph{divisore} del polinomio~$A$.
+
+\subsection{Massimo Comune Divisore}
+Dopo aver scomposto ciascun polinomio in fattori, il massimo comune divisore tra due o più polinomi è il prodotto di tutti i
+fattori comuni ai polinomi, presi ciascuno una sola volta, con il minimo esponente.
+Sia i coefficienti numerici, sia i monomi possono essere considerati polinomi.
+\begin{procedura}
+Calcolare il~$\mcd$ tra polinomi:
+\begin{enumeratea}
+\item scomponiamo in fattori ogni polinomio;
+\item prendiamo i fattori comuni a tutti i polinomi una sola volta con l'esponente più piccolo;
+\item se non ci sono fattori comuni a tutti i polinomi il~$\mcd$ è~$1$.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Determinare il~$\mcd\left(3a^{2}b^{3}-3b^{3}\text{,~}6a^{3}b^{2}-6b^{2}\text{,~}12a^{2}b^{2}-24ab^{2}+12b^{2}\right)$.
+ \begin{itemize*}
+ \item Scomponiamo in fattori i singoli polinomi;
+  \begin{itemize*}
+  \item $3a^{2}b^{3}-3b^{3}=3b^{3}\left(a^{2}-1\right)=3b^{3}(a-1)(a+1)$;
+  \item $6a^{3}b^{2}-6b^{2}=6b^{2}\left(a^{3}-1\right)=6b^{2}(a-1)\left(a^{2}+a+1\right)$;
+  \item $12a^{2}b^{2}-24ab^{2}+12b^{2}=12b^{2}\left(a^{2}-2a+1\right)=12b^{2}(a-1)^{2}$.
+  \end{itemize*}
+ \item i fattori comuni a tutti i polinomi presi con l'esponente più piccolo sono:
+  \begin{itemize*}
+  \item tra i numeri il~$3$;
+  \item tra i monomi~$b^{2}$;
+  \item tra i polinomi~$a-1$.
+  \end{itemize*}
+ \item quindi il~$\mcd=3b^{2}(a-1)$.
+ \end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+\subsection{Minimo comune multiplo}
+Dopo aver scomposto ciascun polinomio in fattori, il minimo comune multiplo tra due o più polinomi è il prodotto dei fattori comuni
+e non comuni di tutti i polinomi, quelli comuni presi una sola volta, con il massimo esponente.
+
+\begin{procedura}
+Calcolare il~$\mcm$ tra polinomi:
+\begin{enumeratea}
+\item scomponiamo in fattori ogni polinomio;
+\item prendiamo tutti i fattori comuni e non comuni dei polinomi, i fattori comuni presi una sola
+   volta con il massimo esponente.
+\end{enumeratea}
+\end{procedura}
+
+\begin{exrig}
+ \begin{esempio}
+Determinare il~$\mcm\left(3a^{2}b^{3}-3b^{3}\text{,~}6a^{3}b^{2}-6b^{2}\text{,~}2a^{2}b^{2}-24ab^{2}+12b^{2}\right)$.
+ \begin{itemize*}
+ \item Scomponiamo in fattori i singoli polinomi;
+  \begin{itemize*}
+  \item $3a^{2}b^{3}-3b^{3}=3b^{3}\left(a^{2}-1\right)=3b^{3}(a-1)(a+1)$;
+  \item $6a^{3}b^{2}-6b^{2}=6b^{2}\left(a^{3}-1\right)=6b^{2}(a-1)\left(a^{2}+a+1\right)$;
+  \item $12a^{2}b^{2}-24ab^{2}+12b^{2}=12b^{2}\left(a^{2}-2a+1\right)=12b^{2}(a-1)^{2}$.
+  \end{itemize*}
+ \item i fattori comuni presi con il massimo esponente e quelli non comuni sono:
+  \begin{itemize*}
+  \item tra i coefficienti numerici il~$12$;
+  \item tra i monomi~$b^{3}$;
+  \item tra i polinomi~$(a-1)^{2}\cdot (a+1)\cdot \left(a^{2}+a+1\right)$.
+  \end{itemize*}
+ \item quindi il~$\mcm=12b^{3}(a-1)^{2}(a+1)\left(a^{2}+a+1\right)$.
+ \end{itemize*}
+ \end{esempio}
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:13.88}, \ref{ese:13.89}, \ref{ese:13.90}, \ref{ese:13.91}, \ref{ese:13.92}, \ref{ese:13.93}, \ref{ese:13.94}, \ref{ese:13.95}, \ref{ese:13.96}, \ref{ese:13.97}, \ref{ese:13.98}, \ref{ese:13.99}}
+
+\newpage
+\input{./chap/13_esercizi}
+
+\cleardoublepage
