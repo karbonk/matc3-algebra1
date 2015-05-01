@@ -1,0 +1,15 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=10mm, y=10mm]
+
+\draw[->] (0,0) -- (8,0) node [below right] () {$r$};
+
+\draw(4,3pt)--(4,-3pt);
+
+\node[above]  at (4,0) {$\frac{7}{3}$};
+
+\begin{scope}[blue,thick,->]
+\draw (4,0) -- (8,0);
+\draw[fill=white] (4,0)circle (1.5pt);
+\end{scope}
+
+\end{tikzpicture}

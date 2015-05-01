@@ -1,0 +1,26 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=10mm, y=10mm]
+
+\draw[->] (0,0) -- (8,0) node [below right] () {$r$};
+
+\foreach \x in {2,5}{
+\draw(\x,3pt)--(\x,-3pt);
+\begin{scope}[dotted]
+\draw (\x,0) -- (\x,-1.5);
+\draw (0,-.5) -- (5,-.5);
+\draw (2,-1) -- (8,-1);
+\end{scope}}
+
+\node[above]  at (5,0) {$-1$};
+\node[above]  at (2,0) {$-\frac{13}{10}$};
+
+\begin{scope}[blue,thick]
+\draw (5,-.5) -- (8,-.5);
+\draw (0,-1) -- (2,-1);
+
+\draw[fill=blue] (5,-.5)circle (1.5pt);
+\draw[fill=blue] (2,-1)circle (1.5pt);
+
+\end{scope}
+
+\end{tikzpicture}

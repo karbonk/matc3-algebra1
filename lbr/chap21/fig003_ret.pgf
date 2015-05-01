@@ -1,0 +1,9 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=2mm, y=2mm]
+	\draw (0,0) rectangle  (9.6,7.4);
+
+\node [below left] at (0,0) {$A$};
+\node[above left]  at (0,7.4) {$B$};
+\node[below right]  at (9.6,0) {$D$};
+\node[above right]  at (9.6,7.4) {$C$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=10mm, y=5mm]
+
+\draw[->] (0,0) -- (8,0) node [below right] () {$r$};
+\node[above]  at (1,0) {$-2$};
+\node[above]  at (7,0) {6};
+\begin{scope}[blue,thick]
+\draw (1,0) -- (7,0);
+\draw[fill=white] (1,0)circle (1.5pt);
+\draw[fill=blue] (7,0)circle (1.5pt);
+\end{scope}
+
+\end{tikzpicture}

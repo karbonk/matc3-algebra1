@@ -1,0 +1,25 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[scale=.7, x=10mm, y=10mm]
+    \draw[dotted,color=orange] (-3,-2) grid (8,7);
+    \draw[->] (-3,0) -- (8,0) node[below left] {$x$};
+    \draw[->] (0,-2) -- (0,7) node[below left] {$y$};
+    
+\foreach \x/\xtext in {-2/-2,-1/-1,1/1,2/2,3/3,4/4,5/5,6/6,7/7}
+\node[below]  at (\x,0) {$\xtext$};
+\foreach \y/\ytext in {-1/-1,1/1,2/2,3/3,4/4,5/5,6/6}
+\node[left] at (0,\y) {$\ytext$};
+
+\foreach \xi in {-2,-1,...,7}
+\draw (\xi,3pt) -- (\xi,-3pt);
+\foreach \yi in {-1,0,...,6}
+\draw (3pt,\yi) -- (-3pt,\yi);
+
+\node [below left] at (0,0) {0};
+\draw[color=red,domain=-.5:7.2] plot[id=x] function{6-x} 
+        node[right] {$a$};
+    
+\draw[color=blue,domain=1.3:3.4] plot[id=x] function{12-4*x} 
+        node[right] {$b$};
+  \draw[fill=green] (2,4) circle (1.5pt) node[above right] {$A(2;4)$};
+\end{tikzpicture}

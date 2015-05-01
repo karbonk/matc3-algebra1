@@ -1,0 +1,62 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=10mm, y=10mm]
+
+\draw[->] (0,0) -- (8,0) node [below right] () {$r$};
+
+\foreach \x in {1.5,3.5,6.5}{
+\draw(\x,3pt)--(\x,-3pt);
+\begin{scope}[dotted]
+\draw (\x,0) -- (\x,-2);
+\draw (0,-.5) -- (1.5,-.5);
+\draw (0,-1) -- (3.5,-1);
+\draw (0,-1.5) -- (6.5,-1.5);
+\end{scope}}
+
+
+\node[above] at (1.5,0) {$-5$};
+\node[above]  at (3.5,0) {$-1$};
+\node[above]  at (6.5,0) {$5$};
+
+\begin{scope}[blue,thick]
+\draw (1.5,-.5) -- (8,-.5);
+\draw (3.5,-1) -- (8,-1);
+\draw (6.5,-1.5) -- (8,-1.5);
+
+\draw[fill=white] (1.5,-.5)circle (1.5pt);
+\draw[fill=blue] (3.5,-1)circle (1.5pt);
+\draw[fill=white] (6.5,-1.5)circle (1.5pt);
+\end{scope}
+
+\foreach \x in {-1.5}{
+\node (n1) at (\x,-.25) {segno di $n_1$:};
+\node(n2)  at (\x,-.75) {segno di $n_2$:};
+\node   at (\x,-1.25) {segno di $D$:};
+\node (d3) at (\x,-1.75) {segno di $f$:};
+}
+
+ \draw[decorate, decoration={brace, mirror}]  let \p1=(n1.north west), \p2=(n2.south west) in(\p1 ) -- (\p2) node[midway, left=2pt] {$N:$};
+
+\foreach \z in {2.5,5,7.25}
+\node  at (\z,-.25) {$+$};
+
+ \foreach \zi in {.75,2.5}
+ \node  at (\zi,-.75) {$-$};
+
+\foreach \zii in {5,7.25}
+ \node  at (\zii,-.75) {$+$};
+
+ \foreach \ziii in {.75,2.5,5}
+\node  at (\ziii,-1.25) {$-$};
+
+\node  at (.75,-.25) {$-$};
+\node  at (7.25,-1.25) {$+$};
+
+\begin{scope}[red]
+\foreach \y in {-1.75}{
+\foreach \ziv in {.75,5}
+	\node at (\ziv,\y) {$-$};
+\foreach \zv in {2.5,7.25}
+\node at (\zv,\y) {$+$};
+}
+\end{scope}
+\end{tikzpicture}

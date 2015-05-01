@@ -1,0 +1,46 @@
+% (c) 2012 Dimitrios Vrettos - d.vrettos@gmail.com
+\begin{tikzpicture}[font=\small,x=10mm, y=10mm]
+
+\draw[->] (0,0) -- (8,0) node [below right] () {$r$};
+
+\foreach \x in {2,5}{
+\draw(\x,3pt)--(\x,-3pt);
+\begin{scope}[dotted]
+\draw (\x,0) -- (\x,-1.5);
+\draw (0,-.5) -- (5,-.5);
+\draw (2,-1) -- (8,-1);
+\end{scope}}
+
+\node[above]  at (2,0) {$2$};
+\node[above]  at (5,0) {$\frac{7}{3}$};
+
+\begin{scope}[blue,thick]
+\draw (5,-.5) -- (8,-.5);
+\draw (0,-1) -- (2,-1);
+
+\draw[fill=white] (5,-.5)circle (1.5pt);
+\draw[fill=white] (2,-1)circle (1.5pt);
+\end{scope}
+
+\foreach \x in {-1.5}{
+\node  at (\x,-.25) {segno di $F_1$:};
+\node  at (\x,-.75) {segno di $F_2$:};
+\node  at (\x,-1.25) {segno di $P$:};
+}
+\foreach \z in {1,3.5}{
+\node  at (\z,-.25) {$-$};
+}
+\foreach \zi in {3.5, 6.5}{
+\node  at (\zi,-.75) {$-$};
+}
+
+\node  at (6.5,-.25) {$+$};
+\node  at (1,-.75) {$+$};
+
+\begin{scope}[red]
+\foreach \zii in {1, 6.5}{
+\node  at (\zii,-1.25) {$-$};
+}
+\node  at (3.5,-1.25) {$+$};
+\end{scope}
+\end{tikzpicture}
