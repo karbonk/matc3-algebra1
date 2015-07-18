@@ -4,10 +4,10 @@
 \draw[->] (0,0) -- (8,0) node [below right] () {$r$};
 \node[above]  at (2,0) {$-2$};
 \node[above]  at (6,0) {2};
-\begin{scope}[blue,thick]
+\begin{scope}[blue,ultra thick]
 \draw (2,0) -- (6,0);
+\end{scope}
 \foreach \x in {2,6}
 \draw[fill=white] (\x,0)circle (1.5pt);
-\end{scope}
 
 \end{tikzpicture}

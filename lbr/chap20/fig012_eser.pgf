@@ -4,7 +4,7 @@
 \draw[->] (0,0) -- (8,0) node [below right] () {$r$};
 \node[above]  at (2,0) {$-1$};
 \node[above]  at (6,0) {0};
-\begin{scope}[blue,thick]
+\begin{scope}[blue,ultra thick]
 \draw (2,0) -- (6,0);
 \draw[fill=blue] (2,0)circle (1.5pt);
 \draw[fill=blue] (6,0)circle (1.5pt);
