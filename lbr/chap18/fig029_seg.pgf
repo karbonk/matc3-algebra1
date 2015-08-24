@@ -37,7 +37,7 @@
     \node(d1)  at (\x,-.75) {segno di $d_1$:};
     \node  at (\x,-1.25) {segno di $d_2$:};
     \node (d3) at (\x,-1.75) {segno di $d_3$:};
-    \node  at (\x,-2.25) {segno di $F$ (\ref{eq:20.1}):};
+    \node  at (\x,-2.25) {segno di $F$ (\ref{eq:18.1}):};
     }
 
   \draw[decorate, decoration={brace, mirror}] let \p1=(d1.north west), \p2=(d3.south west) in(\p1 ) -- (\p2) node[midway, left=2pt] {$D:$};

@@ -1,9 +1,133 @@
 % (c) 2012-2013 Claudio Carboncini - claudio.carboncini@gmail.com
 % (c) 2012-2014 Dimitrios Vrettos - d.vrettos@gmail.com
 
-\chapter{Equazioni letterali}
+\chapter{Equazioni frazionarie e letterali}
 
-\section{Equazioni con un solo parametro}
+\section{Equazioni di grado superiore al primo riducibili al primo grado}
+Nel capitolo \ref{cap:equazioni_I_grado} abbiamo affrontato le equazioni di primo grado. Adesso consideriamo le equazioni di grado superiore al primo che possono essere ricondotte ad equazioni di primo grado,
+utilizzando la legge di annullamento del prodotto (legge \ref{legge:annullamento_del_prodotto} a pagina \pageref{legge:annullamento_del_prodotto}).
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere~$x^{2}-4=0$.
+
+Il polinomio al primo membro può essere scomposto in fattori:~$(x-2)(x+2)=0$.
+Per la legge di annullamento, il prodotto dei due binomi si annulla se~$x-2=0$ oppure se~$x+2=0$.
+Di conseguenza si avranno le soluzioni:~$x=2$ e $x=-2$.
+ \end{esempio}
+\end{exrig}
+
+In generale, se si ha un'equazione di grado~$n$ scritta in forma normale~$P(x)=0$ e se il polinomio~$P(x)$ è
+fattorizzabile nel prodotto di~$n$ fattori di primo grado:
+\begin{equation*}
+(x-a_{1})(x-a_{2})(x-a_{3})\ldots (x-a_{n-1})(x-a_{n})=0
+\end{equation*}
+applicando la legge di annullamento del prodotto, le soluzioni dell'equazione si ottengono determinando le soluzioni delle singole~$n$
+equazioni di primo grado, cioè risolvendo:
+\begin{equation*}
+x-a_{1}=0\text{,~~~}x-a_{2}=0\text{,~~~}x-a_{3}=0\text{,~~~}\ldots\text{,~~~}x-a_{n-1}=0\text{,~~~}x-a_{n}=0.
+\end{equation*}
+Pertanto l'insieme delle soluzioni dell'equazione data sarà:~$\IS=\{a_{1}\text{,~}a_{2}\text{,~}a_{3}\text{,~}\ldots\text{,~}a_{n-1}\text{,~}a_{n}\}$.
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere~$x^{2}-x-2=0$.
+
+Scomponendo in fattori il polinomio al primo membro, ricercando quei due numeri la cui somma è pari a~$-1$ e il cui prodotto è pari a~$-2$, 
+si ha:~$(x+1)(x-2)=0$.
+Utilizzando la legge di annullamento del prodotto, si ottiene il seguente insieme di soluzioni:~$\IS=\{-1\text{,~}2\}$.
+ \end{esempio}
+
+ \begin{esempio}
+Risolvere~$x^{4}-5x^{2}+4=0$.
+
+Scomponendo in fattori il polinomio al primo membro, utilizzando la regola della scomposizione del particolare trinomio di secondo grado,
+si ottiene:~$(x^{2}-1)(x^{2}-4)=0$. Scomponendo ulteriormente in fattori si ha:
+\begin{equation*}
+(x-1)(x+1)(x-2)(x+2)=0.
+\end{equation*}
+Per la legge di annullamento del prodotto è necessario risolvere le equazioni:
+\begin{equation*}
+x-1=0\: \Rightarrow\: x=1\text{,}\quad x+1=0\: \Rightarrow\: x=-1\text{,}\quad x-2=0\: \Rightarrow\: x=2\text{,}\quad x+2=0\: \Rightarrow\: x=-2.
+\end{equation*}
+L'insieme delle soluzioni:~$\IS=\{+1\text{,~}-1\text{,~}+2\text{,~}-2\}$.
+ \end{esempio}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:17.1}, \ref{ese:17.2}, \ref{ese:17.3}, \ref{ese:17.4}, \ref{ese:17.5}, \ref{ese:17.6}, \ref{ese:17.7}, \ref{ese:17.8},
+\ref{ese:17.9}, \ref{ese:17.10}}
+
+\vspazio\ovalbox{\ref{ese:17.11}, \ref{ese:17.12}, \ref{ese:17.13}, \ref{ese:17.14}}
+\section{Equazioni numeriche frazionarie}
+
+Affrontiamo ora le equazioni in cui l'incognita compare anche al denominatore.
+
+\begin{definizione} Un'equazione in cui l'incognita compare al denominatore si chiama \emph{frazionaria} o \emph{fratta}.
+\end{definizione}
+
+\begin{exrig}
+ \begin{esempio}
+Risolvere~$\dfrac{3x-2}{1+x}=\dfrac{3x}{x-2}$.
+ \end{esempio}
+Questa equazione si differenzia da quelle affrontate in precedenza per il fatto che l'incognita compare anche al denominatore.
+Riflettendo sulla richiesta del problema, possiamo senz'altro affermare che, se esiste il valore che rende
+la frazione al primo membro uguale alla frazione al secondo membro, esso non deve annullare nessuno dei due denominatori,
+poiché in questo caso renderebbe priva di significato la scrittura, in quanto frazioni con denominatore~$0$ sono prive di significato.
+
+Per risolvere un'equazione frazionaria, prima di tutto dobbiamo renderla nella forma
+\begin{equation*}
+\frac{F(x)}{G(x)}=0.
+\end{equation*}
+
+\begin{enumeratea}
+ \item Determiniamo il~$\mcm$ dei denominatori, $\mcm=(1+x)\cdot (x-2)$.
+    Osserviamo che per~$x = -1$ oppure per~$x = 2$ le frazioni perdono di significato, in quanto si annulla il denominatore;
+ \item imponiamo le condizioni di esistenza:~$1+x\neq~0$ e~$x-2\neq~0$ cioè~$\CE x\neq -1\wedge x\neq~2$. La ricerca dei valori
+    che risolvono l'equazione viene ristretta all'insieme~$\Dom=\insR-\{-1\text{,~}2\}$, detto \emph{dominio} dell'equazione o
+    \emph{insieme di definizione};
+ \item applichiamo il primo principio d'equivalenza trasportando al primo membro la frazione che si trova al secondo membro
+    e riduciamo allo stesso denominatore ($\mcm$)
+    \begin{equation*}
+      \frac{(3x-2)\cdot (x-2)-3x\cdot (1+x)}{(1+x)\cdot (x-2)}=0;
+    \end{equation*}
+ \item applichiamo il secondo principio di equivalenza moltiplicando ambo i membri per il~$\mcm$,
+    certamente diverso da zero per le condizioni poste precedentemente. L'equazione diventa:~$(3x-2)\cdot (x-2)-3x\cdot (1+x)=0$;
+ \item eseguiamo le moltiplicazioni e sommiamo i monomi simili per portare l'equazione alla forma canonica:
+    $3x^{2}-6x-2x+4-3x-3x^{2}=0\: \Rightarrow\: -11x=-4$;
+ \item dividiamo ambo i membri per~$-11$, per il secondo principio di equivalenza si ha:~$x=\frac{4}{11}$;
+ \item confrontiamo il valore trovato con le~$\CE$: in questo caso la soluzione appartiene al dominio~$\Dom$, quindi possiamo concludere
+    che è accettabile. L'insieme soluzione è:~$\IS=\left\{\frac{4}{11}\right\}$.
+\end{enumeratea}
+
+%\newpage
+ \begin{esempio}
+Risolvere~$\dfrac{x^{2}+x-3}{x^{2}-x}=1-\dfrac{5}{2x}$.
+\end{esempio}
+
+\begin{enumeratea}
+ \item Determiniamo il~$\mcm$ dei denominatori. Per fare questo dobbiamo prima scomporli in fattori.
+    Riscriviamo:~$\dfrac{x^{2}+x-3}{x\cdot (x-1)}=1-\dfrac{5}{2x}$ con~$\mcm=2x\cdot (x-1)$;
+ \item condizioni di esistenza: \[x-1\neq~0\wedge~2x\neq~0\text{,}\] cioè~$x\neq~1\wedge x\neq~0$. Il dominio è~$\Dom=\insR-\{1\text{,~}0\}$;
+ \item trasportiamo al primo membro ed uguagliamo a zero \[\frac{x^{2}+x-3}{x\cdot (x-1)}-1+\frac{5}{2x}=0\]
+    e riduciamo allo stesso denominatore ($\mcm$) ambo i membri \[\frac{2x^{2}+2x-6-2x^{2}+2x+5x-5}{2x\cdot (x-1)}=0;\]
+ \item applichiamo il secondo principio di equivalenza moltiplicando ambo i membri per il~$\mcm$,
+    certamente diverso da zero per le condizioni poste in precedenza. L'equazione diventa:~$2x^{2}+2x-6-2x^{2}+2x+5x-5=0$;
+ \item riduciamo i monomi simili per portare l'equazione alla forma canonica:~$9x=11$;
+ \item dividiamo ambo i membri per~$9$, otteniamo:~$x=\frac{11}{9}$;
+ \item confrontando con le~$\CE$, la soluzione appartiene all'insieme~$\Dom$, dunque è accettabile e l'insieme soluzione è:
+    $\IS=\left\{\frac{11}{9}\right\}$.
+\end{enumeratea}
+
+\end{exrig}
+
+\ovalbox{\risolvii \ref{ese:17.15}, \ref{ese:17.16}, \ref{ese:17.17}, \ref{ese:17.18}, \ref{ese:17.19}, \ref{ese:17.20}, \ref{ese:17.21}, \ref{ese:17.22}, \ref{ese:17.23}, \ref{ese:17.24}, \ref{ese:17.25}}
+
+\vspazio\ovalbox{\ref{ese:17.26}, \ref{ese:17.27}, \ref{ese:17.28}, \ref{ese:17.29}, \ref{ese:17.30}, \ref{ese:17.31}, \ref{ese:17.32}, \ref{ese:17.33}, \ref{ese:17.34}, \ref{ese:17.35}, \ref{ese:17.36}, \ref{ese:17.37}}
+
+\section{Equazioni letterali}
+
+\subsection{Equazioni con un solo parametro}
 Quando si risolvono problemi, ci si ritrova a dover tradurre nel linguaggio simbolico delle proposizioni del tipo:
 <<Un lato di un triangolo scaleno ha lunghezza pari a~$k$ volte la lunghezza dell'altro e la loro somma è pari a~$2k$>>.
 Poiché la lunghezza del lato del triangolo non è nota, ad essa si attribuisce il valore incognito~$x$ e quindi la proposizione
@@ -44,7 +168,6 @@ Per questa ragione, nella risoluzione dell'equazione~$(k+1)x=2k$ è necessario d
 \item se~$k+1=0$, cioè se~$k=-1$, sostituendo tale valore all'equazione si ottiene l'equazione~$(-1+1)x=2\cdot (-1)$,
    cioè~$0\cdot x=-2$ che risulta impossibile.
 \end{itemize}
-\pagebreak
 
 Riassumendo si ha:
 \begin{center}
@@ -116,9 +239,9 @@ Ricapitolando:
 se~$a=1$, allora~$\IS=\emptyset$; se~$a=-1$, allora~$\IS=\insR$; se~$a\neq +1\wedge a\neq -1$, allora~$\IS=\left\{\dfrac{1}{a-1}\right\}$.
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:19.1}, \ref{ese:19.2}, \ref{ese:19.3}, \ref{ese:19.4}, \ref{ese:19.5}, \ref{ese:19.6}, \ref{ese:19.7}}
+\ovalbox{\risolvii \ref{ese:17.38}, \ref{ese:17.39}, \ref{ese:17.40}, \ref{ese:17.41}, \ref{ese:17.42}, \ref{ese:17.43}, \ref{ese:17.44}}
 
-\section{Equazioni con due parametri}
+\subsection{Equazioni con due parametri}
 
 \begin{exrig}
  \begin{esempio}
@@ -139,9 +262,9 @@ Riassumendo:
 se~$a=2\wedge b=-1$ allora~$\IS=\insR$; se~$a=2\wedge b\neq -1$ allora~$\IS=\emptyset$; se~$a\neq~2\wedge b\neq -1$ allora~$\IS=\left\{\dfrac{b+1}{a-2}\right\}$.
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:19.8}, \ref{ese:19.9}, \ref{ese:19.10}}
+\ovalbox{\risolvii \ref{ese:17.45}, \ref{ese:17.46}, \ref{ese:17.47}}
 
-\section{Equazioni con il parametro al denominatore}
+\subsection{Equazioni con il parametro al denominatore}
 
 \begin{exrig}
  \begin{esempio}
@@ -215,11 +338,11 @@ $a\neq -2\wedge a\neq +2$ & $\IS=\left\{\frac{a^{2}+4}{2(a-2)}\right\}$ & determ
  \end{esempio}
 \end{exrig}
 
-\vspace{1.05ex}\ovalbox{\risolvii \ref{ese:19.11}, \ref{ese:19.12}, \ref{ese:19.13}, \ref{ese:19.14}}
-\pagebreak
-\section{Equazioni frazionarie letterali}
+\ovalbox{\risolvii \ref{ese:17.48}, \ref{ese:17.49}, \ref{ese:17.50}, \ref{ese:17.51}}
 
-\subsection{Caso in cui il denominatore contiene solo l'incognita}
+\subsection{Equazioni frazionarie letterali}
+
+\subsubsection{Caso in cui il denominatore contiene solo l'incognita}
 
 \begin{exrig}
  \begin{esempio}
@@ -253,7 +376,7 @@ Riassumendo si ha la tabella:
 \begin{center}
 \begin{tabular}{llll}
 \toprule
-\multicolumn{4}{c} {$\dfrac{x+4a}{3x}=a-\dfrac{2x+2a}{6x}$ con~$a\in \insR$}\vspace{1.05ex}\\
+\multicolumn{4}{c} {$\frac{x+4a}{3x}=a-\frac{2x+2a}{6x}$ con~$a\in \insR$}\vspace{1.05ex}\\
 \multicolumn{2}{c}{Condizioni} & &\\
 parametro & incognita & Insieme Soluzione & Equazione\\
 \midrule
@@ -266,7 +389,7 @@ $a\neq \frac{2}{3}\wedge a\neq0$ & accettabile &$x=\frac{5a}{3a-2}$ & \\
 \end{center}
  \end{esempio}
 \end{exrig}
-\pagebreak
+
 \subsection{Caso in cui il denominatore contiene sia il parametro che l'incognita}
 
 \begin{exrig}
@@ -311,17 +434,15 @@ $b\neq~1\wedge b\neq \frac{1}{2}\wedge b\neq -1$ & accettabile &$x=\frac{b+1}{2b
 \bottomrule
 \end{tabular}
 \end{center}
-
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:19.15}, \ref{ese:19.16}, \ref{ese:19.17}, \ref{ese:19.18}, \ref{ese:19.19}, \ref{ese:19.20}, \ref{ese:19.21}, \ref{ese:19.22}, \ref{ese:19.23}, \ref{ese:19.24}, \ref{ese:19.25}}
-
-\section{Equazioni letterali e formule inverse}
+\vspace{1.05ex}\ovalbox{\risolvii \ref{ese:17.52}, \ref{ese:17.53}, \ref{ese:17.54}, \ref{ese:17.55}, \ref{ese:17.56}, \ref{ese:17.57}, \ref{ese:17.58}, \ref{ese:17.59}, \ref{ese:17.60}, \ref{ese:17.61}, \ref{ese:17.62}}
+\pagebreak
+\subsection{Equazioni letterali e formule inverse}
 
 Le formule di geometria, di matematica finanziaria e di fisica possono essere viste come equazioni letterali.
 I due principi di equivalenza delle equazioni permettono di ricavare le cosiddette formule inverse, ossia di risolvere
 un'equazione letterale rispetto a una delle qualsiasi lettere incognite che vi compaiono.
-\pagebreak
 
 \begin{exrig}
  \begin{esempio}
@@ -366,10 +487,10 @@ dividiamo primo e secondo membro per~$t$, otteniamo \[\frac{s-s_{0}}{t}=v.\]
 
 \end{exrig}
 
-\ovalbox{\risolvii \ref{ese:19.26}, \ref{ese:19.27}, \ref{ese:19.28}, \ref{ese:19.29}, \ref{ese:19.30}, \ref{ese:19.31}, \ref{ese:19.32}, \ref{ese:19.33}, \ref{ese:19.34}}
+\ovalbox{\risolvii \ref{ese:17.63}, \ref{ese:17.64}, \ref{ese:17.65}, \ref{ese:17.66}, \ref{ese:17.67}, \ref{ese:17.68}, \ref{ese:17.69}, \ref{ese:17.70}, \ref{ese:17.71}}
 
-\vspazio\ovalbox{\ref{ese:19.35}, \ref{ese:19.36}, \ref{ese:19.37}, \ref{ese:19.38}, \ref{ese:19.39}, \ref{ese:19.40}, \ref{ese:19.41}, \ref{ese:19.42}, \ref{ese:19.43}}
+\vspazio\ovalbox{\ref{ese:17.72}, \ref{ese:17.73}, \ref{ese:17.74}, \ref{ese:17.75}, \ref{ese:17.76}, \ref{ese:17.77}, \ref{ese:17.78}, \ref{ese:17.79}, \ref{ese:17.80}}
 
 \newpage
-\input{./chap/19_esercizi}
+\input{./chap/17_esercizi}
 \cleardoublepage
