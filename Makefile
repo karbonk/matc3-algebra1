@@ -3,7 +3,7 @@
 # (c) 2013-2014 Dimitrios Vrettos - d.vrettos@gmail.com
 # v1.0.1
 #
-NAME = algebra1_5ed_completo
+NAME = algebra1_6ed_completo
 
 SHORT_NAME = algebra1_cmp
 
