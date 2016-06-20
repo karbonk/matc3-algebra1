@@ -252,11 +252,11 @@ non ha significato reale, dato che le sue coordinate non sono riportate nella ta
 \begin{grafico}[t]
 \begin{minipage}{0.5\textwidth}
 \input{./lbr/chapA/fig002_graf.pgf}
-\caption{Esempio~24.4}\label{gr:A.1}
+\caption{Esempio~A.4}\label{gr:A.1}
 \end{minipage}\hfill
 \begin{minipage}{0.5\textwidth}
 \input{./lbr/chapA/fig003_graf.pgf}
-\caption{Esempio~24.4}\label{gr:A.2}
+\caption{Esempio~A.4}\label{gr:A.2}
 \end{minipage}
 \end{grafico}
 \end{esempio}
@@ -579,22 +579,24 @@ Per calcolare la media aritmetica semplice degli studenti, sommiamo tutti gli st
 M=\frac{320+230+212+152+96}{5}= \frac{\np{1010}}{5}= 202.
 \end{equation*}
 Possiamo dire che si hanno mediamente~202 studenti per ogni classe.
+ \end{esempio}
+\end{exrig}
 
 \begin{definizione}
 Si definisce \emph{scarto dalla media} (aritmetica) la differenza tra i valori osservati e la media.
 \end{definizione}
 
 Se~$x_1$, $x_2$, \ldots, $x_n$ sono i valori osservati e $M$ la loro media aritmetica, gli scarti sono~$s_1=x_1-M$, $s_2=x_2-M$, \ldots, $s_n=x_n-M$.
-\end{esempio}
 
-\begin{esempio}
+\begin{exrig}
+ \begin{esempio}
 Calcoliamo gli scarti dalla media per la distribuzione ``studenti per tipologia di classe frequentata'', la cui media è~$\np{1010}/5 = 202$.
 \begin{center}
 \begin{tabular}{l*{6}{c}}
 \toprule
 Classe & 1\textsuperscript{a} & 2\textsuperscript{a} & 3\textsuperscript{a} & 4\textsuperscript{a} & 5\textsuperscript{a} & Totale\\
 Studenti & 320& 230& 212& 152& 96& $\np{1010}$ \\
-Scarto & 118 & 28 & 10 & $-50$ & 106 & 0\\
+Scarto & 118 & 28 & 10 & $-50$ & $-106$ & 0\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -708,7 +710,7 @@ variabile: $\cvar = x_{max} - x_{min}$.
 \end{definizione}
 
 Tale indice dà un'informazione molto grossolana perché tiene conto solo del primo e dell'ultimo termine della
-distribuzione e non tiene conto di tutti i valori intermedi. Si considerino, ad esempio, le seguenti distribuzioni di stature:
+distribuzione e non tiene conto di tutti i valori intermedi. Si considerino, ad esempio, le seguenti distribuzioni di stature non ordinate:
 \begin{center}
  \begin{tabular}{lccccccc}
  \toprule
